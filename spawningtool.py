@@ -47,7 +47,7 @@ class GameTimeline(object):
 
 def get_supply(supply, gameloop):
     start = 0
-    end = len(supply)
+    end = len(supply) - 1
 
     while start < end:
         mid = (start + end) / 2
@@ -97,7 +97,11 @@ def parse_replay(file_name):
                 unit_name = event['m_unitTypeName']
                 if unit_name in BO_EXCLUDED or player == 0:
                     continue
-                gameloop = event['_gameloop'] - BUILD_TIMES[unit_name]
+                try:
+                    gameloop = event['_gameloop'] - BUILD_TIMES[unit_name]
+                except KeyError:
+                    gameloop = event['_gameloop']
+                    unit_name += ' (Error on time)'
                 supply = get_supply(supplies[player - 1], gameloop)
                 builds[player - 1].add_event(BuildEvent(unit_name, gameloop, supply))
             elif event_type == 'NNet.Replay.Tracker.SUnitInitEvent':
@@ -113,7 +117,11 @@ def parse_replay(file_name):
                 if player == 0:
                     continue
                 unit_name = event['m_upgradeTypeName']
-                gameloop = event['_gameloop'] - BUILD_TIMES[unit_name]
+                try:
+                    gameloop = event['_gameloop'] - BUILD_TIMES[unit_name]
+                except KeyError:
+                    gameloop = event['_gameloop']
+                    unit_name += ' (Error on time)'
                 supply = get_supply(supplies[player - 1], gameloop)
                 builds[player - 1].add_event(BuildEvent(unit_name, gameloop, supply))
 

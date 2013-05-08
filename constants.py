@@ -12,6 +12,8 @@ BO_EXCLUDED = set([
     'Overseer',
     'BroodLord',
     'Broodling',
+    'Larva',
+    'Creep Tumor'
     ])
 
 BUILD_TIMES = {
@@ -61,8 +63,13 @@ BUILD_TIMES = {
         'Corruptor': 40,
         'Viper': 40,
         # research
+        'zerglingmovementspeed': 110,
+        'GlialReconstitution': 110,
         'WarpGateResearch': 160,
+        'BlinkTech': 170,
         'Stimpack': 170,
+        'PunisherGrenades': 60,
+        'ShieldWall': 110,  # ? Combat Shield?
         'TerranInfantryWeaponsLevel1': 160,
         'TerranInfantryWeaponsLevel2': 190,
         'TerranInfantryWeaponsLevel3': 220,
