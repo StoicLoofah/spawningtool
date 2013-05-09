@@ -76,6 +76,25 @@ BUILD_TIMES = {
         'TerranInfantryArmorsLevel1': 160,
         'TerranInfantryArmorsLevel2': 190,
         'TerranInfantryArmorsLevel3': 220,
+        'ProtossGroundWeaponsLevel1': 160,
+        'ProtossGroundWeaponsLevel2': 190,
+        'ProtossGroundWeaponsLevel3': 220,
+        'ProtossGroundArmorsLevel1': 160,
+        'ProtossGroundArmorsLevel2': 190,
+        'ProtossGroundArmorsLevel3': 220,
+        'ProtossShieldsLevel1': 160,
+        'ProtossShieldsLevel2': 190,
+        'ProtossShieldsLevel3': 220,
+        'ProtossAirWeaponsLevel1': 160,
+        'ProtossAirWeaponsLevel2': 190,
+        'ProtossAirWeaponsLevel3': 220,
+        'ProtossAirArmorsLevel1': 160,
+        'ProtossAirArmorsLevel2': 190,
+        'ProtossAirArmorsLevel3': 220,
+        'ObserverGraviticBooster': 80,
+        'GraviticDrive': 80,
+        'ExtendedThermalLance': 140,
+
         }
 
 for key, value in BUILD_TIMES.iteritems():
