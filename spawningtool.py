@@ -144,8 +144,11 @@ def parse_replay(file_name):
                 supply = get_supply(parsed_data['players'][player - 1]['supply'], gameloop)
                 builds[player - 1].add_event(BuildEvent(unit_name, gameloop, supply))
 
-        if not  has_events:
-            parsed_data['message'] = 'No tracker data could be found, despite this being the right version ({0}). Sorry.'.format(parsed_data['build'])
+        if not has_events:
+            if header['m_version']['m_build'] < 25604:  # this is 2.0.8
+                parsed_data['message'] = 'This replay version does not support the data needed for the build order'
+            else:
+                parsed_data['message'] = 'No tracker data could be found, despite this being the right version ({0}). Sorry.'.format(parsed_data['build'])
             return parsed_data
 
         for build in builds:
