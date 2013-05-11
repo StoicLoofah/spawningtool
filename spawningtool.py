@@ -138,17 +138,10 @@ def parse_events(archive, header, parsed_data, protocol):
     if hasattr(protocol, 'decode_replay_tracker_events'):
         contents = archive.read_file('replay.tracker.events')
         events = protocol.decode_replay_tracker_events(contents)
-        if not events:
-            if header['m_version']['m_build'] < 25604:  # this is 2.0.8
-                message = DATA_NOT_SUPPORTED
-            else:
-                message = (
-                    'No tracker data could be found, despite this being the'
-                    ' right version ({0}). Sorry.'.format(parsed_data['build'])
-                )
-            raise Exception(message)
 
+        has_events = False
         for event in events:
+            has_events = True
             event_type = event['_event']
             if event['_gameloop'] == 0:
                 continue
@@ -163,17 +156,29 @@ def parse_events(archive, header, parsed_data, protocol):
             elif event_type == 'NNet.Replay.Tracker.SUpgradeEvent':  # need to reverse this 
                 upgrade_event(builds, event, parsed_data)
 
+        if not has_events:
+            if header['m_version']['m_build'] < 25604:  # this is 2.0.8
+                message = DATA_NOT_SUPPORTED
+            else:
+                message = (
+                    'No tracker data could be found, despite this being the'
+                    ' right version ({0}). Sorry.'.format(parsed_data['build'])
+                )
+            raise Exception(message)
+
         for build in builds:
             build.sort()
 
         for i in xrange(parsed_data["numPlayers"]):
-            parsed_data['players'][i]['buildOrder'] = [{
-                'gameloop': event.gameloop,
-                'time': _gameloop_to_time(event.gameloop),
-                'name': event.name,
-                'supply': event.supply,
-                'is_worker': event.is_worker()
-            } for event in builds[i].timeline]
+            parsed_data['players'][i]['buildOrder'] = [
+                {
+                    'gameloop': event.gameloop,
+                    'time': _gameloop_to_time(event.gameloop),
+                    'name': event.name,
+                    'supply': event.supply,
+                    'is_worker': event.is_worker()
+                } for event in builds[i].timeline
+            ]
 
         return parsed_data
     else:
