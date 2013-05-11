@@ -15,7 +15,7 @@ def print_results(result):
     """
     print result['map']
     print result['build']
-    for player in result['players']:
+    for player in result['players'].itervalues():
         print '{} ({})'.format(player['name'], player['race'])
         for event in player['buildOrder']:
             if not event['is_worker']:
@@ -28,7 +28,7 @@ def print_results(result):
 
 
 def main():
-    """ 
+    """
     Execute spawningtool
     """
     parser = argparse.ArgumentParser()
@@ -39,8 +39,11 @@ def main():
     args = parser.parse_args()
     try:
         result = parse_replay(args)
-    except (CutoffTimeError, ReplayFormatError) as error:
+    except CutoffTimeError as error:
         print error.message
+    except ReplayFormatError as error:
+        print error.message
+        print error.parsed_data
     else:
         print_results(result)
 
