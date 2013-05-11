@@ -1,18 +1,27 @@
 """
-spawningtool.spawningtool
-~~~~~~~~~~~~~~~~~~~~~~~~~
+spawningtool
+~~~~~~~~~~~~
 """
-import argparse
-
 from s2protocol import protocol15405
 from s2protocol.mpyq import mpyq
 
 from constants import BO_EXCLUDED, BUILD_TIMES
+from exception import CutoffTimeError, ReplayFormatError
 
 
 DATA_NOT_SUPPORTED = (
     'This replay version does not support the data needed for the build order'
 )
+
+
+def convert_gametime_to_float(gametime):
+    """
+    Converts a gametime (5:47) to a float (5.45)
+    """
+    try:
+        return float(gametime.replace(":", "."))
+    except ValueError:
+        raise CutoffTimeError()
 
 
 def _gameloop_to_time(gameloop):
@@ -129,7 +138,34 @@ def upgrade_event(builds, event, parsed_data):
     builds[player - 1].add_event(BuildEvent(unit_name, gameloop, supply))
 
 
-def parse_events(archive, header, parsed_data, protocol):
+def make_event_timeline(builds, cutoff_time, parsed_data):
+    """
+    Make an event timeline
+    """
+    for i in xrange(parsed_data["numPlayers"]):
+
+        parsed_data['players'][i]['buildOrder'] = []
+        for event in builds[i].timeline:
+
+            # If desired, stop parsing for events after a given time
+            current_gametime = _gameloop_to_time(event.gameloop)
+            if (cutoff_time and 
+                    convert_gametime_to_float(current_gametime) > 
+                    convert_gametime_to_float(cutoff_time)):
+                break
+            
+            parsed_data['players'][i]['buildOrder'].append(
+                {
+                    'gameloop': event.gameloop,
+                    'time': _gameloop_to_time(event.gameloop),
+                    'name': event.name,
+                    'supply': event.supply,
+                    'is_worker': event.is_worker()
+                }
+            )
+
+
+def parse_events(archive, cutoff_time, header, parsed_data, protocol):
     """
     Parse all game related events
     """
@@ -145,7 +181,7 @@ def parse_events(archive, header, parsed_data, protocol):
             event_type = event['_event']
             if event['_gameloop'] == 0:
                 continue
-
+    
             if event_type == 'NNet.Replay.Tracker.SPlayerStatsEvent':
                 parsed_data['players'][event['m_playerId'] - 1]['supply'].append(
                     [event['_gameloop'], event['m_stats']['m_scoreValueFoodUsed'] / 4096])
@@ -162,34 +198,25 @@ def parse_events(archive, header, parsed_data, protocol):
             else:
                 message = (
                     'No tracker data could be found, despite this being the'
-                    ' right version ({0}). Sorry.'.format(parsed_data['build'])
+                    ' right version ({}). Sorry.'.format(parsed_data['build'])
                 )
-            raise Exception(message)
+            raise ReplayFormatError(message)
 
         for build in builds:
             build.sort()
-
-        for i in xrange(parsed_data["numPlayers"]):
-            parsed_data['players'][i]['buildOrder'] = [
-                {
-                    'gameloop': event.gameloop,
-                    'time': _gameloop_to_time(event.gameloop),
-                    'name': event.name,
-                    'supply': event.supply,
-                    'is_worker': event.is_worker()
-                } for event in builds[i].timeline
-            ]
-
+        
+        make_event_timeline(builds, cutoff_time, parsed_data)
+    
         return parsed_data
     else:
-        raise Exception(DATA_NOT_SUPPORTED)
+        raise ReplayFormatError(DATA_NOT_SUPPORTED)
 
 
-def parse_replay(file_name):
+def parse_replay(args):
     """
     Parse replay for build order related events
     """
-    archive = mpyq.MPQArchive(file_name)
+    archive = mpyq.MPQArchive(args.replay_file)
 
     contents = archive.header['user_data_header']['content']
     header = protocol15405.decode_replay_header(contents)
@@ -199,7 +226,7 @@ def parse_replay(file_name):
 
     protocol = get_protocol(base_build)
     if not protocol:
-        raise Exception('Could locate the replay version')
+        raise ReplayFormatError('Could locate the replay version')
 
     contents = archive.read_file('replay.details')
     details = protocol.decode_replay_details(contents)
@@ -214,41 +241,10 @@ def parse_replay(file_name):
         } for raw_data in details['m_playerList']
     ]
 
-    return parse_events(archive, header, parsed_data, protocol)
-
-
-def print_results(result):
-    """
-    Print the results of the build order
-    """
-    print result['map']
-    print result['build']
-    for player in result['players']:
-        print '{} ({})'.format(player['name'], player['race'])
-        for event in player['buildOrder']:
-            if not event['is_worker']:
-                print '{} {} {}'.format(
-                    event['supply'], 
-                    event['time'], 
-                    event['name']
-                )
-        print ''
-
-
-def main():
-    """
-    Execute spawningtool
-    """
-    parser = argparse.ArgumentParser()
-    parser.add_argument('replay_file', help='.SC2Replay file to load')
-    args = parser.parse_args()
-    try:
-        result = parse_replay(args.replay_file)
-    except Exception as error:
-        print error.message
-    else:
-        print_results(result)
-
-
-if __name__ == '__main__':
-    main()
+    return parse_events(
+        archive, 
+        args.cutoff_time, 
+        header, 
+        parsed_data, 
+        protocol
+    )
