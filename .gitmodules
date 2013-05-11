@@ -1,3 +1,0 @@
-[submodule "s2protocol"]
-	path = s2protocol
-	url = git://github.com/Blizzard/s2protocol.git
