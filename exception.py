@@ -12,5 +12,6 @@ class CutoffTimeError(Exception):
 
 
 class ReplayFormatError(Exception):
-    def __init__(self, message):
+    def __init__(self, message, parsed_data):
         super(ReplayFormatError, self).__init__(message)
+        self.parsed_data = parsed_data
