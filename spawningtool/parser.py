@@ -1,11 +1,11 @@
 """
-spawningtool
-~~~~~~~~~~~~
+spawningtool.parser
+~~~~~~~~~~~~~~~~~~~
 """
 import sc2reader
 
-from constants import BO_EXCLUDED, BUILD_TIMES
-from exception import CutoffTimeError, ReplayFormatError
+from spawningtool.constants import BO_EXCLUDED, BUILD_TIMES
+from spawningtool.exception import CutoffTimeError, ReplayFormatError
 
 
 DATA_NOT_SUPPORTED = (
@@ -190,12 +190,12 @@ def parse_events(replay, cutoff_time, parsed_data):
 
         if event.name == 'PlayerStatsEvent':
             parsed_data['players'][event.pid]['supply'].append(
-                    [event.frame, event.food_used / 4096])
-        elif event.name == 'UnitBornEvent': # need to reverse this
+                [event.frame, event.food_used / 4096])
+        elif event.name == 'UnitBornEvent':  # need to reverse this
             unit_born_event(builds, event, parsed_data)
         elif event.name == 'UnitInitEvent':
             unit_init_event(builds, event, parsed_data)
-        elif event.name == 'UpgradeCompleteEvent': # need to reverse this
+        elif event.name == 'UpgradeCompleteEvent':  # need to reverse this
             upgrade_event(builds, event, parsed_data)
 
     parsed_data['buildOrderExtracted'] = True  # legacy code
@@ -218,16 +218,15 @@ def parse_replay(args):
     }
 
     parsed_data['players'] = dict(
-            (key,
-                {
+        (key,
+            {
                 'name': player.name,
                 'race': player.play_race,
                 'is_winner': player.team.result == 'Win',
                 'is_human': player.is_human,
                 'supply': [[0, 6]],
-                }
-                ) for key, player in replay.player.iteritems()
-            )
+            }) for key, player in replay.player.iteritems()
+    )
 
     return parse_events(
         replay,

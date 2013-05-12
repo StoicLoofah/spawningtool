@@ -1,12 +1,12 @@
 """
-main
-~~~~
+spawningtool.main
+~~~~~~~~~~~~~~~~~
 """
 #!/usr/bin/env python
 import argparse
 
-from exception import CutoffTimeError, ReplayFormatError
-from spawningtool import parse_replay
+from spawningtool.exception import CutoffTimeError, ReplayFormatError
+from spawningtool.parser import parse_replay
 
 
 def print_results(result):
