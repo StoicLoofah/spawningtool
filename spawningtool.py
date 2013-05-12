@@ -203,11 +203,11 @@ def parse_events(replay, cutoff_time, parsed_data):
     return parsed_data
 
 
-def parse_replay(args):
+def parse_replay(replay_file, cutoff_time=None):
     """
     Parse replay for build order related events
     """
-    replay = sc2reader.load_replay(args.replay_file)
+    replay = sc2reader.load_replay(replay_file)
 
     parsed_data = {
         'buildOrderExtracted': False,
@@ -231,6 +231,6 @@ def parse_replay(args):
 
     return parse_events(
         replay,
-        args.cutoff_time,
+        cutoff_time,
         parsed_data,
     )

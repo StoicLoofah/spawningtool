@@ -38,7 +38,7 @@ def main():
     )
     args = parser.parse_args()
     try:
-        result = parse_replay(args)
+        result = parse_replay(args.replay_file, cutoff_time=args.cutoff_time)
     except CutoffTimeError as error:
         print error.message
     except ReplayFormatError as error:
