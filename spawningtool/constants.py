@@ -1,3 +1,8 @@
+"""
+spawningtool.constants
+~~~~~~~~~~~~~~~~~~~~~~
+"""
+
 BO_EXCLUDED = set([
     'MULE',
     'ReaperPlaceholder',
