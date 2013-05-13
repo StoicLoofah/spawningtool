@@ -19,7 +19,7 @@ setup(
     ],
     entry_points={
         'console_scripts': [
-            "spawningtool = spawningtool.main:main",
+            "spawningtool = spawningtool.__main__:main",
         ],
     },
     install_requires=[

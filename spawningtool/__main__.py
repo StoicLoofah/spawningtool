@@ -1,5 +1,5 @@
 """
-spawningtool.main
+spawningtool.__main__
 ~~~~~~~~~~~~~~~~~
 """
 #!/usr/bin/env python
