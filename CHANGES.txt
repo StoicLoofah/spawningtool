@@ -1,0 +1,2 @@
+v0.1.1, May 12, 2013 -- Updating main to be accessible via the package, adding more metadata
+v0.1.0, May 12, 2013 -- Initial release
