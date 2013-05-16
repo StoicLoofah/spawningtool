@@ -104,7 +104,11 @@ def get_supply(supply, frame):
 
 
 def unit_born_event(builds, event, parsed_data):
+    """
+    need to reverse the time
+    """
     player = event.control_pid
+    display_name = event.unit.name
     unit_name = event.unit_type_name
     if unit_name in BO_EXCLUDED or player == 0:
         return
@@ -112,9 +116,9 @@ def unit_born_event(builds, event, parsed_data):
         frame = event.frame - BUILD_TIMES[unit_name]
     except KeyError:
         frame = event.frame
-        unit_name += ' (Error on time)'
+        display_name += ' (Error on time)'
     supply = get_supply(parsed_data['players'][player]['supply'], frame)
-    builds[player].add_event(BuildEvent(unit_name, frame, supply))
+    builds[player].add_event(BuildEvent(display_name, frame, supply))
 
 
 def unit_init_event(builds, event, parsed_data):
@@ -128,6 +132,9 @@ def unit_init_event(builds, event, parsed_data):
 
 
 def upgrade_event(builds, event, parsed_data):
+    """
+    need to reverse the time
+    """
     player = event.pid
     if player == 0:
         return
@@ -191,11 +198,11 @@ def parse_events(replay, cutoff_time, parsed_data):
         if event.name == 'PlayerStatsEvent':
             parsed_data['players'][event.pid]['supply'].append(
                 [event.frame, event.food_used / 4096])
-        elif event.name == 'UnitBornEvent':  # need to reverse this
+        elif event.name == 'UnitBornEvent':
             unit_born_event(builds, event, parsed_data)
         elif event.name == 'UnitInitEvent':
             unit_init_event(builds, event, parsed_data)
-        elif event.name == 'UpgradeCompleteEvent':  # need to reverse this
+        elif event.name == 'UpgradeCompleteEvent':
             upgrade_event(builds, event, parsed_data)
 
     parsed_data['buildOrderExtracted'] = True  # legacy code
