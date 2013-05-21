@@ -14,7 +14,7 @@ pip install spawningtool
 
 From GitHub (less stable)
 ```bash
-pip install https://github.com/StoicLoofah/spawningtool.git
+pip install -e git+git://github.com/StoicLoofah/spawningtool.git#egg=spawningtool
 ```
 
 Usage
