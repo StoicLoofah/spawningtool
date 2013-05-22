@@ -221,7 +221,13 @@ def parse_replay(replay_file, cutoff_time=None):
         'message': '',
         'build': replay.build,
         'baseBuild': replay.versions[5],
+        'category': replay.category,
+        'unix_timestamp': replay.unix_timestamp,  # time completed
+        'frames': replay.frames,
+        'gateway': replay.gateway,
         'map': replay.map_name,
+        'map_hash': replay.map_hash,
+        'game_type': replay.real_type,
     }
 
     parsed_data['players'] = dict(
@@ -231,6 +237,10 @@ def parse_replay(replay_file, cutoff_time=None):
                 'race': player.play_race,
                 'is_winner': player.team.result == 'Win',
                 'is_human': player.is_human,
+                'handicap': player.handicap,
+                'color': player.color.hex,
+                'uid': player.uid,
+                'region': player.region,
                 'supply': [[0, 6]],
             }) for key, player in replay.player.iteritems()
     )
