@@ -72,19 +72,25 @@ BUILD_TIMES = {
     'Corruptor': 40,
     'Viper': 40,
     # research
+    'ZergMissileWeaponsLevel1': 160,
+    'ZergMissileWeaponsLevel2': 190,
+    'ZergMissileWeaponsLevel3': 220,
+    'ZergGroundArmorsLevel1': 160,
+    'ZergGroundArmorsLevel2': 190,
+    'ZergGroundArmorsLevel3': 220,
     'zerglingmovementspeed': 110,
     'GlialReconstitution': 110,
-    'WarpGateResearch': 160,
-    'BlinkTech': 170,
-    'Stimpack': 170,
-    'PunisherGrenades': 60,
-    'ShieldWall': 110,  # ? Combat Shield?
+    'hydraliskspeed': 100,  # not sure which is which
+    'HydraliskSpeedUpgrade': 80,
     'TerranInfantryWeaponsLevel1': 160,
     'TerranInfantryWeaponsLevel2': 190,
     'TerranInfantryWeaponsLevel3': 220,
     'TerranInfantryArmorsLevel1': 160,
     'TerranInfantryArmorsLevel2': 190,
     'TerranInfantryArmorsLevel3': 220,
+    'Stimpack': 170,
+    'PunisherGrenades': 60,
+    'ShieldWall': 110,  # ? Combat Shield?
     'ProtossGroundWeaponsLevel1': 160,
     'ProtossGroundWeaponsLevel2': 190,
     'ProtossGroundWeaponsLevel3': 220,
@@ -100,9 +106,13 @@ BUILD_TIMES = {
     'ProtossAirArmorsLevel1': 160,
     'ProtossAirArmorsLevel2': 190,
     'ProtossAirArmorsLevel3': 220,
+    'WarpGateResearch': 160,
+    'BlinkTech': 170,
     'ObserverGraviticBooster': 80,
     'GraviticDrive': 80,
     'ExtendedThermalLance': 140,
+    'Charge': 140,
+    'PsiStormTech': 110,
 }
 
 for key, value in BUILD_TIMES.iteritems():
