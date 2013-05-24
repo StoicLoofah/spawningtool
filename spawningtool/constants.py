@@ -18,7 +18,8 @@ BO_EXCLUDED = set([
     'BroodLord',
     'Broodling',
     'Larva',
-    'Creep Tumor'
+    'CreepTumor',
+    'CreepTumorQueen',
 ])
 
 BUILD_TIMES = {
@@ -82,6 +83,7 @@ BUILD_TIMES = {
     'GlialReconstitution': 110,
     'hydraliskspeed': 100,  # not sure which is which
     'HydraliskSpeedUpgrade': 80,
+    'overlordspeed': 60,
     'TerranInfantryWeaponsLevel1': 160,
     'TerranInfantryWeaponsLevel2': 190,
     'TerranInfantryWeaponsLevel3': 220,
