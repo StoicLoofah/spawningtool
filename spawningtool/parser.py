@@ -236,6 +236,7 @@ def parse_replay(replay_file, cutoff_time=None):
                 'name': player.name,
                 'race': player.play_race,
                 'is_winner': player.team.result == 'Win',
+                'result': player.team.result,
                 'is_human': player.is_human,
                 'handicap': player.handicap,
                 'color': player.color.hex,
