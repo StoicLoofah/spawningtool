@@ -98,8 +98,8 @@ BUILD_TIMES = {
     'CentrificalHooks': 110,
     'GlialReconstitution': 110,
     'TunnelingClaws': 110,
-    'hydraliskspeed': 100,  # not sure which is which
-    'HydraliskSpeedUpgrade': 80,
+    'hydraliskspeed': 80,  # Grooved Spines
+    'HydraliskSpeedUpgrade': 100,  # Muscular Augments
     'overlordspeed': 60,
     'overlordtransport': 130,
     'Burrow': 100,
