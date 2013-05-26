@@ -189,6 +189,10 @@ def parse_events(replay, cutoff_time, parsed_data):
                 ' right version ({}). Sorry.'.format(parsed_data['build'])
             ), parsed_data)
 
+    if replay.expansion != 'HotS':
+        # primarily because the build times are off, but I don't want to deal with it
+        raise ReplayFormatError(('spawningtool currently only supports HotS.'), parsed_data)
+
     builds = dict((key, GameTimeline()) for key in replay.player.iterkeys())
 
     for event in replay.tracker_events:
@@ -228,6 +232,7 @@ def parse_replay(replay_file, cutoff_time=None):
         'map': replay.map_name,
         'map_hash': replay.map_hash,
         'game_type': replay.real_type,
+        'expansion': replay.expansion,
     }
 
     parsed_data['players'] = dict(
