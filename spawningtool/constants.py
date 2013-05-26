@@ -17,6 +17,7 @@ BO_EXCLUDED = set([
     'Overseer',
     'BroodLord',
     'Broodling',
+    'BroodlingEscort',  # the guys that fly with the Brood Lord
     'Larva',
     'CreepTumor',
     'CreepTumorQueen',
