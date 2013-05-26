@@ -5,7 +5,7 @@ spawningtool.parser
 import sc2reader
 
 from spawningtool.constants import BO_EXCLUDED, BUILD_TIMES
-from spawningtool.exception import CutoffTimeError, ReplayFormatError
+from spawningtool.exception import CutoffTimeError, ReplayFormatError, ReadError
 
 
 DATA_NOT_SUPPORTED = (
@@ -218,7 +218,10 @@ def parse_replay(replay_file, cutoff_time=None):
     """
     Parse replay for build order related events
     """
-    replay = sc2reader.load_replay(replay_file)
+    try:
+        replay = sc2reader.load_replay(replay_file)
+    except sc2reader.exceptions.ReadError as error:
+        raise ReadError(error.message)
 
     parsed_data = {
         'buildOrderExtracted': False,
