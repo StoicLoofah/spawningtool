@@ -229,19 +229,20 @@ def parse_replay(replay_file, cutoff_time=None):
         'build': replay.build,
         'baseBuild': replay.versions[5],
         'category': replay.category,
+        'expansion': replay.expansion,
         'unix_timestamp': replay.unix_timestamp,  # time completed
         'frames': replay.frames,
+        'game_type': replay.real_type,
         'gateway': replay.gateway,
         'map': replay.map_name,
         'map_hash': replay.map_hash,
-        'game_type': replay.real_type,
-        'expansion': replay.expansion,
     }
 
     parsed_data['players'] = dict(
         (key,
             {
                 'name': player.name,
+                'pick_race': player.pick_race,  # can be random
                 'race': player.play_race,
                 'is_winner': player.team.result == 'Win',
                 'result': player.team.result,
@@ -251,6 +252,7 @@ def parse_replay(replay_file, cutoff_time=None):
                 'uid': player.uid,
                 'region': player.region,
                 'supply': [[0, 6]],
+                'team': player.team.number,
             }) for key, player in replay.player.iteritems()
     )
 
