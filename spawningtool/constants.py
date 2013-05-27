@@ -40,6 +40,7 @@ BUILD_TIMES = {
     'SiegeTank': 45,
     'Thor': 60,
     'Viking': 42,
+    'VikingFighter': 42,
     'VikingFlying': 42,
     'VikingAssault': 42,
     'Medivac': 42,
