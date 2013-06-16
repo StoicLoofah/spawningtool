@@ -201,7 +201,7 @@ def parse_events(replay, cutoff_time, parsed_data):
 
         if event.name == 'PlayerStatsEvent':
             parsed_data['players'][event.pid]['supply'].append(
-                [event.frame, event.food_used / 4096])
+                [event.frame, int(event.food_used)])
         elif event.name == 'UnitBornEvent':
             unit_born_event(builds, event, parsed_data)
         elif event.name == 'UnitInitEvent':

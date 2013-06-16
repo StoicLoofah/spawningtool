@@ -1,2 +1,3 @@
+v0.1.2, June 15, 2013 -- Locking in sc2reader version, fix supply for it
 v0.1.1, May 12, 2013 -- Updating main to be accessible via the package, adding more metadata
 v0.1.0, May 12, 2013 -- Initial release
