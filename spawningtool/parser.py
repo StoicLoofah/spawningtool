@@ -109,6 +109,8 @@ def unit_born_event(builds, event, parsed_data):
     """
     player = event.control_pid
     display_name = event.unit.name
+    if display_name is None:
+        display_name = '(None)'
     unit_name = event.unit_type_name
     if unit_name in BO_EXCLUDED or player == 0:
         return
