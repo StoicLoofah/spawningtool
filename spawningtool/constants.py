@@ -11,6 +11,7 @@ BO_EXCLUDED = set([
     'PointDefenseDrone',
     'Mothership',
     'Locust',
+    'LocustMP',
     'Changeling',
     'InfestedTerran',
     'Overseer',
@@ -168,7 +169,15 @@ BUILD_TIMES = {
     'Charge': 140,
     'PsiStormTech': 110,
     'PhoenixRangeUpgrade': 90,
+    # unit change buildings
+    'Lair': 80,
+    'Hive': 100,
+    'GreaterSpire': 150,
+    'OrbitalCommand': 35,
+    'PlanetaryFortress': 50,
+    'Overseer': 17,
 }
 
 for key, value in BUILD_TIMES.iteritems():
     BUILD_TIMES[key] *= 16
+

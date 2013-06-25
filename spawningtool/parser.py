@@ -150,6 +150,20 @@ def upgrade_event(builds, event, parsed_data):
     builds[player].add_event(BuildEvent(unit_name, frame, supply))
 
 
+def change_event(builds, event, parsed_data):
+    player = event.unit.owner.pid
+    if player == 0:
+        return
+    unit_name = event.unit_type_name
+    try:
+        frame = event.frame - BUILD_TIMES[unit_name]
+    except KeyError:
+        return
+
+    supply = get_supply(parsed_data['players'][player]['supply'], frame)
+    builds[player].add_event(BuildEvent(unit_name, frame, supply))
+
+
 def make_event_timeline(builds, cutoff_time, parsed_data):
     """
     Converts the GameTimeline into a readable structure
@@ -200,7 +214,6 @@ def parse_events(replay, cutoff_time, parsed_data):
     for event in replay.tracker_events:
         if event.frame == 0:
             continue
-
         if event.name == 'PlayerStatsEvent':
             parsed_data['players'][event.pid]['supply'].append(
                 [event.frame, int(event.food_used)])
@@ -210,6 +223,8 @@ def parse_events(replay, cutoff_time, parsed_data):
             unit_init_event(builds, event, parsed_data)
         elif event.name == 'UpgradeCompleteEvent':
             upgrade_event(builds, event, parsed_data)
+        elif event.name == 'UnitTypeChangeEvent':
+            change_event(builds, event, parsed_data)
 
     parsed_data['buildOrderExtracted'] = True  # legacy code
     make_event_timeline(builds, cutoff_time, parsed_data)
