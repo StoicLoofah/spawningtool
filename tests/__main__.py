@@ -2,6 +2,7 @@ import json
 import unittest
 
 import spawningtool.parser
+import spawningtool.exception
 
 
 class SpawningToolTestCase(unittest.TestCase):
@@ -12,11 +13,6 @@ class SpawningToolTestCase(unittest.TestCase):
         if type(results) in [str, unicode] and type(expected_results) in [str, unicode]:
             pass
         else:
-            """
-            print path
-            print results
-            print expected_results
-            """
             self.assertEqual(type(results), type(expected_results))
 
         if type(results) == dict:
@@ -44,11 +40,28 @@ class SpawningToolTestCase(unittest.TestCase):
 class ParseReplayTest(SpawningToolTestCase):
 
     def test_result(self):
+        """
+        testing a valid replay
+        """
         self.results = spawningtool.parser.parse_replay("replays/LiquidTLO vs Thorzain.SC2Replay")
         with open('tests/tlo_v_thorzain.json', 'r') as expected_results_file:
             self.expected_results = json.load(expected_results_file)
 
         self.assertDictsEqual(self.results, self.expected_results)
+
+    def test_old_result(self):
+        """
+        parsing a file that doesn't have tracker events
+        """
+        self.assertRaises(spawningtool.exception.ReplayFormatError,
+                spawningtool.parser.parse_replay, "replays/oldreplay.SC2Replay")
+
+    def test_read_error(self):
+        """
+        parsing a file that isn't a replay
+        """
+        self.assertRaises(spawningtool.exception.ReadError,
+                spawningtool.parser.parse_replay, "tests/tlo_v_thorzain.json")
 
 
 if __name__ == '__main__':
