@@ -28,6 +28,8 @@ class SpawningToolTestCase(unittest.TestCase):
                 self.assertFalse(path)
         elif type(results) == list:
             if len(results) != len(expected_results):
+                print len(results)
+                print len(expected_results)
                 self.assertFalse(path)
             for i, value in enumerate(results):
                 self.assertObjectsEqual(value, expected_results[i],

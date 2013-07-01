@@ -25,6 +25,7 @@ BO_EXCLUDED = set([
     'AutoTurret',
     'InfestedTerran',
     'Interceptor',
+    'SwarmHostMP',
 ])
 
 BUILD_TIMES = {
@@ -33,16 +34,13 @@ BUILD_TIMES = {
     'Marauder': 30,
     'Reaper': 40,
     'Ghost': 40,
+    'BattleHellion': 30,  # Hellbat
     'Hellion': 30,
     'Hellbat': 30,
-    'HellionTank': 30,
     'WidowMine': 40,
     'SiegeTank': 45,
     'Thor': 60,
     'Viking': 42,
-    'VikingFighter': 42,
-    'VikingFlying': 42,
-    'VikingAssault': 42,
     'Medivac': 42,
     'Raven': 60,
     'Banshee': 60,
@@ -71,7 +69,6 @@ BUILD_TIMES = {
     'Roach': 27,
     'Hydralisk': 33,
     'SwarmHost': 40,
-    'SwarmHostMP': 40,
     'Infestor': 50,
     'Ultralisk': 55,
     'NydusWorm': 20,

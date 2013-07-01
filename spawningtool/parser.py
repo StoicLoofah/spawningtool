@@ -106,21 +106,27 @@ def get_supply(supply, frame):
 def unit_born_event(builds, event, parsed_data):
     """
     need to reverse the time
+    if the unit morphs, it's preferable to use the unit_type_name since it's what it was
+    actually born as. sc2reader does, however, provide some nice normalization, so
+    swap the display name as necessary
     """
     player = event.control_pid
-    display_name = event.unit.name
-    if display_name is None:
-        display_name = '(None)'
     unit_name = event.unit_type_name
     if unit_name in BO_EXCLUDED or player == 0:
         return
+
+    if not unit_name in BUILD_TIMES:
+        unit_name = event.unit.name
+    if unit_name is None:
+        unit_name = '(None)'
+
     try:
         frame = event.frame - BUILD_TIMES[unit_name]
     except KeyError:
         frame = event.frame
-        display_name += ' (Error on time)'
+        unit_name += ' (Error on born time)'
     supply = get_supply(parsed_data['players'][player]['supply'], frame)
-    builds[player].add_event(BuildEvent(display_name, frame, supply))
+    builds[player].add_event(BuildEvent(unit_name, frame, supply))
 
 
 def unit_init_event(builds, event, parsed_data):
@@ -145,7 +151,7 @@ def upgrade_event(builds, event, parsed_data):
         frame = event.frame - BUILD_TIMES[unit_name]
     except KeyError:
         frame = event.frame
-        unit_name += ' (Error on time)'
+        unit_name += ' (Error on upgrade time)'
     supply = get_supply(parsed_data['players'][player]['supply'], frame)
     builds[player].add_event(BuildEvent(unit_name, frame, supply))
 
