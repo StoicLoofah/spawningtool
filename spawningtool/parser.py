@@ -33,6 +33,9 @@ class TrackerEvent(object):
         self.frame = frame
         self.supply = supply
 
+    def to_dict(self):
+        raise NotImplementedError
+
     def __unicode__(self):
         if self.supply:
             return '{} {} Event'.format(self.supply, self.frame)
@@ -47,12 +50,43 @@ class BuildEvent(TrackerEvent):
     def is_worker(self):
         return self.name in ['SCV', 'Drone', 'Probe']
 
+    def to_dict(self):
+        return {
+            'frame': self.frame,
+            'time': _frame_to_time(self.frame),
+            'name': self.name,
+            'supply': self.supply,
+            'is_worker': self.is_worker()
+        }
+
     def __unicode__(self):
         return '{} {} {}'.format(
             self.supply,
             _frame_to_time(self.frame),
             self.name
         )
+
+
+class DiedEvent(TrackerEvent):
+    def __init__(self, name, frame, killer):
+        self.name = name
+        super(DiedEvent, self).__init__(frame, None)
+        self.killer = killer  # player id
+
+    def to_dict(self):
+        return {
+            'frame': self.frame,
+            'time': _frame_to_time(self.frame),
+            'name': self.name,
+            'killer': self.killer,
+        }
+
+    def __unicode__(self):
+        return '{} {} killed by {}'.format(
+            _frame_to_time(self.frame),
+            self.name,
+            self.killer,
+            )
 
 
 class GameTimeline(object):
@@ -170,15 +204,33 @@ def change_event(builds, event, parsed_data):
     builds[player].add_event(BuildEvent(unit_name, frame, supply))
 
 
-def make_event_timeline(builds, cutoff_time, parsed_data):
+def died_event(units_lost, event):
+    """
+    for born events, the name needed to be corrected for evolutions
+    but if it dies, then it should die in its final form
+    """
+    if not event.unit or not event.unit.owner:
+        return
+    player = event.unit.owner.pid
+    unit_name = event.unit.name
+
+    if unit_name in BO_EXCLUDED or player == 0:
+        return
+
+    killer = event.killer_pid
+
+    units_lost[player].add_event(DiedEvent(unit_name, event.frame, killer))
+
+
+def make_event_timeline(timelines, cutoff_time, parsed_data, field):
     """
     Converts the GameTimeline into a readable structure
     """
-    for i, build in builds.iteritems():
-        build.sort()
+    for i, timeline in timelines.iteritems():
+        timeline.sort()
 
-        parsed_data['players'][i]['buildOrder'] = []
-        for event in build.timeline:
+        parsed_data['players'][i][field] = []
+        for event in timeline.timeline:
 
             # If desired, stop parsing for events after a given time
             current_gametime = _frame_to_time(event.frame)
@@ -187,15 +239,7 @@ def make_event_timeline(builds, cutoff_time, parsed_data):
                     convert_gametime_to_float(cutoff_time)):
                 break
 
-            parsed_data['players'][i]['buildOrder'].append(
-                {
-                    'frame': event.frame,
-                    'time': _frame_to_time(event.frame),
-                    'name': event.name,
-                    'supply': event.supply,
-                    'is_worker': event.is_worker()
-                }
-            )
+            parsed_data['players'][i][field].append(event.to_dict())
 
 
 def parse_events(replay, cutoff_time, parsed_data):
@@ -216,6 +260,7 @@ def parse_events(replay, cutoff_time, parsed_data):
         raise ReplayFormatError(('spawningtool currently only supports HotS.'), parsed_data)
 
     builds = dict((key, GameTimeline()) for key in replay.player.iterkeys())
+    units_lost = dict((key, GameTimeline()) for key in replay.player.iterkeys())
 
     for event in replay.tracker_events:
         if event.frame == 0:
@@ -231,9 +276,12 @@ def parse_events(replay, cutoff_time, parsed_data):
             upgrade_event(builds, event, parsed_data)
         elif event.name == 'UnitTypeChangeEvent':
             change_event(builds, event, parsed_data)
+        elif event.name == 'UnitDiedEvent':
+            died_event(units_lost, event)
 
     parsed_data['buildOrderExtracted'] = True  # legacy code
-    make_event_timeline(builds, cutoff_time, parsed_data)
+    make_event_timeline(builds, cutoff_time, parsed_data, 'buildOrder')
+    make_event_timeline(units_lost, cutoff_time, parsed_data, 'unitsLost')
     return parsed_data
 
 

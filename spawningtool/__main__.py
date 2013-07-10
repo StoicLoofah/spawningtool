@@ -9,12 +9,7 @@ from spawningtool.exception import CutoffTimeError, ReplayFormatError
 from spawningtool.parser import parse_replay
 
 
-def print_results(result):
-    """
-    Print the results of the build order
-    """
-    print result['map']
-    print result['build']
+def print_builds(result):
     for player in result['players'].itervalues():
         print '{} ({})'.format(player['name'], player['race'])
         for event in player['buildOrder']:
@@ -25,6 +20,28 @@ def print_results(result):
                     event['name']
                 )
         print ''
+
+
+def print_units_lost(result):
+    for player in result['players'].itervalues():
+        print '{} ({})'.format(player['name'], player['race'])
+        for event in player['unitsLost']:
+                print '{} {} killed by {}'.format(
+                    event['time'],
+                    event['name'],
+                    event['killer']
+                )
+        print ''
+
+
+def print_results(result):
+    """
+    Print the results of the build order
+    """
+    print result['map']
+    print result['build']
+    print_builds(result)
+    print_units_lost(result)
 
 
 def main():
