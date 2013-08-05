@@ -4,7 +4,7 @@ spawningtool.parser
 """
 import sc2reader
 
-from spawningtool.constants import BO_EXCLUDED, BUILD_TIMES
+from spawningtool.constants import BO_EXCLUDED, BUILD_TIMES, TRACKED_ABILITIES
 from spawningtool.exception import CutoffTimeError, ReplayFormatError, ReadError
 
 
@@ -29,6 +29,9 @@ def _frame_to_time(frame):
 
 
 class TrackerEvent(object):
+    """
+    not necesarily a trackerevent, but event was too generic
+    """
     def __init__(self, frame, supply=None):
         self.frame = frame
         self.supply = supply
@@ -86,6 +89,25 @@ class DiedEvent(TrackerEvent):
             _frame_to_time(self.frame),
             self.name,
             self.killer,
+            )
+
+
+class AbilityEvent(TrackerEvent):
+    def __init__(self, name, frame):
+        self.name = name
+        super(AbilityEvent, self).__init__(frame, None)
+
+    def to_dict(self):
+        return {
+            'frame': self.frame,
+            'time': _frame_to_time(self.frame),
+            'name': self.name,
+        }
+
+    def __unicode__(self):
+        return '{} {}'.format(
+            _frame_to_time(self.frame),
+            self.name,
             )
 
 
@@ -222,6 +244,16 @@ def died_event(units_lost, event):
     units_lost[player].add_event(DiedEvent(unit_name, event.frame, killer))
 
 
+def ability_event(abilities, event):
+    player = event.player.pid
+    ability_name = event.ability_name
+
+    if ability_name not in TRACKED_ABILITIES or not player:
+        return
+
+    abilities[player].add_event(AbilityEvent(ability_name, event.frame))
+
+
 def make_event_timeline(timelines, cutoff_time, parsed_data, field):
     """
     Converts the GameTimeline into a readable structure
@@ -261,6 +293,7 @@ def parse_events(replay, cutoff_time, parsed_data):
 
     builds = dict((key, GameTimeline()) for key in replay.player.iterkeys())
     units_lost = dict((key, GameTimeline()) for key in replay.player.iterkeys())
+    abilities = dict((key, GameTimeline()) for key in replay.player.iterkeys())
 
     for event in replay.tracker_events:
         if event.frame == 0:
@@ -279,9 +312,19 @@ def parse_events(replay, cutoff_time, parsed_data):
         elif event.name == 'UnitDiedEvent':
             died_event(units_lost, event)
 
+    legit_ability_event_types = set([
+        'LocationAbilityEvent',
+        'TargetAbilityEvent',
+        'SelfAbilityEvent',
+        ])
+    for event in replay.game_events:
+        if event.name in legit_ability_event_types:
+            ability_event(abilities, event)
+
     parsed_data['buildOrderExtracted'] = True  # legacy code
     make_event_timeline(builds, cutoff_time, parsed_data, 'buildOrder')
     make_event_timeline(units_lost, cutoff_time, parsed_data, 'unitsLost')
+    make_event_timeline(abilities, cutoff_time, parsed_data, 'abilities')
     return parsed_data
 
 

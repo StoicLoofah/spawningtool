@@ -34,6 +34,17 @@ def print_units_lost(result):
         print ''
 
 
+def print_abilities(result):
+    for player in result['players'].itervalues():
+        print '{} ({})'.format(player['name'], player['race'])
+        for event in player['abilities']:
+                print '{} {}'.format(
+                    event['time'],
+                    event['name'],
+                )
+        print ''
+
+
 def print_results(result):
     """
     Print the results of the build order
@@ -42,6 +53,7 @@ def print_results(result):
     print result['build']
     print_builds(result)
     print_units_lost(result)
+    print_abilities(result)
 
 
 def main():
