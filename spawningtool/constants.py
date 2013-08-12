@@ -206,7 +206,7 @@ TRACKED_ABILITIES = set([
     'SupplyDrop',
     '250mmStrikeCannons',
     'TimeWarp',
-    'Stimpack',
+    # 'Stimpack',
     # 'GhostCloak',
     'Snipe',
     # 'BansheeCloak',
