@@ -51,6 +51,16 @@ class ParseReplayTest(SpawningToolTestCase):
 
         self.assertDictsEqual(self.results, self.expected_results)
 
+    def test_gameheart(self):
+        """
+        testing a gameheart replay
+        """
+        self.results = spawningtool.parser.parse_replay("replays/gameheart.SC2Replay")
+        with open('tests/gameheart.json', 'r') as expected_results_file:
+            self.expected_results = json.load(expected_results_file)
+
+        self.assertDictsEqual(self.results, self.expected_results)
+
     def test_old_result(self):
         """
         parsing a file that doesn't have tracker events

@@ -298,7 +298,7 @@ def parse_events(replay, cutoff_time, parsed_data):
     for event in replay.tracker_events:
         if event.frame == 0:
             continue
-        if event.name == 'PlayerStatsEvent':
+        if event.name == 'PlayerStatsEvent' and event.pid in parsed_data['players']:
             parsed_data['players'][event.pid]['supply'].append(
                 [event.frame, int(event.food_used)])
         elif event.name == 'UnitBornEvent':
@@ -316,6 +316,7 @@ def parse_events(replay, cutoff_time, parsed_data):
         'LocationAbilityEvent',
         'TargetAbilityEvent',
         'SelfAbilityEvent',
+        'AbilityEvent',
         ])
     for event in replay.game_events:
         if event.name in legit_ability_event_types:
@@ -365,7 +366,7 @@ def parse_replay(replay_file, cutoff_time=None):
                 'is_human': player.is_human,
                 'handicap': player.handicap,
                 'color': player.color.hex,
-                'uid': player.uid,
+                'uid': player.toon_id,  # naming change from sc2reader
                 'region': player.region,
                 'supply': [[0, 6]],
                 'team': player.team.number,
