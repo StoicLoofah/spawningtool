@@ -181,7 +181,7 @@ for key, value in BUILD_TIMES.iteritems():
 
 TRACKED_ABILITIES = set([
     '250mmStrikeCannons',
-    'BuildAutoTurret',
+    'BlindingCloud',
     'BuildAutoTurret',
     'CalldownMULE',
     'Contaminate',
