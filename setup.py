@@ -24,7 +24,7 @@ setup(
     },
     install_requires=[
         'argparse',
-        'sc2reader==0.6.0',
+        'sc2reader==0.6.1',
     ],
     packages=find_packages(),
 )
