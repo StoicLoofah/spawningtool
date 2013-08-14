@@ -213,6 +213,8 @@ def upgrade_event(builds, event, parsed_data):
 
 
 def change_event(builds, event, parsed_data):
+    if not event.unit.owner:  # happened when knocking down rocks
+        return
     player = event.unit.owner.pid
     if player == 0:
         return
