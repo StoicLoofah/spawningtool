@@ -173,6 +173,8 @@ def unit_born_event(builds, event, parsed_data):
 
     if not unit_name in BUILD_TIMES:
         unit_name = event.unit.name
+        if unit_name in BO_EXCLUDED:
+            return
     if unit_name is None:
         unit_name = '(None)'
 

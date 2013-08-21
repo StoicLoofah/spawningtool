@@ -9,7 +9,6 @@ BO_EXCLUDED = set([
     'Interceptor'
     'AutoTurret',
     'PointDefenseDrone',
-    'Mothership',
     'Locust',
     'LocustMP',
     'Changeling',
@@ -25,7 +24,7 @@ BO_EXCLUDED = set([
     'AutoTurret',
     'InfestedTerran',
     'Interceptor',
-    'SwarmHostMP',
+    'SwarmHostBurrowed',
 ])
 
 BUILD_TIMES = {
