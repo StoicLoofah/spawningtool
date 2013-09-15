@@ -168,7 +168,7 @@ def unit_born_event(builds, event, parsed_data):
     """
     player = event.control_pid
     unit_name = event.unit_type_name
-    if unit_name in BO_EXCLUDED or player == 0:
+    if unit_name in BO_EXCLUDED or player == 0 or event.unit.hallucinated:
         return
 
     if not unit_name in BUILD_TIMES:
@@ -190,7 +190,7 @@ def unit_born_event(builds, event, parsed_data):
 def unit_init_event(builds, event, parsed_data):
     player = event.control_pid
     unit_name = event.unit_type_name
-    if unit_name in BO_EXCLUDED or player == 0:
+    if unit_name in BO_EXCLUDED or player == 0 or event.unit.hallucinated:
         return
     frame = event.frame
     supply = parsed_data['players'][player]['supply'][-1][1]
