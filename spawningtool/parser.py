@@ -4,7 +4,8 @@ spawningtool.parser
 """
 import sc2reader
 
-from spawningtool.constants import BO_EXCLUDED, BUILD_TIMES, TRACKED_ABILITIES
+from spawningtool.constants import (BO_EXCLUDED, BO_CHANGED_EXCLUDED, BUILD_TIMES,
+        TRACKED_ABILITIES, )
 from spawningtool.exception import CutoffTimeError, ReplayFormatError, ReadError
 
 
@@ -218,9 +219,10 @@ def change_event(builds, event, parsed_data):
     if not event.unit.owner:  # happened when knocking down rocks
         return
     player = event.unit.owner.pid
-    if player == 0:
-        return
     unit_name = event.unit_type_name
+    if player == 0 or unit_name in BO_CHANGED_EXCLUDED:
+        return
+
     try:
         frame = event.frame - BUILD_TIMES[unit_name]
     except KeyError:

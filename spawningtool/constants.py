@@ -27,6 +27,12 @@ BO_EXCLUDED = set([
     'SwarmHostBurrowed',
 ])
 
+BO_CHANGED_EXCLUDED = set([
+    'VikingAssault',
+    'VikingFighter',
+    'Viking',
+])
+
 BUILD_TIMES = {
     'SCV': 17,
     'Marine': 25,
@@ -40,6 +46,8 @@ BUILD_TIMES = {
     'SiegeTank': 45,
     'Thor': 60,
     'Viking': 42,
+    'VikingFighter': 42,  # all born as VikingFighters, but others in here for coverage
+    'VikingAssault': 42,
     'Medivac': 42,
     'Raven': 60,
     'Banshee': 60,
