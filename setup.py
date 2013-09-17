@@ -1,6 +1,6 @@
 from setuptools import find_packages, setup
 
-__version__ = "0.1.3"
+__version__ = "0.1.4"
 
 setup(
     name="spawningtool",
@@ -24,7 +24,7 @@ setup(
     },
     install_requires=[
         'argparse',
-        'sc2reader==0.6.1',
+        'sc2reader==0.6.3',
     ],
     packages=find_packages(),
 )
