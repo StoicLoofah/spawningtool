@@ -6,7 +6,9 @@ setup(
     name="spawningtool",
     description="Build order parser for SC2 replays",
     version=__version__,
+    url="https://github.com/StoicLoofah/spawningtool",
     author="Kevin Leung",
+    author_email="kkleung89@gmail.com",
     classifiers=[
         "Environment :: Console",
         "Intended Audience :: Developers",
