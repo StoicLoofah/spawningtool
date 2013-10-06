@@ -11,7 +11,7 @@ from spawningtool.parser import parse_replay
 
 def print_builds(result):
     for player in result['players'].itervalues():
-        print '{} ({})'.format(player['name'], player['race'])
+        print u'{} ({})'.format(player['name'], player['race'])
         for event in player['buildOrder']:
             if not event['is_worker']:
                 print '{} {} {}'.format(
@@ -24,7 +24,7 @@ def print_builds(result):
 
 def print_units_lost(result):
     for player in result['players'].itervalues():
-        print '{} ({})'.format(player['name'], player['race'])
+        print u'{} ({})'.format(player['name'], player['race'])
         for event in player['unitsLost']:
                 print '{} {} killed by {}'.format(
                     event['time'],
@@ -36,7 +36,7 @@ def print_units_lost(result):
 
 def print_abilities(result):
     for player in result['players'].itervalues():
-        print '{} ({})'.format(player['name'], player['race'])
+        print u'{} ({})'.format(player['name'], player['race'])
         for event in player['abilities']:
                 print '{} {}'.format(
                     event['time'],

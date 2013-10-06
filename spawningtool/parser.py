@@ -284,7 +284,7 @@ def parse_events(replay, cutoff_time, parsed_data):
     """
     Parse all game related events
     """
-    if not hasattr(replay, 'tracker_events'):
+    if not getattr(replay, 'tracker_events', None):
         if replay.build < 25604:  # this is 2.0.8
             raise ReplayFormatError(DATA_NOT_SUPPORTED, parsed_data)
         else:
