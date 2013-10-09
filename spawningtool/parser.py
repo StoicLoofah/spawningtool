@@ -367,6 +367,8 @@ def parse_replay(replay_file, cutoff_time=None):
                 'name': player.name,
                 'pick_race': player.pick_race,  # can be random
                 'race': player.play_race,
+                'league': player.highest_league,
+                'level': player.combined_race_levels,
                 'is_winner': player.team.result == 'Win',
                 'result': player.team.result,
                 'is_human': player.is_human,
