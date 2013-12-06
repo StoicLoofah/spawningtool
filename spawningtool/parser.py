@@ -319,10 +319,10 @@ def parse_events(replay, cutoff_time, parsed_data):
             died_event(units_lost, event)
 
     legit_ability_event_types = set([
-        'LocationAbilityEvent',
-        'TargetAbilityEvent',
-        'SelfAbilityEvent',
-        'AbilityEvent',
+        'TargetPointCommandEvent',
+        'TargetUnitCommandEvent',
+        'DataCommandEvent',
+        'BasicCommandEvent',
         ])
     for event in replay.game_events:
         if event.name in legit_ability_event_types:
