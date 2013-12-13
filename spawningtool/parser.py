@@ -184,6 +184,9 @@ def unit_born_event(builds, event, parsed_data):
     except KeyError:
         frame = event.frame
         unit_name += ' (Error on born time)'
+        if not player in parsed_data['players']:  # ignore observer units from GH
+            return
+
     supply = get_supply(parsed_data['players'][player]['supply'], frame)
     builds[player].add_event(BuildEvent(unit_name, frame, supply))
 
