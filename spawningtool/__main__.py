@@ -65,9 +65,16 @@ def main():
     parser.add_argument(
         '--cutoff-time', help='Game time at which to stop displaying events'
     )
+    parser.add_argument(
+        '--cache-dir', help='Directory to cache results in'
+    )
+
     args = parser.parse_args()
     try:
-        result = parse_replay(args.replay_file, cutoff_time=args.cutoff_time)
+        result = parse_replay(
+                args.replay_file,
+                cutoff_time=args.cutoff_time,
+                cache_dir=args.cache_dir)
     except CutoffTimeError as error:
         print error.message
     except ReplayFormatError as error:

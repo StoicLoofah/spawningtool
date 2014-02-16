@@ -2,6 +2,9 @@
 spawningtool.parser
 ~~~~~~~~~~~~~~~~~~~
 """
+import hashlib
+import json
+import os
 import sc2reader
 
 from spawningtool.constants import (BO_EXCLUDED, BO_CHANGED_EXCLUDED, BUILD_TIMES,
@@ -283,7 +286,7 @@ def make_event_timeline(timelines, cutoff_time, parsed_data, field):
             parsed_data['players'][i][field].append(event.to_dict())
 
 
-def parse_events(replay, cutoff_time, parsed_data):
+def parse_events(replay, cutoff_time, parsed_data, cache_path=None):
     """
     Parse all game related events
     """
@@ -335,13 +338,32 @@ def parse_events(replay, cutoff_time, parsed_data):
     make_event_timeline(builds, cutoff_time, parsed_data, 'buildOrder')
     make_event_timeline(units_lost, cutoff_time, parsed_data, 'unitsLost')
     make_event_timeline(abilities, cutoff_time, parsed_data, 'abilities')
+
+    if cache_path:
+        with open(cache_path, 'w') as fout:
+            json.dump(parsed_data, fout)
+
     return parsed_data
 
 
-def parse_replay(replay_file, cutoff_time=None):
+def parse_replay(replay_file, cutoff_time=None, cache_dir=None):
     """
     Parse replay for build order related events
+    cutoff_time determines a point at which we stop processing the replay
+    cache_dir setups a folder where results are stored for the future
     """
+
+    cache_path = None
+    if cache_dir:
+        replay_hash = None
+        with open(replay_file, 'r') as fin:
+            replay_hash = hashlib.md5(fin.read()).hexdigest()
+        cache_path = os.path.join(cache_dir, replay_hash)
+        if os.path.exists(cache_path):
+            with open(cache_path, 'r') as cache_file:
+                result = json.load(cache_file)
+                return result
+
     try:
         replay = sc2reader.load_replay(replay_file)
     except sc2reader.exceptions.ReadError as error:
@@ -388,4 +410,5 @@ def parse_replay(replay_file, cutoff_time=None):
         replay,
         cutoff_time,
         parsed_data,
+        cache_path
     )
