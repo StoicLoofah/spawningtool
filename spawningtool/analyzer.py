@@ -26,7 +26,7 @@ def count_win_percentage_by_supply_difference(filenames, condition=None, cache_d
             return
 
         is_counting_player_1 = not condition or condition(replay, player_1, player_2)
-        is_counting_player_2 = not condition or condition(replay, player_1, player_2)
+        is_counting_player_2 = not condition or condition(replay, player_2, player_1)
 
         if is_counting_player_1 or is_counting_player_2:
             player_2_supply = player_2['supply']
