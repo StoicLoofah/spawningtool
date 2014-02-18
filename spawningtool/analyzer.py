@@ -1,58 +1,96 @@
 #!/usr/bin/env python
 import argparse
+import math
 from collections import Counter
 
 from spawningtool.parser import parse_replay
 
 
-def map_replays(filenames, map_fn, cache_dir=None):
+def map_replays(filenames, map_fn, results, update_fn, cache_dir=None, **kwargs):
     for filename in filenames:
         filename = filename.rstrip('\n')
         replay = parse_replay(filename, cache_dir=cache_dir)
-        map_fn(replay)
+        map_fn(replay, results, update_fn, **kwargs)
 
 
-def count_win_percentage_by_supply_difference(filenames, condition=None, cache_dir=None):
-    num_games_counter = Counter()
-    num_wins_counter = Counter()
+def check_supplies(replay, results, update_fn, condition=None):
+    if len(replay['players']) != 2:
+        return
+    players = replay['players'].values()
+    player_1 = players[0]
+    player_2 = players[1]
+    if player_1['is_winner'] == player_2['is_winner']:
+        return
 
-    def update_counters(replay):
-        if len(replay['players']) != 2:
+    is_counting_player_1 = not condition or condition(replay, player_1, player_2)
+    is_counting_player_2 = not condition or condition(replay, player_2, player_1)
+
+    if is_counting_player_1 or is_counting_player_2:
+        player_2_supply = player_2['supply']
+        supply_len = len(player_2_supply)
+        for i, data in enumerate(player_1['supply']):
+            if i >= supply_len:
+                continue
+            diff = data[1] - player_2_supply[i][1]
+
+            if is_counting_player_1:
+                update_fn(results, player_1, player_2, data[1], player_2_supply[i][1])
+            if is_counting_player_2:
+                update_fn(results, player_2, player_1, player_2_supply[i][1], data[1])
+
+
+def count_win_rate_by_supply_difference(filenames, condition=None, cache_dir=None):
+    results = {
+            'num_games_counter': Counter(),
+            'num_wins_counter': Counter(),
+            }
+
+    def update_fn(results, player_1, player_2, supply_1, supply_2):
+        diff = supply_1 - supply_2
+
+        results['num_games_counter'][diff] += 1
+        if player_1['is_winner']:
+            results['num_wins_counter'][diff] += 1
+
+
+    map_replays(filenames, check_supplies, results, update_fn, cache_dir, condition=condition)
+
+    return [ [unicode(i),
+        unicode(results['num_wins_counter'][i]),
+        unicode(results['num_games_counter'][i])]
+            for i in range(-100, 100)]
+
+
+def count_win_rate_by_supply_ratio(filenames, condition=None, cache_dir=None):
+    results = {
+            'num_games_counter': Counter(),
+            'num_wins_counter': Counter(),
+            }
+
+    def update_fn(results, player_1, player_2, supply_1, supply_2):
+        if supply_1 == 0 or supply_2 == 0:
             return
-        players = replay['players'].values()
-        player_1 = players[0]
-        player_2 = players[1]
-        if player_1['is_winner'] == player_2['is_winner']:
-            return
 
-        is_counting_player_1 = not condition or condition(replay, player_1, player_2)
-        is_counting_player_2 = not condition or condition(replay, player_2, player_1)
+        result = int(round(math.log(1.0 * supply_1 / supply_2) * 50))
 
-        if is_counting_player_1 or is_counting_player_2:
-            player_2_supply = player_2['supply']
-            supply_len = len(player_2_supply)
-            for i, data in enumerate(player_1['supply']):
-                if i >= supply_len:
-                    continue
-                diff = data[1] - player_2_supply[i][1]
+        results['num_games_counter'][result] += 1
+        if player_1['is_winner']:
+            results['num_wins_counter'][result] += 1
 
-                if is_counting_player_1:
-                    num_games_counter[diff] += 1
-                    if player_1['is_winner']:
-                        num_wins_counter[diff] += 1
+    map_replays(filenames, check_supplies, results, update_fn, cache_dir, condition=condition)
 
-                if is_counting_player_2:
-                    num_games_counter[-diff] += 1
-                    if player_2['is_winner']:
-                        num_wins_counter[-diff] += 1
-
-    map_replays(filenames, update_counters, cache_dir)
-
-    return [ [unicode(i), unicode(num_wins_counter[i]), unicode(num_games_counter[i])]
+    return [ [unicode(i),
+        unicode(results['num_wins_counter'][i]),
+        unicode(results['num_games_counter'][i])]
             for i in range(-100, 100)]
 
 
 RACE_BY_LETTER = {'z': 'Zerg', 't': 'Terran', 'p': 'Protoss'}
+
+OBJECTIVES = {
+        'supply_difference': count_win_rate_by_supply_difference,
+        'supply_ratio': count_win_rate_by_supply_ratio,
+        }
 
 
 def main():
@@ -63,6 +101,7 @@ def main():
     parser.add_argument('filenames', help='text file with a list of SC2Replay paths')
     parser.add_argument('--cache-dir', help='Directory to cache results in')
     parser.add_argument('--matchup', help='Which matchup to check')
+    parser.add_argument('--objective', help='What is being calculated')
 
     args = parser.parse_args()
 
@@ -74,9 +113,10 @@ def main():
         condition = lambda replay, player_1, player_2: \
                 player_1['race'] == player_1_race and player_2['race'] == player_2_race
 
+    objective_fn = OBJECTIVES.get(args.objective, count_win_rate_by_supply_difference)
+
     with open(args.filenames, 'r') as fin:
-        result = count_win_percentage_by_supply_difference(
-                fin, condition=condition, cache_dir=args.cache_dir)
+        result = objective_fn(fin, condition=condition, cache_dir=args.cache_dir)
         for row in result:
             print ','.join([unicode(val) for val in row])
 
