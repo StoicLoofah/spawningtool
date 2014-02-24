@@ -13,7 +13,7 @@ def map_replays(filenames, map_fn, results, update_fn, cache_dir=None, **kwargs)
         map_fn(replay, results, update_fn, **kwargs)
 
 
-def check_supplies(replay, results, update_fn, condition=None):
+def check_supplies(replay, results, update_fn, condition=None, min_time=None, max_time=None):
     if len(replay['players']) != 2:
         return
     players = replay['players'].values()
@@ -26,11 +26,21 @@ def check_supplies(replay, results, update_fn, condition=None):
     is_counting_player_2 = not condition or condition(replay, player_2, player_1)
 
     if is_counting_player_1 or is_counting_player_2:
+        if min_time is None:
+            min_time = 0
+        min_time = int(min_time) * 16
+
+        if max_time is None:
+            max_time = 10000
+        max_time = int(max_time) * 16
+
         player_2_supply = player_2['supply']
         supply_len = len(player_2_supply)
         for i, data in enumerate(player_1['supply']):
-            if i >= supply_len:
+            if i >= supply_len or min_time > data[0]:
                 continue
+            if max_time < data[0]:  # we're not going down at this point
+                return
             diff = data[1] - player_2_supply[i][1]
 
             if is_counting_player_1:
@@ -39,7 +49,8 @@ def check_supplies(replay, results, update_fn, condition=None):
                 update_fn(results, player_2, player_1, player_2_supply[i][1], data[1])
 
 
-def count_win_rate_by_supply_difference(filenames, condition=None, cache_dir=None):
+def count_win_rate_by_supply_difference(filenames, condition=None, cache_dir=None,
+        min_time=None, max_time=None):
     results = {
             'num_games_counter': Counter(),
             'num_wins_counter': Counter(),
@@ -53,7 +64,8 @@ def count_win_rate_by_supply_difference(filenames, condition=None, cache_dir=Non
             results['num_wins_counter'][diff] += 1
 
 
-    map_replays(filenames, check_supplies, results, update_fn, cache_dir, condition=condition)
+    map_replays(filenames, check_supplies, results, update_fn, cache_dir, condition=condition,
+            min_time=min_time, max_time=max_time)
 
     return [ [unicode(i),
         unicode(results['num_wins_counter'][i]),
@@ -61,7 +73,8 @@ def count_win_rate_by_supply_difference(filenames, condition=None, cache_dir=Non
             for i in range(-100, 100)]
 
 
-def count_win_rate_by_supply_ratio(filenames, condition=None, cache_dir=None):
+def count_win_rate_by_supply_ratio(filenames, condition=None, cache_dir=None,
+        min_time=None, max_time=None):
     results = {
             'num_games_counter': Counter(),
             'num_wins_counter': Counter(),
@@ -77,7 +90,8 @@ def count_win_rate_by_supply_ratio(filenames, condition=None, cache_dir=None):
         if player_1['is_winner']:
             results['num_wins_counter'][result] += 1
 
-    map_replays(filenames, check_supplies, results, update_fn, cache_dir, condition=condition)
+    map_replays(filenames, check_supplies, results, update_fn, cache_dir, condition=condition,
+            min_time=min_time, max_time=max_time)
 
     return [ [unicode(i),
         unicode(results['num_wins_counter'][i]),
@@ -102,6 +116,8 @@ def main():
     parser.add_argument('--cache-dir', help='Directory to cache results in')
     parser.add_argument('--matchup', help='Which matchup to check')
     parser.add_argument('--objective', help='What is being calculated')
+    parser.add_argument('--min-time', help='lower bound to count')
+    parser.add_argument('--max-time', help='upper bound to count')
 
     args = parser.parse_args()
 
@@ -116,7 +132,8 @@ def main():
     objective_fn = OBJECTIVES.get(args.objective, count_win_rate_by_supply_difference)
 
     with open(args.filenames, 'r') as fin:
-        result = objective_fn(fin, condition=condition, cache_dir=args.cache_dir)
+        result = objective_fn(fin, condition=condition, cache_dir=args.cache_dir,
+                min_time=args.min_time, max_time=args.max_time)
         for row in result:
             print ','.join([unicode(val) for val in row])
 
