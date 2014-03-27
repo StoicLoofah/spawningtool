@@ -12,6 +12,8 @@ from spawningtool.parser import parse_replay
 def print_builds(result):
     for player in result['players'].itervalues():
         print u'{} ({})'.format(player['name'], player['race'])
+        if player['clock_position'] is not None:
+            print u'Start Position: {}:00'.format(player['clock_position'])
         for event in player['buildOrder']:
             if not event['is_worker']:
                 print '{} {} {}'.format(
@@ -68,13 +70,18 @@ def main():
     parser.add_argument(
         '--cache-dir', help='Directory to cache results in'
     )
+    parser.add_argument(
+        '--map-details', help='Include map details and positions', action="store_true"
+    )
+
 
     args = parser.parse_args()
     try:
         result = parse_replay(
                 args.replay_file,
                 cutoff_time=args.cutoff_time,
-                cache_dir=args.cache_dir)
+                cache_dir=args.cache_dir,
+                include_map_details=bool(args.map_details))
     except CutoffTimeError as error:
         print error.message
     except ReplayFormatError as error:

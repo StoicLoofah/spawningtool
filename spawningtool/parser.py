@@ -32,13 +32,29 @@ def _frame_to_time(frame):
     return '{0}:{1:02d}'.format(seconds / 60, seconds % 60)
 
 
+# 0, 0 is bottom left
+CLOCK_POSITIONS = {
+        2: {0: 11, 1: 12, 2: 1},
+        1: {0: 9, 1: 0, 2: 3},
+        0: {0: 7, 1: 6, 2: 4},
+        }
+
+def _get_clock_position(parsed_data, event):
+    if not parsed_data['include_map_details']:
+        return None
+    x_section = int(event.x / (parsed_data['map_details']['width'] / 3))
+    y_section = int(event.y / (parsed_data['map_details']['height'] / 3))
+    return CLOCK_POSITIONS[y_section][x_section]
+
+
 class TrackerEvent(object):
     """
     not necesarily a trackerevent, but event was too generic
     """
-    def __init__(self, frame, supply=None):
+    def __init__(self, frame, supply=None, clock_position=None):
         self.frame = frame
         self.supply = supply
+        self.clock_position = clock_position
 
     def to_dict(self):
         raise NotImplementedError
@@ -50,9 +66,9 @@ class TrackerEvent(object):
 
 
 class BuildEvent(TrackerEvent):
-    def __init__(self, name, frame, supply):
+    def __init__(self, name, frame, supply, clock_position=None):
         self.name = name
-        super(BuildEvent, self).__init__(frame, supply)
+        super(BuildEvent, self).__init__(frame, supply, clock_position=clock_position)
 
     def is_worker(self):
         return self.name in ['SCV', 'Drone', 'Probe']
@@ -63,7 +79,8 @@ class BuildEvent(TrackerEvent):
             'time': _frame_to_time(self.frame),
             'name': self.name,
             'supply': self.supply,
-            'is_worker': self.is_worker()
+            'is_worker': self.is_worker(),
+            'clock_position': self.clock_position,
         }
 
     def __unicode__(self):
@@ -75,9 +92,9 @@ class BuildEvent(TrackerEvent):
 
 
 class DiedEvent(TrackerEvent):
-    def __init__(self, name, frame, killer):
+    def __init__(self, name, frame, killer, clock_position=None):
         self.name = name
-        super(DiedEvent, self).__init__(frame, None)
+        super(DiedEvent, self).__init__(frame, None, clock_position=clock_position)
         self.killer = killer  # player id
 
     def to_dict(self):
@@ -86,6 +103,7 @@ class DiedEvent(TrackerEvent):
             'time': _frame_to_time(self.frame),
             'name': self.name,
             'killer': self.killer,
+            'clock_position': self.clock_position,
         }
 
     def __unicode__(self):
@@ -191,7 +209,8 @@ def unit_born_event(builds, event, parsed_data):
             return
 
     supply = get_supply(parsed_data['players'][player]['supply'], frame)
-    builds[player].add_event(BuildEvent(unit_name, frame, supply))
+    builds[player].add_event(BuildEvent(unit_name, frame, supply,
+        _get_clock_position(parsed_data, event)))
 
 
 def unit_init_event(builds, event, parsed_data):
@@ -201,7 +220,8 @@ def unit_init_event(builds, event, parsed_data):
         return
     frame = event.frame
     supply = parsed_data['players'][player]['supply'][-1][1]
-    builds[player].add_event(BuildEvent(unit_name, frame, supply))
+    builds[player].add_event(BuildEvent(unit_name, frame, supply,
+        _get_clock_position(parsed_data, event)))
 
 
 def upgrade_event(builds, event, parsed_data):
@@ -238,7 +258,7 @@ def change_event(builds, event, parsed_data):
     builds[player].add_event(BuildEvent(unit_name, frame, supply))
 
 
-def died_event(units_lost, event):
+def died_event(units_lost, event, parsed_data):
     """
     for born events, the name needed to be corrected for evolutions
     but if it dies, then it should die in its final form
@@ -253,7 +273,8 @@ def died_event(units_lost, event):
 
     killer = event.killer_pid
 
-    units_lost[player].add_event(DiedEvent(unit_name, event.frame, killer))
+    units_lost[player].add_event(DiedEvent(unit_name, event.frame, killer,
+        _get_clock_position(parsed_data, event)))
 
 
 def ability_event(abilities, event):
@@ -286,7 +307,7 @@ def make_event_timeline(timelines, cutoff_time, parsed_data, field):
             parsed_data['players'][i][field].append(event.to_dict())
 
 
-def parse_events(replay, cutoff_time, parsed_data, cache_path=None):
+def parse_events(replay, cutoff_time, parsed_data, cache_path=None, include_map_details=False):
     """
     Parse all game related events
     """
@@ -309,6 +330,11 @@ def parse_events(replay, cutoff_time, parsed_data, cache_path=None):
 
     for event in replay.tracker_events:
         if event.frame == 0:
+            # set player start position
+            if include_map_details and event.name == 'UnitBornEvent' and \
+                    event.unit_type_name in ['Nexus', 'CommandCenter', 'Hatchery']:
+                parsed_data['players'][event.control_pid]['clock_position'] = \
+                        _get_clock_position(parsed_data, event)
             continue
         if event.name == 'PlayerStatsEvent' and event.pid in parsed_data['players']:
             parsed_data['players'][event.pid]['supply'].append(
@@ -322,7 +348,7 @@ def parse_events(replay, cutoff_time, parsed_data, cache_path=None):
         elif event.name == 'UnitTypeChangeEvent':
             change_event(builds, event, parsed_data)
         elif event.name == 'UnitDiedEvent':
-            died_event(units_lost, event)
+            died_event(units_lost, event, parsed_data)
 
     legit_ability_event_types = set([
         'TargetPointCommandEvent',
@@ -346,7 +372,14 @@ def parse_events(replay, cutoff_time, parsed_data, cache_path=None):
     return parsed_data
 
 
-def parse_replay(replay_file, cutoff_time=None, cache_dir=None):
+def parse_map_details(replay, parsed_data):
+    parsed_data['map_details'] = {
+            'height': replay.map.map_info.height,
+            'width': replay.map.map_info.width,
+            }
+
+
+def parse_replay(replay_file, cutoff_time=None, cache_dir=None, include_map_details=False):
     """
     Parse replay for build order related events
     cutoff_time determines a point at which we stop processing the replay
@@ -403,12 +436,23 @@ def parse_replay(replay_file, cutoff_time=None, cache_dir=None):
                 'region': player.region,
                 'supply': [[0, 6]],
                 'team': player.team.number,
+                'clock_position': None,
             }) for key, player in replay.player.iteritems()
     )
+
+    try:
+        if include_map_details:
+            replay.load_map()
+    except:
+        include_map_details = False
+    parsed_data['include_map_details'] = include_map_details  # reset if something goes wrong
+    if include_map_details:
+        parse_map_details(replay, parsed_data)
 
     return parse_events(
         replay,
         cutoff_time,
         parsed_data,
-        cache_path
+        cache_path,
+        include_map_details
     )
