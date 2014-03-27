@@ -68,13 +68,18 @@ def main():
     parser.add_argument(
         '--cache-dir', help='Directory to cache results in'
     )
+    parser.add_argument(
+        '--map-details', help='Include map details and positions', action="store_true"
+    )
+
 
     args = parser.parse_args()
     try:
         result = parse_replay(
                 args.replay_file,
                 cutoff_time=args.cutoff_time,
-                cache_dir=args.cache_dir)
+                cache_dir=args.cache_dir,
+                include_map_details=bool(args.map_details))
     except CutoffTimeError as error:
         print error.message
     except ReplayFormatError as error:
