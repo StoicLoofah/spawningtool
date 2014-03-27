@@ -330,6 +330,11 @@ def parse_events(replay, cutoff_time, parsed_data, cache_path=None, include_map_
 
     for event in replay.tracker_events:
         if event.frame == 0:
+            # set player start position
+            if include_map_details and event.name == 'UnitBornEvent' and \
+                    event.unit_type_name in ['Nexus', 'CommandCenter', 'Hatchery']:
+                parsed_data['players'][event.control_pid]['clock_position'] = \
+                        _get_clock_position(parsed_data, event)
             continue
         if event.name == 'PlayerStatsEvent' and event.pid in parsed_data['players']:
             parsed_data['players'][event.pid]['supply'].append(
@@ -431,6 +436,7 @@ def parse_replay(replay_file, cutoff_time=None, cache_dir=None, include_map_deta
                 'region': player.region,
                 'supply': [[0, 6]],
                 'team': player.team.number,
+                'clock_position': None,
             }) for key, player in replay.player.iteritems()
     )
 

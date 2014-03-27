@@ -12,6 +12,8 @@ from spawningtool.parser import parse_replay
 def print_builds(result):
     for player in result['players'].itervalues():
         print u'{} ({})'.format(player['name'], player['race'])
+        if player['clock_position'] is not None:
+            print u'Start Position: {}:00'.format(player['clock_position'])
         for event in player['buildOrder']:
             if not event['is_worker']:
                 print '{} {} {}'.format(
