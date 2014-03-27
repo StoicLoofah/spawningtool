@@ -32,10 +32,11 @@ def _frame_to_time(frame):
     return '{0}:{1:02d}'.format(seconds / 60, seconds % 60)
 
 
+# 0, 0 is bottom left
 CLOCK_POSITIONS = {
-        0: {0: 11, 1: 12, 2: 1},
+        2: {0: 11, 1: 12, 2: 1},
         1: {0: 9, 1: 0, 2: 3},
-        2: {0: 7, 2: 6, 3: 4},
+        0: {0: 7, 1: 6, 2: 4},
         }
 
 def _get_clock_position(parsed_data, event):
@@ -53,7 +54,7 @@ class TrackerEvent(object):
     def __init__(self, frame, supply=None, clock_position=None):
         self.frame = frame
         self.supply = supply
-        self.clock_position = None
+        self.clock_position = clock_position
 
     def to_dict(self):
         raise NotImplementedError
@@ -67,7 +68,7 @@ class TrackerEvent(object):
 class BuildEvent(TrackerEvent):
     def __init__(self, name, frame, supply, clock_position=None):
         self.name = name
-        super(BuildEvent, self).__init__(frame, supply, clock_position)
+        super(BuildEvent, self).__init__(frame, supply, clock_position=clock_position)
 
     def is_worker(self):
         return self.name in ['SCV', 'Drone', 'Probe']
