@@ -36,7 +36,7 @@ def _frame_to_time(frame):
 CLOCK_POSITIONS = {
         2: {0: 11, 1: 12, 2: 1},
         1: {0: 9, 1: 0, 2: 3},
-        0: {0: 7, 1: 6, 2: 4},
+        0: {0: 7, 1: 6, 2: 5},
         }
 
 def _get_clock_position(parsed_data, event):
