@@ -131,9 +131,13 @@ BUILD_TIMES = {
     'TerranShipArmorsLevel1': 160,
     'TerranShipArmorsLevel2': 190,
     'TerranShipArmorsLevel3': 220,
+    'TerranVehicleAndShipWeaponsLevel1': 160,
+    'TerranVehicleAndShipWeaponsLevel2': 190,
+    'TerranVehicleAndShipWeaponsLevel3': 220,
     'TerranVehicleAndShipArmorsLevel1': 160,
     'TerranVehicleAndShipArmorsLevel2': 190,
     'TerranVehicleAndShipArmorsLevel3': 220,
+    'HighCapacityBarrels': 110,
     'Stimpack': 170,
     'PunisherGrenades': 60,
     'ShieldWall': 110,  # ? Combat Shield?
