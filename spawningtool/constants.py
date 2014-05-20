@@ -34,6 +34,7 @@ BO_CHANGED_EXCLUDED = set([
 ])
 
 BUILD_TIMES = {
+    # terran units
     'SCV': 17,
     'Marine': 25,
     'Marauder': 30,
@@ -52,6 +53,7 @@ BUILD_TIMES = {
     'Raven': 60,
     'Banshee': 60,
     'Battlecruiser': 90,
+    # protoss units
     'Probe': 17,
     'Zealot': 38,
     'Stalker': 42,
@@ -69,6 +71,7 @@ BUILD_TIMES = {
     'Oracle': 50,
     'Tempest': 60,
     'Carrier': 120,
+    # zerg units
     'Drone': 17,
     'Queen': 50,
     'Zergling': 24,
@@ -84,7 +87,7 @@ BUILD_TIMES = {
     'Mutalisk': 33,
     'Corruptor': 40,
     'Viper': 40,
-    # research
+    # zerg upgrades
     'ZergMeleeWeaponsLevel1': 160,
     'ZergMeleeWeaponsLevel2': 190,
     'ZergMeleeWeaponsLevel3': 220,
@@ -113,6 +116,7 @@ BUILD_TIMES = {
     'InfestorEnergyUpgrade': 80,
     'ChitinousPlating': 110,
     'LocustLifetimeIncrease': 120,
+    # terran upgrades
     'TerranInfantryWeaponsLevel1': 160,
     'TerranInfantryWeaponsLevel2': 190,
     'TerranInfantryWeaponsLevel3': 220,
@@ -154,6 +158,8 @@ BUILD_TIMES = {
     'DrillClaws': 110,
     'TransformationServos': 110,
     'BattlecruiserBehemothReactor': 80,
+    'BattlecruiserEnableSpecializations': 60,
+    # protoss upgrades
     'ProtossGroundWeaponsLevel1': 160,
     'ProtossGroundWeaponsLevel2': 190,
     'ProtossGroundWeaponsLevel3': 220,
@@ -177,6 +183,7 @@ BUILD_TIMES = {
     'Charge': 140,
     'PsiStormTech': 110,
     'PhoenixRangeUpgrade': 90,
+    'CarrierLaunchSpeedUpgrade': 80,
     # unit change buildings
     'Lair': 80,
     'Hive': 100,
