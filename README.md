@@ -30,6 +30,22 @@ import spawningtool.parser
 spawningtool.parser.parse_replay('PATH/TO/REPLAY')
 ```
 
+To execute it as a module from within your python project:     
+1. Copy the second spawningtool folder ( the one that contains the __main__.py file) into your project. 
+2. You could then use spawningtool to help you build a replay model
+
+```python
+import spawningtool
+from spawningtool.parser import GameTimeline
+
+class SpawningReplayModel(model.db.Model, model.Jsonifiable):
+  """Represents the sc2 feed of build time events parsed from the spawningtool."""
+
+  def loadRequestedReplay(self, filePath):
+    result_replay = spawningtool.parser.parse_replay(filePath)
+    return result_replay
+```
+
 Support
 ============
 Please submit any issues you encounter to the [GitHub project](https://github.com/StoicLoofah/spawningtool/issues). You're also welcome to email Kevin directly at kevin@kevinleung.com.
