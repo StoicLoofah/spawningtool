@@ -424,7 +424,7 @@ def parse_replay(replay_file, cutoff_time=None, cache_dir=None, include_map_deta
         'unix_timestamp': replay.unix_timestamp,  # time completed
         'frames': replay.frames,
         'game_type': replay.real_type,
-        'region': replay.region,
+        # 'region': replay.region,
         'map': replay.map_name,
         'map_hash': replay.map_hash,
     }
