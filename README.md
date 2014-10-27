@@ -12,10 +12,12 @@ From PyPi (mostly stable)
 pip install spawningtool
 ```
 
-From GitHub (less stable)
+From GitHub (less stable but recommended)
 ```bash
 pip install -e git+git://github.com/StoicLoofah/spawningtool.git#egg=spawningtool
 ```
+
+Note that master is generally dependent upon sc2reader master, not the latest versioned release, so you will need to grab sc2reader from GitHub as well. Although it is less stable, it is recommended because the latest versions of both spawningtool and sc2reader are necessary to parse the most recent patches of StarCraft 2
 
 Usage
 ============
@@ -29,6 +31,8 @@ To execute it from within python
 import spawningtool.parser
 spawningtool.parser.parse_replay('PATH/TO/REPLAY')
 ```
+
+For more notes, see the [GitHub wiki](https://github.com/StoicLoofah/spawningtool/wiki)
 
 Support
 ============
