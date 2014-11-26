@@ -44,9 +44,9 @@ def check_supplies(replay, results, update_fn, condition=None, min_time=None, ma
             diff = data[1] - player_2_supply[i][1]
 
             if is_counting_player_1:
-                update_fn(results, player_1, player_2, data[1], player_2_supply[i][1])
+                update_fn(results, player_1, player_2, data[1], player_2_supply[i][1], data[0])
             if is_counting_player_2:
-                update_fn(results, player_2, player_1, player_2_supply[i][1], data[1])
+                update_fn(results, player_2, player_1, player_2_supply[i][1], data[1], data[0])
 
 
 def count_win_rate_by_supply_difference(filenames, condition=None, cache_dir=None,
@@ -56,7 +56,7 @@ def count_win_rate_by_supply_difference(filenames, condition=None, cache_dir=Non
             'num_wins_counter': Counter(),
             }
 
-    def update_fn(results, player_1, player_2, supply_1, supply_2):
+    def update_fn(results, player_1, player_2, supply_1, supply_2, frames):
         diff = supply_1 - supply_2
 
         results['num_games_counter'][diff] += 1
@@ -80,7 +80,7 @@ def count_win_rate_by_supply_ratio(filenames, condition=None, cache_dir=None,
             'num_wins_counter': Counter(),
             }
 
-    def update_fn(results, player_1, player_2, supply_1, supply_2):
+    def update_fn(results, player_1, player_2, supply_1, supply_2, frames):
         if supply_1 == 0 or supply_2 == 0:
             return
 
@@ -99,11 +99,39 @@ def count_win_rate_by_supply_ratio(filenames, condition=None, cache_dir=None,
             for i in range(-100, 100)]
 
 
+def count_win_rate_by_time_supply_difference(filenames, condition=None, cache_dir=None,
+        min_time=None, max_time=None):
+    results = {
+            'num_games_counter': Counter(),
+            'num_wins_counter': Counter(),
+            }
+
+    def update_fn(results, player_1, player_2, supply_1, supply_2, frames):
+        diff = supply_1 - supply_2
+        minute = frames / (16 * 60)
+        index = (diff, minute)
+
+        results['num_games_counter'][index] += 1
+        if player_1['is_winner']:
+            results['num_wins_counter'][index] += 1
+
+
+    map_replays(filenames, check_supplies, results, update_fn, cache_dir, condition=condition,
+            min_time=min_time, max_time=max_time)
+
+    return [ [unicode(index[0]), unicode(index[1]),
+        unicode(results['num_wins_counter'][index]),
+        unicode(results['num_games_counter'][index])]
+        for index in results['num_wins_counter'].keys()
+        if results['num_games_counter'][index] > 30]
+
+
 RACE_BY_LETTER = {'z': 'Zerg', 't': 'Terran', 'p': 'Protoss'}
 
 OBJECTIVES = {
         'supply_difference': count_win_rate_by_supply_difference,
         'supply_ratio': count_win_rate_by_supply_ratio,
+        'supply_time_difference': count_win_rate_by_time_supply_difference,
         }
 
 
