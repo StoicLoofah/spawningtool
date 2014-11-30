@@ -11,6 +11,7 @@ BO_EXCLUDED = set([
     'PointDefenseDrone',
     'Locust',
     'LocustMP',
+    'LocustMPFlyer',  # LotV Alpha Mod
     'Changeling',
     'InfestedTerran',
     'Overseer',
@@ -25,6 +26,8 @@ BO_EXCLUDED = set([
     'InfestedTerran',
     'Interceptor',
     'SwarmHostBurrowed',
+    'InvisibleTargetDummy',  # LotV alpha mod
+    'InterceptorFree',  # LotV alpha mod
 ])
 
 BO_CHANGED_EXCLUDED = set([
@@ -191,6 +194,19 @@ BUILD_TIMES = {
     'OrbitalCommand': 35,
     'PlanetaryFortress': 50,
     'Overseer': 17,
+    # LotV Alpha
+    'HERC': 40,
+    'Cyclone': 45,
+    'ARCGun': 30,
+    'TargetingOptics': 110,
+    'HyperflightRotors': 130,
+    'PlogisterEgg': 0,  # Ravager - egg not itself because it is the start time, normal build time is 11
+    'LurkerMPEgg': 0,  # Lurker - same logic as above, especially because burrow/unburrow counts, normal build time is 33
+    'LurkerDenMP': 100,
+    'SeismicSpines': 100,
+    'FlyingLocusts': 120,
+    'Disruptor': 60,
+
 }
 
 for key, value in BUILD_TIMES.iteritems():
@@ -238,4 +254,17 @@ TRACKED_ABILITIES = set([
     'Abduct',
     'TemporalField',
     'Envision',
+    # LotV Alpha - not worried about these for now
+    # 'Grapple',
+    # 'LockOn',
+    # 'EmergencyRepair',
+    # 'TacticalJump',
+    # 'CorrosiveBile',
+    # 'AggressiveMutation',
+    # 'CausticSpray',
+    # 'PurificationNova',
+    # 'StasisWard',
+    # 'Barrier',
+    # 'Disintegration',
+    # 'ReleaseInterceptors',
     ])
