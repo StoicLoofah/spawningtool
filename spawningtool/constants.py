@@ -15,7 +15,6 @@ BO_EXCLUDED = set([
     'Changeling',
     'InfestedTerran',
     'Overseer',
-    'BroodLord',
     'Broodling',
     'BroodlingEscort',  # the guys that fly with the Brood Lord
     'Larva',
@@ -34,6 +33,7 @@ BO_CHANGED_EXCLUDED = set([
     'VikingAssault',
     'VikingFighter',
     'Viking',
+    'Zergling',  # generated when Banelings spawn
 ])
 
 BUILD_TIMES = {
@@ -89,6 +89,7 @@ BUILD_TIMES = {
     'Overlord': 25,
     'Mutalisk': 33,
     'Corruptor': 40,
+    'BroodLord': 34,
     'Viper': 40,
     # zerg upgrades
     'ZergMeleeWeaponsLevel1': 160,
@@ -190,7 +191,7 @@ BUILD_TIMES = {
     # unit change buildings
     'Lair': 80,
     'Hive': 100,
-    'GreaterSpire': 150,
+    'GreaterSpire': 100,
     'OrbitalCommand': 35,
     'PlanetaryFortress': 50,
     'Overseer': 17,
