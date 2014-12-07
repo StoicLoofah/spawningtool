@@ -342,7 +342,8 @@ def parse_events(replay, cutoff_time, parsed_data, cache_path=None, include_map_
         if event.frame == 0:
             # set player start position
             if include_map_details and event.name == 'UnitBornEvent' and \
-                    event.unit_type_name in ['Nexus', 'CommandCenter', 'Hatchery']:
+                    event.unit_type_name in ['Nexus', 'CommandCenter', 'Hatchery'] and \
+                    event.control_pid in parsed_data['players']:
                 parsed_data['players'][event.control_pid]['clock_position'] = \
                         _get_clock_position(parsed_data, event)
             continue
