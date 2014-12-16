@@ -252,6 +252,12 @@ def upgrade_event(builds, event, parsed_data):
 
 
 def change_event(builds, event, parsed_data):
+    """
+    these are triggered when units morph or transform. We do need to track these
+    because they tell us when certain units are morphed in
+    However, we also need to exclude a lot from BO_CHANGED_EXCLUDED because they
+    can be misleading
+    """
     if not event.unit.owner:  # happened when knocking down rocks
         return
     player = event.unit.owner.pid
