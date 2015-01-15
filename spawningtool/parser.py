@@ -398,6 +398,7 @@ def parse_map_details(replay, parsed_data):
 
 def parse_replay(replay_file, cutoff_time=None, cache_dir=None, include_map_details=False):
     """
+    replay_file can either be a path to a file or a file-like object
     Parse replay for build order related events
     cutoff_time determines a point at which we stop processing the replay
     cache_dir setups a folder where results are stored for the future
@@ -406,8 +407,11 @@ def parse_replay(replay_file, cutoff_time=None, cache_dir=None, include_map_deta
     cache_path = None
     if cache_dir:
         replay_hash = None
-        with open(replay_file, 'r') as fin:
-            replay_hash = hashlib.md5(fin.read()).hexdigest()
+        if isinstance(replay_file, basestring):
+            with open(replay_file, 'r') as fin:
+                replay_hash = hashlib.md5(fin.read()).hexdigest()
+        else:
+            replay_hash = hashlib.md5(replay_file.read()).hexdigest()
         cache_path = os.path.join(cache_dir, replay_hash)
         if os.path.exists(cache_path):
             with open(cache_path, 'r') as cache_file:
