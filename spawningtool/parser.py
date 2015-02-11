@@ -2,7 +2,7 @@
 spawningtool.parser
 ~~~~~~~~~~~~~~~~~~~
 """
-from __future__ import division
+
 
 import hashlib
 import json
@@ -146,7 +146,7 @@ class GameTimeline(object):
         self.timeline.sort(key=lambda a: a.frame)
 
     def __unicode__(self):
-        return '\n'.join([unicode(event) for event in self.timeline])
+        return '\n'.join([str(event) for event in self.timeline])
 
 
 def get_protocol(base_build):
@@ -309,7 +309,7 @@ def make_event_timeline(timelines, cutoff_time, parsed_data, field):
     """
     Converts the GameTimeline into a readable structure
     """
-    for i, timeline in timelines.iteritems():
+    for i, timeline in timelines.items():
         timeline.sort()
 
         parsed_data['players'][i][field] = []
@@ -342,9 +342,9 @@ def parse_events(replay, cutoff_time, parsed_data, cache_path=None, include_map_
         # primarily because the build times are off, but I don't want to deal with it
         raise ReplayFormatError(('spawningtool currently only supports HotS.'), parsed_data)
 
-    builds = dict((key, GameTimeline()) for key in replay.player.iterkeys())
-    units_lost = dict((key, GameTimeline()) for key in replay.player.iterkeys())
-    abilities = dict((key, GameTimeline()) for key in replay.player.iterkeys())
+    builds = dict((key, GameTimeline()) for key in replay.player.keys())
+    units_lost = dict((key, GameTimeline()) for key in replay.player.keys())
+    abilities = dict((key, GameTimeline()) for key in replay.player.keys())
 
     for event in replay.tracker_events:
         if event.frame == 0:
@@ -412,7 +412,7 @@ def parse_replay(replay_file, cutoff_time=None, cache_dir=None, include_map_deta
     cache_path = None
     if cache_dir:
         replay_hash = None
-        if isinstance(replay_file, basestring):
+        if isinstance(replay_file, str):
             with open(replay_file, 'r') as fin:
                 replay_hash = hashlib.md5(fin.read()).hexdigest()
         else:
@@ -463,7 +463,7 @@ def parse_replay(replay_file, cutoff_time=None, cache_dir=None, include_map_deta
                 'supply': [[0, 6]],
                 'team': player.team.number,
                 'clock_position': None,
-            }) for key, player in replay.player.iteritems()
+            }) for key, player in replay.player.items()
     )
 
     try:

@@ -16,7 +16,7 @@ def map_replays(filenames, map_fn, results, update_fn, cache_dir=None, **kwargs)
 def check_supplies(replay, results, update_fn, condition=None, min_time=None, max_time=None):
     if len(replay['players']) != 2:
         return
-    players = replay['players'].values()
+    players = list(replay['players'].values())
     player_1 = players[0]
     player_2 = players[1]
     if player_1['is_winner'] == player_2['is_winner']:
@@ -67,9 +67,9 @@ def count_win_rate_by_supply_difference(filenames, condition=None, cache_dir=Non
     map_replays(filenames, check_supplies, results, update_fn, cache_dir, condition=condition,
             min_time=min_time, max_time=max_time)
 
-    return [ [unicode(i),
-        unicode(results['num_wins_counter'][i]),
-        unicode(results['num_games_counter'][i])]
+    return [ [str(i),
+        str(results['num_wins_counter'][i]),
+        str(results['num_games_counter'][i])]
             for i in range(-100, 100)]
 
 
@@ -93,9 +93,9 @@ def count_win_rate_by_supply_ratio(filenames, condition=None, cache_dir=None,
     map_replays(filenames, check_supplies, results, update_fn, cache_dir, condition=condition,
             min_time=min_time, max_time=max_time)
 
-    return [ [unicode(i),
-        unicode(results['num_wins_counter'][i]),
-        unicode(results['num_games_counter'][i])]
+    return [ [str(i),
+        str(results['num_wins_counter'][i]),
+        str(results['num_games_counter'][i])]
             for i in range(-100, 100)]
 
 
@@ -119,10 +119,10 @@ def count_win_rate_by_time_supply_difference(filenames, condition=None, cache_di
     map_replays(filenames, check_supplies, results, update_fn, cache_dir, condition=condition,
             min_time=min_time, max_time=max_time)
 
-    return [ [unicode(index[0]), unicode(index[1]),
-        unicode(results['num_wins_counter'][index]),
-        unicode(results['num_games_counter'][index])]
-        for index in results['num_wins_counter'].keys()
+    return [ [str(index[0]), str(index[1]),
+        str(results['num_wins_counter'][index]),
+        str(results['num_games_counter'][index])]
+        for index in list(results['num_wins_counter'].keys())
         if results['num_games_counter'][index] > 30]
 
 
@@ -163,7 +163,7 @@ def main():
         result = objective_fn(fin, condition=condition, cache_dir=args.cache_dir,
                 min_time=args.min_time, max_time=args.max_time)
         for row in result:
-            print ','.join([unicode(val) for val in row])
+            print(','.join([str(val) for val in row]))
 
 if __name__ == '__main__':
     main()
