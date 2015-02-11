@@ -425,10 +425,8 @@ def parse_replay(replay_file, cutoff_time=None, cache_dir=None, include_map_deta
 
     try:
         replay = sc2reader.load_replay(replay_file)
-    except sc2reader.exceptions.ReadError as error:
-        raise ReadError(error.message)
-    except Exception as error:  # Maybe a MPQError
-        raise ReadError(error.message)
+    except (sc2reader.exceptions.ReadError, sc2reader.exceptions.MPQError) as error:
+        raise ReadError(str(error))
 
     parsed_data = {
         'buildOrderExtracted': False,
