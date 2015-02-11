@@ -353,6 +353,9 @@ def parse_events(replay, cutoff_time, parsed_data, cache_path=None, include_map_
                 parsed_data['players'][event.control_pid]['clock_position'] = \
                         _get_clock_position(parsed_data, event)
             continue
+
+        event.frame = int(event.frame)
+
         if event.name == 'PlayerStatsEvent' and event.pid in parsed_data['players']:
             parsed_data['players'][event.pid]['supply'].append(
                 [event.frame, int(event.food_used)])

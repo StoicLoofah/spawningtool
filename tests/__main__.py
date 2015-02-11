@@ -10,11 +10,6 @@ class SpawningToolTestCase(unittest.TestCase):
         self.assertObjectsEqual(results, expected_results, '')
 
     def assertObjectsEqual(self, results, expected_results, path):
-        if type(results) in [str, unicode] and type(expected_results) in [str, unicode]:
-            pass
-        else:
-            self.assertEqual(type(results), type(expected_results))
-
         if type(results) == dict:
             expected_keys = set(expected_results.keys())
             for key, value in results.iteritems():
