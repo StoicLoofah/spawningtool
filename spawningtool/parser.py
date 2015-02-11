@@ -2,6 +2,8 @@
 spawningtool.parser
 ~~~~~~~~~~~~~~~~~~~
 """
+from __future__ import division
+
 import hashlib
 import json
 import os
@@ -28,8 +30,8 @@ def convert_gametime_to_float(gametime):
 
 
 def _frame_to_time(frame):
-    seconds = frame / 16
-    return '{0}:{1:02d}'.format(seconds / 60, seconds % 60)
+    seconds = frame // 16
+    return '{0}:{1:02d}'.format(seconds // 60, seconds % 60)
 
 
 # 0, 0 is bottom left
@@ -42,8 +44,8 @@ CLOCK_POSITIONS = {
 def _get_clock_position(parsed_data, event):
     if not parsed_data['include_map_details']:
         return None
-    x_section = int(event.x / (parsed_data['map_details']['width'] / 3))
-    y_section = int(event.y / (parsed_data['map_details']['height'] / 3))
+    x_section = event.x // (parsed_data['map_details']['width'] // 3)
+    y_section = event.y // (parsed_data['map_details']['height'] // 3)
     return CLOCK_POSITIONS[y_section][x_section]
 
 
@@ -166,7 +168,7 @@ def get_supply(supply, frame):
     end = len(supply) - 1
 
     while start < end:
-        mid = (start + end) / 2
+        mid = (start + end) // 2
         val = supply[mid][0]
         if val == frame:
             return mid
