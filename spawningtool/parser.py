@@ -2,6 +2,8 @@
 spawningtool.parser
 ~~~~~~~~~~~~~~~~~~~
 """
+
+
 import hashlib
 import json
 import os
@@ -28,8 +30,8 @@ def convert_gametime_to_float(gametime):
 
 
 def _frame_to_time(frame):
-    seconds = frame / 16
-    return '{0}:{1:02d}'.format(seconds / 60, seconds % 60)
+    seconds = frame // 16
+    return '{0}:{1:02d}'.format(seconds // 60, seconds % 60)
 
 
 # 0, 0 is bottom left
@@ -42,8 +44,8 @@ CLOCK_POSITIONS = {
 def _get_clock_position(parsed_data, event):
     if not parsed_data['include_map_details']:
         return None
-    x_section = int(event.x / (parsed_data['map_details']['width'] / 3))
-    y_section = int(event.y / (parsed_data['map_details']['height'] / 3))
+    x_section = event.x // (parsed_data['map_details']['width'] // 3)
+    y_section = event.y // (parsed_data['map_details']['height'] // 3)
     return CLOCK_POSITIONS[y_section][x_section]
 
 
@@ -144,7 +146,7 @@ class GameTimeline(object):
         self.timeline.sort(key=lambda a: a.frame)
 
     def __unicode__(self):
-        return '\n'.join([unicode(event) for event in self.timeline])
+        return '\n'.join([str(event) for event in self.timeline])
 
 
 def get_protocol(base_build):
@@ -166,7 +168,7 @@ def get_supply(supply, frame):
     end = len(supply) - 1
 
     while start < end:
-        mid = (start + end) / 2
+        mid = (start + end) // 2
         val = supply[mid][0]
         if val == frame:
             return mid
@@ -307,7 +309,7 @@ def make_event_timeline(timelines, cutoff_time, parsed_data, field):
     """
     Converts the GameTimeline into a readable structure
     """
-    for i, timeline in timelines.iteritems():
+    for i, timeline in timelines.items():
         timeline.sort()
 
         parsed_data['players'][i][field] = []
@@ -340,9 +342,9 @@ def parse_events(replay, cutoff_time, parsed_data, cache_path=None, include_map_
         # primarily because the build times are off, but I don't want to deal with it
         raise ReplayFormatError(('spawningtool currently only supports HotS.'), parsed_data)
 
-    builds = dict((key, GameTimeline()) for key in replay.player.iterkeys())
-    units_lost = dict((key, GameTimeline()) for key in replay.player.iterkeys())
-    abilities = dict((key, GameTimeline()) for key in replay.player.iterkeys())
+    builds = dict((key, GameTimeline()) for key in replay.player.keys())
+    units_lost = dict((key, GameTimeline()) for key in replay.player.keys())
+    abilities = dict((key, GameTimeline()) for key in replay.player.keys())
 
     for event in replay.tracker_events:
         if event.frame == 0:
@@ -353,6 +355,9 @@ def parse_events(replay, cutoff_time, parsed_data, cache_path=None, include_map_
                 parsed_data['players'][event.control_pid]['clock_position'] = \
                         _get_clock_position(parsed_data, event)
             continue
+
+        event.frame = int(event.frame)
+
         if event.name == 'PlayerStatsEvent' and event.pid in parsed_data['players']:
             parsed_data['players'][event.pid]['supply'].append(
                 [event.frame, int(event.food_used)])
@@ -407,7 +412,7 @@ def parse_replay(replay_file, cutoff_time=None, cache_dir=None, include_map_deta
     cache_path = None
     if cache_dir:
         replay_hash = None
-        if isinstance(replay_file, basestring):
+        if isinstance(replay_file, str):
             with open(replay_file, 'r') as fin:
                 replay_hash = hashlib.md5(fin.read()).hexdigest()
         else:
@@ -420,10 +425,8 @@ def parse_replay(replay_file, cutoff_time=None, cache_dir=None, include_map_deta
 
     try:
         replay = sc2reader.load_replay(replay_file)
-    except sc2reader.exceptions.ReadError as error:
-        raise ReadError(error.message)
-    except Exception as error:  # Maybe a MPQError
-        raise ReadError(error.message)
+    except (sc2reader.exceptions.ReadError, sc2reader.exceptions.MPQError) as error:
+        raise ReadError(str(error))
 
     parsed_data = {
         'buildOrderExtracted': False,
@@ -458,7 +461,7 @@ def parse_replay(replay_file, cutoff_time=None, cache_dir=None, include_map_deta
                 'supply': [[0, 6]],
                 'team': player.team.number,
                 'clock_position': None,
-            }) for key, player in replay.player.iteritems()
+            }) for key, player in replay.player.items()
     )
 
     try:

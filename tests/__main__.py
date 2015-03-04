@@ -10,15 +10,10 @@ class SpawningToolTestCase(unittest.TestCase):
         self.assertObjectsEqual(results, expected_results, '')
 
     def assertObjectsEqual(self, results, expected_results, path):
-        if type(results) in [str, unicode] and type(expected_results) in [str, unicode]:
-            pass
-        else:
-            self.assertEqual(type(results), type(expected_results))
-
         if type(results) == dict:
             expected_keys = set(expected_results.keys())
-            for key, value in results.iteritems():
-                key = unicode(key)
+            for key, value in results.items():
+                key = str(key)
                 if not key in expected_results:
                     self.assertFalse('{0} {1}'.format(path, key))
                 self.assertObjectsEqual(value, expected_results[key],
@@ -28,8 +23,8 @@ class SpawningToolTestCase(unittest.TestCase):
                 self.assertFalse(path)
         elif type(results) == list:
             if len(results) != len(expected_results):
-                print len(results)
-                print len(expected_results)
+                print(len(results))
+                print(len(expected_results))
                 self.assertFalse(path)
             for i, value in enumerate(results):
                 self.assertObjectsEqual(value, expected_results[i],

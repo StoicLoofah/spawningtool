@@ -211,7 +211,7 @@ BUILD_TIMES = {
 
 }
 
-for key, value in BUILD_TIMES.iteritems():
+for key, value in BUILD_TIMES.items():
     BUILD_TIMES[key] *= 16
 
 

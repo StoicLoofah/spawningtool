@@ -10,49 +10,49 @@ from spawningtool.parser import parse_replay
 
 
 def print_builds(result):
-    for player in result['players'].itervalues():
-        print u'{} ({})'.format(player['name'], player['race'])
+    for player in result['players'].values():
+        print('{} ({})'.format(player['name'], player['race']))
         if player['clock_position'] is not None:
-            print u'Start Position: {}:00'.format(player['clock_position'])
+            print('Start Position: {}:00'.format(player['clock_position']))
         for event in player['buildOrder']:
             if not event['is_worker']:
-                print '{} {} {}'.format(
+                print('{} {} {}'.format(
                     event['supply'],
                     event['time'],
                     event['name']
-                )
-        print ''
+                ))
+        print('')
 
 
 def print_units_lost(result):
-    for player in result['players'].itervalues():
-        print u'{} ({})'.format(player['name'], player['race'])
+    for player in result['players'].values():
+        print('{} ({})'.format(player['name'], player['race']))
         for event in player['unitsLost']:
-                print '{} {} killed by {}'.format(
+                print('{} {} killed by {}'.format(
                     event['time'],
                     event['name'],
                     event['killer']
-                )
-        print ''
+                ))
+        print('')
 
 
 def print_abilities(result):
-    for player in result['players'].itervalues():
-        print u'{} ({})'.format(player['name'], player['race'])
+    for player in result['players'].values():
+        print('{} ({})'.format(player['name'], player['race']))
         for event in player['abilities']:
-                print '{} {}'.format(
+                print('{} {}'.format(
                     event['time'],
                     event['name'],
-                )
-        print ''
+                ))
+        print('')
 
 
 def print_results(result):
     """
     Print the results of the build order
     """
-    print result['map']
-    print result['build']
+    print(result['map'])
+    print(result['build'])
     print_builds(result)
     print_units_lost(result)
     print_abilities(result)
@@ -83,10 +83,10 @@ def main():
                 cache_dir=args.cache_dir,
                 include_map_details=bool(args.map_details))
     except CutoffTimeError as error:
-        print error.message
+        print(error.message)
     except ReplayFormatError as error:
-        print error.message
-        print error.parsed_data
+        print(error.message)
+        print(error.parsed_data)
     else:
         print_results(result)
 
