@@ -202,15 +202,17 @@ BUILD_TIMES = {
     'ARCGun': 30,
     'TargetingOptics': 110,
     # LotV Beta
-    'Cyclone': 45,  # TODO check build time
-    'HyperflightRotors': 130,  # TODO
-    'FlyingLocusts': 120,  # TODO check time
-    'Adept': 30, # TODO check build time
-    'PlogisterEgg': 0,  # TODO Ravager - egg not itself because it is the start time, normal build time is ?, not sure if this is right
-    'LurkerMPEgg': 0,  # Lurker - same logic as above, especially because burrow/unburrow counts, normal build time is ?, not sure if this is right
-    'LurkerDenMP': 100,  # TODO checktime
-    'SeismicSpines': 100,  # TODO check time
-    'Disruptor': 60,  # TODO check build time
+    'Cyclone': 45,  # TODO check time
+    'HyperflightRotors': 130,  # TODO check name, time
+    'FlyingLocusts': 120,  # TODO check name, time
+    'Adept': 30, # TODO check time
+    # Ravager - egg not itself because it is the start time, normal build time is ?
+    'RavagerCocoon': 0,  # TODO check time
+    # Lurker - same logic as above, especially because burrow/unburrow counts, normal build time is ?
+    'LurkerMPEgg': 0,  # TODO check time
+    'LurkerDenMP': 100,  # TODO check time
+    'LurkerRange': 100,  # TODO check time
+    'Disruptor': 60,  # TODO check time
 
 }
 
