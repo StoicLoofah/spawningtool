@@ -361,6 +361,9 @@ def parse_events(replay, cutoff_time, parsed_data, cache_path=None, include_map_
         if event.name == 'PlayerStatsEvent' and event.pid in parsed_data['players']:
             parsed_data['players'][event.pid]['supply'].append(
                 [event.frame, int(event.food_used)])
+            # TODO this is a hack for LotV; hopefully I have a better solution coming up
+            if event.frame == 1 and int(event.food_used) == 12:
+                parsed_data['players'][event.pid]['supply'][0][1] = 12
         elif event.name == 'UnitBornEvent':
             unit_born_event(builds, event, parsed_data)
         elif event.name == 'UnitInitEvent':

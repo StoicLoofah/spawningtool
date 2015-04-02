@@ -27,6 +27,7 @@ BO_EXCLUDED = set([
     'SwarmHostBurrowed',
     'InvisibleTargetDummy',  # LotV alpha mod
     'InterceptorFree',  # LotV alpha mod
+    'AdeptPhaseShift',
 ])
 
 BO_CHANGED_EXCLUDED = set([
@@ -74,7 +75,7 @@ BUILD_TIMES = {
     'VoidRay': 60,
     'Oracle': 50,
     'Tempest': 60,
-    'Carrier': 120,
+    'Carrier': 90,  # 120 in HotS
     # zerg units
     'Drone': 17,
     'Queen': 50,
@@ -198,16 +199,18 @@ BUILD_TIMES = {
     'Overseer': 17,
     # LotV Alpha
     'HERC': 40,
-    'Cyclone': 45,
     'ARCGun': 30,
     'TargetingOptics': 110,
-    'HyperflightRotors': 130,
-    'PlogisterEgg': 0,  # Ravager - egg not itself because it is the start time, normal build time is 11
-    'LurkerMPEgg': 0,  # Lurker - same logic as above, especially because burrow/unburrow counts, normal build time is 33
-    'LurkerDenMP': 100,
-    'SeismicSpines': 100,
-    'FlyingLocusts': 120,
-    'Disruptor': 60,
+    # LotV Beta
+    'Cyclone': 45,  # TODO check build time
+    'HyperflightRotors': 130,  # TODO
+    'FlyingLocusts': 120,  # TODO check time
+    'Adept': 30, # TODO check build time
+    'PlogisterEgg': 0,  # TODO Ravager - egg not itself because it is the start time, normal build time is ?, not sure if this is right
+    'LurkerMPEgg': 0,  # Lurker - same logic as above, especially because burrow/unburrow counts, normal build time is ?, not sure if this is right
+    'LurkerDenMP': 100,  # TODO checktime
+    'SeismicSpines': 100,  # TODO check time
+    'Disruptor': 60,  # TODO check build time
 
 }
 
@@ -256,17 +259,18 @@ TRACKED_ABILITIES = set([
     'Abduct',
     'TemporalField',
     'Envision',
-    # LotV Alpha - not worried about these for now
-    # 'Grapple',
-    # 'LockOn',
-    # 'EmergencyRepair',
-    # 'TacticalJump',
-    # 'CorrosiveBile',
-    # 'AggressiveMutation',
-    # 'CausticSpray',
-    # 'PurificationNova',
-    # 'StasisWard',
-    # 'Barrier',
-    # 'Disintegration',
-    # 'ReleaseInterceptors',
+    # LotV Beta
+    'LockOn',  # TODO check name
+    'TacticalJump',  # TODO check name
+    'CorrosiveBile',  # TODO check name
+    'CausticSpray',  # TODO check name
+    'SpawnLocusts',  # TODO check name
+    'Swoop',  # TODO check name
+    'ParasiticBomb',  # TODO check name
+    'PsionicTransfer',  # TODO check name
+    'PurificationNova',  # TODO check name
+    'StasisWard',  # TODO check name
+    'Barrier',  # TODO check name
+    'Disintegration',  # TODO check name
+    'ReleaseInterceptors',  # TODO check name
     ])
