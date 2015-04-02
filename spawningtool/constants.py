@@ -28,6 +28,7 @@ BO_EXCLUDED = set([
     'InvisibleTargetDummy',  # LotV alpha mod
     'InterceptorFree',  # LotV alpha mod
     'AdeptPhaseShift',
+    'OracleStasisTrap',
 ])
 
 BO_CHANGED_EXCLUDED = set([
