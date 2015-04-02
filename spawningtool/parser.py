@@ -338,7 +338,7 @@ def parse_events(replay, cutoff_time, parsed_data, cache_path=None, include_map_
                 ' right version ({}). Sorry.'.format(parsed_data['build'])
             ), parsed_data)
 
-    if replay.expansion != 'HotS':
+    if replay.expansion == 'WoL':
         # primarily because the build times are off, but I don't want to deal with it
         raise ReplayFormatError(('spawningtool currently only supports HotS.'), parsed_data)
 
@@ -364,6 +364,7 @@ def parse_events(replay, cutoff_time, parsed_data, cache_path=None, include_map_
             # TODO this is a hack for LotV; hopefully I have a better solution coming up
             if event.frame == 1 and int(event.food_used) == 12:
                 parsed_data['players'][event.pid]['supply'][0][1] = 12
+                parsed_data['expansion'] = 'LotV'
         elif event.name == 'UnitBornEvent':
             unit_born_event(builds, event, parsed_data)
         elif event.name == 'UnitInitEvent':
