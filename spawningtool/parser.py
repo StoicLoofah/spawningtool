@@ -368,7 +368,6 @@ def parse_events(replay, cutoff_time, parsed_data, cache_path=None, include_map_
                 parsed_data['players'][event.pid]['supply'][0][1] = 12
                 parsed_data['expansion'] = 'LotV'
                 constants = lotv_constants
-                FRAMES_PER_SECOND = constants.FRAMES_PER_SECOND
         elif event.name == 'UnitBornEvent':
             unit_born_event(builds, event, parsed_data, constants)
         elif event.name == 'UnitInitEvent':
