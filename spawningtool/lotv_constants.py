@@ -3,6 +3,8 @@ spawningtool.constants
 ~~~~~~~~~~~~~~~~~~~~~~
 """
 
+FRAMES_PER_SECOND = 22
+
 BO_EXCLUDED = set([
     'MULE',
     'ReaperPlaceholder',

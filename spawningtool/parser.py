@@ -9,8 +9,7 @@ import json
 import os
 import sc2reader
 
-from spawningtool.constants import (BO_EXCLUDED, BO_CHANGED_EXCLUDED, BUILD_TIMES,
-        TRACKED_ABILITIES, )
+from spawningtool import hots_constants, lotv_constants
 from spawningtool.exception import CutoffTimeError, ReplayFormatError, ReadError
 
 
@@ -29,8 +28,8 @@ def convert_gametime_to_float(gametime):
         raise CutoffTimeError()
 
 
-def _frame_to_time(frame):
-    seconds = frame // 16
+def _frame_to_time(frame, frames_per_second):
+    seconds = frame // frames_per_second
     return '{0}:{1:02d}'.format(seconds // 60, seconds % 60)
 
 
@@ -53,12 +52,13 @@ class TrackerEvent(object):
     """
     not necesarily a trackerevent, but event was too generic
     """
-    def __init__(self, frame, supply=None, clock_position=None):
+    def __init__(self, frame, frames_per_second, supply=None, clock_position=None):
         self.frame = frame
         self.supply = supply
         self.clock_position = clock_position
+        self.frames_per_second = frames_per_second
 
-    def to_dict(self):
+    def to_dict(self, frames):
         raise NotImplementedError
 
     def __unicode__(self):
@@ -68,9 +68,9 @@ class TrackerEvent(object):
 
 
 class BuildEvent(TrackerEvent):
-    def __init__(self, name, frame, supply, clock_position=None):
+    def __init__(self, name, frame, frames_per_second, supply, clock_position=None):
         self.name = name
-        super(BuildEvent, self).__init__(frame, supply, clock_position=clock_position)
+        super(BuildEvent, self).__init__(frame, frames_per_second, supply, clock_position=clock_position)
 
     def is_worker(self):
         return self.name in ['SCV', 'Drone', 'Probe']
@@ -78,7 +78,7 @@ class BuildEvent(TrackerEvent):
     def to_dict(self):
         return {
             'frame': self.frame,
-            'time': _frame_to_time(self.frame),
+            'time': _frame_to_time(self.frame, self.frames_per_second),
             'name': self.name,
             'supply': self.supply,
             'is_worker': self.is_worker(),
@@ -88,21 +88,21 @@ class BuildEvent(TrackerEvent):
     def __unicode__(self):
         return '{} {} {}'.format(
             self.supply,
-            _frame_to_time(self.frame),
+            _frame_to_time(self.frame, self.frames_per_second),
             self.name
         )
 
 
 class DiedEvent(TrackerEvent):
-    def __init__(self, name, frame, killer, clock_position=None):
+    def __init__(self, name, frame, frames_per_second, killer, clock_position=None):
         self.name = name
-        super(DiedEvent, self).__init__(frame, None, clock_position=clock_position)
+        super(DiedEvent, self).__init__(frame, frames_per_second, None, clock_position=clock_position)
         self.killer = killer  # player id
 
     def to_dict(self):
         return {
             'frame': self.frame,
-            'time': _frame_to_time(self.frame),
+            'time': _frame_to_time(self.frame, self.frames_per_second),
             'name': self.name,
             'killer': self.killer,
             'clock_position': self.clock_position,
@@ -110,27 +110,27 @@ class DiedEvent(TrackerEvent):
 
     def __unicode__(self):
         return '{} {} killed by {}'.format(
-            _frame_to_time(self.frame),
+            _frame_to_time(self.frame, self.frames_per_second),
             self.name,
             self.killer,
             )
 
 
 class AbilityEvent(TrackerEvent):
-    def __init__(self, name, frame):
+    def __init__(self, name, frame, frames_per_second):
         self.name = name
-        super(AbilityEvent, self).__init__(frame, None)
+        super(AbilityEvent, self).__init__(frame, frames_per_second, None)
 
     def to_dict(self):
         return {
             'frame': self.frame,
-            'time': _frame_to_time(self.frame),
+            'time': _frame_to_time(self.frame, self.frames_per_second),
             'name': self.name,
         }
 
     def __unicode__(self):
         return '{} {}'.format(
-            _frame_to_time(self.frame),
+            _frame_to_time(self.frame, self.frames_per_second),
             self.name,
             )
 
@@ -183,7 +183,7 @@ def get_supply(supply, frame):
     return supply[start][1]
 
 
-def unit_born_event(builds, event, parsed_data):
+def unit_born_event(builds, event, parsed_data, constants):
     """
     need to reverse the time
     if the unit morphs, it's preferable to use the unit_type_name since it's what it was
@@ -192,18 +192,18 @@ def unit_born_event(builds, event, parsed_data):
     """
     player = event.control_pid
     unit_name = event.unit_type_name
-    if unit_name in BO_EXCLUDED or player == 0 or event.unit.hallucinated:
+    if unit_name in constants.BO_EXCLUDED or player == 0 or event.unit.hallucinated:
         return
 
-    if not unit_name in BUILD_TIMES:
+    if not unit_name in constants.BUILD_TIMES:
         unit_name = event.unit.name
-        if unit_name in BO_EXCLUDED:
+        if unit_name in constants.BO_EXCLUDED:
             return
     if unit_name is None:
         unit_name = '(None)'
 
     try:
-        frame = event.frame - BUILD_TIMES[unit_name]
+        frame = event.frame - constants.BUILD_TIMES[unit_name]
     except KeyError:
         frame = event.frame
         unit_name += ' (Error on born time)'
@@ -213,17 +213,17 @@ def unit_born_event(builds, event, parsed_data):
         return
 
     supply = get_supply(parsed_data['players'][player]['supply'], frame)
-    builds[player].add_event(BuildEvent(unit_name, frame, supply,
+    builds[player].add_event(BuildEvent(unit_name, frame, constants.FRAMES_PER_SECOND, supply,
         _get_clock_position(parsed_data, event)))
 
 
-def unit_init_event(builds, event, parsed_data):
+def unit_init_event(builds, event, parsed_data, constants):
     """
     these are mostly buildings, but I believe it may also include warped units
     """
     player = event.control_pid
     unit_name = event.unit_type_name
-    if unit_name in BO_EXCLUDED or player == 0 or event.unit.hallucinated:
+    if unit_name in constants.BO_EXCLUDED or player == 0 or event.unit.hallucinated:
         return
     frame = event.frame
 
@@ -232,11 +232,11 @@ def unit_init_event(builds, event, parsed_data):
         return
 
     supply = parsed_data['players'][player]['supply'][-1][1]
-    builds[player].add_event(BuildEvent(unit_name, frame, supply,
+    builds[player].add_event(BuildEvent(unit_name, frame, constants.FRAMES_PER_SECOND, supply,
         _get_clock_position(parsed_data, event)))
 
 
-def upgrade_event(builds, event, parsed_data):
+def upgrade_event(builds, event, parsed_data, constants):
     """
     need to reverse the time
     """
@@ -245,38 +245,38 @@ def upgrade_event(builds, event, parsed_data):
         return
     unit_name = event.upgrade_type_name
     try:
-        frame = event.frame - BUILD_TIMES[unit_name]
+        frame = event.frame - constants.BUILD_TIMES[unit_name]
     except KeyError:
         frame = event.frame
         unit_name += ' (Error on upgrade time)'
     supply = get_supply(parsed_data['players'][player]['supply'], frame)
-    builds[player].add_event(BuildEvent(unit_name, frame, supply))
+    builds[player].add_event(BuildEvent(unit_name, frame, constants.FRAMES_PER_SECOND, supply))
 
 
-def change_event(builds, event, parsed_data):
+def change_event(builds, event, parsed_data, constants):
     """
     these are triggered when units morph or transform. We do need to track these
     because they tell us when certain units are morphed in
-    However, we also need to exclude a lot from BO_CHANGED_EXCLUDED because they
+    However, we also need to exclude a lot from constants.BO_CHANGED_EXCLUDED because they
     can be misleading
     """
     if not event.unit.owner:  # happened when knocking down rocks
         return
     player = event.unit.owner.pid
     unit_name = event.unit_type_name
-    if player == 0 or unit_name in BO_CHANGED_EXCLUDED:
+    if player == 0 or unit_name in constants.BO_CHANGED_EXCLUDED:
         return
 
     try:
-        frame = event.frame - BUILD_TIMES[unit_name]
+        frame = event.frame - constants.BUILD_TIMES[unit_name]
     except KeyError:
         return
 
     supply = get_supply(parsed_data['players'][player]['supply'], frame)
-    builds[player].add_event(BuildEvent(unit_name, frame, supply))
+    builds[player].add_event(BuildEvent(unit_name, frame, constants.FRAMES_PER_SECOND, supply))
 
 
-def died_event(units_lost, event, parsed_data):
+def died_event(units_lost, event, parsed_data, constants):
     """
     for born events, the name needed to be corrected for evolutions
     but if it dies, then it should die in its final form
@@ -286,26 +286,26 @@ def died_event(units_lost, event, parsed_data):
     player = event.unit.owner.pid
     unit_name = event.unit.name
 
-    if unit_name in BO_EXCLUDED or player == 0:
+    if unit_name in constants.BO_EXCLUDED or player == 0:
         return
 
     killer = event.killer_pid
 
-    units_lost[player].add_event(DiedEvent(unit_name, event.frame, killer,
+    units_lost[player].add_event(DiedEvent(unit_name, event.frame, constants.FRAMES_PER_SECOND, killer,
         _get_clock_position(parsed_data, event)))
 
 
-def ability_event(abilities, event):
+def ability_event(abilities, event, constants):
     player = event.player.pid
     ability_name = event.ability_name
 
-    if ability_name not in TRACKED_ABILITIES or not player:
+    if ability_name not in constants.TRACKED_ABILITIES or not player:
         return
 
-    abilities[player].add_event(AbilityEvent(ability_name, event.frame))
+    abilities[player].add_event(AbilityEvent(ability_name, event.frame, constants.FRAMES_PER_SECOND))
 
 
-def make_event_timeline(timelines, cutoff_time, parsed_data, field):
+def make_event_timeline(timelines, cutoff_time, parsed_data, field, constants):
     """
     Converts the GameTimeline into a readable structure
     """
@@ -316,7 +316,7 @@ def make_event_timeline(timelines, cutoff_time, parsed_data, field):
         for event in timeline.timeline:
 
             # If desired, stop parsing for events after a given time
-            current_gametime = _frame_to_time(event.frame)
+            current_gametime = _frame_to_time(event.frame, constants.FRAMES_PER_SECOND)
             if (cutoff_time and
                     convert_gametime_to_float(current_gametime) >
                     convert_gametime_to_float(cutoff_time)):
@@ -342,6 +342,8 @@ def parse_events(replay, cutoff_time, parsed_data, cache_path=None, include_map_
         # primarily because the build times are off, but I don't want to deal with it
         raise ReplayFormatError(('spawningtool currently only supports HotS.'), parsed_data)
 
+    constants = hots_constants
+
     builds = dict((key, GameTimeline()) for key in replay.player.keys())
     units_lost = dict((key, GameTimeline()) for key in replay.player.keys())
     abilities = dict((key, GameTimeline()) for key in replay.player.keys())
@@ -365,16 +367,18 @@ def parse_events(replay, cutoff_time, parsed_data, cache_path=None, include_map_
             if event.frame == 1 and int(event.food_used) == 12:
                 parsed_data['players'][event.pid]['supply'][0][1] = 12
                 parsed_data['expansion'] = 'LotV'
+                constants = lotv_constants
+                FRAMES_PER_SECOND = constants.FRAMES_PER_SECOND
         elif event.name == 'UnitBornEvent':
-            unit_born_event(builds, event, parsed_data)
+            unit_born_event(builds, event, parsed_data, constants)
         elif event.name == 'UnitInitEvent':
-            unit_init_event(builds, event, parsed_data)
+            unit_init_event(builds, event, parsed_data, constants)
         elif event.name == 'UpgradeCompleteEvent':
-            upgrade_event(builds, event, parsed_data)
+            upgrade_event(builds, event, parsed_data, constants)
         elif event.name == 'UnitTypeChangeEvent':
-            change_event(builds, event, parsed_data)
+            change_event(builds, event, parsed_data, constants)
         elif event.name == 'UnitDiedEvent':
-            died_event(units_lost, event, parsed_data)
+            died_event(units_lost, event, parsed_data,constants)
 
     legit_ability_event_types = set([
         'TargetPointCommandEvent',
@@ -384,12 +388,12 @@ def parse_events(replay, cutoff_time, parsed_data, cache_path=None, include_map_
         ])
     for event in replay.game_events:
         if event.name in legit_ability_event_types:
-            ability_event(abilities, event)
+            ability_event(abilities, event, constants)
 
     parsed_data['buildOrderExtracted'] = True  # legacy code
-    make_event_timeline(builds, cutoff_time, parsed_data, 'buildOrder')
-    make_event_timeline(units_lost, cutoff_time, parsed_data, 'unitsLost')
-    make_event_timeline(abilities, cutoff_time, parsed_data, 'abilities')
+    make_event_timeline(builds, cutoff_time, parsed_data, 'buildOrder', constants)
+    make_event_timeline(units_lost, cutoff_time, parsed_data, 'unitsLost', constants)
+    make_event_timeline(abilities, cutoff_time, parsed_data, 'abilities', constants)
 
     if cache_path:
         with open(cache_path, 'w') as fout:
