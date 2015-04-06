@@ -97,130 +97,126 @@ BUILD_TIMES = {
     'BroodLord': 24,
     'Viper': 29,
     # zerg upgrades
-    'ZergMeleeWeaponsLevel1': 160,
-    'ZergMeleeWeaponsLevel2': 190,
-    'ZergMeleeWeaponsLevel3': 220,
-    'ZergMissileWeaponsLevel1': 160,
-    'ZergMissileWeaponsLevel2': 190,
-    'ZergMissileWeaponsLevel3': 220,
-    'ZergGroundArmorsLevel1': 160,
-    'ZergGroundArmorsLevel2': 190,
-    'ZergGroundArmorsLevel3': 220,
-    'ZergFlyerWeaponsLevel1': 160,
-    'ZergFlyerWeaponsLevel2': 190,
-    'ZergFlyerWeaponsLevel3': 220,
-    'ZergFlyerArmorsLevel1': 160,
-    'ZergFlyerArmorsLevel2': 190,
-    'ZergFlyerArmorsLevel3': 220,
-    'zerglingmovementspeed': 110,
-    'zerglingattackspeed': 130,
-    'CentrificalHooks': 110,
-    'GlialReconstitution': 110,
-    'TunnelingClaws': 110,
+    'ZergMeleeWeaponsLevel1': 116, # TODO guess
+    'ZergMeleeWeaponsLevel2': 138,  # TODO guess
+    'ZergMeleeWeaponsLevel3': 159,  # TODO guess
+    'ZergMissileWeaponsLevel1': 116, # TODO guess
+    'ZergMissileWeaponsLevel2': 138,  # TODO guess
+    'ZergMissileWeaponsLevel3': 159,  # TODO guess
+    'ZergGroundArmorsLevel1': 116, # TODO guess
+    'ZergGroundArmorsLevel2': 138,  # TODO guess
+    'ZergGroundArmorsLevel3': 159,  # TODO guess
+    'ZergFlyerWeaponsLevel1': 116, # TODO guess
+    'ZergFlyerWeaponsLevel2': 138,  # TODO guess
+    'ZergFlyerWeaponsLevel3': 159,  # TODO guess
+    'ZergFlyerArmorsLevel1': 116, # TODO guess
+    'ZergFlyerArmorsLevel2': 138,  # TODO guess
+    'ZergFlyerArmorsLevel3': 159,  # TODO guess
+    'zerglingmovementspeed': 80,  # TODO guess
+    'zerglingattackspeed': 94,  # TODO guess
+    'CentrificalHooks': 80,  # TODO guess
+    'GlialReconstitution': 80,  # TODO guess
+    'TunnelingClaws': 80,  # TODO guess
     'hydraliskspeed': 80,  # Grooved Spines
-    'HydraliskSpeedUpgrade': 100,  # Muscular Augments
-    'overlordspeed': 60,
-    'overlordtransport': 130,
-    'Burrow': 100,
-    'InfestorEnergyUpgrade': 80,
-    'ChitinousPlating': 110,
-    'LocustLifetimeIncrease': 120,
+    'HydraliskSpeedUpgrade': 72,  # TODO guess  # Muscular Augments
+    'overlordspeed': 43,  # TODO guess
+    'overlordtransport': 94,  # TODO guess
+    'Burrow': 72,  # TODO guess
+    'InfestorEnergyUpgrade': 58,  # TODO guess
+    'ChitinousPlating': 80,  # TODO guess
+    'LocustLifetimeIncrease': 87,  # TODO guess
     # terran upgrades
-    'TerranInfantryWeaponsLevel1': 160,
-    'TerranInfantryWeaponsLevel2': 190,
-    'TerranInfantryWeaponsLevel3': 220,
-    'TerranInfantryArmorsLevel1': 160,
-    'TerranInfantryArmorsLevel2': 190,
-    'TerranInfantryArmorsLevel3': 220,
-    'TerranVehicleWeaponsLevel1': 160,
-    'TerranVehicleWeaponsLevel2': 190,
-    'TerranVehicleWeaponsLevel3': 220,
-    'TerranVehicleArmorsLevel1': 160,
-    'TerranVehicleArmorsLevel2': 190,
-    'TerranVehicleArmorsLevel3': 220,
-    'TerranShipWeaponsLevel1': 160,
-    'TerranShipWeaponsLevel2': 190,
-    'TerranShipWeaponsLevel3': 220,
-    'TerranShipArmorsLevel1': 160,
-    'TerranShipArmorsLevel2': 190,
-    'TerranShipArmorsLevel3': 220,
-    'TerranVehicleAndShipWeaponsLevel1': 160,
-    'TerranVehicleAndShipWeaponsLevel2': 190,
-    'TerranVehicleAndShipWeaponsLevel3': 220,
-    'TerranVehicleAndShipArmorsLevel1': 160,
-    'TerranVehicleAndShipArmorsLevel2': 190,
-    'TerranVehicleAndShipArmorsLevel3': 220,
-    'HighCapacityBarrels': 110,
-    'Stimpack': 170,
-    'PunisherGrenades': 60,
-    'ShieldWall': 110,  # ? Combat Shield?
-    'MedivacCaduceusReactor': 80,
-    'PersonalCloaking': 120,
-    'GhostMoebiusReactor': 80,
-    'NeosteelFrame': 110,
-    'HiSecAutoTracking': 80,
-    'TerranBuildingArmor': 140,
-    'BansheeCloak': 110,
-    'DurableMaterials': 110,
-    'RavenCorvidReactor': 110,
-    'StrikeCannons': 110,
-    'DrillClaws': 110,
-    'TransformationServos': 110,
-    'BattlecruiserBehemothReactor': 80,
-    'BattlecruiserEnableSpecializations': 60,
+    'TerranInfantryWeaponsLevel1': 116, # TODO guess
+    'TerranInfantryWeaponsLevel2': 138,  # TODO guess
+    'TerranInfantryWeaponsLevel3': 159,  # TODO guess
+    'TerranInfantryArmorsLevel1': 116, # TODO guess
+    'TerranInfantryArmorsLevel2': 138,  # TODO guess
+    'TerranInfantryArmorsLevel3': 159,  # TODO guess
+    'TerranVehicleWeaponsLevel1': 116, # TODO guess
+    'TerranVehicleWeaponsLevel2': 138,  # TODO guess
+    'TerranVehicleWeaponsLevel3': 159,  # TODO guess
+    'TerranVehicleArmorsLevel1': 116, # TODO guess
+    'TerranVehicleArmorsLevel2': 138,  # TODO guess
+    'TerranVehicleArmorsLevel3': 159,  # TODO guess
+    'TerranShipWeaponsLevel1': 116, # TODO guess
+    'TerranShipWeaponsLevel2': 138,  # TODO guess
+    'TerranShipWeaponsLevel3': 159,  # TODO guess
+    'TerranShipArmorsLevel1': 116, # TODO guess
+    'TerranShipArmorsLevel2': 138,  # TODO guess
+    'TerranShipArmorsLevel3': 159,  # TODO guess
+    'TerranVehicleAndShipWeaponsLevel1': 116, # TODO guess
+    'TerranVehicleAndShipWeaponsLevel2': 138,  # TODO guess
+    'TerranVehicleAndShipWeaponsLevel3': 159,  # TODO guess
+    'TerranVehicleAndShipArmorsLevel1': 116, # TODO guess
+    'TerranVehicleAndShipArmorsLevel2': 138,  # TODO guess
+    'TerranVehicleAndShipArmorsLevel3': 159,  # TODO guess
+    'HighCapacityBarrels': 80,  # TODO guess
+    'Stimpack': 123,  # TODO guess
+    'PunisherGrenades': 43,  # TODO guess
+    'ShieldWall': 80,  # TODO guess  # ? Combat Shield?
+    'MedivacCaduceusReactor': 58,  # TODO guess
+    'PersonalCloaking': 87,  # TODO guess
+    'GhostMoebiusReactor': 58,  # TODO guess
+    'NeosteelFrame': 80,  # TODO guess
+    'HiSecAutoTracking': 58,  # TODO guess
+    'TerranBuildingArmor': 101,  # TODO guess
+    'BansheeCloak': 80,  # TODO guess
+    'DurableMaterials': 80,  # TODO guess
+    'RavenCorvidReactor': 80,  # TODO guess
+    'StrikeCannons': 80,  # TODO guess
+    'DrillClaws': 80,  # TODO guess
+    'TransformationServos': 80,  # TODO guess
+    'BattlecruiserBehemothReactor': 58,  # TODO guess
+    'BattlecruiserEnableSpecializations': 43,  # TODO guess
     # protoss upgrades
-    'ProtossGroundWeaponsLevel1': 160,
-    'ProtossGroundWeaponsLevel2': 190,
-    'ProtossGroundWeaponsLevel3': 220,
-    'ProtossGroundArmorsLevel1': 160,
-    'ProtossGroundArmorsLevel2': 190,
-    'ProtossGroundArmorsLevel3': 220,
-    'ProtossShieldsLevel1': 160,
-    'ProtossShieldsLevel2': 190,
-    'ProtossShieldsLevel3': 220,
-    'ProtossAirWeaponsLevel1': 160,
-    'ProtossAirWeaponsLevel2': 190,
-    'ProtossAirWeaponsLevel3': 220,
-    'ProtossAirArmorsLevel1': 160,
-    'ProtossAirArmorsLevel2': 190,
-    'ProtossAirArmorsLevel3': 220,
-    'WarpGateResearch': 160,
-    'BlinkTech': 170,
+    'ProtossGroundWeaponsLevel1': 116, # TODO guess
+    'ProtossGroundWeaponsLevel2': 138,  # TODO guess
+    'ProtossGroundWeaponsLevel3': 159,  # TODO guess
+    'ProtossGroundArmorsLevel1': 116, # TODO guess
+    'ProtossGroundArmorsLevel2': 138,  # TODO guess
+    'ProtossGroundArmorsLevel3': 159,  # TODO guess
+    'ProtossShieldsLevel1': 116, # TODO guess
+    'ProtossShieldsLevel2': 138,  # TODO guess
+    'ProtossShieldsLevel3': 159,  # TODO guess
+    'ProtossAirWeaponsLevel1': 116, # TODO guess
+    'ProtossAirWeaponsLevel2': 138,  # TODO guess
+    'ProtossAirWeaponsLevel3': 159,  # TODO guess
+    'ProtossAirArmorsLevel1': 116, # TODO guess
+    'ProtossAirArmorsLevel2': 138,  # TODO guess
+    'ProtossAirArmorsLevel3': 159,  # TODO guess
+    'WarpGateResearch': 116, # TODO guess
+    'BlinkTech': 123,  # TODO guess
     'ObserverGraviticBooster': 80,
-    'GraviticDrive': 80,
-    'ExtendedThermalLance': 140,
-    'Charge': 140,
-    'PsiStormTech': 110,
-    'PhoenixRangeUpgrade': 90,
-    'CarrierLaunchSpeedUpgrade': 80,
+    'GraviticDrive': 58,  # TODO guess
+    'ExtendedThermalLance': 101,  # TODO guess
+    'Charge': 101,  # TODO guess
+    'PsiStormTech': 80,  # TODO guess
+    'PhoenixRangeUpgrade': 65,  # TODO guess
+    'CarrierLaunchSpeedUpgrade': 58,  # TODO guess
     # unit change buildings
-    'Lair': 80,
-    'Hive': 100,
-    'GreaterSpire': 100,
-    'OrbitalCommand': 35,
-    'PlanetaryFortress': 50,
-    'Overseer': 17,
-    # LotV Alpha
-    'HERC': 40,
-    'ARCGun': 30,
-    'TargetingOptics': 110,
+    'Lair': 58,  # TODO guess
+    'Hive': 72,  # TODO guess
+    'GreaterSpire': 72,  # TODO guess
+    'OrbitalCommand': 25,  # TODO guess
+    'PlanetaryFortress': 36,  # TODO guess
+    'Overseer': 12,  # TODO guess
     # LotV Beta
-    'Cyclone': 45,  # TODO check time
-    'HyperflightRotors': 130,  # TODO check name, time
-    'FlyingLocusts': 120,  # TODO check name, time
-    'Adept': 30, # TODO check time
-    # Ravager - egg not itself because it is the start time, normal build time is ?
-    'RavagerCocoon': 0,  # TODO check time
-    # Lurker - same logic as above, especially because burrow/unburrow counts, normal build time is ?
-    'LurkerMPEgg': 0,  # TODO check time
-    'LurkerDenMP': 100,  # TODO check time
-    'LurkerRange': 100,  # TODO check time
-    'Disruptor': 60,  # TODO check time
+    'Cyclone': 32,
+    'HyperflightRotors': 94,  # TODO guess  # TODO check name, time
+    'FlyingLocusts': 87,  # TODO guess, check name, time
+    'Adept': 27,
+    # Ravager - egg not itself because it is the start time, normal build time is 9
+    'RavagerCocoon': 0,
+    # Lurker - same logic as above, especially because burrow/unburrow counts, normal build time is 18
+    'LurkerMPEgg': 0,
+    'LurkerDenMP': 72,  # TODO check time
+    'LurkerRange': 72,  # TODO check time
+    'Disruptor': 43,
 
 }
 
 for key, value in BUILD_TIMES.items():
-    BUILD_TIMES[key] *= 16
+    BUILD_TIMES[key] *= FRAMES_PER_SECOND
 
 
 TRACKED_ABILITIES = set([
