@@ -31,6 +31,7 @@ BO_EXCLUDED = set([
     'InterceptorFree',  # LotV alpha mod
     'AdeptPhaseShift',
     'OracleStasisTrap',
+    'KD8Charge',
 ])
 
 BO_CHANGED_EXCLUDED = set([
@@ -274,4 +275,5 @@ TRACKED_ABILITIES = set([
     'Barrier',  # TODO check name
     'Disintegration',  # TODO check name
     'ReleaseInterceptors',  # TODO check name
+    # TODO reaper KD8Charge ability?
     ])
