@@ -32,6 +32,7 @@ BO_EXCLUDED = set([
     'AdeptPhaseShift',
     'OracleStasisTrap',
     'KD8Charge',
+    'ReleaseInterceptorsBeacon',
 ])
 
 BO_CHANGED_EXCLUDED = set([
