@@ -195,6 +195,7 @@ BUILD_TIMES = {
     'PsiStormTech': 80,  # TODO guess
     'PhoenixRangeUpgrade': 65,  # TODO guess
     'CarrierLaunchSpeedUpgrade': 58,  # TODO guess
+    'AdeptShieldUpgrade': 100,
     # unit change buildings
     'Lair': 58,  # TODO guess
     'Hive': 72,  # TODO guess
