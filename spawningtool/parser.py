@@ -301,7 +301,10 @@ def died_event(units_lost, event, parsed_data, constants):
         _get_clock_position(parsed_data, event)))
 
 
-def ability_event(abilities, event, constants, chronoboosts):
+def ability_event(abilities, event, constants, raw_chronoboosts):
+    """
+    Create events around abilities being casted e.g. ChronoBoost, Snipe
+    """
     player = event.player.pid
     ability_name = event.ability_name
 
@@ -310,9 +313,9 @@ def ability_event(abilities, event, constants, chronoboosts):
 
     # this is imprecise; we cannot distinguish WHICH of the units of the type it came from
     if ability_name == 'ChronoBoost' and event.target:
-        if not event.target.name in chronoboosts[player]:
-            chronoboosts[player][event.target.name] = []
-        chronoboosts[player][event.target.name].append(event.frame)
+        if not event.target.name in raw_chronoboosts[player]:
+            raw_chronoboosts[player][event.target.name] = []
+        raw_chronoboosts[player][event.target.name].append(event.frame)
 
     abilities[player].add_event(AbilityEvent(ability_name, event.frame, constants.FRAMES_PER_SECOND))
 
@@ -335,6 +338,37 @@ def make_event_timeline(timelines, cutoff_time, parsed_data, field, constants):
                 break
 
             parsed_data['players'][i][field].append(event.to_dict())
+
+
+def process_chronoboosts(raw_chronoboosts):
+    """
+    convert raw chronoboosts to a set of frame ranges over which the chronoboost is applied
+    to that building. This should be easier to backtrack build times
+    """
+    chronoboosts = {}
+    chronoboost_duration = 16 * 20  # this is true in HotS and LotV
+
+    for player, all_boosts in raw_chronoboosts.items():
+        chronoboosts[player] = {}
+        for building, frames in all_boosts.items():
+            frame_ranges = []
+            cur_frame_range = None
+
+            for start_raw_frame in frames:
+                if not cur_frame_range:
+                    cur_frame_range = [start_raw_frame, start_raw_frame + chronoboost_duration]
+                elif cur_frame_range[1] < start_raw_frame:
+                    cur_frame_range[1] = start_raw_frame + chronoboost_duration
+                else:
+                    frame_ranges.append(cur_frame_range)
+                    cur_frame_range = [start_raw_frame, start_raw_frame + chronoboost_duration]
+
+            if cur_frame_range:
+                frame_ranges.append(cur_frame_range)
+
+            chronoboosts[player][building] = frame_ranges
+
+    return chronoboosts
 
 
 def parse_events(replay, cutoff_time, parsed_data, cache_path=None, include_map_details=False):
@@ -361,7 +395,8 @@ def parse_events(replay, cutoff_time, parsed_data, cache_path=None, include_map_
     abilities = dict((key, GameTimeline()) for key in replay.player.keys())
 
     # {pid_1: {'Building': [frame_1, frame_2, ..], ..}, ..}
-    chronoboosts = {key: {} for key in replay.player.keys()}
+    raw_chronoboosts = {key: {} for key in replay.player.keys()}
+
 
     legit_ability_event_types = set([
         'TargetPointCommandEvent',
@@ -371,7 +406,9 @@ def parse_events(replay, cutoff_time, parsed_data, cache_path=None, include_map_
         ])
     for event in replay.game_events:
         if event.name in legit_ability_event_types:
-            ability_event(abilities, event, constants, chronoboosts)
+            ability_event(abilities, event, constants, raw_chronoboosts)
+
+    chronoboosts = process_chronoboosts(raw_chronoboosts)
 
     for event in replay.tracker_events:
         if event.frame == 0:
