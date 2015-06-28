@@ -68,8 +68,10 @@ class TrackerEvent(object):
 
 
 class BuildEvent(TrackerEvent):
-    def __init__(self, name, frame, frames_per_second, supply, clock_position=None):
+    def __init__(self, name, frame, frames_per_second, supply, clock_position=None,
+            num_chronoboosts=0):
         self.name = name
+        self.num_chronoboosts = num_chronoboosts
         super(BuildEvent, self).__init__(frame, frames_per_second, supply, clock_position=clock_position)
 
     def is_worker(self):
@@ -83,6 +85,7 @@ class BuildEvent(TrackerEvent):
             'supply': self.supply,
             'is_worker': self.is_worker(),
             'clock_position': self.clock_position,
+            'num_chronoboosts': self.num_chronoboosts,
         }
 
     def __unicode__(self):
