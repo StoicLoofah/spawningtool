@@ -120,7 +120,7 @@ BUILD_DATA = {
         },
     'Zealot': {
         'build_time': 38,
-        'built_from': ['Gateway', 'Warpgate'],
+        'built_from': ['Gateway', 'Warpgate'],  # warpgate is necessary because of changing types
         },
     'Stalker': {
         'build_time': 42,

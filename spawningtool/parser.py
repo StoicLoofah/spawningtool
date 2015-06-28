@@ -69,9 +69,9 @@ class TrackerEvent(object):
 
 class BuildEvent(TrackerEvent):
     def __init__(self, name, frame, frames_per_second, supply, clock_position=None,
-            num_chronoboosts=0):
+            is_chronoboosted=False):
         self.name = name
-        self.num_chronoboosts = num_chronoboosts
+        self.is_chronoboosted = is_chronoboosted
         super(BuildEvent, self).__init__(frame, frames_per_second, supply, clock_position=clock_position)
 
     def is_worker(self):
@@ -85,14 +85,15 @@ class BuildEvent(TrackerEvent):
             'supply': self.supply,
             'is_worker': self.is_worker(),
             'clock_position': self.clock_position,
-            'num_chronoboosts': self.num_chronoboosts,
+            'is_chronoboosted': self.is_chronoboosted,
         }
 
     def __unicode__(self):
-        return '{} {} {}'.format(
+        return '{} {} {}{}'.format(
             self.supply,
             _frame_to_time(self.frame, self.frames_per_second),
-            self.name
+            self.name,
+            ' (Chronoboosted)' if self.is_chronoboosted else '',
         )
 
 
@@ -205,7 +206,8 @@ def unit_born_event(builds, event, parsed_data, constants, chronoboosts):
     if unit_name is None:
         unit_name = '(None)'
 
-    frame, unit_name = adjust_build_time(event, unit_name, constants, chronoboosts)
+    frame, unit_name, is_chronoboosted = adjust_build_time(
+            event, player, unit_name, constants, chronoboosts)
 
     # for safety to ignore observer units from GH and such
     if not player in parsed_data['players']:
@@ -213,7 +215,7 @@ def unit_born_event(builds, event, parsed_data, constants, chronoboosts):
 
     supply = get_supply(parsed_data['players'][player]['supply'], frame)
     builds[player].add_event(BuildEvent(unit_name, frame, constants.FRAMES_PER_SECOND, supply,
-        _get_clock_position(parsed_data, event)))
+        _get_clock_position(parsed_data, event), is_chronoboosted))
 
 
 def unit_init_event(builds, event, parsed_data, constants):
@@ -234,15 +236,35 @@ def unit_init_event(builds, event, parsed_data, constants):
     builds[player].add_event(BuildEvent(unit_name, frame, constants.FRAMES_PER_SECOND, supply,
         _get_clock_position(parsed_data, event)))
 
-def adjust_build_time(event, unit_name, constants, chronoboosts):
+def adjust_build_time(event, player, unit_name, constants, chronoboosts):
+    """
+    chronoboosts is arranged in reverse order.
 
-    try:
-        frame = event.frame - constants.BUILD_DATA[unit_name]['build_time']
-    except KeyError:
-        frame = event.frame
+    This is only an approximation. The edge case behavior isn't perfect (particularly around
+    chronoboosts starting before the the guessed start time). We also cannot distinguish which
+    building exactly gets boosted. Even so, this is better than no tracking at all
+    """
+    if not unit_name in constants.BUILD_DATA:
         unit_name += ' (Error on upgrade time)'
+        return frame, unit_name
 
-    return frame, unit_name
+    cur_build_data = constants.BUILD_DATA[unit_name]
+
+    frame = event.frame
+    projected_start = frame - constants.BUILD_DATA[unit_name]['build_time']
+    chronoboosted = False
+
+    if chronoboosts[player]:
+        for building in cur_build_data['built_from']:
+            if building in chronoboosts[player]:
+                for cur_frame_start, cur_frame_end in chronoboosts[player][building]:
+                    if cur_frame_end > projected_start and cur_frame_start < frame:
+                        overlap = min(cur_frame_end, frame) - max(cur_frame_start, projected_start)
+                        reduction = overlap / 2
+                        projected_start += reduction
+                        chronoboosted = True
+
+    return projected_start, unit_name, chronoboosted
 
 def upgrade_event(builds, event, parsed_data, constants, chronoboosts):
     """
@@ -253,10 +275,12 @@ def upgrade_event(builds, event, parsed_data, constants, chronoboosts):
         return
     unit_name = event.upgrade_type_name
 
-    frame, unit_name = adjust_build_time(event, unit_name, constants, chronoboosts)
+    frame, unit_name, is_chronoboosted = adjust_build_time(
+            event, player, unit_name, constants, chronoboosts)
 
     supply = get_supply(parsed_data['players'][player]['supply'], frame)
-    builds[player].add_event(BuildEvent(unit_name, frame, constants.FRAMES_PER_SECOND, supply))
+    builds[player].add_event(BuildEvent(
+        unit_name, frame, constants.FRAMES_PER_SECOND, supply, is_chronoboosted))
 
 
 def change_event(builds, event, parsed_data, constants):
@@ -344,6 +368,9 @@ def process_chronoboosts(raw_chronoboosts):
     """
     convert raw chronoboosts to a set of frame ranges over which the chronoboost is applied
     to that building. This should be easier to backtrack build times
+
+    This, to some degree, avoids double-counting if a chronoboosted building is chronoboosted
+    again or if all of the buildings of the same type are chronoboosted
     """
     chronoboosts = {}
     chronoboost_duration = 16 * 20  # this is true in HotS and LotV
@@ -357,7 +384,7 @@ def process_chronoboosts(raw_chronoboosts):
             for start_raw_frame in frames:
                 if not cur_frame_range:
                     cur_frame_range = [start_raw_frame, start_raw_frame + chronoboost_duration]
-                elif cur_frame_range[1] < start_raw_frame:
+                elif cur_frame_range[1] > start_raw_frame:
                     cur_frame_range[1] = start_raw_frame + chronoboost_duration
                 else:
                     frame_ranges.append(cur_frame_range)
@@ -365,6 +392,8 @@ def process_chronoboosts(raw_chronoboosts):
 
             if cur_frame_range:
                 frame_ranges.append(cur_frame_range)
+
+            frame_ranges.reverse()  # because we need to step backwards when using this
 
             chronoboosts[player][building] = frame_ranges
 
