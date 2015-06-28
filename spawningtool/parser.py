@@ -198,7 +198,7 @@ def unit_born_event(builds, event, parsed_data, constants):
     if unit_name in constants.BO_EXCLUDED or player == 0 or event.unit.hallucinated:
         return
 
-    if not unit_name in constants.BUILD_TIMES:
+    if not unit_name in constants.BUILD_DATA:
         unit_name = event.unit.name
         if unit_name in constants.BO_EXCLUDED:
             return
@@ -206,7 +206,7 @@ def unit_born_event(builds, event, parsed_data, constants):
         unit_name = '(None)'
 
     try:
-        frame = event.frame - constants.BUILD_TIMES[unit_name]
+        frame = event.frame - constants.BUILD_DATA[unit_name]['build_time']
     except KeyError:
         frame = event.frame
         unit_name += ' (Error on born time)'
@@ -248,7 +248,7 @@ def upgrade_event(builds, event, parsed_data, constants):
         return
     unit_name = event.upgrade_type_name
     try:
-        frame = event.frame - constants.BUILD_TIMES[unit_name]
+        frame = event.frame - constants.BUILD_DATA[unit_name]['build_time']
     except KeyError:
         frame = event.frame
         unit_name += ' (Error on upgrade time)'
@@ -271,7 +271,7 @@ def change_event(builds, event, parsed_data, constants):
         return
 
     try:
-        frame = event.frame - constants.BUILD_TIMES[unit_name]
+        frame = event.frame - constants.BUILD_DATA[unit_name]['build_time']
     except KeyError:
         return
 
