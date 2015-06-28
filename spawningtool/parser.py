@@ -186,7 +186,7 @@ def get_supply(supply, frame):
     return supply[start][1]
 
 
-def unit_born_event(builds, event, parsed_data, constants):
+def unit_born_event(builds, event, parsed_data, constants, chronoboosts):
     """
     need to reverse the time
     if the unit morphs, it's preferable to use the unit_type_name since it's what it was
@@ -205,11 +205,7 @@ def unit_born_event(builds, event, parsed_data, constants):
     if unit_name is None:
         unit_name = '(None)'
 
-    try:
-        frame = event.frame - constants.BUILD_DATA[unit_name]['build_time']
-    except KeyError:
-        frame = event.frame
-        unit_name += ' (Error on born time)'
+    frame, unit_name = adjust_build_time(event, unit_name, constants, chronoboosts)
 
     # for safety to ignore observer units from GH and such
     if not player in parsed_data['players']:
@@ -238,8 +234,17 @@ def unit_init_event(builds, event, parsed_data, constants):
     builds[player].add_event(BuildEvent(unit_name, frame, constants.FRAMES_PER_SECOND, supply,
         _get_clock_position(parsed_data, event)))
 
+def adjust_build_time(event, unit_name, constants, chronoboosts):
 
-def upgrade_event(builds, event, parsed_data, constants):
+    try:
+        frame = event.frame - constants.BUILD_DATA[unit_name]['build_time']
+    except KeyError:
+        frame = event.frame
+        unit_name += ' (Error on upgrade time)'
+
+    return frame, unit_name
+
+def upgrade_event(builds, event, parsed_data, constants, chronoboosts):
     """
     need to reverse the time
     """
@@ -247,11 +252,9 @@ def upgrade_event(builds, event, parsed_data, constants):
     if player == 0:
         return
     unit_name = event.upgrade_type_name
-    try:
-        frame = event.frame - constants.BUILD_DATA[unit_name]['build_time']
-    except KeyError:
-        frame = event.frame
-        unit_name += ' (Error on upgrade time)'
+
+    frame, unit_name = adjust_build_time(event, unit_name, constants, chronoboosts)
+
     supply = get_supply(parsed_data['players'][player]['supply'], frame)
     builds[player].add_event(BuildEvent(unit_name, frame, constants.FRAMES_PER_SECOND, supply))
 
@@ -298,12 +301,18 @@ def died_event(units_lost, event, parsed_data, constants):
         _get_clock_position(parsed_data, event)))
 
 
-def ability_event(abilities, event, constants):
+def ability_event(abilities, event, constants, chronoboosts):
     player = event.player.pid
     ability_name = event.ability_name
 
     if ability_name not in constants.TRACKED_ABILITIES or not player:
         return
+
+    # this is imprecise; we cannot distinguish WHICH of the units of the type it came from
+    if ability_name == 'ChronoBoost' and event.target:
+        if not event.target.name in chronoboosts[player]:
+            chronoboosts[player][event.target.name] = []
+        chronoboosts[player][event.target.name].append(event.frame)
 
     abilities[player].add_event(AbilityEvent(ability_name, event.frame, constants.FRAMES_PER_SECOND))
 
@@ -351,6 +360,19 @@ def parse_events(replay, cutoff_time, parsed_data, cache_path=None, include_map_
     units_lost = dict((key, GameTimeline()) for key in replay.player.keys())
     abilities = dict((key, GameTimeline()) for key in replay.player.keys())
 
+    # {pid_1: {'Building': [frame_1, frame_2, ..], ..}, ..}
+    chronoboosts = {key: {} for key in replay.player.keys()}
+
+    legit_ability_event_types = set([
+        'TargetPointCommandEvent',
+        'TargetUnitCommandEvent',
+        'DataCommandEvent',
+        'BasicCommandEvent',
+        ])
+    for event in replay.game_events:
+        if event.name in legit_ability_event_types:
+            ability_event(abilities, event, constants, chronoboosts)
+
     for event in replay.tracker_events:
         if event.frame == 0:
             # set player start position
@@ -372,25 +394,15 @@ def parse_events(replay, cutoff_time, parsed_data, cache_path=None, include_map_
                 parsed_data['expansion'] = 'LotV'
                 constants = lotv_constants
         elif event.name == 'UnitBornEvent':
-            unit_born_event(builds, event, parsed_data, constants)
+            unit_born_event(builds, event, parsed_data, constants, chronoboosts)
         elif event.name == 'UnitInitEvent':
             unit_init_event(builds, event, parsed_data, constants)
         elif event.name == 'UpgradeCompleteEvent':
-            upgrade_event(builds, event, parsed_data, constants)
+            upgrade_event(builds, event, parsed_data, constants, chronoboosts)
         elif event.name == 'UnitTypeChangeEvent':
             change_event(builds, event, parsed_data, constants)
         elif event.name == 'UnitDiedEvent':
             died_event(units_lost, event, parsed_data,constants)
-
-    legit_ability_event_types = set([
-        'TargetPointCommandEvent',
-        'TargetUnitCommandEvent',
-        'DataCommandEvent',
-        'BasicCommandEvent',
-        ])
-    for event in replay.game_events:
-        if event.name in legit_ability_event_types:
-            ability_event(abilities, event, constants)
 
     parsed_data['buildOrderExtracted'] = True  # legacy code
     make_event_timeline(builds, cutoff_time, parsed_data, 'buildOrder', constants)
