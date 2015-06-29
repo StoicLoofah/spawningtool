@@ -426,7 +426,6 @@ def parse_events(replay, cutoff_time, parsed_data, cache_path=None, include_map_
     # {pid_1: {'Building': [frame_1, frame_2, ..], ..}, ..}
     raw_chronoboosts = {key: {} for key in replay.player.keys()}
 
-
     legit_ability_event_types = set([
         'TargetPointCommandEvent',
         'TargetUnitCommandEvent',

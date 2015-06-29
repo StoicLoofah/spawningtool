@@ -125,15 +125,15 @@ BUILD_DATA = {
         },
     'Zealot': {
         'build_time': 27,
-        'built_from': ['Gateway', 'Warpgate'],  # warpgate is necessary because of changing types
+        'built_from': ['Gateway', 'WarpGate'],  # warpgate is necessary because of changing types
         },
     'Stalker': {
         'build_time': 30,
-        'built_from': ['Gateway', 'Warpgate'],
+        'built_from': ['Gateway', 'WarpGate'],
         },
     'Sentry': {
         'build_time': 26,
-        'built_from': ['Gateway', 'Warpgate'],
+        'built_from': ['Gateway', 'WarpGate'],
         },
     'MothershipCore': {
         'build_time': 21,
@@ -141,11 +141,11 @@ BUILD_DATA = {
         },
     'HighTemplar': {
         'build_time': 39,
-        'built_from': ['Gateway', 'Warpgate'],
+        'built_from': ['Gateway', 'WarpGate'],
         },
     'DarkTemplar': {
         'build_time': 39,
-        'built_from': ['Gateway', 'Warpgate'],
+        'built_from': ['Gateway', 'WarpGate'],
         },
     'Immortal': {
         'build_time': 39,
@@ -676,7 +676,7 @@ BUILD_DATA = {
         },
     'Adept': {
         'build_time': 27,
-        'built_from': ['Gateway', 'Warpgate'],
+        'built_from': ['Gateway', 'WarpGate'],
         },
     'RavagerCocoon': {
         'build_time': 0,  # Ravager - egg not itself because it is the start time, normal build time is 9

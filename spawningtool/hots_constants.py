@@ -120,15 +120,15 @@ BUILD_DATA = {
         },
     'Zealot': {
         'build_time': 38,
-        'built_from': ['Gateway', 'Warpgate'],  # warpgate is necessary because of changing types
+        'built_from': ['Gateway', 'WarpGate'],  # warpgate is necessary because of changing types
         },
     'Stalker': {
         'build_time': 42,
-        'built_from': ['Gateway', 'Warpgate'],
+        'built_from': ['Gateway', 'WarpGate'],
         },
     'Sentry': {
         'build_time': 37,
-        'built_from': ['Gateway', 'Warpgate'],
+        'built_from': ['Gateway', 'WarpGate'],
         },
     'MothershipCore': {
         'build_time': 30,
@@ -136,11 +136,11 @@ BUILD_DATA = {
         },
     'HighTemplar': {
         'build_time': 55,
-        'built_from': ['Gateway', 'Warpgate'],
+        'built_from': ['Gateway', 'WarpGate'],
         },
     'DarkTemplar': {
         'build_time': 55,
-        'built_from': ['Gateway', 'Warpgate'],
+        'built_from': ['Gateway', 'WarpGate'],
         },
     'Immortal': {
         'build_time': 55,
