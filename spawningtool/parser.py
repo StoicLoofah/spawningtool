@@ -260,7 +260,7 @@ def adjust_build_time(event, player, unit_name, constants, chronoboosts):
                 for cur_frame_start, cur_frame_end in chronoboosts[player][building]:
                     if cur_frame_end > projected_start and cur_frame_start < frame:
                         overlap = min(cur_frame_end, frame) - max(cur_frame_start, projected_start)
-                        reduction = overlap / 2
+                        reduction = overlap // 2
                         projected_start += reduction
                         chronoboosted = True
 
