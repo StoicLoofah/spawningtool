@@ -16,10 +16,11 @@ def print_builds(result):
             print('Start Position: {}:00'.format(player['clock_position']))
         for event in player['buildOrder']:
             if not event['is_worker']:
-                print('{} {} {}'.format(
+                print('{} {} {}{}'.format(
                     event['supply'],
                     event['time'],
-                    event['name']
+                    event['name'],
+                    ' (Chronoboosted)' if event['is_chronoboosted'] else ''
                 ))
         print('')
 
