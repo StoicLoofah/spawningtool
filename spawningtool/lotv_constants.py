@@ -43,183 +43,670 @@ BO_CHANGED_EXCLUDED = set([
     'Zergling',  # generated when Banelings spawn
 ])
 
-BUILD_TIMES = {
-    # terran units
-    'SCV': 12,
-    'Marine': 18,
-    'Marauder': 21,
-    'Reaper': 32,
-    'Ghost': 29,
-    'BattleHellion': 21,  # Hellbat
-    'Hellion': 21,
-    'Hellbat': 21,
-    'WidowMine': 29,
-    'SiegeTank': 32,
-    'Thor': 43,
-    'Viking': 30,
-    'VikingFighter': 30,  # all born as VikingFighters, but others in here for coverage
-    'VikingAssault': 30,
-    'Medivac': 30,
-    'Raven': 43,
-    'Banshee': 43,
-    'Battlecruiser': 64,
-    # protoss units
-    'Probe': 12,
-    'Zealot': 27,
-    'Stalker': 30,
-    'Sentry': 26,
-    'MothershipCore': 21,
-    'HighTemplar': 39,
-    'DarkTemplar': 39,
-    'Immortal': 39,
-    'Colossus': 54,
-    'Archon': 9,  # TODO guess
-    'Observer': 21,
-    'WarpPrism': 36,
-    'Phoenix': 25,
-    'VoidRay': 43,
-    'Oracle': 36,
-    'Tempest': 43,
-    'Carrier': 64,  # 120 in HotS
-    # zerg units
-    'Drone': 12,
-    'Queen': 36,
-    'Zergling': 17,
-    'Baneling': 14,
-    'Roach': 19,
-    'Hydralisk': 24,
-    'SwarmHost': 29,
-    'Infestor': 36,
-    'Ultralisk': 39,
-    'NydusWorm': 14,  # TODO guess
-    'NydusCanal': 14,  # TODO guess
-    'Overlord': 18,
-    'Mutalisk': 24,
-    'Corruptor': 29,
-    'BroodLord': 24,
-    'Viper': 29,
-    # zerg upgrades
-    'ZergMeleeWeaponsLevel1': 116, # TODO guess
-    'ZergMeleeWeaponsLevel2': 138,  # TODO guess
-    'ZergMeleeWeaponsLevel3': 159,  # TODO guess
-    'ZergMissileWeaponsLevel1': 116, # TODO guess
-    'ZergMissileWeaponsLevel2': 138,  # TODO guess
-    'ZergMissileWeaponsLevel3': 159,  # TODO guess
-    'ZergGroundArmorsLevel1': 116, # TODO guess
-    'ZergGroundArmorsLevel2': 138,  # TODO guess
-    'ZergGroundArmorsLevel3': 159,  # TODO guess
-    'ZergFlyerWeaponsLevel1': 116, # TODO guess
-    'ZergFlyerWeaponsLevel2': 138,  # TODO guess
-    'ZergFlyerWeaponsLevel3': 159,  # TODO guess
-    'ZergFlyerArmorsLevel1': 116, # TODO guess
-    'ZergFlyerArmorsLevel2': 138,  # TODO guess
-    'ZergFlyerArmorsLevel3': 159,  # TODO guess
-    'zerglingmovementspeed': 80,  # TODO guess
-    'zerglingattackspeed': 94,  # TODO guess
-    'CentrificalHooks': 80,  # TODO guess
-    'GlialReconstitution': 80,  # TODO guess
-    'TunnelingClaws': 80,  # TODO guess
-    'hydraliskspeed': 80,  # Grooved Spines
-    'HydraliskSpeedUpgrade': 72,  # TODO guess  # Muscular Augments
-    'overlordspeed': 43,  # TODO guess
-    'overlordtransport': 94,  # TODO guess
-    'Burrow': 72,  # TODO guess
-    'InfestorEnergyUpgrade': 58,  # TODO guess
-    'ChitinousPlating': 80,  # TODO guess
-    'LocustLifetimeIncrease': 87,  # TODO guess
-    # terran upgrades
-    'TerranInfantryWeaponsLevel1': 116, # TODO guess
-    'TerranInfantryWeaponsLevel2': 138,  # TODO guess
-    'TerranInfantryWeaponsLevel3': 159,  # TODO guess
-    'TerranInfantryArmorsLevel1': 116, # TODO guess
-    'TerranInfantryArmorsLevel2': 138,  # TODO guess
-    'TerranInfantryArmorsLevel3': 159,  # TODO guess
-    'TerranVehicleWeaponsLevel1': 116, # TODO guess
-    'TerranVehicleWeaponsLevel2': 138,  # TODO guess
-    'TerranVehicleWeaponsLevel3': 159,  # TODO guess
-    'TerranVehicleArmorsLevel1': 116, # TODO guess
-    'TerranVehicleArmorsLevel2': 138,  # TODO guess
-    'TerranVehicleArmorsLevel3': 159,  # TODO guess
-    'TerranShipWeaponsLevel1': 116, # TODO guess
-    'TerranShipWeaponsLevel2': 138,  # TODO guess
-    'TerranShipWeaponsLevel3': 159,  # TODO guess
-    'TerranShipArmorsLevel1': 116, # TODO guess
-    'TerranShipArmorsLevel2': 138,  # TODO guess
-    'TerranShipArmorsLevel3': 159,  # TODO guess
-    'TerranVehicleAndShipWeaponsLevel1': 116, # TODO guess
-    'TerranVehicleAndShipWeaponsLevel2': 138,  # TODO guess
-    'TerranVehicleAndShipWeaponsLevel3': 159,  # TODO guess
-    'TerranVehicleAndShipArmorsLevel1': 116, # TODO guess
-    'TerranVehicleAndShipArmorsLevel2': 138,  # TODO guess
-    'TerranVehicleAndShipArmorsLevel3': 159,  # TODO guess
-    'HighCapacityBarrels': 80,  # TODO guess
-    'Stimpack': 123,  # TODO guess
-    'PunisherGrenades': 43,  # TODO guess
-    'ShieldWall': 80,  # TODO guess  # ? Combat Shield?
-    'MedivacCaduceusReactor': 58,  # TODO guess
-    'PersonalCloaking': 87,  # TODO guess
-    'GhostMoebiusReactor': 58,  # TODO guess
-    'NeosteelFrame': 80,  # TODO guess
-    'HiSecAutoTracking': 58,  # TODO guess
-    'TerranBuildingArmor': 101,  # TODO guess
-    'BansheeCloak': 80,  # TODO guess
-    'DurableMaterials': 80,  # TODO guess
-    'RavenCorvidReactor': 80,  # TODO guess
-    'StrikeCannons': 80,  # TODO guess
-    'DrillClaws': 80,  # TODO guess
-    'TransformationServos': 80,  # TODO guess
-    'BattlecruiserBehemothReactor': 58,  # TODO guess
-    'BattlecruiserEnableSpecializations': 43,  # TODO guess
-    # protoss upgrades
-    'ProtossGroundWeaponsLevel1': 116, # TODO guess
-    'ProtossGroundWeaponsLevel2': 138,  # TODO guess
-    'ProtossGroundWeaponsLevel3': 159,  # TODO guess
-    'ProtossGroundArmorsLevel1': 116, # TODO guess
-    'ProtossGroundArmorsLevel2': 138,  # TODO guess
-    'ProtossGroundArmorsLevel3': 159,  # TODO guess
-    'ProtossShieldsLevel1': 116, # TODO guess
-    'ProtossShieldsLevel2': 138,  # TODO guess
-    'ProtossShieldsLevel3': 159,  # TODO guess
-    'ProtossAirWeaponsLevel1': 116, # TODO guess
-    'ProtossAirWeaponsLevel2': 138,  # TODO guess
-    'ProtossAirWeaponsLevel3': 159,  # TODO guess
-    'ProtossAirArmorsLevel1': 116, # TODO guess
-    'ProtossAirArmorsLevel2': 138,  # TODO guess
-    'ProtossAirArmorsLevel3': 159,  # TODO guess
-    'WarpGateResearch': 116, # TODO guess
-    'BlinkTech': 123,  # TODO guess
-    'ObserverGraviticBooster': 80,
-    'GraviticDrive': 58,  # TODO guess
-    'ExtendedThermalLance': 101,  # TODO guess
-    'Charge': 101,  # TODO guess
-    'PsiStormTech': 80,  # TODO guess
-    'PhoenixRangeUpgrade': 65,  # TODO guess
-    'CarrierLaunchSpeedUpgrade': 58,  # TODO guess
-    'AdeptShieldUpgrade': 100,
-    # unit change buildings
-    'Lair': 58,  # TODO guess
-    'Hive': 72,  # TODO guess
-    'GreaterSpire': 72,  # TODO guess
-    'OrbitalCommand': 25,  # TODO guess
-    'PlanetaryFortress': 36,  # TODO guess
-    'Overseer': 12,  # TODO guess
-    # LotV Beta
-    'Cyclone': 32,
-    'HyperflightRotors': 94,  # TODO guess  # TODO check name, time
-    'FlyingLocusts': 87,  # TODO guess, check name, time
-    'Adept': 27,
-    # Ravager - egg not itself because it is the start time, normal build time is 9
-    'RavagerCocoon': 0,
-    # Lurker - same logic as above, especially because burrow/unburrow counts, normal build time is 18
-    'LurkerMPEgg': 0,
-    'LurkerDenMP': 72,  # TODO check time
-    'LurkerRange': 72,  # TODO check time
-    'Disruptor': 43,
 
+BUILD_DATA = {
+    # terran units
+    'SCV': {
+        'build_time': 12,
+        'built_from': ['Command Center', 'Orbital Command'],
+        },
+    'Marine': {
+        'build_time': 18,
+        'built_from': ['Barracks'],
+        },
+    'Marauder': {
+        'build_time': 21,
+        'built_from': ['Barracks'],
+        },
+    'Reaper': {
+        'build_time': 32,
+        'built_from': ['Barracks'],
+        },
+    'Ghost': {
+        'build_time': 29,
+        'built_from': ['Barracks'],
+        },
+    'BattleHellion': {
+        'build_time': 21,  # Hellbat
+        'built_from': ['Factory'],
+        },
+    'Hellion': {
+        'build_time': 21,
+        'built_from': ['Factory'],
+        },
+    'Hellbat': {
+        'build_time': 21,
+        'built_from': ['Factory'],
+        },
+    'WidowMine': {
+        'build_time': 29,
+        'built_from': ['Factory'],
+        },
+    'SiegeTank': {
+        'build_time': 32,
+        'built_from': ['Factory'],
+        },
+    'Thor': {
+        'build_time': 43,
+        'built_from': ['Factory'],
+        },
+    'Viking': {
+        'build_time': 30,
+        'built_from': ['Starport'],
+        },
+    'VikingFighter': {
+        'build_time': 30,  # all born as VikingFighters, but others in here for coverage
+        'built_from': ['Starport'],
+        },
+    'VikingAssault': {
+        'build_time': 30,
+        'built_from': ['Starport'],
+        },
+    'Medivac': {
+        'build_time': 30,
+        'built_from': ['Starport'],
+        },
+    'Raven': {
+        'build_time': 43,
+        'built_from': ['Starport'],
+        },
+    'Banshee': {
+        'build_time': 43,
+        'built_from': ['Starport'],
+        },
+    'Battlecruiser': {
+        'build_time': 64,
+        'built_from': ['Starport'],
+        },
+    # protoss units
+    'Probe': {
+        'build_time': 12,
+        'built_from': ['Nexus'],
+        },
+    'Zealot': {
+        'build_time': 27,
+        'built_from': ['Gateway', 'Warpgate'],  # warpgate is necessary because of changing types
+        },
+    'Stalker': {
+        'build_time': 30,
+        'built_from': ['Gateway', 'Warpgate'],
+        },
+    'Sentry': {
+        'build_time': 26,
+        'built_from': ['Gateway', 'Warpgate'],
+        },
+    'MothershipCore': {
+        'build_time': 21,
+        'built_from': ['Nexus'],
+        },
+    'HighTemplar': {
+        'build_time': 39,
+        'built_from': ['Gateway', 'Warpgate'],
+        },
+    'DarkTemplar': {
+        'build_time': 39,
+        'built_from': ['Gateway', 'Warpgate'],
+        },
+    'Immortal': {
+        'build_time': 39,
+        'built_from': ['RoboticsFacility'],
+        },
+    'Colossus': {
+        'build_time': 54,
+        'built_from': ['RoboticsFacility'],
+        },
+    'Archon': {
+        'build_time': 9,  # TODO guess
+        'built_from': [],
+        },
+    'Observer': {
+        'build_time': 21,
+        'built_from': ['RoboticsFacility'],
+        },
+    'WarpPrism': {
+        'build_time': 36,
+        'built_from': ['RoboticsFacility'],
+        },
+    'Phoenix': {
+        'build_time': 25,
+        'built_from': ['Stargate'],
+        },
+    'VoidRay': {
+        'build_time': 43,
+        'built_from': ['Stargate'],
+        },
+    'Oracle': {
+        'build_time': 36,
+        'built_from': ['Stargate'],
+        },
+    'Tempest': {
+        'build_time': 43,
+        'built_from': ['Stargate'],
+        },
+    'Carrier': {
+        'build_time': 64,  # reduced from HotS
+        'built_from': ['Stargate'],
+        },
+    # zerg units
+    'Drone': {
+        'build_time': 12,
+        'built_from': [],
+        },
+    'Queen': {
+        'build_time': 36,
+        'built_from': ['Hatchery', 'Lair', 'Hive'],
+        },
+    'Zergling': {
+        'build_time': 17,
+        'built_from': [],
+        },
+    'Baneling': {
+        'build_time': 14,
+        'built_from': [],
+        },
+    'Roach': {
+        'build_time': 19,
+        'built_from': [],
+        },
+    'Hydralisk': {
+        'build_time': 24,
+        'built_from': [],
+        },
+    'SwarmHost': {
+        'build_time': 29,
+        'built_from': [],
+        },
+    'Infestor': {
+        'build_time': 36,
+        'built_from': [],
+        },
+    'Ultralisk': {
+        'build_time': 39,
+        'built_from': [],
+        },
+    'NydusWorm': {
+        'build_time': 14,  # TODO guess
+        'built_from': ['NydusCanal'],
+        },
+    'NydusCanal': {
+        'build_time': 14,  # TODO guess
+        'built_from': [],
+        },
+    'Overlord': {
+        'build_time': 18,
+        'built_from': [],
+        },
+    'Mutalisk': {
+        'build_time': 24,
+        'built_from': [],
+        },
+    'Corruptor': {
+        'build_time': 29,
+        'built_from': [],
+        },
+    'BroodLord': {
+        'build_time': 24,
+        'built_from': [],
+        },
+    'Viper': {
+        'build_time': 29,
+        'built_from': [],
+        },
+    # zerg upgrades
+    'ZergMeleeWeaponsLevel1': {
+        'build_time': 116, # TODO guess
+        'built_from': ['EvolutionChamber'],
+        },
+    'ZergMeleeWeaponsLevel2': {
+        'build_time': 138, # TODO guess
+        'built_from': ['EvolutionChamber'],
+        },
+    'ZergMeleeWeaponsLevel3': {
+        'build_time': 159, # TODO guess
+        'built_from': ['EvolutionChamber'],
+        },
+    'ZergMissileWeaponsLevel1': {
+        'build_time': 116, # TODO guess
+        'built_from': ['EvolutionChamber'],
+        },
+    'ZergMissileWeaponsLevel2': {
+        'build_time': 138, # TODO guess
+        'built_from': ['EvolutionChamber'],
+        },
+    'ZergMissileWeaponsLevel3': {
+        'build_time': 159, # TODO guess
+        'built_from': ['EvolutionChamber'],
+        },
+    'ZergGroundArmorsLevel1': {
+        'build_time': 116, # TODO guess
+        'built_from': ['EvolutionChamber'],
+        },
+    'ZergGroundArmorsLevel2': {
+        'build_time': 138, # TODO guess
+        'built_from': ['EvolutionChamber'],
+        },
+    'ZergGroundArmorsLevel3': {
+        'build_time': 159, # TODO guess
+        'built_from': ['EvolutionChamber'],
+        },
+    'ZergFlyerWeaponsLevel1': {
+        'build_time': 116, # TODO guess
+        'built_from': ['Spire', 'GreaterSpire'],
+        },
+    'ZergFlyerWeaponsLevel2': {
+        'build_time': 138, # TODO guess
+        'built_from': ['Spire', 'GreaterSpire'],
+        },
+    'ZergFlyerWeaponsLevel3': {
+        'build_time': 159, # TODO guess
+        'built_from': ['Spire', 'GreaterSpire'],
+        },
+    'ZergFlyerArmorsLevel1': {
+        'build_time': 116, # TODO guess
+        'built_from': ['Spire', 'GreaterSpire'],
+        },
+    'ZergFlyerArmorsLevel2': {
+        'build_time': 138, # TODO guess
+        'built_from': ['Spire', 'GreaterSpire'],
+        },
+    'ZergFlyerArmorsLevel3': {
+        'build_time': 159, # TODO guess
+        'built_from': ['Spire', 'GreaterSpire'],
+        },
+    'zerglingmovementspeed': {
+        'build_time': 80, # TODO guess
+        'built_from': ['SpawningPool'],
+        },
+    'zerglingattackspeed': {
+        'build_time': 94, # TODO guess
+        'built_from': ['SpawningPool'],
+        },
+    'CentrificalHooks': {
+        'build_time': 80, # TODO guess
+        'built_from': ['BanelingNest'],
+        },
+    'GlialReconstitution': {
+        'build_time': 80, # TODO guess
+        'built_from': ['RoachWarren'],
+        },
+    'TunnelingClaws': {
+        'build_time': 80, # TODO guess
+        'built_from': ['RoachWarren'],
+        },
+    'hydraliskspeed': {
+        'build_time': 80,  # Grooved Spines
+        'built_from': ['HydraliskDen'],
+        },
+    'HydraliskSpeedUpgrade': {
+        'build_time': 72, # TODO guess  # Muscular Augments
+        'built_from': ['HydraliskDen'],
+        },
+    'overlordspeed': {
+        'build_time': 43, # TODO guess
+        'built_from': ['Hatchery', 'Lair', 'Hive'],
+        },
+    'overlordtransport': {
+        'build_time': 94, # TODO guess
+        'built_from': ['Hatchery', 'Lair', 'Hive'],
+        },
+    'Burrow': {
+        'build_time': 72, # TODO guess
+        'built_from': ['Hatchery', 'Lair', 'Hive'],
+        },
+    'InfestorEnergyUpgrade': {
+        'build_time': 58, # TODO guess
+        'built_from': ['InfestationPit'],
+        },
+    'ChitinousPlating': {
+        'build_time': 80, # TODO guess
+        'built_from': ['UltraliskCavern'],
+        },
+    'LocustLifetimeIncrease': {
+        'build_time': 87, # TODO guess
+        'built_from': ['InfestationPit'],
+        },
+    # TODO neural parasite upgrade
+    # terran upgrades
+    'TerranInfantryWeaponsLevel1': {
+        'build_time': 116, # TODO guess
+        'built_from': ['EngineeringBay'],
+        },
+    'TerranInfantryWeaponsLevel2': {
+        'build_time': 138, # TODO guess
+        'built_from': ['EngineeringBay'],
+        },
+    'TerranInfantryWeaponsLevel3': {
+        'build_time': 159, # TODO guess
+        'built_from': ['EngineeringBay'],
+        },
+    'TerranInfantryArmorsLevel1': {
+        'build_time': 116, # TODO guess
+        'built_from': ['EngineeringBay'],
+        },
+    'TerranInfantryArmorsLevel2': {
+        'build_time': 138, # TODO guess
+        'built_from': ['EngineeringBay'],
+        },
+    'TerranInfantryArmorsLevel3': {
+        'build_time': 159, # TODO guess
+        'built_from': ['EngineeringBay'],
+        },
+    'TerranVehicleWeaponsLevel1': {
+        'build_time': 116, # TODO guess
+        'built_from': ['Armory'],
+        },
+    'TerranVehicleWeaponsLevel2': {
+        'build_time': 138, # TODO guess
+        'built_from': ['Armory'],
+        },
+    'TerranVehicleWeaponsLevel3': {
+        'build_time': 159, # TODO guess
+        'built_from': ['Armory'],
+        },
+    'TerranVehicleArmorsLevel1': {
+        'build_time': 116, # TODO guess
+        'built_from': ['Armory'],
+        },
+    'TerranVehicleArmorsLevel2': {
+        'build_time': 138, # TODO guess
+        'built_from': ['Armory'],
+        },
+    'TerranVehicleArmorsLevel3': {
+        'build_time': 159, # TODO guess
+        'built_from': ['Armory'],
+        },
+    'TerranShipWeaponsLevel1': {
+        'build_time': 116, # TODO guess
+        'built_from': ['Armory'],
+        },
+    'TerranShipWeaponsLevel2': {
+        'build_time': 138, # TODO guess
+        'built_from': ['Armory'],
+        },
+    'TerranShipWeaponsLevel3': {
+        'build_time': 159, # TODO guess
+        'built_from': ['Armory'],
+        },
+    'TerranShipArmorsLevel1': {
+        'build_time': 116, # TODO guess
+        'built_from': ['Armory'],
+        },
+    'TerranShipArmorsLevel2': {
+        'build_time': 138, # TODO guess
+        'built_from': ['Armory'],
+        },
+    'TerranShipArmorsLevel3': {
+        'build_time': 159, # TODO guess
+        'built_from': ['Armory'],
+        },
+    'TerranVehicleAndShipWeaponsLevel1': {
+        'build_time': 116, # TODO guess
+        'built_from': ['Armory'],
+        },
+    'TerranVehicleAndShipWeaponsLevel2': {
+        'build_time': 138, # TODO guess
+        'built_from': ['Armory'],
+        },
+    'TerranVehicleAndShipWeaponsLevel3': {
+        'build_time': 159, # TODO guess
+        'built_from': ['Armory'],
+        },
+    'TerranVehicleAndShipArmorsLevel1': {
+        'build_time': 116, # TODO guess
+        'built_from': ['Armory'],
+        },
+    'TerranVehicleAndShipArmorsLevel2': {
+        'build_time': 138, # TODO guess
+        'built_from': ['Armory'],
+        },
+    'TerranVehicleAndShipArmorsLevel3': {
+        'build_time': 159, # TODO guess
+        'built_from': ['Armory'],
+        },
+    'HighCapacityBarrels': {
+        'build_time': 80, # TODO guess
+        'built_from': ['TechLab'],
+        },
+    'Stimpack': {
+        'build_time': 123, # TODO guess
+        'built_from': ['TechLab'],
+        },
+    'PunisherGrenades': {
+        'build_time': 43, # TODO guess
+        'built_from': ['TechLab'],
+        },
+    'ShieldWall': {
+        'build_time': 80, # TODO guess  # ? Combat Shield?
+        'built_from': ['TechLab'],
+        },
+    'MedivacCaduceusReactor': {
+        'build_time': 58, # TODO guess
+        'built_from': ['TechLab'],
+        },
+    'PersonalCloaking': {
+        'build_time': 87, # TODO guess
+        'built_from': ['TechLab'],
+        },
+    'GhostMoebiusReactor': {
+        'build_time': 58, # TODO guess
+        'built_from': ['TechLab'],
+        },
+    'NeosteelFrame': {
+        'build_time': 80, # TODO guess
+        'built_from': ['EngineeringBay'],
+        },
+    'HiSecAutoTracking': {
+        'build_time': 58, # TODO guess
+        'built_from': ['EngineeringBay'],
+        },
+    'TerranBuildingArmor': {
+        'build_time': 101, # TODO guess
+        'built_from': ['EngineeringBay'],
+        },
+    'BansheeCloak': {
+        'build_time': 80, # TODO guess
+        'built_from': ['TechLab'],
+        },
+    'DurableMaterials': {
+        'build_time': 80, # TODO guess
+        'built_from': ['TechLab'],
+        },
+    'RavenCorvidReactor': {
+        'build_time': 80, # TODO guess
+        'built_from': ['TechLab'],
+        },
+    'StrikeCannons': {
+        'build_time': 80, # TODO guess
+        'built_from': ['TechLab'],
+        },
+    'DrillClaws': {
+        'build_time': 80, # TODO guess
+        'built_from': ['TechLab'],
+        },
+    'TransformationServos': {
+        'build_time': 80, # TODO guess
+        'built_from': ['TechLab'],
+        },
+    'BattlecruiserBehemothReactor': {
+        'build_time': 58, # TODO guess
+        'built_from': ['FusionCore'],
+        },
+    'BattlecruiserEnableSpecializations': {
+        'build_time': 43, # TODO guess
+        'built_from': ['FusionCore'],
+        },
+    # protoss upgrades
+    'ProtossGroundWeaponsLevel1': {
+        'build_time': 116, # TODO guess
+        'built_from': ['Forge'],
+        },
+    'ProtossGroundWeaponsLevel2': {
+        'build_time': 138, # TODO guess
+        'built_from': ['Forge'],
+        },
+    'ProtossGroundWeaponsLevel3': {
+        'build_time': 159, # TODO guess
+        'built_from': ['Forge'],
+        },
+    'ProtossGroundArmorsLevel1': {
+        'build_time': 116, # TODO guess
+        'built_from': ['Forge'],
+        },
+    'ProtossGroundArmorsLevel2': {
+        'build_time': 138, # TODO guess
+        'built_from': ['Forge'],
+        },
+    'ProtossGroundArmorsLevel3': {
+        'build_time': 159, # TODO guess
+        'built_from': ['Forge'],
+        },
+    'ProtossShieldsLevel1': {
+        'build_time': 116, # TODO guess
+        'built_from': ['Forge'],
+        },
+    'ProtossShieldsLevel2': {
+        'build_time': 138, # TODO guess
+        'built_from': ['Forge'],
+        },
+    'ProtossShieldsLevel3': {
+        'build_time': 159, # TODO guess
+        'built_from': ['Forge'],
+        },
+    'ProtossAirWeaponsLevel1': {
+        'build_time': 116, # TODO guess
+        'built_from': ['CyberneticsCore'],
+        },
+    'ProtossAirWeaponsLevel2': {
+        'build_time': 138, # TODO guess
+        'built_from': ['CyberneticsCore'],
+        },
+    'ProtossAirWeaponsLevel3': {
+        'build_time': 159, # TODO guess
+        'built_from': ['CyberneticsCore'],
+        },
+    'ProtossAirArmorsLevel1': {
+        'build_time': 116, # TODO guess
+        'built_from': ['CyberneticsCore'],
+        },
+    'ProtossAirArmorsLevel2': {
+        'build_time': 138, # TODO guess
+        'built_from': ['CyberneticsCore'],
+        },
+    'ProtossAirArmorsLevel3': {
+        'build_time': 159, # TODO guess
+        'built_from': ['CyberneticsCore'],
+        },
+    'WarpGateResearch': {
+        'build_time': 116, # TODO guess
+        'built_from': ['CyberneticsCore'],
+        },
+    'BlinkTech': {
+        'build_time': 123, # TODO guess
+        'built_from': ['TwilightCouncil'],
+        },
+    'ObserverGraviticBooster': {
+        'build_time': 80, # TODO guess
+        'built_from': ['RoboticsBay'],
+        },
+    'GraviticDrive': {
+        'build_time': 58, # TODO guess
+        'built_from': ['RoboticsBay'],
+        },
+    'ExtendedThermalLance': {
+        'build_time': 101, # TODO guess
+        'built_from': ['RoboticsBay'],
+        },
+    'Charge': {
+        'build_time': 101, # TODO guess
+        'built_from': ['TwilightCouncil'],
+        },
+    'PsiStormTech': {
+        'build_time': 80, # TODO guess
+        'built_from': ['TemplarArchives'],
+        },
+    'PhoenixRangeUpgrade': {
+        'build_time': 65, # TODO guess
+        'built_from': ['FleetBeacon'],
+        },
+    'CarrierLaunchSpeedUpgrade': {
+        'build_time': 58, # TODO guess
+        'built_from': ['FleetBeacon'],
+        },
+    'AdeptShieldUpgrade': {
+        'build_time': 58, # TODO guess
+        'built_from': ['TwilightCouncil'],
+        },
+    # unit change buildings
+    'Lair': {
+        'build_time': 58, # TODO guess
+        'built_from': ['Hatchery'],
+        },
+    'Hive': {
+        'build_time': 72, # TODO guess
+        'built_from': ['Lair'],
+        },
+    'GreaterSpire': {
+        'build_time': 72, # TODO guess
+        'built_from': ['Spire'],
+        },
+    'OrbitalCommand': {
+        'build_time': 25, # TODO guess
+        'built_from': ['CommandCenter'],
+        },
+    'PlanetaryFortress': {
+        'build_time': 36, # TODO guess
+        'built_from': ['CommandCenter'],
+        },
+    'Overseer': {
+        'build_time': 12, # TODO guess
+        'built_from': ['Overlord'],
+        },
+    # LotV Alpha
+    'Cyclone': {
+        'build_time': 32,
+        'built_from': ['Factory'],
+        },
+    'HyperflightRotors': {
+        'build_time': 94,  # TODO guess, check name/time
+        'built_from': ['TechLab'],
+        },
+    'FlyingLocusts': {
+        'build_time': 87,  # TODO guess, check name/time
+        'built_from': ['InfestationPit'],
+        },
+    'Adept': {
+        'build_time': 27,
+        'built_from': ['Gateway', 'Warpgate'],
+        },
+    'RavagerCocoon': {
+        'build_time': 0,  # Ravager - egg not itself because it is the start time, normal build time is 9
+        'built_from': ['Roach'],
+        },
+    'LurkerMPEgg': {
+        'build_time': 0,  # Lurker - same logic as above, especially because burrow/unburrow counts, normal build time is 33
+        'built_from': ['Hydralisk'],
+        },
+    'LurkerDenMP': {
+        'build_time': 72,  # TODO check time
+        'built_from': ['HydraliskDen'],
+        },
+    'LurkerRange': {
+        'build_time': 72,  # TODO check time
+        'built_from': ['HydraliskDen', 'LurkerDenMP'],
+        },
+    'Disruptor': {
+        'build_time': 43,
+        'built_from': ['RoboticsFacility'],
+        },
+    'Liberator': {
+        'build_time': 60,
+        'built_from': ['Starport'],
+        },
 }
 
-for key, value in BUILD_TIMES.items():
-    BUILD_TIMES[key] *= FRAMES_PER_SECOND
+
+for value in BUILD_DATA.values():
+    value['build_time'] *= FRAMES_PER_SECOND
 
 
 TRACKED_ABILITIES = set([

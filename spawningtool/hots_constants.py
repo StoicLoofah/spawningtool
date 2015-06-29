@@ -701,7 +701,7 @@ BUILD_DATA = {
 
 
 for value in BUILD_DATA.values():
-    value['build_time'] *= 16
+    value['build_time'] *= FRAMES_PER_SECOND
 
 
 TRACKED_ABILITIES = set([
