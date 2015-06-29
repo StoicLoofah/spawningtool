@@ -280,7 +280,7 @@ def upgrade_event(builds, event, parsed_data, constants, chronoboosts):
 
     supply = get_supply(parsed_data['players'][player]['supply'], frame)
     builds[player].add_event(BuildEvent(
-        unit_name, frame, constants.FRAMES_PER_SECOND, supply, is_chronoboosted))
+        unit_name, frame, constants.FRAMES_PER_SECOND, supply, is_chronoboosted=is_chronoboosted))
 
 
 def change_event(builds, event, parsed_data, constants):
