@@ -244,13 +244,13 @@ def adjust_build_time(event, player, unit_name, constants, chronoboosts):
     chronoboosts starting before the the guessed start time). We also cannot distinguish which
     building exactly gets boosted. Even so, this is better than no tracking at all
     """
+    frame = event.frame
     if not unit_name in constants.BUILD_DATA:
         unit_name += ' (Error on upgrade time)'
-        return frame, unit_name
+        return frame, unit_name, False
 
     cur_build_data = constants.BUILD_DATA[unit_name]
 
-    frame = event.frame
     projected_start = frame - constants.BUILD_DATA[unit_name]['build_time']
     chronoboosted = False
 

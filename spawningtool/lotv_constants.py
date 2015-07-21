@@ -702,6 +702,14 @@ BUILD_DATA = {
         'build_time': 60,
         'built_from': ['Starport'],
         },
+    'CycloneLockOnRangeUpgrade': {
+        'build_time': 79,  # TODO probably wrong, fix this
+        'built_from': ['TechLab'],
+    },
+    'CycloneAirUpgrade': {
+        'build_time': 79,  # TODO probably wrong, fix this
+        'built_from': ['TechLab'],
+    },
 }
 
 
