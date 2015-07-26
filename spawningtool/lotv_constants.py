@@ -365,7 +365,10 @@ BUILD_DATA = {
         'build_time': 87, # TODO guess
         'built_from': ['InfestationPit'],
         },
-    # TODO neural parasite upgrade
+    'NeuralParasite': {
+        'build_time': 80,
+        'built_from': ['InfestationPit'],
+        },
     # terran upgrades
     'TerranInfantryWeaponsLevel1': {
         'build_time': 116, # TODO guess
