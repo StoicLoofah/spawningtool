@@ -254,7 +254,7 @@ def adjust_build_time(event, player, unit_name, constants, chronoboosts):
     projected_start = frame - constants.BUILD_DATA[unit_name]['build_time']
     chronoboosted = False
 
-    if chronoboosts[player]:
+    if chronoboosts.get(player):
         for building in cur_build_data['built_from']:
             if building in chronoboosts[player]:
                 for cur_frame_start, cur_frame_end in chronoboosts[player][building]:
