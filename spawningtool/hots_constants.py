@@ -35,6 +35,7 @@ BO_CHANGED_EXCLUDED = set([
     'VikingAssault',  # various viking transforms
     'VikingFighter',
     'Viking',
+    'WarpPrism',
     'WidowMine',  # burrowing
     'Zergling',  # generated when Banelings spawn
 ])
