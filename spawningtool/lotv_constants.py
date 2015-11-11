@@ -637,8 +637,12 @@ BUILD_DATA = {
         'build_time': 58, # TODO guess
         'built_from': ['FleetBeacon'],
         },
-    'AdeptShieldUpgrade': {
+    'AdeptShieldUpgrade': {  # deprecated from LotV Beta
         'build_time': 58, # TODO guess
+        'built_from': ['TwilightCouncil'],
+        },
+    'AdeptPiercingAttack': {
+        'build_time': 100,
         'built_from': ['TwilightCouncil'],
         },
     # unit change buildings
