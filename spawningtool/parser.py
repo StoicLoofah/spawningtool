@@ -29,7 +29,7 @@ def convert_gametime_to_float(gametime):
 
 
 def _frame_to_time(frame, frames_per_second):
-    seconds = frame // frames_per_second
+    seconds = int(frame // frames_per_second)
     return '{0}:{1:02d}'.format(seconds // 60, seconds % 60)
 
 

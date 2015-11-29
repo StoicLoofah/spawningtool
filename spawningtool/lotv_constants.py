@@ -3,7 +3,7 @@ spawningtool.constants
 ~~~~~~~~~~~~~~~~~~~~~~
 """
 
-FRAMES_PER_SECOND = 22
+FRAMES_PER_SECOND = 22.4
 
 BO_EXCLUDED = set([
     'MULE',
