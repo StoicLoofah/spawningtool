@@ -40,5 +40,6 @@ Please submit any issues you encounter to the [GitHub project](https://github.co
 
 Thanks To
 ============
+* @dsjoerg for many contributions to sc2reader and replay parsing as a whole through his work at ggtracker
 * @hahnicity for all of the code cleanup. Previously, spawningtool was just a script. Thanks to his help, the code is actually readable and packaged for others to use and improve
 * @GraylinKim for lots of support. Even before the project switched over to using [sc2reader](https://github.com/GraylinKim/sc2reader), he offered advice and tips on getting this project off the ground.
