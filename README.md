@@ -1,13 +1,13 @@
 spawningtool
 ============
 
-spawningpool is tools for analyzing StarCraft 2 Replays. It uses the data parsed by [sc2reader](https://github.com/GraylinKim/sc2reader) to make data available in a more human-digestable format.
+spawningtool is tools for analyzing StarCraft 2 Replays. It uses the data parsed by [sc2reader](https://github.com/GraylinKim/sc2reader) to make data available in a more human-digestable format.
 
-Currently, spawningpool offers a basic parser for extracting build orders from replays. Our goal is to incorporate more sophisticated techniques from Artificial Intelligence to understand and classify these build orders.
+Currently, spawningtool offers a basic parser for extracting build orders from replays. Our goal is to incorporate more sophisticated techniques from Artificial Intelligence to understand and classify these build orders.
 
 Installation
 ============
-From PyPi (mostly stable)
+From PyPi (stable but often out of date for the latest patch)
 ```bash
 pip install spawningtool
 ```
