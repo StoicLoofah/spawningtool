@@ -243,6 +243,9 @@ def adjust_build_time(event, player, unit_name, constants, chronoboosts):
     This is only an approximation. The edge case behavior isn't perfect (particularly around
     chronoboosts starting before the the guessed start time). We also cannot distinguish which
     building exactly gets boosted. Even so, this is better than no tracking at all
+
+    This is built with the HotS implementation of chronoboost and has not been adjusted
+    for LotV yet
     """
     frame = event.frame
     if not unit_name in constants.BUILD_DATA:
@@ -263,6 +266,9 @@ def adjust_build_time(event, player, unit_name, constants, chronoboosts):
                         reduction = overlap // 2
                         projected_start += reduction
                         chronoboosted = True
+
+    if projected_start < 0:
+        projected_start = 1  # can happen with some weird rounding
 
     return projected_start, unit_name, chronoboosted
 
