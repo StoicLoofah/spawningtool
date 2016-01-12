@@ -33,11 +33,13 @@ BO_EXCLUDED = set([
     'OracleStasisTrap',
     'KD8Charge',
     'ReleaseInterceptorsBeacon',
-    'SpecialNexus'
+    'SpecialNexus',
+    'DisruptorPhased',  # Disruptor shots
 ])
 
 BO_CHANGED_EXCLUDED = set([
     'Liberator',
+    'SiegeTank',  # from dropping sieged tanks from medivacs
     'VikingAssault',  # various viking transforms
     'VikingFighter',
     'Viking',
