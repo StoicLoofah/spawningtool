@@ -79,7 +79,7 @@ BUILD_DATA = {
         'build_time': 21,
         'built_from': ['Factory'],
         },
-    'Hellbat': {
+    'Hellbat': {  # deprecated?
         'build_time': 21,
         'built_from': ['Factory'],
         },
@@ -91,11 +91,15 @@ BUILD_DATA = {
         'build_time': 32,
         'built_from': ['Factory'],
         },
+    'Cyclone': {
+        'build_time': 32,
+        'built_from': ['Factory'],
+        },
     'Thor': {
         'build_time': 43,
         'built_from': ['Factory'],
         },
-    'Viking': {
+    'Viking': {  # not built as this
         'build_time': 30,
         'built_from': ['Starport'],
         },
@@ -103,12 +107,16 @@ BUILD_DATA = {
         'build_time': 30,  # all born as VikingFighters, but others in here for coverage
         'built_from': ['Starport'],
         },
-    'VikingAssault': {
+    'VikingAssault': {  # not built as this
         'build_time': 30,
         'built_from': ['Starport'],
         },
     'Medivac': {
         'build_time': 30,
+        'built_from': ['Starport'],
+        },
+    'Liberator': {
+        'build_time': 60,
         'built_from': ['Starport'],
         },
     'Raven': {
@@ -122,6 +130,10 @@ BUILD_DATA = {
     'Battlecruiser': {
         'build_time': 64,
         'built_from': ['Starport'],
+        },
+    'Nuke': {  # treat the Nuke like a unit
+        'build_time': 43,
+        'built_from': ['Ghost Academy'],
         },
     # protoss units
     'Probe': {
@@ -140,6 +152,10 @@ BUILD_DATA = {
         'build_time': 26,
         'built_from': ['Gateway', 'WarpGate'],
         },
+    'Adept': {
+        'build_time': 27,
+        'built_from': ['Gateway', 'WarpGate'],
+        },
     'MothershipCore': {
         'build_time': 21,
         'built_from': ['Nexus'],
@@ -154,6 +170,10 @@ BUILD_DATA = {
         },
     'Immortal': {
         'build_time': 39,
+        'built_from': ['RoboticsFacility'],
+        },
+    'Disruptor': {
+        'build_time': 36,
         'built_from': ['RoboticsFacility'],
         },
     'Colossus': {
@@ -376,171 +396,197 @@ BUILD_DATA = {
         },
     # terran upgrades
     'TerranInfantryWeaponsLevel1': {
-        'build_time': 114, # TODO guess
+        'build_time': 114,
         'built_from': ['EngineeringBay'],
         },
     'TerranInfantryWeaponsLevel2': {
-        'build_time': 136, # TODO guess
+        'build_time': 136,
         'built_from': ['EngineeringBay'],
         },
     'TerranInfantryWeaponsLevel3': {
-        'build_time': 157, # TODO guess
+        'build_time': 157,
         'built_from': ['EngineeringBay'],
         },
     'TerranInfantryArmorsLevel1': {
-        'build_time': 114, # TODO guess
+        'build_time': 114,
         'built_from': ['EngineeringBay'],
         },
     'TerranInfantryArmorsLevel2': {
-        'build_time': 136, # TODO guess
+        'build_time': 136,
         'built_from': ['EngineeringBay'],
         },
     'TerranInfantryArmorsLevel3': {
-        'build_time': 157, # TODO guess
+        'build_time': 157,
         'built_from': ['EngineeringBay'],
         },
     'TerranVehicleWeaponsLevel1': {
-        'build_time': 114, # TODO guess
+        'build_time': 114,
         'built_from': ['Armory'],
         },
     'TerranVehicleWeaponsLevel2': {
-        'build_time': 136, # TODO guess
+        'build_time': 136,
         'built_from': ['Armory'],
         },
     'TerranVehicleWeaponsLevel3': {
-        'build_time': 157, # TODO guess
+        'build_time': 157,
         'built_from': ['Armory'],
         },
-    'TerranVehicleArmorsLevel1': {
-        'build_time': 114, # TODO guess
+    'TerranVehicleArmorsLevel1': {  # deprecated
+        'build_time': 114,
         'built_from': ['Armory'],
         },
-    'TerranVehicleArmorsLevel2': {
-        'build_time': 136, # TODO guess
+    'TerranVehicleArmorsLevel2': {  # deprecated
+        'build_time': 136,
         'built_from': ['Armory'],
         },
-    'TerranVehicleArmorsLevel3': {
-        'build_time': 157, # TODO guess
+    'TerranVehicleArmorsLevel3': {  # deprecated
+        'build_time': 157,
         'built_from': ['Armory'],
         },
     'TerranShipWeaponsLevel1': {
-        'build_time': 114, # TODO guess
+        'build_time': 114,
         'built_from': ['Armory'],
         },
     'TerranShipWeaponsLevel2': {
-        'build_time': 136, # TODO guess
+        'build_time': 136,
         'built_from': ['Armory'],
         },
     'TerranShipWeaponsLevel3': {
-        'build_time': 157, # TODO guess
+        'build_time': 157,
         'built_from': ['Armory'],
         },
-    'TerranShipArmorsLevel1': {
-        'build_time': 114, # TODO guess
+    'TerranShipArmorsLevel1': {  # deprecated
+        'build_time': 114,
         'built_from': ['Armory'],
         },
-    'TerranShipArmorsLevel2': {
-        'build_time': 136, # TODO guess
+    'TerranShipArmorsLevel2': {  # deprecated
+        'build_time': 136,
         'built_from': ['Armory'],
         },
-    'TerranShipArmorsLevel3': {
-        'build_time': 157, # TODO guess
+    'TerranShipArmorsLevel3': {  # deprecated
+        'build_time': 157,
         'built_from': ['Armory'],
         },
-    'TerranVehicleAndShipWeaponsLevel1': {
-        'build_time': 114, # TODO guess
+    'TerranVehicleAndShipWeaponsLevel1': {  # deprecated
+        'build_time': 114,
         'built_from': ['Armory'],
         },
-    'TerranVehicleAndShipWeaponsLevel2': {
-        'build_time': 136, # TODO guess
+    'TerranVehicleAndShipWeaponsLevel2': {  # deprecated
+        'build_time': 136,
         'built_from': ['Armory'],
         },
-    'TerranVehicleAndShipWeaponsLevel3': {
-        'build_time': 157, # TODO guess
+    'TerranVehicleAndShipWeaponsLevel3': {  # deprecated
+        'build_time': 157,
         'built_from': ['Armory'],
         },
     'TerranVehicleAndShipArmorsLevel1': {
-        'build_time': 114, # TODO guess
+        'build_time': 114,
         'built_from': ['Armory'],
         },
     'TerranVehicleAndShipArmorsLevel2': {
-        'build_time': 136, # TODO guess
+        'build_time': 136,
         'built_from': ['Armory'],
         },
     'TerranVehicleAndShipArmorsLevel3': {
-        'build_time': 157, # TODO guess
+        'build_time': 157,
         'built_from': ['Armory'],
         },
-    'HighCapacityBarrels': {
-        'build_time': 80, # TODO guess
-        'built_from': ['TechLab'],
-        },
+    # barracks tech lab
     'Stimpack': {
-        'build_time': 123, # TODO guess
+        'build_time': 121,
         'built_from': ['TechLab'],
         },
     'PunisherGrenades': {
-        'build_time': 43, # TODO guess
+        'build_time': 43,
         'built_from': ['TechLab'],
         },
     'ShieldWall': {
-        'build_time': 80, # TODO guess  # ? Combat Shield?
+        'build_time': 79,
         'built_from': ['TechLab'],
         },
-    'MedivacCaduceusReactor': {
-        'build_time': 57, # TODO guess
-        'built_from': ['TechLab'],
-        },
-    'PersonalCloaking': {
-        'build_time': 87, # TODO guess
-        'built_from': ['TechLab'],
-        },
-    'GhostMoebiusReactor': {
-        'build_time': 57, # TODO guess
-        'built_from': ['TechLab'],
-        },
+    # engineering bay
     'NeosteelFrame': {
-        'build_time': 80, # TODO guess
+        'build_time': 79,
         'built_from': ['EngineeringBay'],
         },
     'HiSecAutoTracking': {
-        'build_time': 57, # TODO guess
+        'build_time': 57,
         'built_from': ['EngineeringBay'],
         },
     'TerranBuildingArmor': {
-        'build_time': 100, # TODO guess
+        'build_time': 100,
         'built_from': ['EngineeringBay'],
         },
-    'BansheeCloak': {
-        'build_time': 80, # TODO guess
-        'built_from': ['TechLab'],
+    # ghost academy
+    'PersonalCloaking': {
+        'build_time': 86,
+        'built_from': ['GhostAcademy'],
         },
-    'DurableMaterials': {
-        'build_time': 80, # TODO guess
-        'built_from': ['TechLab'],
+    'GhostMoebiusReactor': {  # deprecated
+        'build_time': 57,
+        'built_from': ['GhostAcademy'],
         },
-    'RavenCorvidReactor': {
-        'build_time': 80, # TODO guess
-        'built_from': ['TechLab'],
-        },
-    'StrikeCannons': {
-        'build_time': 80, # TODO guess
+    # factory tech lab
+    'StrikeCannons': {  # deprecated
+        'build_time': 79,
         'built_from': ['TechLab'],
         },
     'DrillClaws': {
-        'build_time': 80, # TODO guess
+        'build_time': 79,
         'built_from': ['TechLab'],
         },
-    'TransformationServos': {
-        'build_time': 80, # TODO guess
+    'TransformationServos': {  # deprecated
+        'build_time': 79,
         'built_from': ['TechLab'],
         },
+    'HighCapacityBarrels': {  # Infernal Pre-Igniters
+        'build_time': 79,
+        'built_from': ['TechLab'],
+        },
+    'CycloneLockOnDamageUpgrade': {  # Mag-Field Accelerator
+        'build_time': 79,
+        'built_from': ['TechLab'],
+        },
+    # starport tech lab
+    'MedivacCaduceusReactor': {  # deprecated
+        'build_time': 57,
+        'built_from': ['TechLab'],
+        },
+    'MedivacIncreaseSpeedBoost': {  # High Capacity Fuel Tanks
+        'build_time': 57,
+        'built_from': ['TechLab'],
+        },
+    'RavenDamageUpgrade': {  # Explosive Shrapnel Shells
+        'build_time': 79,
+        'built_from': ['TechLab'],
+        },
+    'BansheeCloak': {
+        'build_time': 79,
+        'built_from': ['TechLab'],
+        },
+    'DurableMaterials': {  # deprecated
+        'build_time': 79,
+        'built_from': ['TechLab'],
+        },
+    'RavenCorvidReactor': {
+        'build_time': 79,
+        'built_from': ['TechLab'],
+        },
+    'BansheeSpeed': {  # Hyperflight Rotors
+        'build_time': 93,
+        'built_from': ['TechLab'],
+        },
+    'LiberatorAGRangeUpgrade': {  # Advanced Ballistics
+        'build_time': 79,
+        'built_from': ['TechLab'],
+        },
+    # fusion core
     'BattlecruiserBehemothReactor': {
-        'build_time': 57, # TODO guess
+        'build_time': 57,
         'built_from': ['FusionCore'],
         },
     'BattlecruiserEnableSpecializations': {
-        'build_time': 43, # TODO guess
+        'build_time': 43,
         'built_from': ['FusionCore'],
         },
     # protoss upgrades
@@ -674,21 +720,13 @@ BUILD_DATA = {
         'built_from': ['Overlord'],
         },
     # LotV Alpha
-    'Cyclone': {
-        'build_time': 32,
-        'built_from': ['Factory'],
-        },
     'HyperflightRotors': {
-        'build_time': 94,  # TODO guess, check name/time
+        'build_time': 93,
         'built_from': ['TechLab'],
         },
     'FlyingLocusts': {
         'build_time': 87,  # TODO guess, check name/time
         'built_from': ['InfestationPit'],
-        },
-    'Adept': {
-        'build_time': 27,
-        'built_from': ['Gateway', 'WarpGate'],
         },
     'RavagerCocoon': {
         'build_time': 0,  # Ravager - egg not itself because it is the start time, normal build time is 9
@@ -706,20 +744,12 @@ BUILD_DATA = {
         'build_time': 72,  # TODO check time
         'built_from': ['HydraliskDen', 'LurkerDenMP'],
         },
-    'Disruptor': {
-        'build_time': 36,
-        'built_from': ['RoboticsFacility'],
-        },
-    'Liberator': {
-        'build_time': 60,
-        'built_from': ['Starport'],
-        },
     'CycloneLockOnRangeUpgrade': {
-        'build_time': 79,  # TODO probably wrong, fix this
+        'build_time': 79,
         'built_from': ['TechLab'],
     },
     'CycloneAirUpgrade': {
-        'build_time': 79,  # TODO probably wrong, fix this
+        'build_time': 79,
         'built_from': ['TechLab'],
     },
 }
