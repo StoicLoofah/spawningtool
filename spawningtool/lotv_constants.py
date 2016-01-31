@@ -35,6 +35,8 @@ BO_EXCLUDED = set([
     'ReleaseInterceptorsBeacon',
     'SpecialNexus',
     'DisruptorPhased',  # Disruptor shots
+    'ParasiticBombDummy',
+    'LocustMPPrecursor',
 ])
 
 BO_CHANGED_EXCLUDED = set([
@@ -225,10 +227,6 @@ BUILD_DATA = {
         'build_time': 17,
         'built_from': [],
         },
-    'Baneling': {
-        'build_time': 14,
-        'built_from': [],
-        },
     'Roach': {
         'build_time': 19,
         'built_from': [],
@@ -249,14 +247,6 @@ BUILD_DATA = {
         'build_time': 39,
         'built_from': [],
         },
-    'NydusWorm': {
-        'build_time': 14,  # TODO guess
-        'built_from': ['NydusCanal'],
-        },
-    'NydusCanal': {
-        'build_time': 14,  # TODO guess
-        'built_from': [],
-        },
     'Overlord': {
         'build_time': 18,
         'built_from': [],
@@ -269,131 +259,157 @@ BUILD_DATA = {
         'build_time': 29,
         'built_from': [],
         },
-    'BroodLord': {
-        'build_time': 24,
-        'built_from': [],
-        },
     'Viper': {
         'build_time': 29,
         'built_from': [],
         },
+    'NydusWorm': {  # deprecated
+        'build_time': 14,
+        'built_from': ['NydusCanal'],
+        },
+    'NydusCanal': {
+        'build_time': 14,
+        'built_from': ['NydusNetwork'],
+        },
+    # zerg evolved units
+    'Baneling': {
+        'build_time': 14,
+        'built_from': [],
+        },
+    'BroodLord': {
+        'build_time': 24,
+        'built_from': [],
+        },
+    'Overseer': {
+        'build_time': 12,
+        'built_from': ['Overlord'],
+        },
+    'RavagerCocoon': {
+        'build_time': 0,  # Ravager - egg not itself because it is the start time, normal build time is 9
+        'built_from': ['Roach'],
+        },
+    'LurkerMPEgg': {
+        'build_time': 0,  # Lurker - same logic as above, especially because burrow/unburrow counts, normal build time is 18
+        'built_from': ['Hydralisk'],
+        },
     # zerg upgrades
     'ZergMeleeWeaponsLevel1': {
-        'build_time': 114, # TODO guess
+        'build_time': 114,
         'built_from': ['EvolutionChamber'],
         },
     'ZergMeleeWeaponsLevel2': {
-        'build_time': 136, # TODO guess
+        'build_time': 136,
         'built_from': ['EvolutionChamber'],
         },
     'ZergMeleeWeaponsLevel3': {
-        'build_time': 157, # TODO guess
+        'build_time': 157,
         'built_from': ['EvolutionChamber'],
         },
     'ZergMissileWeaponsLevel1': {
-        'build_time': 114, # TODO guess
+        'build_time': 114,
         'built_from': ['EvolutionChamber'],
         },
     'ZergMissileWeaponsLevel2': {
-        'build_time': 136, # TODO guess
+        'build_time': 136,
         'built_from': ['EvolutionChamber'],
         },
     'ZergMissileWeaponsLevel3': {
-        'build_time': 157, # TODO guess
+        'build_time': 157,
         'built_from': ['EvolutionChamber'],
         },
     'ZergGroundArmorsLevel1': {
-        'build_time': 114, # TODO guess
+        'build_time': 114,
         'built_from': ['EvolutionChamber'],
         },
     'ZergGroundArmorsLevel2': {
-        'build_time': 136, # TODO guess
+        'build_time': 136,
         'built_from': ['EvolutionChamber'],
         },
     'ZergGroundArmorsLevel3': {
-        'build_time': 157, # TODO guess
+        'build_time': 157,
         'built_from': ['EvolutionChamber'],
         },
     'ZergFlyerWeaponsLevel1': {
-        'build_time': 114, # TODO guess
+        'build_time': 114,
         'built_from': ['Spire', 'GreaterSpire'],
         },
     'ZergFlyerWeaponsLevel2': {
-        'build_time': 136, # TODO guess
+        'build_time': 136,
         'built_from': ['Spire', 'GreaterSpire'],
         },
     'ZergFlyerWeaponsLevel3': {
-        'build_time': 157, # TODO guess
+        'build_time': 157,
         'built_from': ['Spire', 'GreaterSpire'],
         },
     'ZergFlyerArmorsLevel1': {
-        'build_time': 114, # TODO guess
+        'build_time': 114,
         'built_from': ['Spire', 'GreaterSpire'],
         },
     'ZergFlyerArmorsLevel2': {
-        'build_time': 136, # TODO guess
+        'build_time': 136,
         'built_from': ['Spire', 'GreaterSpire'],
         },
     'ZergFlyerArmorsLevel3': {
-        'build_time': 157, # TODO guess
+        'build_time': 157,
         'built_from': ['Spire', 'GreaterSpire'],
         },
     'zerglingmovementspeed': {
-        'build_time': 80, # TODO guess
+        'build_time': 79,
         'built_from': ['SpawningPool'],
         },
     'zerglingattackspeed': {
-        'build_time': 94, # TODO guess
+        'build_time': 93,
         'built_from': ['SpawningPool'],
         },
     'CentrificalHooks': {
-        'build_time': 80, # TODO guess
+        'build_time': 79,
         'built_from': ['BanelingNest'],
         },
     'GlialReconstitution': {
-        'build_time': 80, # TODO guess
+        'build_time': 79,
         'built_from': ['RoachWarren'],
         },
     'TunnelingClaws': {
-        'build_time': 80, # TODO guess
+        'build_time': 79,
         'built_from': ['RoachWarren'],
         },
-    'hydraliskspeed': {
-        'build_time': 80,  # Grooved Spines
+    'hydraliskspeed': {  # LotV Muscular Augments
+        'build_time': 71,
         'built_from': ['HydraliskDen'],
         },
-    'HydraliskSpeedUpgrade': {
-        'build_time': 72, # TODO guess  # Muscular Augments
+    'HydraliskSpeedUpgrade': {  # HotS deprecated Muscular Augments
+        'build_time': 71,
         'built_from': ['HydraliskDen'],
         },
     'overlordspeed': {
-        'build_time': 43, # TODO guess
+        'build_time': 43,
         'built_from': ['Hatchery', 'Lair', 'Hive'],
         },
-    'overlordtransport': {
-        'build_time': 94, # TODO guess
+    'overlordtransport': {  # deprecated
+        'build_time': 93,
         'built_from': ['Hatchery', 'Lair', 'Hive'],
         },
     'Burrow': {
-        'build_time': 72, # TODO guess
+        'build_time': 71,
         'built_from': ['Hatchery', 'Lair', 'Hive'],
         },
     'InfestorEnergyUpgrade': {
-        'build_time': 57, # TODO guess
+        'build_time': 57,
         'built_from': ['InfestationPit'],
         },
-    'ChitinousPlating': {
-        'build_time': 80, # TODO guess
-        'built_from': ['UltraliskCavern'],
-        },
-    'LocustLifetimeIncrease': {
-        'build_time': 87, # TODO guess
+    'LocustLifetimeIncrease': {  # deprecated
+        'build_time': 87,
         'built_from': ['InfestationPit'],
         },
     'NeuralParasite': {
-        'build_time': 80,
+        'build_time': 79,
         'built_from': ['InfestationPit'],
         },
+    'ChitinousPlating': {
+        'build_time': 79,
+        'built_from': ['UltraliskCavern'],
+        },
+
     # terran upgrades
     'TerranInfantryWeaponsLevel1': {
         'build_time': 114,
@@ -696,52 +712,40 @@ BUILD_DATA = {
         },
     # unit change buildings
     'Lair': {
-        'build_time': 57, # TODO guess
+        'build_time': 57,
         'built_from': ['Hatchery'],
         },
     'Hive': {
-        'build_time': 72, # TODO guess
+        'build_time': 71,
         'built_from': ['Lair'],
         },
+    'LurkerDenMP': {
+        'build_time': 86,
+        'built_from': ['HydraliskDen'],
+        },
     'GreaterSpire': {
-        'build_time': 72, # TODO guess
+        'build_time': 71,
         'built_from': ['Spire'],
         },
     'OrbitalCommand': {
-        'build_time': 25, # TODO guess
+        'build_time': 25,
         'built_from': ['CommandCenter'],
         },
     'PlanetaryFortress': {
-        'build_time': 36, # TODO guess
+        'build_time': 36,
         'built_from': ['CommandCenter'],
         },
-    'Overseer': {
-        'build_time': 12, # TODO guess
-        'built_from': ['Overlord'],
-        },
-    # LotV Alpha
+    # unofficial LotV Alpha only
     'HyperflightRotors': {
         'build_time': 93,
         'built_from': ['TechLab'],
         },
     'FlyingLocusts': {
-        'build_time': 87,  # TODO guess, check name/time
+        'build_time': 87,
         'built_from': ['InfestationPit'],
         },
-    'RavagerCocoon': {
-        'build_time': 0,  # Ravager - egg not itself because it is the start time, normal build time is 9
-        'built_from': ['Roach'],
-        },
-    'LurkerMPEgg': {
-        'build_time': 0,  # Lurker - same logic as above, especially because burrow/unburrow counts, normal build time is 33
-        'built_from': ['Hydralisk'],
-        },
-    'LurkerDenMP': {
-        'build_time': 72,  # TODO check time
-        'built_from': ['HydraliskDen'],
-        },
     'LurkerRange': {
-        'build_time': 72,  # TODO check time
+        'build_time': 72,
         'built_from': ['HydraliskDen', 'LurkerDenMP'],
         },
     'CycloneLockOnRangeUpgrade': {
@@ -800,10 +804,10 @@ TRACKED_ABILITIES = set([
     'Abduct',
     'TemporalField',
     'Envision',
+    'RavagerCorrosiveBile',
     # LotV Beta
     'LockOn',  # TODO check name
     'TacticalJump',  # TODO check name
-    'CorrosiveBile',  # TODO check name
     'CausticSpray',  # TODO check name
     'SpawnLocusts',  # TODO check name
     'Swoop',  # TODO check name
