@@ -15,6 +15,9 @@ BO_EXCLUDED = set([
     'LocustMP',
     'LocustMPFlyer',  # LotV Alpha Mod
     'Changeling',
+    'ChangelingMarine',
+    'ChangelingZealot',
+    'ChangelingZergling',
     'InfestedTerran',
     'Overseer',
     'Broodling',
@@ -50,6 +53,11 @@ BO_CHANGED_EXCLUDED = set([
     'Zergling',  # generated when Banelings spawn
 ])
 
+BO_UPGRADES_EXCLUDED = set([
+    'SprayTerran',
+    'SprayProtoss',
+    'SprayZerg',
+])
 
 BUILD_DATA = {
     # terran units

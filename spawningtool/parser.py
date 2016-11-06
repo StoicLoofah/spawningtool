@@ -284,6 +284,9 @@ def upgrade_event(builds, event, parsed_data, constants, chronoboosts, is_lotv_c
         return
     unit_name = event.upgrade_type_name
 
+    if unit_name in constants.BO_UPGRADES_EXCLUDED:
+        return
+
     frame, unit_name, is_chronoboosted = adjust_build_time(
             event, player, unit_name, constants, chronoboosts, is_lotv_chronoboosts)
 
