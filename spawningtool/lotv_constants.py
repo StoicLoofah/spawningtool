@@ -381,7 +381,7 @@ BUILD_DATA = {
         'build_time': 79,
         'built_from': ['RoachWarren'],
         },
-    'hydraliskspeed': {  # LotV Muscular Augments
+    'hydraliskspeed': {  # LotV Muscular Augments, deprecated 3.8
         'build_time': 71,
         'built_from': ['HydraliskDen'],
         },
@@ -389,6 +389,14 @@ BUILD_DATA = {
         'build_time': 71,
         'built_from': ['HydraliskDen'],
         },
+    'EvolveGroovedSpines': {  # added 3.8
+        'build_time': 71,
+        'built_from': ['HydraliskDen'],
+    },
+    'EvolveMuscularAugments': {  # added 3.8
+        'build_time': 71,
+        'built_from': ['HydraliskDen'],
+    },
     'overlordspeed': {
         'build_time': 43,
         'built_from': ['Hatchery', 'Lair', 'Hive'],
@@ -580,7 +588,11 @@ BUILD_DATA = {
         'build_time': 57,
         'built_from': ['TechLab'],
         },
-    'RavenDamageUpgrade': {  # Explosive Shrapnel Shells
+    'RavenDamageUpgrade': {  # Explosive Shrapnel Shells, deprecated 3.8
+        'build_time': 79,
+        'built_from': ['TechLab'],
+        },
+    'RavenRecalibratedExplosives': {
         'build_time': 79,
         'built_from': ['TechLab'],
         },
@@ -597,7 +609,7 @@ BUILD_DATA = {
         'built_from': ['TechLab'],
         },
     'BansheeSpeed': {  # Hyperflight Rotors
-        'build_time': 93,
+        'build_time': 121,  # was 93 before 3.8.0
         'built_from': ['TechLab'],
         },
     'LiberatorAGRangeUpgrade': {  # Advanced Ballistics
@@ -609,7 +621,7 @@ BUILD_DATA = {
         'build_time': 57,
         'built_from': ['FusionCore'],
         },
-    'BattlecruiserEnableSpecializations': {
+    'BattlecruiserEnableSpecializations': {  # Yamato Cannon
         'build_time': 43,
         'built_from': ['FusionCore'],
         },
@@ -718,6 +730,10 @@ BUILD_DATA = {
         'build_time': 100,
         'built_from': ['TwilightCouncil'],
         },
+    'DarkTemplarBlinkUpgrade': {  # Shadow Stride
+        'build_time': 121,
+        'built_from': ['DarkShrine'],
+        },
     # unit change buildings
     'Lair': {
         'build_time': 57,
@@ -786,7 +802,7 @@ TRACKED_ABILITIES = set([
     'GuardianShield',
     'MassRecallMothership',
     'MothershipMassRecall',
-    'MothershipCorePurifyNexus',
+    'MothershipCorePurifyNexus',  # Photon Overcharge on Pylons
     'MassRecallMothershipCore',
     'InfestorNeuralParasite',
     'BuildPointDefenseDrone',
@@ -814,17 +830,21 @@ TRACKED_ABILITIES = set([
     'Envision',
     'RavagerCorrosiveBile',
     # LotV Beta
-    'LockOn',  # TODO check name
-    'TacticalJump',  # TODO check name
-    'CausticSpray',  # TODO check name
-    'SpawnLocusts',  # TODO check name
-    'Swoop',  # TODO check name
-    'ParasiticBomb',  # TODO check name
-    'PsionicTransfer',  # TODO check name
-    'PurificationNova',  # TODO check name
-    'StasisWard',  # TODO check name
-    'Barrier',  # TODO check name
-    'Disintegration',  # TODO check name
-    'ReleaseInterceptors',  # TODO check name
-    # TODO reaper KD8Charge ability?
+    'LockOn',  # removed in 3.8
+    'ReleaseInterceptors',  # removed in 3.8
+    'PurificationNova',  # Deprecated?
+    'Disintegration',  # Deprecated?
     ])
+
+# these abilities are not named in the replay and cannot be easily extracted
+# Reaper KD8Charge
+# Battlecruiser Tactical Jump
+# Adept PsionicTransfer
+# Oracle StasisWard
+# Immortal Barrier
+# TempestDisruptionBlast
+# DarkTemplar ShadowStride
+# Corruptor CausticSpray
+# SwarmHost SpawnLocusts
+# Locust Swoop
+# Viper ParasiticBomb
