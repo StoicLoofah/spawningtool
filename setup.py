@@ -1,10 +1,10 @@
 from setuptools import find_packages, setup
 
-__version__ = "0.2.1"
+__version__ = "1.0.0"
 
 setup(
     name="spawningtool",
-    description="Build order parser for SC2 replays",
+    description="Build order parser for StarCraft 2 replays",
     version=__version__,
     url="https://github.com/StoicLoofah/spawningtool",
     author="Kevin Leung",
@@ -27,10 +27,7 @@ setup(
     },
     install_requires=[
         'argparse',
-        'sc2reader',
-    ],
-    dependency_links=[
-        'http://github.com/StoicLoofah/sc2reader/tarball/lotv#egg=sc2reader',
+        'sc2reader==0.8.0',
     ],
     packages=find_packages(),
 )
