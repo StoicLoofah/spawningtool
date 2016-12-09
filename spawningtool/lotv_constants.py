@@ -579,6 +579,10 @@ BUILD_DATA = {
         'build_time': 79,
         'built_from': ['TechLab'],
         },
+    'MagFieldLaunchers': {
+        'build_time': 79,
+        'built_from': ['TechLab'],
+    },
     # starport tech lab
     'MedivacCaduceusReactor': {  # deprecated
         'build_time': 57,
