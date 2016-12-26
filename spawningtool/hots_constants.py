@@ -40,6 +40,8 @@ BO_CHANGED_EXCLUDED = set([
     'Zergling',  # generated when Banelings spawn
 ])
 
+BO_UPGRADES_EXCLUDED = set()
+
 BUILD_DATA = {
     # terran units
     'SCV': {
