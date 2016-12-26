@@ -36,27 +36,27 @@ class SpawningToolTestCase(unittest.TestCase):
 
 class ParseReplayTest(SpawningToolTestCase):
 
-    def test_result(self):
+    def test_hots_replay(self):
         """
         testing a valid replay
         """
-        self.results = spawningtool.parser.parse_replay("replays/LiquidTLO vs Thorzain.SC2Replay")
+        results = spawningtool.parser.parse_replay("replays/LiquidTLO vs Thorzain.SC2Replay")
         with open('tests/tlo_v_thorzain.json', 'r') as expected_results_file:
-            self.expected_results = json.load(expected_results_file)
+            expected_results = json.load(expected_results_file)
 
-        self.assertDictsEqual(self.results, self.expected_results)
+        self.assertDictsEqual(results, expected_results)
 
-    def test_gameheart(self):
+    def test_gameheart_replay(self):
         """
         testing a gameheart replay
         """
-        self.results = spawningtool.parser.parse_replay("replays/gameheart.SC2Replay")
+        results = spawningtool.parser.parse_replay("replays/gameheart.SC2Replay")
         with open('tests/gameheart.json', 'r') as expected_results_file:
-            self.expected_results = json.load(expected_results_file)
+            expected_results = json.load(expected_results_file)
 
-        self.assertDictsEqual(self.results, self.expected_results)
+        self.assertDictsEqual(results, expected_results)
 
-    def test_old_result(self):
+    def test_old_replay(self):
         """
         parsing a file that doesn't have tracker events
         """
@@ -69,6 +69,12 @@ class ParseReplayTest(SpawningToolTestCase):
         """
         self.assertRaises(spawningtool.exception.ReadError,
                 spawningtool.parser.parse_replay, "tests/tlo_v_thorzain.json")
+
+    def test_patch_380(self):
+        """
+        Test 3.8.0 patch
+        """
+        spawningtool.parser.parse_replay("replays/patch_380_protoss.SC2Replay")
 
 
 if __name__ == '__main__':
