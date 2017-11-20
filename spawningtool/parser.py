@@ -12,6 +12,10 @@ import sc2reader
 from spawningtool import hots_constants, lotv_constants
 from spawningtool.exception import CutoffTimeError, ReplayFormatError, ReadError
 
+CHRONOBOOST_HOTS = 1  # 20 second boost by 50%
+CHRONOBOOST_LOTV = 2  # persistent boost on a building
+CHRONOBOOST_40 = 3  # 10 second boost by 100%
+
 
 DATA_NOT_SUPPORTED = (
     'This replay version does not support the data needed for the build order'
@@ -187,7 +191,7 @@ def get_supply(supply, frame):
     return supply[start][1]
 
 
-def unit_born_event(builds, event, parsed_data, constants, chronoboosts, is_lotv_chronoboosts):
+def unit_born_event(builds, event, parsed_data, constants, chronoboosts, chronoboost_version):
     """
     need to reverse the time
     if the unit morphs, it's preferable to use the unit_type_name since it's what it was
@@ -207,7 +211,7 @@ def unit_born_event(builds, event, parsed_data, constants, chronoboosts, is_lotv
         unit_name = '(None)'
 
     frame, unit_name, is_chronoboosted = adjust_build_time(
-            event, player, unit_name, constants, chronoboosts, is_lotv_chronoboosts)
+            event, player, unit_name, constants, chronoboosts, chronoboost_version)
 
     # for safety to ignore observer units from GH and such
     if not player in parsed_data['players']:
@@ -236,7 +240,7 @@ def unit_init_event(builds, event, parsed_data, constants):
     builds[player].add_event(BuildEvent(unit_name, frame, constants.FRAMES_PER_SECOND, supply,
         _get_clock_position(parsed_data, event)))
 
-def adjust_build_time(event, player, unit_name, constants, chronoboosts, is_lotv_chronoboosts):
+def adjust_build_time(event, player, unit_name, constants, chronoboosts, chronoboost_version):
     """
     chronoboosts is arranged in reverse order.
 
@@ -263,10 +267,12 @@ def adjust_build_time(event, player, unit_name, constants, chronoboosts, is_lotv
                 for cur_frame_start, cur_frame_end in chronoboosts[player][building]:
                     if cur_frame_end > projected_start and cur_frame_start < frame:
                         overlap = min(cur_frame_end, frame) - max(cur_frame_start, projected_start)
-                        if is_lotv_chronoboosts:
+                        if chronoboost_version == CHRONOBOOST_LOTV:
                             reduction = int(overlap * .15)  # patch reduced effectiveness
-                        else:
-                            reduction = overlap // 2
+                        elif chronoboost_version == CHRONOBOOST_HOTS:
+                            reduction = int(overlap * .5)
+                        elif chronoboost_version == CHRONOBOOST_40:
+                            reduction = int(overlap * 1)
                         projected_start += reduction
                         chronoboosted = True
 
@@ -275,7 +281,7 @@ def adjust_build_time(event, player, unit_name, constants, chronoboosts, is_lotv
 
     return projected_start, unit_name, chronoboosted
 
-def upgrade_event(builds, event, parsed_data, constants, chronoboosts, is_lotv_chronoboosts):
+def upgrade_event(builds, event, parsed_data, constants, chronoboosts, chronoboost_version):
     """
     need to reverse the time
     """
@@ -288,7 +294,7 @@ def upgrade_event(builds, event, parsed_data, constants, chronoboosts, is_lotv_c
         return
 
     frame, unit_name, is_chronoboosted = adjust_build_time(
-            event, player, unit_name, constants, chronoboosts, is_lotv_chronoboosts)
+            event, player, unit_name, constants, chronoboosts, chronoboost_version)
 
     supply = get_supply(parsed_data['players'][player]['supply'], frame)
     builds[player].add_event(BuildEvent(
@@ -337,7 +343,7 @@ def died_event(units_lost, event, parsed_data, constants):
         _get_clock_position(parsed_data, event)))
 
 
-def ability_event(abilities, event, constants, raw_chronoboosts, is_lotv_chronoboosts):
+def ability_event(abilities, event, constants, raw_chronoboosts, chronoboost_version):
     """
     Create events around abilities being casted e.g. ChronoBoost, Snipe
     """
@@ -349,9 +355,9 @@ def ability_event(abilities, event, constants, raw_chronoboosts, is_lotv_chronob
 
     # this is imprecise; we cannot distinguish WHICH of the units of the type it came from
     if ability_name == 'ChronoBoost' and event.target:
-        if is_lotv_chronoboosts:
+        if chronoboost_version == CHRONOBOOST_LOTV:
             raw_chronoboosts[player].append([event.target.name, event.frame])
-        else:
+        elif chronoboost_version in (CHRONOBOOST_HOTS, CHRONOBOOST_40):
             if not event.target.name in raw_chronoboosts[player]:
                 raw_chronoboosts[player][event.target.name] = []
             raw_chronoboosts[player][event.target.name].append(event.frame)
@@ -404,7 +410,7 @@ def process_lotv_chronoboosts(raw_chronoboosts, end_frame):
     return chronoboosts
 
 
-def process_hots_chronoboosts(raw_chronoboosts):
+def process_hots_chronoboosts(raw_chronoboosts, chronoboost_version):
     """
     convert raw chronoboosts to a set of frame ranges over which the chronoboost is applied
     to that building. This should be easier to backtrack build times
@@ -413,7 +419,10 @@ def process_hots_chronoboosts(raw_chronoboosts):
     again or if all of the buildings of the same type are chronoboosted
     """
     chronoboosts = {}
-    chronoboost_duration = 16 * 20  # this is true in HotS and LotV
+    if chronoboost_version == CHRONOBOOST_HOTS:
+        chronoboost_duration = 16 * 20  # this is true in HotS and LotV
+    elif chronoboost_version == CHRONOBOOST_40:
+        chronoboost_duration = 16 * 10  # this is true in HotS and LotV
 
     for player, all_boosts in raw_chronoboosts.items():
         chronoboosts[player] = {}
@@ -463,11 +472,17 @@ def parse_events(replay, cutoff_time, parsed_data, cache_path=None, include_map_
     units_lost = dict((key, GameTimeline()) for key in replay.player.keys())
     abilities = dict((key, GameTimeline()) for key in replay.player.keys())
 
-    is_lotv_chronoboosts = replay.expansion == 'LotV' and replay.unix_timestamp > 1441238400
-    if is_lotv_chronoboosts:
+    if replay.expansion == 'LotV' and replay.unix_timestamp > 1510617600:
+        chronoboost_version = CHRONOBOOST_40
+    elif replay.expansion == 'LotV' and replay.unix_timestamp > 1441238400:
+        chronoboost_version = CHRONOBOOST_LOTV
+    else:
+        chronoboost_version = CHRONOBOOST_HOTS
+
+    if chronoboost_version == CHRONOBOOST_LOTV:
         # {pid_1: [[building_1, frame_1], [building_2, frame_2], ..], ..}
         raw_chronoboosts = {key: [] for key in replay.player.keys()}
-    else:
+    elif chronoboost_version in [CHRONOBOOST_40, CHRONOBOOST_HOTS]:
         # {pid_1: {'Building': [frame_1, frame_2, ..], ..}, ..}
         raw_chronoboosts = {key: {} for key in replay.player.keys()}
 
@@ -479,12 +494,12 @@ def parse_events(replay, cutoff_time, parsed_data, cache_path=None, include_map_
         ])
     for event in replay.game_events:
         if event.name in legit_ability_event_types:
-            ability_event(abilities, event, constants, raw_chronoboosts, is_lotv_chronoboosts)
+            ability_event(abilities, event, constants, raw_chronoboosts, chronoboost_version)
 
-    if is_lotv_chronoboosts:
+    if chronoboost_version == CHRONOBOOST_LOTV:
         chronoboosts = process_lotv_chronoboosts(raw_chronoboosts, replay.frames)
-    else:
-        chronoboosts = process_hots_chronoboosts(raw_chronoboosts)
+    elif chronoboost_version in (CHRONOBOOST_HOTS, CHRONOBOOST_40):
+        chronoboosts = process_hots_chronoboosts(raw_chronoboosts, chronoboost_version)
 
     for event in replay.tracker_events:
         if event.frame == 0:
@@ -507,11 +522,11 @@ def parse_events(replay, cutoff_time, parsed_data, cache_path=None, include_map_
                 parsed_data['expansion'] = 'LotV'
                 constants = lotv_constants
         elif event.name == 'UnitBornEvent':
-            unit_born_event(builds, event, parsed_data, constants, chronoboosts, is_lotv_chronoboosts)
+            unit_born_event(builds, event, parsed_data, constants, chronoboosts, chronoboost_version)
         elif event.name == 'UnitInitEvent':
             unit_init_event(builds, event, parsed_data, constants)
         elif event.name == 'UpgradeCompleteEvent':
-            upgrade_event(builds, event, parsed_data, constants, chronoboosts, is_lotv_chronoboosts)
+            upgrade_event(builds, event, parsed_data, constants, chronoboosts, chronoboost_version)
         elif event.name == 'UnitTypeChangeEvent':
             change_event(builds, event, parsed_data, constants)
         elif event.name == 'UnitDiedEvent':
