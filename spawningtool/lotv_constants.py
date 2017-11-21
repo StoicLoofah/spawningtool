@@ -855,6 +855,15 @@ TRACKED_ABILITIES = set([
     'TemporalField',
     'Envision',
     'RavagerCorrosiveBile',
+    # StarCraft 3.8
+    'KD8Charge',  # Reaper - KD8 Charge
+    'Hyperjump',  # BC - Tactical Jump
+    'AdeptPhaseShift',  # Adept - Psionic Transfer
+    #  'DarkTemplarBlink',  # DT - Shadow Stride
+    'OracleStasisTrap',  # Oracle - Stasis Ward
+    'CausticSpray',  # Corruptor - Caustic Spray
+    'SpawnLocustsTargeted',  # Swarm Host - Spawn Locusts
+    'LocustMPFlyingSwoop',  # Locust - Swoop
     # StarCraft 4.0
     'RavenShredderMissile',  # Anti-Armor Missile
     'RavenScramblerMissile',  # Interference Matrix
@@ -869,15 +878,7 @@ TRACKED_ABILITIES = set([
     'Disintegration',  # Deprecated?
     ])
 
-# these abilities are not named in the replay and cannot be easily extracted
-# Reaper KD8Charge
-# Battlecruiser Tactical Jump
-# Adept PsionicTransfer
-# Oracle StasisWard
+# these abilities have not been named to be extracted
 # Immortal Barrier
 # TempestDisruptionBlast
-# DarkTemplar ShadowStride
-# Corruptor CausticSpray
-# SwarmHost SpawnLocusts
-# Locust Swoop
 # Viper ParasiticBomb
