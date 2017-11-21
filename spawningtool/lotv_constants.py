@@ -430,6 +430,10 @@ BUILD_DATA = {
         'build_time': 79,
         'built_from': ['UltraliskCavern'],
         },
+    'DiggingClaws': {
+        'build_time': 54,
+        'build_from': ['LurkerDenMP'],
+    },
 
     # terran upgrades
     'TerranInfantryWeaponsLevel1': {
@@ -877,3 +881,4 @@ TRACKED_ABILITIES = set([
 # Mass Recall
 # Strategic Recall
 # Surveillance Mode
+# Oversight
