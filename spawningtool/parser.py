@@ -354,7 +354,7 @@ def ability_event(abilities, event, constants, raw_chronoboosts, chronoboost_ver
         return
 
     # this is imprecise; we cannot distinguish WHICH of the units of the type it came from
-    if ability_name == 'ChronoBoost' and event.target:
+    if ability_name in ('ChronoBoost', 'ChronoBoostEnergyCost') and event.target:
         if chronoboost_version == CHRONOBOOST_LOTV:
             raw_chronoboosts[player].append([event.target.name, event.frame])
         elif chronoboost_version in (CHRONOBOOST_HOTS, CHRONOBOOST_40):
@@ -422,7 +422,7 @@ def process_hots_chronoboosts(raw_chronoboosts, chronoboost_version):
     if chronoboost_version == CHRONOBOOST_HOTS:
         chronoboost_duration = 16 * 20  # this is true in HotS and LotV
     elif chronoboost_version == CHRONOBOOST_40:
-        chronoboost_duration = 16 * 10  # this is true in HotS and LotV
+        chronoboost_duration = 22.4 * 10  # this is true in HotS and LotV
 
     for player, all_boosts in raw_chronoboosts.items():
         chronoboosts[player] = {}
@@ -466,7 +466,7 @@ def parse_events(replay, cutoff_time, parsed_data, cache_path=None, include_map_
         # primarily because the build times are off, but I don't want to deal with it
         raise ReplayFormatError(('spawningtool currently only supports HotS.'), parsed_data)
 
-    constants = hots_constants
+    constants = lotv_constants if replay.expansion == 'LotV' else hots_constants
 
     builds = dict((key, GameTimeline()) for key in replay.player.keys())
     units_lost = dict((key, GameTimeline()) for key in replay.player.keys())

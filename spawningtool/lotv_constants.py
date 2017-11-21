@@ -825,7 +825,7 @@ TRACKED_ABILITIES = set([
     'FungalGrowth',
     'GravitonBeam',
     'GuardianShield',
-    'MassRecallMothership',
+    'MassRecallMothership',  # Strategic Recall
     'MothershipMassRecall',
     'MothershipCorePurifyNexus',  # Photon Overcharge on Pylons
     'MassRecallMothershipCore',
@@ -848,12 +848,20 @@ TRACKED_ABILITIES = set([
     'SpawnLarva',
     'ExtraSupplies',
     'ChronoBoost',
+    'ChronoBoostEnergyCost',
     'QueenTransfusion',
     'YamatoGun',
     'Abduct',
     'TemporalField',
     'Envision',
     'RavagerCorrosiveBile',
+    # StarCraft 4.0
+    'RavenShredderMissile',  # Anti-Armor Missile
+    'RavenScramblerMissile',  # Interference Matrix
+    'RavenRepairDrone',  # Repair Drone
+    'ObserverMorphtoObserverSiege',  # Surveillance Mode
+    'NexusMassRecall',  # new Mass Recall
+    'OverseerMorphtoOverseerSiegeMode',  # Oversight
     # LotV Beta
     'LockOn',  # removed in 3.8
     'ReleaseInterceptors',  # removed in 3.8
@@ -873,12 +881,3 @@ TRACKED_ABILITIES = set([
 # SwarmHost SpawnLocusts
 # Locust Swoop
 # Viper ParasiticBomb
-
-# 4.0 stuff
-# Repair Drone is only a UnitBorn, not an AbilityEvent
-# Interference Matrix
-# Anti-Armor Missile
-# Mass Recall
-# Strategic Recall
-# Surveillance Mode
-# Oversight
