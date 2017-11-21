@@ -171,6 +171,10 @@ BUILD_DATA = {
         'build_time': 21,
         'built_from': ['Nexus'],
         },
+    'Mothership': {
+        'build_time': 114,
+        'built_from': ['Nexus'],
+        },
     'HighTemplar': {
         'build_time': 39,
         'built_from': ['Gateway', 'WarpGate'],
@@ -865,6 +869,11 @@ TRACKED_ABILITIES = set([
 # SwarmHost SpawnLocusts
 # Locust Swoop
 # Viper ParasiticBomb
+
+# 4.0 stuff
 # Repair Drone is only a UnitBorn, not an AbilityEvent
 # Interference Matrix
 # Anti-Armor Missile
+# Mass Recall
+# Strategic Recall
+# Surveillance Mode
