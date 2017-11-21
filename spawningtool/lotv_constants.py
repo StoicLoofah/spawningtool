@@ -40,6 +40,7 @@ BO_EXCLUDED = set([
     'DisruptorPhased',  # Disruptor shots
     'ParasiticBombDummy',
     'LocustMPPrecursor',
+    'RavenRepairDrone',
 ])
 
 BO_CHANGED_EXCLUDED = set([
@@ -583,6 +584,14 @@ BUILD_DATA = {
         'build_time': 79,
         'built_from': ['TechLab'],
     },
+    'CycloneRapidFireLaunchers': {
+        'build_time': 79,
+        'built_from': ['TechLab'],
+    },
+    'SmartServos': {
+        'build_time': 79,
+        'built_from': ['TechLab'],
+    },
     # starport tech lab
     'MedivacCaduceusReactor': {  # deprecated
         'build_time': 57,
@@ -620,6 +629,10 @@ BUILD_DATA = {
         'build_time': 79,
         'built_from': ['TechLab'],
         },
+    'RavenEnhancedMunitions': {
+        'build_time': 79,
+        'built_from': ['TechLab'],
+    },
     # fusion core
     'BattlecruiserBehemothReactor': {
         'build_time': 57,
@@ -852,3 +865,6 @@ TRACKED_ABILITIES = set([
 # SwarmHost SpawnLocusts
 # Locust Swoop
 # Viper ParasiticBomb
+# Repair Drone is only a UnitBorn, not an AbilityEvent
+# Interference Matrix
+# Anti-Armor Missile
