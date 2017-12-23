@@ -95,7 +95,7 @@ BUILD_DATA = {
         'built_from': ['Factory'],
         },
     'WidowMine': {
-        'build_time': 29,
+        'build_time': 21,
         'built_from': ['Factory'],
         },
     'SiegeTank': {
@@ -216,7 +216,7 @@ BUILD_DATA = {
         'built_from': ['Stargate'],
         },
     'Oracle': {
-        'build_time': 36,
+        'build_time': 37,
         'built_from': ['Stargate'],
         },
     'Tempest': {

@@ -472,11 +472,14 @@ def parse_events(replay, cutoff_time, parsed_data, cache_path=None, include_map_
     units_lost = dict((key, GameTimeline()) for key in replay.player.keys())
     abilities = dict((key, GameTimeline()) for key in replay.player.keys())
 
-    if replay.expansion == 'LotV' and replay.unix_timestamp > 1510617600:
+    if replay.expansion == 'LotV' and 1513641600 > replay.unix_timestamp > 1510617600:
+        # 100% for 10 seconds
         chronoboost_version = CHRONOBOOST_40
-    elif replay.expansion == 'LotV' and replay.unix_timestamp > 1441238400:
+    elif replay.expansion == 'LotV' and 1510617600 > replay.unix_timestamp > 1441238400:
+        # Continuous
         chronoboost_version = CHRONOBOOST_LOTV
     else:
+        # 50% for 20 seconds
         chronoboost_version = CHRONOBOOST_HOTS
 
     if chronoboost_version == CHRONOBOOST_LOTV:
