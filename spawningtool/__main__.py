@@ -48,15 +48,19 @@ def print_abilities(result):
         print('')
 
 
-def print_results(result):
+def print_results(result, args):
     """
     Print the results of the build order
     """
+    print_all = not args.build and not args.units_lost and not args.abilities
     print(result['map'])
     print(result['build'])
-    print_builds(result)
-    print_units_lost(result)
-    print_abilities(result)
+    if print_all or args.build:
+        print_builds(result)
+    if print_all or args.units_lost:
+        print_units_lost(result)
+    if print_all or args.abilities:
+        print_abilities(result)
 
 
 def main():
@@ -74,7 +78,16 @@ def main():
     parser.add_argument(
         '--map-details', help='Include map details and positions', action="store_true"
     )
-
+    # print arguments
+    parser.add_argument(
+        '--build', help='Print out the build orders', action="store_true"
+    )
+    parser.add_argument(
+        '--units-lost', help='Print out the units lost', action="store_true"
+    )
+    parser.add_argument(
+        '--abilities', help='Print out the abilities', action="store_true"
+    )
 
     args = parser.parse_args()
     try:
@@ -89,7 +102,7 @@ def main():
         print(error.message)
         print(error.parsed_data)
     else:
-        print_results(result)
+        print_results(result, args)
 
 
 if __name__ == '__main__':
