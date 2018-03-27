@@ -41,6 +41,17 @@ BO_EXCLUDED = set([
     'ParasiticBombDummy',
     'LocustMPPrecursor',
     'RavenRepairDrone',
+    # Co-op
+    # Kerrigan
+    'KerriganReviveCocoon',
+    'KerriganVoidCoopEconDrop1',
+    'KerriganVoidCoopEconDrop2',
+    'KerriganVoidCoopEconDrop3',
+    'KerriganVoidCoopEconDrop4',
+    'KerriganVoidCoopEconDrop5',
+    # Artanis
+    'SOAPylonPowerAllyUnit',
+    'SOAPylonPowerUnit',
 ])
 
 BO_CHANGED_EXCLUDED = set([
@@ -58,6 +69,8 @@ BO_UPGRADES_EXCLUDED = set([
     'SprayTerran',
     'SprayProtoss',
     'SprayZerg',
+    # Co-op
+    'GameTimeGreaterthan5Seconds',
 ])
 
 BUILD_DATA = {
@@ -804,6 +817,41 @@ BUILD_DATA = {
     'CycloneAirUpgrade': {
         'build_time': 79,
         'built_from': ['TechLab'],
+    },
+    # Co-op data
+    # Kerrigan
+    'VoidCoopHeroicFortitude': {  # Heroic Fortitude
+        'build_time': 60,
+        'built_from': ['EvolutionChamber'],
+    },
+    'HotSZerglingHealth': {  # Hardened Carapace
+        'build_time': 90,
+        'built_from': ['SpawningPool'],
+    },
+    'QueenCoop': {
+        'build_time': 36,  # TODO confirm
+        'built_from': ['Hatchery', 'Lair', 'Hive'],
+    },
+    # Artanis
+    'ZealotResearchWhirlwind': {  # Whirlwind
+        'build_time': 90,
+        'built_from': ['TwilightCouncil'],
+    },
+    'StalkerResearchDragoonRange': {  # Singularity Charge
+        'build_time': 60,
+        'built_from': ['TwilightCouncil'],
+    },
+    'StalkerResearchDragoonHealth': {  # Trillic Compresion Mesh
+        'build_time': 90,
+        'built_from': ['TwilightCouncil'],
+    },
+    'HighTemplarKhaydarinAmulet': {  # Khaydarin Amulet
+        'build_time': 120,
+        'built_from': ['TemplarArchives'],
+    },
+    'HealingPsionicStorm': {  # Plasma Surge
+        'build_time': 90,
+        'built_from': ['TemplarArchives'],
     },
 }
 
