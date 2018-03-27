@@ -169,7 +169,7 @@ def get_protocol(base_build):
 
 def get_supply(supply, frame):
     """
-    supply is a list of [FRAME, SUPPLY] lists
+    supply is a list of [FRAME, SUPPLY] lists.
     use binary search to find the supply at or just before the frame provided
     """
     start = 0
@@ -193,8 +193,9 @@ def get_supply(supply, frame):
 
 def unit_born_event(builds, event, parsed_data, constants, chronoboosts, chronoboost_version):
     """
-    need to reverse the time
-    if the unit morphs, it's preferable to use the unit_type_name since it's what it was
+    unit_born is when the unit is actually created, so we subtract the unit build time
+    to get when it was started.
+    If the unit morphs, it's preferable to use the unit_type_name since it's what it was
     actually born as. sc2reader does, however, provide some nice normalization, so
     swap the display name as necessary
     """
@@ -207,11 +208,14 @@ def unit_born_event(builds, event, parsed_data, constants, chronoboosts, chronob
         unit_name = event.unit.name
         if unit_name in constants.BO_EXCLUDED:
             return
-    if unit_name is None:
-        unit_name = '(None)'
 
-    frame, unit_name, is_chronoboosted = adjust_build_time(
-            event, player, unit_name, constants, chronoboosts, chronoboost_version)
+    if unit_name is None:
+        unit_name = event.unit_type_name + ' (unit_born data missing)'
+        frame = event.frame
+        is_chronoboosted = False
+    else:
+        frame, unit_name, is_chronoboosted = adjust_build_time(
+                event, player, unit_name, constants, chronoboosts, chronoboost_version)
 
     # for safety to ignore observer units from GH and such
     if not player in parsed_data['players']:
@@ -247,13 +251,10 @@ def adjust_build_time(event, player, unit_name, constants, chronoboosts, chronob
     This is only an approximation. The edge case behavior isn't perfect (particularly around
     chronoboosts starting before the the guessed start time). We also cannot distinguish which
     building exactly gets boosted. Even so, this is better than no tracking at all
-
-    This is built with the HotS implementation of chronoboost and has not been adjusted
-    for LotV yet
     """
     frame = event.frame
     if not unit_name in constants.BUILD_DATA:
-        unit_name += ' (Error on upgrade time)'
+        unit_name += ' (Error on build time)'
         return frame, unit_name, False
 
     cur_build_data = constants.BUILD_DATA[unit_name]
@@ -293,8 +294,13 @@ def upgrade_event(builds, event, parsed_data, constants, chronoboosts, chronoboo
     if unit_name in constants.BO_UPGRADES_EXCLUDED:
         return
 
-    frame, unit_name, is_chronoboosted = adjust_build_time(
-            event, player, unit_name, constants, chronoboosts, chronoboost_version)
+    if unit_name in constants.BUILD_DATA:
+        frame, unit_name, is_chronoboosted = adjust_build_time(
+                event, player, unit_name, constants, chronoboosts, chronoboost_version)
+    else:
+        unit_name += ' (upgrade missing)'
+        frame = event.frame
+        is_chronoboosted = False
 
     supply = get_supply(parsed_data['players'][player]['supply'], frame)
     builds[player].add_event(BuildEvent(
@@ -556,10 +562,10 @@ def parse_map_details(replay, parsed_data):
 
 def parse_replay(replay_file, cutoff_time=None, cache_dir=None, include_map_details=False):
     """
-    replay_file can either be a path to a file or a file-like object
-    Parse replay for build order related events
-    cutoff_time determines a point at which we stop processing the replay
-    cache_dir setups a folder where results are stored for the future
+    replay_file can either be a path to a file or a file-like object.
+    Parse replay for build order related events.
+    cutoff_time determines a point at which we stop processing the replay.
+    cache_dir setups a folder where results are stored for the future.
     """
 
     cache_path = None
