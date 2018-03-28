@@ -49,9 +49,15 @@ BO_EXCLUDED = set([
     'KerriganVoidCoopEconDrop3',
     'KerriganVoidCoopEconDrop4',
     'KerriganVoidCoopEconDrop5',
+    'NydusNetworkAlly',
+    'NydusCanalAlly',
     # Artanis
     'SOAPylonPowerAllyUnit',
     'SOAPylonPowerUnit',
+    # Karax
+    'CarrierRepairDrone',
+    'SOAThermalLanceTargeter',
+    'SOAPurifierBeamUnit',
 ])
 
 BO_CHANGED_EXCLUDED = set([
@@ -71,6 +77,7 @@ BO_UPGRADES_EXCLUDED = set([
     'SprayZerg',
     # Co-op
     'GameTimeGreaterthan5Seconds',
+    'SOARepairBeamExtraTarget',
 ])
 
 BUILD_DATA = {
@@ -828,6 +835,22 @@ BUILD_DATA = {
         'build_time': 90,
         'built_from': ['SpawningPool'],
     },
+    'ZerglingArmorShred': {  # Shredding Claws
+        'build_time': 90,
+        'built_from': ['SpawningPool'],
+    },
+    'HotSViciousGlaive': {  # Vicious Glave
+        'build_time': 90,
+        'built_from': ['Spire'],
+    },
+    'HotSRapidRegeneration': {  # Rapid Regeneration
+        'build_time': 60,
+        'built_from': ['Spire'],
+    },
+    'HydraliskLurker': {  # Hydralisk
+        'build_time': 24,
+        'built_from': [],
+    },
     'QueenCoop': {
         'build_time': 36,  # TODO confirm
         'built_from': ['Hatchery', 'Lair', 'Hive'],
@@ -853,6 +876,32 @@ BUILD_DATA = {
         'build_time': 90,
         'built_from': ['TemplarArchives'],
     },
+    # Karax
+    'ZealotPurifier': {  # Sentinel
+        'build_time': 38,
+        'built_from': ['Gateway', 'WarpGate'],  # warpgate is necessary because of changing types
+        },
+    'CarrierAiur': {  # Carrier
+        'build_time': 86,
+        'built_from': ['Stargate'],
+    },
+    'SolarEfficiencyLevel1': {  # Solar Efficiency Level 1
+        'build_time': 90,
+        'built_from': ['SolarForge'],
+    },
+    'SolarEfficiencyLevel2': {  # Solar Efficiency Level 2
+        'build_time': 120,
+        'built_from': ['SolarForge'],
+    },
+    'SolarEfficiencyLevel3': {  # Solar Efficiency Level 3
+        'build_time': 180,
+        'built_from': ['SolarForge'],
+    },
+    'CarrierRepairDrones': {  # Repair Drones
+        'build_time': 90,
+        'built_from': ['FleetBeacon'],
+    },
+
 }
 
 
