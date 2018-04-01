@@ -42,6 +42,7 @@ BO_EXCLUDED = set([
     'LocustMPPrecursor',
     'RavenRepairDrone',
     # Co-op
+    'Scarab',
     # Kerrigan
     'KerriganReviveCocoon',
     'KerriganVoidCoopEconDrop1',
@@ -54,6 +55,11 @@ BO_EXCLUDED = set([
     # Artanis
     'SOAPylonPowerAllyUnit',
     'SOAPylonPowerUnit',
+    # Zagara
+    'ZagaraReviveCocoon',
+    'HunterKillerBurrowed',  # from Spawn Hunter Killers ability
+    'HotSSplitterlingBig',  # Splitter probably from auto-spawn
+    'HotSSplitterlingMedium',  # Splitter Baneling Spawn
     # Karax
     'CarrierRepairDrone',
     'SOAThermalLanceTargeter',
@@ -852,7 +858,7 @@ BUILD_DATA = {
         'built_from': [],
     },
     'QueenCoop': {
-        'build_time': 36,  # TODO confirm
+        'build_time': 50,
         'built_from': ['Hatchery', 'Lair', 'Hive'],
     },
     # Artanis
@@ -875,6 +881,35 @@ BUILD_DATA = {
     'HealingPsionicStorm': {  # Plasma Surge
         'build_time': 90,
         'built_from': ['TemplarArchives'],
+    },
+    # Zagara
+    'HotSSwarmling': {  # Swarmling: Zergling evolution
+        'build_time': 2,
+        'built_from': [],
+    },
+    'HotSBanelingCorrosiveBile': {  # Corrosive Acid
+        'build_time': 90,
+        'built_from': ['BanelingNest'],
+    },
+    'HotSRupture': {  # Rupture
+        'build_time': 90,
+        'built_from': ['BanelingNest'],
+    },
+    'Scourge': {
+        'build_time': 12,
+        'built_from': [],
+    },
+    'ScourgeGasCostReduction': {  # Simplified Genome
+        'build_time': 60,
+        'built_from': ['ScourgeNest'],
+    },
+    'ScourgeSplashDamage': {  # Virulent Spores
+        'build_time': 60,
+        'built_from': ['ScourgeNest'],
+    },
+    'InfestedAbomination': {  # Aberration
+        'build_time': 12,
+        'built_from': [],
     },
     # Karax
     'ZealotPurifier': {  # Sentinel
