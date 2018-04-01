@@ -43,6 +43,11 @@ BO_EXCLUDED = set([
     'RavenRepairDrone',
     # Co-op
     'Scarab',
+    # Raynor
+    'HyperionAdvancedPointDefenseDrone',
+    'HyperionVoidCoop',  # summoned
+    'DuskWing',  # summoned
+    'SpiderMine',
     # Kerrigan
     'KerriganReviveCocoon',
     'KerriganVoidCoopEconDrop1',
@@ -84,6 +89,7 @@ BO_UPGRADES_EXCLUDED = set([
     # Co-op
     'GameTimeGreaterthan5Seconds',
     'SOARepairBeamExtraTarget',
+    'NydusNetworkCoopAllyLeft',
 ])
 
 BUILD_DATA = {
@@ -832,6 +838,28 @@ BUILD_DATA = {
         'built_from': ['TechLab'],
     },
     # Co-op data
+    # Raynor
+    'Medic': {  # Assume Rapid Recruitment
+        'build_time': 10,
+        'built_from': ['TechLab'],
+    },
+    'StabilizerMedPacks': { # Stabilizer Medpacks
+        'build_time': 60,
+        'built_from': ['TechLab'],
+    },
+    'Vulture': {  # also rapid recruitment?
+        'build_time': 10,
+        'built_from': ['Factory'],
+    },
+    'NanoConstructor': {  # Replenishable Magazine
+        'build_time': 60,
+        'built_from': ['TechLab'],
+    },
+    'CerberusMines': {
+        'build_time': 60,
+        'built_from': ['TechLab'],
+    },
+
     # Kerrigan
     'VoidCoopHeroicFortitude': {  # Heroic Fortitude
         'build_time': 60,
