@@ -62,15 +62,33 @@ BO_EXCLUDED = set([
     # Artanis
     'SOAPylonPowerAllyUnit',
     'SOAPylonPowerUnit',
+    # Swann
+    'VoidCoopARES',  # Calldown
+
     # Zagara
     'ZagaraReviveCocoon',
     'HunterKillerBurrowed',  # from Spawn Hunter Killers ability
     'HotSSplitterlingBig',  # Splitter probably from auto-spawn
     'HotSSplitterlingMedium',  # Splitter Baneling Spawn
+    # Vorazun
+
     # Karax
     'CarrierRepairDrone',
     'SOAThermalLanceTargeter',
     'SOAPurifierBeamUnit',
+    # Abathur
+
+    # Alarak
+
+    # Nova
+
+    # Stukov
+
+    # Fenix
+
+    # Dehaka
+
+    # Han and Horner
 ])
 
 BO_CHANGED_EXCLUDED = set([
@@ -932,6 +950,48 @@ BUILD_DATA = {
         'build_time': 90,
         'built_from': ['FleetBeacon'],
     },
+    # Swann
+    'Hercules': {
+        'build_time': 30,
+        'built_from': ['Starport'],
+    },
+    'Goliath': {
+        'build_time': 40,
+        'built_from': ['Factory'],
+    },
+    'AresClassWeaponsSystem': {  # Ares-Class Targeting System
+        'build_time': 60,
+        'built_from': ['TechLab'],
+    },
+    'MultilockTargetingSystems': {  # Multi-Lock Weapons System
+        'build_time': 90,
+        'built_from': ['TechLab'],
+    },
+    'MaelstromRounds': {  # Maelstrom Rounds
+        'build_time': 60,
+        'built_from': ['TechLab'],
+    },
+    'ScienceVessel': {
+        'build_time': 60,
+        'built_from': ['Starport'],
+    },
+    'ScienceVesselResearchDefensiveMatrix': {  # Defensive Matrix
+        'build_time': 90,
+        'built_from': ['TechLab'],
+    },
+
+    'ScienceVesselFreeRepair': {  # Improved Nano-Repair
+        'build_time': 60,
+        'built_from': ['TechLab'],
+    },
+    'DrakkenLaserDrillBFG': {  # Upgrade Laser Drill Level 1
+        'build_time': 190,
+        'built_from': [],  # ?
+    },
+    'DrakkenLaserDrillNuke': {  # Upgrade Laser Drill Level 2
+        'build_time': 220,
+        'built_from': [],  # ?
+    },
     # Zagara
     'HotSSwarmling': {  # Swarmling: Zergling evolution
         'build_time': 2,
@@ -961,6 +1021,8 @@ BUILD_DATA = {
         'build_time': 12,
         'built_from': [],
     },
+    # Vorazun
+
     # Karax
     'ZealotPurifier': {  # Sentinel
         'build_time': 38,
@@ -986,6 +1048,18 @@ BUILD_DATA = {
         'build_time': 90,
         'built_from': ['FleetBeacon'],
     },
+    # Abathur
+    # Alarak
+
+    # Nova
+
+    # Stukov
+
+    # Fenix
+
+    # Dehaka
+
+    # Han and Horner
 
 }
 
