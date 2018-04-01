@@ -55,8 +55,10 @@ BO_EXCLUDED = set([
     'KerriganVoidCoopEconDrop3',
     'KerriganVoidCoopEconDrop4',
     'KerriganVoidCoopEconDrop5',
+    'KerriganVoidCoopEconDropLT1',
     'NydusNetworkAlly',
     'NydusCanalAlly',
+    'GreaterNydusWormAlly',
     # Artanis
     'SOAPylonPowerAllyUnit',
     'SOAPylonPowerUnit',
@@ -865,6 +867,14 @@ BUILD_DATA = {
         'build_time': 60,
         'built_from': ['EvolutionChamber'],
     },
+    'K5Cooldowns': {  # Ability Efficiency
+        'build_time': 120,
+        'built_from': ['EvolutionChamber'],
+    },
+    'K5ChainLightning': {  # Chain Reaction
+        'build_time': 90,
+        'built_from': ['EvolutionChamber'],
+    },
     'HotSZerglingHealth': {  # Hardened Carapace
         'build_time': 90,
         'built_from': ['SpawningPool'],
@@ -880,6 +890,14 @@ BUILD_DATA = {
     'HotSRapidRegeneration': {  # Rapid Regeneration
         'build_time': 60,
         'built_from': ['Spire'],
+    },
+    'HotSHydraliskHealth': {  # Ancillary Carapace
+        'build_time': 90,
+        'built_from': ['HydraliskDen'],
+    },
+    'HydraliskFrenzy': {  # Frenzy
+        'build_time': 120,
+        'built_from': ['HydraliskDen'],
     },
     'HydraliskLurker': {  # Hydralisk
         'build_time': 24,
