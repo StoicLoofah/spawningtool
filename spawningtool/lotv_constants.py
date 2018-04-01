@@ -928,6 +928,10 @@ BUILD_DATA = {
         'build_time': 90,
         'built_from': ['TemplarArchives'],
     },
+    'TempestDisintegration': {  # Disintegration
+        'build_time': 90,
+        'built_from': ['FleetBeacon'],
+    },
     # Zagara
     'HotSSwarmling': {  # Swarmling: Zergling evolution
         'build_time': 2,
