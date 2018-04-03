@@ -1,6 +1,6 @@
 """
-spawningtool.constants
-~~~~~~~~~~~~~~~~~~~~~~
+spawningtool.hots_constants
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 """
 
 FRAMES_PER_SECOND = 16

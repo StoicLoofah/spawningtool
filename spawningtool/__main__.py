@@ -9,13 +9,13 @@ from spawningtool.exception import CutoffTimeError, ReplayFormatError
 from spawningtool.parser import parse_replay
 
 
-def print_builds(result):
+def print_builds(result, show_workers):
     for player in result['players'].values():
         print('{} ({})'.format(player['name'], player['race']))
         if player['clock_position'] is not None:
             print('Start Position: {}:00'.format(player['clock_position']))
         for event in player['buildOrder']:
-            if not event['is_worker']:
+            if not event['is_worker'] or show_workers:
                 print('{} {} {}{}'.format(
                     event['supply'],
                     event['time'],
@@ -56,7 +56,7 @@ def print_results(result, args):
     print(result['map'])
     print(result['build'])
     if print_all or args.build:
-        print_builds(result)
+        print_builds(result, args.workers)
     if print_all or args.units_lost:
         print_units_lost(result)
     if print_all or args.abilities:
@@ -87,6 +87,9 @@ def main():
     )
     parser.add_argument(
         '--abilities', help='Print out the abilities', action="store_true"
+    )
+    parser.add_argument(
+        '--workers', help='Print out the workers in the build', action="store_true"
     )
 
     args = parser.parse_args()
