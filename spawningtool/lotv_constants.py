@@ -83,8 +83,9 @@ BUILD_DATA = {
         'built_from': ['Barracks'],
         },
     'BattleHellion': {
-        'build_time': 21,  # Hellbat
+        'build_time': 21,
         'built_from': ['Factory'],
+        'display_name': 'Hellbat',
         },
     'Hellion': {
         'build_time': 21,
@@ -297,13 +298,15 @@ BUILD_DATA = {
         'build_time': 12,
         'built_from': ['Overlord'],
         },
-    'RavagerCocoon': {
-        'build_time': 0,  # Ravager - egg not itself because it is the start time, normal build time is 9
+    'RavagerCocoon': {  # Ravager - egg not itself because it is the start time, normal build time is 9
+        'build_time': 0,
         'built_from': ['Roach'],
+        'display_name': 'Ravager',
         },
-    'LurkerMPEgg': {
-        'build_time': 0,  # Lurker - same logic as above, especially because burrow/unburrow counts, normal build time is 18
+    'LurkerMPEgg': {  # Lurker - same logic as above, especially because burrow/unburrow counts, normal build time is 18
+        'build_time': 0,
         'built_from': ['Hydralisk'],
+        'display_name': 'Lurker',
         },
     # zerg upgrades
     'ZergMeleeWeaponsLevel1': {
@@ -580,13 +583,15 @@ BUILD_DATA = {
         'build_time': 79,
         'built_from': ['TechLab'],
         },
-    'HighCapacityBarrels': {  # Infernal Pre-Igniters
+    'HighCapacityBarrels': {
         'build_time': 79,
         'built_from': ['TechLab'],
+        'display_name': 'Infernal Pre-Igniters',
         },
-    'CycloneLockOnDamageUpgrade': {  # Mag-Field Accelerator
+    'CycloneLockOnDamageUpgrade': {
         'build_time': 79,
         'built_from': ['TechLab'],
+        'display_name': 'Mag-Field Accelerator',
         },
     'MagFieldLaunchers': {
         'build_time': 79,
@@ -605,13 +610,15 @@ BUILD_DATA = {
         'build_time': 57,
         'built_from': ['TechLab'],
         },
-    'MedivacIncreaseSpeedBoost': {  # High Capacity Fuel Tanks
+    'MedivacIncreaseSpeedBoost': {
         'build_time': 57,
         'built_from': ['TechLab'],
+        'display_name': 'High Capacity Fuel Tanks',
         },
-    'RavenDamageUpgrade': {  # Explosive Shrapnel Shells, deprecated 3.8
+    'RavenDamageUpgrade': {  # deprecated 3.8
         'build_time': 79,
         'built_from': ['TechLab'],
+        'display_name': 'Explosive Shrapnel Shells',
         },
     'RavenRecalibratedExplosives': {
         'build_time': 79,
@@ -629,13 +636,15 @@ BUILD_DATA = {
         'build_time': 79,
         'built_from': ['TechLab'],
         },
-    'BansheeSpeed': {  # Hyperflight Rotors
+    'BansheeSpeed': {
         'build_time': 121,  # was 93 before 3.8.0
         'built_from': ['TechLab'],
+        'display_name': 'Hyperflight Rotors',
         },
-    'LiberatorAGRangeUpgrade': {  # Advanced Ballistics
+    'LiberatorAGRangeUpgrade': {
         'build_time': 79,
         'built_from': ['TechLab'],
+        'display_name': 'Advanced Ballistics',
         },
     'RavenEnhancedMunitions': {
         'build_time': 79,
@@ -646,9 +655,10 @@ BUILD_DATA = {
         'build_time': 57,
         'built_from': ['FusionCore'],
         },
-    'BattlecruiserEnableSpecializations': {  # Yamato Cannon
+    'BattlecruiserEnableSpecializations': {
         'build_time': 43,
         'built_from': ['FusionCore'],
+        'display_name': 'Yamato Cannon',
         },
     # protoss upgrades
     'ProtossGroundWeaponsLevel1': {
@@ -755,9 +765,10 @@ BUILD_DATA = {
         'build_time': 100,
         'built_from': ['TwilightCouncil'],
         },
-    'DarkTemplarBlinkUpgrade': {  # Shadow Stride
+    'DarkTemplarBlinkUpgrade': {
         'build_time': 121,
         'built_from': ['DarkShrine'],
+        'display_name': 'Shadow Stride',
         },
     # unit change buildings
     'Lair': {

@@ -9,11 +9,17 @@ from spawningtool.exception import CutoffTimeError, ReplayFormatError
 from spawningtool.parser import parse_replay
 
 
+def print_player_header(player):
+    if player['commander']:
+        print('{} ({} - {})'.format(player['name'], player['race'], player['commander']))
+    else:
+        print('{} ({})'.format(player['name'], player['race']))
+
 def print_builds(result, show_workers):
     for player in result['players'].values():
         if result['cooperative'] and not player['is_human']:
             continue
-        print('{} ({})'.format(player['name'], player['race']))
+        print_player_header(player)
         if player['clock_position'] is not None:
             print('Start Position: {}:00'.format(player['clock_position']))
         for event in player['buildOrder']:
@@ -31,7 +37,7 @@ def print_units_lost(result):
     for player in result['players'].values():
         if result['cooperative'] and not player['is_human']:
             continue
-        print('{} ({})'.format(player['name'], player['race']))
+        print_player_header(player)
         for event in player['unitsLost']:
                 print('{} {} killed by {}'.format(
                     event['time'],
@@ -45,7 +51,7 @@ def print_abilities(result):
     for player in result['players'].values():
         if result['cooperative'] and not player['is_human']:
             continue
-        print('{} ({})'.format(player['name'], player['race']))
+        print_player_header(player)
         for event in player['abilities']:
                 print('{} {}'.format(
                     event['time'],

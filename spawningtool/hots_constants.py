@@ -65,8 +65,9 @@ BUILD_DATA = {
         'built_from': ['Barracks'],
         },
     'BattleHellion': {
-        'build_time': 30,  # Hellbat
+        'build_time': 30,
         'built_from': ['Factory'],
+        'display_name': 'Hellbat',
         },
     'Hellion': {
         'build_time': 30,
@@ -332,12 +333,14 @@ BUILD_DATA = {
         'built_from': ['RoachWarren'],
         },
     'hydraliskspeed': {
-        'build_time': 80,  # Grooved Spines
+        'build_time': 80,
         'built_from': ['HydraliskDen'],
+        'display_name': 'Grooved Spines',
         },
     'HydraliskSpeedUpgrade': {
-        'build_time': 100,  # Muscular Augments
+        'build_time': 100,
         'built_from': ['HydraliskDen'],
+        'display_name': 'Muscular Augments',
         },
     'overlordspeed': {
         'build_time': 60,
@@ -477,8 +480,9 @@ BUILD_DATA = {
         'built_from': ['TechLab'],
         },
     'ShieldWall': {
-        'build_time': 110,  # ? Combat Shield?
+        'build_time': 110,
         'built_from': ['TechLab'],
+        'display_name': 'Combat Shields',
         },
     'MedivacCaduceusReactor': {
         'build_time': 80,

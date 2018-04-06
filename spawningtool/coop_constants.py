@@ -7,7 +7,7 @@ Co-op uses Blizzard time like HotS (16 FPS), so it's easier to base the data off
 Co-op also uses the LotV launch chronoboost that stays continuously on one building
 """
 
-from hots_constants import *
+from spawningtool.hots_constants import *
 
 BO_EXCLUDED = BO_EXCLUDED.copy()
 
@@ -80,17 +80,19 @@ NEW_BUILD_DATA = {
         'build_time': 10,
         'built_from': ['TechLab'],
     },
-    'StabilizerMedPacks': { # Stabilizer Medpacks
+    'StabilizerMedPacks': {
         'build_time': 60,
         'built_from': ['TechLab'],
+        'display_name': 'Stabilizer Medpacks'
     },
     'Vulture': {  # also rapid recruitment?
         'build_time': 10,
         'built_from': ['Factory'],
     },
-    'NanoConstructor': {  # Replenishable Magazine
+    'NanoConstructor': {
         'build_time': 60,
         'built_from': ['TechLab'],
+        'display_name': 'Replenishable Magazine',
     },
     'CerberusMines': {
         'build_time': 60,
@@ -98,74 +100,90 @@ NEW_BUILD_DATA = {
     },
 
     # Kerrigan
-    'VoidCoopHeroicFortitude': {  # Heroic Fortitude
+    'VoidCoopHeroicFortitude': {
         'build_time': 60,
         'built_from': ['EvolutionChamber'],
+        'display_name': 'Heroic Fortitude',
     },
-    'K5Cooldowns': {  # Ability Efficiency
+    'K5Cooldowns': {
         'build_time': 120,
         'built_from': ['EvolutionChamber'],
+        'display_name': 'Ability Efficiency',
     },
-    'K5ChainLightning': {  # Chain Reaction
+    'K5ChainLightning': {
         'build_time': 90,
         'built_from': ['EvolutionChamber'],
+        'display_name': 'Chain Reaction',
     },
-    'HotSZerglingHealth': {  # Hardened Carapace
+    'HotSZerglingHealth': {
         'build_time': 90,
         'built_from': ['SpawningPool'],
+        'display_name': 'Hardened Carapace',
     },
-    'ZerglingArmorShred': {  # Shredding Claws
+    'ZerglingArmorShred': {
         'build_time': 90,
         'built_from': ['SpawningPool'],
+        'display_name': 'Shredding Claws',
     },
-    'HotSViciousGlaive': {  # Vicious Glave
+    'HotSViciousGlaive': {
         'build_time': 90,
         'built_from': ['Spire'],
+        'display_name': 'Vicious Glave',
     },
-    'HotSRapidRegeneration': {  # Rapid Regeneration
+    'HotSRapidRegeneration': {
         'build_time': 60,
         'built_from': ['Spire'],
+        'display_name': 'Rapid Regeneration',
     },
-    'HotSHydraliskHealth': {  # Ancillary Carapace
+    'HotSHydraliskHealth': {
         'build_time': 90,
         'built_from': ['HydraliskDen'],
+        'display_name': 'Ancillary Carapace',
     },
-    'HydraliskFrenzy': {  # Frenzy
+    'HydraliskFrenzy': {
         'build_time': 120,
         'built_from': ['HydraliskDen'],
+        'display_name': 'Frenzy',
     },
-    'HydraliskLurker': {  # Hydralisk
+    'HydraliskLurker': {
         'build_time': 24,
         'built_from': [],
+        'display_name': 'Hydralisk',
     },
     'QueenCoop': {
         'build_time': 50,
         'built_from': ['Hatchery', 'Lair', 'Hive'],
     },
     # Artanis
-    'ZealotResearchWhirlwind': {  # Whirlwind
+    'ZealotResearchWhirlwind': {
         'build_time': 90,
         'built_from': ['TwilightCouncil'],
+        'display_name': 'Whirlwind',
     },
-    'StalkerResearchDragoonRange': {  # Singularity Charge
+    'StalkerResearchDragoonRange': {
         'build_time': 60,
         'built_from': ['TwilightCouncil'],
+        'display_name': 'Singularity Charge',
     },
-    'StalkerResearchDragoonHealth': {  # Trillic Compresion Mesh
+    'StalkerResearchDragoonHealth': {
         'build_time': 90,
         'built_from': ['TwilightCouncil'],
+        'display_name': 'Trillic Compresion Mesh',
     },
-    'HighTemplarKhaydarinAmulet': {  # Khaydarin Amulet
+    'HighTemplarKhaydarinAmulet': {
         'build_time': 120,
         'built_from': ['TemplarArchives'],
+        'display_name': 'Khaydarin Amulet',
     },
-    'HealingPsionicStorm': {  # Plasma Surge
+    'HealingPsionicStorm': {
         'build_time': 90,
         'built_from': ['TemplarArchives'],
+        'display_name': 'Plasma Surge',
     },
-    'TempestDisintegration': {  # Disintegration
+    'TempestDisintegration': {
         'build_time': 90,
         'built_from': ['FleetBeacon'],
+        'display_name': 'Disintegration',
     },
     # Swann
     'Hercules': {
@@ -176,94 +194,113 @@ NEW_BUILD_DATA = {
         'build_time': 40,
         'built_from': ['Factory'],
     },
-    'AresClassWeaponsSystem': {  # Ares-Class Targeting System
+    'AresClassWeaponsSystem': {
         'build_time': 60,
         'built_from': ['TechLab'],
+        'display_name': 'Ares-Class Targeting System',
     },
-    'MultilockTargetingSystems': {  # Multi-Lock Weapons System
+    'MultilockTargetingSystems': {
         'build_time': 90,
         'built_from': ['TechLab'],
+        'display_name': 'Multi-Lock Weapons System',
     },
-    'MaelstromRounds': {  # Maelstrom Rounds
+    'MaelstromRounds': {
         'build_time': 60,
         'built_from': ['TechLab'],
+        'display_name': 'Maelstrom Rounds',
     },
     'ScienceVessel': {
         'build_time': 60,
         'built_from': ['Starport'],
     },
-    'ScienceVesselResearchDefensiveMatrix': {  # Defensive Matrix
+    'ScienceVesselResearchDefensiveMatrix': {
         'build_time': 90,
         'built_from': ['TechLab'],
+        'display_name': 'Defensive Matrix',
     },
 
-    'ScienceVesselFreeRepair': {  # Improved Nano-Repair
+    'ScienceVesselFreeRepair': {
         'build_time': 60,
         'built_from': ['TechLab'],
+        'display_name': 'Improved Nano-Repair',
     },
-    'DrakkenLaserDrillBFG': {  # Upgrade Laser Drill Level 1
+    'DrakkenLaserDrillBFG': {
         'build_time': 190,
         'built_from': [],  # ?
+        'display_name': 'Upgrade Laser Drill Level 1',
     },
-    'DrakkenLaserDrillNuke': {  # Upgrade Laser Drill Level 2
+    'DrakkenLaserDrillNuke': {
         'build_time': 220,
         'built_from': [],  # ?
+        'display_name': 'Upgrade Laser Drill Level 2',
     },
     # Zagara
-    'HotSSwarmling': {  # Swarmling: Zergling evolution
+    'HotSSwarmling': {
         'build_time': 2,
         'built_from': [],
+        'display_name': 'Swarmling: Zergling evolution',
     },
-    'HotSBanelingCorrosiveBile': {  # Corrosive Acid
+    'HotSBanelingCorrosiveBile': {
         'build_time': 90,
         'built_from': ['BanelingNest'],
+        'display_name': 'Corrosive Acid',
     },
-    'HotSRupture': {  # Rupture
+    'HotSRupture': {
         'build_time': 90,
         'built_from': ['BanelingNest'],
+        'display_name': 'Rupture',
     },
     'Scourge': {
         'build_time': 12,
         'built_from': [],
     },
-    'ScourgeGasCostReduction': {  # Simplified Genome
+    'ScourgeGasCostReduction': {
         'build_time': 60,
         'built_from': ['ScourgeNest'],
+        'display_name': 'Simplified Genome',
     },
-    'ScourgeSplashDamage': {  # Virulent Spores
+    'ScourgeSplashDamage': {
         'build_time': 60,
         'built_from': ['ScourgeNest'],
+        'display_name': 'Virulent Spores',
     },
-    'InfestedAbomination': {  # Aberration
+    'InfestedAbomination': {
         'build_time': 12,
         'built_from': [],
+        'display_name': 'Aberration',
     },
     # Vorazun
 
     # Karax
-    'ZealotPurifier': {  # Sentinel
+    'ZealotPurifier': {
         'build_time': 38,
         'built_from': ['Gateway', 'WarpGate'],  # warpgate is necessary because of changing types
+        'display_name': 'Sentinel',
         },
-    'CarrierAiur': {  # Carrier
+    'CarrierAiur': {
         'build_time': 86,
         'built_from': ['Stargate'],
+        'display_name': 'Carrier',
     },
-    'SolarEfficiencyLevel1': {  # Solar Efficiency Level 1
+    'SolarEfficiencyLevel1': {
         'build_time': 90,
         'built_from': ['SolarForge'],
+        'display_name': 'Solar Efficiency Level 1',
     },
-    'SolarEfficiencyLevel2': {  # Solar Efficiency Level 2
+    'SolarEfficiencyLevel2': {
         'build_time': 120,
         'built_from': ['SolarForge'],
+        'display_name': 'Solar Efficiency Level 2',
     },
-    'SolarEfficiencyLevel3': {  # Solar Efficiency Level 3
+    'SolarEfficiencyLevel3': {
         'build_time': 180,
         'built_from': ['SolarForge'],
+        'display_name': 'Solar Efficiency Level 3',
     },
-    'CarrierRepairDrones': {  # Repair Drones
+    'CarrierRepairDrones': {
         'build_time': 90,
         'built_from': ['FleetBeacon'],
+        'display_name': 'Repair Drones',
     },
     # Abathur
     # Alarak
