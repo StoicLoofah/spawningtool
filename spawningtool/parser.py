@@ -9,7 +9,7 @@ import json
 import os
 import sc2reader
 
-from spawningtool import hots_constants, lotv_constants
+from spawningtool import coop_constants, hots_constants, lotv_constants
 from spawningtool.exception import CutoffTimeError, ReplayFormatError, ReadError
 
 CHRONOBOOST_HOTS = 1  # 20 second boost by 50%
@@ -470,9 +470,14 @@ def parse_events(replay, cutoff_time, parsed_data, cache_path=None, include_map_
 
     if replay.expansion == 'WoL':
         # primarily because the build times are off, but I don't want to deal with it
-        raise ReplayFormatError(('spawningtool currently only supports HotS.'), parsed_data)
+        raise ReplayFormatError(('spawningtool does not support WoL.'), parsed_data)
 
-    constants = lotv_constants if replay.expansion == 'LotV' else hots_constants
+    if parsed_data['cooperative']:
+        constants = coop_constants
+    elif replay.expansion == 'LotV':
+        constants = lotv_constants
+    else:
+        constants = hots_constants
 
     builds = dict((key, GameTimeline()) for key in replay.player.keys())
     units_lost = dict((key, GameTimeline()) for key in replay.player.keys())
@@ -481,7 +486,8 @@ def parse_events(replay, cutoff_time, parsed_data, cache_path=None, include_map_
     if replay.expansion == 'LotV' and 1513641600 > replay.unix_timestamp > 1510617600:
         # 100% for 10 seconds
         chronoboost_version = CHRONOBOOST_40
-    elif replay.expansion == 'LotV' and 1510617600 > replay.unix_timestamp > 1441238400:
+    elif replay.expansion == 'LotV' and 1510617600 > replay.unix_timestamp > 1441238400 or \
+        parsed_data['cooperative']:
         # Continuous
         chronoboost_version = CHRONOBOOST_LOTV
     else:
@@ -526,7 +532,8 @@ def parse_events(replay, cutoff_time, parsed_data, cache_path=None, include_map_
             parsed_data['players'][event.pid]['supply'].append(
                 [event.frame, int(event.food_used)])
             # TODO this is a hack for LotV; hopefully I have a better solution coming up
-            if event.frame == 1 and int(event.food_used) == 12:
+            if not parsed_data['cooperative'] and \
+                    event.frame == 1 and int(event.food_used) == 12:
                 parsed_data['players'][event.pid]['supply'][0][1] = 12
                 parsed_data['expansion'] = 'LotV'
                 constants = lotv_constants
@@ -541,6 +548,7 @@ def parse_events(replay, cutoff_time, parsed_data, cache_path=None, include_map_
         elif event.name == 'UnitDiedEvent':
             died_event(units_lost, event, parsed_data,constants)
 
+    parsed_data['frames_per_second'] = constants.FRAMES_PER_SECOND
     parsed_data['buildOrderExtracted'] = True  # legacy code
     make_event_timeline(builds, cutoff_time, parsed_data, 'buildOrder', constants)
     make_event_timeline(units_lost, cutoff_time, parsed_data, 'unitsLost', constants)
@@ -600,6 +608,8 @@ def parse_replay(replay_file, cutoff_time=None, cache_dir=None, include_map_deta
         'region': replay.region,
         'map': replay.map_name,
         'map_hash': replay.map_hash,
+        # as of 4/6/18, co-op replays are not marked as co-op
+        'cooperative': replay.cooperative or any(player.commander for player in replay.players)
     }
 
     parsed_data['players'] = dict(
@@ -620,6 +630,7 @@ def parse_replay(replay_file, cutoff_time=None, cache_dir=None, include_map_deta
                 'supply': [[0, 6]],
                 'team': player.team.number,
                 'clock_position': None,
+                'commander': player.commander,
             }) for key, player in replay.player.items()
     )
 

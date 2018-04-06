@@ -65,6 +65,9 @@ BO_EXCLUDED.update([
 BO_UPGRADES_EXCLUDED = BO_UPGRADES_EXCLUDED.copy()
 
 BO_UPGRADES_EXCLUDED.update([
+    'SprayTerran',
+    'SprayProtoss',
+    'SprayZerg',
     # Co-op
     'GameTimeGreaterthan5Seconds',
     'SOARepairBeamExtraTarget',
@@ -274,7 +277,7 @@ NEW_BUILD_DATA = {
     # Dehaka
 
     # Han and Horner
-})
+}
 
 for value in NEW_BUILD_DATA.values():
     value['build_time'] *= FRAMES_PER_SECOND

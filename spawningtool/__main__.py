@@ -11,6 +11,8 @@ from spawningtool.parser import parse_replay
 
 def print_builds(result, show_workers):
     for player in result['players'].values():
+        if result['cooperative'] and not player['is_human']:
+            continue
         print('{} ({})'.format(player['name'], player['race']))
         if player['clock_position'] is not None:
             print('Start Position: {}:00'.format(player['clock_position']))
@@ -27,6 +29,8 @@ def print_builds(result, show_workers):
 
 def print_units_lost(result):
     for player in result['players'].values():
+        if result['cooperative'] and not player['is_human']:
+            continue
         print('{} ({})'.format(player['name'], player['race']))
         for event in player['unitsLost']:
                 print('{} {} killed by {}'.format(
@@ -39,6 +43,8 @@ def print_units_lost(result):
 
 def print_abilities(result):
     for player in result['players'].values():
+        if result['cooperative'] and not player['is_human']:
+            continue
         print('{} ({})'.format(player['name'], player['race']))
         for event in player['abilities']:
                 print('{} {}'.format(
