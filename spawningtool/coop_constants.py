@@ -41,6 +41,7 @@ BO_EXCLUDED.update([
     'HotSSplitterlingBig',  # Splitter probably from auto-spawn
     'HotSSplitterlingMedium',  # Splitter Baneling Spawn
     # Vorazun
+    'VorazunShadowGuard',  # calldown
 
     # Karax
     'CarrierRepairDrone',
@@ -72,6 +73,8 @@ BO_UPGRADES_EXCLUDED.update([
     'GameTimeGreaterthan5Seconds',
     'SOARepairBeamExtraTarget',
     'NydusNetworkCoopAllyLeft',
+    # Vorazun
+    'MasteryVorazunTimeStopHasteModifyPlayer',
 ])
 
 NEW_BUILD_DATA = {
@@ -79,15 +82,17 @@ NEW_BUILD_DATA = {
     'Medic': {  # Assume Rapid Recruitment
         'build_time': 10,
         'built_from': ['TechLab'],
+        'display_name': 'Medic',
     },
     'StabilizerMedPacks': {
         'build_time': 60,
         'built_from': ['TechLab'],
-        'display_name': 'Stabilizer Medpacks'
+        'display_name': 'Stabilizer Medpacks',
     },
     'Vulture': {  # also rapid recruitment?
         'build_time': 10,
         'built_from': ['Factory'],
+        'display_name': 'Vulture',
     },
     'NanoConstructor': {
         'build_time': 60,
@@ -97,6 +102,7 @@ NEW_BUILD_DATA = {
     'CerberusMines': {
         'build_time': 60,
         'built_from': ['TechLab'],
+        'display_name': 'Cerberus Mines',
     },
 
     # Kerrigan
@@ -153,8 +159,14 @@ NEW_BUILD_DATA = {
     'QueenCoop': {
         'build_time': 50,
         'built_from': ['Hatchery', 'Lair', 'Hive'],
+        'display_name': 'Queen',
     },
     # Artanis
+    'ZealotAiur': {
+        'build_time': 38,
+        'built_from': ['Gateway', 'WarpGate'],  # warpgate is necessary because of changing types
+        'display_name': 'Zealot',
+    },
     'ZealotResearchWhirlwind': {
         'build_time': 90,
         'built_from': ['TwilightCouncil'],
@@ -189,10 +201,12 @@ NEW_BUILD_DATA = {
     'Hercules': {
         'build_time': 30,
         'built_from': ['Starport'],
+        'display_name': 'Hercules',
     },
     'Goliath': {
         'build_time': 40,
         'built_from': ['Factory'],
+        'display_name': 'Goliath',
     },
     'AresClassWeaponsSystem': {
         'build_time': 60,
@@ -212,6 +226,7 @@ NEW_BUILD_DATA = {
     'ScienceVessel': {
         'build_time': 60,
         'built_from': ['Starport'],
+        'display_name': 'Science Vessel',
     },
     'ScienceVesselResearchDefensiveMatrix': {
         'build_time': 90,
@@ -235,10 +250,10 @@ NEW_BUILD_DATA = {
         'display_name': 'Upgrade Laser Drill Level 2',
     },
     # Zagara
-    'HotSSwarmling': {
+    'HotSSwarmling': {  # Zergling evolution
         'build_time': 2,
         'built_from': [],
-        'display_name': 'Swarmling: Zergling evolution',
+        'display_name': 'Swarmling',
     },
     'HotSBanelingCorrosiveBile': {
         'build_time': 90,
@@ -253,6 +268,7 @@ NEW_BUILD_DATA = {
     'Scourge': {
         'build_time': 12,
         'built_from': [],
+        'display_name': 'Scourge',
     },
     'ScourgeGasCostReduction': {
         'build_time': 60,
@@ -269,7 +285,55 @@ NEW_BUILD_DATA = {
         'built_from': [],
         'display_name': 'Aberration',
     },
+    'ZagaraVoidCoopAttackUpgrade': {
+        'build_time': 90,
+        'built_from': ['EvolutionChamber'],
+        'display_name': 'Medusa Blades',
+    },
+
     # Vorazun
+    'StalkerShakuras': {
+        'build_time': 42,
+        'built_from': ['Gateway', 'WarpGate'],
+        'display_name': 'Stalker',
+    },
+    'DarkTemplarShakuras': {
+        'build_time': 55,
+        'built_from': ['Gateway', 'WarpGate'],
+        'display_name': 'Dark Templar',
+    },
+    'DarkTemplarResearchShadowDash': {
+        'build_time': 100,  # wikia was incorrect and had 60 when I last checked
+        'built_from': ['DarkShrine'],
+        'display_name': 'Blink',
+    },
+    'DarkTemplarResearchShadowFury': {
+        'build_time': 120,
+        'built_from': ['DarkShrine'],
+        'display_name': 'Shadow Fury',
+    },
+    'StalkerResearchBlinkShieldRestore': {
+        'build_time': 90,
+        'built_from': ['TwilightCouncil'],
+        'display_name': 'Phase Reactor',
+    },
+    'CorsairMP': {
+        'build_time': 35,
+        'built_from': ['Stargate'],
+        'display_name': 'Corsair',
+    },
+    'CorsairPermanentCloak': {
+        'build_time': 90,
+        'built_from': ['FleetBeacon'],
+        'display_name': 'Stealth Drive',
+    },
+    'CorsairDisruptionWeb': {
+        'build_time': 60,
+        'built_from': ['FleetBeacon'],
+        'display_name': 'Disruption Web',
+    },
+
+
 
     # Karax
     'ZealotPurifier': {
