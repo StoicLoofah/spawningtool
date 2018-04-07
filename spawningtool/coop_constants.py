@@ -34,7 +34,6 @@ BO_EXCLUDED.update([
     'SOAPylonPowerUnit',
     # Swann
     'VoidCoopARES',  # Calldown
-
     # Zagara
     'ZagaraReviveCocoon',
     'HunterKillerBurrowed',  # from Spawn Hunter Killers ability
@@ -42,12 +41,17 @@ BO_EXCLUDED.update([
     'HotSSplitterlingMedium',  # Splitter Baneling Spawn
     # Vorazun
     'VorazunShadowGuard',  # calldown
-
     # Karax
     'CarrierRepairDrone',
     'SOAThermalLanceTargeter',
     'SOAPurifierBeamUnit',
     # Abathur
+    'BiomassPickup',
+    'ToxicNest',
+    'LocustFlying',
+    'BrutaliskPlacement',  # Deep Tunnel
+    'AbathurSymbioteBrutalisk',  # paired with building Brutalisk
+    'AbathurSymbioteLeviathan',  # paired with building Leviathan
 
     # Alarak
 
@@ -333,8 +337,6 @@ NEW_BUILD_DATA = {
         'display_name': 'Disruption Web',
     },
 
-
-
     # Karax
     'ZealotPurifier': {
         'build_time': 38,
@@ -367,6 +369,41 @@ NEW_BUILD_DATA = {
         'display_name': 'Repair Drones',
     },
     # Abathur
+    'RoachVile': {
+        'build_time': 27,
+        'built_from': [],
+        'display_name': 'Roach',
+    },
+    'Brutalisk': {  # actually the cocoon morph from roach
+        'build_time': 5,
+        'built_from': [],
+        'display_name': 'Brutalisk',
+    },
+    'HotSLeviathan': {  # actually the cocoon morph from mutalisk
+        'build_time': 5,
+        'built_from': [],
+        'display_name': 'Leviathan',
+    },
+    'MutaliskSunderingGlave': {
+        'build_time': 120,
+        'built_from': ['Spire', 'GreaterSpire',],
+        'display_name': 'Sundering Glave',
+    },
+    'AbathurBioMechanicalTransfusion': {
+        'build_time': 60,
+        'built_from': ['Evolution Chamber'],
+        'display_name': 'Bio-Mechanical Transfusion',
+    },
+    'Devourer': {
+        'build_time': 15,
+        'built_from': [],
+        'display_name': 'Devourer',
+    },
+    'DevourerAoEDamage': {
+        'build_time': 90,
+        'built_from': ['Spire', 'GreaterSpire'],
+        'display_name': 'Corrosive Spray',
+    },
     # Alarak
 
     # Nova
