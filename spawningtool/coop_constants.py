@@ -54,14 +54,25 @@ BO_EXCLUDED.update([
     'AbathurSymbioteLeviathan',  # paired with building Leviathan
 
     # Alarak
+    'AlarakReviveBeacon',
+    'VoidRayTaldarim',  # Destroyers that spawn with the Mothership
 
     # Nova
+    'NovaReviveBeacon',
+    'SpiderMineBurrowed',
+    'HealingDrone',
+    'Marine_BlackOpsSpawnerUnit',
+    'Liberator_BlackOpsSpawnerUnit',
+    'Raven_BlackOpsSpawnerUnit',
+    'Goliath_BlackOpsSpawnerUnit',
+    'SiegeTank_BlackOpsSpawnerUnit',
 
     # Stukov
 
     # Fenix
 
     # Dehaka
+    'EssencePickup',
 
     # Han and Horner
 ])
@@ -75,7 +86,6 @@ BO_UPGRADES_EXCLUDED.update([
     'SprayZerg',
     # Co-op
     'GameTimeGreaterthan5Seconds',
-    'SOARepairBeamExtraTarget',
     'NydusNetworkCoopAllyLeft',
     # Vorazun
     'MasteryVorazunTimeStopHasteModifyPlayer',
@@ -83,6 +93,7 @@ BO_UPGRADES_EXCLUDED.update([
 
 NEW_BUILD_DATA = {
     # Raynor
+    # TODO verify
     'Medic': {  # Assume Rapid Recruitment
         'build_time': 10,
         'built_from': ['TechLab'],
@@ -110,51 +121,10 @@ NEW_BUILD_DATA = {
     },
 
     # Kerrigan
-    'VoidCoopHeroicFortitude': {
-        'build_time': 60,
-        'built_from': ['EvolutionChamber'],
-        'display_name': 'Heroic Fortitude',
-    },
-    'K5Cooldowns': {
-        'build_time': 120,
-        'built_from': ['EvolutionChamber'],
-        'display_name': 'Ability Efficiency',
-    },
-    'K5ChainLightning': {
-        'build_time': 90,
-        'built_from': ['EvolutionChamber'],
-        'display_name': 'Chain Reaction',
-    },
-    'HotSZerglingHealth': {
-        'build_time': 90,
-        'built_from': ['SpawningPool'],
-        'display_name': 'Hardened Carapace',
-    },
-    'ZerglingArmorShred': {
-        'build_time': 90,
-        'built_from': ['SpawningPool'],
-        'display_name': 'Shredding Claws',
-    },
-    'HotSViciousGlaive': {
-        'build_time': 90,
-        'built_from': ['Spire'],
-        'display_name': 'Vicious Glave',
-    },
-    'HotSRapidRegeneration': {
-        'build_time': 60,
-        'built_from': ['Spire'],
-        'display_name': 'Rapid Regeneration',
-    },
-    'HotSHydraliskHealth': {
-        'build_time': 90,
-        'built_from': ['HydraliskDen'],
-        'display_name': 'Ancillary Carapace',
-    },
-    'HydraliskFrenzy': {
-        'build_time': 120,
-        'built_from': ['HydraliskDen'],
-        'display_name': 'Frenzy',
-    },
+    'Hydralisk': {
+        'build_time': 30,
+        'built_from': [],
+        },
     'HydraliskLurker': {
         'build_time': 24,
         'built_from': [],
@@ -165,7 +135,83 @@ NEW_BUILD_DATA = {
         'built_from': ['Hatchery', 'Lair', 'Hive'],
         'display_name': 'Queen',
     },
+    'zerglingmovementspeed': {
+        'build_time': 60,
+        'built_from': ['SpawningPool'],
+        'display_name': 'Metabolic Boost',
+        },
+    'HotSZerglingHealth': {
+        'build_time': 60,
+        'built_from': ['SpawningPool'],
+        'display_name': 'Hardened Carapace',
+    },
+    'zerglingattackspeed': {
+        'build_time': 60,  # Called Adrenal Overload in co-op
+        'built_from': ['SpawningPool'],
+        },
+    'ZerglingArmorShred': {
+        'build_time': 90,
+        'built_from': ['SpawningPool'],
+        'display_name': 'Shredding Claws',
+    },
+    'VoidCoopHeroicFortitude': {
+        'build_time': 60,
+        'built_from': ['EvolutionChamber'],
+        'display_name': 'Heroic Fortitude',
+    },
+    'K5ChainLightning': {
+        'build_time': 90,
+        'built_from': ['EvolutionChamber'],
+        'display_name': 'Chain Reaction',
+    },
+    'K5Cooldowns': {
+        'build_time': 120,
+        'built_from': ['EvolutionChamber'],
+        'display_name': 'Ability Efficiency',
+    },
+    'hydraliskspeed': {
+        'build_time': 60,
+        'built_from': ['HydraliskDen'],
+        'display_name': 'Muscular Augments',
+        },
+    'HotSHydraliskHealth': {
+        'build_time': 90,
+        'built_from': ['HydraliskDen'],
+        'display_name': 'Ancillary Carapace',
+    },
+    'HydraliskFrenzy': {
+        'build_time': 120,
+        'built_from': ['HydraliskDen'],
+        'display_name': 'Frenzy',
+    },
+    'SeismicSpines': {  # TODO verify
+        'build_time': 120,  # TODO verify
+        'built_from': ['HydraliskDen'],
+        'display_name': 'Seismic Spines',
+    },
+    'HotSRapidRegeneration': {
+        'build_time': 60,
+        'built_from': ['Spire', 'GreaterSpire'],
+        'display_name': 'Rapid Regeneration',
+    },
+    'HotSViciousGlaive': {
+        'build_time': 90,
+        'built_from': ['Spire', 'GreaterSpire'],
+        'display_name': 'Vicious Glave',
+    },
+    'MutaliskSunderingGlave': {
+        'build_time': 120,  # TODO verify
+        'built_from': ['Spire', 'GreaterSpire',],
+        'display_name': 'Sundering Glave',
+    },
+    'PorousCartilage': {  # TODO verify
+        'build_time': 120,  # TODO verify
+        'built_from': ['Spire', 'GreaterSpire',],
+        'display_name': 'Porous Cartilage',
+        'display_name': '',
+    },
     # Artanis
+    # TODO verify
     'ZealotAiur': {
         'build_time': 38,
         'built_from': ['Gateway', 'WarpGate'],  # warpgate is necessary because of changing types
@@ -202,6 +248,7 @@ NEW_BUILD_DATA = {
         'display_name': 'Disintegration',
     },
     # Swann
+    # TODO verify
     'Hercules': {
         'build_time': 30,
         'built_from': ['Starport'],
@@ -253,7 +300,12 @@ NEW_BUILD_DATA = {
         'built_from': [],  # ?
         'display_name': 'Upgrade Laser Drill Level 2',
     },
+    # SCVs now benefits from the Level 1 Vehicle Specialist upgrade, which reduces the SCV's build time by 20%.
+    # Targeting Optics research time decreased from 90 seconds to 60 seconds.
+    # Mag-Field Accelerator upgrade research time decreased from 120 seconds to 90 seconds.
+
     # Zagara
+    # TODO verify
     'HotSSwarmling': {  # Zergling evolution
         'build_time': 2,
         'built_from': [],
@@ -294,8 +346,22 @@ NEW_BUILD_DATA = {
         'built_from': ['EvolutionChamber'],
         'display_name': 'Medusa Blades',
     },
-
+    'ChitinousPlating': {
+        'build_time': 60,
+        'built_from': ['UltraliskCavern'],
+    },
+    'BurrowCharge': {  # TODO verify
+        'build_time': 60,  # TODO verify
+        'built_from': ['UltraliskCavern'],
+        'display_name': 'Burrow Charge',
+    },
+    'TissueAssimilation': {  # TODO verify
+        'build_time': 90,  # TODO verify
+        'built_from': ['UltraliskCavern'],
+        'display_name': 'Tissue Assimilation',
+    },
     # Vorazun
+    # TODO verify
     'StalkerShakuras': {
         'build_time': 42,
         'built_from': ['Gateway', 'WarpGate'],
@@ -344,7 +410,7 @@ NEW_BUILD_DATA = {
         'display_name': 'Sentinel',
         },
     'CarrierAiur': {
-        'build_time': 86,
+        'build_time': 120,
         'built_from': ['Stargate'],
         'display_name': 'Carrier',
     },
@@ -363,12 +429,60 @@ NEW_BUILD_DATA = {
         'built_from': ['SolarForge'],
         'display_name': 'Solar Efficiency Level 3',
     },
-    'CarrierRepairDrones': {
+    'SOARepairBeamExtraTarget': {
         'build_time': 90,
+        'built_from': ['SolarForge'],
+        'display_name': 'Advanced Repair Systems',
+    },
+    'PhaseDetonation': {  # TODO verify
+        'build_time': 120,
+        'built_from': ['SolarForge'],
+        'display_name': 'Phase Detonation',
+    },
+    'SolarFlare': {  # TODO verify
+        'build_time': 120,
+        'built_from': ['SolarForge'],
+        'display_name': 'Solar Flare',
+    },
+    'Charge': {
+        'build_time': 60,
+        'built_from': ['TwilightCouncil'],
+        'display_name': 'Charge',
+    },
+    'Reconstruction': {  # TODO verify
+        'build_time': 90,
+        'built_from': ['TwilightCouncil'],
+        'display_name': 'Reconstruction',
+    },
+    'RapidRecharging': {  # TODO verify
+        'build_time': 90,
+        'built_from': ['TwilightCouncil'],
+        'display_name': 'Rapid Recharging',
+    },
+    'Reclamation': {  # TODO verify
+        'build_time': 120,
+        'built_from': ['TwilightCouncil'],
+        'display_name': 'Reclamation',
+    },
+    'PhoenixRangeUpgrade': {
+        'build_time': 60,
+        'built_from': ['FleetBeacon'],
+        'display_name': 'Anion Pulse-Crystals',
+    },
+    'PhasingArmor': {  # TODO verify
+        'build_time': 90,
+        'built_from': ['FleetBeacon'],
+        'display_name': 'Phasing Armor',
+    },
+    'CarrierRepairDrones': {
+        'build_time': 120,
         'built_from': ['FleetBeacon'],
         'display_name': 'Repair Drones',
     },
+    # TODO verify Robotics Facility units times
+    # TODO verify Robotics Bay upgrade times
     # Abathur
+    # TODO verify
     'RoachVile': {
         'build_time': 27,
         'built_from': [],
@@ -383,11 +497,6 @@ NEW_BUILD_DATA = {
         'build_time': 5,
         'built_from': [],
         'display_name': 'Leviathan',
-    },
-    'MutaliskSunderingGlave': {
-        'build_time': 120,
-        'built_from': ['Spire', 'GreaterSpire',],
-        'display_name': 'Sundering Glave',
     },
     'AbathurBioMechanicalTransfusion': {
         'build_time': 60,
@@ -405,16 +514,92 @@ NEW_BUILD_DATA = {
         'display_name': 'Corrosive Spray',
     },
     # Alarak
-
+    # TODO verify
+    'WarpPrismTaldarim': {
+        'build_time': 50,  # TODO verify
+        'built_from': ['Robotics Facility'],
+        'display_name': 'Warp Prism',
+    },
+    'ColossusTaldarim': {
+        'build_time': 75,  # TODO verify
+        'built_from': ['RoboticsFacility'],
+        'display_name': 'Wraithwalker',
+    },
+    'SOAMothershipv4': {
+        'build_time': 120,
+        'built_from': ['Stargate'],
+        'display_name': 'Mothership',
+    },
+    'AlarakStalkerPhasingArmor': {
+        'build_time': 90,  # TODO verify
+        'built_from': ['TwilightCouncil'],
+        'display_name': 'Phasing Armor',
+    },
+    'AlarakColossusChargedBlastAirAttack': {
+        'build_time': 60,  # TODO verify
+        'built_from': ['RoboticsBay'],
+        'display_name': 'Aerial Tracking',
+    },
+    'AlarakColossusChargedBlastChargeTime': {
+        'build_time': 60,  # TODO verify
+        'built_from': ['RoboticsBay'],
+        'display_name': 'Rapid Power Cycling',
+    },
     # Nova
-
+    # TODO verify
+    'Marine_BlackOps': {
+        'build_time': 0,  # calldown
+        'built_from': ['Barracks'],
+        'display_name': 'Elite Marine',
+    },
+    # TODO Marauder commando
+    # TODO Spec ops ghost
+    # TODO Hellion
+    # TODO Hellbat ranger
+    'Goliath_BlackOps': {
+        'build_time': 0,  # calldown
+        'built_from': ['Factory'],
+        'display_name': 'Strike Goliath',
+    },
+    'SiegeTank_BlackOps': {
+        'build_time': 0,  # calldown
+        'built_from': ['Factory'],
+        'display_name': 'Heavy Siege Tank',
+    },
+    'Liberator_BlackOps': {
+        'build_time': 0,  # calldown
+        'built_from': ['Starport'],
+        'display_name': 'Raid Liberator',
+    },
+    'Raven_BlackOps': {
+        'build_time': 0,  # calldown
+        'built_from': ['Starport'],
+        'display_name': 'Raven Type-II',
+    },
+    # TODO Covert Banshee
+    # TODO Railgun Turret
+    # TODO Missile Turret
+    'MarineSuperStim': {
+        'build_time': 90,  # TODO verify
+        'built_from': ['TechLab'],  # TODO verify
+        'display_name': 'Super Stimpack',
+    },
+    'LiberatorStructureAttack': {
+        'build_time': 90,  # TODO verify
+        'built_from': ['TechLab'],  # TODO verify
+        'display_name': 'Raid Artillery',
+    },
     # Stukov
+    # TODO sift through game
 
     # Fenix
+    # TODO find a game
 
     # Dehaka
+    # TODO sift through game
 
     # Han and Horner
+    # TODO sift through game
 }
 
 for value in NEW_BUILD_DATA.values():

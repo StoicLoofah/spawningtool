@@ -632,6 +632,7 @@ BUILD_DATA = {
     'PhoenixRangeUpgrade': {
         'build_time': 90,
         'built_from': ['FleetBeacon'],
+        'display_name': 'Anion Pulse-Crystals',
         },
     'CarrierLaunchSpeedUpgrade': {
         'build_time': 80,
