@@ -68,7 +68,24 @@ BO_EXCLUDED.update([
     'SiegeTank_BlackOpsSpawnerUnit',
 
     # Stukov
-
+    # More accurate to track when cocoons started
+    'SISCV',
+    'SIOverlord',
+    'SICocoonInfestedCivilian',
+    'SIInfestedTrooper',
+    'SIInfestedCivilian',
+    'InfestedCivilianPlaceholder',
+    'StukovInfestBroodling',
+    'SIInfestedMarine',
+    'SIInfestedDiamondback',  # TODO verify
+    'SIInfestedSiegeTank',  # TODO verify
+    'SIInfestedLiberator',  # TODO verify
+    'StukovInfestedBanshee',
+    'SIBroodQueen',  # TODO verify
+    'StukovApocalisk',  # Calldown
+    'SIVolatileInfested',  # not sure what this is but couldn't see it in-game
+    'StukovAleksander',  # Calldown
+    'ALEKSANDERCRASH_PLACEHOLDER',  # Calldown
     # Fenix
 
     # Dehaka
@@ -590,8 +607,159 @@ NEW_BUILD_DATA = {
         'display_name': 'Raid Artillery',
     },
     # Stukov
-    # TODO sift through game
-
+    # Track cocoons instead of units for more accurate start times
+    'SICocoonInfestedSCV': {
+        'build_time': 0,
+        'built_from': [],
+        'display_name': 'Infested SCV',
+    },
+    'SICocoonInfestedOverlord': {
+        'build_time': 0,
+        'built_from': [],
+        'display_name': 'Overlord',
+    },
+    'SICocoonInfestedMarine': {
+        'build_time': 0,
+        'built_from': [],
+        'display_name': 'Infested Marine',
+    },
+    'SICocoonInfestedDiamondback': {  # TODO verify
+        'build_time': 0,
+        'built_from': [],
+        'display_name': 'Infested Diamondback',
+    },
+    'SICocoonInfestedSiegeTank': {  # TODO verify
+        'build_time': 0,
+        'built_from': [],
+        'display_name': 'Infested Siege Tank',
+    },
+    'SICocoonInfestedLiberator': {  # TODO verify
+        'build_time': 0,
+        'built_from': [],
+        'display_name': 'Infested Liberator',
+    },
+    'SICocoonInfestedBanshee': {
+        'build_time': 0,
+        'built_from': [],
+        'display_name': 'Infested Banshee',
+    },
+    'SICocoonBroodQueen': {  # TODO verify
+        'build_time': 0,
+        'built_from': [],
+        'display_name': 'Brood Queen',
+    },
+    'HeavyInfestation': {
+        'build_time': 90,
+        'built_from': ['SICommandCenter'],
+        'display_name': 'Aggressive Incubation',
+    },
+    'SIBarracksTrainInfestedCivilianLevel2': {
+        'build_time': 120,
+        'built_from': ['SIColonistCompound'],  # TODO verify
+        'display_name': 'Infestation Level 1',
+    },
+    'SIBarracksTrainInfestedCivilianLevel3': {
+        'build_time': 120,
+        'built_from': ['SIColonistCompound'],  # TODO verify
+        'display_name': 'Infestation Level 2',
+    },
+    'SIBarracksTrainInfestedCivilianLevel4': {
+        'build_time': 120,
+        'built_from': ['SIColonistCompound'],  # TODO verify
+        'display_name': 'Infestation Level 3',
+    },
+    'StukovInfestedInfestedCivilianLeapAttack': {
+        'build_time': 60,
+        'built_from': ['SIColonistCompound'],  # TODO verify
+        'display_name': 'Anaerobic Enhancement',
+    },
+    'StukovInfestedCivilianSpawnBroodlingOnDeath': {  # TODO verify
+        'build_time': 90,
+        'built_from': ['SIColonistCompound'],  # TODO verify
+        'display_name': 'Broodling Gestation',
+    },
+    'SIMarinePlaguedMunitions': {
+        'build_time': 90,
+        'built_from': ['SIBarracksTechLab'],
+        'display_name': 'Plagued Munitions',
+    },
+    'SIMarineTrooperRange': {
+        'build_time': 60,
+        'built_from': ['SIBarracksTechLab'],
+        'display_name': 'Retinal Augmentation',
+    },
+    'SIBunkerLifeRegen': {
+        'build_time': 60,
+        'built_from': ['SIEngineeringBay'],
+        'display_name': 'Regenerative Plating',
+    },
+    'SIBunkerArmor': {
+        'build_time': 60,
+        'built_from': ['SIEngineeringBay'],
+        'display_name': 'Calcified Armor',
+    },
+    'SIInfantryWeaponsLevel1': {
+        'build_time': 160,
+        'built_from': ['SIEngineeringBay'],
+        'display_name': 'Stukov Infantry Weapons Level 1',
+        },
+    'SIInfantryWeaponsLevel2': {
+        'build_time': 190,
+        'built_from': ['SIEngineeringBay'],
+        'display_name': 'Stukov Infantry Weapons Level 2',
+        },
+    'SIInfantryWeaponsLevel3': {
+        'build_time': 220,
+        'built_from': ['SIEngineeringBay'],
+        'display_name': 'Stukov Infantry Weapons Level 3',
+        },
+    'SIInfantryArmorLevel1': {
+        'build_time': 160,
+        'built_from': ['SIEngineeringBay'],
+        'display_name': 'Stukov Infantry Armor Level 1',
+        },
+    'SIInfantryArmorLevel2': {
+        'build_time': 190,
+        'built_from': ['SIEngineeringBay'],
+        'display_name': 'Stukov Infantry Armor Level 2',
+        },
+    'SIInfantryArmorLevel3': {
+        'build_time': 220,
+        'built_from': ['SIEngineeringBay'],
+        'display_name': 'Stukov Infantry Armor Level 3',
+        },
+    # TODO Stukov Factory Tech Lab
+    # TODO Stukov Starport Tech Lab
+    'SITerranVehicleWeaponsLevel1': {
+        'build_time': 160,
+        'built_from': ['SIArmory'],
+        'display_name': 'Stukov Vehicle and Ship Weapons Level 1',
+        },
+    'SITerranVehicleWeaponsLevel2': {
+        'build_time': 190,
+        'built_from': ['SIArmory'],
+        'display_name': 'Stukov Vehicle and Ship Weapons Level 2',
+        },
+    'SITerranVehicleWeaponsLevel3': {
+        'build_time': 220,
+        'built_from': ['SIArmory'],
+        'display_name': 'Stukov Vehicle and Ship Weapons Level 3',
+        },
+    'SITerranVehicleArmorLevel1': {
+        'build_time': 160,
+        'built_from': ['SIArmory'],
+        'display_name': 'Stukov Vehicle and Ship Armor Level 1',
+        },
+    'SITerranVehicleArmorLevel2': {
+        'build_time': 190,
+        'built_from': ['SIArmory'],
+        'display_name': 'Stukov Vehicle and Ship Armor Level 2',
+        },
+    'SITerranVehicleArmorLevel3': {
+        'build_time': 220,
+        'built_from': ['SIArmory'],
+        'display_name': 'Stukov Vehicle and Ship Armor Level 3',
+        },
     # Fenix
     # TODO find a game
 
