@@ -87,6 +87,11 @@ BO_EXCLUDED.update([
     'StukovAleksander',  # Calldown
     'ALEKSANDERCRASH_PLACEHOLDER',  # Calldown
     # Fenix
+    'FenixCoop',
+    'FenixDragoon',
+    'FenixChampionTaldarinImmortal',
+    'FenixChampionWarbringerColossus',
+    'FenixAdeptShade',
 
     # Dehaka
     'EssencePickup',
@@ -110,10 +115,22 @@ BO_UPGRADES_EXCLUDED.update([
 
 NEW_BUILD_DATA = {
     # Raynor
-    # TODO verify
-    'Medic': {  # Assume Rapid Recruitment
-        'build_time': 10,
-        'built_from': ['TechLab'],
+    'Marine': {
+        'build_time': 13,  # TODO verify others
+        'built_from': ['Barracks'],
+        },
+    'Marauder': {
+        'build_time': 15,  # TODO verify others
+        'built_from': ['Barracks'],
+        },
+    'Firebat': {
+        'build_time': 15,  # TODO verify others
+        'built_from': ['Barracks'],
+        'display_name': 'Firebar',
+    },
+    'Medic': {
+        'build_time': 13,  # TODO verify others
+        'built_from': ['Barracks'],
         'display_name': 'Medic',
     },
     'StabilizerMedPacks': {
@@ -121,11 +138,15 @@ NEW_BUILD_DATA = {
         'built_from': ['TechLab'],
         'display_name': 'Stabilizer Medpacks',
     },
-    'Vulture': {  # also rapid recruitment?
-        'build_time': 10,
+    'Vulture': {
+        'build_time': 13,  # TODO verify others
         'built_from': ['Factory'],
         'display_name': 'Vulture',
     },
+    'SiegeTank': {
+        'build_time': 23,  # TODO verify others
+        'built_from': ['Factory'],
+        },
     'NanoConstructor': {
         'build_time': 60,
         'built_from': ['TechLab'],
@@ -138,6 +159,11 @@ NEW_BUILD_DATA = {
     },
 
     # Kerrigan
+    'HotSRaptor': {
+        'build_time': 24,
+        'built_from': [],
+        'display_name': 'Zergling',
+    },
     'Hydralisk': {
         'build_time': 30,
         'built_from': [],
@@ -152,6 +178,14 @@ NEW_BUILD_DATA = {
         'built_from': ['Hatchery', 'Lair', 'Hive'],
         'display_name': 'Queen',
     },
+    'overlordspeed': {
+        'build_time': 60,  # TODO verify
+        'built_from': ['Hatchery', 'Lair', 'Hive'],
+        },
+    'overlordtransport': {
+        'build_time': 60,  # TODO verify
+        'built_from': ['Hatchery', 'Lair', 'Hive'],
+        },
     'zerglingmovementspeed': {
         'build_time': 60,
         'built_from': ['SpawningPool'],
@@ -422,9 +456,9 @@ NEW_BUILD_DATA = {
 
     # Karax
     'ZealotPurifier': {
-        'build_time': 38,
+        'build_time': 30,  # TODO 30 for Fenix, 38 for Karax
         'built_from': ['Gateway', 'WarpGate'],  # warpgate is necessary because of changing types
-        'display_name': 'Sentinel',
+        'display_name': 'Zealot',  # Sentinel for Karax, Legionnaire for Fexnis
         },
     'CarrierAiur': {
         'build_time': 120,
@@ -761,7 +795,63 @@ NEW_BUILD_DATA = {
         'display_name': 'Stukov Vehicle and Ship Armor Level 3',
         },
     # Fenix
-    # TODO find a game
+    # ZealotPurifier is with Karax
+    'SentryFenix': {
+        'build_time': 37,
+        'built_from': ['Gateway', 'WarpGate'],
+        'display_name': 'Sentry',
+    },
+    'AdeptFenix': {
+        'build_time': 38,
+        'built_from': ['Gateway', 'WarpGate'],
+        'display_name': 'Adept',
+    },
+    'ColossusPurifier': {
+        'build_time': 75,
+        'built_from': ['RoboticsFacility'],
+        'display_name': 'Colossus',
+    },
+    # TODO Disruptor
+    'Scout': {
+        'build_time': 30,
+        'built_from': ['Stargate'],
+        'display_name': 'Scout',
+    },
+    'AStrongHeart': {
+        'build_time': 10,
+        'built_from': ['Forge'],
+        'display_name': 'A Strong Heart',
+    },
+    'Charge': {
+        'build_time': 60,
+        'built_from': ['TwilightCouncil'],
+        },
+    'AdeptFenixShadeSpawn': {
+        'build_time': 60,
+        'built_from': ['TwilightCouncil'],
+        'display_name': 'Psionic Projection',
+    },
+    # TODO Empowered Blades
+    # TODO Debilitation System
+    'ObserverGraviticBooster': {
+        'build_time': 60,
+        'built_from': ['RoboticsBay'],
+        },
+    'ExtendedThermalLance': {
+        'build_time': 90,
+        'built_from': ['RoboticsBay'],
+        },
+    # TODO Cloaknig Module
+    # TODO Purification Echo
+    # TODO Gravimetric Overload
+    # TODO Purification Blast
+    'FenixScoutWeaponRange': {
+        'build_time': 60,
+        'built_from': ['FleetBeacon'],
+        'display_name': 'Combat Sensor Array',
+    },
+    # TODO Suppression Procedure
+    # TODO Interdictors
 
     # Dehaka
     # TODO sift through game
