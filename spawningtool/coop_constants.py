@@ -95,6 +95,26 @@ BO_EXCLUDED.update([
 
     # Dehaka
     'EssencePickup',
+    'DehakaCoopReviveCocoonFootPrint',
+    'DehakaLocust',
+    'LocustMPPrecursor',
+    'DehakaNydusDestroyerTimedNoFood',
+    # Calldowns
+    'DehakaGlevig',
+    'DehakaGlevigDeepTunnelPlacement',
+    'CoopDehakaGlevigEggHydralisk',
+    'CoopDehakaGlevigEggRoach',
+    'CoopDehakaGlevigEggZergling',
+    'DehakaMurvar',
+    'DehakaDakrun',
+    # using cocoons instead
+    'DehakaDrone',
+    'DehakaZerglingLevel2',
+    'DehakaRoachLevel2',
+    'DehakaHydraliskLevel2',
+    'DehakaSwarmHost',
+    'DehakaUltraliskLevel2',
+
 
     # Han and Horner
     'HHScrapPickup',
@@ -117,6 +137,8 @@ BO_CHANGED_EXCLUDED.update([
     'HHVikingAssault',
     'HHVikingFighter',
     'HHViking',
+    'HotsRaptor',
+    'HotSSwarmling',
 
 ])
 
@@ -133,6 +155,10 @@ BO_UPGRADES_EXCLUDED.update([
     'NydusNetworkCoopAllyLeft',
     # Vorazun
     'MasteryVorazunTimeStopHasteModifyPlayer',
+    # Dehaka
+    'DehakaCoopStage2',
+    'DehakaColossusLegs',
+    'DehakaCoopStage3',
 ])
 
 BUILD_DATA = BUILD_DATA.copy()
@@ -177,6 +203,24 @@ BUILD_DATA.update({
         'build_time': 60,
         'built_from': ['EvolutionChamber'],
         'display_name': 'Heroic Fortitude',
+    },
+    'ChitinousPlating': {
+        'build_time': 60,
+        'built_from': ['UltraliskCavern'],
+        'display_name': 'Chitinous Plating',
+    },
+    'BurrowCharge': {  # TODO verify
+        'build_time': 60,  # TODO verify
+        'built_from': ['UltraliskCavern'],
+        'display_name': 'Burrow Charge',
+    },
+    'HotSTissueAssimilation': {
+        'build_time': 60,
+        'built_from': ['UltraliskCavern'],
+        'display_name': 'Tissue Assimilation',
+        'race': 'Zerg',
+        'type': 'Upgrade',
+        'is_morph': False,
     },
 })
 
@@ -224,8 +268,18 @@ COMMANDER_BUILD_DATA = {
             'built_from': ['TechLab'],
             'display_name': 'Cerberus Mines',
         },
+        'SupplyDepotDrop': {
+            'build_time': 0,
+            'built_from': [],
+            'display_name': 'Supply Depot',
+            'race': 'Terran',
+            'type': 'Building',
+            'is_morph': False,
+        },
+
     },
     'Kerrigan': {
+        # TODO extra Zerglings in the build order?
         'HotSRaptor': {
             'build_time': 24,
             'built_from': [],
@@ -240,6 +294,23 @@ COMMANDER_BUILD_DATA = {
             'built_from': [],
             'display_name': 'Hydralisk',
         },
+        'Lurker': {
+            'build_time': 15,
+            'built_from': ['Hydralisk'],
+            'display_name': 'Lurker',
+            'race': 'Zerg',
+            'type': 'Unit',
+            'is_morph': True,
+        },
+        'HotSTorrasque': {
+            'build_time': 55,
+            'built_from': [],
+            'display_name': 'Ultralisk',  # Torrasque strain
+            'race': 'Zerg',
+            'type': 'Unit',
+            'is_morph': False,
+        },
+
         'K5ChainLightning': {
             'build_time': 90,
             'built_from': ['EvolutionChamber'],
@@ -265,8 +336,8 @@ COMMANDER_BUILD_DATA = {
             'built_from': ['HydraliskDen'],
             'display_name': 'Frenzy',
         },
-        'SeismicSpines': {  # TODO verify
-            'build_time': 120,  # TODO verify
+        'SeismicSpines': {
+            'build_time': 120,
             'built_from': ['HydraliskDen'],
             'display_name': 'Seismic Spines',
         },
@@ -281,15 +352,14 @@ COMMANDER_BUILD_DATA = {
             'display_name': 'Vicious Glave',
         },
         'MutaliskSunderingGlave': {
-            'build_time': 120,  # TODO verify
+            'build_time': 120,
             'built_from': ['Spire', 'GreaterSpire',],
             'display_name': 'Sundering Glave',
         },
         'PorousCartilage': {  # TODO verify
-            'build_time': 120,  # TODO verify
+            'build_time': 60,
             'built_from': ['Spire', 'GreaterSpire',],
             'display_name': 'Porous Cartilage',
-            'display_name': '',
         },
     },
     'Artanis': {
@@ -396,7 +466,7 @@ COMMANDER_BUILD_DATA = {
         'Zergling': {
             'build_time': 9,
             'built_from': [],
-            'display_name': 'Swarmling',
+            'display_name': 'Zergling',
         },
         'HotSSwarmling': {  # Zergling evolution
             'build_time': 2,  # TODO verify
@@ -444,21 +514,6 @@ COMMANDER_BUILD_DATA = {
             'build_time': 60,
             'built_from': ['ScourgeNest'],
             'display_name': 'Virulent Spores',
-        },
-        'ChitinousPlating': {
-            'build_time': 60,
-            'built_from': ['UltraliskCavern'],
-            'display_name': 'Chitinous Plating',
-        },
-        'BurrowCharge': {  # TODO verify
-            'build_time': 60,  # TODO verify
-            'built_from': ['UltraliskCavern'],
-            'display_name': 'Burrow Charge',
-        },
-        'TissueAssimilation': {  # TODO verify
-            'build_time': 90,  # TODO verify
-            'built_from': ['UltraliskCavern'],
-            'display_name': 'Tissue Assimilation',
         },
     },
     'Vorazun': {
@@ -582,6 +637,7 @@ COMMANDER_BUILD_DATA = {
         },
         # TODO verify Robotics Facility units times
         # TODO verify Robotics Bay upgrade times
+        # TODO Khaydarin Monolith
     },
     'Abathur': {
         # TODO verify
@@ -913,7 +969,189 @@ COMMANDER_BUILD_DATA = {
         # TODO Interdictors
     },
     'Dehaka': {
-        # TODO sift through game
+        # Units
+        'DehakaTrainEggDrone': {
+            'build_time': 0,
+            'built_from': [],
+            'display_name': 'Primal Drone',
+            'race': 'Zerg',
+            'type': 'Unit',
+            'is_morph': False,
+        },
+        'DehakaTrainEggZergling': {
+            'build_time': 0,
+            'built_from': [],
+            'display_name': 'Primal Zergling',
+            'race': 'Zerg',
+            'type': 'Unit',
+            'is_morph': False,
+        },
+        'DehakaTrainEggRoach': {
+            'build_time': 0,
+            'built_from': [],
+            'display_name': 'Primal Roach',
+            'race': 'Zerg',
+            'type': 'Unit',
+            'is_morph': False,
+        },
+        'DehakaTrainEggHydralisk': {
+            'build_time': 0,
+            'built_from': [],
+            'display_name': 'Primal Hydralisk',
+            'race': 'Zerg',
+            'type': 'Unit',
+            'is_morph': False,
+        },
+        'DehakaTrainEggSwarmHost': {
+            'build_time': 0,
+            'built_from': [],
+            'display_name': 'Primal Swarm Host',
+            'race': 'Zerg',
+            'type': 'Unit',
+            'is_morph': False,
+        },
+        'DehakaTrainEggUltralisk': {
+            'build_time': 0,
+            'built_from': [],
+            'display_name': 'Primal Ultralisk',
+            'race': 'Zerg',
+            'type': 'Unit',
+            'is_morph': False,
+        },
+
+
+
+        # Buildings
+        'DehakaBarracks': {
+            'build_time': 0,
+            'built_from': [],
+            'display_name': 'Primal Warden',
+            'race': 'Zerg',
+            'type': 'Building',
+            'is_morph': False,
+        },
+        'DehakaHatchery': {
+            'build_time': 0,
+            'built_from': [],
+            'display_name': 'Primal Hive',
+            'race': 'Zerg',
+            'type': 'Building',
+            'is_morph': False,
+        },
+        'DehakaGlevigStructure': {
+            'build_time': 0,
+            'built_from': [],
+            'display_name': 'Glevig\'s Den',
+            'race': 'Zerg',
+            'type': 'Building',
+            'is_morph': False,
+        },
+        'DehakaMurvarStructure': {
+            'build_time': 0,
+            'built_from': [],
+            'display_name': 'Murvar\'s Den',
+            'race': 'Zerg',
+            'type': 'Building',
+            'is_morph': False,
+        },
+        'DehakaDakrunStructure': {
+            'build_time': 0,
+            'built_from': [],
+            'display_name': 'Dakrun\'s Den',
+            'race': 'Zerg',
+            'type': 'Building',
+            'is_morph': False,
+        },
+        'DehakaNydusDestroyer': {
+            'build_time': 0,
+            'built_from': [],
+            'display_name': 'Primal Wurm',
+            'race': 'Zerg',
+            'type': 'Building',
+            'is_morph': False,
+        },
+        # Upgrades
+        'DehakaPrimalWeaponsLevel1': {
+            'build_time': 160,
+            'built_from': ['DehakaHatchery'],
+            'display_name': 'Primal Attacks Level 1',
+            'race': 'Zerg',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+        'DehakaPrimalWeaponsLevel2': {
+            'build_time': 190,
+            'built_from': ['DehakaHatchery'],
+            'display_name': 'Primal Attacks Level 2',
+            'race': 'Zerg',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+        'DehakaPrimalWeaponsLevel3': {
+            'build_time': 220,
+            'built_from': ['DehakaHatchery'],
+            'display_name': 'Primal Attacks Level 3',
+            'race': 'Zerg',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+        'DehakaPrimalArmorLevel1': {
+            'build_time': 160,
+            'built_from': ['DehakaHatchery'],
+            'display_name': 'Primal Carapace Level 1',
+            'race': 'Zerg',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+        'DehakaPrimalArmorLevel2': {
+            'build_time': 190,
+            'built_from': ['DehakaHatchery'],
+            'display_name': 'Primal Carapace Level 2',
+            'race': 'Zerg',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+        'DehakaPrimalArmorLevel3': {
+            'build_time': 220,
+            'built_from': ['DehakaHatchery'],
+            'display_name': 'Primal Carapace Level 3',
+            'race': 'Zerg',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+        'DehakaRoachMoveSpeed': {
+            'build_time': 60,
+            'built_from': ['DehakaGlevigStructure'],
+            'display_name': 'Glial Reconstitution',
+            'race': 'Zerg',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+        'DehakaHydraliskSpeed': {
+            'build_time': 60,
+            'built_from': ['DehakaGlevigStructure'],
+            'display_name': 'Muscular Augments',
+            'race': 'Zerg',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+        'DehakaUltraliskCrashingCharge': {
+            'build_time': 60,
+            'built_from': ['DehakaDakrunStructure'],
+            'display_name': 'Brutal Charge',
+            'race': 'Zerg',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+        'DehakaUltraliskRegen': {
+            'build_time': 60,
+            'built_from': ['DehakaDakrunStructure'],
+            'display_name': 'Healing Adaptation',
+            'race': 'Zerg',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+
     },
     'Horner': {
         'HHSCV': {
