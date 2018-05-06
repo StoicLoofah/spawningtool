@@ -224,6 +224,32 @@ BUILD_DATA.update({
         'type': 'Upgrade',
         'is_morph': False,
     },
+    # Shared by at least Fenix and Karax
+    'Charge': {
+        'build_time': 60,
+        'built_from': ['TwilightCouncil'],
+        'display_name': 'Charge',
+        'race': 'Protoss',
+        'type': 'Upgrade',
+        'is_morph': False,
+    },
+    'ObserverGraviticBooster': {
+        'build_time': 60,
+        'built_from': ['RoboticsBay'],
+        'display_name': 'Gravitic Boosters',
+        'race': 'Protoss',
+        'race': 'Protoss',
+        'type': 'Upgrade',
+        'is_morph': False,
+    },
+    'ExtendedThermalLance': {
+        'build_time': 90,
+        'built_from': ['RoboticsBay'],
+        'display_name': 'Extended Thermal Lance',
+        'race': 'Protoss',
+        'type': 'Upgrade',
+        'is_morph': False,
+    },
 })
 
 COMMANDER_BUILD_DATA = {
@@ -621,6 +647,38 @@ COMMANDER_BUILD_DATA = {
             'type': 'Unit',
             'is_morph': False,
             },
+        'SentryPurifier': {
+            'build_time': 37,
+            'built_from': ['Gateway', 'WarpGate'],
+            'display_name': 'Energizer',
+            'race': 'Protoss',
+            'type': 'Unit',
+            'is_morph': False,
+            },
+        'ImmortalAiur': {
+            'build_time': 55,
+            'built_from': ['Gateway', 'WarpGate'],
+            'display_name': 'Immortal',
+            'race': 'Protoss',
+            'type': 'Unit',
+            'is_morph': False,
+            },
+        'ColossusPurifier': {
+            'build_time': 75,
+            'built_from': ['Gateway', 'WarpGate'],
+            'display_name': 'Immortal',
+            'race': 'Protoss',
+            'type': 'Unit',
+            'is_morph': False,
+            },
+        'PhoenixPurifier': {
+            'build_time': 35,
+            'built_from': ['Stargate'],
+            'display_name': 'Mirage',
+            'race': 'Protoss',
+            'type': 'Unit',
+            'is_morph': False,
+            },
         'CarrierAiur': {
             'build_time': 120,
             'built_from': ['Stargate'],
@@ -640,37 +698,53 @@ COMMANDER_BUILD_DATA = {
             'build_time': 90,
             'built_from': ['SolarForge'],
             'display_name': 'Solar Efficiency Level 1',
+            'race': 'Protoss',
+            'type': 'Upgrade',
+            'is_morph': False,
         },
         'SolarEfficiencyLevel2': {
             'build_time': 120,
             'built_from': ['SolarForge'],
             'display_name': 'Solar Efficiency Level 2',
+            'race': 'Protoss',
+            'type': 'Upgrade',
+            'is_morph': False,
         },
         'SolarEfficiencyLevel3': {
             'build_time': 180,
             'built_from': ['SolarForge'],
             'display_name': 'Solar Efficiency Level 3',
+            'race': 'Protoss',
+            'type': 'Upgrade',
+            'is_morph': False,
         },
         'SOARepairBeamExtraTarget': {
             'build_time': 90,
             'built_from': ['SolarForge'],
             'display_name': 'Advanced Repair Systems',
+            'race': 'Protoss',
+            'type': 'Upgrade',
+            'is_morph': False,
         },
-        'PhaseDetonation': {  # TODO verify
+        'SOAOrbitalStrikeUpgrade': {
             'build_time': 120,
             'built_from': ['SolarForge'],
             'display_name': 'Phase Detonation',
+            'race': 'Protoss',
+            'type': 'Upgrade',
+            'is_morph': False,
         },
-        'SolarFlare': {  # TODO verify
+        'SOASolarLanceUpgrade': {
             'build_time': 120,
             'built_from': ['SolarForge'],
             'display_name': 'Solar Flare',
+            'race': 'Protoss',
+            'type': 'Upgrade',
+            'is_morph': False,
         },
-        'Charge': {
-            'build_time': 60,
-            'built_from': ['TwilightCouncil'],
-            'display_name': 'Charge',
-        },
+        # TODO Enhanced Targeting 120
+        # TODO Optimized Ordinance 120
+        # TODO Fortificiation Barrier 60
         'Reconstruction': {  # TODO verify
             'build_time': 90,
             'built_from': ['TwilightCouncil'],
@@ -686,6 +760,8 @@ COMMANDER_BUILD_DATA = {
             'built_from': ['TwilightCouncil'],
             'display_name': 'Reclamation',
         },
+        # TODO Fire Beam 120
+        # TODO Shadow Cannon 120
         'PhoenixRangeUpgrade': {
             'build_time': 60,
             'built_from': ['FleetBeacon'],
@@ -701,8 +777,6 @@ COMMANDER_BUILD_DATA = {
             'built_from': ['FleetBeacon'],
             'display_name': 'Repair Drones',
         },
-        # TODO verify Robotics Facility units times
-        # TODO verify Robotics Bay upgrade times
     },
     'Abathur': {
         # TODO verify
@@ -1077,14 +1151,7 @@ COMMANDER_BUILD_DATA = {
         },
         # TODO Empowered Blades
         # TODO Debilitation System
-        'ObserverGraviticBooster': {
-            'build_time': 60,
-            'built_from': ['RoboticsBay'],
-            },
-        'ExtendedThermalLance': {
-            'build_time': 90,
-            'built_from': ['RoboticsBay'],
-            },
+
         # TODO Cloaknig Module
         # TODO Purification Echo
         # TODO Gravimetric Overload
