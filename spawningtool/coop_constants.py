@@ -63,11 +63,14 @@ BO_EXCLUDED.update([
     'NovaReviveBeacon',
     'SpiderMineBurrowed',
     'HealingDrone',
-    'Marine_BlackOpsSpawnerUnit',
-    'Liberator_BlackOpsSpawnerUnit',
-    'Raven_BlackOpsSpawnerUnit',
-    'Goliath_BlackOpsSpawnerUnit',
-    'SiegeTank_BlackOpsSpawnerUnit',
+    'Marine_BlackOps',
+    'Liberator_BlackOps',
+    'Raven_BlackOps',
+    'Goliath_BlackOps',
+    'SiegeTank_BlackOps',
+    'HellbatBlackOps',
+    'Marauder_BlackOps',
+    'Banshee_BlackOps',
 
     # Stukov
     # More accurate to track when cocoons started
@@ -101,6 +104,7 @@ BO_EXCLUDED.update([
     'DehakaLocust',
     'LocustMPPrecursor',
     'DehakaNydusDestroyerTimedNoFood',
+    'DehakaPlacement',
     # Calldowns
     'DehakaGlevig',
     'DehakaGlevigDeepTunnelPlacement',
@@ -116,7 +120,6 @@ BO_EXCLUDED.update([
     'DehakaHydraliskLevel2',
     'DehakaSwarmHost',
     'DehakaUltraliskLevel2',
-
 
     # Han and Horner
     'HHScrapPickup',
@@ -224,6 +227,22 @@ BUILD_DATA.update({
         'type': 'Upgrade',
         'is_morph': False,
     },
+    # Kerrigan and Abathur
+    'HotSRapidRegeneration': {
+        'build_time': 60,
+        'built_from': ['Spire', 'GreaterSpire'],
+        'display_name': 'Rapid Regeneration',
+    },
+    'MutaliskSunderingGlave': {
+        'build_time': 120,
+        'built_from': ['Spire', 'GreaterSpire',],
+        'display_name': 'Sundering Glave',
+    },
+    'HotSViciousGlaive': {
+        'build_time': 90,
+        'built_from': ['Spire', 'GreaterSpire'],
+        'display_name': 'Vicious Glave',
+    },
     # Shared by at least Fenix and Karax
     'Charge': {
         'build_time': 60,
@@ -247,6 +266,15 @@ BUILD_DATA.update({
         'built_from': ['RoboticsBay'],
         'display_name': 'Extended Thermal Lance',
         'race': 'Protoss',
+        'type': 'Upgrade',
+        'is_morph': False,
+    },
+    # at least Nova
+    'HighCapacityBarrels': {
+        'build_time': 60,
+        'built_from': ['TechLab'],
+        'display_name': 'Infernal Pre-Igniter',
+        'race': 'Terran',
         'type': 'Upgrade',
         'is_morph': False,
     },
@@ -419,21 +447,6 @@ COMMANDER_BUILD_DATA = {
             'build_time': 120,
             'built_from': ['HydraliskDen'],
             'display_name': 'Seismic Spines',
-        },
-        'HotSRapidRegeneration': {
-            'build_time': 60,
-            'built_from': ['Spire', 'GreaterSpire'],
-            'display_name': 'Rapid Regeneration',
-        },
-        'HotSViciousGlaive': {
-            'build_time': 90,
-            'built_from': ['Spire', 'GreaterSpire'],
-            'display_name': 'Vicious Glave',
-        },
-        'MutaliskSunderingGlave': {
-            'build_time': 120,
-            'built_from': ['Spire', 'GreaterSpire',],
-            'display_name': 'Sundering Glave',
         },
         'PorousCartilage': {  # TODO verify
             'build_time': 60,
@@ -785,6 +798,14 @@ COMMANDER_BUILD_DATA = {
             'built_from': [],
             'display_name': 'Roach',
         },
+        'RavagerAbathur': {
+            'build_time': 9,
+            'built_from': [],
+            'display_name': 'Ravager',
+            'race': 'Zerg',
+            'type': 'Unit',
+            'is_morph': True,
+        },
         'Brutalisk': {  # actually the cocoon morph from roach
             'build_time': 5,
             'built_from': [],
@@ -795,21 +816,52 @@ COMMANDER_BUILD_DATA = {
             'built_from': [],
             'display_name': 'Leviathan',
         },
-        'AbathurBioMechanicalTransfusion': {
-            'build_time': 60,
-            'built_from': ['Evolution Chamber'],
-            'display_name': 'Bio-Mechanical Transfusion',
-        },
         'Devourer': {
             'build_time': 15,
             'built_from': [],
             'display_name': 'Devourer',
         },
+
+        'AbathurBioMechanicalTransfusion': {
+            'build_time': 60,
+            'built_from': ['EvolutionChamber'],
+            'display_name': 'Bio-Mechanical Transfusion',
+        },
+        'HotSRoachDamage': {
+            'build_time': 110,
+            'built_from': ['EvolutionChamber'],
+            'display_name': 'Hydriodic Bile',
+            'race': 'Zerg',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+        # TODO Adaptive Plating
+        'RavagerCorrosiveBileRadiusIncrease': {
+            'build_time': 90,
+            'built_from': ['EvolutionChamber'],
+            'display_name': 'Bloated Bile Ducts',
+            'race': 'Zerg',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+        # TODO Potent Bile
+        # TODO Prolonged Dispersion
         'DevourerAoEDamage': {
             'build_time': 90,
             'built_from': ['Spire', 'GreaterSpire'],
             'display_name': 'Corrosive Spray',
         },
+        'HotSPressurizedGlands': {
+            'build_time': 90,
+            'built_from': ['InfestationPit'],
+            'display_name': 'Pressurized Glands',
+            'race': 'Zerg',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+        #TODO Virulent Microbes
+        # TODO Deep TUnnel
+        # TODO Paralytic Barbs
     },
     'Alarak': {
         # TODO verify
@@ -907,48 +959,131 @@ COMMANDER_BUILD_DATA = {
     },
     'Nova': {
         # TODO verify
-        'Marine_BlackOps': {
+        'Marine_BlackOpsSpawnerUnit': {
             'build_time': 0,  # calldown
             'built_from': ['Barracks'],
             'display_name': 'Elite Marine',
         },
-        # TODO Marauder commando
+        'Marauder_BlackOpsSpawnerUnit': {
+            'build_time': 0,  # calldown
+            'built_from': ['Barracks'],
+            'display_name': 'Hellbat Rangers',
+            'race': 'Terran',
+            'type': 'Unit',
+            'is_morph': False,
+        },
         # TODO Spec ops ghost
-        # TODO Hellion
-        # TODO Hellbat ranger
-        'Goliath_BlackOps': {
+        'Hellbat_BlackOpsSpawnerUnit': {
+            'build_time': 0,  # calldown
+            'built_from': ['Factory'],
+            'display_name': 'Hellbat Rangers',
+            'race': 'Terran',
+            'type': 'Unit',
+            'is_morph': False,
+        },
+        'Goliath_BlackOpsSpawnerUnit': {
             'build_time': 0,  # calldown
             'built_from': ['Factory'],
             'display_name': 'Strike Goliath',
         },
-        'SiegeTank_BlackOps': {
+        'SiegeTank_BlackOpsSpawnerUnit': {
             'build_time': 0,  # calldown
             'built_from': ['Factory'],
             'display_name': 'Heavy Siege Tank',
         },
-        'Liberator_BlackOps': {
+        'Liberator_BlackOpsSpawnerUnit': {
             'build_time': 0,  # calldown
             'built_from': ['Starport'],
             'display_name': 'Raid Liberator',
         },
-        'Raven_BlackOps': {
+        'Raven_BlackOpsSpawnerUnit': {
             'build_time': 0,  # calldown
             'built_from': ['Starport'],
             'display_name': 'Raven Type-II',
         },
-        # TODO Covert Banshee
+        'Banshee_BlackOpsSpawnerUnit': {
+            'build_time': 0,  # calldown
+            'built_from': ['Starport'],
+            'display_name': 'Covert Banshee',
+            'race': 'Terran',
+            'type': 'Unit',
+            'is_morph': False,
+        },
         # TODO Railgun Turret
         # TODO Missile Turret
+        'LaserTargetingSystemNova': {
+            'build_time': 60,
+            'built_from': ['TechLab'],
+            'display_name': 'Laser Targeting System',
+            'race': 'Terran',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
         'MarineSuperStim': {
             'build_time': 90,  # TODO verify
             'built_from': ['TechLab'],  # TODO verify
             'display_name': 'Super Stimpack',
+            'race': 'Terran',
+            'type': 'Upgrade',
+            'is_morph': False,
         },
+        'NovaConcussiveShells': {
+            'build_time': 60,
+            'built_from': ['TechLab'],
+            'display_name': 'Suppression Shells',
+            'race': 'Terran',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+        # TODO Magrail Munitions
+        'GhostBlackOpsEMP': {
+            'build_time': 60,
+            'built_from': ['TechLab'],
+            'display_name': 'EMP Round',
+            'race': 'Terran',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+        # TODO Triple Tap
+        'AresClassWeaponsSystem': {
+            'build_time': 60,
+            'built_from': ['TechLab'],
+            'display_name': 'Ares-Class Targeting System',
+            'race': 'Terran',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+        # TODO Jump Jet Assault
+        # TODO Lockdown Missiles
+        'DeploySpiderMines': {
+            'build_time': 60,
+            'built_from': ['TechLab'],
+            'display_name': 'Spider Mines',
+            'race': 'Terran',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+        # TODO Graduating Range
+        'BansheePermaCloak': {
+            'build_time': 60,
+            'built_from': ['TechLab'],
+            'display_name': 'Advanced Cloaking Field',
+            'race': 'Terran',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+        # TODO Rocket Barrage
         'LiberatorStructureAttack': {
             'build_time': 90,  # TODO verify
             'built_from': ['TechLab'],  # TODO verify
             'display_name': 'Raid Artillery',
+            'race': 'Terran',
+            'type': 'Upgrade',
+            'is_morph': False,
         },
+        # TODO Smart Servos
+        # TODO Covert Triage
+        # TODO Enhanced Manufacturing
     },
     'Stukov': {
         # Track cocoons instead of units for more accurate start times
@@ -1021,6 +1156,9 @@ COMMANDER_BUILD_DATA = {
             'build_time': 90,
             'built_from': ['SIColonistCompound'],  # TODO verify
             'display_name': 'Broodling Gestation',
+            'race': 'Zerg',
+            'type': 'Upgrade',
+            'is_morph': False,
         },
         'SIMarinePlaguedMunitions': {
             'build_time': 90,
@@ -1046,31 +1184,49 @@ COMMANDER_BUILD_DATA = {
             'build_time': 160,
             'built_from': ['SIEngineeringBay'],
             'display_name': 'Stukov Infantry Weapons Level 1',
+            'race': 'Zerg',
+            'type': 'Upgrade',
+            'is_morph': False,
             },
         'SIInfantryWeaponsLevel2': {
             'build_time': 190,
             'built_from': ['SIEngineeringBay'],
             'display_name': 'Stukov Infantry Weapons Level 2',
+            'race': 'Zerg',
+            'type': 'Upgrade',
+            'is_morph': False,
             },
         'SIInfantryWeaponsLevel3': {
             'build_time': 220,
             'built_from': ['SIEngineeringBay'],
             'display_name': 'Stukov Infantry Weapons Level 3',
+            'race': 'Zerg',
+            'type': 'Upgrade',
+            'is_morph': False,
             },
         'SIInfantryArmorLevel1': {
             'build_time': 160,
             'built_from': ['SIEngineeringBay'],
             'display_name': 'Stukov Infantry Armor Level 1',
+            'race': 'Zerg',
+            'type': 'Upgrade',
+            'is_morph': False,
             },
         'SIInfantryArmorLevel2': {
             'build_time': 190,
             'built_from': ['SIEngineeringBay'],
             'display_name': 'Stukov Infantry Armor Level 2',
+            'race': 'Zerg',
+            'type': 'Upgrade',
+            'is_morph': False,
             },
         'SIInfantryArmorLevel3': {
             'build_time': 220,
             'built_from': ['SIEngineeringBay'],
             'display_name': 'Stukov Infantry Armor Level 3',
+            'race': 'Zerg',
+            'type': 'Upgrade',
+            'is_morph': False,
             },
         # TODO Stukov Factory Tech Lab
         # TODO Stukov Starport Tech Lab
@@ -1078,31 +1234,49 @@ COMMANDER_BUILD_DATA = {
             'build_time': 160,
             'built_from': ['SIArmory'],
             'display_name': 'Stukov Vehicle and Ship Weapons Level 1',
+            'race': 'Zerg',
+            'type': 'Upgrade',
+            'is_morph': False,
             },
         'SITerranVehicleWeaponsLevel2': {
             'build_time': 190,
             'built_from': ['SIArmory'],
             'display_name': 'Stukov Vehicle and Ship Weapons Level 2',
+            'race': 'Zerg',
+            'type': 'Upgrade',
+            'is_morph': False,
             },
         'SITerranVehicleWeaponsLevel3': {
             'build_time': 220,
             'built_from': ['SIArmory'],
             'display_name': 'Stukov Vehicle and Ship Weapons Level 3',
+            'race': 'Zerg',
+            'type': 'Upgrade',
+            'is_morph': False,
             },
-        'SITerranVehicleArmorLevel1': {
+        'SITerranVehicleArmorsLevel1': {
             'build_time': 160,
             'built_from': ['SIArmory'],
             'display_name': 'Stukov Vehicle and Ship Armor Level 1',
+            'race': 'Zerg',
+            'type': 'Upgrade',
+            'is_morph': False,
             },
-        'SITerranVehicleArmorLevel2': {
+        'SITerranVehicleArmorsLevel2': {
             'build_time': 190,
             'built_from': ['SIArmory'],
             'display_name': 'Stukov Vehicle and Ship Armor Level 2',
+            'race': 'Zerg',
+            'type': 'Upgrade',
+            'is_morph': False,
             },
-        'SITerranVehicleArmorLevel3': {
+        'SITerranVehicleArmorsLevel3': {
             'build_time': 220,
             'built_from': ['SIArmory'],
             'display_name': 'Stukov Vehicle and Ship Armor Level 3',
+            'race': 'Zerg',
+            'type': 'Upgrade',
+            'is_morph': False,
         },
     },
     'Fenix': {
@@ -1182,6 +1356,14 @@ COMMANDER_BUILD_DATA = {
             'type': 'Unit',
             'is_morph': False,
         },
+        'DehakaRavasaur': {  # Zergling morph
+            'build_time': 8,
+            'built_from': [],
+            'display_name': 'Ravasaur',
+            'race': 'Zerg',
+            'type': 'Unit',
+            'is_morph': True,
+        },
         'DehakaTrainEggRoach': {
             'build_time': 0,
             'built_from': [],
@@ -1190,6 +1372,14 @@ COMMANDER_BUILD_DATA = {
             'type': 'Unit',
             'is_morph': False,
         },
+        'DehakaRoachLevel3': {
+            'build_time': 8,
+            'built_from': [],
+            'display_name': 'Primal Igniter',
+            'race': 'Zerg',
+            'type': 'Unit',
+            'is_morph': True,
+        },
         'DehakaTrainEggHydralisk': {
             'build_time': 0,
             'built_from': [],
@@ -1197,6 +1387,14 @@ COMMANDER_BUILD_DATA = {
             'race': 'Zerg',
             'type': 'Unit',
             'is_morph': False,
+        },
+        'DehakaMutaliskLevel3FightMorph': {  # morph from Hydralisk
+            'build_time': 8,
+            'built_from': [],
+            'display_name': 'Primal Mutalisk',
+            'race': 'Zerg',
+            'type': 'Unit',
+            'is_morph': True,
         },
         'DehakaTrainEggSwarmHost': {
             'build_time': 0,
@@ -1214,9 +1412,6 @@ COMMANDER_BUILD_DATA = {
             'type': 'Unit',
             'is_morph': False,
         },
-
-
-
         # Buildings
         'DehakaBarracks': {
             'build_time': 0,
@@ -1315,6 +1510,22 @@ COMMANDER_BUILD_DATA = {
             'type': 'Upgrade',
             'is_morph': False,
         },
+        'DehakaRavasaurVSArmor': {
+            'build_time': 60,
+            'built_from': ['DehakaGlevigStructure'],
+            'display_name': 'Dissolving Acid',
+            'race': 'Zerg',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+        'DehakaRavasaurRange': {
+            'build_time': 60,
+            'built_from': ['DehakaGlevigStructure'],
+            'display_name': 'Enlarged Parotid Glands',
+            'race': 'Zerg',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
         'DehakaRoachMoveSpeed': {
             'build_time': 60,
             'built_from': ['DehakaGlevigStructure'],
@@ -1323,6 +1534,7 @@ COMMANDER_BUILD_DATA = {
             'type': 'Upgrade',
             'is_morph': False,
         },
+        # TODO Concentrated Fire
         'DehakaHydraliskSpeed': {
             'build_time': 60,
             'built_from': ['DehakaGlevigStructure'],
@@ -1331,6 +1543,7 @@ COMMANDER_BUILD_DATA = {
             'type': 'Upgrade',
             'is_morph': False,
         },
+        # TODO Tenderize
         'DehakaUltraliskCrashingCharge': {
             'build_time': 60,
             'built_from': ['DehakaDakrunStructure'],
@@ -1347,7 +1560,11 @@ COMMANDER_BUILD_DATA = {
             'type': 'Upgrade',
             'is_morph': False,
         },
-
+        # TODO Slicing Glave 60
+        # TODO Shifting Carapace 60
+        # TODO Primal Reconsitution 90
+        # TODO Explosive Spores 60
+        # TODO Primordial Fury 60
     },
     'Horner': {
         'HHSCV': {
