@@ -56,6 +56,8 @@ BO_EXCLUDED.update([
     # Alarak
     'AlarakReviveBeacon',
     'VoidRayTaldarim',  # Destroyers that spawn with the Mothership
+    'AlarakSupplicantWarpTrainDummy',  # actual supplicants show up as well
+    'AlarakSupplicantWarpTrainCreator',
 
     # Nova
     'NovaReviveBeacon',
@@ -237,7 +239,7 @@ COMMANDER_BUILD_DATA = {
         'Firebat': {
             'build_time': 15,  # TODO verify others
             'built_from': ['Barracks'],
-            'display_name': 'Firebar',
+            'display_name': 'Firebat',
         },
         'Medic': {
             'build_time': 13,  # TODO verify others
@@ -258,6 +260,56 @@ COMMANDER_BUILD_DATA = {
             'build_time': 23,  # TODO verify others
             'built_from': ['Factory'],
             },
+        # Buildings
+        'SupplyDepotDrop': {
+            'build_time': 0,
+            'built_from': [],
+            'display_name': 'Supply Depot',
+            'race': 'Terran',
+            'type': 'Building',
+            'is_morph': False,
+        },
+        # Upgrades
+        'FirebatJuggernautPlating': {
+            'build_time': 60,
+            'built_from': ['TechLab'],
+            'display_name': 'Juggernaut Plating',
+            'race': 'Terran',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+        'BearclawNozzles': {
+            'build_time': 60,
+            'built_from': ['TechLab'],
+            'display_name': 'Incinerator Gauntlets',
+            'race': 'Terran',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+        'RaynorTalentedTerranInfantryArmorLevel1': {
+            'build_time': 160,
+            'built_from': ['EngineeringBay'],
+            'display_name': 'Terran Infantry Armor Level 1',
+            'race': 'Terran',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+        'RaynorTalentedTerranInfantryArmorLevel2': {
+            'build_time': 190,
+            'built_from': ['EngineeringBay'],
+            'display_name': 'Terran Infantry Armor Level 2',
+            'race': 'Terran',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+        'RaynorTalentedTerranInfantryArmorLevel3': {
+            'build_time': 220,
+            'built_from': ['EngineeringBay'],
+            'display_name': 'Terran Infantry Armor Level 3',
+            'race': 'Terran',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
         'NanoConstructor': {
             'build_time': 60,
             'built_from': ['TechLab'],
@@ -267,14 +319,6 @@ COMMANDER_BUILD_DATA = {
             'build_time': 60,
             'built_from': ['TechLab'],
             'display_name': 'Cerberus Mines',
-        },
-        'SupplyDepotDrop': {
-            'build_time': 0,
-            'built_from': [],
-            'display_name': 'Supply Depot',
-            'race': 'Terran',
-            'type': 'Building',
-            'is_morph': False,
         },
 
     },
@@ -310,7 +354,16 @@ COMMANDER_BUILD_DATA = {
             'type': 'Unit',
             'is_morph': False,
         },
-
+        # Buildings
+        'GreaterNydusWorm': {
+            'build_time': 0,
+            'built_from': [],
+            'display_name': 'Omega Worm',
+            'race': 'Zerg',
+            'type': 'Building',
+            'is_morph': False,
+        },
+        # Upgrades
         'K5ChainLightning': {
             'build_time': 90,
             'built_from': ['EvolutionChamber'],
@@ -563,13 +616,26 @@ COMMANDER_BUILD_DATA = {
         'ZealotPurifier': {
             'build_time': 38,
             'built_from': ['Gateway', 'WarpGate'],
-            'display_name': 'Zealot',  # Sentinel for Karax
+            'display_name': 'Sentinel',
+            'race': 'Protoss',
+            'type': 'Unit',
+            'is_morph': False,
             },
         'CarrierAiur': {
             'build_time': 120,
             'built_from': ['Stargate'],
             'display_name': 'Carrier',
         },
+        # Buildings
+        'KhaydarinMonolith': {
+            'build_time': 0,
+            'built_from': [],
+            'display_name': 'Khaydarin Monolith',
+            'race': 'Protoss',
+            'type': 'Building',
+            'is_morph': False,
+        },
+        # Upgrades
         'SolarEfficiencyLevel1': {
             'build_time': 90,
             'built_from': ['SolarForge'],
@@ -637,7 +703,6 @@ COMMANDER_BUILD_DATA = {
         },
         # TODO verify Robotics Facility units times
         # TODO verify Robotics Bay upgrade times
-        # TODO Khaydarin Monolith
     },
     'Abathur': {
         # TODO verify
@@ -674,28 +739,89 @@ COMMANDER_BUILD_DATA = {
     },
     'Alarak': {
         # TODO verify
+        'Supplicant': {
+            'build_time': 28,
+            'built_from': ['Gateway', 'WarpGate'],
+            'display_name': 'Supplicant',
+            'race': 'Protoss',
+            'type': 'Unit',
+            'is_morph': False,
+        },
+        'Monitor': {
+            'build_time': 37,
+            'built_from': ['Gateway', 'WarpGate'],
+            'display_name': 'Havoc',
+            'race': 'Protoss',
+            'type': 'Unit',
+            'is_morph': False,
+        },
+        'ImmortalTaldarim': {
+            'build_time': 55,
+            'built_from': ['Robotics Facility'],
+            'display_name': 'Vanguard',
+            'race': 'Protoss',
+            'type': 'Unit',
+            'is_morph': False,
+        },
         'WarpPrismTaldarim': {
-            'build_time': 50,  # TODO verify
+            'build_time': 50,
             'built_from': ['Robotics Facility'],
             'display_name': 'Warp Prism',
+            'race': 'Protoss',
+            'type': 'Unit',
+            'is_morph': False,
         },
         'ColossusTaldarim': {
-            'build_time': 75,  # TODO verify
+            'build_time': 75,
             'built_from': ['RoboticsFacility'],
             'display_name': 'Wraithwalker',
+            'race': 'Protoss',
+            'type': 'Unit',
+            'is_morph': False,
         },
         'SOAMothershipv4': {
             'build_time': 120,
             'built_from': ['Stargate'],
             'display_name': 'Mothership',
         },
+        # Upgrades
+        # TODO Imposing Presence
+        # TODO Telekinesis
+        'AlarackHavocPermanentCloak': {
+            'build_time': 60,
+            'built_from': ['CyberneticsCore'],
+            'display_name': 'Cloaking Module',
+            'race': 'Protoss',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+        # TODO Bloodshard Resonance
+        # TODO Detect Weakness
+        'AlarakSupplicantShieldArmor': {
+            'build_time': 60,
+            'built_from': ['TwilightCouncil'],
+            'display_name': 'Blood Shields',
+            'race': 'Protoss',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+        # TODO Soul Augmentation
         'AlarakStalkerPhasingArmor': {
             'build_time': 90,  # TODO verify
             'built_from': ['TwilightCouncil'],
             'display_name': 'Phasing Armor',
         },
+        'VanguardArmoredDamage': {
+            'build_time': 60,
+            'built_from': ['RoboticsBay'],
+            'display_name': 'Fusion Mortars',
+            'race': 'Protoss',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+        # TODO Matter Dispersion
         'AlarakColossusChargedBlastAirAttack': {
-            'build_time': 60,  # TODO verify
+            'build_time': 60,
             'built_from': ['RoboticsBay'],
             'display_name': 'Aerial Tracking',
         },
@@ -909,7 +1035,10 @@ COMMANDER_BUILD_DATA = {
         'ZealotPurifier': {
             'build_time': 30,
             'built_from': ['Gateway', 'WarpGate'],
-            'display_name': 'Zealot',  # Legionnaire for Fexnis
+            'display_name': 'Legionnaire',
+            'race': 'Protoss',
+            'type': 'Unit',
+            'is_morph': False,
             },
         'SentryFenix': {
             'build_time': 37,

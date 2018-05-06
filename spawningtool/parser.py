@@ -542,6 +542,8 @@ class GameParser(object):
         if not player in self.parsed_data['players']:
             return
 
+        unit_name = self.get_display_name(unit_name, player)
+
         supply = self.get_supply(player, frame)
         self.builds[player].add_event(
             BuildEvent(unit_name, frame, self.frames_per_second, supply,
@@ -560,6 +562,8 @@ class GameParser(object):
         # for safety to ignore observer units from GH and such
         if not player in self.parsed_data['players']:
             return
+
+        unit_name = self.get_display_name(unit_name, player)
 
         supply = self.parsed_data['players'][player]['supply'][-1][1]
         self.builds[player].add_event(BuildEvent(unit_name, frame, self.frames_per_second,
@@ -585,6 +589,8 @@ class GameParser(object):
             frame = event.frame
             is_chronoboosted = False
 
+        unit_name = self.get_display_name(unit_name, player)
+
         supply = self.get_supply(player, frame)
         self.builds[player].add_event(BuildEvent(
             unit_name, frame, self.frames_per_second, supply, is_chronoboosted=is_chronoboosted))
@@ -608,6 +614,7 @@ class GameParser(object):
         except KeyError:
             return
 
+        unit_name = self.get_display_name(unit_name, player)
         supply = self.get_supply(player, frame)
         self.builds[player].add_event(BuildEvent(unit_name, frame, self.frames_per_second, supply))
 
@@ -626,12 +633,13 @@ class GameParser(object):
 
         killer = event.killer_pid
 
+        unit_name = self.get_display_name(unit_name, player)
         self.units_lost[player].add_event(
             DiedEvent(unit_name, event.frame, self.frames_per_second, killer,
                       self.get_clock_position(event)))
 
     def get_build_data(self, player):
-        if self.parsed_data['cooperative']:
+        if self.parsed_data['cooperative'] and player in self.replay.player:
             commander = self.replay.player[player].commander
             if commander:
                 return self.constants.COMMANDER_BUILD_DATA[commander]
@@ -709,6 +717,12 @@ class GameParser(object):
             start -= 1
 
         return supply[start][1]
+
+    def get_display_name(self, unit_name, player):
+        build_data = self.get_build_data(player).get(unit_name)
+        if build_data and 'display_name' in build_data:
+            return build_data.get('display_name')
+        return unit_name
 
     def make_event_timeline(self, timelines, cutoff_time, field):
         """
