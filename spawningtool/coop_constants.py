@@ -278,6 +278,16 @@ BUILD_DATA.update({
         'type': 'Upgrade',
         'is_morph': False,
     },
+    # Nova and Swann
+    'AresClassWeaponsSystem': {
+        'build_time': 60,
+        'built_from': ['TechLab'],
+        'display_name': 'Ares-Class Targeting System',
+        'race': 'Terran',
+        'type': 'Upgrade',
+        'is_morph': False,
+    },
+
 })
 
 COMMANDER_BUILD_DATA = {
@@ -493,47 +503,137 @@ COMMANDER_BUILD_DATA = {
         },
     },
     'Swann': {
-        # TODO verify
+        # SCVs now benefits from the Level 1 Vehicle Specialist upgrade, which reduces the SCV's build time by 20%.
+        'SCV': {
+            'build_time': 14,  # TODO verify change in April 2018
+            'built_from': ['CommandCenter'],
+            'display_name': 'SCV',
+            'race': 'Terran',
+            'type': 'Unit',
+            'is_morph': False,
+        },
+        'Hellbat': {
+            'build_time': 24,
+            'built_from': ['Factory'],
+        },
+        'Goliath': {
+            'build_time': 32,
+            'built_from': ['Factory'],
+            'display_name': 'Goliath',
+            'race': 'Terran',
+            'type': 'Unit',
+            'is_morph': False,
+        },
+        'SiegeTank': {
+            'build_time': 36,
+            'built_from': ['Factory'],
+        },
+        'Cyclone': {
+            'build_time': 36,
+            'built_from': ['Factory'],
+        },
+        'Thor': {
+            'build_time': 48,
+            'built_from': ['Factory'],
+        },
+        'Hellion': {
+            'build_time': 24,
+            'built_from': ['Factory'],
+        },
+        'Wraith': {
+            'build_time': 40,
+            'built_from': ['Starport'],
+            'display_name': 'Wraith',
+            'race': 'Terran',
+            'type': 'Unit',
+            'is_morph': False,
+        },
         'Hercules': {
-            'build_time': 30,
+            'build_time': 32,
             'built_from': ['Starport'],
             'display_name': 'Hercules',
         },
-        'Goliath': {
-            'build_time': 40,
-            'built_from': ['Factory'],
-            'display_name': 'Goliath',
+        'ScienceVessel': {
+            'build_time': 48,
+            'built_from': ['Starport'],
+            'display_name': 'Science Vessel',
         },
-        'AresClassWeaponsSystem': {
+        # Buildings
+        'KelMorianGrenadeTurret': {
+            'build_time': 0,
+            'built_from': [],
+            'display_name': 'Devastation Turret',
+            'race': 'Terran',
+            'type': 'Building',
+            'is_morph': False,
+        },
+        'PerditionTurret': {
+            'build_time': 0,
+            'built_from': [],
+            'display_name': 'Perdition Turret',
+            'race': 'Terran',
+            'type': 'Building',
+            'is_morph': False,
+        },
+        # Upgrades
+        'HellbatHellArmor': {
             'build_time': 60,
             'built_from': ['TechLab'],
-            'display_name': 'Ares-Class Targeting System',
+            'display_name': 'Infernal Plating',
+            'race': 'Terran',
+            'type': 'Upgrade',
+            'is_morph': False,
         },
         'MultilockTargetingSystems': {
             'build_time': 90,
             'built_from': ['TechLab'],
             'display_name': 'Multi-Lock Weapons System',
+            'race': 'Terran',
+            'type': 'Upgrade',
+            'is_morph': False,
         },
         'MaelstromRounds': {
             'build_time': 60,
             'built_from': ['TechLab'],
             'display_name': 'Maelstrom Rounds',
+            'race': 'Terran',
+            'type': 'Upgrade',
+            'is_morph': False,
         },
-        'ScienceVessel': {
+        'CycloneLockOnRangeUpgrade': {
+            'build_time': 60,  # reduced ~ April 2018
+            'built_from': ['TechLab'],
+            'display_name': 'Targeting Optics',
+            'race': 'Terran',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+        # TODO Mag-Field Accelerator now 90s
+        # TODO 330mm Barrage Cannon
+        'WraithImprovedBurstLaser': {
             'build_time': 60,
-            'built_from': ['Starport'],
-            'display_name': 'Science Vessel',
+            'built_from': ['TechLab'],
+            'display_name': 'Pulse Amplifier',
+            'race': 'Terran',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+        # TODO Displacement FIeld
+        'ScienceVesselFreeRepair': {
+            'build_time': 60,
+            'built_from': ['TechLab'],
+            'display_name': 'Improved Nano-Repair',
+            'race': 'Terran',
+            'type': 'Upgrade',
+            'is_morph': False,
         },
         'ScienceVesselResearchDefensiveMatrix': {
             'build_time': 90,
             'built_from': ['TechLab'],
             'display_name': 'Defensive Matrix',
-        },
-
-        'ScienceVesselFreeRepair': {
-            'build_time': 60,
-            'built_from': ['TechLab'],
-            'display_name': 'Improved Nano-Repair',
+            'race': 'Terran',
+            'type': 'Upgrade',
+            'is_morph': False,
         },
         'DrakkenLaserDrillBFG': {
             'build_time': 190,
@@ -545,9 +645,6 @@ COMMANDER_BUILD_DATA = {
             'built_from': [],  # ?
             'display_name': 'Upgrade Laser Drill Level 2',
         },
-        # SCVs now benefits from the Level 1 Vehicle Specialist upgrade, which reduces the SCV's build time by 20%.
-        # Targeting Optics research time decreased from 90 seconds to 60 seconds.
-        # Mag-Field Accelerator upgrade research time decreased from 120 seconds to 90 seconds.
     },
     'Zagara': {
         # TODO verify
@@ -1045,14 +1142,6 @@ COMMANDER_BUILD_DATA = {
             'is_morph': False,
         },
         # TODO Triple Tap
-        'AresClassWeaponsSystem': {
-            'build_time': 60,
-            'built_from': ['TechLab'],
-            'display_name': 'Ares-Class Targeting System',
-            'race': 'Terran',
-            'type': 'Upgrade',
-            'is_morph': False,
-        },
         # TODO Jump Jet Assault
         # TODO Lockdown Missiles
         'DeploySpiderMines': {
