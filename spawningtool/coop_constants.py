@@ -97,7 +97,29 @@ BO_EXCLUDED.update([
     'EssencePickup',
 
     # Han and Horner
+    'HHScrapPickup',
+    'HHMagneticMine_SpawnerUnit',
+    'HHMagneticMinePrep',
+    'HHD8SingleCluster',
+    'HHD8ClusterBomb',
+    'HHD8CenterCluster',
+    'HHWraith',
+    'HHVikingFighter',
+    'HHRaven',
+    'HHBattlecruiser',
 ])
+
+BO_CHANGED_EXCLUDED = BO_CHANGED_EXCLUDED.copy()
+
+BO_CHANGED_EXCLUDED.update([
+    # speculative
+    'HHWidowMine',
+    'HHVikingAssault',
+    'HHVikingFighter',
+    'HHViking',
+
+])
+
 
 
 BO_UPGRADES_EXCLUDED = BO_UPGRADES_EXCLUDED.copy()
@@ -112,6 +134,51 @@ BO_UPGRADES_EXCLUDED.update([
     # Vorazun
     'MasteryVorazunTimeStopHasteModifyPlayer',
 ])
+
+BUILD_DATA = BUILD_DATA.copy()
+
+BUILD_DATA.update({
+    # shared across at least Kerrigan and Zagara
+    'overlordspeed': {
+        'build_time': 60,  # TODO verify
+        'built_from': ['Hatchery', 'Lair', 'Hive'],
+        'display_name': 'Pneumatized Carapace',
+    },
+    'overlordtransport': {
+        'build_time': 60,  # TODO verify
+        'built_from': ['Hatchery', 'Lair', 'Hive'],
+        'display_name': 'Ventral Sacs',
+    },
+    'zerglingmovementspeed': {
+        'build_time': 60,
+        'built_from': ['SpawningPool'],
+        'display_name': 'Metabolic Boost',
+        },
+    'HotSZerglingHealth': {
+        'build_time': 60,
+        'built_from': ['SpawningPool'],
+        'display_name': 'Hardened Carapace',
+    },
+    'zerglingattackspeed': {
+        'build_time': 60,  # Called Adrenal Overload in co-op
+        'built_from': ['SpawningPool'],
+        },
+    'ZerglingArmorShred': {
+        'build_time': 90,
+        'built_from': ['SpawningPool'],
+        'display_name': 'Shredding Claws',
+    },
+    'QueenCoop': {
+        'build_time': 50,
+        'built_from': ['Hatchery', 'Lair', 'Hive'],
+        'display_name': 'Queen',
+    },
+    'VoidCoopHeroicFortitude': {
+        'build_time': 60,
+        'built_from': ['EvolutionChamber'],
+        'display_name': 'Heroic Fortitude',
+    },
+})
 
 COMMANDER_BUILD_DATA = {
     'Raynor': {
@@ -172,43 +239,6 @@ COMMANDER_BUILD_DATA = {
             'build_time': 24,
             'built_from': [],
             'display_name': 'Hydralisk',
-        },
-        'QueenCoop': {
-            'build_time': 50,
-            'built_from': ['Hatchery', 'Lair', 'Hive'],
-            'display_name': 'Queen',
-        },
-        'overlordspeed': {
-            'build_time': 60,  # TODO verify
-            'built_from': ['Hatchery', 'Lair', 'Hive'],
-            },
-        'overlordtransport': {
-            'build_time': 60,  # TODO verify
-            'built_from': ['Hatchery', 'Lair', 'Hive'],
-            },
-        'zerglingmovementspeed': {
-            'build_time': 60,
-            'built_from': ['SpawningPool'],
-            'display_name': 'Metabolic Boost',
-            },
-        'HotSZerglingHealth': {
-            'build_time': 60,
-            'built_from': ['SpawningPool'],
-            'display_name': 'Hardened Carapace',
-        },
-        'zerglingattackspeed': {
-            'build_time': 60,  # Called Adrenal Overload in co-op
-            'built_from': ['SpawningPool'],
-            },
-        'ZerglingArmorShred': {
-            'build_time': 90,
-            'built_from': ['SpawningPool'],
-            'display_name': 'Shredding Claws',
-        },
-        'VoidCoopHeroicFortitude': {
-            'build_time': 60,
-            'built_from': ['EvolutionChamber'],
-            'display_name': 'Heroic Fortitude',
         },
         'K5ChainLightning': {
             'build_time': 90,
@@ -359,11 +389,42 @@ COMMANDER_BUILD_DATA = {
     },
     'Zagara': {
         # TODO verify
-        'HotSSwarmling': {  # Zergling evolution
-            'build_time': 2,
+        'Drone': {
+            'build_time': 26,
+            'built_from': [],
+        },
+        'Zergling': {
+            'build_time': 9,
             'built_from': [],
             'display_name': 'Swarmling',
         },
+        'HotSSwarmling': {  # Zergling evolution
+            'build_time': 2,  # TODO verify
+            'built_from': [],
+            'display_name': 'Swarmling',
+        },
+        'InfestedAbomination': {
+            'build_time': 12,
+            'built_from': [],
+            'display_name': 'Aberration',
+        },
+        'Scourge': {
+            'build_time': 12,
+            'built_from': [],
+            'display_name': 'Scourge',
+        },
+        'Corruptor': {
+            'build_time': 16,
+            'built_from': [],
+            'display_name': 'Corruptor',
+        },
+        # Upgrades
+        'ZagaraVoidCoopAttackUpgrade': {
+            'build_time': 90,
+            'built_from': ['EvolutionChamber'],
+            'display_name': 'Medusa Blades',
+        },
+        # TODO Protective Cover
         'HotSBanelingCorrosiveBile': {
             'build_time': 90,
             'built_from': ['BanelingNest'],
@@ -373,11 +434,6 @@ COMMANDER_BUILD_DATA = {
             'build_time': 90,
             'built_from': ['BanelingNest'],
             'display_name': 'Rupture',
-        },
-        'Scourge': {
-            'build_time': 12,
-            'built_from': [],
-            'display_name': 'Scourge',
         },
         'ScourgeGasCostReduction': {
             'build_time': 60,
@@ -389,19 +445,10 @@ COMMANDER_BUILD_DATA = {
             'built_from': ['ScourgeNest'],
             'display_name': 'Virulent Spores',
         },
-        'InfestedAbomination': {
-            'build_time': 12,
-            'built_from': [],
-            'display_name': 'Aberration',
-        },
-        'ZagaraVoidCoopAttackUpgrade': {
-            'build_time': 90,
-            'built_from': ['EvolutionChamber'],
-            'display_name': 'Medusa Blades',
-        },
         'ChitinousPlating': {
             'build_time': 60,
             'built_from': ['UltraliskCavern'],
+            'display_name': 'Chitinous Plating',
         },
         'BurrowCharge': {  # TODO verify
             'build_time': 60,  # TODO verify
@@ -869,7 +916,213 @@ COMMANDER_BUILD_DATA = {
         # TODO sift through game
     },
     'Horner': {
-        # TODO sift through game
+        'HHSCV': {
+            'build_time': 17,
+            'built_from': ['CommandCenter'],
+            'display_name': 'SCV',
+            'race': 'Terran',
+            'type': 'Unit',
+            'is_morph': False,
+        },
+        'HHReaper': {
+            'build_time': 14,
+            'built_from': ['HHMercStarportNoArmy'],
+            'display_name': 'Reaper',
+            'race': 'Terran',
+            'type': 'Unit',
+            'is_morph': False,
+        },
+        'HHWidowMine': {
+            'build_time': 21,
+            'built_from': ['HHMercStarportNoArmy'],
+            'display_name': 'Widow Mine',
+            'race': 'Terran',
+            'type': 'Unit',
+            'is_morph': False,
+        },
+        'HHHellion': {
+            'build_time': 14,
+            'built_from': ['HHMercStarportNoArmy'],
+            'display_name': 'Hellion',
+            'race': 'Terran',
+            'type': 'Unit',
+            'is_morph': False,
+        },
+        'HHHellionTank': {
+            'build_time': 14,
+            'built_from': ['HHMercStarportNoArmy'],
+            'display_name': 'Hellbat',
+            'race': 'Terran',
+            'type': 'Unit',
+            'is_morph': False,
+        },
+        # Calldowns
+        'HHWraith_SpawnerUnit': {
+            'build_time': 0,
+            'built_from': [],
+            'display_name': 'Asteria Wraith',
+            'race': 'Terran',
+            'type': 'Unit',
+            'is_morph': False,
+        },
+        'HHViking_SpawnerUnit': {
+            'build_time': 0,
+            'built_from': [],
+            'display_name': 'Deimos Viking',
+            'race': 'Terran',
+            'type': 'Unit',
+            'is_morph': False,
+        },
+        'HHRaven_SpawnerUnit': {
+            'build_time': 0,
+            'built_from': [],
+            'display_name': 'Theia Raven',
+            'race': 'Terran',
+            'type': 'Unit',
+            'is_morph': False,
+        },
+        'HHBattlecruiser_SpawnerUnit': {
+            'build_time': 0,
+            'built_from': [],
+            'display_name': 'Sovereign Battlecruiser',
+            'race': 'Terran',
+            'type': 'Unit',
+            'is_morph': False,
+        },
+
+
+        # Buildings
+        'HHMercStarportNoArmy': {
+            'build_time': 0,
+            'built_from': [],
+            'display_name': 'Assault Galleon',
+            'race': 'Terran',
+            'type': 'Building',
+            'is_morph': False,
+        },
+        'HHMercCompound': {
+            'build_time': 0,
+            'built_from': [],
+            'display_name': 'Engineering Bay',
+            'race': 'Terran',
+            'type': 'Building',
+            'is_morph': False,
+        },
+        # TODO Strike Fighter Platform
+        # Upgrades
+        'HHReaperG4ClusterBombs': {
+            'build_time': 60,
+            'built_from': ['HHMercCompound'],
+            'display_name': 'LE9 Cluster Charges',
+            'race': 'Terran',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+        # TODO Jetpack Overdrive
+        'HHWidowMineDeathBlossom': {
+            'build_time': 60,
+            'built_from': ['HHMercCompound'],
+            'display_name': 'Executioner Missiles',
+            'race': 'Terran',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+        'HHHellionStimDeath': {
+            'build_time': 60,
+            'built_from': ['HHMercCompound'],
+            'display_name': 'Aerosol Stim Emitters',
+            'race': 'Terran',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+        # TODO Black Market Launchers
+        'HHHellionFearDeath': {
+            'build_time': 60,
+            'built_from': ['HHMercCompound'],
+            'display_name': 'Wildfire Explosives',
+            'race': 'Terran',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+        # TODO Tar Bombs
+        # TODO Immolation Fluid
+        'HHWraithPermaCloak': {
+            'build_time': 90,
+            'built_from': ['StarportTechLab'],
+            'display_name': 'Unregistered Cloak System',
+            'race': 'Terran',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+        # TODO Trigger Override
+        'HHVikingRockets': {
+            'build_time': 90,
+            'built_from': ['StarportTechLab'],
+            'display_name': 'W.I.L.D. Missiles',
+            'race': 'Terran',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+        # TODO Shredder Rounds
+        'FleetwideJump': {
+            'build_time': 90,
+            'built_from': ['StarportTechLab'],
+            'display_name': 'Tactical Jump',
+            'race': 'Terran',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+        # TODO Multi-Threaded Sensors
+        'HHVehicleAndShipWeaponsLevel1': {
+            'build_time': 160,
+            'built_from': ['Armory'],
+            'display_name': 'Horner Weapons Level 1',
+            'race': 'Terran',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+        'HHVehicleAndShipWeaponsLevel2': {
+            'build_time': 190,
+            'built_from': ['Armory'],
+            'display_name': 'Horner Weapons Level 2',
+            'race': 'Terran',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+        'HHVehicleAndShipWeaponsLevel3': {
+            'build_time': 220,
+            'built_from': ['Armory'],
+            'display_name': 'Horner Weapons Level 3',
+            'race': 'Terran',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+        'HHVehicleAndShipArmorsLevel1': {
+            'build_time': 160,
+            'built_from': ['Armory'],
+            'display_name': 'Horner Armor Level 1',
+            'race': 'Terran',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+        'HHVehicleAndShipArmorsLevel2': {
+            'build_time': 190,
+            'built_from': ['Armory'],
+            'display_name': 'Horner Armor Level 2',
+            'race': 'Terran',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+        'HHVehicleAndShipArmorsLevel3': {
+            'build_time': 220,
+            'built_from': ['Armory'],
+            'display_name': 'Horner Armor Level 3',
+            'race': 'Terran',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+        # TODO Overcharged Reactor
+        # TODO Napalm Payload
     },
 }
 
