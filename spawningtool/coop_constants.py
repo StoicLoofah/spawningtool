@@ -345,7 +345,9 @@ BUILD_DATA.update({
 })
 
 COMMANDER_BUILD_DATA = {
+
     'Raynor': {
+        # Units
         # Rapid Recruitment halves all build times
         'Marine': {
             'build_time': 13,
@@ -419,6 +421,7 @@ COMMANDER_BUILD_DATA = {
             'type': 'Unit',
             'is_morph': False,
         },
+
         # Buildings
         'SupplyDepotDrop': {
             'build_time': 0,
@@ -428,11 +431,15 @@ COMMANDER_BUILD_DATA = {
             'type': 'Building',
             'is_morph': False,
         },
+
         # Upgrades
         'StabilizerMedPacks': {
             'build_time': 60,
             'built_from': ['TechLab'],
             'display_name': 'Stabilizer Medpacks',
+            'race': 'Terran',
+            'type': 'Upgrade',
+            'is_morph': False,
         },
         'FirebatJuggernautPlating': {
             'build_time': 60,
@@ -501,7 +508,9 @@ COMMANDER_BUILD_DATA = {
         # TODO Shockwave Missile Battery
         # TODO Viking Ripwave Missiles
     },
+
     'Kerrigan': {
+        # Units
         # TODO extra Zerglings in the build order?
         'HotSRaptor': {
             'build_time': 24,
@@ -543,6 +552,7 @@ COMMANDER_BUILD_DATA = {
             'type': 'Unit',
             'is_morph': False,
         },
+
         # Buildings
         'GreaterNydusWorm': {
             'build_time': 0,
@@ -552,6 +562,7 @@ COMMANDER_BUILD_DATA = {
             'type': 'Building',
             'is_morph': False,
         },
+
         # Upgrades
         'K5ChainLightning': {
             'build_time': 90,
@@ -610,11 +621,16 @@ COMMANDER_BUILD_DATA = {
             'is_morph': False,
         },
     },
+
     'Artanis': {
+        # Units
         'ZealotAiur': {
             'build_time': 38,
             'built_from': ['Gateway', 'WarpGate'],  # warpgate is necessary because of changing types
             'display_name': 'Zealot',
+            'race': 'Protoss',
+            'type': 'Unit',
+            'is_morph': False,
         },
         'Dragoon': {
             'build_time': 42,
@@ -632,6 +648,8 @@ COMMANDER_BUILD_DATA = {
             'type': 'Unit',
             'is_morph': False,
         },
+
+        # Buildings
 
         # Upgrades
         'ZealotResearchWhirlwind': {
@@ -693,7 +711,9 @@ COMMANDER_BUILD_DATA = {
             'is_morph': False,
         },
     },
+
     'Swann': {
+        # Units
         # SCVs now benefits from the Level 1 Vehicle Specialist upgrade, which reduces the SCV's build time by 20%.
         'SCV': {
             'build_time': 14,  # TODO verify change in April 2018
@@ -706,6 +726,10 @@ COMMANDER_BUILD_DATA = {
         'Hellbat': {
             'build_time': 24,
             'built_from': ['Factory'],
+            'display_name': 'Hellbat',
+            'race': 'Terran',
+            'type': 'Unit',
+            'is_morph': False,
         },
         'Goliath': {
             'build_time': 32,
@@ -718,18 +742,34 @@ COMMANDER_BUILD_DATA = {
         'SiegeTank': {
             'build_time': 36,
             'built_from': ['Factory'],
+            'display_name': 'Siege Tank',
+            'race': 'Terran',
+            'type': 'Unit',
+            'is_morph': False,
         },
         'Cyclone': {
             'build_time': 36,
             'built_from': ['Factory'],
+            'display_name': 'Cyclone',
+            'race': 'Terran',
+            'type': 'Unit',
+            'is_morph': False,
         },
         'Thor': {
             'build_time': 48,
             'built_from': ['Factory'],
+            'display_name': 'Thor',
+            'race': 'Terran',
+            'type': 'Unit',
+            'is_morph': False,
         },
         'Hellion': {
             'build_time': 24,
             'built_from': ['Factory'],
+            'display_name': 'Hellion',
+            'race': 'Terran',
+            'type': 'Unit',
+            'is_morph': False,
         },
         'Wraith': {
             'build_time': 40,
@@ -743,12 +783,19 @@ COMMANDER_BUILD_DATA = {
             'build_time': 32,
             'built_from': ['Starport'],
             'display_name': 'Hercules',
+            'race': 'Terran',
+            'type': 'Unit',
+            'is_morph': False,
         },
         'ScienceVessel': {
             'build_time': 48,
             'built_from': ['Starport'],
             'display_name': 'Science Vessel',
+            'race': 'Terran',
+            'type': 'Unit',
+            'is_morph': False,
         },
+
         # Buildings
         'KelMorianGrenadeTurret': {
             'build_time': 0,
@@ -766,6 +813,7 @@ COMMANDER_BUILD_DATA = {
             'type': 'Building',
             'is_morph': False,
         },
+
         # Upgrades
         'HellbatHellArmor': {
             'build_time': 60,
@@ -830,116 +878,190 @@ COMMANDER_BUILD_DATA = {
             'build_time': 190,
             'built_from': [],  # ?
             'display_name': 'Upgrade Laser Drill Level 1',
+            'race': 'Terran',
+            'type': 'Upgrade',
+            'is_morph': False,
         },
         'DrakkenLaserDrillNuke': {
             'build_time': 220,
             'built_from': [],  # ?
             'display_name': 'Upgrade Laser Drill Level 2',
+            'race': 'Terran',
+            'type': 'Upgrade',
+            'is_morph': False,
         },
     },
+
     'Zagara': {
-        # TODO verify
+        # Units
         'Drone': {
             'build_time': 26,
             'built_from': [],
+            'display_name': 'Drone',
+            'race': 'Zerg',
+            'type': 'Unit',
+            'is_morph': False,
         },
         'Zergling': {
             'build_time': 9,
             'built_from': [],
             'display_name': 'Zergling',
+            'race': 'Zerg',
+            'type': 'Unit',
+            'is_morph': False,
         },
         'HotSSwarmling': {  # Zergling evolution
-            'build_time': 2,  # TODO verify
+            'build_time': 2,
             'built_from': [],
             'display_name': 'Swarmling',
+            'race': 'Zerg',
+            'type': 'Unit',
+            'is_morph': False,
         },
         'InfestedAbomination': {
             'build_time': 12,
             'built_from': [],
             'display_name': 'Aberration',
+            'race': 'Zerg',
+            'type': 'Unit',
+            'is_morph': False,
         },
         'Scourge': {
             'build_time': 12,
             'built_from': [],
             'display_name': 'Scourge',
+            'race': 'Zerg',
+            'type': 'Unit',
+            'is_morph': False,
         },
         'Corruptor': {
             'build_time': 16,
             'built_from': [],
             'display_name': 'Corruptor',
+            'race': 'Zerg',
+            'type': 'Unit',
+            'is_morph': False,
         },
+
         # Upgrades
         'ZagaraVoidCoopAttackUpgrade': {
             'build_time': 90,
             'built_from': ['EvolutionChamber'],
             'display_name': 'Medusa Blades',
+            'race': 'Zerg',
+            'type': 'Upgrade',
+            'is_morph': False,
         },
         # TODO Protective Cover
         'HotSBanelingCorrosiveBile': {
             'build_time': 90,
             'built_from': ['BanelingNest'],
             'display_name': 'Corrosive Acid',
+            'race': 'Zerg',
+            'type': 'Upgrade',
+            'is_morph': False,
         },
         'HotSRupture': {
             'build_time': 90,
             'built_from': ['BanelingNest'],
             'display_name': 'Rupture',
+            'race': 'Zerg',
+            'type': 'Upgrade',
+            'is_morph': False,
         },
         'ScourgeGasCostReduction': {
             'build_time': 60,
             'built_from': ['ScourgeNest'],
             'display_name': 'Simplified Genome',
+            'race': 'Zerg',
+            'type': 'Upgrade',
+            'is_morph': False,
         },
         'ScourgeSplashDamage': {
             'build_time': 60,
             'built_from': ['ScourgeNest'],
             'display_name': 'Virulent Spores',
+            'race': 'Zerg',
+            'type': 'Upgrade',
+            'is_morph': False,
         },
     },
+
     'Vorazun': {
+        # Units
         # TODO verify
         'StalkerShakuras': {
             'build_time': 42,
             'built_from': ['Gateway', 'WarpGate'],
             'display_name': 'Stalker',
+            'race': 'Protoss',
+            'type': 'Unit',
+            'is_morph': False,
         },
         'DarkTemplarShakuras': {
             'build_time': 55,
             'built_from': ['Gateway', 'WarpGate'],
             'display_name': 'Dark Templar',
+            'race': 'Protoss',
+            'type': 'Unit',
+            'is_morph': False,
         },
+
+        # Buildings
+
+        # Upgrades
         'DarkTemplarResearchShadowDash': {
             'build_time': 100,  # wikia was incorrect and had 60 when I last checked
             'built_from': ['DarkShrine'],
             'display_name': 'Blink',
+            'race': 'Protoss',
+            'type': 'Upgrade',
+            'is_morph': False,
         },
         'DarkTemplarResearchShadowFury': {
             'build_time': 120,
             'built_from': ['DarkShrine'],
             'display_name': 'Shadow Fury',
+            'race': 'Protoss',
+            'type': 'Upgrade',
+            'is_morph': False,
         },
         'StalkerResearchBlinkShieldRestore': {
             'build_time': 90,
             'built_from': ['TwilightCouncil'],
             'display_name': 'Phase Reactor',
+            'race': 'Protoss',
+            'type': 'Upgrade',
+            'is_morph': False,
         },
         'CorsairMP': {
             'build_time': 35,
             'built_from': ['Stargate'],
             'display_name': 'Corsair',
+            'race': 'Protoss',
+            'type': 'Upgrade',
+            'is_morph': False,
         },
         'CorsairPermanentCloak': {
             'build_time': 90,
             'built_from': ['FleetBeacon'],
             'display_name': 'Stealth Drive',
+            'race': 'Protoss',
+            'type': 'Upgrade',
+            'is_morph': False,
         },
         'CorsairDisruptionWeb': {
             'build_time': 60,
             'built_from': ['FleetBeacon'],
             'display_name': 'Disruption Web',
+            'race': 'Protoss',
+            'type': 'Upgrade',
+            'is_morph': False,
         },
     },
+
     'Karax': {
+        # Units
         'ZealotPurifier': {
             'build_time': 38,
             'built_from': ['Gateway', 'WarpGate'],
@@ -976,7 +1098,11 @@ COMMANDER_BUILD_DATA = {
             'build_time': 120,
             'built_from': ['Stargate'],
             'display_name': 'Carrier',
+            'race': 'Protoss',
+            'type': 'Unit',
+            'is_morph': False,
         },
+
         # Buildings
         'KhaydarinMonolith': {
             'build_time': 0,
@@ -986,6 +1112,7 @@ COMMANDER_BUILD_DATA = {
             'type': 'Building',
             'is_morph': False,
         },
+
         # Upgrades
         'SolarEfficiencyLevel1': {
             'build_time': 90,
@@ -1042,16 +1169,25 @@ COMMANDER_BUILD_DATA = {
             'build_time': 90,
             'built_from': ['TwilightCouncil'],
             'display_name': 'Reconstruction',
+            'race': 'Protoss',
+            'type': 'Upgrade',
+            'is_morph': False,
         },
         'RapidRecharging': {  # TODO verify
             'build_time': 90,
             'built_from': ['TwilightCouncil'],
             'display_name': 'Rapid Recharging',
+            'race': 'Protoss',
+            'type': 'Upgrade',
+            'is_morph': False,
         },
         'Reclamation': {  # TODO verify
             'build_time': 120,
             'built_from': ['TwilightCouncil'],
             'display_name': 'Reclamation',
+            'race': 'Protoss',
+            'type': 'Upgrade',
+            'is_morph': False,
         },
         # TODO Fire Beam 120
         # TODO Shadow Cannon 120
@@ -1059,24 +1195,37 @@ COMMANDER_BUILD_DATA = {
             'build_time': 60,
             'built_from': ['FleetBeacon'],
             'display_name': 'Anion Pulse-Crystals',
+            'race': 'Protoss',
+            'type': 'Upgrade',
+            'is_morph': False,
         },
         'PhasingArmor': {  # TODO verify
             'build_time': 90,
             'built_from': ['FleetBeacon'],
             'display_name': 'Phasing Armor',
+            'race': 'Protoss',
+            'type': 'Upgrade',
+            'is_morph': False,
         },
         'CarrierRepairDrones': {
             'build_time': 120,
             'built_from': ['FleetBeacon'],
             'display_name': 'Repair Drones',
+            'race': 'Protoss',
+            'type': 'Upgrade',
+            'is_morph': False,
         },
     },
+
     'Abathur': {
-        # TODO verify
+        # Units
         'RoachVile': {
             'build_time': 27,
             'built_from': [],
             'display_name': 'Roach',
+            'race': 'Zerg',
+            'type': 'Unit',
+            'is_morph': False,
         },
         'RavagerAbathur': {
             'build_time': 9,
@@ -1090,22 +1239,37 @@ COMMANDER_BUILD_DATA = {
             'build_time': 5,
             'built_from': [],
             'display_name': 'Brutalisk',
+            'race': 'Zerg',
+            'type': 'Unit',
+            'is_morph': True,
         },
         'HotSLeviathan': {  # actually the cocoon morph from mutalisk
             'build_time': 5,
             'built_from': [],
             'display_name': 'Leviathan',
+            'race': 'Zerg',
+            'type': 'Unit',
+            'is_morph': True,
         },
         'Devourer': {
             'build_time': 15,
             'built_from': [],
             'display_name': 'Devourer',
+            'race': 'Zerg',
+            'type': 'Unit',
+            'is_morph': True,
         },
 
+        # Buildings
+
+        # Upgrades
         'AbathurBioMechanicalTransfusion': {
             'build_time': 60,
             'built_from': ['EvolutionChamber'],
             'display_name': 'Bio-Mechanical Transfusion',
+            'race': 'Zerg',
+            'type': 'Upgrade',
+            'is_morph': False,
         },
         'HotSRoachDamage': {
             'build_time': 110,
@@ -1130,6 +1294,9 @@ COMMANDER_BUILD_DATA = {
             'build_time': 90,
             'built_from': ['Spire', 'GreaterSpire'],
             'display_name': 'Corrosive Spray',
+            'race': 'Zerg',
+            'type': 'Upgrade',
+            'is_morph': False,
         },
         'HotSPressurizedGlands': {
             'build_time': 90,
@@ -1139,12 +1306,13 @@ COMMANDER_BUILD_DATA = {
             'type': 'Upgrade',
             'is_morph': False,
         },
-        #TODO Virulent Microbes
+        # TODO Virulent Microbes
         # TODO Deep TUnnel
         # TODO Paralytic Barbs
     },
+
     'Alarak': {
-        # TODO verify
+        # Units
         'Supplicant': {
             'build_time': 28,
             'built_from': ['Gateway', 'WarpGate'],
@@ -1189,7 +1357,11 @@ COMMANDER_BUILD_DATA = {
             'build_time': 120,
             'built_from': ['Stargate'],
             'display_name': 'Mothership',
+            'race': 'Protoss',
+            'type': 'Unit',
+            'is_morph': False,
         },
+
         # Upgrades
         # TODO Imposing Presence
         # TODO Telekinesis
@@ -1216,6 +1388,9 @@ COMMANDER_BUILD_DATA = {
             'build_time': 90,  # TODO verify
             'built_from': ['TwilightCouncil'],
             'display_name': 'Phasing Armor',
+            'race': 'Protoss',
+            'type': 'Upgrade',
+            'is_morph': False,
         },
         'VanguardArmoredDamage': {
             'build_time': 60,
@@ -1230,19 +1405,29 @@ COMMANDER_BUILD_DATA = {
             'build_time': 60,
             'built_from': ['RoboticsBay'],
             'display_name': 'Aerial Tracking',
+            'race': 'Protoss',
+            'type': 'Upgrade',
+            'is_morph': False,
         },
         'AlarakColossusChargedBlastChargeTime': {
             'build_time': 60,  # TODO verify
             'built_from': ['RoboticsBay'],
             'display_name': 'Rapid Power Cycling',
+            'race': 'Protoss',
+            'type': 'Upgrade',
+            'is_morph': False,
         },
     },
+
     'Nova': {
-        # TODO verify
+        # Units
         'Marine_BlackOpsSpawnerUnit': {
             'build_time': 0,  # calldown
             'built_from': ['Barracks'],
             'display_name': 'Elite Marine',
+            'race': 'Terran',
+            'type': 'Unit',
+            'is_morph': False,
         },
         'Marauder_BlackOpsSpawnerUnit': {
             'build_time': 0,  # calldown
@@ -1265,21 +1450,33 @@ COMMANDER_BUILD_DATA = {
             'build_time': 0,  # calldown
             'built_from': ['Factory'],
             'display_name': 'Strike Goliath',
+            'race': 'Terran',
+            'type': 'Unit',
+            'is_morph': False,
         },
         'SiegeTank_BlackOpsSpawnerUnit': {
             'build_time': 0,  # calldown
             'built_from': ['Factory'],
             'display_name': 'Heavy Siege Tank',
+            'race': 'Terran',
+            'type': 'Unit',
+            'is_morph': False,
         },
         'Liberator_BlackOpsSpawnerUnit': {
             'build_time': 0,  # calldown
             'built_from': ['Starport'],
             'display_name': 'Raid Liberator',
+            'race': 'Terran',
+            'type': 'Unit',
+            'is_morph': False,
         },
         'Raven_BlackOpsSpawnerUnit': {
             'build_time': 0,  # calldown
             'built_from': ['Starport'],
             'display_name': 'Raven Type-II',
+            'race': 'Terran',
+            'type': 'Unit',
+            'is_morph': False,
         },
         'Banshee_BlackOpsSpawnerUnit': {
             'build_time': 0,  # calldown
@@ -1289,8 +1486,12 @@ COMMANDER_BUILD_DATA = {
             'type': 'Unit',
             'is_morph': False,
         },
+
+        # Buildings
         # TODO Railgun Turret
         # TODO Missile Turret
+
+        # Upgrades
         'LaserTargetingSystemNova': {
             'build_time': 60,
             'built_from': ['TechLab'],
@@ -1357,72 +1558,117 @@ COMMANDER_BUILD_DATA = {
         # TODO Covert Triage
         # TODO Enhanced Manufacturing
     },
+
     'Stukov': {
+        # Units
         # Track cocoons instead of units for more accurate start times
         'SICocoonInfestedSCV': {
             'build_time': 0,
             'built_from': [],
             'display_name': 'Infested SCV',
+            'race': 'Zerg',
+            'type': 'Unit',
+            'is_morph': False,
         },
         'SICocoonInfestedOverlord': {
             'build_time': 0,
             'built_from': [],
             'display_name': 'Overlord',
+            'race': 'Zerg',
+            'type': 'Unit',
+            'is_morph': False,
         },
         'SICocoonInfestedMarine': {
             'build_time': 0,
             'built_from': [],
             'display_name': 'Infested Marine',
+            'race': 'Zerg',
+            'type': 'Unit',
+            'is_morph': False,
         },
         'SICocoonInfestedDiamondback': {  # TODO verify
             'build_time': 0,
             'built_from': [],
             'display_name': 'Infested Diamondback',
+            'race': 'Zerg',
+            'type': 'Unit',
+            'is_morph': False,
         },
         'SICocoonInfestedSiegeTank': {  # TODO verify
             'build_time': 0,
             'built_from': [],
             'display_name': 'Infested Siege Tank',
+            'race': 'Zerg',
+            'type': 'Unit',
+            'is_morph': False,
         },
         'SICocoonInfestedLiberator': {  # TODO verify
             'build_time': 0,
             'built_from': [],
             'display_name': 'Infested Liberator',
+            'race': 'Zerg',
+            'type': 'Unit',
+            'is_morph': False,
         },
         'SICocoonInfestedBanshee': {
             'build_time': 0,
             'built_from': [],
             'display_name': 'Infested Banshee',
+            'race': 'Zerg',
+            'type': 'Unit',
+            'is_morph': False,
         },
         'SICocoonBroodQueen': {  # TODO verify
             'build_time': 0,
             'built_from': [],
             'display_name': 'Brood Queen',
+            'race': 'Zerg',
+            'type': 'Unit',
+            'is_morph': False,
         },
+
+        # Buildings
+
+        # Upgrades
         'HeavyInfestation': {
             'build_time': 90,
             'built_from': ['SICommandCenter'],
             'display_name': 'Aggressive Incubation',
+            'race': 'Zerg',
+            'type': 'Upgrade',
+            'is_morph': False,
         },
         'SIBarracksTrainInfestedCivilianLevel2': {
             'build_time': 120,
             'built_from': ['SIColonistCompound'],  # TODO verify
             'display_name': 'Infestation Level 1',
+            'race': 'Zerg',
+            'type': 'Upgrade',
+            'is_morph': False,
         },
         'SIBarracksTrainInfestedCivilianLevel3': {
             'build_time': 120,
             'built_from': ['SIColonistCompound'],  # TODO verify
             'display_name': 'Infestation Level 2',
+            'race': 'Zerg',
+            'type': 'Upgrade',
+            'is_morph': False,
         },
         'SIBarracksTrainInfestedCivilianLevel4': {
             'build_time': 120,
             'built_from': ['SIColonistCompound'],  # TODO verify
             'display_name': 'Infestation Level 3',
+            'race': 'Zerg',
+            'type': 'Upgrade',
+            'is_morph': False,
         },
         'StukovInfestedInfestedCivilianLeapAttack': {
             'build_time': 60,
             'built_from': ['SIColonistCompound'],  # TODO verify
             'display_name': 'Anaerobic Enhancement',
+            'race': 'Zerg',
+            'type': 'Upgrade',
+            'is_morph': False,
         },
         'StukovInfestedCivilianSpawnBroodlingOnDeath': {  # TODO verify
             'build_time': 90,
@@ -1436,21 +1682,33 @@ COMMANDER_BUILD_DATA = {
             'build_time': 90,
             'built_from': ['SIBarracksTechLab'],
             'display_name': 'Plagued Munitions',
+            'race': 'Zerg',
+            'type': 'Upgrade',
+            'is_morph': False,
         },
         'SIMarineTrooperRange': {
             'build_time': 60,
             'built_from': ['SIBarracksTechLab'],
             'display_name': 'Retinal Augmentation',
+            'race': 'Zerg',
+            'type': 'Upgrade',
+            'is_morph': False,
         },
         'SIBunkerLifeRegen': {
             'build_time': 60,
             'built_from': ['SIEngineeringBay'],
             'display_name': 'Regenerative Plating',
+            'race': 'Zerg',
+            'type': 'Upgrade',
+            'is_morph': False,
         },
         'SIBunkerArmor': {
             'build_time': 60,
             'built_from': ['SIEngineeringBay'],
             'display_name': 'Calcified Armor',
+            'race': 'Zerg',
+            'type': 'Upgrade',
+            'is_morph': False,
         },
         'SIInfantryWeaponsLevel1': {
             'build_time': 160,
@@ -1551,7 +1809,9 @@ COMMANDER_BUILD_DATA = {
             'is_morph': False,
         },
     },
+
     'Fenix': {
+        # Units
         'ZealotPurifier': {
             'build_time': 30,
             'built_from': ['Gateway', 'WarpGate'],
@@ -1593,6 +1853,10 @@ COMMANDER_BUILD_DATA = {
             'type': 'Unit',
             'is_morph': False,
         },
+
+        # Buildings
+
+        # Upgrades
         'FenixSuitAttackDamage': {
             'build_time': 90,
             'built_from': ['Forge'],
@@ -1732,6 +1996,7 @@ COMMANDER_BUILD_DATA = {
             'is_morph': False,
         },
     },
+
     'Dehaka': {
         # Units
         'DehakaTrainEggDrone': {
@@ -1806,6 +2071,7 @@ COMMANDER_BUILD_DATA = {
             'type': 'Unit',
             'is_morph': False,
         },
+
         # Buildings
         'DehakaBarracks': {
             'build_time': 0,
@@ -1855,6 +2121,7 @@ COMMANDER_BUILD_DATA = {
             'type': 'Building',
             'is_morph': False,
         },
+
         # Upgrades
         'DehakaPrimalWeaponsLevel1': {
             'build_time': 160,
@@ -1960,7 +2227,9 @@ COMMANDER_BUILD_DATA = {
         # TODO Explosive Spores 60
         # TODO Primordial Fury 60
     },
+
     'Horner': {
+        # Units
         'HHSCV': {
             'build_time': 17,
             'built_from': ['CommandCenter'],
@@ -2035,7 +2304,6 @@ COMMANDER_BUILD_DATA = {
             'is_morph': False,
         },
 
-
         # Buildings
         'HHMercStarportNoArmy': {
             'build_time': 0,
@@ -2054,6 +2322,7 @@ COMMANDER_BUILD_DATA = {
             'is_morph': False,
         },
         # TODO Strike Fighter Platform
+
         # Upgrades
         'HHReaperG4ClusterBombs': {
             'build_time': 60,
