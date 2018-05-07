@@ -94,9 +94,13 @@ BO_EXCLUDED.update([
     # Fenix
     'FenixCoop',
     'FenixDragoon',
+    'FenixArbiter',
     'FenixChampionTaldarinImmortal',
     'FenixChampionWarbringerColossus',
     'FenixAdeptShade',
+    'FenixTalisAdeptPhaseShift',
+    'FenixClolarionInterceptor',
+    'FenixClolarionBomber',
 
     # Dehaka
     'EssencePickup',
@@ -164,6 +168,7 @@ BO_UPGRADES_EXCLUDED.update([
     'DehakaCoopStage2',
     'DehakaColossusLegs',
     'DehakaCoopStage3',
+    # Fenix
 ])
 
 BUILD_DATA = BUILD_DATA.copy()
@@ -292,38 +297,79 @@ BUILD_DATA.update({
 
 COMMANDER_BUILD_DATA = {
     'Raynor': {
+        # Rapid Recruitment halves all build times
         'Marine': {
-            'build_time': 13,  # TODO verify others
+            'build_time': 13,
             'built_from': ['Barracks'],
+            'display_name': 'Marine',
+            'race': 'Terran',
+            'type': 'Unit',
+            'is_morph': False,
         },
         'Marauder': {
-            'build_time': 15,  # TODO verify others
+            'build_time': 15,
             'built_from': ['Barracks'],
+            'display_name': 'Marauder',
+            'race': 'Terran',
+            'type': 'Unit',
+            'is_morph': False,
             },
         'Firebat': {
-            'build_time': 15,  # TODO verify others
+            'build_time': 15,
             'built_from': ['Barracks'],
             'display_name': 'Firebat',
+            'race': 'Terran',
+            'type': 'Unit',
+            'is_morph': False,
         },
         'Medic': {
-            'build_time': 13,  # TODO verify others
+            'build_time': 13,
             'built_from': ['Barracks'],
             'display_name': 'Medic',
-        },
-        'StabilizerMedPacks': {
-            'build_time': 60,
-            'built_from': ['TechLab'],
-            'display_name': 'Stabilizer Medpacks',
+            'race': 'Terran',
+            'type': 'Unit',
+            'is_morph': False,
         },
         'Vulture': {
-            'build_time': 13,  # TODO verify others
+            'build_time': 13,
             'built_from': ['Factory'],
             'display_name': 'Vulture',
+            'race': 'Terran',
+            'type': 'Unit',
+            'is_morph': False,
         },
         'SiegeTank': {
-            'build_time': 23,  # TODO verify others
+            'build_time': 23,
             'built_from': ['Factory'],
-            },
+            'display_name': 'Siege Tank',
+            'race': 'Terran',
+            'type': 'Unit',
+            'is_morph': False,
+        },
+        'VikingFighter': {
+            'build_time': 21,
+            'built_from': ['Starport'],
+            'display_name': 'Viking',
+            'race': 'Terran',
+            'type': 'Unit',
+            'is_morph': False,
+        },
+        'Banshee': {
+            'build_time': 30,
+            'built_from': ['Starport'],
+            'display_name': 'Banshee',
+            'race': 'Terran',
+            'type': 'Unit',
+            'is_morph': False,
+        },
+        'Battlecruiser': {
+            'build_time': 45,
+            'built_from': ['Starport'],
+            'display_name': 'Battlecruiser',
+            'race': 'Terran',
+            'type': 'Unit',
+            'is_morph': False,
+        },
         # Buildings
         'SupplyDepotDrop': {
             'build_time': 0,
@@ -334,6 +380,11 @@ COMMANDER_BUILD_DATA = {
             'is_morph': False,
         },
         # Upgrades
+        'StabilizerMedPacks': {
+            'build_time': 60,
+            'built_from': ['TechLab'],
+            'display_name': 'Stabilizer Medpacks',
+        },
         'FirebatJuggernautPlating': {
             'build_time': 60,
             'built_from': ['TechLab'],
@@ -378,13 +429,28 @@ COMMANDER_BUILD_DATA = {
             'build_time': 60,
             'built_from': ['TechLab'],
             'display_name': 'Replenishable Magazine',
+            'race': 'Terran',
+            'type': 'Upgrade',
+            'is_morph': False,
         },
         'CerberusMines': {
             'build_time': 60,
             'built_from': ['TechLab'],
             'display_name': 'Cerberus Mines',
+            'race': 'Terran',
+            'type': 'Upgrade',
+            'is_morph': False,
         },
-
+        'AresClassWeaponsSystemViking': {
+            'build_time': 60,
+            'built_from': ['TechLab'],
+            'display_name': 'Phobos Weapons System',
+            'race': 'Terran',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+        # TODO Shockwave Missile Battery
+        # TODO Viking Ripwave Missiles
     },
     'Kerrigan': {
         # TODO extra Zerglings in the build order?
@@ -1381,51 +1447,173 @@ COMMANDER_BUILD_DATA = {
             'build_time': 37,
             'built_from': ['Gateway', 'WarpGate'],
             'display_name': 'Sentry',
+            'race': 'Protoss',
+            'type': 'Unit',
+            'is_morph': False,
         },
         'AdeptFenix': {
             'build_time': 38,
             'built_from': ['Gateway', 'WarpGate'],
             'display_name': 'Adept',
+            'race': 'Protoss',
+            'type': 'Unit',
+            'is_morph': False,
         },
         'ColossusPurifier': {
             'build_time': 75,
             'built_from': ['RoboticsFacility'],
             'display_name': 'Colossus',
+            'race': 'Protoss',
+            'type': 'Unit',
+            'is_morph': False,
         },
         # TODO Disruptor
         'Scout': {
             'build_time': 30,
             'built_from': ['Stargate'],
             'display_name': 'Scout',
+            'race': 'Protoss',
+            'type': 'Unit',
+            'is_morph': False,
+        },
+        'FenixSuitAttackDamage': {
+            'build_time': 90,
+            'built_from': ['Forge'],
+            'display_name': 'Purifier Armaments',
+            'race': 'Protoss',
+            'type': 'Upgrade',
+            'is_morph': False,
         },
         'AStrongHeart': {
             'build_time': 10,
             'built_from': ['Forge'],
             'display_name': 'A Strong Heart',
+            'race': 'Protoss',
+            'type': 'Upgrade',
+            'is_morph': False,
         },
-        'Charge': {
+        'FenixArbiterDetection': {
             'build_time': 60,
-            'built_from': ['TwilightCouncil'],
-            },
+            'built_from': ['Forge'],
+            'display_name': 'Observation Protocol',
+            'race': 'Protoss',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
         'AdeptFenixShadeSpawn': {
             'build_time': 60,
             'built_from': ['TwilightCouncil'],
             'display_name': 'Psionic Projection',
+            'race': 'Protoss',
+            'type': 'Upgrade',
+            'is_morph': False,
         },
-        # TODO Empowered Blades
-        # TODO Debilitation System
-
-        # TODO Cloaknig Module
-        # TODO Purification Echo
-        # TODO Gravimetric Overload
-        # TODO Purification Blast
+        'FenixKaldalisCleave': {
+            'build_time': 60,
+            'built_from': ['TwilightCouncil'],
+            'display_name': 'Empowered Blades',
+            'race': 'Protoss',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+        'FenixChampionTalisAdeptBounceShotUpgrade': {
+            'build_time': 60,
+            'built_from': ['TwilightCouncil'],
+            'display_name': 'Debilitation System',
+            'race': 'Protoss',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+        # TODO Cloaknig Module 60
+        # TODO Purification Echo 90
+        'FenixImmortalDetonationShot': {
+            'build_time': 90,
+            'built_from': ['RoboticsBay'],
+            'display_name': 'Gravimetric Overload',
+            'race': 'Protoss',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+        'FenixWarbringerColossusPowerShot': {
+            'build_time': 90,
+            'built_from': ['RoboticsBay'],
+            'display_name': 'Purification Blast',
+            'race': 'Protoss',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
         'FenixScoutWeaponRange': {
             'build_time': 60,
             'built_from': ['FleetBeacon'],
             'display_name': 'Combat Sensor Array',
+            'race': 'Protoss',
+            'type': 'Upgrade',
+            'is_morph': False,
         },
-        # TODO Suppression Procedure
-        # TODO Interdictors
+        'FenixChampionScoutAOEMissiles': {
+            'build_time': 60,
+            'built_from': ['FleetBeacon'],
+            'display_name': 'Suppression Procedure',
+            'race': 'Protoss',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+        'FenixChampionCarrierBombers': {
+            'build_time': 90,
+            'built_from': ['FleetBeacon'],
+            'display_name': 'Interdictors',
+            'race': 'Protoss',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+        'FenixChampionTaldarinImmortal': {
+            'build_time': 60,
+            'built_from': ['PurifierConclave'],  # TODO verify
+            'display_name': 'Taldarin\'s A.I. Personality',
+            'race': 'Protoss',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+        'FenixChampionWarbringerColossus': {
+            'build_time': 60,
+            'built_from': ['PurifierConclave'],  # TODO verify
+            'display_name': 'Warbringer\'s A.I. Personality',
+            'race': 'Protoss',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+        'FenixChampionKaldalisZealot': {
+            'build_time': 40,
+            'built_from': ['PurifierConclave'],  # TODO verify
+            'display_name': 'Kaldalis\' A.I. Personality',
+            'race': 'Protoss',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+        'FenixChampionMojoScout': {
+            'build_time': 60,
+            'built_from': ['PurifierConclave'],  # TODO verify
+            'display_name': 'Mojo\'s A.I. Personality',
+            'race': 'Protoss',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+        'FenixChampionTalisAdept': {
+            'build_time': 60,
+            'built_from': ['PurifierConclave'],  # TODO verify
+            'display_name': 'Talis\' A.I. Personality',
+            'race': 'Protoss',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+        'FenixChampionClolarionCarrier': {
+            'build_time': 60,
+            'built_from': ['PurifierConclave'],  # TODO verify
+            'display_name': 'Clolarion\'s A.I. Personality',
+            'race': 'Protoss',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
     },
     'Dehaka': {
         # Units
