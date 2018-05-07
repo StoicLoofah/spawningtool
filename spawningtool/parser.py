@@ -166,6 +166,8 @@ class GameParser(object):
     replay = None  # sc2reader parsed version
     parsed_data = None
 
+    upgrade_build_time_modifier = None  # special case for Kerrigan mastery
+
     builds = None
     units_lost = None
     abilities = None
@@ -315,6 +317,9 @@ class GameParser(object):
         self.make_event_timeline(self.abilities, cutoff_time, 'abilities')
 
         self.set_chronoboost_data()
+
+        self.set_commander_mastery()
+
         self.add_tracker_events(include_map_details)
         self.make_event_timeline(self.builds, cutoff_time, 'buildOrder')
         self.make_event_timeline(self.units_lost, cutoff_time, 'unitsLost')
@@ -353,6 +358,40 @@ class GameParser(object):
         self.bo_changed_excluded = self.constants.BO_CHANGED_EXCLUDED
         self.bo_upgrades_excluded = self.constants.BO_UPGRADES_EXCLUDED
         self.tracked_abilities = self.constants.TRACKED_ABILITIES
+
+    def set_commander_mastery(self):
+        """
+        https://us.battle.net/forums/en/sc2/topic/20752557371
+
+        some co-op commanders have special mastery talents that affects build times.
+
+        Kerrigan's "Expeditious Evolutions" (Power Set 3, power 1) reduces evolution times
+        by 2% for each point
+
+        Abathur: "Structure Morph and Evolution Rate" is similar
+
+        Artanis, Vorazun, Karax, Fenix: "Chrono Boost Efficiency" (Power Set 3, power 1)
+        increases chronoboost effectiveness by 1% for each point
+
+        Alarak is the same in Power Set 3, power 2
+
+        Swann Power Set 2, power 1 "Immortality Protocol Cost and Build Time" TODO
+        Swann Power Set 3, power 2 "Laser Drill Production Time" TODO
+        """
+        self.upgrade_build_time_modifier = {}
+
+        for key, player in self.replay.player.items():
+            if player.commander == 'Kerrigan':
+                self.upgrade_build_time_modifier[key] = 1 - (player.commander_mastery_talents[4] * .02)
+
+            if player.commander == 'Abathur':
+                self.upgrade_build_time_modifier[key] = 1 - (player.commander_mastery_talents[5] * .02)
+
+            if player.commander in ['Artanis', 'Vorazun', 'Karax', 'Fenix']:
+                self.chronoboost_multiplier += player.commander_mastery_talents[4] * .01
+
+            if player.commander in ['Alarak']:
+                self.chronoboost_multiplier += player.commander_mastery_talents[5] * .01
 
     def add_ability_events(self):
         """
@@ -583,7 +622,8 @@ class GameParser(object):
 
         if unit_name in self.get_build_data(player):
             frame, unit_name, is_chronoboosted = \
-                self.adjust_build_time(event.frame, player, unit_name)
+                self.adjust_build_time(event.frame, player, unit_name,
+                                       self.upgrade_build_time_modifier.get(player, 1))
         else:
             unit_name += ' (upgrade missing)'
             frame = event.frame
@@ -645,7 +685,7 @@ class GameParser(object):
                 return self.constants.COMMANDER_BUILD_DATA[commander]
         return self.constants.BUILD_DATA
 
-    def adjust_build_time(self, frame, player, unit_name):
+    def adjust_build_time(self, frame, player, unit_name, build_time_modifier=1):
         """
         chronoboosts is arranged in reverse order.
 
@@ -661,7 +701,7 @@ class GameParser(object):
 
         cur_build_data = build_data[unit_name]
 
-        projected_start = frame - build_data[unit_name]['build_time']
+        projected_start = frame - build_data[unit_name]['build_time'] * build_time_modifier
         chronoboosted = False
 
         if self.chronoboosts.get(player):
