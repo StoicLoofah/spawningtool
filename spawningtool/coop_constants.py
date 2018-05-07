@@ -248,6 +248,15 @@ BUILD_DATA.update({
         'built_from': ['Spire', 'GreaterSpire'],
         'display_name': 'Vicious Glave',
     },
+    # Artanis and Karax
+    'ImmortalAiur': {
+        'build_time': 55,
+        'built_from': ['RoboticsFacility'],
+        'display_name': 'Immortal',
+        'race': 'Protoss',
+        'type': 'Unit',
+        'is_morph': False,
+    },
     # Shared by at least Fenix and Karax
     'Charge': {
         'build_time': 60,
@@ -531,41 +540,86 @@ COMMANDER_BUILD_DATA = {
         },
     },
     'Artanis': {
-        # TODO verify
         'ZealotAiur': {
             'build_time': 38,
             'built_from': ['Gateway', 'WarpGate'],  # warpgate is necessary because of changing types
             'display_name': 'Zealot',
         },
+        'Dragoon': {
+            'build_time': 42,
+            'built_from': ['Gateway', 'WarpGate'],  # warpgate is necessary because of changing types
+            'display_name': 'Dragoon',
+            'race': 'Protoss',
+            'type': 'Unit',
+            'is_morph': False,
+        },
+        'PhoenixAiur': {
+            'build_time': 35,
+            'built_from': ['Stargate'],
+            'display_name': 'Phoenix',
+            'race': 'Protoss',
+            'type': 'Unit',
+            'is_morph': False,
+        },
+
+        # Upgrades
         'ZealotResearchWhirlwind': {
             'build_time': 90,
             'built_from': ['TwilightCouncil'],
             'display_name': 'Whirlwind',
+            'race': 'Protoss',
+            'type': 'Upgrade',
+            'is_morph': False,
         },
         'StalkerResearchDragoonRange': {
             'build_time': 60,
             'built_from': ['TwilightCouncil'],
             'display_name': 'Singularity Charge',
+            'race': 'Protoss',
+            'type': 'Upgrade',
+            'is_morph': False,
         },
         'StalkerResearchDragoonHealth': {
             'build_time': 90,
             'built_from': ['TwilightCouncil'],
             'display_name': 'Trillic Compresion Mesh',
+            'race': 'Protoss',
+            'type': 'Upgrade',
+            'is_morph': False,
         },
+        'ImmortalResearchBarrierAdvanced': {
+            'build_time': 60,
+            'built_from': ['RoboticsBay'],
+            'display_name': 'Improved Barrier',
+            'race': 'Protoss',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+        # TODO Scarab Housing
+        # TODO Solarite Payload
         'HighTemplarKhaydarinAmulet': {
             'build_time': 120,
             'built_from': ['TemplarArchives'],
             'display_name': 'Khaydarin Amulet',
+            'race': 'Protoss',
+            'type': 'Upgrade',
+            'is_morph': False,
         },
         'HealingPsionicStorm': {
             'build_time': 90,
             'built_from': ['TemplarArchives'],
             'display_name': 'Plasma Surge',
+            'race': 'Protoss',
+            'type': 'Upgrade',
+            'is_morph': False,
         },
         'TempestDisintegration': {
             'build_time': 90,
             'built_from': ['FleetBeacon'],
             'display_name': 'Disintegration',
+            'race': 'Protoss',
+            'type': 'Upgrade',
+            'is_morph': False,
         },
     },
     'Swann': {
@@ -827,14 +881,6 @@ COMMANDER_BUILD_DATA = {
             'build_time': 37,
             'built_from': ['Gateway', 'WarpGate'],
             'display_name': 'Energizer',
-            'race': 'Protoss',
-            'type': 'Unit',
-            'is_morph': False,
-            },
-        'ImmortalAiur': {
-            'build_time': 55,
-            'built_from': ['Gateway', 'WarpGate'],
-            'display_name': 'Immortal',
             'race': 'Protoss',
             'type': 'Unit',
             'is_morph': False,
