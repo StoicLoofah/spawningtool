@@ -109,6 +109,9 @@ BO_EXCLUDED.update([
     'LocustMPPrecursor',
     'DehakaNydusDestroyerTimedNoFood',
     'DehakaPlacement',
+    'NydusDestroyerDeepTunnelPlacement',
+    'GreaterNydusDestroyerDeepTunnelPlacement',
+    'DehakaCreeperFlying',
     # Calldowns
     'DehakaGlevig',
     'DehakaGlevigDeepTunnelPlacement',
@@ -136,6 +139,11 @@ BO_EXCLUDED.update([
     'HHVikingFighter',
     'HHRaven',
     'HHBattlecruiser',
+    'HHBomber',  # calldown
+    'HHMercenarySpaceStation',
+    'HHGriffon',
+    'HornerAirFleetTargeter',
+    'HornerAirFleetStrafer',
 ])
 
 BO_CHANGED_EXCLUDED = BO_CHANGED_EXCLUDED.copy()
@@ -148,7 +156,7 @@ BO_CHANGED_EXCLUDED.update([
     'HHViking',
     'HotsRaptor',
     'HotSSwarmling',
-
+    'HHReaper',
 ])
 
 
@@ -168,6 +176,7 @@ BO_UPGRADES_EXCLUDED.update([
     'DehakaCoopStage2',
     'DehakaColossusLegs',
     'DehakaCoopStage3',
+    'DehakaAirAttackUpgrade',
     # Fenix
 ])
 
@@ -1760,6 +1769,7 @@ COMMANDER_BUILD_DATA = {
             },
         # TODO Stukov Factory Tech Lab
         # TODO Stukov Starport Tech Lab
+        # TODO StukovInfestedBansheeInfestedLife
         'SITerranVehicleWeaponsLevel1': {
             'build_time': 160,
             'built_from': ['SIArmory'],
@@ -2195,7 +2205,7 @@ COMMANDER_BUILD_DATA = {
             'type': 'Upgrade',
             'is_morph': False,
         },
-        # TODO Concentrated Fire
+        # TODO Concentrated Fire 120
         'DehakaHydraliskSpeed': {
             'build_time': 60,
             'built_from': ['DehakaGlevigStructure'],
@@ -2204,7 +2214,14 @@ COMMANDER_BUILD_DATA = {
             'type': 'Upgrade',
             'is_morph': False,
         },
-        # TODO Tenderize
+        'DehakaImpalerTenderize': {
+            'build_time': 60,
+            'built_from': ['DehakaGlevigStructure'],
+            'display_name': 'Tenderize',
+            'race': 'Zerg',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
         'DehakaUltraliskCrashingCharge': {
             'build_time': 60,
             'built_from': ['DehakaDakrunStructure'],
@@ -2221,9 +2238,23 @@ COMMANDER_BUILD_DATA = {
             'type': 'Upgrade',
             'is_morph': False,
         },
-        # TODO Slicing Glave 60
+        'DehakaMutaliskAirDoubleDamage': {
+            'build_time': 60,
+            'built_from': ['DehakaMurvarStructure'],
+            'display_name': 'Slicing Glave',
+            'race': 'Zerg',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
         # TODO Shifting Carapace 60
-        # TODO Primal Reconsitution 90
+        'DehakaMutaliskRespawnOnDeath': {
+            'build_time': 90,
+            'built_from': ['DehakaMurvarStructure'],
+            'display_name': 'Primal Reconstitution',
+            'race': 'Zerg',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
         # TODO Explosive Spores 60
         # TODO Primordial Fury 60
     },
@@ -2321,7 +2352,14 @@ COMMANDER_BUILD_DATA = {
             'type': 'Building',
             'is_morph': False,
         },
-        # TODO Strike Fighter Platform
+        'HHBomberPlatform': {
+            'build_time': 0,
+            'built_from': [],
+            'display_name': 'Strike Fighter Platform',
+            'race': 'Terran',
+            'type': 'Building',
+            'is_morph': False,
+        },
 
         # Upgrades
         'HHReaperG4ClusterBombs': {
@@ -2332,7 +2370,14 @@ COMMANDER_BUILD_DATA = {
             'type': 'Upgrade',
             'is_morph': False,
         },
-        # TODO Jetpack Overdrive
+        'HHReaperFlight': {
+            'build_time': 90,
+            'built_from': ['HHMercCompound'],
+            'display_name': 'Jetpack Overdrive',
+            'race': 'Terran',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
         'HHWidowMineDeathBlossom': {
             'build_time': 60,
             'built_from': ['HHMercCompound'],
@@ -2436,7 +2481,14 @@ COMMANDER_BUILD_DATA = {
             'is_morph': False,
         },
         # TODO Overcharged Reactor
-        # TODO Napalm Payload
+        'HHBomberNapalm': {
+            'build_time': 90,
+            'built_from': ['FusionCore'],
+            'display_name': 'Napalm Payload',
+            'race': 'Terran',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
     },
 }
 
