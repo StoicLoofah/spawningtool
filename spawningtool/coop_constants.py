@@ -1347,6 +1347,14 @@ COMMANDER_BUILD_DATA = {
             'type': 'Unit',
             'is_morph': False,
         },
+        'HighTemplarTaldarim': {
+            'build_time': 55,
+            'built_from': ['Gateway', 'WarpGate'],
+            'display_name': 'Ascendant',
+            'race': 'Protoss',
+            'type': 'Unit',
+            'is_morph': False,
+        },
         'ImmortalTaldarim': {
             'build_time': 55,
             'built_from': ['Robotics Facility'],
@@ -1379,9 +1387,24 @@ COMMANDER_BUILD_DATA = {
             'type': 'Unit',
             'is_morph': False,
         },
-
+        # Buildings
+        'TemplarArchive': {
+            'build_time': 0,
+            'built_from': [],
+            'display_name': 'Ascendant Archives',
+            'race': 'Protoss',
+            'type': 'Building',
+            'is_morph': False,
+        },
         # Upgrades
-        # TODO Imposing Presence
+        'AlarakAttackStunUpgrade': {
+            'build_time': 90,  # TODO Verify
+            'built_from': ['Forge'],
+            'display_name': 'Imposing Presence',
+            'race': 'Protoss',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
         # TODO Telekinesis
         'AlarackHavocPermanentCloak': {
             'build_time': 60,
@@ -1391,8 +1414,22 @@ COMMANDER_BUILD_DATA = {
             'type': 'Upgrade',
             'is_morph': False,
         },
-        # TODO Bloodshard Resonance
-        # TODO Detect Weakness
+        'AlarakHavocAbilityRange': {
+            'build_time': 90,
+            'built_from': ['CyberneticsCore'],
+            'display_name': 'Bloodshard Resonance',
+            'race': 'Protoss',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+        'AlarakHavocTargetLockBuff': {
+            'build_time': 90,
+            'built_from': ['CyberneticsCore'],
+            'display_name': 'Detect Weakness',
+            'race': 'Protoss',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
         'AlarakSupplicantShieldArmor': {
             'build_time': 60,
             'built_from': ['TwilightCouncil'],
@@ -1401,9 +1438,16 @@ COMMANDER_BUILD_DATA = {
             'type': 'Upgrade',
             'is_morph': False,
         },
-        # TODO Soul Augmentation
+        'AlarakSupplicantMaxShields': {
+            'build_time': 90,
+            'built_from': ['TwilightCouncil'],
+            'display_name': 'Soul Augmentation',
+            'race': 'Protoss',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
         'AlarakStalkerPhasingArmor': {
-            'build_time': 90,  # TODO verify
+            'build_time': 90,
             'built_from': ['TwilightCouncil'],
             'display_name': 'Phasing Armor',
             'race': 'Protoss',
@@ -1431,6 +1475,30 @@ COMMANDER_BUILD_DATA = {
             'build_time': 60,  # TODO verify
             'built_from': ['RoboticsBay'],
             'display_name': 'Rapid Power Cycling',
+            'race': 'Protoss',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+        'AlarakHighTemplarImprovedSacrifice': {
+            'build_time': 60,
+            'built_from': ['TemplarArchive'],
+            'display_name': 'Power Overwhelming',
+            'race': 'Protoss',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+        'VoidHighTemplarMindBlast': {
+            'build_time': 60,
+            'built_from': ['TemplarArchive'],
+            'display_name': 'Mind Blast',
+            'race': 'Protoss',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+        'AlarakHighTemplarPsionicOrbTravelDistance': {
+            'build_time': 60,
+            'built_from': ['TemplarArchive'],
+            'display_name': 'Chaotic Attunement',
             'race': 'Protoss',
             'type': 'Upgrade',
             'is_morph': False,
