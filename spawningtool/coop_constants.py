@@ -91,14 +91,17 @@ BO_EXCLUDED.update([
     'SIVolatileInfested',  # not sure what this is but couldn't see it in-game
     'StukovAleksander',  # Calldown
     'ALEKSANDERCRASH_PLACEHOLDER',  # Calldown
+
     # Fenix
+    # Fenix Hero Units
     'FenixCoop',
     'FenixDragoon',
     'FenixArbiter',
-    'FenixChampionTaldarinImmortal',
-    'FenixChampionWarbringerColossus',
+    # Purifier Conclave
     'FenixAdeptShade',
     'FenixTalisAdeptPhaseShift',
+    'FenixChampionTaldarinImmortal',
+    'FenixChampionWarbringerColossus',
     'FenixClolarionInterceptor',
     'FenixClolarionBomber',
 
@@ -178,6 +181,12 @@ BO_UPGRADES_EXCLUDED.update([
     'DehakaCoopStage3',
     'DehakaAirAttackUpgrade',
     # Fenix
+    'FenixNetworkedSuperiorityZealot',
+    'FenixNetworkedSuperiorityAdept',
+    'FenixNetworkedSuperiorityImmortal',
+    'FenixNetworkedSuperiorityColossus',
+    'FenixNetworkedSuperiorityScout',
+    'FenixNetworkedSuperiorityCarrier',
 ])
 
 BUILD_DATA = BUILD_DATA.copy()
