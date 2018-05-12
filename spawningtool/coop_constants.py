@@ -2209,7 +2209,7 @@ COMMANDER_BUILD_DATA = {
         'SentryFenix': {
             'build_time': 37,
             'built_from': ['Gateway', 'WarpGate'],
-            'display_name': 'Sentry',
+            'display_name': 'Conservator',
             'race': 'Protoss',
             'type': 'Unit',
             'is_morph': False,
@@ -2230,7 +2230,6 @@ COMMANDER_BUILD_DATA = {
             'type': 'Unit',
             'is_morph': False,
         },
-        # TODO Disruptor
         'Scout': {
             'build_time': 30,
             'built_from': ['Stargate'],
@@ -2267,6 +2266,14 @@ COMMANDER_BUILD_DATA = {
             'type': 'Upgrade',
             'is_morph': False,
         },
+        'FenixSentryGuardianZoneUpgrade': {
+            'build_time': 60,
+            'built_from': ['CyberneticsCore'],
+            'display_name': 'Optimized Emitters',
+            'race': 'Protoss',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
         'AdeptFenixShadeSpawn': {
             'build_time': 60,
             'built_from': ['TwilightCouncil'],
@@ -2291,8 +2298,22 @@ COMMANDER_BUILD_DATA = {
             'type': 'Upgrade',
             'is_morph': False,
         },
-        # TODO Cloaknig Module 60
-        # TODO Purification Echo 90
+        'DisruptorCloak': {
+            'build_time': 60,
+            'built_from': ['RoboticsBay'],
+            'display_name': 'Cloaking Module',
+            'race': 'Protoss',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+        'DisruptorSecondExplosion': {
+            'build_time': 90,
+            'built_from': ['RoboticsBay'],
+            'display_name': 'Purification Echo',
+            'race': 'Protoss',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
         'FenixImmortalDetonationShot': {
             'build_time': 90,
             'built_from': ['RoboticsBay'],
