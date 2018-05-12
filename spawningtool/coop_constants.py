@@ -354,7 +354,32 @@ BUILD_DATA.update({
         'type': 'Upgrade',
         'is_morph': False,
     },
+
     # Nova and Swann
+    'BarracksTechReactor': {
+        'build_time': 0,
+        'built_from': [],
+        'display_name': 'Barracks Tech Reactor',
+        'race': 'Terran',
+        'type': 'Building',
+        'is_morph': False,
+    },
+    'FactoryTechReactor': {
+        'build_time': 0,
+        'built_from': [],
+        'display_name': 'Factory Tech Reactor',
+        'race': 'Terran',
+        'type': 'Building',
+        'is_morph': False,
+    },
+    'StarportTechReactor': {
+        'build_time': 0,
+        'built_from': [],
+        'display_name': 'Starport Tech Reactor',
+        'race': 'Terran',
+        'type': 'Building',
+        'is_morph': False,
+    },
     'AutomatedRefinery': {
         'build_time': 0,
         'built_from': [],
@@ -371,8 +396,16 @@ BUILD_DATA.update({
         'type': 'Upgrade',
         'is_morph': False,
     },
+    'HiSecAutoTracking': {
+        'build_time': 60,
+        'built_from': ['Engineering'],
+        'display_name': 'Hi-Sec Auto Tracking',
+        'race': 'Terran',
+        'type': 'Upgrade',
+        'is_morph': False,
+    },
     'TerranBuildingArmor': {
-        'build_time': 60,  # TODO confirm
+        'build_time': 60,
         'built_from': ['Engineering'],
         'display_name': 'Building Armor',
         'race': 'Terran',
@@ -814,9 +847,8 @@ COMMANDER_BUILD_DATA = {
 
     'Swann': {
         # Units
-        # SCVs now benefits from the Level 1 Vehicle Specialist upgrade, which reduces the SCV's build time by 20%.
         'SCV': {
-            'build_time': 14,  # TODO verify change in April 2018
+            'build_time': 14,
             'built_from': ['CommandCenter'],
             'display_name': 'SCV',
             'race': 'Terran',
@@ -897,6 +929,14 @@ COMMANDER_BUILD_DATA = {
         },
 
         # Buildings
+        'KelMorianMissileTurret': {
+            'build_time': 0,
+            'built_from': [],
+            'display_name': 'Spinning Dizzy',
+            'race': 'Terran',
+            'type': 'Building',
+            'is_morph': False,
+        },
         'KelMorianGrenadeTurret': {
             'build_time': 0,
             'built_from': [],
@@ -915,9 +955,25 @@ COMMANDER_BUILD_DATA = {
         },
 
         # Upgrades
+        'FireSuppressionSystems': {
+            'build_time': 60,
+            'built_from': ['EngineeringBay'],
+            'display_name': 'Fire-Suppression Systems',
+            'race': 'Terran',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+        'SwannTurretIncreasedAttackSpeed': {
+            'build_time': 90,
+            'built_from': ['EngineeringBay'],
+            'display_name': 'KMC Auto-Loaders',
+            'race': 'Terran',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
         'HellbatHellArmor': {
             'build_time': 60,
-            'built_from': ['TechLab'],
+            'built_from': ['TechReactor'],
             'display_name': 'Infernal Plating',
             'race': 'Terran',
             'type': 'Upgrade',
@@ -925,7 +981,7 @@ COMMANDER_BUILD_DATA = {
         },
         'MultilockTargetingSystems': {
             'build_time': 90,
-            'built_from': ['TechLab'],
+            'built_from': ['TechReactor'],
             'display_name': 'Multi-Lock Weapons System',
             'race': 'Terran',
             'type': 'Upgrade',
@@ -933,7 +989,7 @@ COMMANDER_BUILD_DATA = {
         },
         'MaelstromRounds': {
             'build_time': 60,
-            'built_from': ['TechLab'],
+            'built_from': ['TechReactor'],
             'display_name': 'Maelstrom Rounds',
             'race': 'Terran',
             'type': 'Upgrade',
@@ -941,26 +997,47 @@ COMMANDER_BUILD_DATA = {
         },
         'CycloneLockOnRangeUpgrade': {
             'build_time': 60,  # reduced ~ April 2018
-            'built_from': ['TechLab'],
+            'built_from': ['TechReactor'],
             'display_name': 'Targeting Optics',
             'race': 'Terran',
             'type': 'Upgrade',
             'is_morph': False,
         },
-        # TODO Mag-Field Accelerator now 90s
-        # TODO 330mm Barrage Cannon
+        'CycloneLockOnDamageUpgrade': {
+            'build_time': 90,
+            'built_from': ['TechReactor'],
+            'display_name': 'Mag-Field Accelerator',
+            'race': 'Terran',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+        '330mmBarrageCannons': {
+            'build_time': 60,
+            'built_from': ['TechReactor'],
+            'display_name': '330mm Barrage Cannon',
+            'race': 'Terran',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
         'WraithImprovedBurstLaser': {
             'build_time': 60,
-            'built_from': ['TechLab'],
+            'built_from': ['TechReactor'],
             'display_name': 'Pulse Amplifier',
             'race': 'Terran',
             'type': 'Upgrade',
             'is_morph': False,
         },
-        # TODO Displacement FIeld
+        'CloakDistortionField': {
+            'build_time': 60,
+            'built_from': ['TechReactor'],
+            'display_name': 'Displacement Field',
+            'race': 'Terran',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
         'ScienceVesselFreeRepair': {
             'build_time': 60,
-            'built_from': ['TechLab'],
+            'built_from': ['TechReactor'],
             'display_name': 'Improved Nano-Repair',
             'race': 'Terran',
             'type': 'Upgrade',
@@ -968,15 +1045,31 @@ COMMANDER_BUILD_DATA = {
         },
         'ScienceVesselResearchDefensiveMatrix': {
             'build_time': 90,
-            'built_from': ['TechLab'],
+            'built_from': ['TechReactor'],
             'display_name': 'Defensive Matrix',
+            'race': 'Terran',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+        'RegenerativeBioSteel': {
+            'build_time': 90,
+            'built_from': ['Armory'],
+            'display_name': 'Regenerative Bio-Steel',
+            'race': 'Terran',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+        'SwannCommanderVehicleWeaponRange': {
+            'build_time': 120,
+            'built_from': ['Armory'],
+            'display_name': 'Advanced Optics',
             'race': 'Terran',
             'type': 'Upgrade',
             'is_morph': False,
         },
         'DrakkenLaserDrillBFG': {
             'build_time': 190,
-            'built_from': [],  # ?
+            'built_from': ['DrakkenLaserDrillCoop'],
             'display_name': 'Upgrade Laser Drill Level 1',
             'race': 'Terran',
             'type': 'Upgrade',
@@ -984,7 +1077,7 @@ COMMANDER_BUILD_DATA = {
         },
         'DrakkenLaserDrillNuke': {
             'build_time': 220,
-            'built_from': [],  # ?
+            'built_from': ['DrakkenLaserDrillCoop'],
             'display_name': 'Upgrade Laser Drill Level 2',
             'race': 'Terran',
             'type': 'Upgrade',
