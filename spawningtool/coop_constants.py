@@ -2602,7 +2602,14 @@ COMMANDER_BUILD_DATA = {
             'type': 'Upgrade',
             'is_morph': False,
         },
-        # TODO Concentrated Fire 120
+        'DehakaGlevigRoachFireBreath': {
+            'build_time': 120,
+            'built_from': ['DehakaGlevigStructure'],
+            'display_name': 'Concentrated Fire',
+            'race': 'Zerg',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
         'DehakaHydraliskSpeed': {
             'build_time': 60,
             'built_from': ['DehakaGlevigStructure'],
@@ -2635,6 +2642,30 @@ COMMANDER_BUILD_DATA = {
             'type': 'Upgrade',
             'is_morph': False,
         },
+        'DehakaUltraliskBash': {
+            'build_time': 60,
+            'built_from': ['DehakaDakrunStructure'],
+            'display_name': 'Impaling Strike',
+            'race': 'Zerg',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+        'DehakaTyrannozorFanOfKnives': {
+            'build_time': 60,
+            'built_from': ['DehakaDakrunStructure'],
+            'display_name': 'Barrage of Spikes',
+            'race': 'Zerg',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+        'DehakaTyrannozorArmorAura': {
+            'build_time': 60,
+            'built_from': ['DehakaDakrunStructure'],
+            'display_name': 'Tyrant\'s Protection',
+            'race': 'Zerg',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
         'DehakaMutaliskAirDoubleDamage': {
             'build_time': 60,
             'built_from': ['DehakaMurvarStructure'],
@@ -2643,7 +2674,14 @@ COMMANDER_BUILD_DATA = {
             'type': 'Upgrade',
             'is_morph': False,
         },
-        # TODO Shifting Carapace 60
+        'DehakaMutaliskDamageReduction': {
+            'build_time': 60,
+            'built_from': ['DehakaMurvarStructure'],
+            'display_name': 'Shifting Carapace',
+            'race': 'Zerg',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
         'DehakaMutaliskRespawnOnDeath': {
             'build_time': 90,
             'built_from': ['DehakaMurvarStructure'],
@@ -2652,8 +2690,30 @@ COMMANDER_BUILD_DATA = {
             'type': 'Upgrade',
             'is_morph': False,
         },
-        # TODO Explosive Spores 60
-        # TODO Primordial Fury 60
+        'DehakaGuardianExplosiveBomb': {
+            'build_time': 60,
+            'built_from': ['DehakaMurvarStructure'],
+            'display_name': 'Explosive Spores',
+            'race': 'Zerg',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+        'DehakaGuardianFury': {
+            'build_time': 60,
+            'built_from': ['DehakaMurvarStructure'],
+            'display_name': 'Primordial Fury',
+            'race': 'Zerg',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+        'DehakaMurvarCreeperAir': {
+            'build_time': 90,
+            'built_from': ['DehakaMurvarStructure'],
+            'display_name': 'Aerial Burst Sacs',
+            'race': 'Zerg',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
     },
 
     'Horner': {
