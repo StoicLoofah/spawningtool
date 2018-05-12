@@ -60,10 +60,14 @@ BO_EXCLUDED.update([
     'AlarakSupplicantWarpTrainCreator',
 
     # Nova
+    'NovaBoombot',
+    'NovaCoopDecoy',
     'NovaReviveBeacon',
     'SpiderMineBurrowed',
     'HealingDrone',
     'Marine_BlackOps',
+    'Ghost_BlackOps',
+    'GhostFemale_BlackOps',
     'Liberator_BlackOps',
     'Raven_BlackOps',
     'Goliath_BlackOps',
@@ -351,10 +355,26 @@ BUILD_DATA.update({
         'is_morph': False,
     },
     # Nova and Swann
+    'AutomatedRefinery': {
+        'build_time': 0,
+        'built_from': [],
+        'display_name': 'Refinery',
+        'race': 'Terran',
+        'type': 'Building',
+        'is_morph': False,
+    },
     'AresClassWeaponsSystem': {
         'build_time': 60,
         'built_from': ['TechLab'],
         'display_name': 'Ares-Class Targeting System',
+        'race': 'Terran',
+        'type': 'Upgrade',
+        'is_morph': False,
+    },
+    'TerranBuildingArmor': {
+        'build_time': 60,  # TODO confirm
+        'built_from': ['Engineering'],
+        'display_name': 'Building Armor',
         'race': 'Terran',
         'type': 'Upgrade',
         'is_morph': False,
@@ -1585,7 +1605,14 @@ COMMANDER_BUILD_DATA = {
             'type': 'Unit',
             'is_morph': False,
         },
-        # TODO Spec ops ghost
+        'Ghost_BlackOpsSpawnerUnit': {
+            'build_time': 0,  # calldown
+            'built_from': ['Barracks'],
+            'display_name': 'Spec Ops Ghost',
+            'race': 'Terran',
+            'type': 'Unit',
+            'is_morph': False,
+        },
         'Hellbat_BlackOpsSpawnerUnit': {
             'build_time': 0,  # calldown
             'built_from': ['Factory'],
@@ -1636,9 +1663,22 @@ COMMANDER_BUILD_DATA = {
         },
 
         # Buildings
-        # TODO Railgun Turret
-        # TODO Missile Turret
-
+        'NovaACLaserTurret': {
+            'build_time': 0,
+            'built_from': [],
+            'display_name': 'Railgun Turret',
+            'race': 'Terran',
+            'type': 'Building',
+            'is_morph': False,
+        },
+        'GhostAcademyNova': {
+            'build_time': 0,
+            'built_from': [],
+            'display_name': 'Ghost Academy',
+            'race': 'Terran',
+            'type': 'Building',
+            'is_morph': False,
+        },
         # Upgrades
         'LaserTargetingSystemNova': {
             'build_time': 60,
@@ -1649,8 +1689,8 @@ COMMANDER_BUILD_DATA = {
             'is_morph': False,
         },
         'MarineSuperStim': {
-            'build_time': 90,  # TODO verify
-            'built_from': ['TechLab'],  # TODO verify
+            'build_time': 90,
+            'built_from': ['TechLab'],
             'display_name': 'Super Stimpack',
             'race': 'Terran',
             'type': 'Upgrade',
@@ -1664,7 +1704,14 @@ COMMANDER_BUILD_DATA = {
             'type': 'Upgrade',
             'is_morph': False,
         },
-        # TODO Magrail Munitions
+        'MarauderMagrailMunitions': {
+            'build_time': 90,
+            'built_from': ['TechLab'],
+            'display_name': 'Suppression Shells',
+            'race': 'Terran',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
         'GhostBlackOpsEMP': {
             'build_time': 60,
             'built_from': ['TechLab'],
@@ -1673,9 +1720,30 @@ COMMANDER_BUILD_DATA = {
             'type': 'Upgrade',
             'is_morph': False,
         },
-        # TODO Triple Tap
-        # TODO Jump Jet Assault
-        # TODO Lockdown Missiles
+        'GhostBlackOpsTripleTap': {
+            'build_time': 90,
+            'built_from': ['TechLab'],
+            'display_name': 'Triple Tap',
+            'race': 'Terran',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+        'HellbatJumpJetAssault': {
+            'build_time': 90,
+            'built_from': ['TechLab'],
+            'display_name': 'Jump Jet Assault',
+            'race': 'Terran',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+        'NovaUnitLockdown': {
+            'build_time': 90,
+            'built_from': ['TechLab'],
+            'display_name': 'Lockdown Missiles',
+            'race': 'Terran',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
         'DeploySpiderMines': {
             'build_time': 60,
             'built_from': ['TechLab'],
@@ -1684,7 +1752,14 @@ COMMANDER_BUILD_DATA = {
             'type': 'Upgrade',
             'is_morph': False,
         },
-        # TODO Graduating Range
+        'SiegeTankSiegeModeProgressiveRangeIncease': {
+            'build_time': 90,
+            'built_from': ['TechLab'],
+            'display_name': 'Graduating Range',
+            'race': 'Terran',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
         'BansheePermaCloak': {
             'build_time': 60,
             'built_from': ['TechLab'],
@@ -1693,18 +1768,78 @@ COMMANDER_BUILD_DATA = {
             'type': 'Upgrade',
             'is_morph': False,
         },
-        # TODO Rocket Barrage
+        'BansheeAirstrike': {
+            'build_time': 90,
+            'built_from': ['TechLab'],
+            'display_name': 'Rocket Barrage',
+            'race': 'Terran',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
         'LiberatorStructureAttack': {
-            'build_time': 90,  # TODO verify
-            'built_from': ['TechLab'],  # TODO verify
+            'build_time': 60,
+            'built_from': ['TechLab'],
             'display_name': 'Raid Artillery',
             'race': 'Terran',
             'type': 'Upgrade',
             'is_morph': False,
         },
-        # TODO Smart Servos
-        # TODO Covert Triage
-        # TODO Enhanced Manufacturing
+        'MultiTaskMAFServosLiberator': {
+            'build_time': 90,
+            'built_from': ['TechLab'],
+            'display_name': 'Smart Servos',
+            'race': 'Terran',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+        'HealingDroneCloakHealBeam': {
+            'build_time': 90,
+            'built_from': ['TechLab'],
+            'display_name': 'Covert Triage',
+            'race': 'Terran',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+        'RavenSuperScience': {
+            'build_time': 90,
+            'built_from': ['TechLab'],
+            'display_name': 'Enhanced Manufacturing',
+            'race': 'Terran',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+        'NovaDetector': {
+            'build_time': 90,
+            'built_from': ['GhostAcademyNova'],
+            'display_name': 'Ghost Visor',
+            'race': 'Terran',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+        'NovaLifeRegen': {
+            'build_time': 90,
+            'built_from': ['GhostAcademyNova'],
+            'display_name': 'Caduceus Reactor',
+            'race': 'Terran',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+        'NovaSnipeRefund': {
+            'build_time': 120,
+            'built_from': ['GhostAcademyNova'],
+            'display_name': 'Operational Efficiency',
+            'race': 'Terran',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+        'NovaShotgunBlastRange': {
+            'build_time': 120,
+            'built_from': ['GhostAcademyNova'],
+            'display_name': 'Infernal Projectiles',
+            'race': 'Terran',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
     },
 
     'Stukov': {
