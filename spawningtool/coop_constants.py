@@ -29,6 +29,7 @@ BO_EXCLUDED.update([
     'NydusNetworkAlly',
     'NydusCanalAlly',
     'GreaterNydusWormAlly',
+    'BroodLordCocoon',
     # Artanis
     'SOAPylonPowerAllyUnit',
     'SOAPylonPowerUnit',
@@ -198,7 +199,7 @@ BUILD_DATA = BUILD_DATA.copy()
 BUILD_DATA.update({
     # shared across at least Kerrigan and Zagara
     'overlordspeed': {
-        'build_time': 60,  # TODO verify
+        'build_time': 60,
         'built_from': ['Hatchery', 'Lair', 'Hive'],
         'display_name': 'Pneumatized Carapace',
         'race': 'Zerg',
@@ -206,7 +207,7 @@ BUILD_DATA.update({
         'is_morph': False,
     },
     'overlordtransport': {
-        'build_time': 60,  # TODO verify
+        'build_time': 60,
         'built_from': ['Hatchery', 'Lair', 'Hive'],
         'display_name': 'Ventral Sacs',
         'race': 'Zerg',
@@ -269,8 +270,8 @@ BUILD_DATA.update({
         'type': 'Upgrade',
         'is_morph': False,
     },
-    'BurrowCharge': {  # TODO verify
-        'build_time': 60,  # TODO verify
+    'HotSUltraliskBurrowCharge': {
+        'build_time': 60,
         'built_from': ['UltraliskCavern'],
         'display_name': 'Burrow Charge',
         'race': 'Zerg',
@@ -677,6 +678,14 @@ COMMANDER_BUILD_DATA = {
             'type': 'Unit',
             'is_morph': True,
         },
+        'BroodLord': {
+            'build_time': 15,
+            'built_from': ['Mutalisk'],
+            'display_name': 'Brood Lord',
+            'race': 'Zerg',
+            'type': 'Unit',
+            'is_morph': True,
+        },
         'HotSTorrasque': {
             'build_time': 55,
             'built_from': [],
@@ -745,7 +754,7 @@ COMMANDER_BUILD_DATA = {
             'type': 'Upgrade',
             'is_morph': False,
         },
-        'PorousCartilage': {  # TODO verify
+        'KerriganVoidCoopBroodlordSpeed': {
             'build_time': 60,
             'built_from': ['Spire', 'GreaterSpire',],
             'display_name': 'Porous Cartilage',
@@ -2703,6 +2712,22 @@ COMMANDER_BUILD_DATA = {
         },
 
         # Buildings
+        'HHMercStarportCargo': {
+            'build_time': 60,
+            'built_from': [],
+            'display_name': 'Drone Hangar',
+            'race': 'Terran',
+            'type': 'Unit',  # not really sure what this counts as
+            'is_morph': False,
+        },
+        'HHCommandCenter': {
+            'build_time': 0,
+            'built_from': [],
+            'display_name': 'Command Center',
+            'race': 'Terran',
+            'type': 'Building',
+            'is_morph': False,
+        },
         'HHMercStarportNoArmy': {
             'build_time': 0,
             'built_from': [],
@@ -2761,17 +2786,46 @@ COMMANDER_BUILD_DATA = {
             'type': 'Upgrade',
             'is_morph': False,
         },
-        # TODO Black Market Launchers
-        'HHHellionFearDeath': {
+        'HHHellionStimDeath': {
             'build_time': 60,
             'built_from': ['HHMercCompound'],
+            'display_name': 'Aerosol Stim Emitters',
+            'race': 'Terran',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+        'HHWidowMineBurrowedRange': {
+            'build_time': 60,
+            'built_from': ['EngineeringBay'],
+            'display_name': 'Black Market Launchers',
+            'race': 'Terran',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+        'HHHellionRocket': {
+            'build_time': 90,
+            'built_from': ['EngineeringBay'],
+            'display_name': 'Tar Bombs',
+            'race': 'Terran',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+        'HHHellionAttackDoT': {
+            'build_time': 90,
+            'built_from': ['EngineeringBay'],
+            'display_name': 'Immolation Fluid',
+            'race': 'Terran',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+        'HHHellionFearDeath': {
+            'build_time': 60,
+            'built_from': ['EngineeringBay'],
             'display_name': 'Wildfire Explosives',
             'race': 'Terran',
             'type': 'Upgrade',
             'is_morph': False,
         },
-        # TODO Tar Bombs
-        # TODO Immolation Fluid
         'HHWraithPermaCloak': {
             'build_time': 90,
             'built_from': ['StarportTechLab'],
@@ -2780,7 +2834,14 @@ COMMANDER_BUILD_DATA = {
             'type': 'Upgrade',
             'is_morph': False,
         },
-        # TODO Trigger Override
+        'HHWraithFury': {
+            'build_time': 90,
+            'built_from': ['StarportTechLab'],
+            'display_name': 'Trigger Override',
+            'race': 'Terran',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
         'HHVikingRockets': {
             'build_time': 90,
             'built_from': ['StarportTechLab'],
@@ -2789,7 +2850,14 @@ COMMANDER_BUILD_DATA = {
             'type': 'Upgrade',
             'is_morph': False,
         },
-        # TODO Shredder Rounds
+        'HHVikingPiercingAttacks': {
+            'build_time': 90,
+            'built_from': ['StarportTechLab'],
+            'display_name': 'W.I.L.D. Missiles',
+            'race': 'Terran',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
         'FleetwideJump': {
             'build_time': 90,
             'built_from': ['StarportTechLab'],
@@ -2798,7 +2866,14 @@ COMMANDER_BUILD_DATA = {
             'type': 'Upgrade',
             'is_morph': False,
         },
-        # TODO Multi-Threaded Sensors
+        'HHMultiLock': {
+            'build_time': 90,
+            'built_from': ['StarportTechLab'],
+            'display_name': 'Multi-Threaded Sensors',
+            'race': 'Terran',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
         'HHVehicleAndShipWeaponsLevel1': {
             'build_time': 160,
             'built_from': ['Armory'],
@@ -2847,7 +2922,14 @@ COMMANDER_BUILD_DATA = {
             'type': 'Upgrade',
             'is_morph': False,
         },
-        # TODO Overcharged Reactor
+        'HHBattlecruiserYamatoAttacks': {
+            'build_time': 90,
+            'built_from': ['FusionCore'],
+            'display_name': 'Overcharged Reactor',
+            'race': 'Terran',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
         'HHBomberNapalm': {
             'build_time': 90,
             'built_from': ['FusionCore'],
