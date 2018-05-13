@@ -42,6 +42,7 @@ BO_EXCLUDED.update([
     'HotSSplitterlingMedium',  # Splitter Baneling Spawn
     # Vorazun
     'VorazunShadowGuard',  # calldown
+    'OracleStasisTrap',  # Oracle - Stasis Ward
     # Karax
     'CarrierRepairDrone',
     'SOAThermalLanceTargeter',
@@ -315,6 +316,14 @@ BUILD_DATA.update({
         'is_morph': False,
     },
     # Artanis and Karax
+    'AutomatedAssimilator': {
+        'build_time': 0,
+        'built_from': [],
+        'display_name': 'Assimilator',
+        'race': 'Protoss',
+        'type': 'Building',
+        'is_morph': False,
+    },
     'WarpGateResearch': {
         'build_time': 60,
         'built_from': ['CyberneticsCore'],
@@ -1264,7 +1273,14 @@ COMMANDER_BUILD_DATA = {
 
     'Vorazun': {
         # Units
-        # TODO verify
+        'ZealotShakuras': {
+            'build_time': 38,
+            'built_from': ['Gateway', 'WarpGate'],
+            'display_name': 'Centurion',
+            'race': 'Protoss',
+            'type': 'Unit',
+            'is_morph': False,
+        },
         'StalkerShakuras': {
             'build_time': 42,
             'built_from': ['Gateway', 'WarpGate'],
@@ -1281,22 +1297,54 @@ COMMANDER_BUILD_DATA = {
             'type': 'Unit',
             'is_morph': False,
         },
+        'DarkArchon': {
+            'build_time': 55,
+            'built_from': ['Gateway', 'WarpGate'],
+            'display_name': 'Dark Archon',
+            'race': 'Protoss',
+            'type': 'Unit',
+            'is_morph': False,
+        },
+        'CorsairMP': {
+            'build_time': 35,
+            'built_from': ['Stargate'],
+            'display_name': 'Corsair',
+            'race': 'Protoss',
+            'type': 'Unit',
+            'is_morph': False,
+        },
+        'VoidRayShakuras': {
+            'build_time': 60,
+            'built_from': ['Stargate'],
+            'display_name': 'Void Ray',
+            'race': 'Protoss',
+            'type': 'Unit',
+            'is_morph': False,
+        },
 
         # Buildings
+        'DarkPylon': {
+            'build_time': 0,  # actualy a calldown
+            'built_from': [],
+            'display_name': 'Dark Pylon',
+            'race': 'Protoss',
+            'type': 'Building',
+            'is_morph': False,
+        },
 
         # Upgrades
-        'DarkTemplarResearchShadowDash': {
-            'build_time': 100,  # wikia was incorrect and had 60 when I last checked
-            'built_from': ['DarkShrine'],
-            'display_name': 'Blink',
+        'ZealotResearchShadowCharge': {
+            'build_time': 60,
+            'built_from': ['TwilightCouncil'],
+            'display_name': 'Shadow Charge',
             'race': 'Protoss',
             'type': 'Upgrade',
             'is_morph': False,
         },
-        'DarkTemplarResearchShadowFury': {
-            'build_time': 120,
-            'built_from': ['DarkShrine'],
-            'display_name': 'Shadow Fury',
+        'ZealotResearchShadowStun': {
+            'build_time': 90,
+            'built_from': ['TwilightCouncil'],
+            'display_name': 'Darkcoil',
             'race': 'Protoss',
             'type': 'Upgrade',
             'is_morph': False,
@@ -1309,10 +1357,10 @@ COMMANDER_BUILD_DATA = {
             'type': 'Upgrade',
             'is_morph': False,
         },
-        'CorsairMP': {
-            'build_time': 35,
-            'built_from': ['Stargate'],
-            'display_name': 'Corsair',
+        'CorsairDisruptionWeb': {
+            'build_time': 60,
+            'built_from': ['FleetBeacon'],
+            'display_name': 'Disruption Web',
             'race': 'Protoss',
             'type': 'Upgrade',
             'is_morph': False,
@@ -1325,10 +1373,58 @@ COMMANDER_BUILD_DATA = {
             'type': 'Upgrade',
             'is_morph': False,
         },
-        'CorsairDisruptionWeb': {
-            'build_time': 60,
+        'VoidRayPrismaticRange': {
+            'build_time': 90,
             'built_from': ['FleetBeacon'],
-            'display_name': 'Disruption Web',
+            'display_name': 'Prismatic Range',
+            'race': 'Protoss',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+        'OracleStasisWardUpgrade': {
+            'build_time': 90,
+            'built_from': ['FleetBeacon'],
+            'display_name': 'Stasis Calibration',
+            'race': 'Protoss',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+        'DarkTemplarResearchShadowFury': {
+            'build_time': 120,
+            'built_from': ['DarkShrine'],
+            'display_name': 'Shadow Fury',
+            'race': 'Protoss',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+        'DarkTemplarResearchShadowDash': {
+            'build_time': 100,
+            'built_from': ['DarkShrine'],
+            'display_name': 'Dark Template Blink',
+            'race': 'Protoss',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+        'DarkTemplarResearchVoidStasis': {
+            'build_time': 120,
+            'built_from': ['DarkShrine'],
+            'display_name': 'Void Stasis',
+            'race': 'Protoss',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+        'DarkArchonFullStartingEnergy': {
+            'build_time': 60,
+            'built_from': ['DarkShrine'],
+            'display_name': 'Argus Crystal',
+            'race': 'Protoss',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+        'DarkArchonMindControl': {
+            'build_time': 90,
+            'built_from': ['DarkShrine'],
+            'display_name': 'Mind Control',
             'race': 'Protoss',
             'type': 'Upgrade',
             'is_morph': False,
