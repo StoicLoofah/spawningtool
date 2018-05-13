@@ -87,15 +87,16 @@ BO_EXCLUDED.update([
     'InfestedCivilianPlaceholder',
     'StukovInfestBroodling',
     'SIInfestedMarine',
-    'SIInfestedDiamondback',  # TODO verify
-    'SIInfestedSiegeTank',  # TODO verify
-    'SIInfestedLiberator',  # TODO verify
+    'StukovInfestedDiamondBack',
+    'StukovInfestedSiegeTankUprooted',
+    'SILiberator',
     'StukovInfestedBanshee',
-    'SIBroodQueen',  # TODO verify
+    'SIQueen',
     'StukovApocalisk',  # Calldown
     'SIVolatileInfested',  # not sure what this is but couldn't see it in-game
     'StukovAleksander',  # Calldown
     'ALEKSANDERCRASH_PLACEHOLDER',  # Calldown
+    'SNARE_PLACEHOLDER',
 
     # Fenix
     # Fenix Hero Units
@@ -135,6 +136,8 @@ BO_EXCLUDED.update([
     'DehakaHydraliskLevel2',
     'DehakaSwarmHost',
     'DehakaUltraliskLevel2',
+    'DehakaUltraliskLevel3',
+    'DehakaPrimalSwarmHost',
 
     # Han and Horner
     'HHScrapPickup',
@@ -1971,7 +1974,7 @@ COMMANDER_BUILD_DATA = {
             'type': 'Unit',
             'is_morph': False,
         },
-        'SICocoonInfestedDiamondback': {  # TODO verify
+        'SICocoonInfestedDiamondBack': {
             'build_time': 0,
             'built_from': [],
             'display_name': 'Infested Diamondback',
@@ -1979,7 +1982,7 @@ COMMANDER_BUILD_DATA = {
             'type': 'Unit',
             'is_morph': False,
         },
-        'SICocoonInfestedSiegeTank': {  # TODO verify
+        'SICocoonInfestedSiegeTank': {
             'build_time': 0,
             'built_from': [],
             'display_name': 'Infested Siege Tank',
@@ -1987,7 +1990,7 @@ COMMANDER_BUILD_DATA = {
             'type': 'Unit',
             'is_morph': False,
         },
-        'SICocoonInfestedLiberator': {  # TODO verify
+        'SICocoonInfestedLiberator': {
             'build_time': 0,
             'built_from': [],
             'display_name': 'Infested Liberator',
@@ -2003,7 +2006,7 @@ COMMANDER_BUILD_DATA = {
             'type': 'Unit',
             'is_morph': False,
         },
-        'SICocoonBroodQueen': {  # TODO verify
+        'SICocoonQueen': {
             'build_time': 0,
             'built_from': [],
             'display_name': 'Brood Queen',
@@ -2013,6 +2016,110 @@ COMMANDER_BUILD_DATA = {
         },
 
         # Buildings
+        'SICommandCenter': {
+            'build_time': 0,
+            'built_from': [],
+            'display_name': 'Infested Command Center',
+            'race': 'Zerg',
+            'type': 'Building',
+            'is_morph': False,
+        },
+        'SICivilianStructure': {
+            'build_time': 0,
+            'built_from': [],
+            'display_name': 'Infested Colonist Compound',
+            'race': 'Zerg',
+            'type': 'Building',
+            'is_morph': False,
+        },
+        'SIRefinery': {
+            'build_time': 0,
+            'built_from': [],
+            'display_name': 'Infested Refinery',
+            'race': 'Zerg',
+            'type': 'Building',
+            'is_morph': False,
+        },
+        'SIBarracks': {
+            'build_time': 0,
+            'built_from': [],
+            'display_name': 'Infested Barracks',
+            'race': 'Zerg',
+            'type': 'Building',
+            'is_morph': False,
+        },
+        'SIBarracksTechLab': {
+            'build_time': 0,
+            'built_from': [],
+            'display_name': 'Infested Barracks Tech Lab',
+            'race': 'Zerg',
+            'type': 'Building',
+            'is_morph': False,
+        },
+        'SIEngineeringBay': {
+            'build_time': 0,
+            'built_from': [],
+            'display_name': 'Infested Engineering Bay',
+            'race': 'Zerg',
+            'type': 'Building',
+            'is_morph': False,
+        },
+        'SIInfestedBunker': {
+            'build_time': 0,
+            'built_from': [],
+            'display_name': 'Infested Bunker',
+            'race': 'Zerg',
+            'type': 'Building',
+            'is_morph': False,
+        },
+        'SIMissileTurret': {
+            'build_time': 0,
+            'built_from': [],
+            'display_name': 'Infested Missile Turret',
+            'race': 'Zerg',
+            'type': 'Building',
+            'is_morph': False,
+        },
+        'SIFactory': {
+            'build_time': 0,
+            'built_from': [],
+            'display_name': 'Infested Factory',
+            'race': 'Zerg',
+            'type': 'Building',
+            'is_morph': False,
+        },
+        'SIFactoryTechLab': {
+            'build_time': 0,
+            'built_from': [],
+            'display_name': 'Infested Factory Tech Lab',
+            'race': 'Zerg',
+            'type': 'Building',
+            'is_morph': False,
+        },
+        'SIStarport': {
+            'build_time': 0,
+            'built_from': [],
+            'display_name': 'Infested Starport',
+            'race': 'Zerg',
+            'type': 'Building',
+            'is_morph': False,
+        },
+        'SIStarportTechLab': {
+            'build_time': 0,
+            'built_from': [],
+            'display_name': 'Infested Starport Tech Lab',
+            'race': 'Zerg',
+            'type': 'Building',
+            'is_morph': False,
+        },
+        'SIArmory': {
+            'build_time': 0,
+            'built_from': [],
+            'display_name': 'Infested Armory',
+            'race': 'Zerg',
+            'type': 'Building',
+            'is_morph': False,
+        },
 
         # Upgrades
         'HeavyInfestation': {
@@ -2025,7 +2132,7 @@ COMMANDER_BUILD_DATA = {
         },
         'SIBarracksTrainInfestedCivilianLevel2': {
             'build_time': 120,
-            'built_from': ['SIColonistCompound'],  # TODO verify
+            'built_from': ['SICivilianStructure'],
             'display_name': 'Infestation Level 1',
             'race': 'Zerg',
             'type': 'Upgrade',
@@ -2033,7 +2140,7 @@ COMMANDER_BUILD_DATA = {
         },
         'SIBarracksTrainInfestedCivilianLevel3': {
             'build_time': 120,
-            'built_from': ['SIColonistCompound'],  # TODO verify
+            'built_from': ['SICivilianStructure'],
             'display_name': 'Infestation Level 2',
             'race': 'Zerg',
             'type': 'Upgrade',
@@ -2041,7 +2148,7 @@ COMMANDER_BUILD_DATA = {
         },
         'SIBarracksTrainInfestedCivilianLevel4': {
             'build_time': 120,
-            'built_from': ['SIColonistCompound'],  # TODO verify
+            'built_from': ['SICivilianStructure'],
             'display_name': 'Infestation Level 3',
             'race': 'Zerg',
             'type': 'Upgrade',
@@ -2049,15 +2156,15 @@ COMMANDER_BUILD_DATA = {
         },
         'StukovInfestedInfestedCivilianLeapAttack': {
             'build_time': 60,
-            'built_from': ['SIColonistCompound'],  # TODO verify
+            'built_from': ['SICivilianStructure'],
             'display_name': 'Anaerobic Enhancement',
             'race': 'Zerg',
             'type': 'Upgrade',
             'is_morph': False,
         },
-        'StukovInfestedCivilianSpawnBroodlingOnDeath': {  # TODO verify
+        'StukovInfestedCivilianSpawnBroodlingOnDeath': {
             'build_time': 90,
-            'built_from': ['SIColonistCompound'],  # TODO verify
+            'built_from': ['SICivilianStructure'],
             'display_name': 'Broodling Gestation',
             'race': 'Zerg',
             'type': 'Upgrade',
@@ -2143,9 +2250,86 @@ COMMANDER_BUILD_DATA = {
             'type': 'Upgrade',
             'is_morph': False,
             },
-        # TODO Stukov Factory Tech Lab
-        # TODO Stukov Starport Tech Lab
-        # TODO StukovInfestedBansheeInfestedLife
+        'SIDiamondbackImprovedEnsnare': {
+            'build_time': 60,
+            'built_from': ['SITechLab'],
+            'display_name': 'Saturated Cultures',
+            'race': 'Zerg',
+            'type': 'Upgrade',
+            'is_morph': False,
+            },
+        'InfestedSiegeTankAmmo': {
+            'build_time': 60,
+            'built_from': ['SITechLab'],
+            'display_name': 'Automated Mitosis',
+            'race': 'Zerg',
+            'type': 'Upgrade',
+            'is_morph': False,
+            },
+        'SIDiamondbackSnailTrail': {
+            'build_time': 90,
+            'built_from': ['SITechLab'],
+            'display_name': 'Caustic Mucus',
+            'race': 'Zerg',
+            'type': 'Upgrade',
+            'is_morph': False,
+            },
+        'InfestedSiegeTankArmoredDamage': {
+            'build_time': 90,
+            'built_from': ['SITechLab'],
+            'display_name': 'Acidic Enzymes',
+            'race': 'Zerg',
+            'type': 'Upgrade',
+            'is_morph': False,
+            },
+        'SILiberatorImprovedAoeAttack': {
+            'build_time': 60,
+            'built_from': ['SITechLab'],
+            'display_name': 'Viral Contamination',
+            'race': 'Zerg',
+            'type': 'Upgrade',
+            'is_morph': False,
+            },
+        'LiberatorInfestedBecomeSwarm': {
+            'build_time': 60,
+            'built_from': ['SITechLab'],
+            'display_name': 'Cloud Dispersal',
+            'race': 'Zerg',
+            'type': 'Upgrade',
+            'is_morph': False,
+            },
+        'StukovInfestedBansheeBurrowRegeneration': {
+            'build_time': 60,
+            'built_from': ['SITechLab'],
+            'display_name': 'Rapid Hibernation',
+            'race': 'Zerg',
+            'type': 'Upgrade',
+            'is_morph': False,
+            },
+        'StukovInfestedBansheeInfestedLife': {
+            'build_time': 60,
+            'built_from': ['SITechLab'],
+            'display_name': 'Braced Exoskeleton',
+            'race': 'Zerg',
+            'type': 'Upgrade',
+            'is_morph': False,
+            },
+        'SIQueenFungalGrowth': {
+            'build_time': 60,
+            'built_from': ['SITechLab'],
+            'display_name': 'Fungal Growth',
+            'race': 'Zerg',
+            'type': 'Upgrade',
+            'is_morph': False,
+            },
+        'SIQueenEnergy': {
+            'build_time': 60,
+            'built_from': ['SITechLab'],
+            'display_name': 'Enhanced Mitochondria',
+            'race': 'Zerg',
+            'type': 'Upgrade',
+            'is_morph': False,
+            },
         'SITerranVehicleWeaponsLevel1': {
             'build_time': 160,
             'built_from': ['SIArmory'],
@@ -2477,6 +2661,22 @@ COMMANDER_BUILD_DATA = {
             'race': 'Zerg',
             'type': 'Unit',
             'is_morph': False,
+        },
+        'ImpalerDehaka': {
+            'build_time': 0,
+            'built_from': [''],
+            'display_name': 'Impaler',
+            'race': 'Zerg',
+            'type': 'Unit',
+            'is_morph': True,
+        },
+        'DehakaGuardianFightMorph': {
+            'build_time': 0,
+            'built_from': [''],
+            'display_name': 'Primal Guardian',
+            'race': 'Zerg',
+            'type': 'Unit',
+            'is_morph': True,
         },
 
         # Buildings
