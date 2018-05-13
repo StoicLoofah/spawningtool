@@ -315,6 +315,14 @@ BUILD_DATA.update({
         'is_morph': False,
     },
     # Artanis and Karax
+    'WarpGateResearch': {
+        'build_time': 60,
+        'built_from': ['CyberneticsCore'],
+        'display_name': 'Warp Gate',
+        'race': 'Protoss',
+        'type': 'Upgrade',
+        'is_morph': False,
+    },
     'ImmortalAiur': {
         'build_time': 55,
         'built_from': ['RoboticsFacility'],
@@ -1421,10 +1429,31 @@ COMMANDER_BUILD_DATA = {
             'type': 'Upgrade',
             'is_morph': False,
         },
-        # TODO Enhanced Targeting 120
-        # TODO Optimized Ordinance 120
-        # TODO Fortificiation Barrier 60
-        'Reconstruction': {  # TODO verify
+        'KaraxTurretRange': {
+            'build_time': 120,
+            'built_from': ['Forge'],
+            'display_name': 'Enhanced Targeting',
+            'race': 'Protoss',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+        'KaraxTurretAttackSpeed': {
+            'build_time': 120,
+            'built_from': ['Forge'],
+            'display_name': 'Optimized Ordinance',
+            'race': 'Protoss',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+        'ShieldBatteryStructureBarrier': {
+            'build_time': 60,
+            'built_from': ['Forge'],
+            'display_name': 'Fortification Barrier',
+            'race': 'Protoss',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+        'ZealotResearchReconstruction': {
             'build_time': 90,
             'built_from': ['TwilightCouncil'],
             'display_name': 'Reconstruction',
@@ -1432,7 +1461,7 @@ COMMANDER_BUILD_DATA = {
             'type': 'Upgrade',
             'is_morph': False,
         },
-        'RapidRecharging': {  # TODO verify
+        'KaraxEnergyRegenUpgrade': {
             'build_time': 90,
             'built_from': ['TwilightCouncil'],
             'display_name': 'Rapid Recharging',
@@ -1440,7 +1469,7 @@ COMMANDER_BUILD_DATA = {
             'type': 'Upgrade',
             'is_morph': False,
         },
-        'Reclamation': {  # TODO verify
+        'EnergizerReclamation': {
             'build_time': 120,
             'built_from': ['TwilightCouncil'],
             'display_name': 'Reclamation',
@@ -1448,8 +1477,22 @@ COMMANDER_BUILD_DATA = {
             'type': 'Upgrade',
             'is_morph': False,
         },
-        # TODO Fire Beam 120
-        # TODO Shadow Cannon 120
+        'ColossusFireBeam': {
+            'build_time': 120,
+            'built_from': ['RoboticsBay'],
+            'display_name': 'Fire Beam',
+            'race': 'Protoss',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+        'ImmortalResearchShadowCannon': {
+            'build_time': 120,
+            'built_from': ['RoboticsBay'],
+            'display_name': 'Shadow Cannon',
+            'race': 'Protoss',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
         'PhoenixRangeUpgrade': {
             'build_time': 60,
             'built_from': ['FleetBeacon'],
@@ -1458,7 +1501,7 @@ COMMANDER_BUILD_DATA = {
             'type': 'Upgrade',
             'is_morph': False,
         },
-        'PhasingArmor': {  # TODO verify
+        'MiragePhaseArmor': {
             'build_time': 90,
             'built_from': ['FleetBeacon'],
             'display_name': 'Phasing Armor',
