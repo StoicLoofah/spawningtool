@@ -331,6 +331,14 @@ BUILD_DATA.update({
         'type': 'Unit',
         'is_morph': False,
     },
+    'BlinkTech': {
+        'build_time': 60,
+        'built_from': ['TwilightCouncil'],
+        'display_name': 'Blink',
+        'race': 'Protoss',
+        'type': 'Upgrade',
+        'is_morph': False,
+    },
     # Shared by at least Fenix and Karax
     'Charge': {
         'build_time': 60,
@@ -1631,6 +1639,14 @@ COMMANDER_BUILD_DATA = {
             'type': 'Unit',
             'is_morph': False,
         },
+        'Stalker': {
+            'build_time': 37,
+            'built_from': ['Gateway', 'WarpGate'],
+            'display_name': 'Slayer',
+            'race': 'Protoss',
+            'type': 'Unit',
+            'is_morph': False,
+        },
         'HighTemplarTaldarim': {
             'build_time': 55,
             'built_from': ['Gateway', 'WarpGate'],
@@ -1672,6 +1688,14 @@ COMMANDER_BUILD_DATA = {
             'is_morph': False,
         },
         # Buildings
+        'TwilightCouncil': {
+            'build_time': 0,
+            'built_from': [],
+            'display_name': 'Death Council',
+            'race': 'Protoss',
+            'type': 'Building',
+            'is_morph': False,
+        },
         'TemplarArchive': {
             'build_time': 0,
             'built_from': [],
@@ -1682,14 +1706,21 @@ COMMANDER_BUILD_DATA = {
         },
         # Upgrades
         'AlarakAttackStunUpgrade': {
-            'build_time': 90,  # TODO Verify
+            'build_time': 90,
             'built_from': ['Forge'],
             'display_name': 'Imposing Presence',
             'race': 'Protoss',
             'type': 'Upgrade',
             'is_morph': False,
         },
-        # TODO Telekinesis
+        'AlarakDestructionWaveDistance': {
+            'build_time': 90,
+            'built_from': ['Forge'],
+            'display_name': 'Telekinesis',
+            'race': 'Protoss',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
         'AlarackHavocPermanentCloak': {
             'build_time': 60,
             'built_from': ['CyberneticsCore'],
@@ -1746,7 +1777,14 @@ COMMANDER_BUILD_DATA = {
             'type': 'Upgrade',
             'is_morph': False,
         },
-        # TODO Matter Dispersion
+        'AlarakVanguardIncreaseSplashArea': {
+            'build_time': 60,
+            'built_from': ['RoboticsBay'],
+            'display_name': 'Matter Dispersion',
+            'race': 'Protoss',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
         'AlarakColossusChargedBlastAirAttack': {
             'build_time': 60,
             'built_from': ['RoboticsBay'],
@@ -1756,7 +1794,7 @@ COMMANDER_BUILD_DATA = {
             'is_morph': False,
         },
         'AlarakColossusChargedBlastChargeTime': {
-            'build_time': 60,  # TODO verify
+            'build_time': 60,
             'built_from': ['RoboticsBay'],
             'display_name': 'Rapid Power Cycling',
             'race': 'Protoss',
