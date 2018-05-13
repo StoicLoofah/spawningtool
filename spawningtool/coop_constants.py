@@ -1227,7 +1227,42 @@ COMMANDER_BUILD_DATA = {
             'is_morph': False,
         },
 
+        # Buildings
+        'BileLauncherZagara': {
+            'build_time': 0,
+            'built_from': [],
+            'display_name': 'Bile Launcher',
+            'race': 'Zerg',
+            'type': 'Building',
+            'is_morph': False,
+        },
+        'ScourgeNest': {
+            'build_time': 0,
+            'built_from': [],
+            'display_name': 'Scourge Nest',
+            'race': 'Zerg',
+            'type': 'Building',
+            'is_morph': False,
+        },
+
+
         # Upgrades
+        'BileLauncherIncreasedRange': {
+            'build_time': 60,
+            'built_from': ['SpawningPool'],
+            'display_name': 'Artillery Ducts',
+            'race': 'Zerg',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+        'BileLauncherBombardmentCooldown': {
+            'build_time': 90,
+            'built_from': ['SpawningPool'],
+            'display_name': 'Rapid Bombardment',
+            'race': 'Zerg',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
         'ZagaraVoidCoopAttackUpgrade': {
             'build_time': 90,
             'built_from': ['EvolutionChamber'],
@@ -1236,7 +1271,14 @@ COMMANDER_BUILD_DATA = {
             'type': 'Upgrade',
             'is_morph': False,
         },
-        # TODO Protective Cover
+        'AberrationArmorAura': {
+            'build_time': 90,
+            'built_from': ['EvolutionChamber'],
+            'display_name': 'Protective Cover',
+            'race': 'Zerg',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
         'HotSBanelingCorrosiveBile': {
             'build_time': 90,
             'built_from': ['BanelingNest'],
