@@ -1719,25 +1719,54 @@ COMMANDER_BUILD_DATA = {
             'type': 'Upgrade',
             'is_morph': False,
         },
+        'AbathurHatcheryDoubleQueue': {
+            'build_time': 60,
+            'built_from': ['EvolutionChamber'],
+            'display_name': 'Incubation Chamber',
+            'race': 'Zerg',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
         'HotSRoachDamage': {
             'build_time': 110,
-            'built_from': ['EvolutionChamber'],
+            'built_from': ['RoachWarren'],
             'display_name': 'Hydriodic Bile',
             'race': 'Zerg',
             'type': 'Upgrade',
             'is_morph': False,
         },
-        # TODO Adaptive Plating
+        'HotSRoachShield': {
+            'build_time': 110,
+            'built_from': ['RoachWarren'],
+            'display_name': 'Adaptive Plating',
+            'race': 'Zerg',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
         'RavagerCorrosiveBileRadiusIncrease': {
             'build_time': 90,
-            'built_from': ['EvolutionChamber'],
+            'built_from': ['RoachWarren'],
             'display_name': 'Bloated Bile Ducts',
             'race': 'Zerg',
             'type': 'Upgrade',
             'is_morph': False,
         },
-        # TODO Potent Bile
-        # TODO Prolonged Dispersion
+        'RavagerCorrosiveBileDamageIncrease': {
+            'build_time': 120,
+            'built_from': ['RoachWarren'],
+            'display_name': 'Potent Bile',
+            'race': 'Zerg',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+        'GuardianAttackRangeIncrease': {
+            'build_time': 90,
+            'built_from': ['Spire', 'GreaterSpire'],
+            'display_name': 'Prolonged Dispersion',
+            'race': 'Zerg',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
         'DevourerAoEDamage': {
             'build_time': 90,
             'built_from': ['Spire', 'GreaterSpire'],
@@ -1754,9 +1783,30 @@ COMMANDER_BUILD_DATA = {
             'type': 'Upgrade',
             'is_morph': False,
         },
-        # TODO Virulent Microbes
-        # TODO Deep TUnnel
-        # TODO Paralytic Barbs
+        'ViperImprovedCastRange': {
+            'build_time': 90,
+            'built_from': ['InfestationPit'],
+            'display_name': 'Virulent Microbes',
+            'race': 'Zerg',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+        'AbathurDeepTunnel': {
+            'build_time': 120,
+            'built_from': ['InfestationPit'],
+            'display_name': 'Deep Tunnel',
+            'race': 'Zerg',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+        'ViperAbductImprovedStun': {
+            'build_time': 60,
+            'built_from': ['InfestationPit'],
+            'display_name': 'Paralytic Barbs',
+            'race': 'Zerg',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
     },
 
     'Alarak': {
