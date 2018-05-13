@@ -785,6 +785,14 @@ COMMANDER_BUILD_DATA = {
             'type': 'Unit',
             'is_morph': False,
         },
+        'Reaver': {
+            'build_time': 75,
+            'built_from': ['RoboticsFacility', 'RoboticsFacilityWarp'],
+            'display_name': 'Reaver',
+            'race': 'Protoss',
+            'type': 'Unit',
+            'is_morph': False,
+        },
         'PhoenixAiur': {
             'build_time': 35,
             'built_from': ['Stargate'],
@@ -795,6 +803,22 @@ COMMANDER_BUILD_DATA = {
         },
 
         # Buildings
+        'RoboticsFacilityWarp': {
+            'build_time': 0,
+            'built_from': [],
+            'display_name': 'Robotics Facility',
+            'race': 'Protoss',
+            'type': 'Building',
+            'is_morph': False,
+        },
+        'StargateWarp': {
+            'build_time': 0,
+            'built_from': [],
+            'display_name': 'Stargate',
+            'race': 'Protoss',
+            'type': 'Building',
+            'is_morph': False,
+        },
 
         # Upgrades
         'ZealotResearchWhirlwind': {
@@ -829,8 +853,30 @@ COMMANDER_BUILD_DATA = {
             'type': 'Upgrade',
             'is_morph': False,
         },
-        # TODO Scarab Housing
-        # TODO Solarite Payload
+        'ReaverIncreasedScarabCount': {
+            'build_time': 60,
+            'built_from': ['RoboticsBay'],
+            'display_name': 'Scarab Housing',
+            'race': 'Protoss',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+        'ReaverIncreasedScarabSplashRadius': {
+            'build_time': 90,
+            'built_from': ['RoboticsBay'],
+            'display_name': 'Solarite Payload',
+            'race': 'Protoss',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+        'PsiStormTech': {
+            'build_time': 60,
+            'built_from': ['TemplarArchives'],
+            'display_name': 'Psionic Storm',
+            'race': 'Protoss',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
         'HighTemplarKhaydarinAmulet': {
             'build_time': 120,
             'built_from': ['TemplarArchives'],
@@ -843,6 +889,14 @@ COMMANDER_BUILD_DATA = {
             'build_time': 90,
             'built_from': ['TemplarArchives'],
             'display_name': 'Plasma Surge',
+            'race': 'Protoss',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+        'VoidPhoenixDoubleGraviton': {
+            'build_time': 90,
+            'built_from': ['FleetBeacon'],
+            'display_name': 'Double Graviton Beam',
             'race': 'Protoss',
             'type': 'Upgrade',
             'is_morph': False,
