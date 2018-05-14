@@ -737,8 +737,8 @@ class GameParser(object):
     def get_clock_position(self, event):
         if not self.parsed_data['include_map_details']:
             return None
-        x_section = event.x // (self.parsed_data['map_details']['width'] // 3)
-        y_section = event.y // (self.parsed_data['map_details']['height'] // 3)
+        x_section = min(event.x // (self.parsed_data['map_details']['width'] // 3), 2)
+        y_section = min(event.y // (self.parsed_data['map_details']['height'] // 3), 2)
         return self.CLOCK_POSITIONS[y_section][x_section]
 
     def get_supply(self, player, frame):

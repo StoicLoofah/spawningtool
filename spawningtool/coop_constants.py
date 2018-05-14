@@ -1442,7 +1442,7 @@ COMMANDER_BUILD_DATA = {
         'DarkTemplarResearchShadowDash': {
             'build_time': 100,
             'built_from': ['DarkShrine'],
-            'display_name': 'Dark Template Blink',
+            'display_name': 'Dark Templar Blink',
             'race': 'Protoss',
             'type': 'Upgrade',
             'is_morph': False,
@@ -2335,7 +2335,7 @@ COMMANDER_BUILD_DATA = {
             'display_name': 'Brood Queen',
             'race': 'Zerg',
             'type': 'Unit',
-            'is_morph': False,
+            'is_morph': True,
         },
 
         # Buildings
