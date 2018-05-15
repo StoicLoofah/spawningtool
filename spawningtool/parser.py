@@ -393,10 +393,10 @@ class GameParser(object):
             if player.commander in ['Alarak']:
                 self.chronoboost_multiplier += player.commander_mastery_talents[5] * .01
 
-            if player.commander == 'Nova' and player.commander >= 11:
+            if player.commander == 'Nova' and player.commander_level >= 11:
                 self.upgrade_build_time_modifier[key] = .5
 
-            if player.commander == 'Horner' and player.commander >= 6:
+            if player.commander == 'Horner' and player.commander_level >= 6:
                 # maybe only applies to some upgrades?
                 self.upgrade_build_time_modifier[key] = .7
 
