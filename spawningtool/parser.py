@@ -166,7 +166,8 @@ class GameParser(object):
     replay = None  # sc2reader parsed version
     parsed_data = None
 
-    upgrade_build_time_modifier = None  # special case for Kerrigan mastery
+    unit_build_time_modifier = None  # special case for various commanders
+    upgrade_build_time_modifier = None  # special case for various commanders
 
     builds = None
     units_lost = None
@@ -318,7 +319,7 @@ class GameParser(object):
 
         self.set_chronoboost_data()
 
-        self.set_commander_mastery()
+        self.set_commander_talents()
 
         self.add_tracker_events(include_map_details)
         self.make_event_timeline(self.builds, cutoff_time, 'buildOrder')
@@ -359,45 +360,51 @@ class GameParser(object):
         self.bo_upgrades_excluded = self.constants.BO_UPGRADES_EXCLUDED
         self.tracked_abilities = self.constants.TRACKED_ABILITIES
 
-    def set_commander_mastery(self):
+    def set_commander_talents(self):
         """
         https://us.battle.net/forums/en/sc2/topic/20752557371
 
-        some co-op commanders have special mastery talents that affects build times.
-
-        Kerrigan's "Expeditious Evolutions" (Power Set 3, power 1) reduces evolution times
-        by 2% for each point
-
-        Abathur: "Structure Morph and Evolution Rate" is similar
-
-        Artanis, Vorazun, Karax, Fenix: "Chrono Boost Efficiency" (Power Set 3, power 1)
-        increases chronoboost effectiveness by 1% for each point
-
-        Alarak is the same in Power Set 3, power 2
+        some co-op commanders have special talents that affects build times.
 
         Swann Power Set 2, power 1 "Immortality Protocol Cost and Build Time" TODO
-        Swann Power Set 3, power 2 "Laser Drill Production Time" TODO
         """
+        self.unit_build_time_modifier = {}
         self.upgrade_build_time_modifier = {}
 
         for key, player in self.replay.player.items():
+            # Expeditious Evolutions
+            # (Power Set 3, power 1)
+            # reduces evolution times by 2% for each point
             if player.commander == 'Kerrigan':
                 self.upgrade_build_time_modifier[key] = 1 - (player.commander_mastery_talents[4] * .02)
 
+            # Structure Morph and Evolution Rate
+            # reduces evolution times by 2% for each point
             if player.commander == 'Abathur':
                 self.upgrade_build_time_modifier[key] = 1 - (player.commander_mastery_talents[5] * .02)
 
+            # Chrono Boost Efficiency
+            # (Power Set 3, power 1)
+            # increases chronoboost effectiveness by 1% for each point
             if player.commander in ['Artanis', 'Vorazun', 'Karax', 'Fenix']:
                 self.chronoboost_multiplier += player.commander_mastery_talents[4] * .01
 
+            # Chrono Boost Efficiency
+            # (Power Set 3, power 2)
+            # increases chronoboost effectiveness by 1% for each point
             if player.commander in ['Alarak']:
                 self.chronoboost_multiplier += player.commander_mastery_talents[5] * .01
 
+            # Research and Development
+            # Upgrade research time and resource costs are halved
+            # Does not affect weapon and armor upgrades.
             if player.commander == 'Nova' and player.commander_level >= 11:
                 self.upgrade_build_time_modifier[key] = .5
 
+            # Impatience
+            # Mira's Unit Build and Research times are reduced by 30%
             if player.commander == 'Horner' and player.commander_level >= 6:
-                # maybe only applies to some upgrades?
+                self.unit_build_time_modifier[key] = .7
                 self.upgrade_build_time_modifier[key] = .7
 
     def add_ability_events(self):
@@ -581,8 +588,12 @@ class GameParser(object):
             frame = event.frame
             is_chronoboosted = False
         else:
+            modifier = self.unit_build_time_modifier.get(player, 1)
+            if unit_name == 'SCV':
+                # for Horner, do not apply modifier for SCVs
+                modifier = 1
             frame, unit_name, is_chronoboosted = \
-                self.adjust_build_time(event.frame, player, unit_name)
+                self.adjust_build_time(event.frame, player, unit_name, modifier)
 
         # for safety to ignore observer units from GH and such
         if not player in self.parsed_data['players']:
@@ -628,9 +639,13 @@ class GameParser(object):
             return
 
         if unit_name in self.get_build_data(player):
+            modifier = self.upgrade_build_time_modifier.get(player, 1)
+            if unit_name.startswith('Terran') and \
+                    ('ArmorsLevel' in unit_name or 'WeaponsLevel' in unit_name):
+                # For Nova and Mira, do not apply modifier to standard upgrades
+                modifier = 1
             frame, unit_name, is_chronoboosted = \
-                self.adjust_build_time(event.frame, player, unit_name,
-                                       self.upgrade_build_time_modifier.get(player, 1))
+                self.adjust_build_time(event.frame, player, unit_name, modifier)
         else:
             unit_name += ' (upgrade missing)'
             frame = event.frame
