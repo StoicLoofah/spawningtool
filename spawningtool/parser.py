@@ -195,7 +195,6 @@ class GameParser(object):
             return cached_data
 
         self.load_replay()
-        self.check_replay_version()
 
         self.parsed_data = {
             'buildOrderExtracted': False,
@@ -214,6 +213,8 @@ class GameParser(object):
             'cooperative': (self.replay.cooperative or
                             any(player.commander for player in self.replay.players)),
         }
+
+        self.check_replay_version()
 
         self.parsed_data['players'] = dict(
             (key,
