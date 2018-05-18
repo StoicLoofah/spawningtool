@@ -54,6 +54,7 @@ BO_EXCLUDED.update([
     'BrutaliskPlacement',  # Deep Tunnel
     'AbathurSymbioteBrutalisk',  # paired with building Brutalisk
     'AbathurSymbioteLeviathan',  # paired with building Leviathan
+    'ImpalerAbathurPlacement',  # Deep Tunnel for Swarm Hosts
 
     # Alarak
     'AlarakReviveBeacon',
@@ -77,6 +78,7 @@ BO_EXCLUDED.update([
     'HellbatBlackOps',
     'Marauder_BlackOps',
     'Banshee_BlackOps',
+    'NovaGriffinBombingRunStrafer',
 
     # Stukov
     # More accurate to track when cocoons started
@@ -90,6 +92,7 @@ BO_EXCLUDED.update([
     'SIInfestedMarine',
     'StukovInfestedDiamondBack',
     'StukovInfestedSiegeTankUprooted',
+    'StukovInfestedSiegeTankDeepTunnelPlacementUnit',
     'SILiberator',
     'StukovInfestedBanshee',
     'SIQueen',
@@ -147,6 +150,7 @@ BO_EXCLUDED.update([
     'HHD8SingleCluster',
     'HHD8ClusterBomb',
     'HHD8CenterCluster',
+    'HHD8CenterClusterUpgrade',
     'HHWraith',
     'HHVikingFighter',
     'HHRaven',
@@ -1699,6 +1703,14 @@ COMMANDER_BUILD_DATA = {
             'type': 'Unit',
             'is_morph': True,
         },
+        'GuardianMP': {
+            'build_time': 8,
+            'built_from': [],
+            'display_name': 'Guardian',
+            'race': 'Zerg',
+            'type': 'Unit',
+            'is_morph': True,
+        },
         'Devourer': {
             'build_time': 15,
             'built_from': [],
@@ -2085,6 +2097,40 @@ COMMANDER_BUILD_DATA = {
             'build_time': 0,  # calldown
             'built_from': ['Starport'],
             'display_name': 'Covert Banshee',
+            'race': 'Terran',
+            'type': 'Unit',
+            'is_morph': False,
+        },
+
+        # Nova Special Abilities. not really sure what the types are here
+        'NovaDefensiveMatrixDrone': {
+            'build_time': 0,
+            'built_from': [],
+            'display_name': 'Defensive Drone',
+            'race': 'Terran',
+            'type': 'Unit',
+            'is_morph': False,
+        },
+        'NovaGriffinBombingRunTargeter': {
+            'build_time': 0,
+            'built_from': [],
+            'display_name': 'Griffin Airstrike',
+            'race': 'Terran',
+            'type': 'Unit',
+            'is_morph': False,
+        },
+        'NovaGriffinTransportUnit': {
+            'build_time': 0,
+            'built_from': [],
+            'display_name': 'Tactical Airlift',
+            'race': 'Terran',
+            'type': 'Unit',
+            'is_morph': False,
+        },
+        'NovaBuybackUnlock': {
+            'build_time': 0,
+            'built_from': [],
+            'display_name': 'Instant Regeneration',
             'race': 'Terran',
             'type': 'Unit',
             'is_morph': False,
@@ -3352,6 +3398,14 @@ COMMANDER_BUILD_DATA = {
             'build_time': 0,
             'built_from': [],
             'display_name': 'Strike Fighter Platform',
+            'race': 'Terran',
+            'type': 'Building',
+            'is_morph': False,
+        },
+        'HHStarport': {
+            'build_time': 0,
+            'built_from': [],
+            'display_name': 'Dominion Starport',
             'race': 'Terran',
             'type': 'Building',
             'is_morph': False,
