@@ -1,0 +1,4149 @@
+{
+    "include_map_details": false,
+    "frames_per_second": 22.4,
+    "map": "Odyssey LE",
+    "message": "",
+    "region": "eu",
+    "cooperative": false,
+    "category": "Ladder",
+    "build": 59587,
+    "map_hash": "65c47b7f5e3fbddd141fd947fbb5646400c697fd31be447d08a4db746dc0dba3",
+    "baseBuild": 59587,
+    "game_type": "1v1",
+    "unix_timestamp": 1510744144,
+    "expansion": "LotV",
+    "players": {
+        "1": {
+            "is_human": true,
+            "league": 0,
+            "unitsLost": [
+                {
+                    "name": "Drone",
+                    "frame": 2676,
+                    "clock_position": null,
+                    "time": "1:59",
+                    "killer": null
+                },
+                {
+                    "name": "Drone",
+                    "frame": 2808,
+                    "clock_position": null,
+                    "time": "2:05",
+                    "killer": null
+                },
+                {
+                    "name": "Drone",
+                    "frame": 3471,
+                    "clock_position": null,
+                    "time": "2:34",
+                    "killer": null
+                },
+                {
+                    "name": "Drone",
+                    "frame": 5949,
+                    "clock_position": null,
+                    "time": "4:25",
+                    "killer": null
+                },
+                {
+                    "name": "Drone",
+                    "frame": 6707,
+                    "clock_position": null,
+                    "time": "4:59",
+                    "killer": null
+                },
+                {
+                    "name": "Drone",
+                    "frame": 7920,
+                    "clock_position": null,
+                    "time": "5:53",
+                    "killer": null
+                },
+                {
+                    "name": "Drone",
+                    "frame": 8006,
+                    "clock_position": null,
+                    "time": "5:57",
+                    "killer": null
+                },
+                {
+                    "name": "Zergling",
+                    "frame": 8111,
+                    "clock_position": null,
+                    "time": "6:02",
+                    "killer": null
+                },
+                {
+                    "name": "Zergling",
+                    "frame": 8117,
+                    "clock_position": null,
+                    "time": "6:02",
+                    "killer": null
+                },
+                {
+                    "name": "Zergling",
+                    "frame": 8118,
+                    "clock_position": null,
+                    "time": "6:02",
+                    "killer": null
+                },
+                {
+                    "name": "Zergling",
+                    "frame": 8118,
+                    "clock_position": null,
+                    "time": "6:02",
+                    "killer": null
+                },
+                {
+                    "name": "Zergling",
+                    "frame": 8120,
+                    "clock_position": null,
+                    "time": "6:02",
+                    "killer": null
+                },
+                {
+                    "name": "Zergling",
+                    "frame": 8121,
+                    "clock_position": null,
+                    "time": "6:02",
+                    "killer": null
+                },
+                {
+                    "name": "Zergling",
+                    "frame": 8121,
+                    "clock_position": null,
+                    "time": "6:02",
+                    "killer": null
+                },
+                {
+                    "name": "Zergling",
+                    "frame": 8121,
+                    "clock_position": null,
+                    "time": "6:02",
+                    "killer": null
+                },
+                {
+                    "name": "Zergling",
+                    "frame": 8123,
+                    "clock_position": null,
+                    "time": "6:02",
+                    "killer": null
+                },
+                {
+                    "name": "Zergling",
+                    "frame": 8133,
+                    "clock_position": null,
+                    "time": "6:03",
+                    "killer": null
+                },
+                {
+                    "name": "Zergling",
+                    "frame": 8139,
+                    "clock_position": null,
+                    "time": "6:03",
+                    "killer": null
+                },
+                {
+                    "name": "Zergling",
+                    "frame": 8140,
+                    "clock_position": null,
+                    "time": "6:03",
+                    "killer": null
+                },
+                {
+                    "name": "Zergling",
+                    "frame": 8266,
+                    "clock_position": null,
+                    "time": "6:09",
+                    "killer": 2
+                },
+                {
+                    "name": "Zergling",
+                    "frame": 8792,
+                    "clock_position": null,
+                    "time": "6:32",
+                    "killer": 2
+                },
+                {
+                    "name": "Baneling",
+                    "frame": 8844,
+                    "clock_position": null,
+                    "time": "6:34",
+                    "killer": 2
+                },
+                {
+                    "name": "Zergling",
+                    "frame": 8844,
+                    "clock_position": null,
+                    "time": "6:34",
+                    "killer": 2
+                },
+                {
+                    "name": "Baneling",
+                    "frame": 8857,
+                    "clock_position": null,
+                    "time": "6:35",
+                    "killer": 1
+                },
+                {
+                    "name": "Drone",
+                    "frame": 8864,
+                    "clock_position": null,
+                    "time": "6:35",
+                    "killer": null
+                },
+                {
+                    "name": "Baneling",
+                    "frame": 8894,
+                    "clock_position": null,
+                    "time": "6:37",
+                    "killer": 2
+                },
+                {
+                    "name": "Drone",
+                    "frame": 8912,
+                    "clock_position": null,
+                    "time": "6:37",
+                    "killer": null
+                },
+                {
+                    "name": "Zergling",
+                    "frame": 8919,
+                    "clock_position": null,
+                    "time": "6:38",
+                    "killer": 2
+                },
+                {
+                    "name": "Zergling",
+                    "frame": 8924,
+                    "clock_position": null,
+                    "time": "6:38",
+                    "killer": 2
+                },
+                {
+                    "name": "Baneling",
+                    "frame": 8925,
+                    "clock_position": null,
+                    "time": "6:38",
+                    "killer": 1
+                },
+                {
+                    "name": "Zergling",
+                    "frame": 8926,
+                    "clock_position": null,
+                    "time": "6:38",
+                    "killer": 2
+                },
+                {
+                    "name": "Baneling",
+                    "frame": 8927,
+                    "clock_position": null,
+                    "time": "6:38",
+                    "killer": 1
+                },
+                {
+                    "name": "Drone",
+                    "frame": 8932,
+                    "clock_position": null,
+                    "time": "6:38",
+                    "killer": null
+                },
+                {
+                    "name": "Zergling",
+                    "frame": 8947,
+                    "clock_position": null,
+                    "time": "6:39",
+                    "killer": 2
+                },
+                {
+                    "name": "Zergling",
+                    "frame": 8958,
+                    "clock_position": null,
+                    "time": "6:39",
+                    "killer": 2
+                },
+                {
+                    "name": "Zergling",
+                    "frame": 8967,
+                    "clock_position": null,
+                    "time": "6:40",
+                    "killer": 2
+                },
+                {
+                    "name": "Baneling",
+                    "frame": 8995,
+                    "clock_position": null,
+                    "time": "6:41",
+                    "killer": 2
+                },
+                {
+                    "name": "Baneling",
+                    "frame": 9018,
+                    "clock_position": null,
+                    "time": "6:42",
+                    "killer": 2
+                },
+                {
+                    "name": "Baneling",
+                    "frame": 9026,
+                    "clock_position": null,
+                    "time": "6:42",
+                    "killer": 2
+                },
+                {
+                    "name": "Drone",
+                    "frame": 9034,
+                    "clock_position": null,
+                    "time": "6:43",
+                    "killer": null
+                },
+                {
+                    "name": "Baneling",
+                    "frame": 9038,
+                    "clock_position": null,
+                    "time": "6:43",
+                    "killer": 2
+                },
+                {
+                    "name": "Baneling",
+                    "frame": 9046,
+                    "clock_position": null,
+                    "time": "6:43",
+                    "killer": 2
+                },
+                {
+                    "name": "Zergling",
+                    "frame": 9062,
+                    "clock_position": null,
+                    "time": "6:44",
+                    "killer": 2
+                },
+                {
+                    "name": "Zergling",
+                    "frame": 9072,
+                    "clock_position": null,
+                    "time": "6:45",
+                    "killer": 2
+                },
+                {
+                    "name": "Zergling",
+                    "frame": 9075,
+                    "clock_position": null,
+                    "time": "6:45",
+                    "killer": 2
+                },
+                {
+                    "name": "Zergling",
+                    "frame": 9140,
+                    "clock_position": null,
+                    "time": "6:48",
+                    "killer": 2
+                },
+                {
+                    "name": "Zergling",
+                    "frame": 9143,
+                    "clock_position": null,
+                    "time": "6:48",
+                    "killer": 2
+                },
+                {
+                    "name": "Zergling",
+                    "frame": 9193,
+                    "clock_position": null,
+                    "time": "6:50",
+                    "killer": 2
+                },
+                {
+                    "name": "Zergling",
+                    "frame": 9197,
+                    "clock_position": null,
+                    "time": "6:50",
+                    "killer": 2
+                },
+                {
+                    "name": "Baneling",
+                    "frame": 9235,
+                    "clock_position": null,
+                    "time": "6:52",
+                    "killer": 1
+                },
+                {
+                    "name": "Baneling",
+                    "frame": 9236,
+                    "clock_position": null,
+                    "time": "6:52",
+                    "killer": 1
+                },
+                {
+                    "name": "Zergling",
+                    "frame": 9245,
+                    "clock_position": null,
+                    "time": "6:52",
+                    "killer": 2
+                },
+                {
+                    "name": "Zergling",
+                    "frame": 9417,
+                    "clock_position": null,
+                    "time": "7:00",
+                    "killer": 2
+                },
+                {
+                    "name": "Zergling",
+                    "frame": 9488,
+                    "clock_position": null,
+                    "time": "7:03",
+                    "killer": 2
+                },
+                {
+                    "name": "Zergling",
+                    "frame": 9609,
+                    "clock_position": null,
+                    "time": "7:08",
+                    "killer": 2
+                },
+                {
+                    "name": "Zergling",
+                    "frame": 9628,
+                    "clock_position": null,
+                    "time": "7:09",
+                    "killer": 2
+                },
+                {
+                    "name": "Zergling",
+                    "frame": 9691,
+                    "clock_position": null,
+                    "time": "7:12",
+                    "killer": 2
+                },
+                {
+                    "name": "Zergling",
+                    "frame": 9711,
+                    "clock_position": null,
+                    "time": "7:13",
+                    "killer": 2
+                },
+                {
+                    "name": "Zergling",
+                    "frame": 9717,
+                    "clock_position": null,
+                    "time": "7:13",
+                    "killer": 2
+                },
+                {
+                    "name": "Zergling",
+                    "frame": 9718,
+                    "clock_position": null,
+                    "time": "7:13",
+                    "killer": 2
+                },
+                {
+                    "name": "Zergling",
+                    "frame": 9740,
+                    "clock_position": null,
+                    "time": "7:14",
+                    "killer": 2
+                },
+                {
+                    "name": "Zergling",
+                    "frame": 9744,
+                    "clock_position": null,
+                    "time": "7:15",
+                    "killer": 2
+                },
+                {
+                    "name": "Zergling",
+                    "frame": 9772,
+                    "clock_position": null,
+                    "time": "7:16",
+                    "killer": 2
+                },
+                {
+                    "name": "Zergling",
+                    "frame": 9784,
+                    "clock_position": null,
+                    "time": "7:16",
+                    "killer": 2
+                }
+            ],
+            "color": "B4141E",
+            "abilities": [
+                {
+                    "name": "SpawnLarva",
+                    "frame": 3613,
+                    "time": "2:41"
+                },
+                {
+                    "name": "SpawnLarva",
+                    "frame": 4351,
+                    "time": "3:14"
+                },
+                {
+                    "name": "SpawnLarva",
+                    "frame": 5298,
+                    "time": "3:56"
+                },
+                {
+                    "name": "SpawnLarva",
+                    "frame": 6206,
+                    "time": "4:37"
+                },
+                {
+                    "name": "SpawnLarva",
+                    "frame": 6624,
+                    "time": "4:55"
+                },
+                {
+                    "name": "SpawnLarva",
+                    "frame": 7560,
+                    "time": "5:37"
+                },
+                {
+                    "name": "SpawnLarva",
+                    "frame": 7574,
+                    "time": "5:38"
+                },
+                {
+                    "name": "SpawnLarva",
+                    "frame": 7621,
+                    "time": "5:40"
+                },
+                {
+                    "name": "SpawnLarva",
+                    "frame": 7944,
+                    "time": "5:54"
+                },
+                {
+                    "name": "SpawnLarva",
+                    "frame": 8060,
+                    "time": "5:59"
+                },
+                {
+                    "name": "SpawnLarva",
+                    "frame": 8638,
+                    "time": "6:25"
+                }
+            ],
+            "result": "Win",
+            "is_winner": true,
+            "region": "eu",
+            "level": 4294967295,
+            "pick_race": "Random",
+            "supply": [
+                [
+                    0,
+                    12
+                ],
+                [
+                    1,
+                    12
+                ],
+                [
+                    160,
+                    13
+                ],
+                [
+                    320,
+                    13
+                ],
+                [
+                    480,
+                    14
+                ],
+                [
+                    640,
+                    14
+                ],
+                [
+                    800,
+                    17
+                ],
+                [
+                    960,
+                    17
+                ],
+                [
+                    1120,
+                    17
+                ],
+                [
+                    1280,
+                    16
+                ],
+                [
+                    1440,
+                    17
+                ],
+                [
+                    1600,
+                    17
+                ],
+                [
+                    1760,
+                    18
+                ],
+                [
+                    1920,
+                    19
+                ],
+                [
+                    2080,
+                    20
+                ],
+                [
+                    2240,
+                    20
+                ],
+                [
+                    2400,
+                    20
+                ],
+                [
+                    2560,
+                    21
+                ],
+                [
+                    2720,
+                    21
+                ],
+                [
+                    2880,
+                    26
+                ],
+                [
+                    3040,
+                    27
+                ],
+                [
+                    3200,
+                    29
+                ],
+                [
+                    3360,
+                    30
+                ],
+                [
+                    3520,
+                    31
+                ],
+                [
+                    3680,
+                    35
+                ],
+                [
+                    3840,
+                    35
+                ],
+                [
+                    4000,
+                    35
+                ],
+                [
+                    4160,
+                    36
+                ],
+                [
+                    4320,
+                    36
+                ],
+                [
+                    4480,
+                    35
+                ],
+                [
+                    4640,
+                    35
+                ],
+                [
+                    4800,
+                    44
+                ],
+                [
+                    4960,
+                    44
+                ],
+                [
+                    5120,
+                    44
+                ],
+                [
+                    5280,
+                    44
+                ],
+                [
+                    5440,
+                    44
+                ],
+                [
+                    5600,
+                    44
+                ],
+                [
+                    5760,
+                    43
+                ],
+                [
+                    5920,
+                    51
+                ],
+                [
+                    6080,
+                    51
+                ],
+                [
+                    6240,
+                    51
+                ],
+                [
+                    6400,
+                    51
+                ],
+                [
+                    6560,
+                    51
+                ],
+                [
+                    6720,
+                    56
+                ],
+                [
+                    6880,
+                    56
+                ],
+                [
+                    7040,
+                    65
+                ],
+                [
+                    7200,
+                    65
+                ],
+                [
+                    7360,
+                    65
+                ],
+                [
+                    7520,
+                    63
+                ],
+                [
+                    7680,
+                    63
+                ],
+                [
+                    7840,
+                    79
+                ],
+                [
+                    8000,
+                    80
+                ],
+                [
+                    8160,
+                    86
+                ],
+                [
+                    8320,
+                    85
+                ],
+                [
+                    8480,
+                    82
+                ],
+                [
+                    8640,
+                    87
+                ],
+                [
+                    8800,
+                    87
+                ],
+                [
+                    8960,
+                    81
+                ],
+                [
+                    9120,
+                    77
+                ],
+                [
+                    9280,
+                    73
+                ],
+                [
+                    9440,
+                    79
+                ],
+                [
+                    9600,
+                    91
+                ],
+                [
+                    9760,
+                    87
+                ],
+                [
+                    9920,
+                    86
+                ],
+                [
+                    9947,
+                    86
+                ]
+            ],
+            "name": "Slimper",
+            "commander": "",
+            "buildOrder": [
+                {
+                    "name": "Drone",
+                    "is_worker": true,
+                    "frame": 20.200000000000045,
+                    "clock_position": null,
+                    "time": "0:00",
+                    "is_chronoboosted": false,
+                    "supply": 12
+                },
+                {
+                    "name": "Overlord",
+                    "is_worker": false,
+                    "frame": 282.8,
+                    "clock_position": null,
+                    "time": "0:12",
+                    "is_chronoboosted": false,
+                    "supply": 13
+                },
+                {
+                    "name": "Drone",
+                    "is_worker": true,
+                    "frame": 452.20000000000005,
+                    "clock_position": null,
+                    "time": "0:20",
+                    "is_chronoboosted": false,
+                    "supply": 13
+                },
+                {
+                    "name": "Drone",
+                    "is_worker": true,
+                    "frame": 704.2,
+                    "clock_position": null,
+                    "time": "0:31",
+                    "is_chronoboosted": false,
+                    "supply": 14
+                },
+                {
+                    "name": "Drone",
+                    "is_worker": true,
+                    "frame": 706.2,
+                    "clock_position": null,
+                    "time": "0:31",
+                    "is_chronoboosted": false,
+                    "supply": 14
+                },
+                {
+                    "name": "Drone",
+                    "is_worker": true,
+                    "frame": 794.2,
+                    "clock_position": null,
+                    "time": "0:35",
+                    "is_chronoboosted": false,
+                    "supply": 14
+                },
+                {
+                    "name": "Hatchery",
+                    "is_worker": false,
+                    "frame": 1208,
+                    "clock_position": null,
+                    "time": "0:53",
+                    "is_chronoboosted": false,
+                    "supply": 17
+                },
+                {
+                    "name": "Drone",
+                    "is_worker": true,
+                    "frame": 1308.2,
+                    "clock_position": null,
+                    "time": "0:58",
+                    "is_chronoboosted": false,
+                    "supply": 16
+                },
+                {
+                    "name": "SpawningPool",
+                    "is_worker": false,
+                    "frame": 1636,
+                    "clock_position": null,
+                    "time": "1:13",
+                    "is_chronoboosted": false,
+                    "supply": 17
+                },
+                {
+                    "name": "Drone",
+                    "is_worker": true,
+                    "frame": 1677.2,
+                    "clock_position": null,
+                    "time": "1:14",
+                    "is_chronoboosted": false,
+                    "supply": 17
+                },
+                {
+                    "name": "Drone",
+                    "is_worker": true,
+                    "frame": 1720.2,
+                    "clock_position": null,
+                    "time": "1:16",
+                    "is_chronoboosted": false,
+                    "supply": 17
+                },
+                {
+                    "name": "Drone",
+                    "is_worker": true,
+                    "frame": 1797.2,
+                    "clock_position": null,
+                    "time": "1:20",
+                    "is_chronoboosted": false,
+                    "supply": 18
+                },
+                {
+                    "name": "Drone",
+                    "is_worker": true,
+                    "frame": 1979.2,
+                    "clock_position": null,
+                    "time": "1:28",
+                    "is_chronoboosted": false,
+                    "supply": 19
+                },
+                {
+                    "name": "Overlord",
+                    "is_worker": false,
+                    "frame": 2205.8,
+                    "clock_position": null,
+                    "time": "1:38",
+                    "is_chronoboosted": false,
+                    "supply": 20
+                },
+                {
+                    "name": "Drone",
+                    "is_worker": true,
+                    "frame": 2497.2,
+                    "clock_position": null,
+                    "time": "1:51",
+                    "is_chronoboosted": false,
+                    "supply": 20
+                },
+                {
+                    "name": "Drone",
+                    "is_worker": true,
+                    "frame": 2740.2,
+                    "clock_position": null,
+                    "time": "2:02",
+                    "is_chronoboosted": false,
+                    "supply": 21
+                },
+                {
+                    "name": "Queen",
+                    "is_worker": false,
+                    "frame": 2753.6,
+                    "clock_position": null,
+                    "time": "2:02",
+                    "is_chronoboosted": false,
+                    "supply": 21
+                },
+                {
+                    "name": "Queen",
+                    "is_worker": false,
+                    "frame": 2811.6,
+                    "clock_position": null,
+                    "time": "2:05",
+                    "is_chronoboosted": false,
+                    "supply": 21
+                },
+                {
+                    "name": "Drone",
+                    "is_worker": true,
+                    "frame": 2984.2,
+                    "clock_position": null,
+                    "time": "2:13",
+                    "is_chronoboosted": false,
+                    "supply": 26
+                },
+                {
+                    "name": "Drone",
+                    "is_worker": true,
+                    "frame": 2984.2,
+                    "clock_position": null,
+                    "time": "2:13",
+                    "is_chronoboosted": false,
+                    "supply": 26
+                },
+                {
+                    "name": "Extractor",
+                    "is_worker": false,
+                    "frame": 2991,
+                    "clock_position": null,
+                    "time": "2:13",
+                    "is_chronoboosted": false,
+                    "supply": 26
+                },
+                {
+                    "name": "Drone",
+                    "is_worker": true,
+                    "frame": 3100.2,
+                    "clock_position": null,
+                    "time": "2:18",
+                    "is_chronoboosted": false,
+                    "supply": 27
+                },
+                {
+                    "name": "Drone",
+                    "is_worker": true,
+                    "frame": 3172.2,
+                    "clock_position": null,
+                    "time": "2:21",
+                    "is_chronoboosted": false,
+                    "supply": 27
+                },
+                {
+                    "name": "Drone",
+                    "is_worker": true,
+                    "frame": 3328.2,
+                    "clock_position": null,
+                    "time": "2:28",
+                    "is_chronoboosted": false,
+                    "supply": 29
+                },
+                {
+                    "name": "Drone",
+                    "is_worker": true,
+                    "frame": 3477.2,
+                    "clock_position": null,
+                    "time": "2:35",
+                    "is_chronoboosted": false,
+                    "supply": 30
+                },
+                {
+                    "name": "Queen",
+                    "is_worker": false,
+                    "frame": 3552.6,
+                    "clock_position": null,
+                    "time": "2:38",
+                    "is_chronoboosted": false,
+                    "supply": 31
+                },
+                {
+                    "name": "Queen",
+                    "is_worker": false,
+                    "frame": 3610.6,
+                    "clock_position": null,
+                    "time": "2:41",
+                    "is_chronoboosted": false,
+                    "supply": 31
+                },
+                {
+                    "name": "Drone",
+                    "is_worker": true,
+                    "frame": 4037.2,
+                    "clock_position": null,
+                    "time": "3:00",
+                    "is_chronoboosted": false,
+                    "supply": 35
+                },
+                {
+                    "name": "Overlord",
+                    "is_worker": false,
+                    "frame": 4085.8,
+                    "clock_position": null,
+                    "time": "3:02",
+                    "is_chronoboosted": false,
+                    "supply": 35
+                },
+                {
+                    "name": "Overlord",
+                    "is_worker": false,
+                    "frame": 4089.8,
+                    "clock_position": null,
+                    "time": "3:02",
+                    "is_chronoboosted": false,
+                    "supply": 35
+                },
+                {
+                    "name": "Overlord",
+                    "is_worker": false,
+                    "frame": 4092.8,
+                    "clock_position": null,
+                    "time": "3:02",
+                    "is_chronoboosted": false,
+                    "supply": 35
+                },
+                {
+                    "name": "Hatchery",
+                    "is_worker": false,
+                    "frame": 4348,
+                    "clock_position": null,
+                    "time": "3:14",
+                    "is_chronoboosted": false,
+                    "supply": 36
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 4758.2,
+                    "clock_position": null,
+                    "time": "3:32",
+                    "is_chronoboosted": false,
+                    "supply": 35
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 4758.2,
+                    "clock_position": null,
+                    "time": "3:32",
+                    "is_chronoboosted": false,
+                    "supply": 35
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 4763.2,
+                    "clock_position": null,
+                    "time": "3:32",
+                    "is_chronoboosted": false,
+                    "supply": 35
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 4763.2,
+                    "clock_position": null,
+                    "time": "3:32",
+                    "is_chronoboosted": false,
+                    "supply": 35
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 4764.2,
+                    "clock_position": null,
+                    "time": "3:32",
+                    "is_chronoboosted": false,
+                    "supply": 35
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 4764.2,
+                    "clock_position": null,
+                    "time": "3:32",
+                    "is_chronoboosted": false,
+                    "supply": 35
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 4764.2,
+                    "clock_position": null,
+                    "time": "3:32",
+                    "is_chronoboosted": false,
+                    "supply": 35
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 4764.2,
+                    "clock_position": null,
+                    "time": "3:32",
+                    "is_chronoboosted": false,
+                    "supply": 35
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 4767.2,
+                    "clock_position": null,
+                    "time": "3:32",
+                    "is_chronoboosted": false,
+                    "supply": 35
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 4767.2,
+                    "clock_position": null,
+                    "time": "3:32",
+                    "is_chronoboosted": false,
+                    "supply": 35
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 4767.2,
+                    "clock_position": null,
+                    "time": "3:32",
+                    "is_chronoboosted": false,
+                    "supply": 35
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 4767.2,
+                    "clock_position": null,
+                    "time": "3:32",
+                    "is_chronoboosted": false,
+                    "supply": 35
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 4769.2,
+                    "clock_position": null,
+                    "time": "3:32",
+                    "is_chronoboosted": false,
+                    "supply": 35
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 4769.2,
+                    "clock_position": null,
+                    "time": "3:32",
+                    "is_chronoboosted": false,
+                    "supply": 35
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 4770.2,
+                    "clock_position": null,
+                    "time": "3:32",
+                    "is_chronoboosted": false,
+                    "supply": 35
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 4770.2,
+                    "clock_position": null,
+                    "time": "3:32",
+                    "is_chronoboosted": false,
+                    "supply": 35
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 4771.2,
+                    "clock_position": null,
+                    "time": "3:33",
+                    "is_chronoboosted": false,
+                    "supply": 35
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 4771.2,
+                    "clock_position": null,
+                    "time": "3:33",
+                    "is_chronoboosted": false,
+                    "supply": 35
+                },
+                {
+                    "name": "zerglingmovementspeed",
+                    "is_worker": false,
+                    "frame": 4822.4,
+                    "clock_position": null,
+                    "time": "3:35",
+                    "is_chronoboosted": false,
+                    "supply": 44
+                },
+                {
+                    "name": "BanelingNest",
+                    "is_worker": false,
+                    "frame": 5747,
+                    "clock_position": null,
+                    "time": "4:16",
+                    "is_chronoboosted": false,
+                    "supply": 44
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 5901.2,
+                    "clock_position": null,
+                    "time": "4:23",
+                    "is_chronoboosted": false,
+                    "supply": 43
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 5901.2,
+                    "clock_position": null,
+                    "time": "4:23",
+                    "is_chronoboosted": false,
+                    "supply": 43
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 5909.2,
+                    "clock_position": null,
+                    "time": "4:23",
+                    "is_chronoboosted": false,
+                    "supply": 43
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 5909.2,
+                    "clock_position": null,
+                    "time": "4:23",
+                    "is_chronoboosted": false,
+                    "supply": 43
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 5909.2,
+                    "clock_position": null,
+                    "time": "4:23",
+                    "is_chronoboosted": false,
+                    "supply": 43
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 5909.2,
+                    "clock_position": null,
+                    "time": "4:23",
+                    "is_chronoboosted": false,
+                    "supply": 43
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 5910.2,
+                    "clock_position": null,
+                    "time": "4:23",
+                    "is_chronoboosted": false,
+                    "supply": 43
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 5910.2,
+                    "clock_position": null,
+                    "time": "4:23",
+                    "is_chronoboosted": false,
+                    "supply": 43
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 5910.2,
+                    "clock_position": null,
+                    "time": "4:23",
+                    "is_chronoboosted": false,
+                    "supply": 43
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 5910.2,
+                    "clock_position": null,
+                    "time": "4:23",
+                    "is_chronoboosted": false,
+                    "supply": 43
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 5910.2,
+                    "clock_position": null,
+                    "time": "4:23",
+                    "is_chronoboosted": false,
+                    "supply": 43
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 5910.2,
+                    "clock_position": null,
+                    "time": "4:23",
+                    "is_chronoboosted": false,
+                    "supply": 43
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 5913.2,
+                    "clock_position": null,
+                    "time": "4:23",
+                    "is_chronoboosted": false,
+                    "supply": 43
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 5913.2,
+                    "clock_position": null,
+                    "time": "4:23",
+                    "is_chronoboosted": false,
+                    "supply": 43
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 5914.2,
+                    "clock_position": null,
+                    "time": "4:24",
+                    "is_chronoboosted": false,
+                    "supply": 43
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 5914.2,
+                    "clock_position": null,
+                    "time": "4:24",
+                    "is_chronoboosted": false,
+                    "supply": 43
+                },
+                {
+                    "name": "Overlord",
+                    "is_worker": false,
+                    "frame": 5994.8,
+                    "clock_position": null,
+                    "time": "4:27",
+                    "is_chronoboosted": false,
+                    "supply": 51
+                },
+                {
+                    "name": "Overlord",
+                    "is_worker": false,
+                    "frame": 6022.8,
+                    "clock_position": null,
+                    "time": "4:28",
+                    "is_chronoboosted": false,
+                    "supply": 51
+                },
+                {
+                    "name": "Overlord",
+                    "is_worker": false,
+                    "frame": 6024.8,
+                    "clock_position": null,
+                    "time": "4:28",
+                    "is_chronoboosted": false,
+                    "supply": 51
+                },
+                {
+                    "name": "Overlord",
+                    "is_worker": false,
+                    "frame": 6024.8,
+                    "clock_position": null,
+                    "time": "4:28",
+                    "is_chronoboosted": false,
+                    "supply": 51
+                },
+                {
+                    "name": "Overlord",
+                    "is_worker": false,
+                    "frame": 6025.8,
+                    "clock_position": null,
+                    "time": "4:29",
+                    "is_chronoboosted": false,
+                    "supply": 51
+                },
+                {
+                    "name": "Overlord",
+                    "is_worker": false,
+                    "frame": 6025.8,
+                    "clock_position": null,
+                    "time": "4:29",
+                    "is_chronoboosted": false,
+                    "supply": 51
+                },
+                {
+                    "name": "Drone",
+                    "is_worker": true,
+                    "frame": 6574.2,
+                    "clock_position": null,
+                    "time": "4:53",
+                    "is_chronoboosted": false,
+                    "supply": 51
+                },
+                {
+                    "name": "Drone",
+                    "is_worker": true,
+                    "frame": 6574.2,
+                    "clock_position": null,
+                    "time": "4:53",
+                    "is_chronoboosted": false,
+                    "supply": 51
+                },
+                {
+                    "name": "Drone",
+                    "is_worker": true,
+                    "frame": 6575.2,
+                    "clock_position": null,
+                    "time": "4:53",
+                    "is_chronoboosted": false,
+                    "supply": 51
+                },
+                {
+                    "name": "Drone",
+                    "is_worker": true,
+                    "frame": 6575.2,
+                    "clock_position": null,
+                    "time": "4:53",
+                    "is_chronoboosted": false,
+                    "supply": 51
+                },
+                {
+                    "name": "Drone",
+                    "is_worker": true,
+                    "frame": 6576.2,
+                    "clock_position": null,
+                    "time": "4:53",
+                    "is_chronoboosted": false,
+                    "supply": 51
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 6909.2,
+                    "clock_position": null,
+                    "time": "5:08",
+                    "is_chronoboosted": false,
+                    "supply": 56
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 6909.2,
+                    "clock_position": null,
+                    "time": "5:08",
+                    "is_chronoboosted": false,
+                    "supply": 56
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 6910.2,
+                    "clock_position": null,
+                    "time": "5:08",
+                    "is_chronoboosted": false,
+                    "supply": 56
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 6910.2,
+                    "clock_position": null,
+                    "time": "5:08",
+                    "is_chronoboosted": false,
+                    "supply": 56
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 6910.2,
+                    "clock_position": null,
+                    "time": "5:08",
+                    "is_chronoboosted": false,
+                    "supply": 56
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 6910.2,
+                    "clock_position": null,
+                    "time": "5:08",
+                    "is_chronoboosted": false,
+                    "supply": 56
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 6912.2,
+                    "clock_position": null,
+                    "time": "5:08",
+                    "is_chronoboosted": false,
+                    "supply": 56
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 6912.2,
+                    "clock_position": null,
+                    "time": "5:08",
+                    "is_chronoboosted": false,
+                    "supply": 56
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 6923.2,
+                    "clock_position": null,
+                    "time": "5:09",
+                    "is_chronoboosted": false,
+                    "supply": 56
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 6923.2,
+                    "clock_position": null,
+                    "time": "5:09",
+                    "is_chronoboosted": false,
+                    "supply": 56
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 6928.2,
+                    "clock_position": null,
+                    "time": "5:09",
+                    "is_chronoboosted": false,
+                    "supply": 56
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 6928.2,
+                    "clock_position": null,
+                    "time": "5:09",
+                    "is_chronoboosted": false,
+                    "supply": 56
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 6929.2,
+                    "clock_position": null,
+                    "time": "5:09",
+                    "is_chronoboosted": false,
+                    "supply": 56
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 6929.2,
+                    "clock_position": null,
+                    "time": "5:09",
+                    "is_chronoboosted": false,
+                    "supply": 56
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 6929.2,
+                    "clock_position": null,
+                    "time": "5:09",
+                    "is_chronoboosted": false,
+                    "supply": 56
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 6929.2,
+                    "clock_position": null,
+                    "time": "5:09",
+                    "is_chronoboosted": false,
+                    "supply": 56
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 6931.2,
+                    "clock_position": null,
+                    "time": "5:09",
+                    "is_chronoboosted": false,
+                    "supply": 56
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 6931.2,
+                    "clock_position": null,
+                    "time": "5:09",
+                    "is_chronoboosted": false,
+                    "supply": 56
+                },
+                {
+                    "name": "EvolutionChamber",
+                    "is_worker": false,
+                    "frame": 7360,
+                    "clock_position": null,
+                    "time": "5:28",
+                    "is_chronoboosted": false,
+                    "supply": 65
+                },
+                {
+                    "name": "EvolutionChamber",
+                    "is_worker": false,
+                    "frame": 7446,
+                    "clock_position": null,
+                    "time": "5:32",
+                    "is_chronoboosted": false,
+                    "supply": 65
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 7695.2,
+                    "clock_position": null,
+                    "time": "5:43",
+                    "is_chronoboosted": false,
+                    "supply": 63
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 7695.2,
+                    "clock_position": null,
+                    "time": "5:43",
+                    "is_chronoboosted": false,
+                    "supply": 63
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 7701.2,
+                    "clock_position": null,
+                    "time": "5:43",
+                    "is_chronoboosted": false,
+                    "supply": 63
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 7701.2,
+                    "clock_position": null,
+                    "time": "5:43",
+                    "is_chronoboosted": false,
+                    "supply": 63
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 7701.2,
+                    "clock_position": null,
+                    "time": "5:43",
+                    "is_chronoboosted": false,
+                    "supply": 63
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 7701.2,
+                    "clock_position": null,
+                    "time": "5:43",
+                    "is_chronoboosted": false,
+                    "supply": 63
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 7702.2,
+                    "clock_position": null,
+                    "time": "5:43",
+                    "is_chronoboosted": false,
+                    "supply": 63
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 7702.2,
+                    "clock_position": null,
+                    "time": "5:43",
+                    "is_chronoboosted": false,
+                    "supply": 63
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 7702.2,
+                    "clock_position": null,
+                    "time": "5:43",
+                    "is_chronoboosted": false,
+                    "supply": 63
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 7702.2,
+                    "clock_position": null,
+                    "time": "5:43",
+                    "is_chronoboosted": false,
+                    "supply": 63
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 7704.2,
+                    "clock_position": null,
+                    "time": "5:43",
+                    "is_chronoboosted": false,
+                    "supply": 63
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 7704.2,
+                    "clock_position": null,
+                    "time": "5:43",
+                    "is_chronoboosted": false,
+                    "supply": 63
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 7705.2,
+                    "clock_position": null,
+                    "time": "5:43",
+                    "is_chronoboosted": false,
+                    "supply": 63
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 7705.2,
+                    "clock_position": null,
+                    "time": "5:43",
+                    "is_chronoboosted": false,
+                    "supply": 63
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 7705.2,
+                    "clock_position": null,
+                    "time": "5:43",
+                    "is_chronoboosted": false,
+                    "supply": 63
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 7705.2,
+                    "clock_position": null,
+                    "time": "5:43",
+                    "is_chronoboosted": false,
+                    "supply": 63
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 7705.2,
+                    "clock_position": null,
+                    "time": "5:43",
+                    "is_chronoboosted": false,
+                    "supply": 63
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 7705.2,
+                    "clock_position": null,
+                    "time": "5:43",
+                    "is_chronoboosted": false,
+                    "supply": 63
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 7706.2,
+                    "clock_position": null,
+                    "time": "5:44",
+                    "is_chronoboosted": false,
+                    "supply": 63
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 7706.2,
+                    "clock_position": null,
+                    "time": "5:44",
+                    "is_chronoboosted": false,
+                    "supply": 63
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 7706.2,
+                    "clock_position": null,
+                    "time": "5:44",
+                    "is_chronoboosted": false,
+                    "supply": 63
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 7706.2,
+                    "clock_position": null,
+                    "time": "5:44",
+                    "is_chronoboosted": false,
+                    "supply": 63
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 7708.2,
+                    "clock_position": null,
+                    "time": "5:44",
+                    "is_chronoboosted": false,
+                    "supply": 63
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 7708.2,
+                    "clock_position": null,
+                    "time": "5:44",
+                    "is_chronoboosted": false,
+                    "supply": 63
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 7708.2,
+                    "clock_position": null,
+                    "time": "5:44",
+                    "is_chronoboosted": false,
+                    "supply": 63
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 7708.2,
+                    "clock_position": null,
+                    "time": "5:44",
+                    "is_chronoboosted": false,
+                    "supply": 63
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 7709.2,
+                    "clock_position": null,
+                    "time": "5:44",
+                    "is_chronoboosted": false,
+                    "supply": 63
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 7709.2,
+                    "clock_position": null,
+                    "time": "5:44",
+                    "is_chronoboosted": false,
+                    "supply": 63
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 7711.2,
+                    "clock_position": null,
+                    "time": "5:44",
+                    "is_chronoboosted": false,
+                    "supply": 63
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 7711.2,
+                    "clock_position": null,
+                    "time": "5:44",
+                    "is_chronoboosted": false,
+                    "supply": 63
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 7712.2,
+                    "clock_position": null,
+                    "time": "5:44",
+                    "is_chronoboosted": false,
+                    "supply": 63
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 7712.2,
+                    "clock_position": null,
+                    "time": "5:44",
+                    "is_chronoboosted": false,
+                    "supply": 63
+                },
+                {
+                    "name": "Baneling",
+                    "is_worker": false,
+                    "frame": 7797.4,
+                    "clock_position": null,
+                    "time": "5:48",
+                    "is_chronoboosted": false,
+                    "supply": 63
+                },
+                {
+                    "name": "Baneling",
+                    "is_worker": false,
+                    "frame": 7803.4,
+                    "clock_position": null,
+                    "time": "5:48",
+                    "is_chronoboosted": false,
+                    "supply": 63
+                },
+                {
+                    "name": "Baneling",
+                    "is_worker": false,
+                    "frame": 7804.4,
+                    "clock_position": null,
+                    "time": "5:48",
+                    "is_chronoboosted": false,
+                    "supply": 63
+                },
+                {
+                    "name": "Baneling",
+                    "is_worker": false,
+                    "frame": 7804.4,
+                    "clock_position": null,
+                    "time": "5:48",
+                    "is_chronoboosted": false,
+                    "supply": 63
+                },
+                {
+                    "name": "Baneling",
+                    "is_worker": false,
+                    "frame": 7806.4,
+                    "clock_position": null,
+                    "time": "5:48",
+                    "is_chronoboosted": false,
+                    "supply": 63
+                },
+                {
+                    "name": "Baneling",
+                    "is_worker": false,
+                    "frame": 7807.4,
+                    "clock_position": null,
+                    "time": "5:48",
+                    "is_chronoboosted": false,
+                    "supply": 63
+                },
+                {
+                    "name": "Baneling",
+                    "is_worker": false,
+                    "frame": 7807.4,
+                    "clock_position": null,
+                    "time": "5:48",
+                    "is_chronoboosted": false,
+                    "supply": 63
+                },
+                {
+                    "name": "Baneling",
+                    "is_worker": false,
+                    "frame": 7807.4,
+                    "clock_position": null,
+                    "time": "5:48",
+                    "is_chronoboosted": false,
+                    "supply": 63
+                },
+                {
+                    "name": "Baneling",
+                    "is_worker": false,
+                    "frame": 7809.4,
+                    "clock_position": null,
+                    "time": "5:48",
+                    "is_chronoboosted": false,
+                    "supply": 63
+                },
+                {
+                    "name": "Baneling",
+                    "is_worker": false,
+                    "frame": 7819.4,
+                    "clock_position": null,
+                    "time": "5:49",
+                    "is_chronoboosted": false,
+                    "supply": 63
+                },
+                {
+                    "name": "Baneling",
+                    "is_worker": false,
+                    "frame": 7825.4,
+                    "clock_position": null,
+                    "time": "5:49",
+                    "is_chronoboosted": false,
+                    "supply": 63
+                },
+                {
+                    "name": "Baneling",
+                    "is_worker": false,
+                    "frame": 7826.4,
+                    "clock_position": null,
+                    "time": "5:49",
+                    "is_chronoboosted": false,
+                    "supply": 63
+                },
+                {
+                    "name": "Drone",
+                    "is_worker": true,
+                    "frame": 7868.2,
+                    "clock_position": null,
+                    "time": "5:51",
+                    "is_chronoboosted": false,
+                    "supply": 79
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 8107.2,
+                    "clock_position": null,
+                    "time": "6:01",
+                    "is_chronoboosted": false,
+                    "supply": 80
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 8107.2,
+                    "clock_position": null,
+                    "time": "6:01",
+                    "is_chronoboosted": false,
+                    "supply": 80
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 8107.2,
+                    "clock_position": null,
+                    "time": "6:01",
+                    "is_chronoboosted": false,
+                    "supply": 80
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 8107.2,
+                    "clock_position": null,
+                    "time": "6:01",
+                    "is_chronoboosted": false,
+                    "supply": 80
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 8108.2,
+                    "clock_position": null,
+                    "time": "6:01",
+                    "is_chronoboosted": false,
+                    "supply": 80
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 8108.2,
+                    "clock_position": null,
+                    "time": "6:01",
+                    "is_chronoboosted": false,
+                    "supply": 80
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 8110.2,
+                    "clock_position": null,
+                    "time": "6:02",
+                    "is_chronoboosted": false,
+                    "supply": 80
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 8110.2,
+                    "clock_position": null,
+                    "time": "6:02",
+                    "is_chronoboosted": false,
+                    "supply": 80
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 8110.2,
+                    "clock_position": null,
+                    "time": "6:02",
+                    "is_chronoboosted": false,
+                    "supply": 80
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 8110.2,
+                    "clock_position": null,
+                    "time": "6:02",
+                    "is_chronoboosted": false,
+                    "supply": 80
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 8111.2,
+                    "clock_position": null,
+                    "time": "6:02",
+                    "is_chronoboosted": false,
+                    "supply": 80
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 8111.2,
+                    "clock_position": null,
+                    "time": "6:02",
+                    "is_chronoboosted": false,
+                    "supply": 80
+                },
+                {
+                    "name": "SporeCrawler",
+                    "is_worker": false,
+                    "frame": 8383,
+                    "clock_position": null,
+                    "time": "6:14",
+                    "is_chronoboosted": false,
+                    "supply": 85
+                },
+                {
+                    "name": "SporeCrawler",
+                    "is_worker": false,
+                    "frame": 8431,
+                    "clock_position": null,
+                    "time": "6:16",
+                    "is_chronoboosted": false,
+                    "supply": 85
+                },
+                {
+                    "name": "SporeCrawler",
+                    "is_worker": false,
+                    "frame": 8451,
+                    "clock_position": null,
+                    "time": "6:17",
+                    "is_chronoboosted": false,
+                    "supply": 85
+                },
+                {
+                    "name": "SporeCrawler",
+                    "is_worker": false,
+                    "frame": 8553,
+                    "clock_position": null,
+                    "time": "6:21",
+                    "is_chronoboosted": false,
+                    "supply": 82
+                },
+                {
+                    "name": "Drone",
+                    "is_worker": true,
+                    "frame": 8556.2,
+                    "clock_position": null,
+                    "time": "6:21",
+                    "is_chronoboosted": false,
+                    "supply": 82
+                },
+                {
+                    "name": "Drone",
+                    "is_worker": true,
+                    "frame": 8561.2,
+                    "clock_position": null,
+                    "time": "6:22",
+                    "is_chronoboosted": false,
+                    "supply": 82
+                },
+                {
+                    "name": "Drone",
+                    "is_worker": true,
+                    "frame": 8561.2,
+                    "clock_position": null,
+                    "time": "6:22",
+                    "is_chronoboosted": false,
+                    "supply": 82
+                },
+                {
+                    "name": "Drone",
+                    "is_worker": true,
+                    "frame": 8564.2,
+                    "clock_position": null,
+                    "time": "6:22",
+                    "is_chronoboosted": false,
+                    "supply": 82
+                },
+                {
+                    "name": "Drone",
+                    "is_worker": true,
+                    "frame": 8564.2,
+                    "clock_position": null,
+                    "time": "6:22",
+                    "is_chronoboosted": false,
+                    "supply": 82
+                },
+                {
+                    "name": "Drone",
+                    "is_worker": true,
+                    "frame": 8566.2,
+                    "clock_position": null,
+                    "time": "6:22",
+                    "is_chronoboosted": false,
+                    "supply": 82
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 9582.2,
+                    "clock_position": null,
+                    "time": "7:07",
+                    "is_chronoboosted": false,
+                    "supply": 79
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 9582.2,
+                    "clock_position": null,
+                    "time": "7:07",
+                    "is_chronoboosted": false,
+                    "supply": 79
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 9582.2,
+                    "clock_position": null,
+                    "time": "7:07",
+                    "is_chronoboosted": false,
+                    "supply": 79
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 9582.2,
+                    "clock_position": null,
+                    "time": "7:07",
+                    "is_chronoboosted": false,
+                    "supply": 79
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 9584.2,
+                    "clock_position": null,
+                    "time": "7:07",
+                    "is_chronoboosted": false,
+                    "supply": 79
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 9584.2,
+                    "clock_position": null,
+                    "time": "7:07",
+                    "is_chronoboosted": false,
+                    "supply": 79
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 9584.2,
+                    "clock_position": null,
+                    "time": "7:07",
+                    "is_chronoboosted": false,
+                    "supply": 79
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 9584.2,
+                    "clock_position": null,
+                    "time": "7:07",
+                    "is_chronoboosted": false,
+                    "supply": 79
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 9585.2,
+                    "clock_position": null,
+                    "time": "7:07",
+                    "is_chronoboosted": false,
+                    "supply": 79
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 9585.2,
+                    "clock_position": null,
+                    "time": "7:07",
+                    "is_chronoboosted": false,
+                    "supply": 79
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 9586.2,
+                    "clock_position": null,
+                    "time": "7:07",
+                    "is_chronoboosted": false,
+                    "supply": 79
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 9586.2,
+                    "clock_position": null,
+                    "time": "7:07",
+                    "is_chronoboosted": false,
+                    "supply": 79
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 9586.2,
+                    "clock_position": null,
+                    "time": "7:07",
+                    "is_chronoboosted": false,
+                    "supply": 79
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 9586.2,
+                    "clock_position": null,
+                    "time": "7:07",
+                    "is_chronoboosted": false,
+                    "supply": 79
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 9586.2,
+                    "clock_position": null,
+                    "time": "7:07",
+                    "is_chronoboosted": false,
+                    "supply": 79
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 9586.2,
+                    "clock_position": null,
+                    "time": "7:07",
+                    "is_chronoboosted": false,
+                    "supply": 79
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 9588.2,
+                    "clock_position": null,
+                    "time": "7:08",
+                    "is_chronoboosted": false,
+                    "supply": 79
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 9588.2,
+                    "clock_position": null,
+                    "time": "7:08",
+                    "is_chronoboosted": false,
+                    "supply": 79
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 9589.2,
+                    "clock_position": null,
+                    "time": "7:08",
+                    "is_chronoboosted": false,
+                    "supply": 79
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 9589.2,
+                    "clock_position": null,
+                    "time": "7:08",
+                    "is_chronoboosted": false,
+                    "supply": 79
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 9591.2,
+                    "clock_position": null,
+                    "time": "7:08",
+                    "is_chronoboosted": false,
+                    "supply": 79
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 9591.2,
+                    "clock_position": null,
+                    "time": "7:08",
+                    "is_chronoboosted": false,
+                    "supply": 79
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 9591.2,
+                    "clock_position": null,
+                    "time": "7:08",
+                    "is_chronoboosted": false,
+                    "supply": 79
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 9591.2,
+                    "clock_position": null,
+                    "time": "7:08",
+                    "is_chronoboosted": false,
+                    "supply": 79
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 9592.2,
+                    "clock_position": null,
+                    "time": "7:08",
+                    "is_chronoboosted": false,
+                    "supply": 79
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 9592.2,
+                    "clock_position": null,
+                    "time": "7:08",
+                    "is_chronoboosted": false,
+                    "supply": 79
+                }
+            ],
+            "clock_position": null,
+            "uid": 842558,
+            "race": "Zerg",
+            "team": 1,
+            "handicap": 100
+        },
+        "2": {
+            "is_human": true,
+            "league": 0,
+            "unitsLost": [
+                {
+                    "name": "Drone",
+                    "frame": 635,
+                    "clock_position": null,
+                    "time": "0:28",
+                    "killer": null
+                },
+                {
+                    "name": "Drone",
+                    "frame": 667,
+                    "clock_position": null,
+                    "time": "0:29",
+                    "killer": null
+                },
+                {
+                    "name": "Drone",
+                    "frame": 2110,
+                    "clock_position": null,
+                    "time": "1:34",
+                    "killer": null
+                },
+                {
+                    "name": "Drone",
+                    "frame": 4946,
+                    "clock_position": null,
+                    "time": "3:40",
+                    "killer": null
+                },
+                {
+                    "name": "Zergling",
+                    "frame": 4951,
+                    "clock_position": null,
+                    "time": "3:41",
+                    "killer": 1
+                },
+                {
+                    "name": "Zergling",
+                    "frame": 5052,
+                    "clock_position": null,
+                    "time": "3:45",
+                    "killer": 1
+                },
+                {
+                    "name": "Zergling",
+                    "frame": 5096,
+                    "clock_position": null,
+                    "time": "3:47",
+                    "killer": 1
+                },
+                {
+                    "name": "Zergling",
+                    "frame": 5139,
+                    "clock_position": null,
+                    "time": "3:49",
+                    "killer": 1
+                },
+                {
+                    "name": "Zergling",
+                    "frame": 5168,
+                    "clock_position": null,
+                    "time": "3:50",
+                    "killer": 1
+                },
+                {
+                    "name": "Zergling",
+                    "frame": 5184,
+                    "clock_position": null,
+                    "time": "3:51",
+                    "killer": 1
+                },
+                {
+                    "name": "Zergling",
+                    "frame": 5188,
+                    "clock_position": null,
+                    "time": "3:51",
+                    "killer": 1
+                },
+                {
+                    "name": "Zergling",
+                    "frame": 5205,
+                    "clock_position": null,
+                    "time": "3:52",
+                    "killer": 1
+                },
+                {
+                    "name": "Drone",
+                    "frame": 5731,
+                    "clock_position": null,
+                    "time": "4:15",
+                    "killer": null
+                },
+                {
+                    "name": "Drone",
+                    "frame": 7423,
+                    "clock_position": null,
+                    "time": "5:31",
+                    "killer": null
+                },
+                {
+                    "name": "Zergling",
+                    "frame": 8750,
+                    "clock_position": null,
+                    "time": "6:30",
+                    "killer": 1
+                },
+                {
+                    "name": "Zergling",
+                    "frame": 8753,
+                    "clock_position": null,
+                    "time": "6:30",
+                    "killer": 1
+                },
+                {
+                    "name": "Zergling",
+                    "frame": 8762,
+                    "clock_position": null,
+                    "time": "6:31",
+                    "killer": 1
+                },
+                {
+                    "name": "Zergling",
+                    "frame": 8762,
+                    "clock_position": null,
+                    "time": "6:31",
+                    "killer": 1
+                },
+                {
+                    "name": "Zergling",
+                    "frame": 8778,
+                    "clock_position": null,
+                    "time": "6:31",
+                    "killer": 1
+                },
+                {
+                    "name": "Zergling",
+                    "frame": 8778,
+                    "clock_position": null,
+                    "time": "6:31",
+                    "killer": 1
+                },
+                {
+                    "name": "Zergling",
+                    "frame": 8779,
+                    "clock_position": null,
+                    "time": "6:31",
+                    "killer": 1
+                },
+                {
+                    "name": "Zergling",
+                    "frame": 8782,
+                    "clock_position": null,
+                    "time": "6:32",
+                    "killer": 1
+                },
+                {
+                    "name": "Zergling",
+                    "frame": 8787,
+                    "clock_position": null,
+                    "time": "6:32",
+                    "killer": 1
+                },
+                {
+                    "name": "Zergling",
+                    "frame": 8787,
+                    "clock_position": null,
+                    "time": "6:32",
+                    "killer": 1
+                },
+                {
+                    "name": "Zergling",
+                    "frame": 8788,
+                    "clock_position": null,
+                    "time": "6:32",
+                    "killer": 1
+                },
+                {
+                    "name": "Zergling",
+                    "frame": 8790,
+                    "clock_position": null,
+                    "time": "6:32",
+                    "killer": 1
+                },
+                {
+                    "name": "Zergling",
+                    "frame": 8790,
+                    "clock_position": null,
+                    "time": "6:32",
+                    "killer": 1
+                },
+                {
+                    "name": "Zergling",
+                    "frame": 8791,
+                    "clock_position": null,
+                    "time": "6:32",
+                    "killer": 1
+                },
+                {
+                    "name": "Drone",
+                    "frame": 8838,
+                    "clock_position": null,
+                    "time": "6:34",
+                    "killer": 1
+                },
+                {
+                    "name": "Zergling",
+                    "frame": 8845,
+                    "clock_position": null,
+                    "time": "6:34",
+                    "killer": 1
+                },
+                {
+                    "name": "Drone",
+                    "frame": 8847,
+                    "clock_position": null,
+                    "time": "6:34",
+                    "killer": 1
+                },
+                {
+                    "name": "Zergling",
+                    "frame": 8848,
+                    "clock_position": null,
+                    "time": "6:35",
+                    "killer": 1
+                },
+                {
+                    "name": "Zergling",
+                    "frame": 8854,
+                    "clock_position": null,
+                    "time": "6:35",
+                    "killer": 1
+                },
+                {
+                    "name": "Zergling",
+                    "frame": 8857,
+                    "clock_position": null,
+                    "time": "6:35",
+                    "killer": 1
+                },
+                {
+                    "name": "Drone",
+                    "frame": 8864,
+                    "clock_position": null,
+                    "time": "6:35",
+                    "killer": 1
+                },
+                {
+                    "name": "Drone",
+                    "frame": 8871,
+                    "clock_position": null,
+                    "time": "6:36",
+                    "killer": 1
+                },
+                {
+                    "name": "Drone",
+                    "frame": 8894,
+                    "clock_position": null,
+                    "time": "6:37",
+                    "killer": 1
+                },
+                {
+                    "name": "Drone",
+                    "frame": 8894,
+                    "clock_position": null,
+                    "time": "6:37",
+                    "killer": 1
+                },
+                {
+                    "name": "Drone",
+                    "frame": 8897,
+                    "clock_position": null,
+                    "time": "6:37",
+                    "killer": 1
+                },
+                {
+                    "name": "Drone",
+                    "frame": 8908,
+                    "clock_position": null,
+                    "time": "6:37",
+                    "killer": 1
+                },
+                {
+                    "name": "Drone",
+                    "frame": 8925,
+                    "clock_position": null,
+                    "time": "6:38",
+                    "killer": 1
+                },
+                {
+                    "name": "Drone",
+                    "frame": 8925,
+                    "clock_position": null,
+                    "time": "6:38",
+                    "killer": 1
+                },
+                {
+                    "name": "Drone",
+                    "frame": 8927,
+                    "clock_position": null,
+                    "time": "6:38",
+                    "killer": 1
+                },
+                {
+                    "name": "Drone",
+                    "frame": 8927,
+                    "clock_position": null,
+                    "time": "6:38",
+                    "killer": 1
+                },
+                {
+                    "name": "Drone",
+                    "frame": 8927,
+                    "clock_position": null,
+                    "time": "6:38",
+                    "killer": 1
+                },
+                {
+                    "name": "Queen",
+                    "frame": 8929,
+                    "clock_position": null,
+                    "time": "6:38",
+                    "killer": 1
+                },
+                {
+                    "name": "Drone",
+                    "frame": 9048,
+                    "clock_position": null,
+                    "time": "6:43",
+                    "killer": 1
+                },
+                {
+                    "name": "Drone",
+                    "frame": 9058,
+                    "clock_position": null,
+                    "time": "6:44",
+                    "killer": 1
+                },
+                {
+                    "name": "Drone",
+                    "frame": 9076,
+                    "clock_position": null,
+                    "time": "6:45",
+                    "killer": 1
+                },
+                {
+                    "name": "Drone",
+                    "frame": 9087,
+                    "clock_position": null,
+                    "time": "6:45",
+                    "killer": 1
+                },
+                {
+                    "name": "Drone",
+                    "frame": 9104,
+                    "clock_position": null,
+                    "time": "6:46",
+                    "killer": 1
+                },
+                {
+                    "name": "Queen",
+                    "frame": 9117,
+                    "clock_position": null,
+                    "time": "6:47",
+                    "killer": 1
+                },
+                {
+                    "name": "Drone",
+                    "frame": 9135,
+                    "clock_position": null,
+                    "time": "6:47",
+                    "killer": 1
+                },
+                {
+                    "name": "Drone",
+                    "frame": 9137,
+                    "clock_position": null,
+                    "time": "6:47",
+                    "killer": 1
+                },
+                {
+                    "name": "Drone",
+                    "frame": 9140,
+                    "clock_position": null,
+                    "time": "6:48",
+                    "killer": 1
+                },
+                {
+                    "name": "Drone",
+                    "frame": 9144,
+                    "clock_position": null,
+                    "time": "6:48",
+                    "killer": 1
+                },
+                {
+                    "name": "Drone",
+                    "frame": 9146,
+                    "clock_position": null,
+                    "time": "6:48",
+                    "killer": 1
+                },
+                {
+                    "name": "Drone",
+                    "frame": 9147,
+                    "clock_position": null,
+                    "time": "6:48",
+                    "killer": 1
+                },
+                {
+                    "name": "Drone",
+                    "frame": 9151,
+                    "clock_position": null,
+                    "time": "6:48",
+                    "killer": 1
+                },
+                {
+                    "name": "Drone",
+                    "frame": 9166,
+                    "clock_position": null,
+                    "time": "6:49",
+                    "killer": 1
+                },
+                {
+                    "name": "Drone",
+                    "frame": 9174,
+                    "clock_position": null,
+                    "time": "6:49",
+                    "killer": 1
+                },
+                {
+                    "name": "Drone",
+                    "frame": 9177,
+                    "clock_position": null,
+                    "time": "6:49",
+                    "killer": 1
+                },
+                {
+                    "name": "Drone",
+                    "frame": 9178,
+                    "clock_position": null,
+                    "time": "6:49",
+                    "killer": 1
+                },
+                {
+                    "name": "Drone",
+                    "frame": 9182,
+                    "clock_position": null,
+                    "time": "6:49",
+                    "killer": 1
+                },
+                {
+                    "name": "Drone",
+                    "frame": 9183,
+                    "clock_position": null,
+                    "time": "6:49",
+                    "killer": 1
+                },
+                {
+                    "name": "Drone",
+                    "frame": 9188,
+                    "clock_position": null,
+                    "time": "6:50",
+                    "killer": 1
+                },
+                {
+                    "name": "Drone",
+                    "frame": 9191,
+                    "clock_position": null,
+                    "time": "6:50",
+                    "killer": 1
+                },
+                {
+                    "name": "Drone",
+                    "frame": 9197,
+                    "clock_position": null,
+                    "time": "6:50",
+                    "killer": 1
+                },
+                {
+                    "name": "Drone",
+                    "frame": 9204,
+                    "clock_position": null,
+                    "time": "6:50",
+                    "killer": 1
+                },
+                {
+                    "name": "Spire",
+                    "frame": 9366,
+                    "clock_position": null,
+                    "time": "6:58",
+                    "killer": 1
+                },
+                {
+                    "name": "BanelingNest",
+                    "frame": 9469,
+                    "clock_position": null,
+                    "time": "7:02",
+                    "killer": 1
+                },
+                {
+                    "name": "Extractor",
+                    "frame": 9528,
+                    "clock_position": null,
+                    "time": "7:05",
+                    "killer": 1
+                },
+                {
+                    "name": "Lair",
+                    "frame": 9574,
+                    "clock_position": null,
+                    "time": "7:07",
+                    "killer": 1
+                },
+                {
+                    "name": "Extractor",
+                    "frame": 9694,
+                    "clock_position": null,
+                    "time": "7:12",
+                    "killer": 1
+                },
+                {
+                    "name": "SpawningPool",
+                    "frame": 9925,
+                    "clock_position": null,
+                    "time": "7:23",
+                    "killer": 1
+                },
+                {
+                    "name": "Hatchery",
+                    "frame": 9947,
+                    "clock_position": null,
+                    "time": "7:24",
+                    "killer": 1
+                }
+            ],
+            "color": "0042FF",
+            "abilities": [
+                {
+                    "name": "SpawnLarva",
+                    "frame": 3171,
+                    "time": "2:21"
+                },
+                {
+                    "name": "SpawnLarva",
+                    "frame": 3872,
+                    "time": "2:52"
+                },
+                {
+                    "name": "SpawnLarva",
+                    "frame": 4565,
+                    "time": "3:23"
+                },
+                {
+                    "name": "SpawnLarva",
+                    "frame": 5294,
+                    "time": "3:56"
+                },
+                {
+                    "name": "SpawnLarva",
+                    "frame": 6071,
+                    "time": "4:31"
+                },
+                {
+                    "name": "SpawnLarva",
+                    "frame": 6409,
+                    "time": "4:46"
+                },
+                {
+                    "name": "SpawnLarva",
+                    "frame": 6949,
+                    "time": "5:10"
+                },
+                {
+                    "name": "SpawnLarva",
+                    "frame": 7123,
+                    "time": "5:17"
+                },
+                {
+                    "name": "SpawnLarva",
+                    "frame": 7421,
+                    "time": "5:31"
+                },
+                {
+                    "name": "SpawnLarva",
+                    "frame": 8101,
+                    "time": "6:01"
+                }
+            ],
+            "result": "Loss",
+            "is_winner": false,
+            "region": "eu",
+            "level": 4294967295,
+            "pick_race": "Zerg",
+            "supply": [
+                [
+                    0,
+                    12
+                ],
+                [
+                    1,
+                    12
+                ],
+                [
+                    160,
+                    11
+                ],
+                [
+                    320,
+                    12
+                ],
+                [
+                    480,
+                    13
+                ],
+                [
+                    640,
+                    14
+                ],
+                [
+                    800,
+                    14
+                ],
+                [
+                    960,
+                    14
+                ],
+                [
+                    1120,
+                    13
+                ],
+                [
+                    1280,
+                    14
+                ],
+                [
+                    1440,
+                    14
+                ],
+                [
+                    1600,
+                    14
+                ],
+                [
+                    1760,
+                    15
+                ],
+                [
+                    1920,
+                    17
+                ],
+                [
+                    2080,
+                    17
+                ],
+                [
+                    2240,
+                    18
+                ],
+                [
+                    2400,
+                    20
+                ],
+                [
+                    2560,
+                    20
+                ],
+                [
+                    2720,
+                    22
+                ],
+                [
+                    2880,
+                    22
+                ],
+                [
+                    3040,
+                    22
+                ],
+                [
+                    3200,
+                    22
+                ],
+                [
+                    3360,
+                    21
+                ],
+                [
+                    3520,
+                    23
+                ],
+                [
+                    3680,
+                    24
+                ],
+                [
+                    3840,
+                    24
+                ],
+                [
+                    4000,
+                    28
+                ],
+                [
+                    4160,
+                    28
+                ],
+                [
+                    4320,
+                    29
+                ],
+                [
+                    4480,
+                    30
+                ],
+                [
+                    4640,
+                    30
+                ],
+                [
+                    4800,
+                    29
+                ],
+                [
+                    4960,
+                    28
+                ],
+                [
+                    5120,
+                    27
+                ],
+                [
+                    5280,
+                    25
+                ],
+                [
+                    5440,
+                    31
+                ],
+                [
+                    5600,
+                    36
+                ],
+                [
+                    5760,
+                    36
+                ],
+                [
+                    5920,
+                    35
+                ],
+                [
+                    6080,
+                    36
+                ],
+                [
+                    6240,
+                    41
+                ],
+                [
+                    6400,
+                    43
+                ],
+                [
+                    6560,
+                    43
+                ],
+                [
+                    6720,
+                    43
+                ],
+                [
+                    6880,
+                    44
+                ],
+                [
+                    7040,
+                    44
+                ],
+                [
+                    7200,
+                    44
+                ],
+                [
+                    7360,
+                    48
+                ],
+                [
+                    7520,
+                    54
+                ],
+                [
+                    7680,
+                    54
+                ],
+                [
+                    7840,
+                    58
+                ],
+                [
+                    8000,
+                    66
+                ],
+                [
+                    8160,
+                    66
+                ],
+                [
+                    8320,
+                    68
+                ],
+                [
+                    8480,
+                    68
+                ],
+                [
+                    8640,
+                    68
+                ],
+                [
+                    8800,
+                    61
+                ],
+                [
+                    8960,
+                    44
+                ],
+                [
+                    9120,
+                    37
+                ],
+                [
+                    9280,
+                    20
+                ],
+                [
+                    9440,
+                    20
+                ],
+                [
+                    9600,
+                    20
+                ],
+                [
+                    9760,
+                    20
+                ],
+                [
+                    9920,
+                    20
+                ],
+                [
+                    9947,
+                    20
+                ]
+            ],
+            "name": "BEHALKHOR",
+            "commander": "",
+            "buildOrder": [
+                {
+                    "name": "Extractor",
+                    "is_worker": false,
+                    "frame": 155,
+                    "clock_position": null,
+                    "time": "0:06",
+                    "is_chronoboosted": false,
+                    "supply": 12
+                },
+                {
+                    "name": "Extractor",
+                    "is_worker": false,
+                    "frame": 187,
+                    "clock_position": null,
+                    "time": "0:08",
+                    "is_chronoboosted": false,
+                    "supply": 11
+                },
+                {
+                    "name": "Drone",
+                    "is_worker": true,
+                    "frame": 188.20000000000005,
+                    "clock_position": null,
+                    "time": "0:08",
+                    "is_chronoboosted": false,
+                    "supply": 11
+                },
+                {
+                    "name": "Drone",
+                    "is_worker": true,
+                    "frame": 322.20000000000005,
+                    "clock_position": null,
+                    "time": "0:14",
+                    "is_chronoboosted": false,
+                    "supply": 12
+                },
+                {
+                    "name": "Drone",
+                    "is_worker": true,
+                    "frame": 479.20000000000005,
+                    "clock_position": null,
+                    "time": "0:21",
+                    "is_chronoboosted": false,
+                    "supply": 12
+                },
+                {
+                    "name": "Drone",
+                    "is_worker": true,
+                    "frame": 581.2,
+                    "clock_position": null,
+                    "time": "0:25",
+                    "is_chronoboosted": false,
+                    "supply": 13
+                },
+                {
+                    "name": "SpawningPool",
+                    "is_worker": false,
+                    "frame": 1070,
+                    "clock_position": null,
+                    "time": "0:47",
+                    "is_chronoboosted": false,
+                    "supply": 14
+                },
+                {
+                    "name": "Drone",
+                    "is_worker": true,
+                    "frame": 1130.2,
+                    "clock_position": null,
+                    "time": "0:50",
+                    "is_chronoboosted": false,
+                    "supply": 13
+                },
+                {
+                    "name": "Overlord",
+                    "is_worker": false,
+                    "frame": 1331.8,
+                    "clock_position": null,
+                    "time": "0:59",
+                    "is_chronoboosted": false,
+                    "supply": 14
+                },
+                {
+                    "name": "Drone",
+                    "is_worker": true,
+                    "frame": 1762.2,
+                    "clock_position": null,
+                    "time": "1:18",
+                    "is_chronoboosted": false,
+                    "supply": 15
+                },
+                {
+                    "name": "Drone",
+                    "is_worker": true,
+                    "frame": 1770.2,
+                    "clock_position": null,
+                    "time": "1:19",
+                    "is_chronoboosted": false,
+                    "supply": 15
+                },
+                {
+                    "name": "Drone",
+                    "is_worker": true,
+                    "frame": 1776.2,
+                    "clock_position": null,
+                    "time": "1:19",
+                    "is_chronoboosted": false,
+                    "supply": 15
+                },
+                {
+                    "name": "Drone",
+                    "is_worker": true,
+                    "frame": 2113.2,
+                    "clock_position": null,
+                    "time": "1:34",
+                    "is_chronoboosted": false,
+                    "supply": 17
+                },
+                {
+                    "name": "Queen",
+                    "is_worker": false,
+                    "frame": 2244.6,
+                    "clock_position": null,
+                    "time": "1:40",
+                    "is_chronoboosted": false,
+                    "supply": 18
+                },
+                {
+                    "name": "zerglingmovementspeed",
+                    "is_worker": false,
+                    "frame": 2293.4,
+                    "clock_position": null,
+                    "time": "1:42",
+                    "is_chronoboosted": false,
+                    "supply": 18
+                },
+                {
+                    "name": "Drone",
+                    "is_worker": true,
+                    "frame": 2665.2,
+                    "clock_position": null,
+                    "time": "1:58",
+                    "is_chronoboosted": false,
+                    "supply": 20
+                },
+                {
+                    "name": "Drone",
+                    "is_worker": true,
+                    "frame": 2671.2,
+                    "clock_position": null,
+                    "time": "1:59",
+                    "is_chronoboosted": false,
+                    "supply": 20
+                },
+                {
+                    "name": "Overlord",
+                    "is_worker": false,
+                    "frame": 2766.8,
+                    "clock_position": null,
+                    "time": "2:03",
+                    "is_chronoboosted": false,
+                    "supply": 22
+                },
+                {
+                    "name": "Hatchery",
+                    "is_worker": false,
+                    "frame": 3345,
+                    "clock_position": null,
+                    "time": "2:29",
+                    "is_chronoboosted": false,
+                    "supply": 22
+                },
+                {
+                    "name": "Drone",
+                    "is_worker": true,
+                    "frame": 3414.2,
+                    "clock_position": null,
+                    "time": "2:32",
+                    "is_chronoboosted": false,
+                    "supply": 21
+                },
+                {
+                    "name": "Drone",
+                    "is_worker": true,
+                    "frame": 3492.2,
+                    "clock_position": null,
+                    "time": "2:35",
+                    "is_chronoboosted": false,
+                    "supply": 21
+                },
+                {
+                    "name": "Drone",
+                    "is_worker": true,
+                    "frame": 3618.2,
+                    "clock_position": null,
+                    "time": "2:41",
+                    "is_chronoboosted": false,
+                    "supply": 23
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 3951.2,
+                    "clock_position": null,
+                    "time": "2:56",
+                    "is_chronoboosted": false,
+                    "supply": 24
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 3951.2,
+                    "clock_position": null,
+                    "time": "2:56",
+                    "is_chronoboosted": false,
+                    "supply": 24
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 3955.2,
+                    "clock_position": null,
+                    "time": "2:56",
+                    "is_chronoboosted": false,
+                    "supply": 24
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 3955.2,
+                    "clock_position": null,
+                    "time": "2:56",
+                    "is_chronoboosted": false,
+                    "supply": 24
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 3958.2,
+                    "clock_position": null,
+                    "time": "2:56",
+                    "is_chronoboosted": false,
+                    "supply": 24
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 3958.2,
+                    "clock_position": null,
+                    "time": "2:56",
+                    "is_chronoboosted": false,
+                    "supply": 24
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 3962.2,
+                    "clock_position": null,
+                    "time": "2:56",
+                    "is_chronoboosted": false,
+                    "supply": 24
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 3962.2,
+                    "clock_position": null,
+                    "time": "2:56",
+                    "is_chronoboosted": false,
+                    "supply": 24
+                },
+                {
+                    "name": "Drone",
+                    "is_worker": true,
+                    "frame": 4249.2,
+                    "clock_position": null,
+                    "time": "3:09",
+                    "is_chronoboosted": false,
+                    "supply": 28
+                },
+                {
+                    "name": "Drone",
+                    "is_worker": true,
+                    "frame": 4334.2,
+                    "clock_position": null,
+                    "time": "3:13",
+                    "is_chronoboosted": false,
+                    "supply": 29
+                },
+                {
+                    "name": "Lair",
+                    "is_worker": false,
+                    "frame": 4380.2,
+                    "clock_position": null,
+                    "time": "3:15",
+                    "is_chronoboosted": false,
+                    "supply": 29
+                },
+                {
+                    "name": "Overlord",
+                    "is_worker": false,
+                    "frame": 4648.8,
+                    "clock_position": null,
+                    "time": "3:27",
+                    "is_chronoboosted": false,
+                    "supply": 30
+                },
+                {
+                    "name": "BanelingNest",
+                    "is_worker": false,
+                    "frame": 4771,
+                    "clock_position": null,
+                    "time": "3:32",
+                    "is_chronoboosted": false,
+                    "supply": 30
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 5360.2,
+                    "clock_position": null,
+                    "time": "3:59",
+                    "is_chronoboosted": false,
+                    "supply": 25
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 5360.2,
+                    "clock_position": null,
+                    "time": "3:59",
+                    "is_chronoboosted": false,
+                    "supply": 25
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 5364.2,
+                    "clock_position": null,
+                    "time": "3:59",
+                    "is_chronoboosted": false,
+                    "supply": 25
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 5364.2,
+                    "clock_position": null,
+                    "time": "3:59",
+                    "is_chronoboosted": false,
+                    "supply": 25
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 5369.2,
+                    "clock_position": null,
+                    "time": "3:59",
+                    "is_chronoboosted": false,
+                    "supply": 25
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 5369.2,
+                    "clock_position": null,
+                    "time": "3:59",
+                    "is_chronoboosted": false,
+                    "supply": 25
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 5372.2,
+                    "clock_position": null,
+                    "time": "3:59",
+                    "is_chronoboosted": false,
+                    "supply": 25
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 5372.2,
+                    "clock_position": null,
+                    "time": "3:59",
+                    "is_chronoboosted": false,
+                    "supply": 25
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 5376.2,
+                    "clock_position": null,
+                    "time": "4:00",
+                    "is_chronoboosted": false,
+                    "supply": 25
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 5376.2,
+                    "clock_position": null,
+                    "time": "4:00",
+                    "is_chronoboosted": false,
+                    "supply": 25
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 5379.2,
+                    "clock_position": null,
+                    "time": "4:00",
+                    "is_chronoboosted": false,
+                    "supply": 25
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 5379.2,
+                    "clock_position": null,
+                    "time": "4:00",
+                    "is_chronoboosted": false,
+                    "supply": 25
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 5491.2,
+                    "clock_position": null,
+                    "time": "4:05",
+                    "is_chronoboosted": false,
+                    "supply": 31
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 5491.2,
+                    "clock_position": null,
+                    "time": "4:05",
+                    "is_chronoboosted": false,
+                    "supply": 31
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 5494.2,
+                    "clock_position": null,
+                    "time": "4:05",
+                    "is_chronoboosted": false,
+                    "supply": 31
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 5494.2,
+                    "clock_position": null,
+                    "time": "4:05",
+                    "is_chronoboosted": false,
+                    "supply": 31
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 5498.2,
+                    "clock_position": null,
+                    "time": "4:05",
+                    "is_chronoboosted": false,
+                    "supply": 31
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 5498.2,
+                    "clock_position": null,
+                    "time": "4:05",
+                    "is_chronoboosted": false,
+                    "supply": 31
+                },
+                {
+                    "name": "Queen",
+                    "is_worker": false,
+                    "frame": 5532.6,
+                    "clock_position": null,
+                    "time": "4:06",
+                    "is_chronoboosted": false,
+                    "supply": 31
+                },
+                {
+                    "name": "Spire",
+                    "is_worker": false,
+                    "frame": 5823,
+                    "clock_position": null,
+                    "time": "4:19",
+                    "is_chronoboosted": false,
+                    "supply": 36
+                },
+                {
+                    "name": "Drone",
+                    "is_worker": true,
+                    "frame": 5976.2,
+                    "clock_position": null,
+                    "time": "4:26",
+                    "is_chronoboosted": false,
+                    "supply": 35
+                },
+                {
+                    "name": "Drone",
+                    "is_worker": true,
+                    "frame": 6159.2,
+                    "clock_position": null,
+                    "time": "4:34",
+                    "is_chronoboosted": false,
+                    "supply": 36
+                },
+                {
+                    "name": "Drone",
+                    "is_worker": true,
+                    "frame": 6165.2,
+                    "clock_position": null,
+                    "time": "4:35",
+                    "is_chronoboosted": false,
+                    "supply": 36
+                },
+                {
+                    "name": "Drone",
+                    "is_worker": true,
+                    "frame": 6171.2,
+                    "clock_position": null,
+                    "time": "4:35",
+                    "is_chronoboosted": false,
+                    "supply": 36
+                },
+                {
+                    "name": "Drone",
+                    "is_worker": true,
+                    "frame": 6173.2,
+                    "clock_position": null,
+                    "time": "4:35",
+                    "is_chronoboosted": false,
+                    "supply": 36
+                },
+                {
+                    "name": "Drone",
+                    "is_worker": true,
+                    "frame": 6219.2,
+                    "clock_position": null,
+                    "time": "4:37",
+                    "is_chronoboosted": false,
+                    "supply": 36
+                },
+                {
+                    "name": "Drone",
+                    "is_worker": true,
+                    "frame": 6290.2,
+                    "clock_position": null,
+                    "time": "4:40",
+                    "is_chronoboosted": false,
+                    "supply": 41
+                },
+                {
+                    "name": "Drone",
+                    "is_worker": true,
+                    "frame": 6368.2,
+                    "clock_position": null,
+                    "time": "4:44",
+                    "is_chronoboosted": false,
+                    "supply": 41
+                },
+                {
+                    "name": "Drone",
+                    "is_worker": true,
+                    "frame": 6746.2,
+                    "clock_position": null,
+                    "time": "5:01",
+                    "is_chronoboosted": false,
+                    "supply": 43
+                },
+                {
+                    "name": "Overlord",
+                    "is_worker": false,
+                    "frame": 6774.8,
+                    "clock_position": null,
+                    "time": "5:02",
+                    "is_chronoboosted": false,
+                    "supply": 43
+                },
+                {
+                    "name": "Overlord",
+                    "is_worker": false,
+                    "frame": 6889.8,
+                    "clock_position": null,
+                    "time": "5:07",
+                    "is_chronoboosted": false,
+                    "supply": 44
+                },
+                {
+                    "name": "Overlord",
+                    "is_worker": false,
+                    "frame": 6996.8,
+                    "clock_position": null,
+                    "time": "5:12",
+                    "is_chronoboosted": false,
+                    "supply": 44
+                },
+                {
+                    "name": "Drone",
+                    "is_worker": true,
+                    "frame": 7218.2,
+                    "clock_position": null,
+                    "time": "5:22",
+                    "is_chronoboosted": false,
+                    "supply": 44
+                },
+                {
+                    "name": "Drone",
+                    "is_worker": true,
+                    "frame": 7226.2,
+                    "clock_position": null,
+                    "time": "5:22",
+                    "is_chronoboosted": false,
+                    "supply": 44
+                },
+                {
+                    "name": "Drone",
+                    "is_worker": true,
+                    "frame": 7230.2,
+                    "clock_position": null,
+                    "time": "5:22",
+                    "is_chronoboosted": false,
+                    "supply": 44
+                },
+                {
+                    "name": "Drone",
+                    "is_worker": true,
+                    "frame": 7234.2,
+                    "clock_position": null,
+                    "time": "5:22",
+                    "is_chronoboosted": false,
+                    "supply": 44
+                },
+                {
+                    "name": "Mutalisk",
+                    "is_worker": false,
+                    "frame": 7492.4,
+                    "clock_position": null,
+                    "time": "5:34",
+                    "is_chronoboosted": false,
+                    "supply": 48
+                },
+                {
+                    "name": "Mutalisk",
+                    "is_worker": false,
+                    "frame": 7496.4,
+                    "clock_position": null,
+                    "time": "5:34",
+                    "is_chronoboosted": false,
+                    "supply": 48
+                },
+                {
+                    "name": "Mutalisk",
+                    "is_worker": false,
+                    "frame": 7499.4,
+                    "clock_position": null,
+                    "time": "5:34",
+                    "is_chronoboosted": false,
+                    "supply": 48
+                },
+                {
+                    "name": "Mutalisk",
+                    "is_worker": false,
+                    "frame": 7696.4,
+                    "clock_position": null,
+                    "time": "5:43",
+                    "is_chronoboosted": false,
+                    "supply": 54
+                },
+                {
+                    "name": "Mutalisk",
+                    "is_worker": false,
+                    "frame": 7699.4,
+                    "clock_position": null,
+                    "time": "5:43",
+                    "is_chronoboosted": false,
+                    "supply": 54
+                },
+                {
+                    "name": "Mutalisk",
+                    "is_worker": false,
+                    "frame": 7935.4,
+                    "clock_position": null,
+                    "time": "5:54",
+                    "is_chronoboosted": false,
+                    "supply": 58
+                },
+                {
+                    "name": "Mutalisk",
+                    "is_worker": false,
+                    "frame": 7938.4,
+                    "clock_position": null,
+                    "time": "5:54",
+                    "is_chronoboosted": false,
+                    "supply": 58
+                },
+                {
+                    "name": "Mutalisk",
+                    "is_worker": false,
+                    "frame": 7941.4,
+                    "clock_position": null,
+                    "time": "5:54",
+                    "is_chronoboosted": false,
+                    "supply": 58
+                },
+                {
+                    "name": "Mutalisk",
+                    "is_worker": false,
+                    "frame": 7945.4,
+                    "clock_position": null,
+                    "time": "5:54",
+                    "is_chronoboosted": false,
+                    "supply": 58
+                },
+                {
+                    "name": "Corruptor",
+                    "is_worker": false,
+                    "frame": 8151.4,
+                    "clock_position": null,
+                    "time": "6:03",
+                    "is_chronoboosted": false,
+                    "supply": 66
+                },
+                {
+                    "name": "Overlord",
+                    "is_worker": false,
+                    "frame": 8216.8,
+                    "clock_position": null,
+                    "time": "6:06",
+                    "is_chronoboosted": false,
+                    "supply": 66
+                },
+                {
+                    "name": "Overlord",
+                    "is_worker": false,
+                    "frame": 8218.8,
+                    "clock_position": null,
+                    "time": "6:06",
+                    "is_chronoboosted": false,
+                    "supply": 66
+                }
+            ],
+            "clock_position": null,
+            "uid": 2467417,
+            "race": "Zerg",
+            "team": 2,
+            "handicap": 100
+        }
+    },
+    "buildOrderExtracted": true,
+    "frames": 9991
+}

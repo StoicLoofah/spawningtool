@@ -33,6 +33,13 @@ class SpawningToolTestCase(unittest.TestCase):
             if results != expected_results:
                 self.assertFalse(path)
 
+    def _test_replay(self, filename, expected_results_filename):
+        results = spawningtool.parser.parse_replay("replays/{}".format(filename))
+        with open('tests/{}'.format(expected_results_filename), 'r') as expected_results_file:
+            expected_results = json.load(expected_results_file)
+
+        self.assertDictsEqual(results, expected_results)
+
 
 class ParseReplayTest(SpawningToolTestCase):
 
@@ -40,21 +47,15 @@ class ParseReplayTest(SpawningToolTestCase):
         """
         testing a valid replay
         """
-        results = spawningtool.parser.parse_replay("replays/LiquidTLO vs Thorzain.SC2Replay")
-        with open('tests/tlo_v_thorzain.json', 'r') as expected_results_file:
-            expected_results = json.load(expected_results_file)
-
-        self.assertDictsEqual(results, expected_results)
+        self._test_replay('LiquidTLO vs Thorzain.SC2Replay',
+                          'tlo_v_thorzain.json')
 
     def test_gameheart_replay(self):
         """
         testing a gameheart replay
         """
-        results = spawningtool.parser.parse_replay("replays/gameheart.SC2Replay")
-        with open('tests/gameheart.json', 'r') as expected_results_file:
-            expected_results = json.load(expected_results_file)
-
-        self.assertDictsEqual(results, expected_results)
+        self._test_replay('gameheart.SC2Replay',
+                          'gameheart.json')
 
     def test_old_replay(self):
         """
@@ -74,7 +75,22 @@ class ParseReplayTest(SpawningToolTestCase):
         """
         Test 3.8.0 patch
         """
-        spawningtool.parser.parse_replay("replays/patch_380_protoss.SC2Replay")
+        self._test_replay('patch_380_protoss.SC2Replay',
+                          'patch_380_protoss.json')
+
+    def test_patch_400(self):
+        """
+        Test 4.0.0 patch
+        """
+        self._test_replay('patch_400.SC2Replay',
+                          'patch_400.json')
+
+    def test_coop(self):
+        """
+        Test Kerrigan Co-op game
+        """
+        self._test_replay('kerrigan.SC2Replay',
+                          'kerrigan.json')
 
 
 if __name__ == '__main__':

@@ -1,0 +1,1397 @@
+{
+    "include_map_details": false,
+    "frames_per_second": 22.4,
+    "map": "Echo LE (Void)",
+    "message": "",
+    "region": "us",
+    "cooperative": false,
+    "category": "Private",
+    "build": 48258,
+    "map_hash": "af34c3e976feaba6d3e934ed9ae2a2fbd40e01e58513567c46231133b266a4e6",
+    "baseBuild": 48258,
+    "game_type": "1v1",
+    "unix_timestamp": 1480199100,
+    "expansion": "LotV",
+    "players": {
+        "1": {
+            "is_human": true,
+            "league": 0,
+            "unitsLost": [],
+            "color": "540081",
+            "abilities": [
+                {
+                    "name": "AdeptPhaseShift",
+                    "frame": 4037,
+                    "time": "3:00"
+                },
+                {
+                    "name": "MothershipCorePurifyNexus",
+                    "frame": 5046,
+                    "time": "3:45"
+                },
+                {
+                    "name": "OracleStasisTrap",
+                    "frame": 5731,
+                    "time": "4:15"
+                },
+                {
+                    "name": "TemporalField",
+                    "frame": 7655,
+                    "time": "5:41"
+                },
+                {
+                    "name": "MassRecallMothershipCore",
+                    "frame": 8404,
+                    "time": "6:15"
+                }
+            ],
+            "result": "Loss",
+            "is_winner": false,
+            "region": "us",
+            "level": 124,
+            "pick_race": "Protoss",
+            "supply": [
+                [
+                    0,
+                    12
+                ],
+                [
+                    1,
+                    12
+                ],
+                [
+                    160,
+                    12
+                ],
+                [
+                    320,
+                    13
+                ],
+                [
+                    480,
+                    14
+                ],
+                [
+                    640,
+                    14
+                ],
+                [
+                    800,
+                    15
+                ],
+                [
+                    960,
+                    15
+                ],
+                [
+                    1120,
+                    16
+                ],
+                [
+                    1280,
+                    17
+                ],
+                [
+                    1440,
+                    17
+                ],
+                [
+                    1600,
+                    18
+                ],
+                [
+                    1760,
+                    19
+                ],
+                [
+                    1920,
+                    19
+                ],
+                [
+                    2080,
+                    20
+                ],
+                [
+                    2240,
+                    21
+                ],
+                [
+                    2400,
+                    21
+                ],
+                [
+                    2560,
+                    22
+                ],
+                [
+                    2720,
+                    23
+                ],
+                [
+                    2880,
+                    23
+                ],
+                [
+                    3040,
+                    24
+                ],
+                [
+                    3200,
+                    27
+                ],
+                [
+                    3360,
+                    27
+                ],
+                [
+                    3520,
+                    29
+                ],
+                [
+                    3680,
+                    29
+                ],
+                [
+                    3840,
+                    29
+                ],
+                [
+                    4000,
+                    29
+                ],
+                [
+                    4160,
+                    29
+                ],
+                [
+                    4320,
+                    29
+                ],
+                [
+                    4480,
+                    30
+                ],
+                [
+                    4640,
+                    30
+                ],
+                [
+                    4800,
+                    33
+                ],
+                [
+                    4960,
+                    33
+                ],
+                [
+                    5120,
+                    34
+                ],
+                [
+                    5280,
+                    34
+                ],
+                [
+                    5440,
+                    34
+                ],
+                [
+                    5600,
+                    35
+                ],
+                [
+                    5760,
+                    35
+                ],
+                [
+                    5920,
+                    35
+                ],
+                [
+                    6080,
+                    39
+                ],
+                [
+                    6240,
+                    39
+                ],
+                [
+                    6400,
+                    39
+                ],
+                [
+                    6560,
+                    39
+                ],
+                [
+                    6720,
+                    39
+                ],
+                [
+                    6880,
+                    39
+                ],
+                [
+                    7040,
+                    39
+                ],
+                [
+                    7200,
+                    42
+                ],
+                [
+                    7360,
+                    42
+                ],
+                [
+                    7520,
+                    42
+                ],
+                [
+                    7680,
+                    42
+                ],
+                [
+                    7840,
+                    42
+                ],
+                [
+                    8000,
+                    48
+                ],
+                [
+                    8160,
+                    48
+                ],
+                [
+                    8320,
+                    49
+                ],
+                [
+                    8480,
+                    49
+                ],
+                [
+                    8640,
+                    49
+                ],
+                [
+                    8800,
+                    49
+                ],
+                [
+                    8960,
+                    49
+                ],
+                [
+                    9120,
+                    49
+                ],
+                [
+                    9280,
+                    49
+                ],
+                [
+                    9440,
+                    49
+                ],
+                [
+                    9600,
+                    49
+                ],
+                [
+                    9760,
+                    49
+                ],
+                [
+                    9920,
+                    49
+                ],
+                [
+                    10030,
+                    49
+                ],
+                [
+                    10030,
+                    49
+                ]
+            ],
+            "name": "StoicLoofah",
+            "commander": "",
+            "buildOrder": [
+                {
+                    "name": "Probe",
+                    "is_worker": true,
+                    "frame": 233.20000000000005,
+                    "clock_position": null,
+                    "time": "0:10",
+                    "is_chronoboosted": true,
+                    "supply": 12
+                },
+                {
+                    "name": "Probe",
+                    "is_worker": true,
+                    "frame": 469.20000000000005,
+                    "clock_position": null,
+                    "time": "0:20",
+                    "is_chronoboosted": true,
+                    "supply": 13
+                },
+                {
+                    "name": "Pylon",
+                    "is_worker": false,
+                    "frame": 609,
+                    "clock_position": null,
+                    "time": "0:27",
+                    "is_chronoboosted": false,
+                    "supply": 14
+                },
+                {
+                    "name": "Probe",
+                    "is_worker": true,
+                    "frame": 727.2,
+                    "clock_position": null,
+                    "time": "0:32",
+                    "is_chronoboosted": true,
+                    "supply": 14
+                },
+                {
+                    "name": "Assimilator",
+                    "is_worker": false,
+                    "frame": 814,
+                    "clock_position": null,
+                    "time": "0:36",
+                    "is_chronoboosted": false,
+                    "supply": 15
+                },
+                {
+                    "name": "Assimilator",
+                    "is_worker": false,
+                    "frame": 864,
+                    "clock_position": null,
+                    "time": "0:38",
+                    "is_chronoboosted": false,
+                    "supply": 15
+                },
+                {
+                    "name": "Probe",
+                    "is_worker": true,
+                    "frame": 1018.2,
+                    "clock_position": null,
+                    "time": "0:45",
+                    "is_chronoboosted": true,
+                    "supply": 15
+                },
+                {
+                    "name": "Gateway",
+                    "is_worker": false,
+                    "frame": 1151,
+                    "clock_position": null,
+                    "time": "0:51",
+                    "is_chronoboosted": false,
+                    "supply": 16
+                },
+                {
+                    "name": "Probe",
+                    "is_worker": true,
+                    "frame": 1254.2,
+                    "clock_position": null,
+                    "time": "0:55",
+                    "is_chronoboosted": true,
+                    "supply": 16
+                },
+                {
+                    "name": "Probe",
+                    "is_worker": true,
+                    "frame": 1490.2,
+                    "clock_position": null,
+                    "time": "1:06",
+                    "is_chronoboosted": true,
+                    "supply": 17
+                },
+                {
+                    "name": "Probe",
+                    "is_worker": true,
+                    "frame": 1726.2,
+                    "clock_position": null,
+                    "time": "1:17",
+                    "is_chronoboosted": true,
+                    "supply": 18
+                },
+                {
+                    "name": "Probe",
+                    "is_worker": true,
+                    "frame": 1962.2,
+                    "clock_position": null,
+                    "time": "1:27",
+                    "is_chronoboosted": true,
+                    "supply": 19
+                },
+                {
+                    "name": "Probe",
+                    "is_worker": true,
+                    "frame": 2198.2,
+                    "clock_position": null,
+                    "time": "1:38",
+                    "is_chronoboosted": true,
+                    "supply": 20
+                },
+                {
+                    "name": "CyberneticsCore",
+                    "is_worker": false,
+                    "frame": 2273,
+                    "clock_position": null,
+                    "time": "1:41",
+                    "is_chronoboosted": false,
+                    "supply": 21
+                },
+                {
+                    "name": "Probe",
+                    "is_worker": true,
+                    "frame": 2434.2,
+                    "clock_position": null,
+                    "time": "1:48",
+                    "is_chronoboosted": true,
+                    "supply": 21
+                },
+                {
+                    "name": "Pylon",
+                    "is_worker": false,
+                    "frame": 2514,
+                    "clock_position": null,
+                    "time": "1:52",
+                    "is_chronoboosted": false,
+                    "supply": 21
+                },
+                {
+                    "name": "Pylon",
+                    "is_worker": false,
+                    "frame": 2595,
+                    "clock_position": null,
+                    "time": "1:55",
+                    "is_chronoboosted": false,
+                    "supply": 22
+                },
+                {
+                    "name": "Probe",
+                    "is_worker": true,
+                    "frame": 2670.2,
+                    "clock_position": null,
+                    "time": "1:59",
+                    "is_chronoboosted": true,
+                    "supply": 22
+                },
+                {
+                    "name": "Probe",
+                    "is_worker": true,
+                    "frame": 2922.2,
+                    "clock_position": null,
+                    "time": "2:10",
+                    "is_chronoboosted": true,
+                    "supply": 23
+                },
+                {
+                    "name": "Adept",
+                    "is_worker": false,
+                    "frame": 3152.2,
+                    "clock_position": null,
+                    "time": "2:20",
+                    "is_chronoboosted": false,
+                    "supply": 24
+                },
+                {
+                    "name": "Probe",
+                    "is_worker": true,
+                    "frame": 3158.2,
+                    "clock_position": null,
+                    "time": "2:20",
+                    "is_chronoboosted": true,
+                    "supply": 24
+                },
+                {
+                    "name": "TwilightCouncil",
+                    "is_worker": false,
+                    "frame": 3221,
+                    "clock_position": null,
+                    "time": "2:23",
+                    "is_chronoboosted": false,
+                    "supply": 27
+                },
+                {
+                    "name": "Stargate",
+                    "is_worker": false,
+                    "frame": 3302,
+                    "clock_position": null,
+                    "time": "2:27",
+                    "is_chronoboosted": false,
+                    "supply": 27
+                },
+                {
+                    "name": "MothershipCore",
+                    "is_worker": false,
+                    "frame": 3460.6,
+                    "clock_position": null,
+                    "time": "2:34",
+                    "is_chronoboosted": true,
+                    "supply": 27
+                },
+                {
+                    "name": "Probe",
+                    "is_worker": true,
+                    "frame": 4435.2,
+                    "clock_position": null,
+                    "time": "3:18",
+                    "is_chronoboosted": true,
+                    "supply": 29
+                },
+                {
+                    "name": "DarkShrine",
+                    "is_worker": false,
+                    "frame": 4581,
+                    "clock_position": null,
+                    "time": "3:24",
+                    "is_chronoboosted": false,
+                    "supply": 30
+                },
+                {
+                    "name": "Oracle",
+                    "is_worker": false,
+                    "frame": 4703.2,
+                    "clock_position": null,
+                    "time": "3:29",
+                    "is_chronoboosted": false,
+                    "supply": 30
+                },
+                {
+                    "name": "RoboticsFacility",
+                    "is_worker": false,
+                    "frame": 4718,
+                    "clock_position": null,
+                    "time": "3:30",
+                    "is_chronoboosted": false,
+                    "supply": 30
+                },
+                {
+                    "name": "Probe",
+                    "is_worker": true,
+                    "frame": 5017.2,
+                    "clock_position": null,
+                    "time": "3:43",
+                    "is_chronoboosted": true,
+                    "supply": 33
+                },
+                {
+                    "name": "Probe",
+                    "is_worker": true,
+                    "frame": 5508.2,
+                    "clock_position": null,
+                    "time": "4:05",
+                    "is_chronoboosted": true,
+                    "supply": 34
+                },
+                {
+                    "name": "Immortal",
+                    "is_worker": false,
+                    "frame": 6001.4,
+                    "clock_position": null,
+                    "time": "4:27",
+                    "is_chronoboosted": false,
+                    "supply": 35
+                },
+                {
+                    "name": "Pylon",
+                    "is_worker": false,
+                    "frame": 6084,
+                    "clock_position": null,
+                    "time": "4:31",
+                    "is_chronoboosted": false,
+                    "supply": 39
+                },
+                {
+                    "name": "Pylon",
+                    "is_worker": false,
+                    "frame": 6108,
+                    "clock_position": null,
+                    "time": "4:32",
+                    "is_chronoboosted": false,
+                    "supply": 39
+                },
+                {
+                    "name": "Pylon",
+                    "is_worker": false,
+                    "frame": 6139,
+                    "clock_position": null,
+                    "time": "4:34",
+                    "is_chronoboosted": false,
+                    "supply": 39
+                },
+                {
+                    "name": "FleetBeacon",
+                    "is_worker": false,
+                    "frame": 6462,
+                    "clock_position": null,
+                    "time": "4:48",
+                    "is_chronoboosted": false,
+                    "supply": 39
+                },
+                {
+                    "name": "Shadow Stride",
+                    "is_worker": false,
+                    "frame": 6732.6,
+                    "clock_position": null,
+                    "time": "5:00",
+                    "is_chronoboosted": false,
+                    "supply": 39
+                },
+                {
+                    "name": "DarkTemplar",
+                    "is_worker": false,
+                    "frame": 7070.4,
+                    "clock_position": null,
+                    "time": "5:15",
+                    "is_chronoboosted": false,
+                    "supply": 39
+                },
+                {
+                    "name": "Probe",
+                    "is_worker": true,
+                    "frame": 7154.2,
+                    "clock_position": null,
+                    "time": "5:19",
+                    "is_chronoboosted": true,
+                    "supply": 39
+                },
+                {
+                    "name": "Tempest",
+                    "is_worker": false,
+                    "frame": 7960.8,
+                    "clock_position": null,
+                    "time": "5:55",
+                    "is_chronoboosted": false,
+                    "supply": 42
+                },
+                {
+                    "name": "Probe",
+                    "is_worker": true,
+                    "frame": 8192.2,
+                    "clock_position": null,
+                    "time": "6:05",
+                    "is_chronoboosted": true,
+                    "supply": 48
+                }
+            ],
+            "clock_position": null,
+            "uid": 992715,
+            "race": "Protoss",
+            "team": 1,
+            "handicap": 100
+        },
+        "2": {
+            "is_human": false,
+            "league": null,
+            "unitsLost": [
+                {
+                    "name": "Drone",
+                    "frame": 1315,
+                    "clock_position": null,
+                    "time": "0:58",
+                    "killer": null
+                },
+                {
+                    "name": "Drone",
+                    "frame": 1844,
+                    "clock_position": null,
+                    "time": "1:22",
+                    "killer": null
+                },
+                {
+                    "name": "Drone",
+                    "frame": 2611,
+                    "clock_position": null,
+                    "time": "1:56",
+                    "killer": null
+                },
+                {
+                    "name": "Drone",
+                    "frame": 2980,
+                    "clock_position": null,
+                    "time": "2:13",
+                    "killer": null
+                },
+                {
+                    "name": "Zergling",
+                    "frame": 9005,
+                    "clock_position": null,
+                    "time": "6:42",
+                    "killer": 1
+                },
+                {
+                    "name": "Zergling",
+                    "frame": 9052,
+                    "clock_position": null,
+                    "time": "6:44",
+                    "killer": 1
+                },
+                {
+                    "name": "Zergling",
+                    "frame": 9062,
+                    "clock_position": null,
+                    "time": "6:44",
+                    "killer": 1
+                },
+                {
+                    "name": "Zergling",
+                    "frame": 9099,
+                    "clock_position": null,
+                    "time": "6:46",
+                    "killer": 1
+                },
+                {
+                    "name": "Zergling",
+                    "frame": 9108,
+                    "clock_position": null,
+                    "time": "6:46",
+                    "killer": 1
+                },
+                {
+                    "name": "Drone",
+                    "frame": 9882,
+                    "clock_position": null,
+                    "time": "7:21",
+                    "killer": null
+                }
+            ],
+            "color": "0042FF",
+            "abilities": [],
+            "result": "Win",
+            "is_winner": true,
+            "region": "us",
+            "level": null,
+            "pick_race": "Zerg",
+            "supply": [
+                [
+                    0,
+                    12
+                ],
+                [
+                    1,
+                    12
+                ],
+                [
+                    160,
+                    13
+                ],
+                [
+                    320,
+                    13
+                ],
+                [
+                    480,
+                    14
+                ],
+                [
+                    640,
+                    14
+                ],
+                [
+                    800,
+                    14
+                ],
+                [
+                    960,
+                    13
+                ],
+                [
+                    1120,
+                    14
+                ],
+                [
+                    1280,
+                    14
+                ],
+                [
+                    1440,
+                    14
+                ],
+                [
+                    1600,
+                    14
+                ],
+                [
+                    1760,
+                    14
+                ],
+                [
+                    1920,
+                    17
+                ],
+                [
+                    2080,
+                    17
+                ],
+                [
+                    2240,
+                    16
+                ],
+                [
+                    2400,
+                    18
+                ],
+                [
+                    2560,
+                    18
+                ],
+                [
+                    2720,
+                    20
+                ],
+                [
+                    2880,
+                    20
+                ],
+                [
+                    3040,
+                    21
+                ],
+                [
+                    3200,
+                    22
+                ],
+                [
+                    3360,
+                    22
+                ],
+                [
+                    3520,
+                    23
+                ],
+                [
+                    3680,
+                    24
+                ],
+                [
+                    3840,
+                    25
+                ],
+                [
+                    4000,
+                    25
+                ],
+                [
+                    4160,
+                    25
+                ],
+                [
+                    4320,
+                    25
+                ],
+                [
+                    4480,
+                    25
+                ],
+                [
+                    4640,
+                    25
+                ],
+                [
+                    4800,
+                    25
+                ],
+                [
+                    4960,
+                    25
+                ],
+                [
+                    5120,
+                    25
+                ],
+                [
+                    5280,
+                    25
+                ],
+                [
+                    5440,
+                    25
+                ],
+                [
+                    5600,
+                    25
+                ],
+                [
+                    5760,
+                    25
+                ],
+                [
+                    5920,
+                    25
+                ],
+                [
+                    6080,
+                    25
+                ],
+                [
+                    6240,
+                    25
+                ],
+                [
+                    6400,
+                    25
+                ],
+                [
+                    6560,
+                    25
+                ],
+                [
+                    6720,
+                    25
+                ],
+                [
+                    6880,
+                    25
+                ],
+                [
+                    7040,
+                    25
+                ],
+                [
+                    7200,
+                    25
+                ],
+                [
+                    7360,
+                    25
+                ],
+                [
+                    7520,
+                    25
+                ],
+                [
+                    7680,
+                    25
+                ],
+                [
+                    7840,
+                    28
+                ],
+                [
+                    8000,
+                    29
+                ],
+                [
+                    8160,
+                    30
+                ],
+                [
+                    8320,
+                    30
+                ],
+                [
+                    8480,
+                    31
+                ],
+                [
+                    8640,
+                    32
+                ],
+                [
+                    8800,
+                    34
+                ],
+                [
+                    8960,
+                    34
+                ],
+                [
+                    9120,
+                    31
+                ],
+                [
+                    9280,
+                    31
+                ],
+                [
+                    9440,
+                    31
+                ],
+                [
+                    9600,
+                    31
+                ],
+                [
+                    9760,
+                    33
+                ],
+                [
+                    9920,
+                    34
+                ],
+                [
+                    10030,
+                    34
+                ]
+            ],
+            "name": "A.I. 1 (Very Easy)",
+            "commander": "",
+            "buildOrder": [
+                {
+                    "name": "Drone",
+                    "is_worker": true,
+                    "frame": 28.200000000000045,
+                    "clock_position": null,
+                    "time": "0:01",
+                    "is_chronoboosted": false,
+                    "supply": 12
+                },
+                {
+                    "name": "Overlord",
+                    "is_worker": false,
+                    "frame": 290.8,
+                    "clock_position": null,
+                    "time": "0:12",
+                    "is_chronoboosted": false,
+                    "supply": 13
+                },
+                {
+                    "name": "Drone",
+                    "is_worker": true,
+                    "frame": 379.20000000000005,
+                    "clock_position": null,
+                    "time": "0:16",
+                    "is_chronoboosted": false,
+                    "supply": 13
+                },
+                {
+                    "name": "SpawningPool",
+                    "is_worker": false,
+                    "frame": 804,
+                    "clock_position": null,
+                    "time": "0:35",
+                    "is_chronoboosted": false,
+                    "supply": 14
+                },
+                {
+                    "name": "Extractor",
+                    "is_worker": false,
+                    "frame": 835,
+                    "clock_position": null,
+                    "time": "0:37",
+                    "is_chronoboosted": false,
+                    "supply": 14
+                },
+                {
+                    "name": "Drone",
+                    "is_worker": true,
+                    "frame": 893.2,
+                    "clock_position": null,
+                    "time": "0:39",
+                    "is_chronoboosted": false,
+                    "supply": 14
+                },
+                {
+                    "name": "Drone",
+                    "is_worker": true,
+                    "frame": 1053.2,
+                    "clock_position": null,
+                    "time": "0:47",
+                    "is_chronoboosted": false,
+                    "supply": 13
+                },
+                {
+                    "name": "Overlord",
+                    "is_worker": false,
+                    "frame": 1168.8,
+                    "clock_position": null,
+                    "time": "0:52",
+                    "is_chronoboosted": false,
+                    "supply": 14
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 1873.2,
+                    "clock_position": null,
+                    "time": "1:23",
+                    "is_chronoboosted": false,
+                    "supply": 14
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 1873.2,
+                    "clock_position": null,
+                    "time": "1:23",
+                    "is_chronoboosted": false,
+                    "supply": 14
+                },
+                {
+                    "name": "Queen",
+                    "is_worker": false,
+                    "frame": 1882.6,
+                    "clock_position": null,
+                    "time": "1:24",
+                    "is_chronoboosted": false,
+                    "supply": 14
+                },
+                {
+                    "name": "RoachWarren",
+                    "is_worker": false,
+                    "frame": 2099,
+                    "clock_position": null,
+                    "time": "1:33",
+                    "is_chronoboosted": false,
+                    "supply": 17
+                },
+                {
+                    "name": "Extractor",
+                    "is_worker": false,
+                    "frame": 2130,
+                    "clock_position": null,
+                    "time": "1:35",
+                    "is_chronoboosted": false,
+                    "supply": 17
+                },
+                {
+                    "name": "Drone",
+                    "is_worker": true,
+                    "frame": 2220.2,
+                    "clock_position": null,
+                    "time": "1:39",
+                    "is_chronoboosted": false,
+                    "supply": 17
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 2289.2,
+                    "clock_position": null,
+                    "time": "1:42",
+                    "is_chronoboosted": false,
+                    "supply": 16
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 2289.2,
+                    "clock_position": null,
+                    "time": "1:42",
+                    "is_chronoboosted": false,
+                    "supply": 16
+                },
+                {
+                    "name": "Drone",
+                    "is_worker": true,
+                    "frame": 2380.2,
+                    "clock_position": null,
+                    "time": "1:46",
+                    "is_chronoboosted": false,
+                    "supply": 16
+                },
+                {
+                    "name": "Drone",
+                    "is_worker": true,
+                    "frame": 2700.2,
+                    "clock_position": null,
+                    "time": "2:00",
+                    "is_chronoboosted": false,
+                    "supply": 18
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 2706.2,
+                    "clock_position": null,
+                    "time": "2:00",
+                    "is_chronoboosted": false,
+                    "supply": 18
+                },
+                {
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 2706.2,
+                    "clock_position": null,
+                    "time": "2:00",
+                    "is_chronoboosted": false,
+                    "supply": 18
+                },
+                {
+                    "name": "Drone",
+                    "is_worker": true,
+                    "frame": 2940.2,
+                    "clock_position": null,
+                    "time": "2:11",
+                    "is_chronoboosted": false,
+                    "supply": 20
+                },
+                {
+                    "name": "Drone",
+                    "is_worker": true,
+                    "frame": 3180.2,
+                    "clock_position": null,
+                    "time": "2:21",
+                    "is_chronoboosted": false,
+                    "supply": 21
+                },
+                {
+                    "name": "Drone",
+                    "is_worker": true,
+                    "frame": 3389.2,
+                    "clock_position": null,
+                    "time": "2:31",
+                    "is_chronoboosted": false,
+                    "supply": 22
+                },
+                {
+                    "name": "Overlord",
+                    "is_worker": false,
+                    "frame": 3416.8,
+                    "clock_position": null,
+                    "time": "2:32",
+                    "is_chronoboosted": false,
+                    "supply": 22
+                },
+                {
+                    "name": "Drone",
+                    "is_worker": true,
+                    "frame": 3549.2,
+                    "clock_position": null,
+                    "time": "2:38",
+                    "is_chronoboosted": false,
+                    "supply": 23
+                },
+                {
+                    "name": "Drone",
+                    "is_worker": true,
+                    "frame": 3709.2,
+                    "clock_position": null,
+                    "time": "2:45",
+                    "is_chronoboosted": false,
+                    "supply": 24
+                },
+                {
+                    "name": "Roach",
+                    "is_worker": false,
+                    "frame": 7784.4,
+                    "clock_position": null,
+                    "time": "5:47",
+                    "is_chronoboosted": false,
+                    "supply": 25
+                },
+                {
+                    "name": "Drone",
+                    "is_worker": true,
+                    "frame": 7787.2,
+                    "clock_position": null,
+                    "time": "5:47",
+                    "is_chronoboosted": false,
+                    "supply": 25
+                },
+                {
+                    "name": "Lair",
+                    "is_worker": false,
+                    "frame": 7796.2,
+                    "clock_position": null,
+                    "time": "5:48",
+                    "is_chronoboosted": false,
+                    "supply": 25
+                },
+                {
+                    "name": "Overlord",
+                    "is_worker": false,
+                    "frame": 7796.8,
+                    "clock_position": null,
+                    "time": "5:48",
+                    "is_chronoboosted": false,
+                    "supply": 25
+                },
+                {
+                    "name": "Drone",
+                    "is_worker": true,
+                    "frame": 7947.2,
+                    "clock_position": null,
+                    "time": "5:54",
+                    "is_chronoboosted": false,
+                    "supply": 28
+                },
+                {
+                    "name": "Drone",
+                    "is_worker": true,
+                    "frame": 8112.2,
+                    "clock_position": null,
+                    "time": "6:02",
+                    "is_chronoboosted": false,
+                    "supply": 29
+                },
+                {
+                    "name": "Drone",
+                    "is_worker": true,
+                    "frame": 8272.2,
+                    "clock_position": null,
+                    "time": "6:09",
+                    "is_chronoboosted": false,
+                    "supply": 30
+                },
+                {
+                    "name": "Hatchery",
+                    "is_worker": false,
+                    "frame": 8282,
+                    "clock_position": null,
+                    "time": "6:09",
+                    "is_chronoboosted": false,
+                    "supply": 30
+                },
+                {
+                    "name": "Drone",
+                    "is_worker": true,
+                    "frame": 8432.2,
+                    "clock_position": null,
+                    "time": "6:16",
+                    "is_chronoboosted": false,
+                    "supply": 30
+                },
+                {
+                    "name": "Drone",
+                    "is_worker": true,
+                    "frame": 8592.2,
+                    "clock_position": null,
+                    "time": "6:23",
+                    "is_chronoboosted": false,
+                    "supply": 31
+                },
+                {
+                    "name": "Roach",
+                    "is_worker": false,
+                    "frame": 8763.4,
+                    "clock_position": null,
+                    "time": "6:31",
+                    "is_chronoboosted": false,
+                    "supply": 32
+                },
+                {
+                    "name": "Overseer",
+                    "is_worker": false,
+                    "frame": 9081.2,
+                    "clock_position": null,
+                    "time": "6:45",
+                    "is_chronoboosted": false,
+                    "supply": 34
+                },
+                {
+                    "name": "Overseer",
+                    "is_worker": false,
+                    "frame": 9150.2,
+                    "clock_position": null,
+                    "time": "6:48",
+                    "is_chronoboosted": false,
+                    "supply": 31
+                }
+            ],
+            "clock_position": null,
+            "uid": 0,
+            "race": "Zerg",
+            "team": 2,
+            "handicap": 100
+        }
+    },
+    "buildOrderExtracted": true,
+    "frames": 10030
+}
