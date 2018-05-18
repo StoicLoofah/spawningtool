@@ -1,3 +1,4 @@
+v2.0.0, May 18, 2018 -- continuous integration, StarCraft 2 4.0 support (new unit types, chronoboost, etc.), Co-op support
 v1.0.0, December 9, 2016 -- improved LotV chronoboost support, better unit type coverage, updated to LotV 3.8.0 data
 v0.2.1, December 12, 2015 -- Legacy of the Void support, HotS chrono boost
 v0.2.0, March 3, 2015 -- python3 support, analysis script examples, map details, caching

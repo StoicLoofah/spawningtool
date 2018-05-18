@@ -1,7 +1,7 @@
 spawningtool
 ============
 
-spawningtool is tools for analyzing StarCraft 2 Replays. It uses the data parsed by [sc2reader](https://github.com/GraylinKim/sc2reader) to make data available in a more human-digestable format.
+spawningtool is tools for analyzing StarCraft 2 Replays. It uses the data parsed by [sc2reader](https://github.com/ggtracker/sc2reader) to make data available in a more human-digestable format.
 
 Currently, spawningtool offers a basic parser for extracting build orders from replays. Our goal is to incorporate more sophisticated techniques from Artificial Intelligence to understand and classify these build orders.
 
@@ -17,7 +17,7 @@ From GitHub (less stable but recommended)
 pip install -e git+git://github.com/StoicLoofah/spawningtool.git#egg=spawningtool
 ```
 
-Note that master is generally dependent upon sc2reader master, not the latest versioned release, so you will need to grab sc2reader from GitHub as well. Although it is less stable, it is recommended because the latest versions of both spawningtool and sc2reader are necessary to parse the most recent patches of StarCraft 2
+Note that master usually requires sc2reader master, not the latest versioned release, so you will need to grab sc2reader from GitHub as well. Although it is less stable, it is recommended because the latest versions of both spawningtool and sc2reader are necessary to parse the most recent patches of StarCraft 2
 
 Usage
 ============
