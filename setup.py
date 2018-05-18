@@ -1,10 +1,11 @@
 from setuptools import find_packages, setup
 
-__version__ = "2.0.0"
+__version__ = "2.0.1"
 
 setup(
     name="spawningtool",
     description="Build order parser for StarCraft 2 replays",
+    long_description=open("README.md").read()+"\n\n"+open("CHANGES.txt").read(),
     version=__version__,
     url="https://github.com/StoicLoofah/spawningtool",
     author="Kevin Leung",
