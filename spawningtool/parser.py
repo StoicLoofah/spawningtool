@@ -168,6 +168,7 @@ class GameParser(object):
 
     unit_build_time_modifier = None  # special case for various commanders
     upgrade_build_time_modifier = None  # special case for various commanders
+    building_morph_build_time_modifier = None  # special case for Abathur
 
     builds = None
     units_lost = None
@@ -371,6 +372,7 @@ class GameParser(object):
         """
         self.unit_build_time_modifier = {}
         self.upgrade_build_time_modifier = {}
+        self.building_morph_build_time_modifier = {}
 
         for key, player in self.replay.player.items():
             # Expeditious Evolutions
@@ -383,6 +385,7 @@ class GameParser(object):
             # reduces evolution times by 2% for each point
             if player.commander == 'Abathur':
                 self.upgrade_build_time_modifier[key] = 1 - (player.commander_mastery_talents[5] * .02)
+                self.building_morph_build_time_modifier[key] = 1 - (player.commander_mastery_talents[5] * .02)
 
             # Chrono Boost Efficiency
             # (Power Set 3, power 1)
@@ -673,7 +676,13 @@ class GameParser(object):
             return
 
         try:
-            frame = event.frame - self.get_build_data(player)[unit_name]['build_time']
+            data = self.get_build_data(player)[unit_name]
+            if data.get('type') == 'Building' and data.get('is_morph'):
+                modifier = self.building_morph_build_time_modifier.get(player, 1)
+            else:
+                modifier = 1
+            build_time = data['build_time'] * modifier
+            frame = event.frame - build_time
         except KeyError:
             return
 
