@@ -55,6 +55,7 @@ BO_EXCLUDED.update([
     'AbathurSymbioteBrutalisk',  # paired with building Brutalisk
     'AbathurSymbioteLeviathan',  # paired with building Leviathan
     'ImpalerAbathurPlacement',  # Deep Tunnel for Swarm Hosts
+    'ParasiticBombDummy',
 
     # Alarak
     'AlarakReviveBeacon',
@@ -202,9 +203,23 @@ BO_UPGRADES_EXCLUDED.update([
     'FenixNetworkedSuperiorityCarrier',
 ])
 
-BUILD_DATA = BUILD_DATA.copy()
-
-BUILD_DATA.update({
+NEW_BUILD_DATA = {
+    'Lair': {
+        'build_time': 60,
+        'built_from': ['Hatchery'],
+        'display_name': 'Lair',
+        'race': 'Zerg',
+        'type': 'Building',
+        'is_morph': True,
+    },
+    'Hive': {
+        'build_time': 60,
+        'built_from': ['Lair'],
+        'display_name': 'Hive',
+        'race': 'Zerg',
+        'type': 'Building',
+        'is_morph': True,
+    },
     # shared across at least Kerrigan and Zagara
     'overlordspeed': {
         'build_time': 60,
@@ -445,8 +460,14 @@ BUILD_DATA.update({
         'type': 'Upgrade',
         'is_morph': False,
     },
+}
 
-})
+for value in NEW_BUILD_DATA.values():
+    value['build_time'] *= FRAMES_PER_SECOND
+
+BUILD_DATA = BUILD_DATA.copy()
+BUILD_DATA.update(NEW_BUILD_DATA)
+
 
 COMMANDER_BUILD_DATA = {
 
