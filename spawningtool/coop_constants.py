@@ -165,6 +165,10 @@ BO_EXCLUDED.update([
     # Tychus
     'TychusResearchCenterUnlocked',
     'TychusMedicTransportUnit',
+    'TychusWarhoundAutoTurret',
+    'TychusOdinPrecursor',
+    'TychusOdin',
+    'TychusMarauderHealingWard',
 ])
 
 BO_CHANGED_EXCLUDED = BO_CHANGED_EXCLUDED.copy()
@@ -208,8 +212,16 @@ BO_UPGRADES_EXCLUDED.update([
     # Tychus
     'TychusACOwned',
     'TychusReaperOwned',
+    'TychusWarhoundOwned',
     'TychusFirebatOwned',
+    'TychusHERCOwned',
+    'TychusMarauderOwned',
+    'TychusGhostOwned',
     'TychusSpectreOwned',
+    'TychusMedicOwned',
+    'TychusSquadAttackSpeedWithMastery',
+    'TychusSquadHealthMastery',
+    'TychusHeroMaxed',  # not sure what this is, but with subsequent heros
 ])
 
 NEW_BUILD_DATA = {
@@ -3640,7 +3652,7 @@ COMMANDER_BUILD_DATA = {
         },
         'TychusCoop': {
             'build_time': 0,
-            'built_from': ['JoeyraysTODO'],
+            'built_from': [],
             'display_name': 'Tychus',
             'race': 'Terran',
             'type': 'Unit',
@@ -3648,70 +3660,71 @@ COMMANDER_BUILD_DATA = {
         },
         'TychusReaper': {
             'build_time': 0,
-            'built_from': ['JoeyraysTODO'],
+            'built_from': [],
             'display_name': 'Crooked Sam',
+            'race': 'Terran',
+            'type': 'Unit',
+            'is_morph': False,
+        },
+        'TychusWarhound': {
+            'build_time': 0,
+            'built_from': [],
+            'display_name': 'James Sirius Sykes',
             'race': 'Terran',
             'type': 'Unit',
             'is_morph': False,
         },
         'TychusFirebat': {
             'build_time': 0,
-            'built_from': ['JoeyraysTODO'],
+            'built_from': [],
             'display_name': 'Miles Blaze Lewis',
+            'race': 'Terran',
+            'type': 'Unit',
+            'is_morph': False,
+        },
+        'TychusHERC': {
+            'build_time': 0,
+            'built_from': [],
+            'display_name': 'Rob Cannonball Boswell',
+            'race': 'Terran',
+            'type': 'Unit',
+            'is_morph': False,
+        },
+        'TychusMarauder': {
+            'build_time': 0,
+            'built_from': [],
+            'display_name': 'Kev Rattlesnake West',
+            'race': 'Terran',
+            'type': 'Unit',
+            'is_morph': False,
+        },
+        'TychusGhost': {
+            'build_time': 0,
+            'built_from': [],
+            'display_name': 'Vega',
             'race': 'Terran',
             'type': 'Unit',
             'is_morph': False,
         },
         'TychusSpectre': {
             'build_time': 0,
-            'built_from': ['JoeyraysTODO'],
+            'built_from': [],
             'display_name': 'Nux',
             'race': 'Terran',
             'type': 'Unit',
             'is_morph': False,
         },
-        '': {
+        'TychusMedic': {
             'build_time': 0,
-            'built_from': ['JoeyraysTODO'],
-            'display_name': '',
-            'race': 'Terran',
-            'type': 'Unit',
-            'is_morph': False,
-        },
-        '': {
-            'build_time': 0,
-            'built_from': ['JoeyraysTODO'],
-            'display_name': '',
-            'race': 'Terran',
-            'type': 'Unit',
-            'is_morph': False,
-        },
-        '': {
-            'build_time': 0,
-            'built_from': ['JoeyraysTODO'],
-            'display_name': '',
-            'race': 'Terran',
-            'type': 'Unit',
-            'is_morph': False,
-        },
-        '': {
-            'build_time': 0,
-            'built_from': ['JoeyraysTODO'],
-            'display_name': '',
+            'built_from': [],
+            'display_name': 'Lt Layna Nikara',
             'race': 'Terran',
             'type': 'Unit',
             'is_morph': False,
         },
 
         # Tychus Buildings
-        'JoeyraysTODO': {
-            'build_time': 0,
-            'built_from': [],
-            'display_name': 'Joeyrays Bar',
-            'race': 'Terran',
-            'type': 'Building',
-            'is_morph': False,
-        },
+        # Joeyray's Bar missing
         'TychusEngineeringBay': {
             'build_time': 0,
             'built_from': [],
@@ -3852,16 +3865,16 @@ COMMANDER_BUILD_DATA = {
             'is_morph': False,
         },
 
-        '': {
-            'build_time': 0,
+        'TychusSquadAttackSpeed': {
+            'build_time': 90,
             'built_from': ['TychusEngineeringBay'],
             'display_name': 'ITC-E Triggers',
             'race': 'Terran',
             'type': 'Upgrade',
             'is_morph': False,
         },
-        '': {
-            'build_time': 0,
+        'TychusSquadHealth': {
+            'build_time': 90,
             'built_from': ['TychusEngineeringBay'],
             'display_name': 'Endurance Supplements',
             'race': 'Terran',
@@ -3876,8 +3889,8 @@ COMMANDER_BUILD_DATA = {
             'type': 'Upgrade',
             'is_morph': False,
         },
-        '': {
-            'build_time': 0,
+        'TychusOdinRedButton': {
+            'build_time': 90,
             'built_from': ['TychusEngineeringBay'],
             'display_name': 'Big Red Button',
             'race': 'Terran',
@@ -3910,7 +3923,7 @@ COMMANDER_BUILD_DATA = {
             'type': 'Upgrade',
             'is_morph': False,
         },
-        '': {
+        'TychusACBandofBrothers': {
             'build_time': 0,
             'built_from': ['TychusMercCompound'],
             'display_name': 'SureShot Networked Helmet',
@@ -3943,7 +3956,7 @@ COMMANDER_BUILD_DATA = {
             'type': 'Upgrade',
             'is_morph': False,
         },
-        '': {
+        'TychusReaperBombCharges': {
             'build_time': 0,
             'built_from': ['TychusMercCompound'],
             'display_name': 'Enhanced Hostilities Kit',
@@ -3952,7 +3965,7 @@ COMMANDER_BUILD_DATA = {
             'is_morph': False,
         },
         # James Sirius Sykes
-        '': {
+        'TychusWarhoundHaywireMissiles': {
             'build_time': 0,
             'built_from': ['TychusMercCompound'],
             'display_name': 'SA-55 Thunderbolt Missiles',
@@ -3960,7 +3973,7 @@ COMMANDER_BUILD_DATA = {
             'type': 'Upgrade',
             'is_morph': False,
         },
-        '': {
+        'TychusWarhoundFear': {
             'build_time': 0,
             'built_from': ['TychusMercCompound'],
             'display_name': 'Moebius M34 Terror Rounds',
@@ -3968,7 +3981,7 @@ COMMANDER_BUILD_DATA = {
             'type': 'Upgrade',
             'is_morph': False,
         },
-        '': {
+        'TychusWarhoundDeathExplosion': {
             'build_time': 0,
             'built_from': ['TychusMercCompound'],
             'display_name': 'D99 Detonator',
@@ -3976,7 +3989,7 @@ COMMANDER_BUILD_DATA = {
             'type': 'Upgrade',
             'is_morph': False,
         },
-        '': {
+        'TychusWarhoundTurretUpgrade': {
             'build_time': 0,
             'built_from': ['TychusMercCompound'],
             'display_name': 'Umojan Turret Frame',
@@ -4010,7 +4023,7 @@ COMMANDER_BUILD_DATA = {
             'type': 'Upgrade',
             'is_morph': False,
         },
-        '': {
+        'TychusFirebatShield': {
             'build_time': 0,
             'built_from': ['TychusArmory'],
             'display_name': 'XCMC-670 Combat Suit',
@@ -4019,7 +4032,7 @@ COMMANDER_BUILD_DATA = {
             'is_morph': False,
         },
         # Rob Cannonball Boswell
-        '': {
+        'TychusHercGrappleStun': {
             'build_time': 0,
             'built_from': ['TychusArmory'],
             'display_name': 'X-71 Impact Boots',
@@ -4027,7 +4040,7 @@ COMMANDER_BUILD_DATA = {
             'type': 'Upgrade',
             'is_morph': False,
         },
-        '': {
+        'TychusHercGrappleArmor': {
             'build_time': 0,
             'built_from': ['TychusArmory'],
             'display_name': 'Critical Response System',
@@ -4035,7 +4048,7 @@ COMMANDER_BUILD_DATA = {
             'type': 'Upgrade',
             'is_morph': False,
         },
-        '': {
+        'TychusHercRage': {
             'build_time': 0,
             'built_from': ['TychusArmory'],
             'display_name': 'Redline Power Cells',
@@ -4043,7 +4056,7 @@ COMMANDER_BUILD_DATA = {
             'type': 'Upgrade',
             'is_morph': False,
         },
-        '': {
+        'TychusHercCrit': {
             'build_time': 0,
             'built_from': ['TychusArmory'],
             'display_name': 'MALICE Ammunition',
@@ -4052,7 +4065,7 @@ COMMANDER_BUILD_DATA = {
             'is_morph': False,
         },
         # Kev Rattlesnake West
-        '': {
+        'TychusMarauderHealingWardBuff': {
             'build_time': 0,
             'built_from': ['TychusArmory'],
             'display_name': 'Umojan Signal Modulator',
@@ -4060,7 +4073,7 @@ COMMANDER_BUILD_DATA = {
             'type': 'Upgrade',
             'is_morph': False,
         },
-        '': {
+        'TychusMarauderHealingWardSpeedBuff': {
             'build_time': 0,
             'built_from': ['TychusArmory'],
             'display_name': 'Moebius Aggression Blend',
@@ -4068,7 +4081,7 @@ COMMANDER_BUILD_DATA = {
             'type': 'Upgrade',
             'is_morph': False,
         },
-        '': {
+        'TychusMarauderSuperStim': {
             'build_time': 0,
             'built_from': ['TychusArmory'],
             'display_name': 'Secret Stash Stimpack',
@@ -4076,7 +4089,7 @@ COMMANDER_BUILD_DATA = {
             'type': 'Upgrade',
             'is_morph': False,
         },
-        '': {
+        'TychusMarauderAttackSplash': {
             'build_time': 0,
             'built_from': ['TychusArmory'],
             'display_name': 'Hammer Munitions',
@@ -4086,7 +4099,7 @@ COMMANDER_BUILD_DATA = {
         },
 
         # Vega
-        '': {
+        'TychusGhostDominateBuff': {
             'build_time': 0,
             'built_from': ['TychusGhostAcademy'],
             'display_name': 'Moebius Psionic Motivator',
@@ -4094,7 +4107,7 @@ COMMANDER_BUILD_DATA = {
             'type': 'Upgrade',
             'is_morph': False,
         },
-        '': {
+        'TychusGhostDominatingDomination': {
             'build_time': 0,
             'built_from': ['TychusGhostAcademy'],
             'display_name': 'Neural Disruption Device',
@@ -4102,7 +4115,7 @@ COMMANDER_BUILD_DATA = {
             'type': 'Upgrade',
             'is_morph': False,
         },
-        '': {
+        'TychusGhostPsychicSnare': {
             'build_time': 0,
             'built_from': ['TychusGhostAcademy'],
             'display_name': 'Psi Projector',
@@ -4110,7 +4123,7 @@ COMMANDER_BUILD_DATA = {
             'type': 'Upgrade',
             'is_morph': False,
         },
-        '': {
+        'TychusGhostConcentrationHelmet': {
             'build_time': 0,
             'built_from': ['TychusGhostAcademy'],
             'display_name': 'Type-88 Persuader',
@@ -4143,7 +4156,7 @@ COMMANDER_BUILD_DATA = {
             'type': 'Upgrade',
             'is_morph': False,
         },
-        '': {
+        'TychusSpectreBrillianceAura': {
             'build_time': 0,
             'built_from': ['TychusGhostAcademy'],
             'display_name': 'N3 Networking',
@@ -4152,7 +4165,7 @@ COMMANDER_BUILD_DATA = {
             'is_morph': False,
         },
         # Lt Layna Nikara
-        '': {
+        'TychusMedicAdvancedHealingSpray': {
             'build_time': 0,
             'built_from': ['TychusGhostAcademy'],
             'display_name': 'Umojan Repair Nanites',
@@ -4160,7 +4173,7 @@ COMMANDER_BUILD_DATA = {
             'type': 'Upgrade',
             'is_morph': False,
         },
-        '': {
+        'TychusMedicSuperHealing': {
             'build_time': 0,
             'built_from': ['TychusGhostAcademy'],
             'display_name': 'Procyon Serum',
@@ -4168,7 +4181,7 @@ COMMANDER_BUILD_DATA = {
             'type': 'Upgrade',
             'is_morph': False,
         },
-        '': {
+        'TychusMedicDoubleBeam': {
             'build_time': 0,
             'built_from': ['TychusGhostAcademy'],
             'display_name': 'Procyon Twin Heal Beam Gauntlet',
@@ -4176,7 +4189,7 @@ COMMANDER_BUILD_DATA = {
             'type': 'Upgrade',
             'is_morph': False,
         },
-        '': {
+        'TychusMedicDefensiveMatrix': {
             'build_time': 0,
             'built_from': ['TychusGhostAcademy'],
             'display_name': 'XM-77 Matrix Generator',
