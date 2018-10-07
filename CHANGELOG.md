@@ -1,6 +1,7 @@
 Changes
 =======
 
+* v2.2.0, October 7, 2018 -- bump sc2reader==1.1.0 for StarCraft 4.4 support, add Tychus support
 * v2.1.0, June 13, 2018 -- fix Lair and Hive co-op build time, add Abathur building morph reduction, fix co-op generic build times, moved this file
 * v2.0.0, May 18, 2018 -- continuous integration, StarCraft 2 4.0 support (new unit types, chronoboost, etc.), Co-op support
 * v1.0.0, December 9, 2016 -- improved LotV chronoboost support, better unit type coverage, updated to LotV 3.8.0 data
