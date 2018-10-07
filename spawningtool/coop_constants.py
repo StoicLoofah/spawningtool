@@ -1486,7 +1486,7 @@ COMMANDER_BUILD_DATA = {
             'is_morph': False,
         },
         'DarkTemplarResearchShadowDash': {
-            'build_time': 100,
+            'build_time': 90,
             'built_from': ['DarkShrine'],
             'display_name': 'Dark Templar Blink',
             'race': 'Protoss',
@@ -1991,6 +1991,14 @@ COMMANDER_BUILD_DATA = {
             'build_time': 60,
             'built_from': ['TwilightCouncil'],
             'display_name': 'Blood Shields',
+            'race': 'Protoss',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+        'BlinkTech': {
+            'build_time': 60,
+            'built_from': ['TwilightCouncil'],
+            'display_name': 'Phase Blink',
             'race': 'Protoss',
             'type': 'Upgrade',
             'is_morph': False,
