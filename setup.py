@@ -30,5 +30,5 @@ setup(
         'argparse',
         'sc2reader==1.2.0',
     ],
-    packages=find_packages(),
+    packages=find_packages(exclude=['tests']),
 )
