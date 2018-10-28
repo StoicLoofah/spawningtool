@@ -18,6 +18,7 @@ BO_EXCLUDED = set([
     'ChangelingMarine',
     'ChangelingZealot',
     'ChangelingZergling',
+    'ChangelingZerglingWings',
     'InfestedTerran',
     'Overseer',
     'Broodling',
