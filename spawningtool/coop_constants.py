@@ -476,7 +476,7 @@ NEW_BUILD_DATA = {
     'TerranBuildingArmor': {
         'build_time': 60,
         'built_from': ['Engineering'],
-        'display_name': 'Building Armor',
+        'display_name': 'Structure Armor',
         'race': 'Terran',
         'type': 'Upgrade',
         'is_morph': False,
@@ -949,7 +949,7 @@ COMMANDER_BUILD_DATA = {
             'is_morph': False,
         },
         'HighTemplarKhaydarinAmulet': {
-            'build_time': 120,
+            'build_time': 60,
             'built_from': ['TemplarArchives'],
             'display_name': 'Khaydarin Amulet',
             'race': 'Protoss',

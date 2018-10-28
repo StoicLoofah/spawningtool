@@ -539,32 +539,39 @@ BUILD_DATA = {
     'Stimpack': {
         'build_time': 121,
         'built_from': ['TechLab'],
+        'display_name': 'Stimpack',
         },
     'PunisherGrenades': {
         'build_time': 43,
         'built_from': ['TechLab'],
+        'display_name': 'Concussive Shells',
         },
     'ShieldWall': {
         'build_time': 79,
         'built_from': ['TechLab'],
+        'display_name': 'Combat Shield',
         },
     # engineering bay
     'NeosteelFrame': {
         'build_time': 79,
         'built_from': ['EngineeringBay'],
+        'display_name': 'Neosteel Frame',
         },
     'HiSecAutoTracking': {
         'build_time': 57,
         'built_from': ['EngineeringBay'],
+        'display_name': 'Hi-Sec Auto Tracking',
         },
     'TerranBuildingArmor': {
         'build_time': 100,
         'built_from': ['EngineeringBay'],
+        'display_name': 'Structure Armor',
         },
     # ghost academy
     'PersonalCloaking': {
         'build_time': 86,
         'built_from': ['GhostAcademy'],
+        'display_name': 'Personal Cloaking',
         },
     'GhostMoebiusReactor': {  # deprecated
         'build_time': 57,
@@ -578,6 +585,7 @@ BUILD_DATA = {
     'DrillClaws': {
         'build_time': 79,
         'built_from': ['TechLab'],
+        'display_name': 'Drilling Claws',
         },
     'TransformationServos': {  # deprecated
         'build_time': 79,
@@ -586,24 +594,26 @@ BUILD_DATA = {
     'HighCapacityBarrels': {
         'build_time': 79,
         'built_from': ['TechLab'],
-        'display_name': 'Infernal Pre-Igniters',
+        'display_name': 'Infernal Pre-Igniter',
         },
-    'CycloneLockOnDamageUpgrade': {
+    'CycloneLockOnDamageUpgrade': {  # deprecated
         'build_time': 79,
         'built_from': ['TechLab'],
         'display_name': 'Mag-Field Accelerator',
         },
-    'MagFieldLaunchers': {
+    'MagFieldLaunchers': {  # deprecated
         'build_time': 79,
         'built_from': ['TechLab'],
     },
     'CycloneRapidFireLaunchers': {
         'build_time': 79,
         'built_from': ['TechLab'],
+        'display_name': 'Rapid Fire Launchers',
     },
     'SmartServos': {
         'build_time': 79,
         'built_from': ['TechLab'],
+        'display_name': 'Smart Servos',
     },
     # starport tech lab
     'MedivacCaduceusReactor': {  # deprecated
@@ -620,13 +630,14 @@ BUILD_DATA = {
         'built_from': ['TechLab'],
         'display_name': 'Explosive Shrapnel Shells',
         },
-    'RavenRecalibratedExplosives': {
+    'RavenRecalibratedExplosives': {  # deprecated
         'build_time': 79,
         'built_from': ['TechLab'],
         },
     'BansheeCloak': {
         'build_time': 79,
         'built_from': ['TechLab'],
+        'display_name': 'Cloaking Field',
         },
     'DurableMaterials': {  # deprecated
         'build_time': 79,
@@ -635,6 +646,7 @@ BUILD_DATA = {
     'RavenCorvidReactor': {
         'build_time': 79,
         'built_from': ['TechLab'],
+        'display_name': 'Corvid Reactor',
         },
     'BansheeSpeed': {
         'build_time': 121,  # was 93 before 3.8.0
@@ -658,7 +670,7 @@ BUILD_DATA = {
     'BattlecruiserEnableSpecializations': {
         'build_time': 43,
         'built_from': ['FusionCore'],
-        'display_name': 'Yamato Cannon',
+        'display_name': 'Weapon Refit',
         },
     # protoss upgrades
     'ProtossGroundWeaponsLevel1': {
@@ -724,38 +736,17 @@ BUILD_DATA = {
     'WarpGateResearch': {
         'build_time': 114,
         'built_from': ['CyberneticsCore'],
-        },
-    'BlinkTech': {
-        'build_time': 121,
-        'built_from': ['TwilightCouncil'],
-        },
-    'ObserverGraviticBooster': {
-        'build_time': 57,
-        'built_from': ['RoboticsBay'],
-        },
-    'GraviticDrive': {
-        'build_time': 57,
-        'built_from': ['RoboticsBay'],
-        },
-    'ExtendedThermalLance': {
-        'build_time': 100,
-        'built_from': ['RoboticsBay'],
+        'display_name': 'Warp Gate',
         },
     'Charge': {
         'build_time': 100,
         'built_from': ['TwilightCouncil'],
+        'display_name': 'Charge',
         },
-    'PsiStormTech': {
-        'build_time': 80,
-        'built_from': ['TemplarArchives'],
-        },
-    'PhoenixRangeUpgrade': {
-        'build_time': 64,
-        'built_from': ['FleetBeacon'],
-        },
-    'CarrierLaunchSpeedUpgrade': {
-        'build_time': 57,
-        'built_from': ['FleetBeacon'],
+    'BlinkTech': {
+        'build_time': 121,
+        'built_from': ['TwilightCouncil'],
+        'display_name': 'Blink',
         },
     'AdeptShieldUpgrade': {  # deprecated from LotV Beta
         'build_time': 57,
@@ -764,6 +755,37 @@ BUILD_DATA = {
     'AdeptPiercingAttack': {
         'build_time': 100,
         'built_from': ['TwilightCouncil'],
+        'display_name': 'Resonating Glaives',
+        },
+    'ObserverGraviticBooster': {
+        'build_time': 57,
+        'built_from': ['RoboticsBay'],
+        'display_name': 'Gravitic Boosters',
+        },
+    'GraviticDrive': {
+        'build_time': 57,
+        'built_from': ['RoboticsBay'],
+        'display_name': 'Gravitic Drive',
+        },
+    'ExtendedThermalLance': {
+        'build_time': 100,
+        'built_from': ['RoboticsBay'],
+        'display_name': 'Extended Thermal Lance',
+        },
+    'PsiStormTech': {
+        'build_time': 79,
+        'built_from': ['TemplarArchives'],
+        'display_name': 'Psionic Storm',
+        },
+    'PhoenixRangeUpgrade': {
+        'build_time': 64,
+        'built_from': ['FleetBeacon'],
+        'display_name': 'Anion Pulse-Crystals',
+        },
+    'CarrierLaunchSpeedUpgrade': {
+        'build_time': 57,
+        'built_from': ['FleetBeacon'],
+        'display_name': 'Graviton Catapult',
         },
     'DarkTemplarBlinkUpgrade': {
         'build_time': 121,

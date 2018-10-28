@@ -1,6 +1,7 @@
 Changes
 =======
 
+* v2.2.2, October 28, 2018 -- fix various LotV data, added more display names
 * v2.2.1, October 24, 2018 -- fix pip packaging. Thanks Gusgus01
 * v2.2.0, October 7, 2018 -- bump sc2reader==1.2.0 for StarCraft 4.6, add Tychus
 * v2.1.0, June 13, 2018 -- fix Lair and Hive co-op build time, add Abathur building morph reduction, fix co-op generic build times, moved this file
