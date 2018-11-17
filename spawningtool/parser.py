@@ -405,11 +405,10 @@ class GameParser(object):
             if player.commander == 'Nova' and player.commander_level >= 11:
                 self.upgrade_build_time_modifier[key] = .5
 
-            # Impatience
-            # Mira's Unit Build and Research times are reduced by 30%
-            if player.commander == 'Horner' and player.commander_level >= 6:
-                self.unit_build_time_modifier[key] = .7
-                self.upgrade_build_time_modifier[key] = .7
+            # Chronometry
+            # Zeratul's Gateway and Robo units build 50% faster
+            if player.commander == 'Zeratul' and player.commander_level >= 10:
+                self.unit_build_time_modifier[key] = .5
 
     def add_ability_events(self):
         """
@@ -507,6 +506,7 @@ class GameParser(object):
             for boosts in self.chronoboosts[player].values():
                 boosts.reverse()
 
+
     def process_hots_chronoboosts(self, raw_chronoboosts, chronoboost_duration):
         """
         convert raw chronoboosts to a set of frame ranges over which the chronoboost is applied
@@ -593,8 +593,9 @@ class GameParser(object):
             is_chronoboosted = False
         else:
             modifier = self.unit_build_time_modifier.get(player, 1)
-            if unit_name == 'SCV':
+            if unit_name in ['SCV', 'Probe']:
                 # for Horner, do not apply modifier for SCVs
+                # for Zeratul, do not apply modifier for Probes
                 modifier = 1
             frame, unit_name, is_chronoboosted = \
                 self.adjust_build_time(event.frame, player, unit_name, modifier)

@@ -169,6 +169,14 @@ BO_EXCLUDED.update([
     'TychusOdinPrecursor',
     'TychusOdin',
     'TychusMarauderHealingWard',
+
+    # Zeratul
+    'ZeratulCoopReviveBeacon',
+    'AutomatedAssimilatorZeratul',  # ignore because they are built automatically
+    'ProphecyArtifactHintUnit',
+    'ZeratulTransportVoidSeeker',
+    'ZeratulArtifactPickup2',
+    'ZeratulSummonVoidRay',
 ])
 
 BO_CHANGED_EXCLUDED = BO_CHANGED_EXCLUDED.copy()
@@ -222,6 +230,26 @@ BO_UPGRADES_EXCLUDED.update([
     'TychusSquadAttackSpeedWithMastery',
     'TychusSquadHealthMastery',
     'TychusHeroMaxed',  # not sure what this is, but with subsequent heros
+    # Zeratul
+    'ZeratulArtifactTier1',
+    'ZeratulTopBarZealotSquad',
+    'ZeratulTopBarVoidRaySquad',
+    'ZeratulWeaponsLevel1',
+    'ZeratulArmorsLevel1',
+    'ZeratulShieldsLevel1',
+    'ZeratulArtifactTier1_CyberneticsCore',
+    'ZeratulArtifactTier1_DarkShine',
+    'ZeratulArtifactTier1_RoboticsBay',
+    'ZeratulArtifactTier2',
+    'ZeratulTopBarZealotSquad',
+    'ZeratulTopBarVoidRaySquad',
+    'ZeratulWeaponsLevel2',
+    'ZeratulArmorsLevel2',
+    'ZeratulShieldsLevel2',
+    'ZeratulArtifactTier2_DarkShine',
+    'ZeratulArtifactUpgradeTier2B',
+    'ZeratulArtifactUpgradeTier1A',
+    'ZeratulArtifactUpgradeTier0B',
 ])
 
 NEW_BUILD_DATA = {
@@ -4203,6 +4231,119 @@ COMMANDER_BUILD_DATA = {
             'display_name': 'XM-77 Matrix Generator',
             'race': 'Terran',
             'type': 'Upgrade',
+            'is_morph': False,
+        },
+    },
+    'Zeratul': {
+        # Gateway
+        'ZeratulStalker': {
+            'build_time': 42,
+            'built_from': ['ZeratulGateway'],
+            'display_name': "Xel'Naga Ambusher",
+            'race': 'Protoss',
+            'type': 'Unit',
+            'is_morph': False,
+        },
+        'ZeratulSentry': {
+            'build_time': 37,
+            'built_from': ['ZeratulGateway'],
+            'display_name': "Xel'Naga Shieldguard",
+            'race': 'Protoss',
+            'type': 'Unit',
+            'is_morph': False,
+        },
+        'ZeratulDarkTemplar': {
+            'build_time': 42,
+            'built_from': ['ZeratulGateway'],
+            'display_name': "Void Templar",
+            'race': 'Protoss',
+            'type': 'Unit',
+            'is_morph': False,
+        },
+        # Robo Facility
+        'ZeratulImmortal': {
+            'build_time': 55,
+            'built_from': ['ZeratulRoboticsFacility'],
+            'display_name': "Xel'Naga Enforcer",
+            'race': 'Protoss',
+            'type': 'Unit',
+            'is_morph': False,
+        },
+        # TODO
+        # TODO
+        'ZeratulObserver': {
+            'build_time': 30,
+            'built_from': ['ZeratulRoboticsFacility'],
+            'display_name': "Xel'Naga Watcher",
+            'race': 'Protoss',
+            'type': 'Unit',
+            'is_morph': False,
+        },
+        # Buildings
+        'Nexus': {
+            'build_time': 0,
+            'built_from': [],
+            'display_name': "Ancient Nexus",
+            'race': 'Protoss',
+            'type': 'Building',
+            'is_morph': False,
+        },
+        'AutomatedAssimilatorZeratul': {
+            'build_time': 0,
+            'built_from': [],
+            'display_name': 'Automated Assimilator',
+            'race': 'Protoss',
+            'type': 'Building',
+            'is_morph': False,
+        },
+        'ZeratulGateway': {
+            'build_time': 0,
+            'built_from': [],
+            'display_name': "Xel'Naga Passageway",
+            'race': 'Protoss',
+            'type': 'Building',
+            'is_morph': False,
+        },
+        'ZeratulCyberneticsCore': {
+            'build_time': 0,
+            'built_from': [],
+            'display_name': 'Core Forge',
+            'race': 'Protoss',
+            'type': 'Building',
+            'is_morph': False,
+        },
+        'ZeratulRoboticsFacility': {
+            'build_time': 0,
+            'built_from': [],
+            'display_name': 'Constructs Facility',
+            'race': 'Protoss',
+            'type': 'Building',
+            'is_morph': False,
+        },
+        'ZeratulRoboticsBay': {
+            'build_time': 0,
+            'built_from': [],
+            'display_name': 'Constructs Bay',
+            'race': 'Protoss',
+            'type': 'Building',
+            'is_morph': False,
+        },
+        'ZeratulDarkShrine': {
+            'build_time': 0,
+            'built_from': [],
+            'display_name': 'Void Shrine',
+            'race': 'Protoss',
+            'type': 'Building',
+            'is_morph': False,
+        },
+        # No Upgrades
+        # Calldowns
+        'Mohandar': {
+            'build_time': 0,
+            'built_from': [],
+            'display_name': 'Zoraya Legion',
+            'race': 'Protoss',
+            'type': 'Unit',
             'is_morph': False,
         },
     },
