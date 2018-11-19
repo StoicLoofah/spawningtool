@@ -405,6 +405,12 @@ class GameParser(object):
             if player.commander == 'Nova' and player.commander_level >= 11:
                 self.upgrade_build_time_modifier[key] = .5
 
+            # Impatience
+            # Mira's Unit Build and Research times are reduced by 30%
+            if player.commander == 'Horner' and player.commander_level >= 6:
+                self.unit_build_time_modifier[key] = .7
+                self.upgrade_build_time_modifier[key] = .7
+
             # Chronometry
             # Zeratul's Gateway and Robo units build 50% faster
             if player.commander == 'Zeratul' and player.commander_level >= 10:
@@ -505,7 +511,6 @@ class GameParser(object):
 
             for boosts in self.chronoboosts[player].values():
                 boosts.reverse()
-
 
     def process_hots_chronoboosts(self, raw_chronoboosts, chronoboost_duration):
         """
