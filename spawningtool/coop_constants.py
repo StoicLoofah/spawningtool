@@ -187,6 +187,9 @@ BO_EXCLUDED.update([
     'ZeratulXelNagaConstructCyan',
     'ZeratulKhaydarinMonolith',
     'ZeratulStalkerGhost',
+    'ZeratulKhaydarinMonolithProjection',
+    'ZeratulPhotonCannonProjection',
+    'ZeratulXelNagaChargedCrystalCyan',
 ])
 
 BO_CHANGED_EXCLUDED = BO_CHANGED_EXCLUDED.copy()
