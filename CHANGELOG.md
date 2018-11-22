@@ -1,6 +1,7 @@
 Changes
 =======
 
+* v2.4.0, November 21, 2018 -- update ladder data for balance patch 4.7.1
 * v2.3.0, November 18, 2018 -- bump sc2reader==1.3.0 for StarCraft 4.7, add Zeratul
 * v2.2.2, October 28, 2018 -- fix various LotV data, added more display names
 * v2.2.1, October 24, 2018 -- fix pip packaging. Thanks Gusgus01

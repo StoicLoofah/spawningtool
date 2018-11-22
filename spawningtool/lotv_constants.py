@@ -226,7 +226,7 @@ BUILD_DATA = {
         'built_from': ['Stargate'],
         },
     'Carrier': {
-        'build_time': 86,
+        'build_time': 64,  # decreated 86 -> 64 in 4.7.1
         'built_from': ['Stargate'],
         },
     # zerg units
@@ -434,6 +434,14 @@ BUILD_DATA = {
         'build_time': 79,
         'built_from': ['UltraliskCavern'],
         },
+    'AnabolicSynthesis': {  # added in 4.7.1
+        'build_time': 43,
+        'built_from': ['UltraliskCavern'],
+        'display_name': 'Anabolic Synthesis',
+        'race': 'Zerg',
+        'type': 'Upgrade',
+        'is_morph': False,
+        },
     'DiggingClaws': {
         'build_time': 54,
         'build_from': ['LurkerDenMP'],
@@ -553,20 +561,31 @@ BUILD_DATA = {
         'display_name': 'Combat Shield',
         },
     # engineering bay
-    'NeosteelFrame': {
+    'NeosteelFrame': {  # deprecated in 4.7.1
         'build_time': 79,
         'built_from': ['EngineeringBay'],
         'display_name': 'Neosteel Frame',
+        'race': 'Terran',
+        'type': 'Upgrade',
+        'is_morph': False,
+
         },
     'HiSecAutoTracking': {
         'build_time': 57,
         'built_from': ['EngineeringBay'],
         'display_name': 'Hi-Sec Auto Tracking',
+        'race': 'Terran',
+        'type': 'Upgrade',
+        'is_morph': False,
+
         },
     'TerranBuildingArmor': {
         'build_time': 100,
         'built_from': ['EngineeringBay'],
-        'display_name': 'Structure Armor',
+        'display_name': 'Neosteel Armor',  # renamed in 4.7.1
+        'race': 'Terran',
+        'type': 'Upgrade',
+        'is_morph': False,
         },
     # ghost academy
     'PersonalCloaking': {
@@ -597,16 +616,19 @@ BUILD_DATA = {
         'built_from': ['TechLab'],
         'display_name': 'Infernal Pre-Igniter',
         },
-    'CycloneLockOnDamageUpgrade': {  # deprecated
+    'CycloneLockOnDamageUpgrade': {  # re-introduced in 4.7.1
         'build_time': 79,
         'built_from': ['TechLab'],
         'display_name': 'Mag-Field Accelerator',
+        'race': 'Terran',
+        'type': 'Upgrade',
+        'is_morph': False,
         },
     'MagFieldLaunchers': {  # deprecated
         'build_time': 79,
         'built_from': ['TechLab'],
     },
-    'CycloneRapidFireLaunchers': {
+    'CycloneRapidFireLaunchers': {  # deprecated in 4.7.1
         'build_time': 79,
         'built_from': ['TechLab'],
         'display_name': 'Rapid Fire Launchers',
@@ -624,7 +646,10 @@ BUILD_DATA = {
     'MedivacIncreaseSpeedBoost': {
         'build_time': 57,
         'built_from': ['TechLab'],
-        'display_name': 'High Capacity Fuel Tanks',
+        'display_name': 'Rapid Reignition System',  # renamed in 4.7.1
+        'race': 'Terran',
+        'type': 'Upgrade',
+        'is_morph': False,
         },
     'RavenDamageUpgrade': {  # deprecated 3.8
         'build_time': 79,
@@ -783,13 +808,13 @@ BUILD_DATA = {
         'built_from': ['FleetBeacon'],
         'display_name': 'Anion Pulse-Crystals',
         },
-    'CarrierLaunchSpeedUpgrade': {
+    'CarrierLaunchSpeedUpgrade': {  # deprecated in 4.7.1
         'build_time': 57,
         'built_from': ['FleetBeacon'],
         'display_name': 'Graviton Catapult',
         },
     'DarkTemplarBlinkUpgrade': {
-        'build_time': 121,
+        'build_time': 100,  # decreased 121 -> 100 in 4.7.1
         'built_from': ['DarkShrine'],
         'display_name': 'Shadow Stride',
         },
