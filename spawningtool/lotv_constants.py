@@ -226,7 +226,7 @@ BUILD_DATA = {
         'built_from': ['Stargate'],
         },
     'Carrier': {
-        'build_time': 64,  # decreated 86 -> 64 in 4.7.1
+        'build_time': 64,  # decreased 86 -> 64 in 4.7.1
         'built_from': ['Stargate'],
         },
     # zerg units

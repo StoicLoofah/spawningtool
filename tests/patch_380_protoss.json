@@ -1,55 +1,381 @@
 {
-    "include_map_details": false,
-    "frames_per_second": 22.4,
-    "map": "Echo LE (Void)",
-    "message": "",
-    "region": "us",
-    "cooperative": false,
-    "category": "Private",
-    "build": 48258,
-    "map_hash": "af34c3e976feaba6d3e934ed9ae2a2fbd40e01e58513567c46231133b266a4e6",
-    "baseBuild": 48258,
-    "game_type": "1v1",
-    "unix_timestamp": 1480199100,
     "expansion": "LotV",
+    "build": 48258,
     "players": {
         "1": {
+            "handicap": 100,
+            "uid": 992715,
             "is_human": true,
-            "league": 0,
-            "unitsLost": [],
-            "color": "540081",
-            "abilities": [
+            "name": "StoicLoofah",
+            "team": 1,
+            "region": "us",
+            "commander": "",
+            "is_winner": false,
+            "buildOrder": [
                 {
-                    "name": "AdeptPhaseShift",
-                    "frame": 4037,
-                    "time": "3:00"
+                    "clock_position": null,
+                    "is_chronoboosted": true,
+                    "supply": 12,
+                    "name": "Probe",
+                    "is_worker": true,
+                    "frame": 233.20000000000005,
+                    "time": "0:10"
                 },
                 {
-                    "name": "MothershipCorePurifyNexus",
-                    "frame": 5046,
-                    "time": "3:45"
+                    "clock_position": null,
+                    "is_chronoboosted": true,
+                    "supply": 13,
+                    "name": "Probe",
+                    "is_worker": true,
+                    "frame": 469.20000000000005,
+                    "time": "0:20"
                 },
                 {
-                    "name": "OracleStasisTrap",
-                    "frame": 5731,
-                    "time": "4:15"
+                    "clock_position": null,
+                    "is_chronoboosted": false,
+                    "supply": 14,
+                    "name": "Pylon",
+                    "is_worker": false,
+                    "frame": 609,
+                    "time": "0:27"
                 },
                 {
-                    "name": "TemporalField",
-                    "frame": 7655,
-                    "time": "5:41"
+                    "clock_position": null,
+                    "is_chronoboosted": true,
+                    "supply": 14,
+                    "name": "Probe",
+                    "is_worker": true,
+                    "frame": 727.2,
+                    "time": "0:32"
                 },
                 {
-                    "name": "MassRecallMothershipCore",
-                    "frame": 8404,
-                    "time": "6:15"
+                    "clock_position": null,
+                    "is_chronoboosted": false,
+                    "supply": 15,
+                    "name": "Assimilator",
+                    "is_worker": false,
+                    "frame": 814,
+                    "time": "0:36"
+                },
+                {
+                    "clock_position": null,
+                    "is_chronoboosted": false,
+                    "supply": 15,
+                    "name": "Assimilator",
+                    "is_worker": false,
+                    "frame": 864,
+                    "time": "0:38"
+                },
+                {
+                    "clock_position": null,
+                    "is_chronoboosted": true,
+                    "supply": 15,
+                    "name": "Probe",
+                    "is_worker": true,
+                    "frame": 1018.2,
+                    "time": "0:45"
+                },
+                {
+                    "clock_position": null,
+                    "is_chronoboosted": false,
+                    "supply": 16,
+                    "name": "Gateway",
+                    "is_worker": false,
+                    "frame": 1151,
+                    "time": "0:51"
+                },
+                {
+                    "clock_position": null,
+                    "is_chronoboosted": true,
+                    "supply": 16,
+                    "name": "Probe",
+                    "is_worker": true,
+                    "frame": 1254.2,
+                    "time": "0:55"
+                },
+                {
+                    "clock_position": null,
+                    "is_chronoboosted": true,
+                    "supply": 17,
+                    "name": "Probe",
+                    "is_worker": true,
+                    "frame": 1490.2,
+                    "time": "1:06"
+                },
+                {
+                    "clock_position": null,
+                    "is_chronoboosted": true,
+                    "supply": 18,
+                    "name": "Probe",
+                    "is_worker": true,
+                    "frame": 1726.2,
+                    "time": "1:17"
+                },
+                {
+                    "clock_position": null,
+                    "is_chronoboosted": true,
+                    "supply": 19,
+                    "name": "Probe",
+                    "is_worker": true,
+                    "frame": 1962.2,
+                    "time": "1:27"
+                },
+                {
+                    "clock_position": null,
+                    "is_chronoboosted": true,
+                    "supply": 20,
+                    "name": "Probe",
+                    "is_worker": true,
+                    "frame": 2198.2,
+                    "time": "1:38"
+                },
+                {
+                    "clock_position": null,
+                    "is_chronoboosted": false,
+                    "supply": 21,
+                    "name": "CyberneticsCore",
+                    "is_worker": false,
+                    "frame": 2273,
+                    "time": "1:41"
+                },
+                {
+                    "clock_position": null,
+                    "is_chronoboosted": true,
+                    "supply": 21,
+                    "name": "Probe",
+                    "is_worker": true,
+                    "frame": 2434.2,
+                    "time": "1:48"
+                },
+                {
+                    "clock_position": null,
+                    "is_chronoboosted": false,
+                    "supply": 21,
+                    "name": "Pylon",
+                    "is_worker": false,
+                    "frame": 2514,
+                    "time": "1:52"
+                },
+                {
+                    "clock_position": null,
+                    "is_chronoboosted": false,
+                    "supply": 22,
+                    "name": "Pylon",
+                    "is_worker": false,
+                    "frame": 2595,
+                    "time": "1:55"
+                },
+                {
+                    "clock_position": null,
+                    "is_chronoboosted": true,
+                    "supply": 22,
+                    "name": "Probe",
+                    "is_worker": true,
+                    "frame": 2670.2,
+                    "time": "1:59"
+                },
+                {
+                    "clock_position": null,
+                    "is_chronoboosted": true,
+                    "supply": 23,
+                    "name": "Probe",
+                    "is_worker": true,
+                    "frame": 2922.2,
+                    "time": "2:10"
+                },
+                {
+                    "clock_position": null,
+                    "is_chronoboosted": false,
+                    "supply": 24,
+                    "name": "Adept",
+                    "is_worker": false,
+                    "frame": 3152.2,
+                    "time": "2:20"
+                },
+                {
+                    "clock_position": null,
+                    "is_chronoboosted": true,
+                    "supply": 24,
+                    "name": "Probe",
+                    "is_worker": true,
+                    "frame": 3158.2,
+                    "time": "2:20"
+                },
+                {
+                    "clock_position": null,
+                    "is_chronoboosted": false,
+                    "supply": 27,
+                    "name": "TwilightCouncil",
+                    "is_worker": false,
+                    "frame": 3221,
+                    "time": "2:23"
+                },
+                {
+                    "clock_position": null,
+                    "is_chronoboosted": false,
+                    "supply": 27,
+                    "name": "Stargate",
+                    "is_worker": false,
+                    "frame": 3302,
+                    "time": "2:27"
+                },
+                {
+                    "clock_position": null,
+                    "is_chronoboosted": true,
+                    "supply": 27,
+                    "name": "MothershipCore",
+                    "is_worker": false,
+                    "frame": 3460.6,
+                    "time": "2:34"
+                },
+                {
+                    "clock_position": null,
+                    "is_chronoboosted": true,
+                    "supply": 29,
+                    "name": "Probe",
+                    "is_worker": true,
+                    "frame": 4435.2,
+                    "time": "3:18"
+                },
+                {
+                    "clock_position": null,
+                    "is_chronoboosted": false,
+                    "supply": 30,
+                    "name": "DarkShrine",
+                    "is_worker": false,
+                    "frame": 4581,
+                    "time": "3:24"
+                },
+                {
+                    "clock_position": null,
+                    "is_chronoboosted": false,
+                    "supply": 30,
+                    "name": "Oracle",
+                    "is_worker": false,
+                    "frame": 4703.2,
+                    "time": "3:29"
+                },
+                {
+                    "clock_position": null,
+                    "is_chronoboosted": false,
+                    "supply": 30,
+                    "name": "RoboticsFacility",
+                    "is_worker": false,
+                    "frame": 4718,
+                    "time": "3:30"
+                },
+                {
+                    "clock_position": null,
+                    "is_chronoboosted": true,
+                    "supply": 33,
+                    "name": "Probe",
+                    "is_worker": true,
+                    "frame": 5017.2,
+                    "time": "3:43"
+                },
+                {
+                    "clock_position": null,
+                    "is_chronoboosted": true,
+                    "supply": 34,
+                    "name": "Probe",
+                    "is_worker": true,
+                    "frame": 5508.2,
+                    "time": "4:05"
+                },
+                {
+                    "clock_position": null,
+                    "is_chronoboosted": false,
+                    "supply": 35,
+                    "name": "Immortal",
+                    "is_worker": false,
+                    "frame": 6001.4,
+                    "time": "4:27"
+                },
+                {
+                    "clock_position": null,
+                    "is_chronoboosted": false,
+                    "supply": 39,
+                    "name": "Pylon",
+                    "is_worker": false,
+                    "frame": 6084,
+                    "time": "4:31"
+                },
+                {
+                    "clock_position": null,
+                    "is_chronoboosted": false,
+                    "supply": 39,
+                    "name": "Pylon",
+                    "is_worker": false,
+                    "frame": 6108,
+                    "time": "4:32"
+                },
+                {
+                    "clock_position": null,
+                    "is_chronoboosted": false,
+                    "supply": 39,
+                    "name": "Pylon",
+                    "is_worker": false,
+                    "frame": 6139,
+                    "time": "4:34"
+                },
+                {
+                    "clock_position": null,
+                    "is_chronoboosted": false,
+                    "supply": 39,
+                    "name": "FleetBeacon",
+                    "is_worker": false,
+                    "frame": 6462,
+                    "time": "4:48"
+                },
+                {
+                    "clock_position": null,
+                    "is_chronoboosted": false,
+                    "supply": 39,
+                    "name": "DarkTemplar",
+                    "is_worker": false,
+                    "frame": 7070.4,
+                    "time": "5:15"
+                },
+                {
+                    "clock_position": null,
+                    "is_chronoboosted": true,
+                    "supply": 39,
+                    "name": "Probe",
+                    "is_worker": true,
+                    "frame": 7154.2,
+                    "time": "5:19"
+                },
+                {
+                    "clock_position": null,
+                    "is_chronoboosted": false,
+                    "supply": 42,
+                    "name": "Shadow Stride",
+                    "is_worker": false,
+                    "frame": 7203.0,
+                    "time": "5:21"
+                },
+                {
+                    "clock_position": null,
+                    "is_chronoboosted": false,
+                    "supply": 42,
+                    "name": "Tempest",
+                    "is_worker": false,
+                    "frame": 7960.8,
+                    "time": "5:55"
+                },
+                {
+                    "clock_position": null,
+                    "is_chronoboosted": true,
+                    "supply": 48,
+                    "name": "Probe",
+                    "is_worker": true,
+                    "frame": 8192.2,
+                    "time": "6:05"
                 }
             ],
-            "result": "Loss",
-            "is_winner": false,
-            "region": "us",
-            "level": 124,
-            "pick_race": "Protoss",
+            "unitsLost": [],
+            "race": "Protoss",
+            "clock_position": null,
             "supply": [
                 [
                     0,
@@ -316,458 +642,475 @@
                     49
                 ]
             ],
-            "name": "StoicLoofah",
-            "commander": "",
-            "buildOrder": [
+            "league": 0,
+            "abilities": [
                 {
-                    "name": "Probe",
-                    "is_worker": true,
-                    "frame": 233.20000000000005,
-                    "clock_position": null,
-                    "time": "0:10",
-                    "is_chronoboosted": true,
-                    "supply": 12
+                    "frame": 4037,
+                    "name": "AdeptPhaseShift",
+                    "time": "3:00"
                 },
                 {
-                    "name": "Probe",
-                    "is_worker": true,
-                    "frame": 469.20000000000005,
-                    "clock_position": null,
-                    "time": "0:20",
-                    "is_chronoboosted": true,
-                    "supply": 13
+                    "frame": 5046,
+                    "name": "MothershipCorePurifyNexus",
+                    "time": "3:45"
                 },
                 {
-                    "name": "Pylon",
-                    "is_worker": false,
-                    "frame": 609,
-                    "clock_position": null,
-                    "time": "0:27",
-                    "is_chronoboosted": false,
-                    "supply": 14
+                    "frame": 5731,
+                    "name": "OracleStasisTrap",
+                    "time": "4:15"
                 },
                 {
-                    "name": "Probe",
-                    "is_worker": true,
-                    "frame": 727.2,
-                    "clock_position": null,
-                    "time": "0:32",
-                    "is_chronoboosted": true,
-                    "supply": 14
+                    "frame": 7655,
+                    "name": "TemporalField",
+                    "time": "5:41"
                 },
                 {
-                    "name": "Assimilator",
-                    "is_worker": false,
-                    "frame": 814,
-                    "clock_position": null,
-                    "time": "0:36",
-                    "is_chronoboosted": false,
-                    "supply": 15
-                },
-                {
-                    "name": "Assimilator",
-                    "is_worker": false,
-                    "frame": 864,
-                    "clock_position": null,
-                    "time": "0:38",
-                    "is_chronoboosted": false,
-                    "supply": 15
-                },
-                {
-                    "name": "Probe",
-                    "is_worker": true,
-                    "frame": 1018.2,
-                    "clock_position": null,
-                    "time": "0:45",
-                    "is_chronoboosted": true,
-                    "supply": 15
-                },
-                {
-                    "name": "Gateway",
-                    "is_worker": false,
-                    "frame": 1151,
-                    "clock_position": null,
-                    "time": "0:51",
-                    "is_chronoboosted": false,
-                    "supply": 16
-                },
-                {
-                    "name": "Probe",
-                    "is_worker": true,
-                    "frame": 1254.2,
-                    "clock_position": null,
-                    "time": "0:55",
-                    "is_chronoboosted": true,
-                    "supply": 16
-                },
-                {
-                    "name": "Probe",
-                    "is_worker": true,
-                    "frame": 1490.2,
-                    "clock_position": null,
-                    "time": "1:06",
-                    "is_chronoboosted": true,
-                    "supply": 17
-                },
-                {
-                    "name": "Probe",
-                    "is_worker": true,
-                    "frame": 1726.2,
-                    "clock_position": null,
-                    "time": "1:17",
-                    "is_chronoboosted": true,
-                    "supply": 18
-                },
-                {
-                    "name": "Probe",
-                    "is_worker": true,
-                    "frame": 1962.2,
-                    "clock_position": null,
-                    "time": "1:27",
-                    "is_chronoboosted": true,
-                    "supply": 19
-                },
-                {
-                    "name": "Probe",
-                    "is_worker": true,
-                    "frame": 2198.2,
-                    "clock_position": null,
-                    "time": "1:38",
-                    "is_chronoboosted": true,
-                    "supply": 20
-                },
-                {
-                    "name": "CyberneticsCore",
-                    "is_worker": false,
-                    "frame": 2273,
-                    "clock_position": null,
-                    "time": "1:41",
-                    "is_chronoboosted": false,
-                    "supply": 21
-                },
-                {
-                    "name": "Probe",
-                    "is_worker": true,
-                    "frame": 2434.2,
-                    "clock_position": null,
-                    "time": "1:48",
-                    "is_chronoboosted": true,
-                    "supply": 21
-                },
-                {
-                    "name": "Pylon",
-                    "is_worker": false,
-                    "frame": 2514,
-                    "clock_position": null,
-                    "time": "1:52",
-                    "is_chronoboosted": false,
-                    "supply": 21
-                },
-                {
-                    "name": "Pylon",
-                    "is_worker": false,
-                    "frame": 2595,
-                    "clock_position": null,
-                    "time": "1:55",
-                    "is_chronoboosted": false,
-                    "supply": 22
-                },
-                {
-                    "name": "Probe",
-                    "is_worker": true,
-                    "frame": 2670.2,
-                    "clock_position": null,
-                    "time": "1:59",
-                    "is_chronoboosted": true,
-                    "supply": 22
-                },
-                {
-                    "name": "Probe",
-                    "is_worker": true,
-                    "frame": 2922.2,
-                    "clock_position": null,
-                    "time": "2:10",
-                    "is_chronoboosted": true,
-                    "supply": 23
-                },
-                {
-                    "name": "Adept",
-                    "is_worker": false,
-                    "frame": 3152.2,
-                    "clock_position": null,
-                    "time": "2:20",
-                    "is_chronoboosted": false,
-                    "supply": 24
-                },
-                {
-                    "name": "Probe",
-                    "is_worker": true,
-                    "frame": 3158.2,
-                    "clock_position": null,
-                    "time": "2:20",
-                    "is_chronoboosted": true,
-                    "supply": 24
-                },
-                {
-                    "name": "TwilightCouncil",
-                    "is_worker": false,
-                    "frame": 3221,
-                    "clock_position": null,
-                    "time": "2:23",
-                    "is_chronoboosted": false,
-                    "supply": 27
-                },
-                {
-                    "name": "Stargate",
-                    "is_worker": false,
-                    "frame": 3302,
-                    "clock_position": null,
-                    "time": "2:27",
-                    "is_chronoboosted": false,
-                    "supply": 27
-                },
-                {
-                    "name": "MothershipCore",
-                    "is_worker": false,
-                    "frame": 3460.6,
-                    "clock_position": null,
-                    "time": "2:34",
-                    "is_chronoboosted": true,
-                    "supply": 27
-                },
-                {
-                    "name": "Probe",
-                    "is_worker": true,
-                    "frame": 4435.2,
-                    "clock_position": null,
-                    "time": "3:18",
-                    "is_chronoboosted": true,
-                    "supply": 29
-                },
-                {
-                    "name": "DarkShrine",
-                    "is_worker": false,
-                    "frame": 4581,
-                    "clock_position": null,
-                    "time": "3:24",
-                    "is_chronoboosted": false,
-                    "supply": 30
-                },
-                {
-                    "name": "Oracle",
-                    "is_worker": false,
-                    "frame": 4703.2,
-                    "clock_position": null,
-                    "time": "3:29",
-                    "is_chronoboosted": false,
-                    "supply": 30
-                },
-                {
-                    "name": "RoboticsFacility",
-                    "is_worker": false,
-                    "frame": 4718,
-                    "clock_position": null,
-                    "time": "3:30",
-                    "is_chronoboosted": false,
-                    "supply": 30
-                },
-                {
-                    "name": "Probe",
-                    "is_worker": true,
-                    "frame": 5017.2,
-                    "clock_position": null,
-                    "time": "3:43",
-                    "is_chronoboosted": true,
-                    "supply": 33
-                },
-                {
-                    "name": "Probe",
-                    "is_worker": true,
-                    "frame": 5508.2,
-                    "clock_position": null,
-                    "time": "4:05",
-                    "is_chronoboosted": true,
-                    "supply": 34
-                },
-                {
-                    "name": "Immortal",
-                    "is_worker": false,
-                    "frame": 6001.4,
-                    "clock_position": null,
-                    "time": "4:27",
-                    "is_chronoboosted": false,
-                    "supply": 35
-                },
-                {
-                    "name": "Pylon",
-                    "is_worker": false,
-                    "frame": 6084,
-                    "clock_position": null,
-                    "time": "4:31",
-                    "is_chronoboosted": false,
-                    "supply": 39
-                },
-                {
-                    "name": "Pylon",
-                    "is_worker": false,
-                    "frame": 6108,
-                    "clock_position": null,
-                    "time": "4:32",
-                    "is_chronoboosted": false,
-                    "supply": 39
-                },
-                {
-                    "name": "Pylon",
-                    "is_worker": false,
-                    "frame": 6139,
-                    "clock_position": null,
-                    "time": "4:34",
-                    "is_chronoboosted": false,
-                    "supply": 39
-                },
-                {
-                    "name": "FleetBeacon",
-                    "is_worker": false,
-                    "frame": 6462,
-                    "clock_position": null,
-                    "time": "4:48",
-                    "is_chronoboosted": false,
-                    "supply": 39
-                },
-                {
-                    "name": "Shadow Stride",
-                    "is_worker": false,
-                    "frame": 6732.6,
-                    "clock_position": null,
-                    "time": "5:00",
-                    "is_chronoboosted": false,
-                    "supply": 39
-                },
-                {
-                    "name": "DarkTemplar",
-                    "is_worker": false,
-                    "frame": 7070.4,
-                    "clock_position": null,
-                    "time": "5:15",
-                    "is_chronoboosted": false,
-                    "supply": 39
-                },
-                {
-                    "name": "Probe",
-                    "is_worker": true,
-                    "frame": 7154.2,
-                    "clock_position": null,
-                    "time": "5:19",
-                    "is_chronoboosted": true,
-                    "supply": 39
-                },
-                {
-                    "name": "Tempest",
-                    "is_worker": false,
-                    "frame": 7960.8,
-                    "clock_position": null,
-                    "time": "5:55",
-                    "is_chronoboosted": false,
-                    "supply": 42
-                },
-                {
-                    "name": "Probe",
-                    "is_worker": true,
-                    "frame": 8192.2,
-                    "clock_position": null,
-                    "time": "6:05",
-                    "is_chronoboosted": true,
-                    "supply": 48
+                    "frame": 8404,
+                    "name": "MassRecallMothershipCore",
+                    "time": "6:15"
                 }
             ],
-            "clock_position": null,
-            "uid": 992715,
-            "race": "Protoss",
-            "team": 1,
-            "handicap": 100
+            "level": 124,
+            "pick_race": "Protoss",
+            "color": "540081",
+            "result": "Loss"
         },
         "2": {
+            "handicap": 100,
+            "uid": 0,
             "is_human": false,
-            "league": null,
-            "unitsLost": [
+            "name": "A.I. 1 (Very Easy)",
+            "team": 2,
+            "region": "us",
+            "commander": "",
+            "is_winner": true,
+            "buildOrder": [
                 {
+                    "clock_position": null,
+                    "is_chronoboosted": false,
+                    "supply": 12,
                     "name": "Drone",
-                    "frame": 1315,
-                    "clock_position": null,
-                    "time": "0:58",
-                    "killer": null
+                    "is_worker": true,
+                    "frame": 28.200000000000045,
+                    "time": "0:01"
                 },
                 {
+                    "clock_position": null,
+                    "is_chronoboosted": false,
+                    "supply": 13,
+                    "name": "Overlord",
+                    "is_worker": false,
+                    "frame": 290.8,
+                    "time": "0:12"
+                },
+                {
+                    "clock_position": null,
+                    "is_chronoboosted": false,
+                    "supply": 13,
                     "name": "Drone",
-                    "frame": 1844,
-                    "clock_position": null,
-                    "time": "1:22",
-                    "killer": null
+                    "is_worker": true,
+                    "frame": 379.20000000000005,
+                    "time": "0:16"
                 },
                 {
+                    "clock_position": null,
+                    "is_chronoboosted": false,
+                    "supply": 14,
+                    "name": "SpawningPool",
+                    "is_worker": false,
+                    "frame": 804,
+                    "time": "0:35"
+                },
+                {
+                    "clock_position": null,
+                    "is_chronoboosted": false,
+                    "supply": 14,
+                    "name": "Extractor",
+                    "is_worker": false,
+                    "frame": 835,
+                    "time": "0:37"
+                },
+                {
+                    "clock_position": null,
+                    "is_chronoboosted": false,
+                    "supply": 14,
                     "name": "Drone",
-                    "frame": 2611,
-                    "clock_position": null,
-                    "time": "1:56",
-                    "killer": null
+                    "is_worker": true,
+                    "frame": 893.2,
+                    "time": "0:39"
                 },
                 {
+                    "clock_position": null,
+                    "is_chronoboosted": false,
+                    "supply": 13,
                     "name": "Drone",
-                    "frame": 2980,
-                    "clock_position": null,
-                    "time": "2:13",
-                    "killer": null
+                    "is_worker": true,
+                    "frame": 1053.2,
+                    "time": "0:47"
                 },
                 {
+                    "clock_position": null,
+                    "is_chronoboosted": false,
+                    "supply": 14,
+                    "name": "Overlord",
+                    "is_worker": false,
+                    "frame": 1168.8,
+                    "time": "0:52"
+                },
+                {
+                    "clock_position": null,
+                    "is_chronoboosted": false,
+                    "supply": 14,
                     "name": "Zergling",
-                    "frame": 9005,
-                    "clock_position": null,
-                    "time": "6:42",
-                    "killer": 1
+                    "is_worker": false,
+                    "frame": 1873.2,
+                    "time": "1:23"
                 },
                 {
+                    "clock_position": null,
+                    "is_chronoboosted": false,
+                    "supply": 14,
                     "name": "Zergling",
-                    "frame": 9052,
-                    "clock_position": null,
-                    "time": "6:44",
-                    "killer": 1
+                    "is_worker": false,
+                    "frame": 1873.2,
+                    "time": "1:23"
                 },
                 {
-                    "name": "Zergling",
-                    "frame": 9062,
                     "clock_position": null,
-                    "time": "6:44",
-                    "killer": 1
+                    "is_chronoboosted": false,
+                    "supply": 14,
+                    "name": "Queen",
+                    "is_worker": false,
+                    "frame": 1882.6,
+                    "time": "1:24"
                 },
                 {
-                    "name": "Zergling",
-                    "frame": 9099,
                     "clock_position": null,
-                    "time": "6:46",
-                    "killer": 1
+                    "is_chronoboosted": false,
+                    "supply": 17,
+                    "name": "RoachWarren",
+                    "is_worker": false,
+                    "frame": 2099,
+                    "time": "1:33"
                 },
                 {
-                    "name": "Zergling",
-                    "frame": 9108,
                     "clock_position": null,
-                    "time": "6:46",
-                    "killer": 1
+                    "is_chronoboosted": false,
+                    "supply": 17,
+                    "name": "Extractor",
+                    "is_worker": false,
+                    "frame": 2130,
+                    "time": "1:35"
                 },
                 {
+                    "clock_position": null,
+                    "is_chronoboosted": false,
+                    "supply": 17,
                     "name": "Drone",
-                    "frame": 9882,
+                    "is_worker": true,
+                    "frame": 2220.2,
+                    "time": "1:39"
+                },
+                {
                     "clock_position": null,
-                    "time": "7:21",
-                    "killer": null
+                    "is_chronoboosted": false,
+                    "supply": 16,
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 2289.2,
+                    "time": "1:42"
+                },
+                {
+                    "clock_position": null,
+                    "is_chronoboosted": false,
+                    "supply": 16,
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 2289.2,
+                    "time": "1:42"
+                },
+                {
+                    "clock_position": null,
+                    "is_chronoboosted": false,
+                    "supply": 16,
+                    "name": "Drone",
+                    "is_worker": true,
+                    "frame": 2380.2,
+                    "time": "1:46"
+                },
+                {
+                    "clock_position": null,
+                    "is_chronoboosted": false,
+                    "supply": 18,
+                    "name": "Drone",
+                    "is_worker": true,
+                    "frame": 2700.2,
+                    "time": "2:00"
+                },
+                {
+                    "clock_position": null,
+                    "is_chronoboosted": false,
+                    "supply": 18,
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 2706.2,
+                    "time": "2:00"
+                },
+                {
+                    "clock_position": null,
+                    "is_chronoboosted": false,
+                    "supply": 18,
+                    "name": "Zergling",
+                    "is_worker": false,
+                    "frame": 2706.2,
+                    "time": "2:00"
+                },
+                {
+                    "clock_position": null,
+                    "is_chronoboosted": false,
+                    "supply": 20,
+                    "name": "Drone",
+                    "is_worker": true,
+                    "frame": 2940.2,
+                    "time": "2:11"
+                },
+                {
+                    "clock_position": null,
+                    "is_chronoboosted": false,
+                    "supply": 21,
+                    "name": "Drone",
+                    "is_worker": true,
+                    "frame": 3180.2,
+                    "time": "2:21"
+                },
+                {
+                    "clock_position": null,
+                    "is_chronoboosted": false,
+                    "supply": 22,
+                    "name": "Drone",
+                    "is_worker": true,
+                    "frame": 3389.2,
+                    "time": "2:31"
+                },
+                {
+                    "clock_position": null,
+                    "is_chronoboosted": false,
+                    "supply": 22,
+                    "name": "Overlord",
+                    "is_worker": false,
+                    "frame": 3416.8,
+                    "time": "2:32"
+                },
+                {
+                    "clock_position": null,
+                    "is_chronoboosted": false,
+                    "supply": 23,
+                    "name": "Drone",
+                    "is_worker": true,
+                    "frame": 3549.2,
+                    "time": "2:38"
+                },
+                {
+                    "clock_position": null,
+                    "is_chronoboosted": false,
+                    "supply": 24,
+                    "name": "Drone",
+                    "is_worker": true,
+                    "frame": 3709.2,
+                    "time": "2:45"
+                },
+                {
+                    "clock_position": null,
+                    "is_chronoboosted": false,
+                    "supply": 25,
+                    "name": "Roach",
+                    "is_worker": false,
+                    "frame": 7784.4,
+                    "time": "5:47"
+                },
+                {
+                    "clock_position": null,
+                    "is_chronoboosted": false,
+                    "supply": 25,
+                    "name": "Drone",
+                    "is_worker": true,
+                    "frame": 7787.2,
+                    "time": "5:47"
+                },
+                {
+                    "clock_position": null,
+                    "is_chronoboosted": false,
+                    "supply": 25,
+                    "name": "Lair",
+                    "is_worker": false,
+                    "frame": 7796.2,
+                    "time": "5:48"
+                },
+                {
+                    "clock_position": null,
+                    "is_chronoboosted": false,
+                    "supply": 25,
+                    "name": "Overlord",
+                    "is_worker": false,
+                    "frame": 7796.8,
+                    "time": "5:48"
+                },
+                {
+                    "clock_position": null,
+                    "is_chronoboosted": false,
+                    "supply": 28,
+                    "name": "Drone",
+                    "is_worker": true,
+                    "frame": 7947.2,
+                    "time": "5:54"
+                },
+                {
+                    "clock_position": null,
+                    "is_chronoboosted": false,
+                    "supply": 29,
+                    "name": "Drone",
+                    "is_worker": true,
+                    "frame": 8112.2,
+                    "time": "6:02"
+                },
+                {
+                    "clock_position": null,
+                    "is_chronoboosted": false,
+                    "supply": 30,
+                    "name": "Drone",
+                    "is_worker": true,
+                    "frame": 8272.2,
+                    "time": "6:09"
+                },
+                {
+                    "clock_position": null,
+                    "is_chronoboosted": false,
+                    "supply": 30,
+                    "name": "Hatchery",
+                    "is_worker": false,
+                    "frame": 8282,
+                    "time": "6:09"
+                },
+                {
+                    "clock_position": null,
+                    "is_chronoboosted": false,
+                    "supply": 30,
+                    "name": "Drone",
+                    "is_worker": true,
+                    "frame": 8432.2,
+                    "time": "6:16"
+                },
+                {
+                    "clock_position": null,
+                    "is_chronoboosted": false,
+                    "supply": 31,
+                    "name": "Drone",
+                    "is_worker": true,
+                    "frame": 8592.2,
+                    "time": "6:23"
+                },
+                {
+                    "clock_position": null,
+                    "is_chronoboosted": false,
+                    "supply": 32,
+                    "name": "Roach",
+                    "is_worker": false,
+                    "frame": 8763.4,
+                    "time": "6:31"
+                },
+                {
+                    "clock_position": null,
+                    "is_chronoboosted": false,
+                    "supply": 34,
+                    "name": "Overseer",
+                    "is_worker": false,
+                    "frame": 9081.2,
+                    "time": "6:45"
+                },
+                {
+                    "clock_position": null,
+                    "is_chronoboosted": false,
+                    "supply": 31,
+                    "name": "Overseer",
+                    "is_worker": false,
+                    "frame": 9150.2,
+                    "time": "6:48"
                 }
             ],
-            "color": "0042FF",
-            "abilities": [],
-            "result": "Win",
-            "is_winner": true,
-            "region": "us",
-            "level": null,
-            "pick_race": "Zerg",
+            "unitsLost": [
+                {
+                    "clock_position": null,
+                    "frame": 1315,
+                    "name": "Drone",
+                    "killer": null,
+                    "time": "0:58"
+                },
+                {
+                    "clock_position": null,
+                    "frame": 1844,
+                    "name": "Drone",
+                    "killer": null,
+                    "time": "1:22"
+                },
+                {
+                    "clock_position": null,
+                    "frame": 2611,
+                    "name": "Drone",
+                    "killer": null,
+                    "time": "1:56"
+                },
+                {
+                    "clock_position": null,
+                    "frame": 2980,
+                    "name": "Drone",
+                    "killer": null,
+                    "time": "2:13"
+                },
+                {
+                    "clock_position": null,
+                    "frame": 9005,
+                    "name": "Zergling",
+                    "killer": 1,
+                    "time": "6:42"
+                },
+                {
+                    "clock_position": null,
+                    "frame": 9052,
+                    "name": "Zergling",
+                    "killer": 1,
+                    "time": "6:44"
+                },
+                {
+                    "clock_position": null,
+                    "frame": 9062,
+                    "name": "Zergling",
+                    "killer": 1,
+                    "time": "6:44"
+                },
+                {
+                    "clock_position": null,
+                    "frame": 9099,
+                    "name": "Zergling",
+                    "killer": 1,
+                    "time": "6:46"
+                },
+                {
+                    "clock_position": null,
+                    "frame": 9108,
+                    "name": "Zergling",
+                    "killer": 1,
+                    "time": "6:46"
+                },
+                {
+                    "clock_position": null,
+                    "frame": 9882,
+                    "name": "Drone",
+                    "killer": null,
+                    "time": "7:21"
+                }
+            ],
+            "race": "Zerg",
+            "clock_position": null,
             "supply": [
                 [
                     0,
@@ -1030,368 +1373,25 @@
                     34
                 ]
             ],
-            "name": "A.I. 1 (Very Easy)",
-            "commander": "",
-            "buildOrder": [
-                {
-                    "name": "Drone",
-                    "is_worker": true,
-                    "frame": 28.200000000000045,
-                    "clock_position": null,
-                    "time": "0:01",
-                    "is_chronoboosted": false,
-                    "supply": 12
-                },
-                {
-                    "name": "Overlord",
-                    "is_worker": false,
-                    "frame": 290.8,
-                    "clock_position": null,
-                    "time": "0:12",
-                    "is_chronoboosted": false,
-                    "supply": 13
-                },
-                {
-                    "name": "Drone",
-                    "is_worker": true,
-                    "frame": 379.20000000000005,
-                    "clock_position": null,
-                    "time": "0:16",
-                    "is_chronoboosted": false,
-                    "supply": 13
-                },
-                {
-                    "name": "SpawningPool",
-                    "is_worker": false,
-                    "frame": 804,
-                    "clock_position": null,
-                    "time": "0:35",
-                    "is_chronoboosted": false,
-                    "supply": 14
-                },
-                {
-                    "name": "Extractor",
-                    "is_worker": false,
-                    "frame": 835,
-                    "clock_position": null,
-                    "time": "0:37",
-                    "is_chronoboosted": false,
-                    "supply": 14
-                },
-                {
-                    "name": "Drone",
-                    "is_worker": true,
-                    "frame": 893.2,
-                    "clock_position": null,
-                    "time": "0:39",
-                    "is_chronoboosted": false,
-                    "supply": 14
-                },
-                {
-                    "name": "Drone",
-                    "is_worker": true,
-                    "frame": 1053.2,
-                    "clock_position": null,
-                    "time": "0:47",
-                    "is_chronoboosted": false,
-                    "supply": 13
-                },
-                {
-                    "name": "Overlord",
-                    "is_worker": false,
-                    "frame": 1168.8,
-                    "clock_position": null,
-                    "time": "0:52",
-                    "is_chronoboosted": false,
-                    "supply": 14
-                },
-                {
-                    "name": "Zergling",
-                    "is_worker": false,
-                    "frame": 1873.2,
-                    "clock_position": null,
-                    "time": "1:23",
-                    "is_chronoboosted": false,
-                    "supply": 14
-                },
-                {
-                    "name": "Zergling",
-                    "is_worker": false,
-                    "frame": 1873.2,
-                    "clock_position": null,
-                    "time": "1:23",
-                    "is_chronoboosted": false,
-                    "supply": 14
-                },
-                {
-                    "name": "Queen",
-                    "is_worker": false,
-                    "frame": 1882.6,
-                    "clock_position": null,
-                    "time": "1:24",
-                    "is_chronoboosted": false,
-                    "supply": 14
-                },
-                {
-                    "name": "RoachWarren",
-                    "is_worker": false,
-                    "frame": 2099,
-                    "clock_position": null,
-                    "time": "1:33",
-                    "is_chronoboosted": false,
-                    "supply": 17
-                },
-                {
-                    "name": "Extractor",
-                    "is_worker": false,
-                    "frame": 2130,
-                    "clock_position": null,
-                    "time": "1:35",
-                    "is_chronoboosted": false,
-                    "supply": 17
-                },
-                {
-                    "name": "Drone",
-                    "is_worker": true,
-                    "frame": 2220.2,
-                    "clock_position": null,
-                    "time": "1:39",
-                    "is_chronoboosted": false,
-                    "supply": 17
-                },
-                {
-                    "name": "Zergling",
-                    "is_worker": false,
-                    "frame": 2289.2,
-                    "clock_position": null,
-                    "time": "1:42",
-                    "is_chronoboosted": false,
-                    "supply": 16
-                },
-                {
-                    "name": "Zergling",
-                    "is_worker": false,
-                    "frame": 2289.2,
-                    "clock_position": null,
-                    "time": "1:42",
-                    "is_chronoboosted": false,
-                    "supply": 16
-                },
-                {
-                    "name": "Drone",
-                    "is_worker": true,
-                    "frame": 2380.2,
-                    "clock_position": null,
-                    "time": "1:46",
-                    "is_chronoboosted": false,
-                    "supply": 16
-                },
-                {
-                    "name": "Drone",
-                    "is_worker": true,
-                    "frame": 2700.2,
-                    "clock_position": null,
-                    "time": "2:00",
-                    "is_chronoboosted": false,
-                    "supply": 18
-                },
-                {
-                    "name": "Zergling",
-                    "is_worker": false,
-                    "frame": 2706.2,
-                    "clock_position": null,
-                    "time": "2:00",
-                    "is_chronoboosted": false,
-                    "supply": 18
-                },
-                {
-                    "name": "Zergling",
-                    "is_worker": false,
-                    "frame": 2706.2,
-                    "clock_position": null,
-                    "time": "2:00",
-                    "is_chronoboosted": false,
-                    "supply": 18
-                },
-                {
-                    "name": "Drone",
-                    "is_worker": true,
-                    "frame": 2940.2,
-                    "clock_position": null,
-                    "time": "2:11",
-                    "is_chronoboosted": false,
-                    "supply": 20
-                },
-                {
-                    "name": "Drone",
-                    "is_worker": true,
-                    "frame": 3180.2,
-                    "clock_position": null,
-                    "time": "2:21",
-                    "is_chronoboosted": false,
-                    "supply": 21
-                },
-                {
-                    "name": "Drone",
-                    "is_worker": true,
-                    "frame": 3389.2,
-                    "clock_position": null,
-                    "time": "2:31",
-                    "is_chronoboosted": false,
-                    "supply": 22
-                },
-                {
-                    "name": "Overlord",
-                    "is_worker": false,
-                    "frame": 3416.8,
-                    "clock_position": null,
-                    "time": "2:32",
-                    "is_chronoboosted": false,
-                    "supply": 22
-                },
-                {
-                    "name": "Drone",
-                    "is_worker": true,
-                    "frame": 3549.2,
-                    "clock_position": null,
-                    "time": "2:38",
-                    "is_chronoboosted": false,
-                    "supply": 23
-                },
-                {
-                    "name": "Drone",
-                    "is_worker": true,
-                    "frame": 3709.2,
-                    "clock_position": null,
-                    "time": "2:45",
-                    "is_chronoboosted": false,
-                    "supply": 24
-                },
-                {
-                    "name": "Roach",
-                    "is_worker": false,
-                    "frame": 7784.4,
-                    "clock_position": null,
-                    "time": "5:47",
-                    "is_chronoboosted": false,
-                    "supply": 25
-                },
-                {
-                    "name": "Drone",
-                    "is_worker": true,
-                    "frame": 7787.2,
-                    "clock_position": null,
-                    "time": "5:47",
-                    "is_chronoboosted": false,
-                    "supply": 25
-                },
-                {
-                    "name": "Lair",
-                    "is_worker": false,
-                    "frame": 7796.2,
-                    "clock_position": null,
-                    "time": "5:48",
-                    "is_chronoboosted": false,
-                    "supply": 25
-                },
-                {
-                    "name": "Overlord",
-                    "is_worker": false,
-                    "frame": 7796.8,
-                    "clock_position": null,
-                    "time": "5:48",
-                    "is_chronoboosted": false,
-                    "supply": 25
-                },
-                {
-                    "name": "Drone",
-                    "is_worker": true,
-                    "frame": 7947.2,
-                    "clock_position": null,
-                    "time": "5:54",
-                    "is_chronoboosted": false,
-                    "supply": 28
-                },
-                {
-                    "name": "Drone",
-                    "is_worker": true,
-                    "frame": 8112.2,
-                    "clock_position": null,
-                    "time": "6:02",
-                    "is_chronoboosted": false,
-                    "supply": 29
-                },
-                {
-                    "name": "Drone",
-                    "is_worker": true,
-                    "frame": 8272.2,
-                    "clock_position": null,
-                    "time": "6:09",
-                    "is_chronoboosted": false,
-                    "supply": 30
-                },
-                {
-                    "name": "Hatchery",
-                    "is_worker": false,
-                    "frame": 8282,
-                    "clock_position": null,
-                    "time": "6:09",
-                    "is_chronoboosted": false,
-                    "supply": 30
-                },
-                {
-                    "name": "Drone",
-                    "is_worker": true,
-                    "frame": 8432.2,
-                    "clock_position": null,
-                    "time": "6:16",
-                    "is_chronoboosted": false,
-                    "supply": 30
-                },
-                {
-                    "name": "Drone",
-                    "is_worker": true,
-                    "frame": 8592.2,
-                    "clock_position": null,
-                    "time": "6:23",
-                    "is_chronoboosted": false,
-                    "supply": 31
-                },
-                {
-                    "name": "Roach",
-                    "is_worker": false,
-                    "frame": 8763.4,
-                    "clock_position": null,
-                    "time": "6:31",
-                    "is_chronoboosted": false,
-                    "supply": 32
-                },
-                {
-                    "name": "Overseer",
-                    "is_worker": false,
-                    "frame": 9081.2,
-                    "clock_position": null,
-                    "time": "6:45",
-                    "is_chronoboosted": false,
-                    "supply": 34
-                },
-                {
-                    "name": "Overseer",
-                    "is_worker": false,
-                    "frame": 9150.2,
-                    "clock_position": null,
-                    "time": "6:48",
-                    "is_chronoboosted": false,
-                    "supply": 31
-                }
-            ],
-            "clock_position": null,
-            "uid": 0,
-            "race": "Zerg",
-            "team": 2,
-            "handicap": 100
+            "league": null,
+            "abilities": [],
+            "level": null,
+            "pick_race": "Zerg",
+            "color": "0042FF",
+            "result": "Win"
         }
     },
+    "region": "us",
+    "game_type": "1v1",
+    "baseBuild": 48258,
+    "frames": 10030,
+    "map": "Echo LE (Void)",
+    "unix_timestamp": 1480199100,
+    "frames_per_second": 22.4,
+    "message": "",
+    "map_hash": "af34c3e976feaba6d3e934ed9ae2a2fbd40e01e58513567c46231133b266a4e6",
     "buildOrderExtracted": true,
-    "frames": 10030
+    "include_map_details": false,
+    "category": "Private",
+    "cooperative": false
 }
