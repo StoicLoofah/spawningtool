@@ -166,7 +166,7 @@ BUILD_DATA = {
         'built_from': ['Gateway', 'WarpGate'],
         },
     'Adept': {
-        'build_time': 27,
+        'build_time': 30,  # 27 -> 30 in 4.8.2
         'built_from': ['Gateway', 'WarpGate'],
         },
     'MothershipCore': {
@@ -617,7 +617,7 @@ BUILD_DATA = {
         'display_name': 'Infernal Pre-Igniter',
         },
     'CycloneLockOnDamageUpgrade': {  # re-introduced in 4.7.1
-        'build_time': 79,
+        'build_time': 100,  # 79s -> 100s in 4.8.2
         'built_from': ['TechLab'],
         'display_name': 'Mag-Field Accelerator',
         'race': 'Terran',
@@ -694,7 +694,7 @@ BUILD_DATA = {
         'built_from': ['FusionCore'],
         },
     'BattlecruiserEnableSpecializations': {
-        'build_time': 43,
+        'build_time': 100,  # 43 -> 100 in 4.8.2
         'built_from': ['FusionCore'],
         'display_name': 'Weapon Refit',
         },
@@ -760,7 +760,7 @@ BUILD_DATA = {
         'built_from': ['CyberneticsCore'],
         },
     'WarpGateResearch': {
-        'build_time': 114,
+        'build_time': 100,  # 114s -> 100s in 4.8.2
         'built_from': ['CyberneticsCore'],
         'display_name': 'Warp Gate',
         },
