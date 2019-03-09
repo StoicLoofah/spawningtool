@@ -16,6 +16,7 @@ BO_EXCLUDED = set([
     'LocustMPFlyer',  # LotV Alpha Mod
     'Changeling',
     'ChangelingMarine',
+    'ChangelingMarineShield',
     'ChangelingZealot',
     'ChangelingZergling',
     'ChangelingZerglingWings',

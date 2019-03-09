@@ -1,6 +1,7 @@
 Changes
 =======
 
+* v2.5.1, March 8, 2019 -- remove changelings of Marines with Combat Shield
 * v2.5.0, January 22, 2019 -- update ladder data for balance patch 4.8.2
 * v2.4.0, November 21, 2018 -- update ladder data for balance patch 4.7.1
 * v2.3.0, November 18, 2018 -- bump sc2reader==1.3.0 for StarCraft 4.7, add Zeratul
