@@ -41,6 +41,7 @@ BO_EXCLUDED = set([
     'SpecialNexus',
     'DisruptorPhased',  # Disruptor shots
     'ParasiticBombDummy',
+    'ParasiticBombRelayDummy',
     'LocustMPPrecursor',
     'RavenRepairDrone',
 ])
