@@ -1,6 +1,7 @@
 Changes
 =======
 
+* v2.5.2, March 27, 2019 -- update Forge upgrade timing for March 25, 2019 balance update
 * v2.5.1, March 8, 2019 -- remove changelings of Marines with Combat Shield
 * v2.5.0, January 22, 2019 -- update ladder data for balance patch 4.8.2
 * v2.4.0, November 21, 2018 -- update ladder data for balance patch 4.7.1

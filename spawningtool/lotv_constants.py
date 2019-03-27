@@ -702,39 +702,39 @@ BUILD_DATA = {
         },
     # protoss upgrades
     'ProtossGroundWeaponsLevel1': {
-        'build_time': 114,
+        'build_time': 129,
         'built_from': ['Forge'],
         },
     'ProtossGroundWeaponsLevel2': {
-        'build_time': 136,
+        'build_time': 154,
         'built_from': ['Forge'],
         },
     'ProtossGroundWeaponsLevel3': {
-        'build_time': 157,
+        'build_time': 179,
         'built_from': ['Forge'],
         },
     'ProtossGroundArmorsLevel1': {
-        'build_time': 114,
+        'build_time': 129,
         'built_from': ['Forge'],
         },
     'ProtossGroundArmorsLevel2': {
-        'build_time': 136,
+        'build_time': 154,
         'built_from': ['Forge'],
         },
     'ProtossGroundArmorsLevel3': {
-        'build_time': 157,
+        'build_time': 179,
         'built_from': ['Forge'],
         },
     'ProtossShieldsLevel1': {
-        'build_time': 114,
+        'build_time': 129,
         'built_from': ['Forge'],
         },
     'ProtossShieldsLevel2': {
-        'build_time': 136,
+        'build_time': 154,
         'built_from': ['Forge'],
         },
     'ProtossShieldsLevel3': {
-        'build_time': 157,
+        'build_time': 179,
         'built_from': ['Forge'],
         },
     'ProtossAirWeaponsLevel1': {
