@@ -73,7 +73,7 @@ class BuildEvent(TrackerEvent):
                                          clock_position=clock_position)
 
     def is_worker(self):
-        return self.name in ['SCV', 'Drone', 'Probe']
+        return self.name in ['SCV', 'Drone', 'Probe', 'Infested SCV']
 
     def to_dict(self):
         return {
