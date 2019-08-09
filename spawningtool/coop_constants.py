@@ -195,6 +195,12 @@ BO_EXCLUDED.update([
     'LarvaStetmann',
     'PowerTowerStetmann',  # Stetellite
     'RoachStetmannEgg',  # Spawned from Infestors
+    'BroodlingEscortStetmann',
+    'BroodlingStetmann',
+    'RavagerStetmannEgg',
+    'InterceptorStetmann',
+    'LurkerStetmannBurrowed',
+
 ])
 
 BO_CHANGED_EXCLUDED = BO_CHANGED_EXCLUDED.copy()
@@ -298,6 +304,8 @@ BO_UPGRADES_EXCLUDED.update([
     'MasteryStetmannStetzoneBonusesMovementSpeed',
     'MasteryStetmannStetzoneBonusesHPRegeneration',
     'MasteryStetmannStetzoneBonusesEnergyRegeneration',
+    'DeployPowerTowerTechLevel',  # not sure what this is
+    'PowerFieldSuperGaryStetmann',  # Gary-zone
 ])
 
 NEW_BUILD_DATA = {
@@ -4468,6 +4476,7 @@ COMMANDER_BUILD_DATA = {
             'type': 'Unit',
             'is_morph': False,
         },
+        # missing banelings
         'HydraliskStetmann': {
             'build_time': 33,
             'built_from': [],
@@ -4476,6 +4485,7 @@ COMMANDER_BUILD_DATA = {
             'type': 'Unit',
             'is_morph': False,
         },
+        # missing lurkers
         'CorruptorStetmann': {
             'build_time': 33,
             'built_from': [],
@@ -4488,6 +4498,22 @@ COMMANDER_BUILD_DATA = {
             'build_time': 50,
             'built_from': [],
             'display_name': 'Infestor',
+            'race': 'Zerg',
+            'type': 'Unit',
+            'is_morph': False,
+        },
+        'SuperGaryStetmannAbilities': {  # data has it marked as an upgrade
+            'build_time': 15,
+            'built_from': [],
+            'display_name': 'Super Gary',
+            'race': 'Zerg',
+            'type': 'Unit',
+            'is_morph': True,
+        },
+        'UltraliskStetmann': {
+            'build_time': 55,
+            'built_from': [],
+            'display_name': 'Ultralisk',
             'race': 'Zerg',
             'type': 'Unit',
             'is_morph': False,
@@ -4514,6 +4540,14 @@ COMMANDER_BUILD_DATA = {
             'build_time': 0,
             'built_from': [],
             'display_name': 'Spine Crawler',
+            'race': 'Zerg',
+            'type': 'Building',
+            'is_morph': False,
+        },
+        'SporeCrawlerStetmann': {
+            'build_time': 0,
+            'built_from': [],
+            'display_name': 'Spore Crawler',
             'race': 'Zerg',
             'type': 'Building',
             'is_morph': False,
@@ -4611,12 +4645,20 @@ COMMANDER_BUILD_DATA = {
             'type': 'Upgrade',
             'is_morph': False,
         },
+        'ZerglingStetmannAttackSpeed': {
+            'build_time': 60,
+            'built_from': ['SpawningPoolStetmann'],
+            'display_name': 'Adrenal Glands',
+            'race': 'Zerg',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
 
         # Evolution Chamber
         'StetmannMeleeWeaponsLevel1': {
             'build_time': 160,
             'built_from': ['EvolutionChamberStetmann'],
-            'display_name': 'Zerg Melee Attacks Level 1',
+            'display_name': 'Zerg Melee Weapons Level 1',
             'race': 'Zerg',
             'type': 'Upgrade',
             'is_morph': False,
@@ -4624,7 +4666,7 @@ COMMANDER_BUILD_DATA = {
         'StetmannMeleeWeaponsLevel2': {
             'build_time': 190,
             'built_from': ['EvolutionChamberStetmann'],
-            'display_name': 'Zerg Melee Attacks Level 2',
+            'display_name': 'Zerg Melee Weapons Level 2',
             'race': 'Zerg',
             'type': 'Upgrade',
             'is_morph': False,
@@ -4632,7 +4674,7 @@ COMMANDER_BUILD_DATA = {
         'StetmannMeleeWeaponsLevel3': {
             'build_time': 220,
             'built_from': ['EvolutionChamberStetmann'],
-            'display_name': 'Zerg Melee Attacks Level 3',
+            'display_name': 'Zerg Melee Weapons Level 3',
             'race': 'Zerg',
             'type': 'Upgrade',
             'is_morph': False,
@@ -4640,7 +4682,7 @@ COMMANDER_BUILD_DATA = {
         'StetmannMissileWeaponsLevel1': {
             'build_time': 160,
             'built_from': ['EvolutionChamberStetmann'],
-            'display_name': 'Zerg Missile Attacks Level 1',
+            'display_name': 'Zerg Missile Weapons Level 1',
             'race': 'Zerg',
             'type': 'Upgrade',
             'is_morph': False,
@@ -4648,7 +4690,7 @@ COMMANDER_BUILD_DATA = {
         'StetmannMissileWeaponsLevel2': {
             'build_time': 190,
             'built_from': ['EvolutionChamberStetmann'],
-            'display_name': 'Zerg Missile Attacks Level 2',
+            'display_name': 'Zerg Missile Weapons Level 2',
             'race': 'Zerg',
             'type': 'Upgrade',
             'is_morph': False,
@@ -4656,7 +4698,7 @@ COMMANDER_BUILD_DATA = {
         'StetmannMissileWeaponsLevel3': {
             'build_time': 220,
             'built_from': ['EvolutionChamberStetmann'],
-            'display_name': 'Zerg Missile Attacks Level 3',
+            'display_name': 'Zerg Missile Weapons Level 3',
             'race': 'Zerg',
             'type': 'Upgrade',
             'is_morph': False,
@@ -4689,8 +4731,24 @@ COMMANDER_BUILD_DATA = {
         # Baneling Nest
         'BanelingStetmannMovementSpeed': {
             'build_time': 60,
-            'built_from': [],
+            'built_from': ['BanelingNestStetmann'],
             'display_name': 'Anti-Centripetal Rocket Servos',
+            'race': 'Zerg',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+        'BanelingStetmannExtraDamage': {
+            'build_time': 90,
+            'built_from': ['BanelingNestStetmann'],
+            'display_name': 'Egonergy Enhanced Explosives',
+            'race': 'Zerg',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+        'BanelingStetmannManaShieldBonus': {
+            'build_time': 90,
+            'built_from': ['BanelingNestStetmann'],
+            'display_name': 'Egonergy Efficient Barrier',
             'race': 'Zerg',
             'type': 'Upgrade',
             'is_morph': False,
@@ -4707,15 +4765,86 @@ COMMANDER_BUILD_DATA = {
         },
         'HydraliskStetmannDamage': {
             'build_time': 90,
-            'built_from': [],
+            'built_from': ['HydraliskDenStetmann'],
             'display_name': 'Erudition Missile Launchers',
             'race': 'Zerg',
             'type': 'Upgrade',
             'is_morph': False,
         },
-
+        'HydraliskStetmannRange': {
+            'build_time': 90,
+            'built_from': ['HydraliskDenStetmann'],
+            'display_name': 'Tyr-Class Targeting System',
+            'race': 'Zerg',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+        'LurkerStetmannTunnelingBurstRange': {
+            'build_time': 90,
+            'built_from': ['HydraliskDenStetmann'],
+            'display_name': 'Extended Tunnel of TERROR Algorithm',
+            'race': 'Zerg',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+        'LurkerStetmannChannelingSpines': {
+            'build_time': 90,
+            'built_from': ['HydraliskDenStetmann'],
+            'display_name': 'Focused Strike Algorithm',
+            'race': 'Zerg',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
 
         # Spire
+        'StetmannAirWeaponsLevel1': {
+            'build_time': 160,
+            'built_from': ['SpireStetmann'],
+            'display_name': 'Zerg Flyer Weapons Level 1',
+            'race': 'Zerg',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+        'StetmannAirWeaponsLevel2': {
+            'build_time': 190,
+            'built_from': ['SpireStetmann'],
+            'display_name': 'Zerg Flyer Weapons Level 2',
+            'race': 'Zerg',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+        'StetmannAirWeaponsLevel3': {
+            'build_time': 220,
+            'built_from': ['SpireStetmann'],
+            'display_name': 'Zerg Flyer Weapons Level 3',
+            'race': 'Zerg',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+        'StetmannAirArmorsLevel1': {
+            'build_time': 160,
+            'built_from': ['SpireStetmann'],
+            'display_name': 'Zerg Flyer Armor Level 1',
+            'race': 'Zerg',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+        'StetmannAirArmorsLevel2': {
+            'build_time': 190,
+            'built_from': ['SpireStetmann'],
+            'display_name': 'Zerg Flyer Armor Level 2',
+            'race': 'Zerg',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+        'StetmannAirArmorsLevel3': {
+            'build_time': 220,
+            'built_from': ['SpireStetmann'],
+            'display_name': 'Zerg Flyer Armor Level 3',
+            'race': 'Zerg',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
         'CorruptorStetmannBiggerAoE': {
             'build_time': 60,
             'built_from': ['SpireStetmann'],
@@ -4724,7 +4853,74 @@ COMMANDER_BUILD_DATA = {
             'type': 'Upgrade',
             'is_morph': False,
         },
+        'CorruptorStetmannCausticSpray': {
+            'build_time': 90,
+            'built_from': ['SpireStetmann'],
+            'display_name': 'Terraclean Solvent',
+            'race': 'Zerg',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+        'BroodLordStetmannBombers': {
+            'build_time': 90,
+            'built_from': ['SpireStetmann'],
+            'display_name': 'Mecha Locusceptor Bays',
+            'race': 'Zerg',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+        'BroodLordStetmannYamato': {
+            'build_time': 90,
+            'built_from': ['SpireStetmann'],
+            'display_name': 'Stetmato Cannon',
+            'race': 'Zerg',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
 
+        # Infestation Pit
+        'InfestorStetmannRecharge': {
+            'build_time': 90,
+            'built_from': ['InfestationPitStetmann'],
+            'display_name': 'UMI-C Charging Protocol',
+            'race': 'Zerg',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+        'InfestorStetmannBonusRavager': {
+            'build_time': 90,
+            'built_from': ['InfestationPitStetmann'],
+            'display_name': 'BONUS Ravager',  # skip ! for safety
+            'race': 'Zerg',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+
+        # Ultralisk Cavern
+        'UltraliskBurrowChargeMechanicalStun': {
+            'build_time': 60,
+            'built_from': ['UltraliskCavernStetmann'],
+            'display_name': 'Electrostatic Surprise',  # skip ! for safety
+            'race': 'Zerg',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+        'UltraliskStetmannMechanicalLifeLeech': {
+            'build_time': 90,
+            'built_from': ['UltraliskCavernStetmann'],
+            'display_name': 'Mecha Mooch Module',
+            'race': 'Zerg',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+        'UltraliskStetmannArmor': {
+            'build_time': 90,
+            'built_from': ['UltraliskCavernStetmann'],
+            'display_name': 'Chitanium Plating',
+            'race': 'Zerg',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
     },
 }
 
