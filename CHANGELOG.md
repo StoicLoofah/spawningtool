@@ -1,6 +1,7 @@
 Changes
 =======
 
+* v2.6.0, August 9, 2019 -- add Stetmann, mark additional worker types
 * v2.5.2, March 27, 2019 -- update Forge upgrade timing for March 25, 2019 balance update
 * v2.5.1, March 8, 2019 -- remove changelings of Marines with Combat Shield
 * v2.5.0, January 22, 2019 -- update ladder data for balance patch 4.8.2
