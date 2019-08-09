@@ -190,6 +190,11 @@ BO_EXCLUDED.update([
     'ZeratulKhaydarinMonolithProjection',
     'ZeratulPhotonCannonProjection',
     'ZeratulXelNagaChargedCrystalCyan',
+
+    # Stetmann
+    'LarvaStetmann',
+    'PowerTowerStetmann',  # Stetellite
+    'RoachStetmannEgg',  # Spawned from Infestors
 ])
 
 BO_CHANGED_EXCLUDED = BO_CHANGED_EXCLUDED.copy()
@@ -286,6 +291,13 @@ BO_UPGRADES_EXCLUDED.update([
     'ZeratulArtifactTier3_DarkShine',
     'ZeratulArtifactTier3_RoboticsBay',
     'ProphecyArtifactsDiscovered',
+    # Stetmann
+    'PowerFieldEnergyRegeneration',
+    'PowerFieldHPRegeneration',
+    'PowerFieldMovementSpeed',
+    'MasteryStetmannStetzoneBonusesMovementSpeed',
+    'MasteryStetmannStetzoneBonusesHPRegeneration',
+    'MasteryStetmannStetzoneBonusesEnergyRegeneration',
 ])
 
 NEW_BUILD_DATA = {
@@ -4420,6 +4432,299 @@ COMMANDER_BUILD_DATA = {
             'type': 'Unit',
             'is_morph': False,
         },
+    },
+
+    'Stetmann': {
+        # Units
+        'DroneStetmann': {
+            'build_time': 17,
+            'built_from': [],
+            'display_name': 'Drone',
+            'race': 'Zerg',
+            'type': 'Unit',
+            'is_morph': False,
+        },
+        'OverlordStetmann': {
+            'build_time': 25,
+            'built_from': [],
+            'display_name': 'Overlord',
+            'race': 'Zerg',
+            'type': 'Unit',
+            'is_morph': False,
+        },
+        'OverseerStetmann': {
+            'build_time': 17,
+            'built_from': [],
+            'display_name': 'Overseer',
+            'race': 'Zerg',
+            'type': 'Unit',
+            'is_morph': True,
+        },
+        'ZerglingStetmann': {
+            'build_time': 25,
+            'built_from': [],
+            'display_name': 'Zergling',
+            'race': 'Zerg',
+            'type': 'Unit',
+            'is_morph': False,
+        },
+        'HydraliskStetmann': {
+            'build_time': 33,
+            'built_from': [],
+            'display_name': 'Hydralisk',
+            'race': 'Zerg',
+            'type': 'Unit',
+            'is_morph': False,
+        },
+        'CorruptorStetmann': {
+            'build_time': 33,
+            'built_from': [],
+            'display_name': 'Corruptor',
+            'race': 'Zerg',
+            'type': 'Unit',
+            'is_morph': False,
+        },
+        'InfestorStetmann': {
+            'build_time': 50,
+            'built_from': [],
+            'display_name': 'Infestor',
+            'race': 'Zerg',
+            'type': 'Unit',
+            'is_morph': False,
+        },
+
+        # Buildings
+        'ExtractorStetmann': {
+            'build_time': 0,
+            'built_from': [],
+            'display_name': 'Extractor',
+            'race': 'Zerg',
+            'type': 'Building',
+            'is_morph': False,
+        },
+        'SpawningPoolStetmann': {
+            'build_time': 0,
+            'built_from': [],
+            'display_name': 'Spawning Tool',
+            'race': 'Zerg',
+            'type': 'Building',
+            'is_morph': False,
+        },
+        'SpineCrawlerStetmann': {
+            'build_time': 0,
+            'built_from': [],
+            'display_name': 'Spine Crawler',
+            'race': 'Zerg',
+            'type': 'Building',
+            'is_morph': False,
+        },
+        'EvolutionChamberStetmann': {
+            'build_time': 0,
+            'built_from': [],
+            'display_name': 'Evolution Chamber',
+            'race': 'Zerg',
+            'type': 'Building',
+            'is_morph': False,
+        },
+        'BanelingNestStetmann': {
+            'build_time': 0,
+            'built_from': [],
+            'display_name': 'Baneling Nest',
+            'race': 'Zerg',
+            'type': 'Building',
+            'is_morph': False,
+        },
+        'HatcheryStetmann': {
+            'build_time': 0,
+            'built_from': [],
+            'display_name': 'Hatchery',
+            'race': 'Zerg',
+            'type': 'Building',
+            'is_morph': False,
+        },
+        'HydraliskDenStetmann': {
+            'build_time': 0,
+            'built_from': [],
+            'display_name': 'Hydralisk Den',
+            'race': 'Zerg',
+            'type': 'Building',
+            'is_morph': False,
+        },
+        'InfestationPitStetmann': {
+            'build_time': 0,
+            'built_from': [],
+            'display_name': 'Infestation Pit',
+            'race': 'Zerg',
+            'type': 'Building',
+            'is_morph': False,
+        },
+        'SpireStetmann': {
+            'build_time': 0,
+            'built_from': [],
+            'display_name': 'Spire',
+            'race': 'Zerg',
+            'type': 'Building',
+            'is_morph': False,
+        },
+        'UltraliskCavernStetmann': {
+            'build_time': 0,
+            'built_from': [],
+            'display_name': 'Ultralisk Cavern',
+            'race': 'Zerg',
+            'type': 'Building',
+            'is_morph': False,
+        },
+
+        # Upgrades
+        # Hatchery
+        'OverlordStetmannSpeed': {
+            'build_time': 60,
+            'built_from': [],
+            'display_name': 'Pneumatized Carapace',
+            'race': 'Zerg',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+        'OverlordStetmannTransport': {
+            'build_time': 60,
+            'built_from': [],
+            'display_name': 'Ventral Sacs',
+            'race': 'Zerg',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+
+        # Spawning Pool
+        'ZerglingStetmannMovementSpeed': {
+            'build_time': 60,
+            'built_from': ['SpawningPoolStetmann'],
+            'display_name': 'Metabolic Boost',
+            'race': 'Zerg',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+        'ZerglingStetmannHardenedShield': {
+            'build_time': 60,
+            'built_from': ['SpawningPoolStetmann'],
+            'display_name': 'Hardened Ergonergy Shield',
+            'race': 'Zerg',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+
+        # Evolution Chamber
+        'StetmannMeleeWeaponsLevel1': {
+            'build_time': 160,
+            'built_from': ['EvolutionChamberStetmann'],
+            'display_name': 'Zerg Melee Attacks Level 1',
+            'race': 'Zerg',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+        'StetmannMeleeWeaponsLevel2': {
+            'build_time': 190,
+            'built_from': ['EvolutionChamberStetmann'],
+            'display_name': 'Zerg Melee Attacks Level 2',
+            'race': 'Zerg',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+        'StetmannMeleeWeaponsLevel3': {
+            'build_time': 220,
+            'built_from': ['EvolutionChamberStetmann'],
+            'display_name': 'Zerg Melee Attacks Level 3',
+            'race': 'Zerg',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+        'StetmannMissileWeaponsLevel1': {
+            'build_time': 160,
+            'built_from': ['EvolutionChamberStetmann'],
+            'display_name': 'Zerg Missile Attacks Level 1',
+            'race': 'Zerg',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+        'StetmannMissileWeaponsLevel2': {
+            'build_time': 190,
+            'built_from': ['EvolutionChamberStetmann'],
+            'display_name': 'Zerg Missile Attacks Level 2',
+            'race': 'Zerg',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+        'StetmannMissileWeaponsLevel3': {
+            'build_time': 220,
+            'built_from': ['EvolutionChamberStetmann'],
+            'display_name': 'Zerg Missile Attacks Level 3',
+            'race': 'Zerg',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+        'StetmannGroundArmorsLevel1': {
+            'build_time': 160,
+            'built_from': ['EvolutionChamberStetmann'],
+            'display_name': 'Zerg Ground Armor Level 1',
+            'race': 'Zerg',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+        'StetmannGroundArmorsLevel2': {
+            'build_time': 190,
+            'built_from': ['EvolutionChamberStetmann'],
+            'display_name': 'Zerg Ground Armor Level 2',
+            'race': 'Zerg',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+        'StetmannGroundArmorsLevel3': {
+            'build_time': 220,
+            'built_from': ['EvolutionChamberStetmann'],
+            'display_name': 'Zerg Ground Armor Level 3',
+            'race': 'Zerg',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+
+        # Baneling Nest
+        'BanelingStetmannMovementSpeed': {
+            'build_time': 60,
+            'built_from': [],
+            'display_name': 'Anti-Centripetal Rocket Servos',
+            'race': 'Zerg',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+
+        # Hydralisk Den
+        'HydraliskStetmannMovementSpeed': {
+            'build_time': 60,
+            'built_from': ['HydraliskDenStetmann'],
+            'display_name': 'Muscular Augments',
+            'race': 'Zerg',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+        'HydraliskStetmannDamage': {
+            'build_time': 90,
+            'built_from': [],
+            'display_name': 'Erudition Missile Launchers',
+            'race': 'Zerg',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+
+
+        # Spire
+        'CorruptorStetmannBiggerAoE': {
+            'build_time': 60,
+            'built_from': ['SpireStetmann'],
+            'display_name': 'Wide Area Cluster Busters',
+            'race': 'Zerg',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+
     },
 }
 
