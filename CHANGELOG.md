@@ -1,6 +1,7 @@
 Changes
 =======
 
+* v2.6.1, October 14, 2019 -- bump sc2reader>=1.4.0, balance updates
 * v2.6.0, August 9, 2019 -- add Stetmann, mark additional worker types
 * v2.5.2, March 27, 2019 -- update Forge upgrade timing for March 25, 2019 balance update
 * v2.5.1, March 8, 2019 -- remove changelings of Marines with Combat Shield

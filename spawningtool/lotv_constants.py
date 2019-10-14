@@ -548,7 +548,7 @@ BUILD_DATA = {
         },
     # barracks tech lab
     'Stimpack': {
-        'build_time': 121,
+        'build_time': 100,  # reduced from 121s to 100s 8/21/19
         'built_from': ['TechLab'],
         'display_name': 'Stimpack',
         },
@@ -598,6 +598,14 @@ BUILD_DATA = {
     'GhostMoebiusReactor': {  # deprecated
         'build_time': 57,
         'built_from': ['GhostAcademy'],
+        },
+    'EnhancedShockwaves': {
+        'build_time': 79,
+        'built_from': ['GhostAcademy'],
+        'display_name': 'Enhanced Shockwaves',
+        'race': 'Terran',
+        'type': 'Upgrade',
+        'is_morph': False,
         },
     # factory tech lab
     'StrikeCannons': {  # deprecated
