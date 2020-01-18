@@ -372,6 +372,7 @@ BUILD_DATA = {
         'build_time': 157,
         'built_from': ['Spire', 'GreaterSpire'],
         },
+    # Spawning Pool Upgrades
     'zerglingmovementspeed': {
         'build_time': 79,
         'built_from': ['SpawningPool'],
@@ -380,10 +381,12 @@ BUILD_DATA = {
         'build_time': 93,
         'built_from': ['SpawningPool'],
         },
+    # Baneling Nest Upgrades
     'CentrificalHooks': {
         'build_time': 79,
         'built_from': ['BanelingNest'],
         },
+    # Roach Warren Upgrades
     'GlialReconstitution': {
         'build_time': 79,
         'built_from': ['RoachWarren'],
@@ -392,6 +395,7 @@ BUILD_DATA = {
         'build_time': 79,
         'built_from': ['RoachWarren'],
         },
+    # Hydralisk Den Upgrades
     'hydraliskspeed': {  # LotV Muscular Augments, deprecated 3.8
         'build_time': 71,
         'built_from': ['HydraliskDen'],
@@ -408,6 +412,7 @@ BUILD_DATA = {
         'build_time': 71,
         'built_from': ['HydraliskDen'],
     },
+    # Hatchery Upgrades
     'overlordspeed': {
         'build_time': 43,
         'built_from': ['Hatchery', 'Lair', 'Hive'],
@@ -420,6 +425,7 @@ BUILD_DATA = {
         'build_time': 71,
         'built_from': ['Hatchery', 'Lair', 'Hive'],
         },
+    # Infestation Pit Upgrades
     'InfestorEnergyUpgrade': {
         'build_time': 57,
         'built_from': ['InfestationPit'],
@@ -432,6 +438,15 @@ BUILD_DATA = {
         'build_time': 79,
         'built_from': ['InfestationPit'],
         },
+    'MicrobialShroud': {
+        'build_time': 79,
+        'built_from': ['InfestationPit'],
+        'display_name': 'Microbial Shroud',
+        'race': 'Zerg',
+        'type': 'Upgrade',
+        'is_morph': False,
+        },
+    # Ultralisk Cavern Upgrades
     'ChitinousPlating': {
         'build_time': 79,
         'built_from': ['UltraliskCavern'],
@@ -444,10 +459,23 @@ BUILD_DATA = {
         'type': 'Upgrade',
         'is_morph': False,
         },
+    # Lurker Den Upgrades
     'DiggingClaws': {
-        'build_time': 54,
+        'build_time': 57,
         'build_from': ['LurkerDenMP'],
+        'display_name': 'Adaptive Talons',
+        'race': 'Zerg',
+        'type': 'Upgrade',
+        'is_morph': False,
     },
+    'LurkerRange': {
+        'build_time': 57,
+        'built_from': ['LurkerDenMP'],
+        'display_name': 'Seismic Spines',
+        'race': 'Zerg',
+        'type': 'Upgrade',
+        'is_morph': False,
+        },
 
     # terran upgrades
     'TerranInfantryWeaponsLevel1': {
@@ -653,14 +681,6 @@ BUILD_DATA = {
         'build_time': 57,
         'built_from': ['TechLab'],
         },
-    'MedivacIncreaseSpeedBoost': {
-        'build_time': 57,
-        'built_from': ['TechLab'],
-        'display_name': 'Rapid Reignition System',  # renamed in 4.7.1
-        'race': 'Terran',
-        'type': 'Upgrade',
-        'is_morph': False,
-        },
     'RavenDamageUpgrade': {  # deprecated 3.8
         'build_time': 79,
         'built_from': ['TechLab'],
@@ -689,11 +709,6 @@ BUILD_DATA = {
         'built_from': ['TechLab'],
         'display_name': 'Hyperflight Rotors',
         },
-    'LiberatorAGRangeUpgrade': {
-        'build_time': 79,
-        'built_from': ['TechLab'],
-        'display_name': 'Advanced Ballistics',
-        },
     'RavenEnhancedMunitions': {
         'build_time': 79,
         'built_from': ['TechLab'],
@@ -707,6 +722,19 @@ BUILD_DATA = {
         'build_time': 100,  # 43 -> 100 in 4.8.2
         'built_from': ['FusionCore'],
         'display_name': 'Weapon Refit',
+        },
+    'LiberatorAGRangeUpgrade': {
+        'build_time': 79,
+        'built_from': ['FusionCore'],
+        'display_name': 'Advanced Ballistics',
+        },
+    'MedivacIncreaseSpeedBoost': {
+        'build_time': 57,
+        'built_from': ['FusionCore'],
+        'display_name': 'Rapid Reignition System',  # renamed in 4.7.1
+        'race': 'Terran',
+        'type': 'Upgrade',
+        'is_morph': False,
         },
     # protoss upgrades
     'ProtossGroundWeaponsLevel1': {
@@ -813,6 +841,7 @@ BUILD_DATA = {
         'built_from': ['TemplarArchives'],
         'display_name': 'Psionic Storm',
         },
+    # Fleet Beacon Upgrades
     'PhoenixRangeUpgrade': {
         'build_time': 64,
         'built_from': ['FleetBeacon'],
@@ -823,6 +852,15 @@ BUILD_DATA = {
         'built_from': ['FleetBeacon'],
         'display_name': 'Graviton Catapult',
         },
+    'VoidRaySpeedUpgrade': {
+        'build_time': 57,
+        'built_from': ['Fleet Beacon'],
+        'display_name': 'Flux Vanes',
+        'race': 'Protoss',
+        'type': 'Upgrade',
+        'is_morph': False,
+        },
+    # Dark Shrine Upgrades
     'DarkTemplarBlinkUpgrade': {
         'build_time': 100,  # decreased 121 -> 100 in 4.7.1
         'built_from': ['DarkShrine'],
@@ -838,7 +876,7 @@ BUILD_DATA = {
         'built_from': ['Lair'],
         },
     'LurkerDenMP': {
-        'build_time': 86,
+        'build_time': 57,
         'built_from': ['HydraliskDen'],
         },
     'GreaterSpire': {
@@ -861,10 +899,6 @@ BUILD_DATA = {
     'FlyingLocusts': {
         'build_time': 87,
         'built_from': ['InfestationPit'],
-        },
-    'LurkerRange': {
-        'build_time': 72,
-        'built_from': ['HydraliskDen', 'LurkerDenMP'],
         },
     'CycloneLockOnRangeUpgrade': {
         'build_time': 79,
