@@ -225,6 +225,7 @@ BO_CHANGED_EXCLUDED.update([
     'HotsRaptor',
     'HotSSwarmling',
     'HHReaper',
+
 ])
 
 
@@ -4970,8 +4971,22 @@ COMMANDER_BUILD_DATA = {
             'type': 'Unit',
             'is_morph': False,
         },
-        # TODO Aegis Guard Marauder
-        # TODO Emperor's Shadow Ghost
+        'MarauderMengsk': {
+            'build_time': 30,
+            'built_from': ['BarracksMengsk'],
+            'display_name': 'Marauder',  # Aegis Guard
+            'race': 'Terran',
+            'type': 'Unit',
+            'is_morph': False,
+        },
+        'GhostMengsk': {
+            'build_time': 40,
+            'built_from': ['BarracksMengsk'],
+            'display_name': 'Ghost',  # Emperor's Shadow
+            'race': 'Terran',
+            'type': 'Unit',
+            'is_morph': False,
+        },
         'SiegeTankMengsk': {
             'build_time': 45,
             'built_from': ['FactoryMengsk'],
@@ -4980,8 +4995,15 @@ COMMANDER_BUILD_DATA = {
             'type': 'Unit',
             'is_morph': False,
         },
-        # TODO Sky Fury Viking
-        'VikingMengsk': {
+        'ThorMengsk': {
+            'build_time': 60,
+            'built_from': ['FactoryMengsk'],
+            'display_name': 'Thor',  # Blackhammer
+            'race': 'Terran',
+            'type': 'Unit',
+            'is_morph': False,
+        },
+        'VikingMengskFighter': {
             'build_time': 42,
             'built_from': ['StarportMengsk'],
             'display_name': 'Viking',  # Sky Fury
@@ -5005,9 +5027,8 @@ COMMANDER_BUILD_DATA = {
             'type': 'Unit',
             'is_morph': False,
         },
-        # TODO BC
         'BattlecruiserMengsk': {
-            'build_time': 30,
+            'build_time': 90,
             'built_from': ['StarportMengsk'],
             'display_name': 'Battlecruiser',  # Pride of Augustgrad
             'race': 'Terran',
@@ -5056,7 +5077,14 @@ COMMANDER_BUILD_DATA = {
             'type': 'Building',
             'is_morph': False,
         },
-        # TODO Earthsplitter Ordinance
+        'ArtilleryMengsk': {
+            'build_time': 0,
+            'built_from': [],
+            'display_name': 'Earthsplitter Ordinance',
+            'race': 'Terran',
+            'type': 'Building',
+            'is_morph': False,
+        },
         'MissileTurretMengsk': {
             'build_time': 0,
             'built_from': [],
@@ -5171,17 +5199,15 @@ COMMANDER_BUILD_DATA = {
             'type': 'Upgrade',
             'is_morph': False,
         },
-        # TODO E Bay 3
-        '': {
-            'build_time': 90,
+        'BunkerDepotMengskRange': {
+            'build_time': 60,
             'built_from': ['EngineeringBayMengsk'],
             'display_name': 'Aim-assist Embrasures',
             'race': 'Terran',
             'type': 'Upgrade',
             'is_morph': False,
         },
-        # TODO E Bay 4
-        '': {
+        'ArtilleryMengskRange': {
             'build_time': 90,
             'built_from': ['EngineeringBayMengsk'],
             'display_name': 'Hemispheric Acceleraants',
@@ -5189,26 +5215,23 @@ COMMANDER_BUILD_DATA = {
             'type': 'Upgrade',
             'is_morph': False,
         },
-        # TODO Ghost Academy 1
-        '': {
-            'build_time': 90,
+        'MarauderMengskSlow': {
+            'build_time': 60,
             'built_from': ['GhostAcademyMengsk'],
             'display_name': 'Incapacitator Shells',
             'race': 'Terran',
             'type': 'Upgrade',
             'is_morph': False,
         },
-        # TODO Ghost Academy 2
-        '': {
-            'build_time': 90,
+        'GhostMengskGuidedStrike': {
+            'build_time': 60,
             'built_from': ['GhostAcademyMengsk'],
             'display_name': 'Sovereign Tactical Missiles',
             'race': 'Terran',
             'type': 'Upgrade',
             'is_morph': False,
         },
-        # TODO Armory 1
-        '': {
+        'MedivacMengskSiegeTankAirlift': {
             'build_time': 60,
             'built_from': ['ArmoryMengsk'],
             'display_name': 'Armament Stabilizers',
@@ -5216,8 +5239,7 @@ COMMANDER_BUILD_DATA = {
             'type': 'Upgrade',
             'is_morph': False,
         },
-        # TODO Armory 2
-        '': {
+        'ThorMengskArmorAura': {
             'build_time': 60,
             'built_from': ['ArmoryMengsk'],
             'display_name': 'Bulwark Field',
@@ -5257,8 +5279,7 @@ COMMANDER_BUILD_DATA = {
             'type': 'Upgrade',
             'is_morph': False,
         },
-        # TODO Fusion Core 4
-        '': {
+        'VikingMengskSpeed': {
             'build_time': 60,
             'built_from': ['FusionCoreMengsk'],
             'display_name': 'Aesir Turbines',
@@ -5266,8 +5287,7 @@ COMMANDER_BUILD_DATA = {
             'type': 'Upgrade',
             'is_morph': False,
         },
-        # TODO Fusion Core 5
-        '': {
+        'BattlecruiserMengskRangeAura': {
             'build_time': 60,
             'built_from': ['FusionCoreMengsk'],
             'display_name': 'Field-Assist Targeting System',
