@@ -201,6 +201,17 @@ BO_EXCLUDED.update([
     'InterceptorStetmann',
     'LurkerStetmannBurrowed',
 
+    # Mengsk
+    'BunkerDepotMengskDrop',  # target for the actual Bunker Drop
+    'NukeMengsk',  # created automatically
+    # drops from troopers
+    'TrooperMengskWeaponImprovedPickup',
+    'TrooperMengskWeaponFlamethrowerPickup',
+    'TrooperMengskWeaponAAPickup',
+    # zerg swarm summon
+    'ZerglingMengsk',
+    'HydraliskMengsk',
+
 ])
 
 BO_CHANGED_EXCLUDED = BO_CHANGED_EXCLUDED.copy()
@@ -224,16 +235,20 @@ BO_UPGRADES_EXCLUDED.update([
     'SprayTerran',
     'SprayProtoss',
     'SprayZerg',
+
     # Co-op
     'GameTimeGreaterthan5Seconds',
     'NydusNetworkCoopAllyLeft',
+
     # Vorazun
     'MasteryVorazunTimeStopHasteModifyPlayer',
+
     # Dehaka
     'DehakaCoopStage2',
     'DehakaColossusLegs',
     'DehakaCoopStage3',
     'DehakaAirAttackUpgrade',
+
     # Fenix
     'FenixNetworkedSuperiorityZealot',
     'FenixNetworkedSuperiorityAdept',
@@ -241,6 +256,7 @@ BO_UPGRADES_EXCLUDED.update([
     'FenixNetworkedSuperiorityColossus',
     'FenixNetworkedSuperiorityScout',
     'FenixNetworkedSuperiorityCarrier',
+
     # Tychus
     'TychusACOwned',
     'TychusReaperOwned',
@@ -253,7 +269,9 @@ BO_UPGRADES_EXCLUDED.update([
     'TychusMedicOwned',
     'TychusSquadAttackSpeedWithMastery',
     'TychusSquadHealthMastery',
+    'TychusHeroCount',
     'TychusHeroMaxed',  # not sure what this is, but with subsequent heros
+
     # Zeratul
     'ZeratulArtifactTier1',
     'ZeratulTopBarZealotSquad',
@@ -297,6 +315,7 @@ BO_UPGRADES_EXCLUDED.update([
     'ZeratulArtifactTier3_DarkShine',
     'ZeratulArtifactTier3_RoboticsBay',
     'ProphecyArtifactsDiscovered',
+
     # Stetmann
     'PowerFieldEnergyRegeneration',
     'PowerFieldHPRegeneration',
@@ -306,6 +325,9 @@ BO_UPGRADES_EXCLUDED.update([
     'MasteryStetmannStetzoneBonusesEnergyRegeneration',
     'DeployPowerTowerTechLevel',  # not sure what this is
     'PowerFieldSuperGaryStetmann',  # Gary-zone
+
+    # Mengsk
+    'ZergMengskCalldownLevel',
 ])
 
 NEW_BUILD_DATA = {
@@ -835,6 +857,14 @@ COMMANDER_BUILD_DATA = {
             'race': 'Zerg',
             'type': 'Unit',
             'is_morph': True,
+        },
+        'MutaliskBroodlord': {  # Mutalisk (Brood Lord strain)
+            'build_time': 33,
+            'built_from': [],
+            'display_name': 'Mutalisk',
+            'race': 'Zerg',
+            'type': 'Unit',
+            'is_morph': False,
         },
         'BroodLord': {
             'build_time': 15,
@@ -4918,6 +4948,330 @@ COMMANDER_BUILD_DATA = {
             'built_from': ['UltraliskCavernStetmann'],
             'display_name': 'Chitanium Plating',
             'race': 'Zerg',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+    },
+    'Mengsk': {
+        # Mengsk Units
+        'SCVMengsk': {
+            'build_time': 8,
+            'built_from': ['CommandCenterMengsk'],
+            'display_name': 'SCV',  # Dominion Laborer
+            'race': 'Terran',
+            'type': 'Unit',
+            'is_morph': False,
+        },
+        'TrooperMengsk': {
+            'build_time': 0,  # Technically 8 seconds, but typically from Supply Bunker or drop
+            'built_from': ['CommandCenterMengsk'],
+            'display_name': 'Dominion Trooper',
+            'race': 'Terran',
+            'type': 'Unit',
+            'is_morph': False,
+        },
+        # TODO Aegis Guard Marauder
+        # TODO Emperor's Shadow Ghost
+        'SiegeTankMengsk': {
+            'build_time': 45,
+            'built_from': ['FactoryMengsk'],
+            'display_name': 'Siege Tank',  # Shock Division
+            'race': 'Terran',
+            'type': 'Unit',
+            'is_morph': False,
+        },
+        # TODO Sky Fury Viking
+        'VikingMengsk': {
+            'build_time': 42,
+            'built_from': ['StarportMengsk'],
+            'display_name': 'Viking',  # Sky Fury
+            'race': 'Terran',
+            'type': 'Unit',
+            'is_morph': False,
+        },
+        'MedivacMengsk': {
+            'build_time': 21,
+            'built_from': ['StarportMengsk'],
+            'display_name': 'Medivac',  # Imperial Intercessor
+            'race': 'Terran',
+            'type': 'Unit',
+            'is_morph': False,
+        },
+        'RavenMengsk': {
+            'build_time': 30,
+            'built_from': ['StarportMengsk'],
+            'display_name': 'Imperial Witness',
+            'race': 'Terran',
+            'type': 'Unit',
+            'is_morph': False,
+        },
+        # TODO BC
+        'BattlecruiserMengsk': {
+            'build_time': 30,
+            'built_from': ['StarportMengsk'],
+            'display_name': 'Battlecruiser',  # Pride of Augustgrad
+            'race': 'Terran',
+            'type': 'Unit',
+            'is_morph': False,
+        },
+
+        # Mengsk Structures
+        'CommandCenterMengsk': {
+            'build_time': 0,
+            'built_from': [],
+            'display_name': 'Command Center',  # Enlistment Center
+            'race': 'Terran',
+            'type': 'Building',
+            'is_morph': False,
+        },
+        'RefineryMengsk': {
+            'build_time': 0,
+            'built_from': [],
+            'display_name': 'Refinery',
+            'race': 'Terran',
+            'type': 'Building',
+            'is_morph': False,
+        },
+        'BunkerDepotMengsk': {
+            'build_time': 0,
+            'built_from': [],
+            'display_name': 'Supply Bunker',
+            'race': 'Terran',
+            'type': 'Building',
+            'is_morph': False,
+        },
+        'BarracksMengsk': {
+            'build_time': 0,
+            'built_from': [],
+            'display_name': 'Barracks',
+            'race': 'Terran',
+            'type': 'Building',
+            'is_morph': False,
+        },
+        'EngineeringBayMengsk': {
+            'build_time': 0,
+            'built_from': [],
+            'display_name': 'Engineering Bay',
+            'race': 'Terran',
+            'type': 'Building',
+            'is_morph': False,
+        },
+        # TODO Earthsplitter Ordinance
+        'MissileTurretMengsk': {
+            'build_time': 0,
+            'built_from': [],
+            'display_name': 'Missile Turret',
+            'race': 'Terran',
+            'type': 'Building',
+            'is_morph': False,
+        },
+        'GhostAcademyMengsk': {
+            'build_time': 0,
+            'built_from': [],
+            'display_name': 'Ghost Academy',  # Royal Academy
+            'race': 'Terran',
+            'type': 'Building',
+            'is_morph': False,
+        },
+        'FactoryMengsk': {
+            'build_time': 0,
+            'built_from': [],
+            'display_name': 'Factory',
+            'race': 'Terran',
+            'type': 'Building',
+            'is_morph': False,
+        },
+        'ArmoryMengsk': {
+            'build_time': 0,
+            'built_from': [],
+            'display_name': 'Armory',
+            'race': 'Terran',
+            'type': 'Building',
+            'is_morph': False,
+        },
+        'StarportMengsk': {
+            'build_time': 0,
+            'built_from': [],
+            'display_name': 'Starport',
+            'race': 'Terran',
+            'type': 'Building',
+            'is_morph': False,
+        },
+        'FusionCoreMengsk': {
+            'build_time': 0,
+            'built_from': [],
+            'display_name': 'Fusion Core',
+            'race': 'Terran',
+            'type': 'Building',
+            'is_morph': False,
+        },
+
+        # Mengsk Upgrades
+        'MengskTrooperWeaponsLevel1': {
+            'build_time': 160,
+            'built_from': ['EngineeringBayMengsk'],
+            'display_name': 'Terran Infantry Weapons Level 1',  # Dominion Weapons
+            'race': 'Terran',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+        'MengskTrooperWeaponsLevel2': {
+            'build_time': 190,
+            'built_from': ['EngineeringBayMengsk'],
+            'display_name': 'Terran Infantry Weapons Level 2',
+            'race': 'Terran',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+        'MengskTrooperWeaponsLevel3': {
+            'build_time': 220,
+            'built_from': ['EngineeringBayMengsk'],
+            'display_name': 'Terran Infantry Weapons Level 3',
+            'race': 'Terran',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+        'MengskTrooperArmorsLevel1': {
+            'build_time': 160,
+            'built_from': ['EngineeringBayMengsk'],
+            'display_name': 'Terran Infantry Armor Level 1',  # Dominion Armor
+            'race': 'Terran',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+        'MengskTrooperArmorsLevel2': {
+            'build_time': 190,
+            'built_from': ['EngineeringBayMengsk'],
+            'display_name': 'Terran Infantry Armor Level 2',
+            'race': 'Terran',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+        'MengskTrooperArmorsLevel3': {
+            'build_time': 220,
+            'built_from': ['EngineeringBayMengsk'],
+            'display_name': 'Terran Infantry Armor Level 3',
+            'race': 'Terran',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+        'TrooperMengskDropTrain': {
+            'build_time': 60,
+            'built_from': ['EngineeringBayMengsk'],
+            'display_name': 'Orbital Trooper Pods',
+            'race': 'Terran',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+        'MengskStructureArmor': {
+            'build_time': 90,
+            'built_from': ['EngineeringBayMengsk'],
+            'display_name': 'Neosteel Armor',  # Neosteel Fortified Armor
+            'race': 'Terran',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+        # TODO E Bay 3
+        '': {
+            'build_time': 90,
+            'built_from': ['EngineeringBayMengsk'],
+            'display_name': 'Aim-assist Embrasures',
+            'race': 'Terran',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+        # TODO E Bay 4
+        '': {
+            'build_time': 90,
+            'built_from': ['EngineeringBayMengsk'],
+            'display_name': 'Hemispheric Acceleraants',
+            'race': 'Terran',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+        # TODO Ghost Academy 1
+        '': {
+            'build_time': 90,
+            'built_from': ['GhostAcademyMengsk'],
+            'display_name': 'Incapacitator Shells',
+            'race': 'Terran',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+        # TODO Ghost Academy 2
+        '': {
+            'build_time': 90,
+            'built_from': ['GhostAcademyMengsk'],
+            'display_name': 'Sovereign Tactical Missiles',
+            'race': 'Terran',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+        # TODO Armory 1
+        '': {
+            'build_time': 60,
+            'built_from': ['ArmoryMengsk'],
+            'display_name': 'Armament Stabilizers',
+            'race': 'Terran',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+        # TODO Armory 2
+        '': {
+            'build_time': 60,
+            'built_from': ['ArmoryMengsk'],
+            'display_name': 'Bulwark Field',
+            'race': 'Terran',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+        'MechTransformationSpeedMengsk': {
+            'build_time': 60,
+            'built_from': ['ArmoryMengsk'],
+            'display_name': 'Smart Servos',
+            'race': 'Terran',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+        'MedivacMengskDoubleHealBeam': {
+            'build_time': 60,
+            'built_from': ['FusionCoreMengsk'],
+            'display_name': 'Dual Resuscitators',
+            'race': 'Terran',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+        'MedivacMengskPermanentCloak': {
+            'build_time': 60,
+            'built_from': ['FusionCoreMengsk'],
+            'display_name': 'Scatter Veil',
+            'race': 'Terran',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+        'BlimpMengskTopbarRegen': {
+            'build_time': 60,
+            'built_from': ['FusionCoreMengsk'],
+            'display_name': 'Amplified Airwaves',
+            'race': 'Terran',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+        # TODO Fusion Core 4
+        '': {
+            'build_time': 60,
+            'built_from': ['FusionCoreMengsk'],
+            'display_name': 'Aesir Turbines',
+            'race': 'Terran',
+            'type': 'Upgrade',
+            'is_morph': False,
+        },
+        # TODO Fusion Core 5
+        '': {
+            'build_time': 60,
+            'built_from': ['FusionCoreMengsk'],
+            'display_name': 'Field-Assist Targeting System',
+            'race': 'Terran',
             'type': 'Upgrade',
             'is_morph': False,
         },
