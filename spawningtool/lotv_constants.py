@@ -131,7 +131,7 @@ BUILD_DATA = {
         'built_from': ['Starport'],
         },
     'Liberator': {
-        'build_time': 60,
+        'build_time': 43,
         'built_from': ['Starport'],
         },
     'Raven': {
