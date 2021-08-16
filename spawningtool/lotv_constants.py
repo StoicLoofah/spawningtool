@@ -64,852 +64,968 @@ BO_UPGRADES_EXCLUDED = set([
 ])
 
 BUILD_DATA = {
-    # terran units
-    'SCV': {
-        'build_time': 12,
-        'built_from': ['Command Center', 'Orbital Command'],
-        },
-    'Marine': {
-        'build_time': 18,
-        'built_from': ['Barracks'],
-        },
-    'Marauder': {
-        'build_time': 21,
-        'built_from': ['Barracks'],
-        },
-    'Reaper': {
-        'build_time': 32,
-        'built_from': ['Barracks'],
-        },
-    'Ghost': {
-        'build_time': 29,
-        'built_from': ['Barracks'],
-        },
-    'BattleHellion': {
-        'build_time': 21,
-        'built_from': ['Factory'],
-        'display_name': 'Hellbat',
-        },
-    'Hellion': {
-        'build_time': 21,
-        'built_from': ['Factory'],
-        },
-    'Hellbat': {  # deprecated?
-        'build_time': 21,
-        'built_from': ['Factory'],
-        },
-    'WidowMine': {
-        'build_time': 21,
-        'built_from': ['Factory'],
-        },
-    'SiegeTank': {
-        'build_time': 32,
-        'built_from': ['Factory'],
-        },
-    'Cyclone': {
-        'build_time': 32,
-        'built_from': ['Factory'],
-        },
-    'Thor': {
-        'build_time': 43,
-        'built_from': ['Factory'],
-        },
-    'Viking': {  # not built as this
-        'build_time': 30,
-        'built_from': ['Starport'],
-        },
-    'VikingFighter': {
-        'build_time': 30,  # all born as VikingFighters, but others in here for coverage
-        'built_from': ['Starport'],
-        },
-    'VikingAssault': {  # not built as this
-        'build_time': 30,
-        'built_from': ['Starport'],
-        },
-    'Medivac': {
-        'build_time': 30,
-        'built_from': ['Starport'],
-        },
-    'Liberator': {
-        'build_time': 43,
-        'built_from': ['Starport'],
-        },
-    'Raven': {
-        'build_time': 43,
-        'built_from': ['Starport'],
-        },
-    'Banshee': {
-        'build_time': 43,
-        'built_from': ['Starport'],
-        },
-    'Battlecruiser': {
-        'build_time': 64,
-        'built_from': ['Starport'],
-        },
-    'Nuke': {  # treat the Nuke like a unit
-        'build_time': 43,
-        'built_from': ['Ghost Academy'],
-        },
-    # protoss units
-    'Probe': {
-        'build_time': 12,
-        'built_from': ['Nexus'],
-        },
-    'Zealot': {
-        'build_time': 27,
-        'built_from': ['Gateway', 'WarpGate'],  # warpgate is necessary because of changing types
-        },
-    'Stalker': {
-        'build_time': 30,
-        'built_from': ['Gateway', 'WarpGate'],
-        },
-    'Sentry': {
-        'build_time': 26,
-        'built_from': ['Gateway', 'WarpGate'],
-        },
-    'Adept': {
-        'build_time': 30,  # 27 -> 30 in 4.8.2
-        'built_from': ['Gateway', 'WarpGate'],
-        },
-    'MothershipCore': {
-        'build_time': 21,
-        'built_from': ['Nexus'],
-        },
-    'Mothership': {
-        'build_time': 114,
-        'built_from': ['Nexus'],
-        },
-    'HighTemplar': {
-        'build_time': 39,
-        'built_from': ['Gateway', 'WarpGate'],
-        },
-    'DarkTemplar': {
-        'build_time': 39,
-        'built_from': ['Gateway', 'WarpGate'],
-        },
-    'Immortal': {
-        'build_time': 39,
-        'built_from': ['RoboticsFacility'],
-        },
-    'Disruptor': {
-        'build_time': 36,
-        'built_from': ['RoboticsFacility'],
-        },
-    'Colossus': {
-        'build_time': 54,
-        'built_from': ['RoboticsFacility'],
-        },
-    'Archon': {
-        'build_time': 9,
-        'built_from': [],
-        },
-    'Observer': {
-        'build_time': 21,
-        'built_from': ['RoboticsFacility'],
-        },
-    'WarpPrism': {
-        'build_time': 36,
-        'built_from': ['RoboticsFacility'],
-        },
-    'Phoenix': {
-        'build_time': 25,
-        'built_from': ['Stargate'],
-        },
-    'VoidRay': {
-        'build_time': 43,
-        'built_from': ['Stargate'],
-        },
-    'Oracle': {
-        'build_time': 37,
-        'built_from': ['Stargate'],
-        },
-    'Tempest': {
-        'build_time': 43,
-        'built_from': ['Stargate'],
-        },
-    'Carrier': {
-        'build_time': 64,  # decreased 86 -> 64 in 4.7.1
-        'built_from': ['Stargate'],
-        },
-    # zerg units
-    'Drone': {
-        'build_time': 12,
-        'built_from': [],
-        },
-    'Queen': {
-        'build_time': 36,
-        'built_from': ['Hatchery', 'Lair', 'Hive'],
-        },
-    'Zergling': {
-        'build_time': 17,
-        'built_from': [],
-        },
-    'Roach': {
-        'build_time': 19,
-        'built_from': [],
-        },
-    'Hydralisk': {
-        'build_time': 24,
-        'built_from': [],
-        },
-    'SwarmHost': {
-        'build_time': 29,
-        'built_from': [],
-        },
-    'Infestor': {
-        'build_time': 36,
-        'built_from': [],
-        },
-    'Ultralisk': {
-        'build_time': 39,
-        'built_from': [],
-        },
-    'Overlord': {
-        'build_time': 18,
-        'built_from': [],
-        },
-    'Mutalisk': {
-        'build_time': 24,
-        'built_from': [],
-        },
-    'Corruptor': {
-        'build_time': 29,
-        'built_from': [],
-        },
-    'Viper': {
-        'build_time': 29,
-        'built_from': [],
-        },
-    'NydusWorm': {  # deprecated
-        'build_time': 14,
-        'built_from': ['NydusCanal'],
-        },
-    'NydusCanal': {
-        'build_time': 14,
-        'built_from': ['NydusNetwork'],
-        },
-    # zerg evolved units
-    'Baneling': {
-        'build_time': 14,
-        'built_from': [],
-        },
-    'BroodLord': {
-        'build_time': 24,
-        'built_from': [],
-        },
-    'Overseer': {
-        'build_time': 12,
-        'built_from': ['Overlord'],
-        },
-    'RavagerCocoon': {  # Ravager - egg not itself because it is the start time, normal build time is 9
-        'build_time': 0,
-        'built_from': ['Roach'],
-        'display_name': 'Ravager',
-        },
-    'LurkerMPEgg': {  # Lurker - same logic as above, especially because burrow/unburrow counts, normal build time is 18
-        'build_time': 0,
-        'built_from': ['Hydralisk'],
-        'display_name': 'Lurker',
-        },
-    # zerg upgrades
-    'ZergMeleeWeaponsLevel1': {
-        'build_time': 114,
-        'built_from': ['EvolutionChamber'],
-        },
-    'ZergMeleeWeaponsLevel2': {
-        'build_time': 136,
-        'built_from': ['EvolutionChamber'],
-        },
-    'ZergMeleeWeaponsLevel3': {
-        'build_time': 157,
-        'built_from': ['EvolutionChamber'],
-        },
-    'ZergMissileWeaponsLevel1': {
-        'build_time': 114,
-        'built_from': ['EvolutionChamber'],
-        },
-    'ZergMissileWeaponsLevel2': {
-        'build_time': 136,
-        'built_from': ['EvolutionChamber'],
-        },
-    'ZergMissileWeaponsLevel3': {
-        'build_time': 157,
-        'built_from': ['EvolutionChamber'],
-        },
-    'ZergGroundArmorsLevel1': {
-        'build_time': 114,
-        'built_from': ['EvolutionChamber'],
-        },
-    'ZergGroundArmorsLevel2': {
-        'build_time': 136,
-        'built_from': ['EvolutionChamber'],
-        },
-    'ZergGroundArmorsLevel3': {
-        'build_time': 157,
-        'built_from': ['EvolutionChamber'],
-        },
-    'ZergFlyerWeaponsLevel1': {
-        'build_time': 114,
-        'built_from': ['Spire', 'GreaterSpire'],
-        },
-    'ZergFlyerWeaponsLevel2': {
-        'build_time': 136,
-        'built_from': ['Spire', 'GreaterSpire'],
-        },
-    'ZergFlyerWeaponsLevel3': {
-        'build_time': 157,
-        'built_from': ['Spire', 'GreaterSpire'],
-        },
-    'ZergFlyerArmorsLevel1': {
-        'build_time': 114,
-        'built_from': ['Spire', 'GreaterSpire'],
-        },
-    'ZergFlyerArmorsLevel2': {
-        'build_time': 136,
-        'built_from': ['Spire', 'GreaterSpire'],
-        },
-    'ZergFlyerArmorsLevel3': {
-        'build_time': 157,
-        'built_from': ['Spire', 'GreaterSpire'],
-        },
-    # Spawning Pool Upgrades
-    'zerglingmovementspeed': {
-        'build_time': 79,
-        'built_from': ['SpawningPool'],
-        },
-    'zerglingattackspeed': {
-        'build_time': 93,
-        'built_from': ['SpawningPool'],
-        },
-    # Baneling Nest Upgrades
-    'CentrificalHooks': {
-        'build_time': 79,
-        'built_from': ['BanelingNest'],
-        },
-    # Roach Warren Upgrades
-    'GlialReconstitution': {
-        'build_time': 79,
-        'built_from': ['RoachWarren'],
-        },
-    'TunnelingClaws': {
-        'build_time': 79,
-        'built_from': ['RoachWarren'],
-        },
-    # Hydralisk Den Upgrades
-    'hydraliskspeed': {  # LotV Muscular Augments, deprecated 3.8
-        'build_time': 71,
-        'built_from': ['HydraliskDen'],
-        },
-    'HydraliskSpeedUpgrade': {  # HotS deprecated Muscular Augments
-        'build_time': 71,
-        'built_from': ['HydraliskDen'],
-        },
-    'EvolveGroovedSpines': {  # added 3.8
-        'build_time': 71,
-        'built_from': ['HydraliskDen'],
+    "SCV": {
+        "build_time": 12,
+        "built_from": [ "Command Center", "Orbital Command" ],
+        "display_name": "SCV"
     },
-    'EvolveMuscularAugments': {  # added 3.8
-        'build_time': 71,
-        'built_from': ['HydraliskDen'],
+    "Marine": {
+        "build_time": 18,
+        "built_from": [ "Barracks" ],
+        "display_name": "Marine"
     },
-    # Hatchery Upgrades
-    'overlordspeed': {
-        'build_time': 43,
-        'built_from': ['Hatchery', 'Lair', 'Hive'],
-        },
-    'overlordtransport': {  # deprecated
-        'build_time': 93,
-        'built_from': ['Hatchery', 'Lair', 'Hive'],
-        },
-    'Burrow': {
-        'build_time': 71,
-        'built_from': ['Hatchery', 'Lair', 'Hive'],
-        },
-    # Infestation Pit Upgrades
-    'InfestorEnergyUpgrade': {
-        'build_time': 57,
-        'built_from': ['InfestationPit'],
-        },
-    'LocustLifetimeIncrease': {  # deprecated
-        'build_time': 87,
-        'built_from': ['InfestationPit'],
-        },
-    'NeuralParasite': {
-        'build_time': 79,
-        'built_from': ['InfestationPit'],
-        },
-    'MicrobialShroud': {
-        'build_time': 79,
-        'built_from': ['InfestationPit'],
-        'display_name': 'Microbial Shroud',
-        'race': 'Zerg',
-        'type': 'Upgrade',
-        'is_morph': False,
-        },
-    # Ultralisk Cavern Upgrades
-    'ChitinousPlating': {
-        'build_time': 79,
-        'built_from': ['UltraliskCavern'],
-        },
-    'AnabolicSynthesis': {  # added in 4.7.1
-        'build_time': 43,
-        'built_from': ['UltraliskCavern'],
-        'display_name': 'Anabolic Synthesis',
-        'race': 'Zerg',
-        'type': 'Upgrade',
-        'is_morph': False,
-        },
-    # Lurker Den Upgrades
-    'DiggingClaws': {
-        'build_time': 57,
-        'build_from': ['LurkerDenMP'],
-        'display_name': 'Adaptive Talons',
-        'race': 'Zerg',
-        'type': 'Upgrade',
-        'is_morph': False,
+    "Marauder": {
+        "build_time": 21,
+        "built_from": [ "Barracks" ],
+        "display_name": "Marauder"
     },
-    'LurkerRange': {
-        'build_time': 57,
-        'built_from': ['LurkerDenMP'],
-        'display_name': 'Seismic Spines',
-        'race': 'Zerg',
-        'type': 'Upgrade',
-        'is_morph': False,
-        },
-
-    # terran upgrades
-    'TerranInfantryWeaponsLevel1': {
-        'build_time': 114,
-        'built_from': ['EngineeringBay'],
-        },
-    'TerranInfantryWeaponsLevel2': {
-        'build_time': 136,
-        'built_from': ['EngineeringBay'],
-        },
-    'TerranInfantryWeaponsLevel3': {
-        'build_time': 157,
-        'built_from': ['EngineeringBay'],
-        },
-    'TerranInfantryArmorsLevel1': {
-        'build_time': 114,
-        'built_from': ['EngineeringBay'],
-        },
-    'TerranInfantryArmorsLevel2': {
-        'build_time': 136,
-        'built_from': ['EngineeringBay'],
-        },
-    'TerranInfantryArmorsLevel3': {
-        'build_time': 157,
-        'built_from': ['EngineeringBay'],
-        },
-    'TerranVehicleWeaponsLevel1': {
-        'build_time': 114,
-        'built_from': ['Armory'],
-        },
-    'TerranVehicleWeaponsLevel2': {
-        'build_time': 136,
-        'built_from': ['Armory'],
-        },
-    'TerranVehicleWeaponsLevel3': {
-        'build_time': 157,
-        'built_from': ['Armory'],
-        },
-    'TerranVehicleArmorsLevel1': {  # deprecated
-        'build_time': 114,
-        'built_from': ['Armory'],
-        },
-    'TerranVehicleArmorsLevel2': {  # deprecated
-        'build_time': 136,
-        'built_from': ['Armory'],
-        },
-    'TerranVehicleArmorsLevel3': {  # deprecated
-        'build_time': 157,
-        'built_from': ['Armory'],
-        },
-    'TerranShipWeaponsLevel1': {
-        'build_time': 114,
-        'built_from': ['Armory'],
-        },
-    'TerranShipWeaponsLevel2': {
-        'build_time': 136,
-        'built_from': ['Armory'],
-        },
-    'TerranShipWeaponsLevel3': {
-        'build_time': 157,
-        'built_from': ['Armory'],
-        },
-    'TerranShipArmorsLevel1': {  # deprecated
-        'build_time': 114,
-        'built_from': ['Armory'],
-        },
-    'TerranShipArmorsLevel2': {  # deprecated
-        'build_time': 136,
-        'built_from': ['Armory'],
-        },
-    'TerranShipArmorsLevel3': {  # deprecated
-        'build_time': 157,
-        'built_from': ['Armory'],
-        },
-    'TerranVehicleAndShipWeaponsLevel1': {  # deprecated
-        'build_time': 114,
-        'built_from': ['Armory'],
-        },
-    'TerranVehicleAndShipWeaponsLevel2': {  # deprecated
-        'build_time': 136,
-        'built_from': ['Armory'],
-        },
-    'TerranVehicleAndShipWeaponsLevel3': {  # deprecated
-        'build_time': 157,
-        'built_from': ['Armory'],
-        },
-    'TerranVehicleAndShipArmorsLevel1': {
-        'build_time': 114,
-        'built_from': ['Armory'],
-        },
-    'TerranVehicleAndShipArmorsLevel2': {
-        'build_time': 136,
-        'built_from': ['Armory'],
-        },
-    'TerranVehicleAndShipArmorsLevel3': {
-        'build_time': 157,
-        'built_from': ['Armory'],
-        },
-    # barracks tech lab
-    'Stimpack': {
-        'build_time': 100,  # reduced from 121s to 100s 8/21/19
-        'built_from': ['TechLab'],
-        'display_name': 'Stimpack',
-        },
-    'PunisherGrenades': {
-        'build_time': 43,
-        'built_from': ['TechLab'],
-        'display_name': 'Concussive Shells',
-        },
-    'ShieldWall': {
-        'build_time': 79,
-        'built_from': ['TechLab'],
-        'display_name': 'Combat Shield',
-        },
-    # engineering bay
-    'NeosteelFrame': {  # deprecated in 4.7.1
-        'build_time': 79,
-        'built_from': ['EngineeringBay'],
-        'display_name': 'Neosteel Frame',
-        'race': 'Terran',
-        'type': 'Upgrade',
-        'is_morph': False,
-
-        },
-    'HiSecAutoTracking': {
-        'build_time': 57,
-        'built_from': ['EngineeringBay'],
-        'display_name': 'Hi-Sec Auto Tracking',
-        'race': 'Terran',
-        'type': 'Upgrade',
-        'is_morph': False,
-
-        },
-    'TerranBuildingArmor': {
-        'build_time': 100,
-        'built_from': ['EngineeringBay'],
-        'display_name': 'Neosteel Armor',  # renamed in 4.7.1
-        'race': 'Terran',
-        'type': 'Upgrade',
-        'is_morph': False,
-        },
-    # ghost academy
-    'PersonalCloaking': {
-        'build_time': 86,
-        'built_from': ['GhostAcademy'],
-        'display_name': 'Personal Cloaking',
-        },
-    'GhostMoebiusReactor': {  # deprecated
-        'build_time': 57,
-        'built_from': ['GhostAcademy'],
-        },
-    'EnhancedShockwaves': {
-        'build_time': 79,
-        'built_from': ['GhostAcademy'],
-        'display_name': 'Enhanced Shockwaves',
-        'race': 'Terran',
-        'type': 'Upgrade',
-        'is_morph': False,
-        },
-    # factory tech lab
-    'StrikeCannons': {  # deprecated
-        'build_time': 79,
-        'built_from': ['TechLab'],
-        },
-    'DrillClaws': {
-        'build_time': 79,
-        'built_from': ['TechLab'],
-        'display_name': 'Drilling Claws',
-        },
-    'TransformationServos': {  # deprecated
-        'build_time': 79,
-        'built_from': ['TechLab'],
-        },
-    'HighCapacityBarrels': {
-        'build_time': 79,
-        'built_from': ['TechLab'],
-        'display_name': 'Infernal Pre-Igniter',
-        },
-    'CycloneLockOnDamageUpgrade': {  # re-introduced in 4.7.1
-        'build_time': 100,  # 79s -> 100s in 4.8.2
-        'built_from': ['TechLab'],
-        'display_name': 'Mag-Field Accelerator',
-        'race': 'Terran',
-        'type': 'Upgrade',
-        'is_morph': False,
-        },
-    'MagFieldLaunchers': {  # deprecated
-        'build_time': 79,
-        'built_from': ['TechLab'],
+    "Reaper": {
+        "build_time": 32,
+        "built_from": [ "Barracks" ],
+        "display_name": "Reaper"
     },
-    'CycloneRapidFireLaunchers': {  # deprecated in 4.7.1
-        'build_time': 79,
-        'built_from': ['TechLab'],
-        'display_name': 'Rapid Fire Launchers',
+    "Ghost": {
+        "build_time": 29,
+        "built_from": [ "Barracks" ],
+        "display_name": "Ghost"
     },
-    'SmartServos': {
-        'build_time': 79,
-        'built_from': ['TechLab'],
-        'display_name': 'Smart Servos',
+    "BattleHellion": {
+        "build_time": 21,
+        "built_from": [ "Factory" ],
+        "display_name": "Hellbat"
     },
-    # starport tech lab
-    'MedivacCaduceusReactor': {  # deprecated
-        'build_time': 57,
-        'built_from': ['TechLab'],
-        },
-    'RavenDamageUpgrade': {  # deprecated 3.8
-        'build_time': 79,
-        'built_from': ['TechLab'],
-        'display_name': 'Explosive Shrapnel Shells',
-        },
-    'RavenRecalibratedExplosives': {  # deprecated
-        'build_time': 79,
-        'built_from': ['TechLab'],
-        },
-    'BansheeCloak': {
-        'build_time': 79,
-        'built_from': ['TechLab'],
-        'display_name': 'Cloaking Field',
-        },
-    'DurableMaterials': {  # deprecated
-        'build_time': 79,
-        'built_from': ['TechLab'],
-        },
-    'RavenCorvidReactor': {
-        'build_time': 79,
-        'built_from': ['TechLab'],
-        'display_name': 'Corvid Reactor',
-        },
-    'BansheeSpeed': {
-        'build_time': 121,  # was 93 before 3.8.0
-        'built_from': ['TechLab'],
-        'display_name': 'Hyperflight Rotors',
-        },
-    'RavenEnhancedMunitions': {
-        'build_time': 79,
-        'built_from': ['TechLab'],
+    "Hellion": {
+        "build_time": 21,
+        "built_from": [ "Factory" ],
+        "display_name": "Hellion"
     },
-    # fusion core
-    'BattlecruiserBehemothReactor': {
-        'build_time': 57,
-        'built_from': ['FusionCore'],
-        },
-    'BattlecruiserEnableSpecializations': {
-        'build_time': 100,  # 43 -> 100 in 4.8.2
-        'built_from': ['FusionCore'],
-        'display_name': 'Weapon Refit',
-        },
-    'LiberatorAGRangeUpgrade': {
-        'build_time': 79,
-        'built_from': ['FusionCore'],
-        'display_name': 'Advanced Ballistics',
-        },
-    'MedivacIncreaseSpeedBoost': {
-        'build_time': 57,
-        'built_from': ['FusionCore'],
-        'display_name': 'Rapid Reignition System',  # renamed in 4.7.1
-        'race': 'Terran',
-        'type': 'Upgrade',
-        'is_morph': False,
-        },
-    # protoss upgrades
-    'ProtossGroundWeaponsLevel1': {
-        'build_time': 129,
-        'built_from': ['Forge'],
-        },
-    'ProtossGroundWeaponsLevel2': {
-        'build_time': 154,
-        'built_from': ['Forge'],
-        },
-    'ProtossGroundWeaponsLevel3': {
-        'build_time': 179,
-        'built_from': ['Forge'],
-        },
-    'ProtossGroundArmorsLevel1': {
-        'build_time': 129,
-        'built_from': ['Forge'],
-        },
-    'ProtossGroundArmorsLevel2': {
-        'build_time': 154,
-        'built_from': ['Forge'],
-        },
-    'ProtossGroundArmorsLevel3': {
-        'build_time': 179,
-        'built_from': ['Forge'],
-        },
-    'ProtossShieldsLevel1': {
-        'build_time': 129,
-        'built_from': ['Forge'],
-        },
-    'ProtossShieldsLevel2': {
-        'build_time': 154,
-        'built_from': ['Forge'],
-        },
-    'ProtossShieldsLevel3': {
-        'build_time': 179,
-        'built_from': ['Forge'],
-        },
-    'ProtossAirWeaponsLevel1': {
-        'build_time': 114,
-        'built_from': ['CyberneticsCore'],
-        },
-    'ProtossAirWeaponsLevel2': {
-        'build_time': 136,
-        'built_from': ['CyberneticsCore'],
-        },
-    'ProtossAirWeaponsLevel3': {
-        'build_time': 157,
-        'built_from': ['CyberneticsCore'],
-        },
-    'ProtossAirArmorsLevel1': {
-        'build_time': 114,
-        'built_from': ['CyberneticsCore'],
-        },
-    'ProtossAirArmorsLevel2': {
-        'build_time': 136,
-        'built_from': ['CyberneticsCore'],
-        },
-    'ProtossAirArmorsLevel3': {
-        'build_time': 157,
-        'built_from': ['CyberneticsCore'],
-        },
-    'WarpGateResearch': {
-        'build_time': 100,  # 114s -> 100s in 4.8.2
-        'built_from': ['CyberneticsCore'],
-        'display_name': 'Warp Gate',
-        },
-    'Charge': {
-        'build_time': 100,
-        'built_from': ['TwilightCouncil'],
-        'display_name': 'Charge',
-        },
-    'BlinkTech': {
-        'build_time': 121,
-        'built_from': ['TwilightCouncil'],
-        'display_name': 'Blink',
-        },
-    'AdeptShieldUpgrade': {  # deprecated from LotV Beta
-        'build_time': 57,
-        'built_from': ['TwilightCouncil'],
-        },
-    'AdeptPiercingAttack': {
-        'build_time': 100,
-        'built_from': ['TwilightCouncil'],
-        'display_name': 'Resonating Glaives',
-        },
-    'ObserverGraviticBooster': {
-        'build_time': 57,
-        'built_from': ['RoboticsBay'],
-        'display_name': 'Gravitic Boosters',
-        },
-    'GraviticDrive': {
-        'build_time': 57,
-        'built_from': ['RoboticsBay'],
-        'display_name': 'Gravitic Drive',
-        },
-    'ExtendedThermalLance': {
-        'build_time': 100,
-        'built_from': ['RoboticsBay'],
-        'display_name': 'Extended Thermal Lance',
-        },
-    'PsiStormTech': {
-        'build_time': 79,
-        'built_from': ['TemplarArchives'],
-        'display_name': 'Psionic Storm',
-        },
-    # Fleet Beacon Upgrades
-    'PhoenixRangeUpgrade': {
-        'build_time': 64,
-        'built_from': ['FleetBeacon'],
-        'display_name': 'Anion Pulse-Crystals',
-        },
-    'CarrierLaunchSpeedUpgrade': {  # deprecated in 4.7.1
-        'build_time': 57,
-        'built_from': ['FleetBeacon'],
-        'display_name': 'Graviton Catapult',
-        },
-    'VoidRaySpeedUpgrade': {
-        'build_time': 57,
-        'built_from': ['Fleet Beacon'],
-        'display_name': 'Flux Vanes',
-        'race': 'Protoss',
-        'type': 'Upgrade',
-        'is_morph': False,
-        },
-    # Dark Shrine Upgrades
-    'DarkTemplarBlinkUpgrade': {
-        'build_time': 100,  # decreased 121 -> 100 in 4.7.1
-        'built_from': ['DarkShrine'],
-        'display_name': 'Shadow Stride',
-        },
-    # unit change buildings
-    'Lair': {
-        'build_time': 57,
-        'built_from': ['Hatchery'],
-        },
-    'Hive': {
-        'build_time': 71,
-        'built_from': ['Lair'],
-        },
-    'LurkerDenMP': {
-        'build_time': 57,
-        'built_from': ['HydraliskDen'],
-        },
-    'GreaterSpire': {
-        'build_time': 71,
-        'built_from': ['Spire'],
-        },
-    'OrbitalCommand': {
-        'build_time': 25,
-        'built_from': ['CommandCenter'],
-        },
-    'PlanetaryFortress': {
-        'build_time': 36,
-        'built_from': ['CommandCenter'],
-        },
-    # unofficial LotV Alpha only
-    'HyperflightRotors': {
-        'build_time': 93,
-        'built_from': ['TechLab'],
-        },
-    'FlyingLocusts': {
-        'build_time': 87,
-        'built_from': ['InfestationPit'],
-        },
-    'CycloneLockOnRangeUpgrade': {
-        'build_time': 79,
-        'built_from': ['TechLab'],
+    "Hellbat": {
+        "build_time": 21,
+        "built_from": [ "Factory" ],
+        "display_name": "Hellbat"
     },
-    'CycloneAirUpgrade': {
-        'build_time': 79,
-        'built_from': ['TechLab'],
+    "WidowMine": {
+        "build_time": 21,
+        "built_from": [ "Factory" ],
+        "display_name": "Widow Mine"
     },
+    "SiegeTank": {
+        "build_time": 32,
+        "built_from": [ "Factory" ],
+        "display_name": "Siege Tank"
+    },
+    "Cyclone": {
+        "build_time": 32,
+        "built_from": [ "Factory" ],
+        "display_name": "Cyclone"
+    },
+    "Thor": {
+        "build_time": 43,
+        "built_from": [ "Factory" ],
+        "display_name": "Thor"
+    },
+    "Viking": {
+        "build_time": 30,
+        "built_from": [ "Starport" ],
+        "display_name": "Viking"
+    },
+    "VikingFighter": {
+        "build_time": 30,
+        "built_from": [ "Starport" ],
+        "display_name": "Viking"
+    },
+    "VikingAssault": {
+        "build_time": 30,
+        "built_from": [ "Starport" ],
+        "display_name": "Viking"
+    },
+    "Medivac": {
+        "build_time": 30,
+        "built_from": [ "Starport" ],
+        "display_name": "Medivac"
+    },
+    "Liberator": {
+        "build_time": 43,
+        "built_from": [ "Starport" ],
+        "display_name": "Liberator"
+    },
+    "Raven": {
+        "build_time": 43,
+        "built_from": [ "Starport" ],
+        "display_name": "Raven"
+    },
+    "Banshee": {
+        "build_time": 43,
+        "built_from": [ "Starport" ],
+        "display_name": "Banshee"
+    },
+    "Battlecruiser": {
+        "build_time": 64,
+        "built_from": [ "Starport" ],
+        "display_name": "Battlecruiser"
+    },
+    "Nuke": {
+        "build_time": 43,
+        "built_from": [ "Ghost Academy" ],
+        "display_name": "Nuke"
+    },
+    "Probe": {
+        "build_time": 12,
+        "built_from": [ "Nexus" ],
+        "display_name": "Probe"
+    },
+    "Zealot": {
+        "build_time": 27,
+        "built_from": [ "Gateway", "WarpGate" ],
+        "display_name": "Zealot"
+    },
+    "Stalker": {
+        "build_time": 30,
+        "built_from": [ "Gateway", "WarpGate" ],
+        "display_name": "Stalker"
+    },
+    "Sentry": {
+        "build_time": 26,
+        "built_from": [ "Gateway", "WarpGate" ],
+        "display_name": "Sentry"
+    },
+    "Adept": {
+        "build_time": 30,
+        "built_from": [ "Gateway", "WarpGate" ],
+        "display_name": "Adept"
+    },
+    "MothershipCore": {
+        "build_time": 21,
+        "built_from": [ "Nexus" ],
+        "display_name": "Mothership Core"
+    },
+    "Mothership": {
+        "build_time": 114,
+        "built_from": [ "Nexus" ],
+        "display_name": "Mothership"
+    },
+    "HighTemplar": {
+        "build_time": 39,
+        "built_from": [ "Gateway", "WarpGate" ],
+        "display_name": "High Templar"
+    },
+    "DarkTemplar": {
+        "build_time": 39,
+        "built_from": [ "Gateway", "WarpGate" ],
+        "display_name": "Dark Templar"
+    },
+    "Immortal": {
+        "build_time": 39,
+        "built_from": [ "RoboticsFacility" ],
+        "display_name": "Immortal"
+    },
+    "Disruptor": {
+        "build_time": 36,
+        "built_from": [ "RoboticsFacility" ],
+        "display_name": "Disruptor"
+    },
+    "Colossus": {
+        "build_time": 54,
+        "built_from": [ "RoboticsFacility" ],
+        "display_name": "Colossus"
+    },
+    "Archon": {
+        "build_time": 9,
+        "built_from": [],
+        "display_name": "Archon"
+    },
+    "Observer": {
+        "build_time": 21,
+        "built_from": [ "RoboticsFacility" ],
+        "display_name": "Observer"
+    },
+    "WarpPrism": {
+        "build_time": 36,
+        "built_from": [ "RoboticsFacility" ],
+        "display_name": "Warp Prism"
+    },
+    "Phoenix": {
+        "build_time": 25,
+        "built_from": [ "Stargate" ],
+        "display_name": "Phoenix"
+    },
+    "VoidRay": {
+        "build_time": 43,
+        "built_from": [ "Stargate" ],
+        "display_name": "Void Ray"
+    },
+    "Oracle": {
+        "build_time": 37,
+        "built_from": [ "Stargate" ],
+        "display_name": "Oracle"
+    },
+    "Tempest": {
+        "build_time": 43,
+        "built_from": [ "Stargate" ],
+        "display_name": "Tempest"
+    },
+    "Carrier": {
+        "build_time": 64,
+        "built_from": [ "Stargate" ],
+        "display_name": "Carrier"
+    },
+    "Drone": {
+        "build_time": 12,
+        "built_from": [],
+        "display_name": "Drone"
+    },
+    "Queen": {
+        "build_time": 36,
+        "built_from": [ "Hatchery", "Lair", "Hive" ],
+        "display_name": "Queen"
+    },
+    "Zergling": {
+        "build_time": 17,
+        "built_from": [],
+        "display_name": "Zergling"
+    },
+    "Roach": {
+        "build_time": 19,
+        "built_from": [],
+        "display_name": "Roach"
+    },
+    "Hydralisk": {
+        "build_time": 24,
+        "built_from": [],
+        "display_name": "Hydralisk"
+    },
+    "SwarmHost": {
+        "build_time": 29,
+        "built_from": [],
+        "display_name": "Swarm Host"
+    },
+    "Infestor": {
+        "build_time": 36,
+        "built_from": [],
+        "display_name": "Infestor"
+    },
+    "Ultralisk": {
+        "build_time": 39,
+        "built_from": [],
+        "display_name": "Ultralisk"
+    },
+    "Overlord": {
+        "build_time": 18,
+        "built_from": [],
+        "display_name": "Overlord"
+    },
+    "Mutalisk": {
+        "build_time": 24,
+        "built_from": [],
+        "display_name": "Mutalisk"
+    },
+    "Corruptor": {
+        "build_time": 29,
+        "built_from": [],
+        "display_name": "Corruptor"
+    },
+    "Viper": {
+        "build_time": 29,
+        "built_from": [],
+        "display_name": "Viper"
+    },
+    "NydusWorm": {
+        "build_time": 14,
+        "built_from": [ "NydusCanal" ],
+		"display_name": "Nydus Worm"
+    },
+    "NydusCanal": {
+        "build_time": 14,
+        "built_from": [ "NydusNetwork" ],
+        "display_name": "Nydus Canal"
+    },
+    "Baneling": {
+        "build_time": 14,
+        "built_from": [],
+        "display_name": "Baneling"
+    },
+    "BroodLord": {
+        "build_time": 24,
+        "built_from": [],
+        "display_name": "Brood Lord"
+    },
+    "Overseer": {
+        "build_time": 12,
+        "built_from": [ "Overlord" ],
+        "display_name": "Overseer"
+    },
+    "RavagerCocoon": {
+        "build_time": 0,
+        "built_from": [ "Roach" ],
+        "display_name": "Ravager"
+    },
+    "LurkerMPEgg": {
+        "build_time": 0,
+        "built_from": [ "Hydralisk" ],
+        "display_name": "Lurker"
+    },
+    "ZergMeleeWeaponsLevel1": {
+        "build_time": 114,
+        "built_from": [ "EvolutionChamber" ],
+        "display_name": "Zerg Melee Weapons Level 1"
+    },
+    "ZergMeleeWeaponsLevel2": {
+        "build_time": 136,
+        "built_from": [ "EvolutionChamber" ],
+        "display_name": "Zerg Melee Weapons Level 2"
+    },
+    "ZergMeleeWeaponsLevel3": {
+        "build_time": 157,
+        "built_from": [ "EvolutionChamber" ],
+        "display_name": "Zerg Melee Weapons Level 3"
+    },
+    "ZergMissileWeaponsLevel1": {
+        "build_time": 114,
+        "built_from": [ "EvolutionChamber" ],
+        "display_name": "Zerg Missile Weapons Level 1"
+    },
+    "ZergMissileWeaponsLevel2": {
+        "build_time": 136,
+        "built_from": [ "EvolutionChamber" ],
+        "display_name": "Zerg Missile Weapons Level 2"
+    },
+    "ZergMissileWeaponsLevel3": {
+        "build_time": 157,
+        "built_from": [ "EvolutionChamber" ],
+        "display_name": "Zerg Missile Weapons Level 3"
+    },
+    "ZergGroundArmorsLevel1": {
+        "build_time": 114,
+        "built_from": [ "EvolutionChamber" ],
+        "display_name": "Zerg Ground Armor Level 1"
+    },
+    "ZergGroundArmorsLevel2": {
+        "build_time": 136,
+        "built_from": [ "EvolutionChamber" ],
+        "display_name": "Zerg Ground Armor Level 2"
+    },
+    "ZergGroundArmorsLevel3": {
+        "build_time": 157,
+        "built_from": [ "EvolutionChamber" ],
+        "display_name": "Zerg Ground Armor Level 3"
+    },
+    "ZergFlyerWeaponsLevel1": {
+        "build_time": 114,
+        "built_from": [ "Spire", "GreaterSpire" ],
+        "display_name": "Zerg Flyer Weapons Level 1"
+    },
+    "ZergFlyerWeaponsLevel2": {
+        "build_time": 136,
+        "built_from": [ "Spire", "GreaterSpire" ],
+        "display_name": "Zerg Flyer Weapons Level 2"
+    },
+    "ZergFlyerWeaponsLevel3": {
+        "build_time": 157,
+        "built_from": [ "Spire", "GreaterSpire" ],
+        "display_name": "Zerg Flyer Weapons Level 3"
+    },
+    "ZergFlyerArmorsLevel1": {
+        "build_time": 114,
+        "built_from": [ "Spire", "GreaterSpire" ],
+        "display_name": "Zerg Flyer Armor Level 1"
+    },
+    "ZergFlyerArmorsLevel2": {
+        "build_time": 136,
+        "built_from": [ "Spire", "GreaterSpire" ],
+        "display_name": "Zerg Flyer Armor Level 2"
+    },
+    "ZergFlyerArmorsLevel3": {
+        "build_time": 157,
+        "built_from": [ "Spire", "GreaterSpire" ],
+        "display_name": "Zerg Flyer Armor Level 3"
+    },
+    "zerglingmovementspeed": {
+        "build_time": 79,
+        "built_from": [ "SpawningPool" ],
+        "display_name": "Metabolic Boost"
+    },
+    "zerglingattackspeed": {
+        "build_time": 93,
+        "built_from": [ "SpawningPool" ],
+        "display_name": "Adrenal Glands"
+    },
+    "CentrificalHooks": {
+        "build_time": 79,
+        "built_from": [ "BanelingNest" ],
+        "display_name": "Centrifical Hooks"
+    },
+    "GlialReconstitution": {
+        "build_time": 79,
+        "built_from": [ "RoachWarren" ],
+        "display_name": "Glial Reconstitution"
+    },
+    "TunnelingClaws": {
+        "build_time": 79,
+        "built_from": [ "RoachWarren" ],
+        "display_name": "Tunneling Claws"
+    },
+    "hydraliskspeed": {
+        "build_time": 71,
+        "built_from": [ "HydraliskDen" ],
+        "display_name": "Muscular Augments"
+    },
+    "HydraliskSpeedUpgrade": {
+        "build_time": 71,
+        "built_from": [ "HydraliskDen" ],
+        "display_name": "Muscular Augments"
+    },
+    "EvolveGroovedSpines": {
+        "build_time": 71,
+        "built_from": [ "HydraliskDen" ],
+        "display_name": "Grooved Spines"
+    },
+    "EvolveMuscularAugments": {
+        "build_time": 71,
+        "built_from": [ "HydraliskDen" ],
+        "display_name": "Muscular Augments"
+    },
+    "overlordspeed": {
+        "build_time": 43,
+        "built_from": [ "Hatchery", "Lair", "Hive" ],
+        "display_name": "Pneumatized Carapace"
+    },
+    "overlordtransport": {
+        "build_time": 93,
+        "built_from": [ "Hatchery", "Lair", "Hive" ],
+        "display_name": "Ventral Sacs"
+    },
+    "Burrow": {
+        "build_time": 71,
+        "built_from": [ "Hatchery", "Lair", "Hive" ],
+        "display_name": "Burrow"
+    },
+    "InfestorEnergyUpgrade": {
+        "build_time": 57,
+        "built_from": [ "InfestationPit" ],
+        "display_name": "Pathogen Glands"
+    },
+    "LocustLifetimeIncrease": {
+        "build_time": 87,
+        "built_from": [ "InfestationPit" ],
+        "display_name": "Enduring Locusts"
+    },
+    "NeuralParasite": {
+        "build_time": 79,
+        "built_from": [ "InfestationPit" ],
+        "display_name": "Neural Parasite"
+    },
+    "MicrobialShroud": {
+        "build_time": 79,
+        "built_from": [ "InfestationPit" ],
+        "display_name": "Microbial Shroud",
+        "race": "Zerg",
+        "type": "Upgrade",
+        "is_morph": False
+    },
+    "ChitinousPlating": {
+        "build_time": 79,
+        "built_from": [ "UltraliskCavern" ],
+        "display_name": "Chitinous Plating"
+    },
+    "AnabolicSynthesis": {
+        "build_time": 43,
+        "built_from": [ "UltraliskCavern" ],
+        "display_name": "Anabolic Synthesis",
+        "race": "Zerg",
+        "type": "Upgrade",
+        "is_morph": False
+    },
+    "DiggingClaws": {
+        "build_time": 57,
+        "built_from": [ "LurkerDenMP" ],
+        "display_name": "Adaptive Talons",
+        "race": "Zerg",
+        "type": "Upgrade",
+        "is_morph": False
+    },
+    "LurkerRange": {
+        "build_time": 57,
+        "built_from": [ "LurkerDenMP" ],
+        "display_name": "Seismic Spines",
+        "race": "Zerg",
+        "type": "Upgrade",
+        "is_morph": False
+    },
+    "TerranInfantryWeaponsLevel1": {
+        "build_time": 114,
+        "built_from": [ "EngineeringBay" ],
+        "display_name": "Terran Infantry Weapons Level 1"
+    },
+    "TerranInfantryWeaponsLevel2": {
+        "build_time": 136,
+        "built_from": [ "EngineeringBay" ],
+        "display_name": "Terran Infantry Weapons Level 2"
+    },
+    "TerranInfantryWeaponsLevel3": {
+        "build_time": 157,
+        "built_from": [ "EngineeringBay" ],
+        "display_name": "Terran Infantry Weapons Level 3"
+    },
+    "TerranInfantryArmorsLevel1": {
+        "build_time": 114,
+        "built_from": [ "EngineeringBay" ],
+        "display_name": "Terran Infantry Armor Level 1"
+    },
+    "TerranInfantryArmorsLevel2": {
+        "build_time": 136,
+        "built_from": [ "EngineeringBay" ],
+        "display_name": "Terran Infantry Armor Level 2"
+    },
+    "TerranInfantryArmorsLevel3": {
+        "build_time": 157,
+        "built_from": [ "EngineeringBay" ],
+        "display_name": "Terran Infantry Armor Level 3"
+    },
+    "TerranVehicleWeaponsLevel1": {
+        "build_time": 114,
+        "built_from": [ "Armory" ],
+        "display_name": "Terran Vehicle Weapons Level 1"
+    },
+    "TerranVehicleWeaponsLevel2": {
+        "build_time": 136,
+        "built_from": [ "Armory" ],
+        "display_name": "Terran Vehicle Weapons Level 2"
+    },
+    "TerranVehicleWeaponsLevel3": {
+        "build_time": 157,
+        "built_from": [ "Armory" ],
+        "display_name": "Terran Vehicle Weapons Level 3"
+    },
+    "TerranVehicleArmorsLevel1": {
+        "build_time": 114,
+        "built_from": [ "Armory" ],
+        "display_name": "Terran Vehicle Armor Level 1"
+    },
+    "TerranVehicleArmorsLevel2": {
+        "build_time": 136,
+        "built_from": [ "Armory" ],
+        "display_name": "Terran Vehicle Armor Level 2"
+    },
+    "TerranVehicleArmorsLevel3": {
+        "build_time": 157,
+        "built_from": [ "Armory" ],
+        "display_name": "Terran Vehicle Armor Level 3"
+    },
+    "TerranShipWeaponsLevel1": {
+        "build_time": 114,
+        "built_from": [ "Armory" ],
+        "display_name": "Terran Ship Weapons Level 1"
+    },
+    "TerranShipWeaponsLevel2": {
+        "build_time": 136,
+        "built_from": [ "Armory" ],
+        "display_name": "Terran Ship Weapons Level 2"
+    },
+    "TerranShipWeaponsLevel3": {
+        "build_time": 157,
+        "built_from": [ "Armory" ],
+        "display_name": "Terran Ship Weapons Level 3"
+    },
+    "TerranShipArmorsLevel1": {
+        "build_time": 114,
+        "built_from": [ "Armory" ],
+        "display_name": "Terran Ship Armor Level 1"
+    },
+    "TerranShipArmorsLevel2": {
+        "build_time": 136,
+        "built_from": [ "Armory" ],
+        "display_name": "Terran Ship Armor Level 2"
+    },
+    "TerranShipArmorsLevel3": {
+        "build_time": 157,
+        "built_from": [ "Armory" ],
+        "display_name": "Terran Ship Armor Level 3"
+    },
+    "TerranVehicleAndShipWeaponsLevel1": {
+        "build_time": 114,
+        "built_from": [ "Armory" ],
+        "display_name": "Terran Vehicle and Ship Weapons Level 1"
+    },
+    "TerranVehicleAndShipWeaponsLevel2": {
+        "build_time": 136,
+        "built_from": [ "Armory" ],
+        "display_name": "Terran Vehicle and Ship Weapons Level 2"
+    },
+    "TerranVehicleAndShipWeaponsLevel3": {
+        "build_time": 157,
+        "built_from": [ "Armory" ],
+        "display_name": "Terran Vehicle and Ship Weapons Level 3"
+    },
+    "TerranVehicleAndShipArmorsLevel1": {
+        "build_time": 114,
+        "built_from": [ "Armory" ],
+        "display_name": "Terran Vehicle And Ship Armor Level 1"
+    },
+    "TerranVehicleAndShipArmorsLevel2": {
+        "build_time": 136,
+        "built_from": [ "Armory" ],
+        "display_name": "Terran Vehicle And Ship Armor Level 2"
+    },
+    "TerranVehicleAndShipArmorsLevel3": {
+        "build_time": 157,
+        "built_from": [ "Armory" ],
+        "display_name": "Terran Vehicle And Ship Armor Level 3"
+    },
+    "Stimpack": {
+        "build_time": 100,
+        "built_from": [ "TechLab" ],
+        "display_name": "Stimpack"
+    },
+    "PunisherGrenades": {
+        "build_time": 43,
+        "built_from": [ "TechLab" ],
+        "display_name": "Concussive Shells"
+    },
+    "ShieldWall": {
+        "build_time": 79,
+        "built_from": [ "TechLab" ],
+        "display_name": "Combat Shield"
+    },
+    "NeosteelFrame": {
+        "build_time": 79,
+        "built_from": [ "EngineeringBay" ],
+        "display_name": "Neosteel Frame",
+        "race": "Terran",
+        "type": "Upgrade",
+        "is_morph": False
+    },
+    "HiSecAutoTracking": {
+        "build_time": 57,
+        "built_from": [ "EngineeringBay" ],
+        "display_name": "Hi-Sec Auto Tracking",
+        "race": "Terran",
+        "type": "Upgrade",
+        "is_morph": False
+    },
+    "TerranBuildingArmor": {
+        "build_time": 100,
+        "built_from": [ "EngineeringBay" ],
+        "display_name": "Building Armor",
+        "race": "Terran",
+        "type": "Upgrade",
+        "is_morph": False
+    },
+    "PersonalCloaking": {
+        "build_time": 86,
+        "built_from": [ "GhostAcademy" ],
+        "display_name": "Personal Cloaking"
+    },
+    "GhostMoebiusReactor": {
+        "build_time": 57,
+        "built_from": [ "GhostAcademy" ],
+        "display_name": "Moebius Reactor"
+    },
+    "EnhancedShockwaves": {
+        "build_time": 79,
+        "built_from": [ "GhostAcademy" ],
+        "display_name": "Enhanced Shockwaves",
+        "race": "Terran",
+        "type": "Upgrade",
+        "is_morph": False
+    },
+    "StrikeCannons": {
+        "build_time": 79,
+        "built_from": [ "TechLab" ],
+        "display_name": "250mm Strike Cannons"
+    },
+    "DrillClaws": {
+        "build_time": 79,
+        "built_from": [ "TechLab" ],
+        "display_name": "Drilling Claws"
+    },
+    "TransformationServos": {
+        "build_time": 79,
+        "built_from": [ "TechLab" ],
+        "display_name": "Transformation Servos"
+    },
+    "HighCapacityBarrels": {
+        "build_time": 79,
+        "built_from": [ "TechLab" ],
+        "display_name": "Infernal Pre-Igniter"
+    },
+    "CycloneLockOnDamageUpgrade": {
+        "build_time": 100,
+        "built_from": [ "TechLab" ],
+        "display_name": "Mag-Field Accelerator",
+        "race": "Terran",
+        "type": "Upgrade",
+        "is_morph": False
+    },
+    "MagFieldLaunchers": {
+        "build_time": 79,
+        "built_from": [ "TechLab" ],
+        "display_name": "Mag-Field Launchers"
+    },
+    "CycloneRapidFireLaunchers": {
+        "build_time": 79,
+        "built_from": [ "TechLab" ],
+        "display_name": "Rapid Fire Launchers"
+    },
+    "SmartServos": {
+        "build_time": 79,
+        "built_from": [ "TechLab" ],
+        "display_name": "Smart Servos"
+    },
+    "MedivacCaduceusReactor": {
+        "build_time": 57,
+        "built_from": [ "TechLab" ],
+        "display_name": "Caduceus Reactor"
+    },
+    "RavenDamageUpgrade": {
+        "build_time": 79,
+        "built_from": [ "TechLab" ],
+        "display_name": "Explosive Shrapnel Shells"
+    },
+    "RavenRecalibratedExplosives": {
+        "build_time": 79,
+        "built_from": [ "TechLab" ],
+        "display_name": "Recalibrated Explosives"
+    },
+    "BansheeCloak": {
+        "build_time": 79,
+        "built_from": [ "TechLab" ],
+        "display_name": "Cloaking Field"
+    },
+    "DurableMaterials": {
+        "build_time": 79,
+        "built_from": [ "TechLab" ],
+        "display_name": "Durable Materials"
+    },
+    "RavenCorvidReactor": {
+        "build_time": 79,
+        "built_from": [ "TechLab" ],
+        "display_name": "Corvid Reactor"
+    },
+    "BansheeSpeed": {
+        "build_time": 121,
+        "built_from": [ "TechLab" ],
+        "display_name": "Hyperflight Rotors"
+    },
+    "RavenEnhancedMunitions": {
+        "build_time": 79,
+        "built_from": [ "TechLab" ],
+        "display_name": "Enhanced Munitions"
+    },
+    "BattlecruiserBehemothReactor": {
+        "build_time": 57,
+        "built_from": [ "FusionCore" ],
+        "display_name": "Behemoth Reactor"
+    },
+    "BattlecruiserEnableSpecializations": {
+        "build_time": 100,
+        "built_from": [ "FusionCore" ],
+        "display_name": "Weapon Refit"
+    },
+    "LiberatorAGRangeUpgrade": {
+        "build_time": 79,
+        "built_from": [ "FusionCore" ],
+        "display_name": "Advanced Ballistics"
+    },
+    "MedivacIncreaseSpeedBoost": {
+        "build_time": 57,
+        "built_from": [ "FusionCore" ],
+        "display_name": "High Capacity Fuel Tanks",
+        "race": "Terran",
+        "type": "Upgrade",
+        "is_morph": False
+    },
+    "ProtossGroundWeaponsLevel1": {
+        "build_time": 129,
+        "built_from": [ "Forge" ],
+        "display_name": "Protoss Ground Weapons Level 1"
+    },
+    "ProtossGroundWeaponsLevel2": {
+        "build_time": 154,
+        "built_from": [ "Forge" ],
+        "display_name": "Protoss Ground Weapons Level 2"
+    },
+    "ProtossGroundWeaponsLevel3": {
+        "build_time": 179,
+        "built_from": [ "Forge" ],
+        "display_name": "Protoss Ground Weapons Level 3"
+    },
+    "ProtossGroundArmorsLevel1": {
+        "build_time": 129,
+        "built_from": [ "Forge" ],
+        "display_name": "Protoss Ground Armor Level 1"
+    },
+    "ProtossGroundArmorsLevel2": {
+        "build_time": 154,
+        "built_from": [ "Forge" ],
+        "display_name": "Protoss Ground Armor Level 2"
+    },
+    "ProtossGroundArmorsLevel3": {
+        "build_time": 179,
+        "built_from": [ "Forge" ],
+        "display_name": "Protoss Ground Armor Level 3"
+    },
+    "ProtossShieldsLevel1": {
+        "build_time": 129,
+        "built_from": [ "Forge" ],
+        "display_name": "Protoss Shields Level 1"
+    },
+    "ProtossShieldsLevel2": {
+        "build_time": 154,
+        "built_from": [ "Forge" ],
+        "display_name": "Protoss Shields Level 2"
+    },
+    "ProtossShieldsLevel3": {
+        "build_time": 179,
+        "built_from": [ "Forge" ],
+        "display_name": "Protoss Shields Level 3"
+    },
+    "ProtossAirWeaponsLevel1": {
+        "build_time": 114,
+        "built_from": [ "CyberneticsCore" ],
+        "display_name": "Protoss Air Weapons Level 1"
+    },
+    "ProtossAirWeaponsLevel2": {
+        "build_time": 136,
+        "built_from": [ "CyberneticsCore" ],
+        "display_name": "Protoss Air Weapons Level 2"
+    },
+    "ProtossAirWeaponsLevel3": {
+        "build_time": 157,
+        "built_from": [ "CyberneticsCore" ],
+        "display_name": "Protoss Air Weapons Level 3"
+    },
+    "ProtossAirArmorsLevel1": {
+        "build_time": 114,
+        "built_from": [ "CyberneticsCore" ],
+        "display_name": "Protoss Air Armor Level 1"
+    },
+    "ProtossAirArmorsLevel2": {
+        "build_time": 136,
+        "built_from": [ "CyberneticsCore" ],
+        "display_name": "Protoss Air Armor Level 2"
+    },
+    "ProtossAirArmorsLevel3": {
+        "build_time": 157,
+        "built_from": [ "CyberneticsCore" ],
+        "display_name": "Protoss Air Armor Level 3"
+    },
+    "WarpGateResearch": {
+        "build_time": 100,
+        "built_from": [ "CyberneticsCore" ],
+        "display_name": "Warp Gate"
+    },
+    "Charge": {
+        "build_time": 100,
+        "built_from": [ "TwilightCouncil" ],
+        "display_name": "Charge"
+    },
+    "BlinkTech": {
+        "build_time": 121,
+        "built_from": [ "TwilightCouncil" ],
+        "display_name": "Blink"
+    },
+    "AdeptShieldUpgrade": {
+        "build_time": 57,
+        "built_from": [ "TwilightCouncil" ],
+        "display_name": "Shield Upgrade"
+    },
+    "AdeptPiercingAttack": {
+        "build_time": 100,
+        "built_from": [ "TwilightCouncil" ],
+        "display_name": "Resonating Glaives"
+    },
+    "ObserverGraviticBooster": {
+        "build_time": 57,
+        "built_from": [ "RoboticsBay" ],
+        "display_name": "Observer Gravitic Boosters"
+    },
+    "GraviticDrive": {
+        "build_time": 57,
+        "built_from": [ "RoboticsBay" ],
+        "display_name": "Gravitic Drive"
+    },
+    "ExtendedThermalLance": {
+        "build_time": 100,
+        "built_from": [ "RoboticsBay" ],
+        "display_name": "Extended Thermal Lance"
+    },
+    "PsiStormTech": {
+        "build_time": 79,
+        "built_from": [ "TemplarArchives" ],
+        "display_name": "Psionic Storm"
+    },
+    "PhoenixRangeUpgrade": {
+        "build_time": 64,
+        "built_from": [ "FleetBeacon" ],
+        "display_name": "Anion Pulse-Crystals"
+    },
+    "CarrierLaunchSpeedUpgrade": {
+        "build_time": 57,
+        "built_from": [ "FleetBeacon" ],
+        "display_name": "Graviton Catapult"
+    },
+    "VoidRaySpeedUpgrade": {
+        "build_time": 57,
+        "built_from": [ "Fleet Beacon" ],
+        "display_name": "Flux Vanes",
+        "race": "Protoss",
+        "type": "Upgrade",
+        "is_morph": False
+    },
+    "DarkTemplarBlinkUpgrade": {
+        "build_time": 100,
+        "built_from": [ "DarkShrine" ],
+        "display_name": "Shadow Stride"
+    },
+    "Lair": {
+        "build_time": 57,
+        "built_from": [ "Hatchery" ],
+        "display_name": "Lair"
+    },
+    "Hive": {
+        "build_time": 71,
+        "built_from": [ "Lair" ],
+        "display_name": "Hive"
+    },
+    "LurkerDenMP": {
+        "build_time": 57,
+        "built_from": [ "HydraliskDen" ],
+        "display_name": "Lurker Den"
+    },
+    "GreaterSpire": {
+        "build_time": 71,
+        "built_from": [ "Spire" ],
+        "display_name": "Greater Spire"
+    },
+    "OrbitalCommand": {
+        "build_time": 25,
+        "built_from": [ "CommandCenter" ],
+        "display_name": "Orbital Command"
+    },
+    "PlanetaryFortress": {
+        "build_time": 36,
+        "built_from": [ "CommandCenter" ],
+        "display_name": "Planetary Fortress"
+    },
+    "HyperflightRotors": {
+        "build_time": 93,
+        "built_from": [ "TechLab" ],
+        "display_name": "Hyperflight Rotors"
+    },
+    "FlyingLocusts": {
+        "build_time": 87,
+        "built_from": [ "InfestationPit" ],
+        "display_name": "Flying Locusts"
+    },
+    "CycloneLockOnRangeUpgrade": {
+        "build_time": 79,
+        "built_from": [ "TechLab" ]
+    },
+    "CycloneAirUpgrade": {
+        "build_time": 79,
+        "built_from": [ "TechLab" ]
+    }
 }
-
 
 for value in BUILD_DATA.values():
     value['build_time'] *= FRAMES_PER_SECOND
