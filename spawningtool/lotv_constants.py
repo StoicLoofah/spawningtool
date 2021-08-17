@@ -960,7 +960,7 @@ BUILD_DATA = {
     "ObserverGraviticBooster": {
         "build_time": 57,
         "built_from": [ "RoboticsBay" ],
-        "display_name": "Observer Gravitic Boosters"
+        "display_name": "Gravitic Boosters"
     },
     "GraviticDrive": {
         "build_time": 57,
