@@ -459,7 +459,7 @@ BUILD_DATA = {
     "CentrificalHooks": {
         "build_time": 79,
         "built_from": [ "BanelingNest" ],
-        "display_name": "Centrifical Hooks"
+        "display_name": "Centrifugal Hooks"
     },
     # Roach Warren Upgrades
     "GlialReconstitution": {
