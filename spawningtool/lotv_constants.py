@@ -252,7 +252,7 @@ BUILD_DATA = {
         "display_name": "Phoenix"
     },
     "VoidRay": {
-        "build_time": 43,
+        "build_time": 37,  # decreased 43 -> 37 in 5.0.9 Mar 15 2022
         "built_from": [ "Stargate" ],
         "display_name": "Void Ray"
     },
