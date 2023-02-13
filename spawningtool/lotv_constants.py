@@ -151,7 +151,7 @@ BUILD_DATA = {
         "display_name": "Liberator"
     },
     "Raven": {
-        "build_time": 43,
+        "build_time": 34,  # 42.9 -> 34.3 in 5.0.11
         "built_from": [ "Starport" ],
         "display_name": "Raven"
     },
@@ -187,7 +187,7 @@ BUILD_DATA = {
         "display_name": "Stalker"
     },
     "Sentry": {
-        "build_time": 26,
+        "build_time": 23,  # 26.4 -> 22.9 in 5.0.11
         "built_from": [ "Gateway", "WarpGate" ],
         "display_name": "Sentry"
     },
@@ -358,7 +358,8 @@ BUILD_DATA = {
         "built_from": [ "Overlord" ],
         "display_name": "Overseer"
     },
-    "RavagerCocoon": {  # Ravager - egg not itself because it is the start time, normal build time is 9
+    "RavagerCocoon": {  # Ravager - egg not itself because it is the start time, normal build time is 12 seconds
+        # increased 8.57 -> 12.14 seconds in 5.0.11
         "build_time": 0,
         "built_from": [ "Roach" ],
         "display_name": "Ravager"
@@ -739,7 +740,7 @@ BUILD_DATA = {
         "built_from": [ "GhostAcademy" ],
         "display_name": "Moebius Reactor"
     },
-    "EnhancedShockwaves": {
+    "EnhancedShockwaves": {  # deprecated in 5.0.11
         "build_time": 79,
         "built_from": [ "GhostAcademy" ],
         "display_name": "Enhanced Shockwaves",
@@ -817,13 +818,13 @@ BUILD_DATA = {
         "built_from": [ "TechLab" ],
         "display_name": "Durable Materials"
     },
-    "RavenCorvidReactor": {
+    "RavenCorvidReactor": {  # deprecated in 5.0.11
         "build_time": 79,
         "built_from": [ "TechLab" ],
         "display_name": "Corvid Reactor"
     },
     "BansheeSpeed": {
-        "build_time": 121,  # was 93 before 3.8.0
+        "build_time": 121,  # 93 -> 121 in 3.8.0, 121.4 -> 100 in 5.0.11
         "built_from": [ "TechLab" ],
         "display_name": "Hyperflight Rotors"
     },
@@ -858,47 +859,47 @@ BUILD_DATA = {
     },
     # protoss upgrades
     "ProtossGroundWeaponsLevel1": {
-        "build_time": 129,
+        "build_time": 122,  # 128.6 -> 121.6 in 5.0.11
         "built_from": [ "Forge" ],
         "display_name": "Protoss Ground Weapons Level 1"
     },
     "ProtossGroundWeaponsLevel2": {
-        "build_time": 154,
+        "build_time": 145,  # 153.6 -> 144.6 in 5.0.11
         "built_from": [ "Forge" ],
         "display_name": "Protoss Ground Weapons Level 2"
     },
     "ProtossGroundWeaponsLevel3": {
-        "build_time": 179,
+        "build_time": 168,  # 178.6 -> 167.9 in 5.0.11
         "built_from": [ "Forge" ],
         "display_name": "Protoss Ground Weapons Level 3"
     },
     "ProtossGroundArmorsLevel1": {
-        "build_time": 129,
+        "build_time": 122,  # 128.6 -> 121.6 in 5.0.11
         "built_from": [ "Forge" ],
         "display_name": "Protoss Ground Armor Level 1"
     },
     "ProtossGroundArmorsLevel2": {
-        "build_time": 154,
+        "build_time": 145,  # 153.6 -> 144.6 in 5.0.11
         "built_from": [ "Forge" ],
         "display_name": "Protoss Ground Armor Level 2"
     },
     "ProtossGroundArmorsLevel3": {
-        "build_time": 179,
+        "build_time": 168,  # 178.6 -> 167.9 in 5.0.11
         "built_from": [ "Forge" ],
         "display_name": "Protoss Ground Armor Level 3"
     },
     "ProtossShieldsLevel1": {
-        "build_time": 129,
+        "build_time": 122,  # 128.6 -> 121.6 in 5.0.11
         "built_from": [ "Forge" ],
         "display_name": "Protoss Shields Level 1"
     },
     "ProtossShieldsLevel2": {
-        "build_time": 154,
+        "build_time": 145,  # 153.6 -> 144.6 in 5.0.11
         "built_from": [ "Forge" ],
         "display_name": "Protoss Shields Level 2"
     },
     "ProtossShieldsLevel3": {
-        "build_time": 179,
+        "build_time": 168,  # 178.6 -> 167.9 in 5.0.11
         "built_from": [ "Forge" ],
         "display_name": "Protoss Shields Level 3"
     },
