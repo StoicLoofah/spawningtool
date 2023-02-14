@@ -1,0 +1,5055 @@
+{
+    "map": "[ESL] Gresvan", 
+    "baseBuild": 89720, 
+    "expansion": "LotV", 
+    "cooperative": false, 
+    "frames": 13704, 
+    "message": "", 
+    "category": "Private", 
+    "map_hash": "6f86271a6231409aa75466193713b49ed3481aa7da4b5480e23f99efeceada56", 
+    "include_map_details": false, 
+    "region": "eu", 
+    "game_type": "1v1", 
+    "players": {
+        "1": {
+            "supply": [
+                [
+                    0, 
+                    12
+                ], 
+                [
+                    1, 
+                    12
+                ], 
+                [
+                    160, 
+                    13
+                ], 
+                [
+                    320, 
+                    14
+                ], 
+                [
+                    480, 
+                    14
+                ], 
+                [
+                    640, 
+                    15
+                ], 
+                [
+                    800, 
+                    15
+                ], 
+                [
+                    960, 
+                    16
+                ], 
+                [
+                    1120, 
+                    16
+                ], 
+                [
+                    1280, 
+                    17
+                ], 
+                [
+                    1440, 
+                    18
+                ], 
+                [
+                    1600, 
+                    18
+                ], 
+                [
+                    1760, 
+                    19
+                ], 
+                [
+                    1920, 
+                    19
+                ], 
+                [
+                    2080, 
+                    20
+                ], 
+                [
+                    2240, 
+                    20
+                ], 
+                [
+                    2400, 
+                    20
+                ], 
+                [
+                    2560, 
+                    20
+                ], 
+                [
+                    2720, 
+                    22
+                ], 
+                [
+                    2880, 
+                    23
+                ], 
+                [
+                    3040, 
+                    23
+                ], 
+                [
+                    3200, 
+                    24
+                ], 
+                [
+                    3360, 
+                    24
+                ], 
+                [
+                    3520, 
+                    25
+                ], 
+                [
+                    3680, 
+                    25
+                ], 
+                [
+                    3840, 
+                    26
+                ], 
+                [
+                    4000, 
+                    26
+                ], 
+                [
+                    4160, 
+                    29
+                ], 
+                [
+                    4320, 
+                    29
+                ], 
+                [
+                    4480, 
+                    30
+                ], 
+                [
+                    4640, 
+                    36
+                ], 
+                [
+                    4800, 
+                    37
+                ], 
+                [
+                    4960, 
+                    40
+                ], 
+                [
+                    5120, 
+                    40
+                ], 
+                [
+                    5280, 
+                    42
+                ], 
+                [
+                    5440, 
+                    46
+                ], 
+                [
+                    5600, 
+                    45
+                ], 
+                [
+                    5760, 
+                    47
+                ], 
+                [
+                    5920, 
+                    49
+                ], 
+                [
+                    6080, 
+                    51
+                ], 
+                [
+                    6240, 
+                    54
+                ], 
+                [
+                    6400, 
+                    54
+                ], 
+                [
+                    6560, 
+                    58
+                ], 
+                [
+                    6720, 
+                    60
+                ], 
+                [
+                    6880, 
+                    62
+                ], 
+                [
+                    7040, 
+                    65
+                ], 
+                [
+                    7200, 
+                    67
+                ], 
+                [
+                    7360, 
+                    74
+                ], 
+                [
+                    7520, 
+                    78
+                ], 
+                [
+                    7680, 
+                    79
+                ], 
+                [
+                    7840, 
+                    82
+                ], 
+                [
+                    8000, 
+                    79
+                ], 
+                [
+                    8160, 
+                    86
+                ], 
+                [
+                    8320, 
+                    90
+                ], 
+                [
+                    8480, 
+                    92
+                ], 
+                [
+                    8640, 
+                    91
+                ], 
+                [
+                    8800, 
+                    96
+                ], 
+                [
+                    8960, 
+                    102
+                ], 
+                [
+                    9120, 
+                    103
+                ], 
+                [
+                    9280, 
+                    106
+                ], 
+                [
+                    9440, 
+                    104
+                ], 
+                [
+                    9600, 
+                    95
+                ], 
+                [
+                    9760, 
+                    93
+                ], 
+                [
+                    9920, 
+                    85
+                ], 
+                [
+                    10080, 
+                    87
+                ], 
+                [
+                    10240, 
+                    89
+                ], 
+                [
+                    10400, 
+                    91
+                ], 
+                [
+                    10560, 
+                    90
+                ], 
+                [
+                    10720, 
+                    93
+                ], 
+                [
+                    10880, 
+                    97
+                ], 
+                [
+                    11040, 
+                    102
+                ], 
+                [
+                    11200, 
+                    100
+                ], 
+                [
+                    11360, 
+                    102
+                ], 
+                [
+                    11520, 
+                    107
+                ], 
+                [
+                    11680, 
+                    110
+                ], 
+                [
+                    11840, 
+                    102
+                ], 
+                [
+                    12000, 
+                    95
+                ], 
+                [
+                    12160, 
+                    99
+                ], 
+                [
+                    12320, 
+                    101
+                ], 
+                [
+                    12480, 
+                    107
+                ], 
+                [
+                    12640, 
+                    110
+                ], 
+                [
+                    12800, 
+                    100
+                ], 
+                [
+                    12960, 
+                    104
+                ], 
+                [
+                    13120, 
+                    100
+                ], 
+                [
+                    13280, 
+                    98
+                ], 
+                [
+                    13440, 
+                    100
+                ], 
+                [
+                    13586, 
+                    100
+                ]
+            ], 
+            "league": 0, 
+            "buildOrder": [
+                {
+                    "is_worker": true, 
+                    "name": "SCV", 
+                    "clock_position": null, 
+                    "supply": 12, 
+                    "frame": 13.200000000000045, 
+                    "is_chronoboosted": false, 
+                    "time": "0:00"
+                }, 
+                {
+                    "is_worker": true, 
+                    "name": "SCV", 
+                    "clock_position": null, 
+                    "supply": 13, 
+                    "frame": 284.20000000000005, 
+                    "is_chronoboosted": false, 
+                    "time": "0:12"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "SupplyDepot", 
+                    "clock_position": null, 
+                    "supply": 14, 
+                    "frame": 385, 
+                    "is_chronoboosted": false, 
+                    "time": "0:17"
+                }, 
+                {
+                    "is_worker": true, 
+                    "name": "SCV", 
+                    "clock_position": null, 
+                    "supply": 14, 
+                    "frame": 555.2, 
+                    "is_chronoboosted": false, 
+                    "time": "0:24"
+                }, 
+                {
+                    "is_worker": true, 
+                    "name": "SCV", 
+                    "clock_position": null, 
+                    "supply": 15, 
+                    "frame": 868.2, 
+                    "is_chronoboosted": false, 
+                    "time": "0:38"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Barracks", 
+                    "clock_position": null, 
+                    "supply": 15, 
+                    "frame": 920, 
+                    "is_chronoboosted": false, 
+                    "time": "0:41"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Refinery", 
+                    "clock_position": null, 
+                    "supply": 16, 
+                    "frame": 1010, 
+                    "is_chronoboosted": false, 
+                    "time": "0:45"
+                }, 
+                {
+                    "is_worker": true, 
+                    "name": "SCV", 
+                    "clock_position": null, 
+                    "supply": 16, 
+                    "frame": 1139.2, 
+                    "is_chronoboosted": false, 
+                    "time": "0:50"
+                }, 
+                {
+                    "is_worker": true, 
+                    "name": "SCV", 
+                    "clock_position": null, 
+                    "supply": 17, 
+                    "frame": 1434.2, 
+                    "is_chronoboosted": false, 
+                    "time": "1:04"
+                }, 
+                {
+                    "is_worker": true, 
+                    "name": "SCV", 
+                    "clock_position": null, 
+                    "supply": 18, 
+                    "frame": 1705.2, 
+                    "is_chronoboosted": false, 
+                    "time": "1:16"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Reaper", 
+                    "clock_position": null, 
+                    "supply": 19, 
+                    "frame": 1987.2, 
+                    "is_chronoboosted": false, 
+                    "time": "1:28"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Orbital Command", 
+                    "clock_position": null, 
+                    "supply": 19, 
+                    "frame": 1991.0, 
+                    "is_chronoboosted": false, 
+                    "time": "1:28"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "CommandCenter", 
+                    "clock_position": null, 
+                    "supply": 20, 
+                    "frame": 2356, 
+                    "is_chronoboosted": false, 
+                    "time": "1:45"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "SupplyDepot", 
+                    "clock_position": null, 
+                    "supply": 20, 
+                    "frame": 2558, 
+                    "is_chronoboosted": false, 
+                    "time": "1:54"
+                }, 
+                {
+                    "is_worker": true, 
+                    "name": "SCV", 
+                    "clock_position": null, 
+                    "supply": 20, 
+                    "frame": 2599.2, 
+                    "is_chronoboosted": false, 
+                    "time": "1:56"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Marine", 
+                    "clock_position": null, 
+                    "supply": 20, 
+                    "frame": 2701.8, 
+                    "is_chronoboosted": false, 
+                    "time": "2:00"
+                }, 
+                {
+                    "is_worker": true, 
+                    "name": "SCV", 
+                    "clock_position": null, 
+                    "supply": 22, 
+                    "frame": 2870.2, 
+                    "is_chronoboosted": false, 
+                    "time": "2:08"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Factory", 
+                    "clock_position": null, 
+                    "supply": 23, 
+                    "frame": 2978, 
+                    "is_chronoboosted": false, 
+                    "time": "2:12"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Bunker", 
+                    "clock_position": null, 
+                    "supply": 23, 
+                    "frame": 3150, 
+                    "is_chronoboosted": false, 
+                    "time": "2:20"
+                }, 
+                {
+                    "is_worker": true, 
+                    "name": "SCV", 
+                    "clock_position": null, 
+                    "supply": 23, 
+                    "frame": 3180.2, 
+                    "is_chronoboosted": false, 
+                    "time": "2:21"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "BarracksReactor", 
+                    "clock_position": null, 
+                    "supply": 24, 
+                    "frame": 3242, 
+                    "is_chronoboosted": false, 
+                    "time": "2:24"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Refinery", 
+                    "clock_position": null, 
+                    "supply": 24, 
+                    "frame": 3382, 
+                    "is_chronoboosted": false, 
+                    "time": "2:30"
+                }, 
+                {
+                    "is_worker": true, 
+                    "name": "SCV", 
+                    "clock_position": null, 
+                    "supply": 24, 
+                    "frame": 3451.2, 
+                    "is_chronoboosted": false, 
+                    "time": "2:34"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Barracks", 
+                    "clock_position": null, 
+                    "supply": 25, 
+                    "frame": 3600, 
+                    "is_chronoboosted": false, 
+                    "time": "2:40"
+                }, 
+                {
+                    "is_worker": true, 
+                    "name": "SCV", 
+                    "clock_position": null, 
+                    "supply": 25, 
+                    "frame": 3825.2, 
+                    "is_chronoboosted": false, 
+                    "time": "2:50"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Orbital Command", 
+                    "clock_position": null, 
+                    "supply": 26, 
+                    "frame": 4012.0, 
+                    "is_chronoboosted": false, 
+                    "time": "2:59"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "FactoryTechLab", 
+                    "clock_position": null, 
+                    "supply": 26, 
+                    "frame": 4086, 
+                    "is_chronoboosted": false, 
+                    "time": "3:02"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Marine", 
+                    "clock_position": null, 
+                    "supply": 26, 
+                    "frame": 4090.8, 
+                    "is_chronoboosted": false, 
+                    "time": "3:02"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Marine", 
+                    "clock_position": null, 
+                    "supply": 26, 
+                    "frame": 4093.8, 
+                    "is_chronoboosted": false, 
+                    "time": "3:02"
+                }, 
+                {
+                    "is_worker": true, 
+                    "name": "SCV", 
+                    "clock_position": null, 
+                    "supply": 26, 
+                    "frame": 4146.2, 
+                    "is_chronoboosted": false, 
+                    "time": "3:05"
+                }, 
+                {
+                    "is_worker": true, 
+                    "name": "SCV", 
+                    "clock_position": null, 
+                    "supply": 29, 
+                    "frame": 4417.2, 
+                    "is_chronoboosted": false, 
+                    "time": "3:17"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Marine", 
+                    "clock_position": null, 
+                    "supply": 30, 
+                    "frame": 4489.8, 
+                    "is_chronoboosted": false, 
+                    "time": "3:20"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Marine", 
+                    "clock_position": null, 
+                    "supply": 30, 
+                    "frame": 4492.8, 
+                    "is_chronoboosted": false, 
+                    "time": "3:20"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Cyclone", 
+                    "clock_position": null, 
+                    "supply": 30, 
+                    "frame": 4526.2, 
+                    "is_chronoboosted": false, 
+                    "time": "3:22"
+                }, 
+                {
+                    "is_worker": true, 
+                    "name": "SCV", 
+                    "clock_position": null, 
+                    "supply": 30, 
+                    "frame": 4610.2, 
+                    "is_chronoboosted": false, 
+                    "time": "3:25"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "BarracksTechLab", 
+                    "clock_position": null, 
+                    "supply": 36, 
+                    "frame": 4677, 
+                    "is_chronoboosted": false, 
+                    "time": "3:28"
+                }, 
+                {
+                    "is_worker": true, 
+                    "name": "SCV", 
+                    "clock_position": null, 
+                    "supply": 36, 
+                    "frame": 4785.2, 
+                    "is_chronoboosted": false, 
+                    "time": "3:33"
+                }, 
+                {
+                    "is_worker": true, 
+                    "name": "SCV", 
+                    "clock_position": null, 
+                    "supply": 37, 
+                    "frame": 4881.2, 
+                    "is_chronoboosted": false, 
+                    "time": "3:37"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Marine", 
+                    "clock_position": null, 
+                    "supply": 37, 
+                    "frame": 4951.8, 
+                    "is_chronoboosted": false, 
+                    "time": "3:41"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Marine", 
+                    "clock_position": null, 
+                    "supply": 37, 
+                    "frame": 4954.8, 
+                    "is_chronoboosted": false, 
+                    "time": "3:41"
+                }, 
+                {
+                    "is_worker": true, 
+                    "name": "SCV", 
+                    "clock_position": null, 
+                    "supply": 40, 
+                    "frame": 5056.2, 
+                    "is_chronoboosted": false, 
+                    "time": "3:45"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "SupplyDepot", 
+                    "clock_position": null, 
+                    "supply": 40, 
+                    "frame": 5074, 
+                    "is_chronoboosted": false, 
+                    "time": "3:46"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Stimpack", 
+                    "clock_position": null, 
+                    "supply": 40, 
+                    "frame": 5136.0, 
+                    "is_chronoboosted": false, 
+                    "time": "3:49"
+                }, 
+                {
+                    "is_worker": true, 
+                    "name": "SCV", 
+                    "clock_position": null, 
+                    "supply": 40, 
+                    "frame": 5175.2, 
+                    "is_chronoboosted": false, 
+                    "time": "3:51"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Marine", 
+                    "clock_position": null, 
+                    "supply": 40, 
+                    "frame": 5216.8, 
+                    "is_chronoboosted": false, 
+                    "time": "3:52"
+                }, 
+                {
+                    "is_worker": true, 
+                    "name": "SCV", 
+                    "clock_position": null, 
+                    "supply": 42, 
+                    "frame": 5388.2, 
+                    "is_chronoboosted": false, 
+                    "time": "4:00"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Marine", 
+                    "clock_position": null, 
+                    "supply": 46, 
+                    "frame": 5493.8, 
+                    "is_chronoboosted": false, 
+                    "time": "4:05"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Marine", 
+                    "clock_position": null, 
+                    "supply": 46, 
+                    "frame": 5551.8, 
+                    "is_chronoboosted": false, 
+                    "time": "4:07"
+                }, 
+                {
+                    "is_worker": true, 
+                    "name": "SCV", 
+                    "clock_position": null, 
+                    "supply": 46, 
+                    "frame": 5557.2, 
+                    "is_chronoboosted": false, 
+                    "time": "4:08"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "EngineeringBay", 
+                    "clock_position": null, 
+                    "supply": 45, 
+                    "frame": 5604, 
+                    "is_chronoboosted": false, 
+                    "time": "4:10"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Marine", 
+                    "clock_position": null, 
+                    "supply": 45, 
+                    "frame": 5616.8, 
+                    "is_chronoboosted": false, 
+                    "time": "4:10"
+                }, 
+                {
+                    "is_worker": true, 
+                    "name": "SCV", 
+                    "clock_position": null, 
+                    "supply": 45, 
+                    "frame": 5659.2, 
+                    "is_chronoboosted": false, 
+                    "time": "4:12"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Barracks", 
+                    "clock_position": null, 
+                    "supply": 45, 
+                    "frame": 5751, 
+                    "is_chronoboosted": false, 
+                    "time": "4:16"
+                }, 
+                {
+                    "is_worker": true, 
+                    "name": "SCV", 
+                    "clock_position": null, 
+                    "supply": 47, 
+                    "frame": 5828.2, 
+                    "is_chronoboosted": false, 
+                    "time": "4:20"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Marine", 
+                    "clock_position": null, 
+                    "supply": 47, 
+                    "frame": 5892.8, 
+                    "is_chronoboosted": false, 
+                    "time": "4:23"
+                }, 
+                {
+                    "is_worker": true, 
+                    "name": "SCV", 
+                    "clock_position": null, 
+                    "supply": 49, 
+                    "frame": 5930.2, 
+                    "is_chronoboosted": false, 
+                    "time": "4:24"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Marine", 
+                    "clock_position": null, 
+                    "supply": 49, 
+                    "frame": 5950.8, 
+                    "is_chronoboosted": false, 
+                    "time": "4:25"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "SupplyDepot", 
+                    "clock_position": null, 
+                    "supply": 49, 
+                    "frame": 5955, 
+                    "is_chronoboosted": false, 
+                    "time": "4:25"
+                }, 
+                {
+                    "is_worker": true, 
+                    "name": "SCV", 
+                    "clock_position": null, 
+                    "supply": 51, 
+                    "frame": 6099.2, 
+                    "is_chronoboosted": false, 
+                    "time": "4:32"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Marine", 
+                    "clock_position": null, 
+                    "supply": 51, 
+                    "frame": 6153.8, 
+                    "is_chronoboosted": false, 
+                    "time": "4:34"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Terran Infantry Weapons Level 1", 
+                    "clock_position": null, 
+                    "supply": 51, 
+                    "frame": 6197.4, 
+                    "is_chronoboosted": false, 
+                    "time": "4:36"
+                }, 
+                {
+                    "is_worker": true, 
+                    "name": "SCV", 
+                    "clock_position": null, 
+                    "supply": 51, 
+                    "frame": 6201.2, 
+                    "is_chronoboosted": false, 
+                    "time": "4:36"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "FactoryReactor", 
+                    "clock_position": null, 
+                    "supply": 54, 
+                    "frame": 6283, 
+                    "is_chronoboosted": false, 
+                    "time": "4:40"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Starport", 
+                    "clock_position": null, 
+                    "supply": 54, 
+                    "frame": 6299, 
+                    "is_chronoboosted": false, 
+                    "time": "4:41"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Marine", 
+                    "clock_position": null, 
+                    "supply": 54, 
+                    "frame": 6431.8, 
+                    "is_chronoboosted": false, 
+                    "time": "4:47"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "SupplyDepot", 
+                    "clock_position": null, 
+                    "supply": 54, 
+                    "frame": 6436, 
+                    "is_chronoboosted": false, 
+                    "time": "4:47"
+                }, 
+                {
+                    "is_worker": true, 
+                    "name": "SCV", 
+                    "clock_position": null, 
+                    "supply": 54, 
+                    "frame": 6439.2, 
+                    "is_chronoboosted": false, 
+                    "time": "4:47"
+                }, 
+                {
+                    "is_worker": true, 
+                    "name": "SCV", 
+                    "clock_position": null, 
+                    "supply": 54, 
+                    "frame": 6472.2, 
+                    "is_chronoboosted": false, 
+                    "time": "4:48"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Refinery", 
+                    "clock_position": null, 
+                    "supply": 54, 
+                    "frame": 6476, 
+                    "is_chronoboosted": false, 
+                    "time": "4:49"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Marine", 
+                    "clock_position": null, 
+                    "supply": 54, 
+                    "frame": 6488.8, 
+                    "is_chronoboosted": false, 
+                    "time": "4:49"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "SupplyDepot", 
+                    "clock_position": null, 
+                    "supply": 58, 
+                    "frame": 6583, 
+                    "is_chronoboosted": false, 
+                    "time": "4:53"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Marine", 
+                    "clock_position": null, 
+                    "supply": 58, 
+                    "frame": 6608.8, 
+                    "is_chronoboosted": false, 
+                    "time": "4:55"
+                }, 
+                {
+                    "is_worker": true, 
+                    "name": "SCV", 
+                    "clock_position": null, 
+                    "supply": 58, 
+                    "frame": 6710.2, 
+                    "is_chronoboosted": false, 
+                    "time": "4:59"
+                }, 
+                {
+                    "is_worker": true, 
+                    "name": "SCV", 
+                    "clock_position": null, 
+                    "supply": 60, 
+                    "frame": 6743.2, 
+                    "is_chronoboosted": false, 
+                    "time": "5:01"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Combat Shield", 
+                    "clock_position": null, 
+                    "supply": 60, 
+                    "frame": 6805.4, 
+                    "is_chronoboosted": false, 
+                    "time": "5:03"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Marine", 
+                    "clock_position": null, 
+                    "supply": 60, 
+                    "frame": 6815.8, 
+                    "is_chronoboosted": false, 
+                    "time": "5:04"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Marine", 
+                    "clock_position": null, 
+                    "supply": 62, 
+                    "frame": 6926.8, 
+                    "is_chronoboosted": false, 
+                    "time": "5:09"
+                }, 
+                {
+                    "is_worker": true, 
+                    "name": "SCV", 
+                    "clock_position": null, 
+                    "supply": 62, 
+                    "frame": 6981.2, 
+                    "is_chronoboosted": false, 
+                    "time": "5:11"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "SupplyDepot", 
+                    "clock_position": null, 
+                    "supply": 62, 
+                    "frame": 6998, 
+                    "is_chronoboosted": false, 
+                    "time": "5:12"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Marine", 
+                    "clock_position": null, 
+                    "supply": 62, 
+                    "frame": 7011.8, 
+                    "is_chronoboosted": false, 
+                    "time": "5:13"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Marine", 
+                    "clock_position": null, 
+                    "supply": 65, 
+                    "frame": 7047.8, 
+                    "is_chronoboosted": false, 
+                    "time": "5:14"
+                }, 
+                {
+                    "is_worker": true, 
+                    "name": "SCV", 
+                    "clock_position": null, 
+                    "supply": 65, 
+                    "frame": 7068.2, 
+                    "is_chronoboosted": false, 
+                    "time": "5:15"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "FactoryReactor", 
+                    "clock_position": null, 
+                    "supply": 67, 
+                    "frame": 7229, 
+                    "is_chronoboosted": false, 
+                    "time": "5:22"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "SupplyDepot", 
+                    "clock_position": null, 
+                    "supply": 67, 
+                    "frame": 7230, 
+                    "is_chronoboosted": false, 
+                    "time": "5:22"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Medivac", 
+                    "clock_position": null, 
+                    "supply": 67, 
+                    "frame": 7238.0, 
+                    "is_chronoboosted": false, 
+                    "time": "5:23"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Medivac", 
+                    "clock_position": null, 
+                    "supply": 67, 
+                    "frame": 7241.0, 
+                    "is_chronoboosted": false, 
+                    "time": "5:23"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Marine", 
+                    "clock_position": null, 
+                    "supply": 67, 
+                    "frame": 7242.8, 
+                    "is_chronoboosted": false, 
+                    "time": "5:23"
+                }, 
+                {
+                    "is_worker": true, 
+                    "name": "SCV", 
+                    "clock_position": null, 
+                    "supply": 67, 
+                    "frame": 7306.2, 
+                    "is_chronoboosted": false, 
+                    "time": "5:26"
+                }, 
+                {
+                    "is_worker": true, 
+                    "name": "SCV", 
+                    "clock_position": null, 
+                    "supply": 67, 
+                    "frame": 7339.2, 
+                    "is_chronoboosted": false, 
+                    "time": "5:27"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Refinery", 
+                    "clock_position": null, 
+                    "supply": 74, 
+                    "frame": 7371, 
+                    "is_chronoboosted": false, 
+                    "time": "5:29"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Marine", 
+                    "clock_position": null, 
+                    "supply": 74, 
+                    "frame": 7399.8, 
+                    "is_chronoboosted": false, 
+                    "time": "5:30"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Marauder", 
+                    "clock_position": null, 
+                    "supply": 74, 
+                    "frame": 7484.6, 
+                    "is_chronoboosted": false, 
+                    "time": "5:34"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Marine", 
+                    "clock_position": null, 
+                    "supply": 74, 
+                    "frame": 7510.8, 
+                    "is_chronoboosted": false, 
+                    "time": "5:35"
+                }, 
+                {
+                    "is_worker": true, 
+                    "name": "SCV", 
+                    "clock_position": null, 
+                    "supply": 78, 
+                    "frame": 7577.2, 
+                    "is_chronoboosted": false, 
+                    "time": "5:38"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "MissileTurret", 
+                    "clock_position": null, 
+                    "supply": 78, 
+                    "frame": 7610, 
+                    "is_chronoboosted": false, 
+                    "time": "5:39"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "MissileTurret", 
+                    "clock_position": null, 
+                    "supply": 78, 
+                    "frame": 7665, 
+                    "is_chronoboosted": false, 
+                    "time": "5:42"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Marauder", 
+                    "clock_position": null, 
+                    "supply": 79, 
+                    "frame": 7728.6, 
+                    "is_chronoboosted": false, 
+                    "time": "5:45"
+                }, 
+                {
+                    "is_worker": true, 
+                    "name": "SCV", 
+                    "clock_position": null, 
+                    "supply": 79, 
+                    "frame": 7753.2, 
+                    "is_chronoboosted": false, 
+                    "time": "5:46"
+                }, 
+                {
+                    "is_worker": true, 
+                    "name": "SCV", 
+                    "clock_position": null, 
+                    "supply": 82, 
+                    "frame": 7890.2, 
+                    "is_chronoboosted": false, 
+                    "time": "5:52"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "SupplyDepot", 
+                    "clock_position": null, 
+                    "supply": 82, 
+                    "frame": 7905, 
+                    "is_chronoboosted": false, 
+                    "time": "5:52"
+                }, 
+                {
+                    "is_worker": true, 
+                    "name": "SCV", 
+                    "clock_position": null, 
+                    "supply": 79, 
+                    "frame": 8024.2, 
+                    "is_chronoboosted": false, 
+                    "time": "5:58"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Medivac", 
+                    "clock_position": null, 
+                    "supply": 79, 
+                    "frame": 8066.0, 
+                    "is_chronoboosted": false, 
+                    "time": "6:00"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Medivac", 
+                    "clock_position": null, 
+                    "supply": 79, 
+                    "frame": 8068.0, 
+                    "is_chronoboosted": false, 
+                    "time": "6:00"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Marine", 
+                    "clock_position": null, 
+                    "supply": 79, 
+                    "frame": 8103.8, 
+                    "is_chronoboosted": false, 
+                    "time": "6:01"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Marine", 
+                    "clock_position": null, 
+                    "supply": 79, 
+                    "frame": 8106.8, 
+                    "is_chronoboosted": false, 
+                    "time": "6:01"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Marauder", 
+                    "clock_position": null, 
+                    "supply": 86, 
+                    "frame": 8197.6, 
+                    "is_chronoboosted": false, 
+                    "time": "6:05"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Widow Mine", 
+                    "clock_position": null, 
+                    "supply": 90, 
+                    "frame": 8326.6, 
+                    "is_chronoboosted": false, 
+                    "time": "6:11"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Widow Mine", 
+                    "clock_position": null, 
+                    "supply": 90, 
+                    "frame": 8329.6, 
+                    "is_chronoboosted": false, 
+                    "time": "6:11"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "SupplyDepot", 
+                    "clock_position": null, 
+                    "supply": 90, 
+                    "frame": 8398, 
+                    "is_chronoboosted": false, 
+                    "time": "6:14"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "SupplyDepot", 
+                    "clock_position": null, 
+                    "supply": 90, 
+                    "frame": 8470, 
+                    "is_chronoboosted": false, 
+                    "time": "6:18"
+                }, 
+                {
+                    "is_worker": true, 
+                    "name": "SCV", 
+                    "clock_position": null, 
+                    "supply": 92, 
+                    "frame": 8561.2, 
+                    "is_chronoboosted": false, 
+                    "time": "6:22"
+                }, 
+                {
+                    "is_worker": true, 
+                    "name": "SCV", 
+                    "clock_position": null, 
+                    "supply": 92, 
+                    "frame": 8595.2, 
+                    "is_chronoboosted": false, 
+                    "time": "6:23"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Marine", 
+                    "clock_position": null, 
+                    "supply": 91, 
+                    "frame": 8663.8, 
+                    "is_chronoboosted": false, 
+                    "time": "6:26"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Marine", 
+                    "clock_position": null, 
+                    "supply": 91, 
+                    "frame": 8666.8, 
+                    "is_chronoboosted": false, 
+                    "time": "6:26"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Marauder", 
+                    "clock_position": null, 
+                    "supply": 91, 
+                    "frame": 8679.6, 
+                    "is_chronoboosted": false, 
+                    "time": "6:27"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Marine", 
+                    "clock_position": null, 
+                    "supply": 91, 
+                    "frame": 8742.8, 
+                    "is_chronoboosted": false, 
+                    "time": "6:30"
+                }, 
+                {
+                    "is_worker": true, 
+                    "name": "SCV", 
+                    "clock_position": null, 
+                    "supply": 96, 
+                    "frame": 8832.2, 
+                    "is_chronoboosted": false, 
+                    "time": "6:34"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Widow Mine", 
+                    "clock_position": null, 
+                    "supply": 96, 
+                    "frame": 8855.6, 
+                    "is_chronoboosted": false, 
+                    "time": "6:35"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Widow Mine", 
+                    "clock_position": null, 
+                    "supply": 96, 
+                    "frame": 8858.6, 
+                    "is_chronoboosted": false, 
+                    "time": "6:35"
+                }, 
+                {
+                    "is_worker": true, 
+                    "name": "SCV", 
+                    "clock_position": null, 
+                    "supply": 96, 
+                    "frame": 8909.2, 
+                    "is_chronoboosted": false, 
+                    "time": "6:37"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Terran Infantry Armor Level 1", 
+                    "clock_position": null, 
+                    "supply": 102, 
+                    "frame": 8981.4, 
+                    "is_chronoboosted": false, 
+                    "time": "6:40"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Concussive Shells", 
+                    "clock_position": null, 
+                    "supply": 102, 
+                    "frame": 9060.8, 
+                    "is_chronoboosted": false, 
+                    "time": "6:44"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Marine", 
+                    "clock_position": null, 
+                    "supply": 102, 
+                    "frame": 9092.8, 
+                    "is_chronoboosted": false, 
+                    "time": "6:45"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Marauder", 
+                    "clock_position": null, 
+                    "supply": 103, 
+                    "frame": 9154.6, 
+                    "is_chronoboosted": false, 
+                    "time": "6:48"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Marine", 
+                    "clock_position": null, 
+                    "supply": 103, 
+                    "frame": 9271.8, 
+                    "is_chronoboosted": false, 
+                    "time": "6:53"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Marine", 
+                    "clock_position": null, 
+                    "supply": 106, 
+                    "frame": 9302.8, 
+                    "is_chronoboosted": false, 
+                    "time": "6:55"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Marine", 
+                    "clock_position": null, 
+                    "supply": 104, 
+                    "frame": 9491.8, 
+                    "is_chronoboosted": false, 
+                    "time": "7:03"
+                }, 
+                {
+                    "is_worker": true, 
+                    "name": "SCV", 
+                    "clock_position": null, 
+                    "supply": 104, 
+                    "frame": 9502.2, 
+                    "is_chronoboosted": false, 
+                    "time": "7:04"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Marauder", 
+                    "clock_position": null, 
+                    "supply": 95, 
+                    "frame": 9633.6, 
+                    "is_chronoboosted": false, 
+                    "time": "7:10"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Marauder", 
+                    "clock_position": null, 
+                    "supply": 95, 
+                    "frame": 9714.6, 
+                    "is_chronoboosted": false, 
+                    "time": "7:13"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "CommandCenter", 
+                    "clock_position": null, 
+                    "supply": 95, 
+                    "frame": 9718, 
+                    "is_chronoboosted": false, 
+                    "time": "7:13"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Marine", 
+                    "clock_position": null, 
+                    "supply": 93, 
+                    "frame": 9839.8, 
+                    "is_chronoboosted": false, 
+                    "time": "7:19"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Medivac", 
+                    "clock_position": null, 
+                    "supply": 93, 
+                    "frame": 9886.0, 
+                    "is_chronoboosted": false, 
+                    "time": "7:21"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Marine", 
+                    "clock_position": null, 
+                    "supply": 93, 
+                    "frame": 9890.8, 
+                    "is_chronoboosted": false, 
+                    "time": "7:21"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Widow Mine", 
+                    "clock_position": null, 
+                    "supply": 85, 
+                    "frame": 10011.6, 
+                    "is_chronoboosted": false, 
+                    "time": "7:26"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Widow Mine", 
+                    "clock_position": null, 
+                    "supply": 85, 
+                    "frame": 10013.6, 
+                    "is_chronoboosted": false, 
+                    "time": "7:27"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Medivac", 
+                    "clock_position": null, 
+                    "supply": 85, 
+                    "frame": 10079.0, 
+                    "is_chronoboosted": false, 
+                    "time": "7:29"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Marauder", 
+                    "clock_position": null, 
+                    "supply": 87, 
+                    "frame": 10112.6, 
+                    "is_chronoboosted": false, 
+                    "time": "7:31"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Marine", 
+                    "clock_position": null, 
+                    "supply": 87, 
+                    "frame": 10180.8, 
+                    "is_chronoboosted": false, 
+                    "time": "7:34"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Marine", 
+                    "clock_position": null, 
+                    "supply": 87, 
+                    "frame": 10238.8, 
+                    "is_chronoboosted": false, 
+                    "time": "7:37"
+                }, 
+                {
+                    "is_worker": true, 
+                    "name": "SCV", 
+                    "clock_position": null, 
+                    "supply": 89, 
+                    "frame": 10248.2, 
+                    "is_chronoboosted": false, 
+                    "time": "7:37"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Marine", 
+                    "clock_position": null, 
+                    "supply": 89, 
+                    "frame": 10289.8, 
+                    "is_chronoboosted": false, 
+                    "time": "7:39"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Barracks", 
+                    "clock_position": null, 
+                    "supply": 91, 
+                    "frame": 10404, 
+                    "is_chronoboosted": false, 
+                    "time": "7:44"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Barracks", 
+                    "clock_position": null, 
+                    "supply": 91, 
+                    "frame": 10451, 
+                    "is_chronoboosted": false, 
+                    "time": "7:46"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Marine", 
+                    "clock_position": null, 
+                    "supply": 90, 
+                    "frame": 10578.8, 
+                    "is_chronoboosted": false, 
+                    "time": "7:52"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Viking", 
+                    "clock_position": null, 
+                    "supply": 90, 
+                    "frame": 10635.0, 
+                    "is_chronoboosted": false, 
+                    "time": "7:54"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Marine", 
+                    "clock_position": null, 
+                    "supply": 90, 
+                    "frame": 10637.8, 
+                    "is_chronoboosted": false, 
+                    "time": "7:54"
+                }, 
+                {
+                    "is_worker": true, 
+                    "name": "SCV", 
+                    "clock_position": null, 
+                    "supply": 90, 
+                    "frame": 10706.2, 
+                    "is_chronoboosted": false, 
+                    "time": "7:57"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Marine", 
+                    "clock_position": null, 
+                    "supply": 93, 
+                    "frame": 10804.8, 
+                    "is_chronoboosted": false, 
+                    "time": "8:02"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Viking", 
+                    "clock_position": null, 
+                    "supply": 93, 
+                    "frame": 10819.0, 
+                    "is_chronoboosted": false, 
+                    "time": "8:02"
+                }, 
+                {
+                    "is_worker": true, 
+                    "name": "SCV", 
+                    "clock_position": null, 
+                    "supply": 93, 
+                    "frame": 10868.2, 
+                    "is_chronoboosted": false, 
+                    "time": "8:05"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Siege Tank", 
+                    "clock_position": null, 
+                    "supply": 97, 
+                    "frame": 10901.2, 
+                    "is_chronoboosted": false, 
+                    "time": "8:06"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Marine", 
+                    "clock_position": null, 
+                    "supply": 97, 
+                    "frame": 10959.8, 
+                    "is_chronoboosted": false, 
+                    "time": "8:09"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Marine", 
+                    "clock_position": null, 
+                    "supply": 97, 
+                    "frame": 10961.8, 
+                    "is_chronoboosted": false, 
+                    "time": "8:09"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Marauder", 
+                    "clock_position": null, 
+                    "supply": 97, 
+                    "frame": 10990.6, 
+                    "is_chronoboosted": false, 
+                    "time": "8:10"
+                }, 
+                {
+                    "is_worker": true, 
+                    "name": "SCV", 
+                    "clock_position": null, 
+                    "supply": 100, 
+                    "frame": 11240.2, 
+                    "is_chronoboosted": false, 
+                    "time": "8:21"
+                }, 
+                {
+                    "is_worker": true, 
+                    "name": "SCV", 
+                    "clock_position": null, 
+                    "supply": 100, 
+                    "frame": 11243.2, 
+                    "is_chronoboosted": false, 
+                    "time": "8:21"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "SupplyDepot", 
+                    "clock_position": null, 
+                    "supply": 100, 
+                    "frame": 11289, 
+                    "is_chronoboosted": false, 
+                    "time": "8:23"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Viking", 
+                    "clock_position": null, 
+                    "supply": 102, 
+                    "frame": 11392.0, 
+                    "is_chronoboosted": false, 
+                    "time": "8:28"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Marine", 
+                    "clock_position": null, 
+                    "supply": 102, 
+                    "frame": 11407.8, 
+                    "is_chronoboosted": false, 
+                    "time": "8:29"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Marine", 
+                    "clock_position": null, 
+                    "supply": 102, 
+                    "frame": 11410.8, 
+                    "is_chronoboosted": false, 
+                    "time": "8:29"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Marine", 
+                    "clock_position": null, 
+                    "supply": 102, 
+                    "frame": 11413.8, 
+                    "is_chronoboosted": false, 
+                    "time": "8:29"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "BarracksTechLab", 
+                    "clock_position": null, 
+                    "supply": 102, 
+                    "frame": 11476, 
+                    "is_chronoboosted": false, 
+                    "time": "8:32"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "BarracksTechLab", 
+                    "clock_position": null, 
+                    "supply": 102, 
+                    "frame": 11494, 
+                    "is_chronoboosted": false, 
+                    "time": "8:33"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Marine", 
+                    "clock_position": null, 
+                    "supply": 107, 
+                    "frame": 11657.8, 
+                    "is_chronoboosted": false, 
+                    "time": "8:40"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Marauder", 
+                    "clock_position": null, 
+                    "supply": 107, 
+                    "frame": 11672.6, 
+                    "is_chronoboosted": false, 
+                    "time": "8:41"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Marine", 
+                    "clock_position": null, 
+                    "supply": 110, 
+                    "frame": 11806.8, 
+                    "is_chronoboosted": false, 
+                    "time": "8:47"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Marine", 
+                    "clock_position": null, 
+                    "supply": 110, 
+                    "frame": 11820.8, 
+                    "is_chronoboosted": false, 
+                    "time": "8:47"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Marine", 
+                    "clock_position": null, 
+                    "supply": 102, 
+                    "frame": 11853.8, 
+                    "is_chronoboosted": false, 
+                    "time": "8:49"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Marine", 
+                    "clock_position": null, 
+                    "supply": 102, 
+                    "frame": 11948.8, 
+                    "is_chronoboosted": false, 
+                    "time": "8:53"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Marauder", 
+                    "clock_position": null, 
+                    "supply": 102, 
+                    "frame": 11964.6, 
+                    "is_chronoboosted": false, 
+                    "time": "8:54"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Siege Tank", 
+                    "clock_position": null, 
+                    "supply": 95, 
+                    "frame": 12051.2, 
+                    "is_chronoboosted": false, 
+                    "time": "8:58"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Marine", 
+                    "clock_position": null, 
+                    "supply": 95, 
+                    "frame": 12056.8, 
+                    "is_chronoboosted": false, 
+                    "time": "8:58"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Marauder", 
+                    "clock_position": null, 
+                    "supply": 95, 
+                    "frame": 12151.6, 
+                    "is_chronoboosted": false, 
+                    "time": "9:02"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Marine", 
+                    "clock_position": null, 
+                    "supply": 99, 
+                    "frame": 12205.8, 
+                    "is_chronoboosted": false, 
+                    "time": "9:04"
+                }, 
+                {
+                    "is_worker": true, 
+                    "name": "SCV", 
+                    "clock_position": null, 
+                    "supply": 99, 
+                    "frame": 12230.2, 
+                    "is_chronoboosted": false, 
+                    "time": "9:05"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Marauder", 
+                    "clock_position": null, 
+                    "supply": 101, 
+                    "frame": 12360.6, 
+                    "is_chronoboosted": false, 
+                    "time": "9:11"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Marine", 
+                    "clock_position": null, 
+                    "supply": 101, 
+                    "frame": 12456.8, 
+                    "is_chronoboosted": false, 
+                    "time": "9:16"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Marine", 
+                    "clock_position": null, 
+                    "supply": 101, 
+                    "frame": 12458.8, 
+                    "is_chronoboosted": false, 
+                    "time": "9:16"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Marauder", 
+                    "clock_position": null, 
+                    "supply": 101, 
+                    "frame": 12472.6, 
+                    "is_chronoboosted": false, 
+                    "time": "9:16"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Liberator", 
+                    "clock_position": null, 
+                    "supply": 107, 
+                    "frame": 12557.8, 
+                    "is_chronoboosted": false, 
+                    "time": "9:20"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Marine", 
+                    "clock_position": null, 
+                    "supply": 110, 
+                    "frame": 12702.8, 
+                    "is_chronoboosted": false, 
+                    "time": "9:27"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Marine", 
+                    "clock_position": null, 
+                    "supply": 110, 
+                    "frame": 12705.8, 
+                    "is_chronoboosted": false, 
+                    "time": "9:27"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Marauder", 
+                    "clock_position": null, 
+                    "supply": 110, 
+                    "frame": 12718.6, 
+                    "is_chronoboosted": false, 
+                    "time": "9:27"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Marine", 
+                    "clock_position": null, 
+                    "supply": 100, 
+                    "frame": 12826.8, 
+                    "is_chronoboosted": false, 
+                    "time": "9:32"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Marine", 
+                    "clock_position": null, 
+                    "supply": 100, 
+                    "frame": 12855.8, 
+                    "is_chronoboosted": false, 
+                    "time": "9:33"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Siege Tank", 
+                    "clock_position": null, 
+                    "supply": 100, 
+                    "frame": 12898.2, 
+                    "is_chronoboosted": false, 
+                    "time": "9:35"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Marine", 
+                    "clock_position": null, 
+                    "supply": 100, 
+                    "frame": 12901.8, 
+                    "is_chronoboosted": false, 
+                    "time": "9:35"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Marine", 
+                    "clock_position": null, 
+                    "supply": 100, 
+                    "frame": 12954.8, 
+                    "is_chronoboosted": false, 
+                    "time": "9:38"
+                }, 
+                {
+                    "is_worker": true, 
+                    "name": "SCV", 
+                    "clock_position": null, 
+                    "supply": 104, 
+                    "frame": 12996.2, 
+                    "is_chronoboosted": false, 
+                    "time": "9:40"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Marauder", 
+                    "clock_position": null, 
+                    "supply": 100, 
+                    "frame": 13197.6, 
+                    "is_chronoboosted": false, 
+                    "time": "9:49"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Marine", 
+                    "clock_position": null, 
+                    "supply": 100, 
+                    "frame": 13219.8, 
+                    "is_chronoboosted": false, 
+                    "time": "9:50"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Marine", 
+                    "clock_position": null, 
+                    "supply": 100, 
+                    "frame": 13222.8, 
+                    "is_chronoboosted": false, 
+                    "time": "9:50"
+                }, 
+                {
+                    "is_worker": true, 
+                    "name": "SCV", 
+                    "clock_position": null, 
+                    "supply": 98, 
+                    "frame": 13399.2, 
+                    "is_chronoboosted": false, 
+                    "time": "9:58"
+                }, 
+                {
+                    "is_worker": true, 
+                    "name": "SCV", 
+                    "clock_position": null, 
+                    "supply": 98, 
+                    "frame": 13418.2, 
+                    "is_chronoboosted": false, 
+                    "time": "9:59"
+                }
+            ], 
+            "abilities": [
+                {
+                    "frame": 2575, 
+                    "name": "CalldownMULE", 
+                    "time": "1:54"
+                }, 
+                {
+                    "frame": 4131, 
+                    "name": "CalldownMULE", 
+                    "time": "3:04"
+                }, 
+                {
+                    "frame": 4655, 
+                    "name": "CalldownMULE", 
+                    "time": "3:27"
+                }, 
+                {
+                    "frame": 5316, 
+                    "name": "KD8Charge", 
+                    "time": "3:57"
+                }, 
+                {
+                    "frame": 5441, 
+                    "name": "CalldownMULE", 
+                    "time": "4:02"
+                }, 
+                {
+                    "frame": 6027, 
+                    "name": "CalldownMULE", 
+                    "time": "4:29"
+                }, 
+                {
+                    "frame": 6858, 
+                    "name": "CalldownMULE", 
+                    "time": "5:06"
+                }, 
+                {
+                    "frame": 7742, 
+                    "name": "ScannerSweep", 
+                    "time": "5:45"
+                }, 
+                {
+                    "frame": 8348, 
+                    "name": "CalldownMULE", 
+                    "time": "6:12"
+                }, 
+                {
+                    "frame": 9168, 
+                    "name": "ScannerSweep", 
+                    "time": "6:49"
+                }, 
+                {
+                    "frame": 10363, 
+                    "name": "ScannerSweep", 
+                    "time": "7:42"
+                }, 
+                {
+                    "frame": 10975, 
+                    "name": "ScannerSweep", 
+                    "time": "8:09"
+                }, 
+                {
+                    "frame": 11537, 
+                    "name": "ScannerSweep", 
+                    "time": "8:35"
+                }, 
+                {
+                    "frame": 12616, 
+                    "name": "ScannerSweep", 
+                    "time": "9:23"
+                }, 
+                {
+                    "frame": 13548, 
+                    "name": "CalldownMULE", 
+                    "time": "10:04"
+                }
+            ], 
+            "name": "Oliveira", 
+            "is_human": true, 
+            "level": 4294967295, 
+            "handicap": 100, 
+            "region": "eu", 
+            "is_winner": true, 
+            "pick_race": "Terran", 
+            "clock_position": null, 
+            "commander": "", 
+            "color": "B4141E", 
+            "unitsLost": [
+                {
+                    "frame": 4973, 
+                    "killer": 2, 
+                    "name": "Marine", 
+                    "clock_position": null, 
+                    "time": "3:42"
+                }, 
+                {
+                    "frame": 5496, 
+                    "killer": 2, 
+                    "name": "Reaper", 
+                    "clock_position": null, 
+                    "time": "4:05"
+                }, 
+                {
+                    "frame": 7867, 
+                    "killer": 2, 
+                    "name": "SCV", 
+                    "clock_position": null, 
+                    "time": "5:51"
+                }, 
+                {
+                    "frame": 7886, 
+                    "killer": 2, 
+                    "name": "SCV", 
+                    "clock_position": null, 
+                    "time": "5:52"
+                }, 
+                {
+                    "frame": 7917, 
+                    "killer": 2, 
+                    "name": "SCV", 
+                    "clock_position": null, 
+                    "time": "5:53"
+                }, 
+                {
+                    "frame": 7937, 
+                    "killer": 2, 
+                    "name": "SCV", 
+                    "clock_position": null, 
+                    "time": "5:54"
+                }, 
+                {
+                    "frame": 8514, 
+                    "killer": 2, 
+                    "name": "SCV", 
+                    "clock_position": null, 
+                    "time": "6:20"
+                }, 
+                {
+                    "frame": 8569, 
+                    "killer": 2, 
+                    "name": "SCV", 
+                    "clock_position": null, 
+                    "time": "6:22"
+                }, 
+                {
+                    "frame": 8633, 
+                    "killer": 2, 
+                    "name": "SCV", 
+                    "clock_position": null, 
+                    "time": "6:25"
+                }, 
+                {
+                    "frame": 9382, 
+                    "killer": 2, 
+                    "name": "Marine", 
+                    "clock_position": null, 
+                    "time": "6:58"
+                }, 
+                {
+                    "frame": 9405, 
+                    "killer": 2, 
+                    "name": "Marine", 
+                    "clock_position": null, 
+                    "time": "6:59"
+                }, 
+                {
+                    "frame": 9407, 
+                    "killer": 2, 
+                    "name": "Marine", 
+                    "clock_position": null, 
+                    "time": "6:59"
+                }, 
+                {
+                    "frame": 9447, 
+                    "killer": 2, 
+                    "name": "Marine", 
+                    "clock_position": null, 
+                    "time": "7:01"
+                }, 
+                {
+                    "frame": 9452, 
+                    "killer": 2, 
+                    "name": "Marine", 
+                    "clock_position": null, 
+                    "time": "7:01"
+                }, 
+                {
+                    "frame": 9485, 
+                    "killer": 2, 
+                    "name": "Medivac", 
+                    "clock_position": null, 
+                    "time": "7:03"
+                }, 
+                {
+                    "frame": 9496, 
+                    "killer": 2, 
+                    "name": "Marine", 
+                    "clock_position": null, 
+                    "time": "7:03"
+                }, 
+                {
+                    "frame": 9501, 
+                    "killer": 2, 
+                    "name": "Marine", 
+                    "clock_position": null, 
+                    "time": "7:04"
+                }, 
+                {
+                    "frame": 9520, 
+                    "killer": 2, 
+                    "name": "Marine", 
+                    "clock_position": null, 
+                    "time": "7:05"
+                }, 
+                {
+                    "frame": 9521, 
+                    "killer": 2, 
+                    "name": "Marine", 
+                    "clock_position": null, 
+                    "time": "7:05"
+                }, 
+                {
+                    "frame": 9532, 
+                    "killer": 2, 
+                    "name": "Marine", 
+                    "clock_position": null, 
+                    "time": "7:05"
+                }, 
+                {
+                    "frame": 9548, 
+                    "killer": 2, 
+                    "name": "Marine", 
+                    "clock_position": null, 
+                    "time": "7:06"
+                }, 
+                {
+                    "frame": 9575, 
+                    "killer": 2, 
+                    "name": "Marine", 
+                    "clock_position": null, 
+                    "time": "7:07"
+                }, 
+                {
+                    "frame": 9604, 
+                    "killer": 2, 
+                    "name": "Marine", 
+                    "clock_position": null, 
+                    "time": "7:08"
+                }, 
+                {
+                    "frame": 9625, 
+                    "killer": 2, 
+                    "name": "Marine", 
+                    "clock_position": null, 
+                    "time": "7:09"
+                }, 
+                {
+                    "frame": 9636, 
+                    "killer": 2, 
+                    "name": "Medivac", 
+                    "clock_position": null, 
+                    "time": "7:10"
+                }, 
+                {
+                    "frame": 9643, 
+                    "killer": 2, 
+                    "name": "Marine", 
+                    "clock_position": null, 
+                    "time": "7:10"
+                }, 
+                {
+                    "frame": 9661, 
+                    "killer": 2, 
+                    "name": "Marine", 
+                    "clock_position": null, 
+                    "time": "7:11"
+                }, 
+                {
+                    "frame": 9824, 
+                    "killer": 2, 
+                    "name": "Marauder", 
+                    "clock_position": null, 
+                    "time": "7:18"
+                }, 
+                {
+                    "frame": 9825, 
+                    "killer": 2, 
+                    "name": "Marine", 
+                    "clock_position": null, 
+                    "time": "7:18"
+                }, 
+                {
+                    "frame": 9873, 
+                    "killer": 2, 
+                    "name": "Marauder", 
+                    "clock_position": null, 
+                    "time": "7:20"
+                }, 
+                {
+                    "frame": 9878, 
+                    "killer": 2, 
+                    "name": "WidowMineBurrowed", 
+                    "clock_position": null, 
+                    "time": "7:20"
+                }, 
+                {
+                    "frame": 9888, 
+                    "killer": 2, 
+                    "name": "WidowMineBurrowed", 
+                    "clock_position": null, 
+                    "time": "7:21"
+                }, 
+                {
+                    "frame": 9917, 
+                    "killer": 2, 
+                    "name": "Marauder", 
+                    "clock_position": null, 
+                    "time": "7:22"
+                }, 
+                {
+                    "frame": 9919, 
+                    "killer": 2, 
+                    "name": "Marine", 
+                    "clock_position": null, 
+                    "time": "7:22"
+                }, 
+                {
+                    "frame": 9926, 
+                    "killer": 2, 
+                    "name": "Marine", 
+                    "clock_position": null, 
+                    "time": "7:23"
+                }, 
+                {
+                    "frame": 9932, 
+                    "killer": 2, 
+                    "name": "Marine", 
+                    "clock_position": null, 
+                    "time": "7:23"
+                }, 
+                {
+                    "frame": 9943, 
+                    "killer": 2, 
+                    "name": "Marine", 
+                    "clock_position": null, 
+                    "time": "7:23"
+                }, 
+                {
+                    "frame": 9944, 
+                    "killer": 2, 
+                    "name": "Marine", 
+                    "clock_position": null, 
+                    "time": "7:23"
+                }, 
+                {
+                    "frame": 10104, 
+                    "killer": 2, 
+                    "name": "SCV", 
+                    "clock_position": null, 
+                    "time": "7:31"
+                }, 
+                {
+                    "frame": 10293, 
+                    "killer": 2, 
+                    "name": "Marine", 
+                    "clock_position": null, 
+                    "time": "7:39"
+                }, 
+                {
+                    "frame": 10421, 
+                    "killer": 2, 
+                    "name": "Marine", 
+                    "clock_position": null, 
+                    "time": "7:45"
+                }, 
+                {
+                    "frame": 10719, 
+                    "killer": 2, 
+                    "name": "WidowMineBurrowed", 
+                    "clock_position": null, 
+                    "time": "7:58"
+                }, 
+                {
+                    "frame": 10886, 
+                    "killer": 2, 
+                    "name": "WidowMineBurrowed", 
+                    "clock_position": null, 
+                    "time": "8:05"
+                }, 
+                {
+                    "frame": 11064, 
+                    "killer": 2, 
+                    "name": "WidowMineBurrowed", 
+                    "clock_position": null, 
+                    "time": "8:13"
+                }, 
+                {
+                    "frame": 11769, 
+                    "killer": 2, 
+                    "name": "Marine", 
+                    "clock_position": null, 
+                    "time": "8:45"
+                }, 
+                {
+                    "frame": 11781, 
+                    "killer": 2, 
+                    "name": "Marine", 
+                    "clock_position": null, 
+                    "time": "8:45"
+                }, 
+                {
+                    "frame": 11793, 
+                    "killer": 2, 
+                    "name": "Marine", 
+                    "clock_position": null, 
+                    "time": "8:46"
+                }, 
+                {
+                    "frame": 11794, 
+                    "killer": 2, 
+                    "name": "Marine", 
+                    "clock_position": null, 
+                    "time": "8:46"
+                }, 
+                {
+                    "frame": 11795, 
+                    "killer": 2, 
+                    "name": "Marine", 
+                    "clock_position": null, 
+                    "time": "8:46"
+                }, 
+                {
+                    "frame": 11803, 
+                    "killer": 2, 
+                    "name": "Marine", 
+                    "clock_position": null, 
+                    "time": "8:46"
+                }, 
+                {
+                    "frame": 11809, 
+                    "killer": 2, 
+                    "name": "Marine", 
+                    "clock_position": null, 
+                    "time": "8:47"
+                }, 
+                {
+                    "frame": 11817, 
+                    "killer": 2, 
+                    "name": "Marine", 
+                    "clock_position": null, 
+                    "time": "8:47"
+                }, 
+                {
+                    "frame": 11818, 
+                    "killer": 2, 
+                    "name": "SCV", 
+                    "clock_position": null, 
+                    "time": "8:47"
+                }, 
+                {
+                    "frame": 11818, 
+                    "killer": 2, 
+                    "name": "Marine", 
+                    "clock_position": null, 
+                    "time": "8:47"
+                }, 
+                {
+                    "frame": 11863, 
+                    "killer": 2, 
+                    "name": "SCV", 
+                    "clock_position": null, 
+                    "time": "8:49"
+                }, 
+                {
+                    "frame": 11866, 
+                    "killer": 2, 
+                    "name": "Viking", 
+                    "clock_position": null, 
+                    "time": "8:49"
+                }, 
+                {
+                    "frame": 11901, 
+                    "killer": 2, 
+                    "name": "SCV", 
+                    "clock_position": null, 
+                    "time": "8:51"
+                }, 
+                {
+                    "frame": 11925, 
+                    "killer": 2, 
+                    "name": "Marine", 
+                    "clock_position": null, 
+                    "time": "8:52"
+                }, 
+                {
+                    "frame": 11925, 
+                    "killer": 2, 
+                    "name": "Marine", 
+                    "clock_position": null, 
+                    "time": "8:52"
+                }, 
+                {
+                    "frame": 11949, 
+                    "killer": 2, 
+                    "name": "Marine", 
+                    "clock_position": null, 
+                    "time": "8:53"
+                }, 
+                {
+                    "frame": 11951, 
+                    "killer": 2, 
+                    "name": "Marine", 
+                    "clock_position": null, 
+                    "time": "8:53"
+                }, 
+                {
+                    "frame": 11952, 
+                    "killer": 2, 
+                    "name": "Marine", 
+                    "clock_position": null, 
+                    "time": "8:53"
+                }, 
+                {
+                    "frame": 11960, 
+                    "killer": 2, 
+                    "name": "Viking", 
+                    "clock_position": null, 
+                    "time": "8:53"
+                }, 
+                {
+                    "frame": 12110, 
+                    "killer": 2, 
+                    "name": "Marauder", 
+                    "clock_position": null, 
+                    "time": "9:00"
+                }, 
+                {
+                    "frame": 12679, 
+                    "killer": 2, 
+                    "name": "Cyclone", 
+                    "clock_position": null, 
+                    "time": "9:26"
+                }, 
+                {
+                    "frame": 12684, 
+                    "killer": 2, 
+                    "name": "Marauder", 
+                    "clock_position": null, 
+                    "time": "9:26"
+                }, 
+                {
+                    "frame": 12684, 
+                    "killer": 2, 
+                    "name": "Siege Tank", 
+                    "clock_position": null, 
+                    "time": "9:26"
+                }, 
+                {
+                    "frame": 12712, 
+                    "killer": 2, 
+                    "name": "Marauder", 
+                    "clock_position": null, 
+                    "time": "9:27"
+                }, 
+                {
+                    "frame": 12730, 
+                    "killer": 2, 
+                    "name": "Marine", 
+                    "clock_position": null, 
+                    "time": "9:28"
+                }, 
+                {
+                    "frame": 12754, 
+                    "killer": 2, 
+                    "name": "Marine", 
+                    "clock_position": null, 
+                    "time": "9:29"
+                }, 
+                {
+                    "frame": 12796, 
+                    "killer": 2, 
+                    "name": "Marauder", 
+                    "clock_position": null, 
+                    "time": "9:31"
+                }, 
+                {
+                    "frame": 12835, 
+                    "killer": 2, 
+                    "name": "Marine", 
+                    "clock_position": null, 
+                    "time": "9:32"
+                }, 
+                {
+                    "frame": 12891, 
+                    "killer": 2, 
+                    "name": "Marine", 
+                    "clock_position": null, 
+                    "time": "9:35"
+                }, 
+                {
+                    "frame": 12955, 
+                    "killer": 2, 
+                    "name": "Marine", 
+                    "clock_position": null, 
+                    "time": "9:38"
+                }, 
+                {
+                    "frame": 12985, 
+                    "killer": 2, 
+                    "name": "Marine", 
+                    "clock_position": null, 
+                    "time": "9:39"
+                }, 
+                {
+                    "frame": 13002, 
+                    "killer": 2, 
+                    "name": "Marine", 
+                    "clock_position": null, 
+                    "time": "9:40"
+                }, 
+                {
+                    "frame": 13028, 
+                    "killer": 2, 
+                    "name": "Marine", 
+                    "clock_position": null, 
+                    "time": "9:41"
+                }, 
+                {
+                    "frame": 13112, 
+                    "killer": 2, 
+                    "name": "WidowMineBurrowed", 
+                    "clock_position": null, 
+                    "time": "9:45"
+                }, 
+                {
+                    "frame": 13124, 
+                    "killer": 2, 
+                    "name": "Marine", 
+                    "clock_position": null, 
+                    "time": "9:45"
+                }, 
+                {
+                    "frame": 13134, 
+                    "killer": 2, 
+                    "name": "Marine", 
+                    "clock_position": null, 
+                    "time": "9:46"
+                }, 
+                {
+                    "frame": 13167, 
+                    "killer": 2, 
+                    "name": "Marine", 
+                    "clock_position": null, 
+                    "time": "9:47"
+                }, 
+                {
+                    "frame": 13195, 
+                    "killer": 2, 
+                    "name": "Marauder", 
+                    "clock_position": null, 
+                    "time": "9:49"
+                }, 
+                {
+                    "frame": 13229, 
+                    "killer": 2, 
+                    "name": "Marauder", 
+                    "clock_position": null, 
+                    "time": "9:50"
+                }, 
+                {
+                    "frame": 13258, 
+                    "killer": 2, 
+                    "name": "Marine", 
+                    "clock_position": null, 
+                    "time": "9:51"
+                }, 
+                {
+                    "frame": 13316, 
+                    "killer": 2, 
+                    "name": "Marauder", 
+                    "clock_position": null, 
+                    "time": "9:54"
+                }, 
+                {
+                    "frame": 13402, 
+                    "killer": 2, 
+                    "name": "Marine", 
+                    "clock_position": null, 
+                    "time": "9:58"
+                }
+            ], 
+            "race": "Terran", 
+            "result": "Win", 
+            "team": 1, 
+            "uid": 10400125
+        }, 
+        "2": {
+            "supply": [
+                [
+                    0, 
+                    12
+                ], 
+                [
+                    1, 
+                    12
+                ], 
+                [
+                    160, 
+                    13
+                ], 
+                [
+                    320, 
+                    14
+                ], 
+                [
+                    480, 
+                    14
+                ], 
+                [
+                    640, 
+                    15
+                ], 
+                [
+                    800, 
+                    15
+                ], 
+                [
+                    960, 
+                    16
+                ], 
+                [
+                    1120, 
+                    17
+                ], 
+                [
+                    1280, 
+                    18
+                ], 
+                [
+                    1440, 
+                    18
+                ], 
+                [
+                    1600, 
+                    19
+                ], 
+                [
+                    1760, 
+                    20
+                ], 
+                [
+                    1920, 
+                    20
+                ], 
+                [
+                    2080, 
+                    20
+                ], 
+                [
+                    2240, 
+                    20
+                ], 
+                [
+                    2400, 
+                    21
+                ], 
+                [
+                    2560, 
+                    21
+                ], 
+                [
+                    2720, 
+                    22
+                ], 
+                [
+                    2880, 
+                    24
+                ], 
+                [
+                    3040, 
+                    24
+                ], 
+                [
+                    3200, 
+                    27
+                ], 
+                [
+                    3360, 
+                    27
+                ], 
+                [
+                    3520, 
+                    28
+                ], 
+                [
+                    3680, 
+                    30
+                ], 
+                [
+                    3840, 
+                    32
+                ], 
+                [
+                    4000, 
+                    32
+                ], 
+                [
+                    4160, 
+                    34
+                ], 
+                [
+                    4320, 
+                    35
+                ], 
+                [
+                    4480, 
+                    38
+                ], 
+                [
+                    4640, 
+                    39
+                ], 
+                [
+                    4800, 
+                    41
+                ], 
+                [
+                    4960, 
+                    43
+                ], 
+                [
+                    5120, 
+                    45
+                ], 
+                [
+                    5280, 
+                    47
+                ], 
+                [
+                    5440, 
+                    49
+                ], 
+                [
+                    5600, 
+                    51
+                ], 
+                [
+                    5760, 
+                    52
+                ], 
+                [
+                    5920, 
+                    54
+                ], 
+                [
+                    6080, 
+                    54
+                ], 
+                [
+                    6240, 
+                    58
+                ], 
+                [
+                    6400, 
+                    59
+                ], 
+                [
+                    6560, 
+                    63
+                ], 
+                [
+                    6720, 
+                    67
+                ], 
+                [
+                    6880, 
+                    67
+                ], 
+                [
+                    7040, 
+                    69
+                ], 
+                [
+                    7200, 
+                    69
+                ], 
+                [
+                    7360, 
+                    69
+                ], 
+                [
+                    7520, 
+                    69
+                ], 
+                [
+                    7680, 
+                    75
+                ], 
+                [
+                    7840, 
+                    76
+                ], 
+                [
+                    8000, 
+                    76
+                ], 
+                [
+                    8160, 
+                    80
+                ], 
+                [
+                    8320, 
+                    82
+                ], 
+                [
+                    8480, 
+                    84
+                ], 
+                [
+                    8640, 
+                    90
+                ], 
+                [
+                    8800, 
+                    94
+                ], 
+                [
+                    8960, 
+                    94
+                ], 
+                [
+                    9120, 
+                    92
+                ], 
+                [
+                    9280, 
+                    96
+                ], 
+                [
+                    9440, 
+                    91
+                ], 
+                [
+                    9600, 
+                    78
+                ], 
+                [
+                    9760, 
+                    84
+                ], 
+                [
+                    9920, 
+                    74
+                ], 
+                [
+                    10080, 
+                    72
+                ], 
+                [
+                    10240, 
+                    72
+                ], 
+                [
+                    10400, 
+                    74
+                ], 
+                [
+                    10560, 
+                    80
+                ], 
+                [
+                    10720, 
+                    80
+                ], 
+                [
+                    10880, 
+                    84
+                ], 
+                [
+                    11040, 
+                    86
+                ], 
+                [
+                    11200, 
+                    86
+                ], 
+                [
+                    11360, 
+                    89
+                ], 
+                [
+                    11520, 
+                    99
+                ], 
+                [
+                    11680, 
+                    91
+                ], 
+                [
+                    11840, 
+                    79
+                ], 
+                [
+                    12000, 
+                    55
+                ], 
+                [
+                    12160, 
+                    63
+                ], 
+                [
+                    12320, 
+                    59
+                ], 
+                [
+                    12480, 
+                    61
+                ], 
+                [
+                    12640, 
+                    65
+                ], 
+                [
+                    12800, 
+                    67
+                ], 
+                [
+                    12960, 
+                    71
+                ], 
+                [
+                    13120, 
+                    69
+                ], 
+                [
+                    13280, 
+                    60
+                ], 
+                [
+                    13440, 
+                    58
+                ], 
+                [
+                    13586, 
+                    52
+                ], 
+                [
+                    13586, 
+                    52
+                ]
+            ], 
+            "league": 0, 
+            "buildOrder": [
+                {
+                    "is_worker": true, 
+                    "name": "Probe", 
+                    "clock_position": null, 
+                    "supply": 12, 
+                    "frame": 9.200000000000045, 
+                    "is_chronoboosted": false, 
+                    "time": "0:00"
+                }, 
+                {
+                    "is_worker": true, 
+                    "name": "Probe", 
+                    "clock_position": null, 
+                    "supply": 13, 
+                    "frame": 280.20000000000005, 
+                    "is_chronoboosted": false, 
+                    "time": "0:12"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Pylon", 
+                    "clock_position": null, 
+                    "supply": 14, 
+                    "frame": 446, 
+                    "is_chronoboosted": false, 
+                    "time": "0:19"
+                }, 
+                {
+                    "is_worker": true, 
+                    "name": "Probe", 
+                    "clock_position": null, 
+                    "supply": 14, 
+                    "frame": 551.2, 
+                    "is_chronoboosted": false, 
+                    "time": "0:24"
+                }, 
+                {
+                    "is_worker": true, 
+                    "name": "Probe", 
+                    "clock_position": null, 
+                    "supply": 15, 
+                    "frame": 854.2, 
+                    "is_chronoboosted": true, 
+                    "time": "0:38"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Gateway", 
+                    "clock_position": null, 
+                    "supply": 15, 
+                    "frame": 867, 
+                    "is_chronoboosted": false, 
+                    "time": "0:38"
+                }, 
+                {
+                    "is_worker": true, 
+                    "name": "Probe", 
+                    "clock_position": null, 
+                    "supply": 16, 
+                    "frame": 1048.2, 
+                    "is_chronoboosted": true, 
+                    "time": "0:46"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Assimilator", 
+                    "clock_position": null, 
+                    "supply": 16, 
+                    "frame": 1083, 
+                    "is_chronoboosted": false, 
+                    "time": "0:48"
+                }, 
+                {
+                    "is_worker": true, 
+                    "name": "Probe", 
+                    "clock_position": null, 
+                    "supply": 17, 
+                    "frame": 1173.2, 
+                    "is_chronoboosted": false, 
+                    "time": "0:52"
+                }, 
+                {
+                    "is_worker": true, 
+                    "name": "Probe", 
+                    "clock_position": null, 
+                    "supply": 18, 
+                    "frame": 1444.2, 
+                    "is_chronoboosted": false, 
+                    "time": "1:04"
+                }, 
+                {
+                    "is_worker": true, 
+                    "name": "Probe", 
+                    "clock_position": null, 
+                    "supply": 19, 
+                    "frame": 1715.2, 
+                    "is_chronoboosted": false, 
+                    "time": "1:16"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "CyberneticsCore", 
+                    "clock_position": null, 
+                    "supply": 20, 
+                    "frame": 1924, 
+                    "is_chronoboosted": false, 
+                    "time": "1:25"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Nexus", 
+                    "clock_position": null, 
+                    "supply": 20, 
+                    "frame": 2168, 
+                    "is_chronoboosted": false, 
+                    "time": "1:36"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Pylon", 
+                    "clock_position": null, 
+                    "supply": 20, 
+                    "frame": 2282, 
+                    "is_chronoboosted": false, 
+                    "time": "1:41"
+                }, 
+                {
+                    "is_worker": true, 
+                    "name": "Probe", 
+                    "clock_position": null, 
+                    "supply": 20, 
+                    "frame": 2358.2, 
+                    "is_chronoboosted": false, 
+                    "time": "1:45"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Assimilator", 
+                    "clock_position": null, 
+                    "supply": 21, 
+                    "frame": 2518, 
+                    "is_chronoboosted": false, 
+                    "time": "1:52"
+                }, 
+                {
+                    "is_worker": true, 
+                    "name": "Probe", 
+                    "clock_position": null, 
+                    "supply": 21, 
+                    "frame": 2629.2, 
+                    "is_chronoboosted": false, 
+                    "time": "1:57"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Adept", 
+                    "clock_position": null, 
+                    "supply": 21, 
+                    "frame": 2665.0, 
+                    "is_chronoboosted": true, 
+                    "time": "1:58"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "ShieldBattery", 
+                    "clock_position": null, 
+                    "supply": 22, 
+                    "frame": 2876, 
+                    "is_chronoboosted": false, 
+                    "time": "2:08"
+                }, 
+                {
+                    "is_worker": true, 
+                    "name": "Probe", 
+                    "clock_position": null, 
+                    "supply": 24, 
+                    "frame": 2905.2, 
+                    "is_chronoboosted": false, 
+                    "time": "2:09"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Adept", 
+                    "clock_position": null, 
+                    "supply": 24, 
+                    "frame": 3116.0, 
+                    "is_chronoboosted": true, 
+                    "time": "2:19"
+                }, 
+                {
+                    "is_worker": true, 
+                    "name": "Probe", 
+                    "clock_position": null, 
+                    "supply": 24, 
+                    "frame": 3176.2, 
+                    "is_chronoboosted": false, 
+                    "time": "2:21"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Stargate", 
+                    "clock_position": null, 
+                    "supply": 27, 
+                    "frame": 3361, 
+                    "is_chronoboosted": false, 
+                    "time": "2:30"
+                }, 
+                {
+                    "is_worker": true, 
+                    "name": "Probe", 
+                    "clock_position": null, 
+                    "supply": 27, 
+                    "frame": 3458.2, 
+                    "is_chronoboosted": false, 
+                    "time": "2:34"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Warp Gate", 
+                    "clock_position": null, 
+                    "supply": 27, 
+                    "frame": 3508.0, 
+                    "is_chronoboosted": false, 
+                    "time": "2:36"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Adept", 
+                    "clock_position": null, 
+                    "supply": 28, 
+                    "frame": 3649.0, 
+                    "is_chronoboosted": false, 
+                    "time": "2:42"
+                }, 
+                {
+                    "is_worker": true, 
+                    "name": "Probe", 
+                    "clock_position": null, 
+                    "supply": 30, 
+                    "frame": 3730.2, 
+                    "is_chronoboosted": false, 
+                    "time": "2:46"
+                }, 
+                {
+                    "is_worker": true, 
+                    "name": "Probe", 
+                    "clock_position": null, 
+                    "supply": 30, 
+                    "frame": 3809.2, 
+                    "is_chronoboosted": false, 
+                    "time": "2:50"
+                }, 
+                {
+                    "is_worker": true, 
+                    "name": "Probe", 
+                    "clock_position": null, 
+                    "supply": 32, 
+                    "frame": 4097.2, 
+                    "is_chronoboosted": true, 
+                    "time": "3:02"
+                }, 
+                {
+                    "is_worker": true, 
+                    "name": "Probe", 
+                    "clock_position": null, 
+                    "supply": 34, 
+                    "frame": 4192.2, 
+                    "is_chronoboosted": true, 
+                    "time": "3:07"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Phoenix", 
+                    "clock_position": null, 
+                    "supply": 35, 
+                    "frame": 4349.0, 
+                    "is_chronoboosted": false, 
+                    "time": "3:14"
+                }, 
+                {
+                    "is_worker": true, 
+                    "name": "Probe", 
+                    "clock_position": null, 
+                    "supply": 35, 
+                    "frame": 4363.2, 
+                    "is_chronoboosted": true, 
+                    "time": "3:14"
+                }, 
+                {
+                    "is_worker": true, 
+                    "name": "Probe", 
+                    "clock_position": null, 
+                    "supply": 35, 
+                    "frame": 4459.2, 
+                    "is_chronoboosted": true, 
+                    "time": "3:19"
+                }, 
+                {
+                    "is_worker": true, 
+                    "name": "Probe", 
+                    "clock_position": null, 
+                    "supply": 35, 
+                    "frame": 4476.2, 
+                    "is_chronoboosted": true, 
+                    "time": "3:19"
+                }, 
+                {
+                    "is_worker": true, 
+                    "name": "Probe", 
+                    "clock_position": null, 
+                    "supply": 39, 
+                    "frame": 4653.2, 
+                    "is_chronoboosted": false, 
+                    "time": "3:27"
+                }, 
+                {
+                    "is_worker": true, 
+                    "name": "Probe", 
+                    "clock_position": null, 
+                    "supply": 39, 
+                    "frame": 4687.2, 
+                    "is_chronoboosted": false, 
+                    "time": "3:29"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Pylon", 
+                    "clock_position": null, 
+                    "supply": 39, 
+                    "frame": 4759, 
+                    "is_chronoboosted": false, 
+                    "time": "3:32"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Phoenix", 
+                    "clock_position": null, 
+                    "supply": 41, 
+                    "frame": 4908.0, 
+                    "is_chronoboosted": true, 
+                    "time": "3:39"
+                }, 
+                {
+                    "is_worker": true, 
+                    "name": "Probe", 
+                    "clock_position": null, 
+                    "supply": 43, 
+                    "frame": 4988.2, 
+                    "is_chronoboosted": false, 
+                    "time": "3:42"
+                }, 
+                {
+                    "is_worker": true, 
+                    "name": "Probe", 
+                    "clock_position": null, 
+                    "supply": 43, 
+                    "frame": 4991.2, 
+                    "is_chronoboosted": false, 
+                    "time": "3:42"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Assimilator", 
+                    "clock_position": null, 
+                    "supply": 43, 
+                    "frame": 5053, 
+                    "is_chronoboosted": false, 
+                    "time": "3:45"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Assimilator", 
+                    "clock_position": null, 
+                    "supply": 43, 
+                    "frame": 5073, 
+                    "is_chronoboosted": false, 
+                    "time": "3:46"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "RoboticsFacility", 
+                    "clock_position": null, 
+                    "supply": 45, 
+                    "frame": 5181, 
+                    "is_chronoboosted": false, 
+                    "time": "3:51"
+                }, 
+                {
+                    "is_worker": true, 
+                    "name": "Probe", 
+                    "clock_position": null, 
+                    "supply": 45, 
+                    "frame": 5259.2, 
+                    "is_chronoboosted": false, 
+                    "time": "3:54"
+                }, 
+                {
+                    "is_worker": true, 
+                    "name": "Probe", 
+                    "clock_position": null, 
+                    "supply": 45, 
+                    "frame": 5262.2, 
+                    "is_chronoboosted": false, 
+                    "time": "3:54"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Phoenix", 
+                    "clock_position": null, 
+                    "supply": 47, 
+                    "frame": 5403.0, 
+                    "is_chronoboosted": true, 
+                    "time": "4:01"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Gateway", 
+                    "clock_position": null, 
+                    "supply": 49, 
+                    "frame": 5526, 
+                    "is_chronoboosted": false, 
+                    "time": "4:06"
+                }, 
+                {
+                    "is_worker": true, 
+                    "name": "Probe", 
+                    "clock_position": null, 
+                    "supply": 49, 
+                    "frame": 5549.2, 
+                    "is_chronoboosted": true, 
+                    "time": "4:07"
+                }, 
+                {
+                    "is_worker": true, 
+                    "name": "Probe", 
+                    "clock_position": null, 
+                    "supply": 51, 
+                    "frame": 5651.2, 
+                    "is_chronoboosted": true, 
+                    "time": "4:12"
+                }, 
+                {
+                    "is_worker": true, 
+                    "name": "Probe", 
+                    "clock_position": null, 
+                    "supply": 52, 
+                    "frame": 5761.2, 
+                    "is_chronoboosted": true, 
+                    "time": "4:17"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Pylon", 
+                    "clock_position": null, 
+                    "supply": 52, 
+                    "frame": 5783, 
+                    "is_chronoboosted": false, 
+                    "time": "4:18"
+                }, 
+                {
+                    "is_worker": true, 
+                    "name": "Probe", 
+                    "clock_position": null, 
+                    "supply": 52, 
+                    "frame": 5840.2, 
+                    "is_chronoboosted": true, 
+                    "time": "4:20"
+                }, 
+                {
+                    "is_worker": true, 
+                    "name": "Probe", 
+                    "clock_position": null, 
+                    "supply": 52, 
+                    "frame": 5873.2, 
+                    "is_chronoboosted": true, 
+                    "time": "4:22"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Pylon", 
+                    "clock_position": null, 
+                    "supply": 54, 
+                    "frame": 5980, 
+                    "is_chronoboosted": false, 
+                    "time": "4:26"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Phoenix", 
+                    "clock_position": null, 
+                    "supply": 54, 
+                    "frame": 6184.0, 
+                    "is_chronoboosted": false, 
+                    "time": "4:36"
+                }, 
+                {
+                    "is_worker": true, 
+                    "name": "Probe", 
+                    "clock_position": null, 
+                    "supply": 54, 
+                    "frame": 6187.2, 
+                    "is_chronoboosted": false, 
+                    "time": "4:36"
+                }, 
+                {
+                    "is_worker": true, 
+                    "name": "Probe", 
+                    "clock_position": null, 
+                    "supply": 54, 
+                    "frame": 6187.2, 
+                    "is_chronoboosted": false, 
+                    "time": "4:36"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Observer", 
+                    "clock_position": null, 
+                    "supply": 58, 
+                    "frame": 6251.6, 
+                    "is_chronoboosted": true, 
+                    "time": "4:39"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "RoboticsBay", 
+                    "clock_position": null, 
+                    "supply": 59, 
+                    "frame": 6402, 
+                    "is_chronoboosted": false, 
+                    "time": "4:45"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Forge", 
+                    "clock_position": null, 
+                    "supply": 59, 
+                    "frame": 6455, 
+                    "is_chronoboosted": false, 
+                    "time": "4:48"
+                }, 
+                {
+                    "is_worker": true, 
+                    "name": "Probe", 
+                    "clock_position": null, 
+                    "supply": 59, 
+                    "frame": 6466.2, 
+                    "is_chronoboosted": false, 
+                    "time": "4:48"
+                }, 
+                {
+                    "is_worker": true, 
+                    "name": "Probe", 
+                    "clock_position": null, 
+                    "supply": 59, 
+                    "frame": 6471.2, 
+                    "is_chronoboosted": false, 
+                    "time": "4:48"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Sentry", 
+                    "clock_position": null, 
+                    "supply": 59, 
+                    "frame": 6548, 
+                    "is_chronoboosted": false, 
+                    "time": "4:52"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Immortal", 
+                    "clock_position": null, 
+                    "supply": 63, 
+                    "frame": 6663.4, 
+                    "is_chronoboosted": true, 
+                    "time": "4:57"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Pylon", 
+                    "clock_position": null, 
+                    "supply": 67, 
+                    "frame": 6905, 
+                    "is_chronoboosted": false, 
+                    "time": "5:08"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Pylon", 
+                    "clock_position": null, 
+                    "supply": 67, 
+                    "frame": 6924, 
+                    "is_chronoboosted": false, 
+                    "time": "5:09"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Sentry", 
+                    "clock_position": null, 
+                    "supply": 67, 
+                    "frame": 6934, 
+                    "is_chronoboosted": false, 
+                    "time": "5:09"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Gateway", 
+                    "clock_position": null, 
+                    "supply": 69, 
+                    "frame": 7156, 
+                    "is_chronoboosted": false, 
+                    "time": "5:19"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Protoss Ground Weapons Level 1", 
+                    "clock_position": null, 
+                    "supply": 69, 
+                    "frame": 7169.200000000001, 
+                    "is_chronoboosted": false, 
+                    "time": "5:20"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Nexus", 
+                    "clock_position": null, 
+                    "supply": 69, 
+                    "frame": 7439, 
+                    "is_chronoboosted": false, 
+                    "time": "5:32"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Colossus", 
+                    "clock_position": null, 
+                    "supply": 69, 
+                    "frame": 7516.4, 
+                    "is_chronoboosted": true, 
+                    "time": "5:35"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Extended Thermal Lance", 
+                    "clock_position": null, 
+                    "supply": 75, 
+                    "frame": 7693.0, 
+                    "is_chronoboosted": false, 
+                    "time": "5:43"
+                }, 
+                {
+                    "is_worker": true, 
+                    "name": "Probe", 
+                    "clock_position": null, 
+                    "supply": 75, 
+                    "frame": 7775.2, 
+                    "is_chronoboosted": false, 
+                    "time": "5:47"
+                }, 
+                {
+                    "is_worker": true, 
+                    "name": "Probe", 
+                    "clock_position": null, 
+                    "supply": 75, 
+                    "frame": 7778.2, 
+                    "is_chronoboosted": false, 
+                    "time": "5:47"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "ShieldBattery", 
+                    "clock_position": null, 
+                    "supply": 76, 
+                    "frame": 8004, 
+                    "is_chronoboosted": false, 
+                    "time": "5:57"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "ShieldBattery", 
+                    "clock_position": null, 
+                    "supply": 76, 
+                    "frame": 8043, 
+                    "is_chronoboosted": false, 
+                    "time": "5:59"
+                }, 
+                {
+                    "is_worker": true, 
+                    "name": "Probe", 
+                    "clock_position": null, 
+                    "supply": 76, 
+                    "frame": 8057.2, 
+                    "is_chronoboosted": false, 
+                    "time": "5:59"
+                }, 
+                {
+                    "is_worker": true, 
+                    "name": "Probe", 
+                    "clock_position": null, 
+                    "supply": 76, 
+                    "frame": 8060.2, 
+                    "is_chronoboosted": false, 
+                    "time": "5:59"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Pylon", 
+                    "clock_position": null, 
+                    "supply": 76, 
+                    "frame": 8127, 
+                    "is_chronoboosted": false, 
+                    "time": "6:02"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Sentry", 
+                    "clock_position": null, 
+                    "supply": 76, 
+                    "frame": 8146, 
+                    "is_chronoboosted": false, 
+                    "time": "6:03"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Zealot", 
+                    "clock_position": null, 
+                    "supply": 80, 
+                    "frame": 8163, 
+                    "is_chronoboosted": false, 
+                    "time": "6:04"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Colossus", 
+                    "clock_position": null, 
+                    "supply": 82, 
+                    "frame": 8440.4, 
+                    "is_chronoboosted": true, 
+                    "time": "6:16"
+                }, 
+                {
+                    "is_worker": true, 
+                    "name": "Probe", 
+                    "clock_position": null, 
+                    "supply": 82, 
+                    "frame": 8479.2, 
+                    "is_chronoboosted": false, 
+                    "time": "6:18"
+                }, 
+                {
+                    "is_worker": true, 
+                    "name": "Probe", 
+                    "clock_position": null, 
+                    "supply": 84, 
+                    "frame": 8482.2, 
+                    "is_chronoboosted": false, 
+                    "time": "6:18"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Stalker", 
+                    "clock_position": null, 
+                    "supply": 90, 
+                    "frame": 8697, 
+                    "is_chronoboosted": false, 
+                    "time": "6:28"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "TwilightCouncil", 
+                    "clock_position": null, 
+                    "supply": 90, 
+                    "frame": 8719, 
+                    "is_chronoboosted": false, 
+                    "time": "6:29"
+                }, 
+                {
+                    "is_worker": true, 
+                    "name": "Probe", 
+                    "clock_position": null, 
+                    "supply": 90, 
+                    "frame": 8758.2, 
+                    "is_chronoboosted": false, 
+                    "time": "6:30"
+                }, 
+                {
+                    "is_worker": true, 
+                    "name": "Probe", 
+                    "clock_position": null, 
+                    "supply": 90, 
+                    "frame": 8761.2, 
+                    "is_chronoboosted": false, 
+                    "time": "6:31"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Pylon", 
+                    "clock_position": null, 
+                    "supply": 94, 
+                    "frame": 8922, 
+                    "is_chronoboosted": false, 
+                    "time": "6:38"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Gateway", 
+                    "clock_position": null, 
+                    "supply": 94, 
+                    "frame": 9048, 
+                    "is_chronoboosted": false, 
+                    "time": "6:43"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Stalker", 
+                    "clock_position": null, 
+                    "supply": 92, 
+                    "frame": 9171, 
+                    "is_chronoboosted": false, 
+                    "time": "6:49"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Stalker", 
+                    "clock_position": null, 
+                    "supply": 92, 
+                    "frame": 9187, 
+                    "is_chronoboosted": false, 
+                    "time": "6:50"
+                }, 
+                {
+                    "is_worker": true, 
+                    "name": "Probe", 
+                    "clock_position": null, 
+                    "supply": 92, 
+                    "frame": 9256.2, 
+                    "is_chronoboosted": false, 
+                    "time": "6:53"
+                }, 
+                {
+                    "is_worker": true, 
+                    "name": "Probe", 
+                    "clock_position": null, 
+                    "supply": 92, 
+                    "frame": 9260.2, 
+                    "is_chronoboosted": false, 
+                    "time": "6:53"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Stalker", 
+                    "clock_position": null, 
+                    "supply": 96, 
+                    "frame": 9406, 
+                    "is_chronoboosted": false, 
+                    "time": "6:59"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Zealot", 
+                    "clock_position": null, 
+                    "supply": 78, 
+                    "frame": 9686, 
+                    "is_chronoboosted": false, 
+                    "time": "7:12"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Warp Prism", 
+                    "clock_position": null, 
+                    "supply": 84, 
+                    "frame": 9761.6, 
+                    "is_chronoboosted": true, 
+                    "time": "7:15"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Stalker", 
+                    "clock_position": null, 
+                    "supply": 74, 
+                    "frame": 9992, 
+                    "is_chronoboosted": false, 
+                    "time": "7:26"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Stalker", 
+                    "clock_position": null, 
+                    "supply": 74, 
+                    "frame": 9994, 
+                    "is_chronoboosted": false, 
+                    "time": "7:26"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Gateway", 
+                    "clock_position": null, 
+                    "supply": 72, 
+                    "frame": 10138, 
+                    "is_chronoboosted": false, 
+                    "time": "7:32"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Gateway", 
+                    "clock_position": null, 
+                    "supply": 72, 
+                    "frame": 10194, 
+                    "is_chronoboosted": false, 
+                    "time": "7:35"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Sentry", 
+                    "clock_position": null, 
+                    "supply": 72, 
+                    "frame": 10357, 
+                    "is_chronoboosted": false, 
+                    "time": "7:42"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Colossus", 
+                    "clock_position": null, 
+                    "supply": 74, 
+                    "frame": 10402.4, 
+                    "is_chronoboosted": true, 
+                    "time": "7:44"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Stalker", 
+                    "clock_position": null, 
+                    "supply": 80, 
+                    "frame": 10825, 
+                    "is_chronoboosted": false, 
+                    "time": "8:03"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Stalker", 
+                    "clock_position": null, 
+                    "supply": 80, 
+                    "frame": 10828, 
+                    "is_chronoboosted": false, 
+                    "time": "8:03"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Stalker", 
+                    "clock_position": null, 
+                    "supply": 80, 
+                    "frame": 10829, 
+                    "is_chronoboosted": false, 
+                    "time": "8:03"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Sentry", 
+                    "clock_position": null, 
+                    "supply": 84, 
+                    "frame": 10906, 
+                    "is_chronoboosted": false, 
+                    "time": "8:06"
+                }, 
+                {
+                    "is_worker": true, 
+                    "name": "Probe", 
+                    "clock_position": null, 
+                    "supply": 86, 
+                    "frame": 11084.2, 
+                    "is_chronoboosted": false, 
+                    "time": "8:14"
+                }, 
+                {
+                    "is_worker": true, 
+                    "name": "Probe", 
+                    "clock_position": null, 
+                    "supply": 86, 
+                    "frame": 11087.2, 
+                    "is_chronoboosted": false, 
+                    "time": "8:14"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Disruptor", 
+                    "clock_position": null, 
+                    "supply": 86, 
+                    "frame": 11245.6, 
+                    "is_chronoboosted": true, 
+                    "time": "8:22"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Zealot", 
+                    "clock_position": null, 
+                    "supply": 89, 
+                    "frame": 11405, 
+                    "is_chronoboosted": false, 
+                    "time": "8:29"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Zealot", 
+                    "clock_position": null, 
+                    "supply": 89, 
+                    "frame": 11405, 
+                    "is_chronoboosted": false, 
+                    "time": "8:29"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Zealot", 
+                    "clock_position": null, 
+                    "supply": 89, 
+                    "frame": 11406, 
+                    "is_chronoboosted": false, 
+                    "time": "8:29"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Zealot", 
+                    "clock_position": null, 
+                    "supply": 89, 
+                    "frame": 11408, 
+                    "is_chronoboosted": false, 
+                    "time": "8:29"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Zealot", 
+                    "clock_position": null, 
+                    "supply": 89, 
+                    "frame": 11448, 
+                    "is_chronoboosted": false, 
+                    "time": "8:31"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Pylon", 
+                    "clock_position": null, 
+                    "supply": 89, 
+                    "frame": 11454, 
+                    "is_chronoboosted": false, 
+                    "time": "8:31"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Colossus", 
+                    "clock_position": null, 
+                    "supply": 79, 
+                    "frame": 11972.4, 
+                    "is_chronoboosted": true, 
+                    "time": "8:54"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Stalker", 
+                    "clock_position": null, 
+                    "supply": 63, 
+                    "frame": 12210, 
+                    "is_chronoboosted": false, 
+                    "time": "9:05"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Stalker", 
+                    "clock_position": null, 
+                    "supply": 63, 
+                    "frame": 12213, 
+                    "is_chronoboosted": false, 
+                    "time": "9:05"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Nexus", 
+                    "clock_position": null, 
+                    "supply": 59, 
+                    "frame": 12332, 
+                    "is_chronoboosted": false, 
+                    "time": "9:10"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Stalker", 
+                    "clock_position": null, 
+                    "supply": 59, 
+                    "frame": 12403, 
+                    "is_chronoboosted": false, 
+                    "time": "9:13"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Stalker", 
+                    "clock_position": null, 
+                    "supply": 61, 
+                    "frame": 12568, 
+                    "is_chronoboosted": false, 
+                    "time": "9:21"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Stalker", 
+                    "clock_position": null, 
+                    "supply": 61, 
+                    "frame": 12571, 
+                    "is_chronoboosted": false, 
+                    "time": "9:21"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Stalker", 
+                    "clock_position": null, 
+                    "supply": 65, 
+                    "frame": 12725, 
+                    "is_chronoboosted": false, 
+                    "time": "9:28"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Stalker", 
+                    "clock_position": null, 
+                    "supply": 65, 
+                    "frame": 12728, 
+                    "is_chronoboosted": false, 
+                    "time": "9:28"
+                }, 
+                {
+                    "is_worker": true, 
+                    "name": "Probe", 
+                    "clock_position": null, 
+                    "supply": 67, 
+                    "frame": 12881.2, 
+                    "is_chronoboosted": false, 
+                    "time": "9:35"
+                }, 
+                {
+                    "is_worker": true, 
+                    "name": "Probe", 
+                    "clock_position": null, 
+                    "supply": 67, 
+                    "frame": 12885.2, 
+                    "is_chronoboosted": false, 
+                    "time": "9:35"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Zealot", 
+                    "clock_position": null, 
+                    "supply": 67, 
+                    "frame": 12898, 
+                    "is_chronoboosted": false, 
+                    "time": "9:35"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Stalker", 
+                    "clock_position": null, 
+                    "supply": 69, 
+                    "frame": 13222, 
+                    "is_chronoboosted": false, 
+                    "time": "9:50"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Zealot", 
+                    "clock_position": null, 
+                    "supply": 69, 
+                    "frame": 13239, 
+                    "is_chronoboosted": false, 
+                    "time": "9:51"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Zealot", 
+                    "clock_position": null, 
+                    "supply": 69, 
+                    "frame": 13242, 
+                    "is_chronoboosted": false, 
+                    "time": "9:51"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Zealot", 
+                    "clock_position": null, 
+                    "supply": 69, 
+                    "frame": 13243, 
+                    "is_chronoboosted": false, 
+                    "time": "9:51"
+                }, 
+                {
+                    "is_worker": false, 
+                    "name": "Stalker", 
+                    "clock_position": null, 
+                    "supply": 60, 
+                    "frame": 13383, 
+                    "is_chronoboosted": false, 
+                    "time": "9:57"
+                }
+            ], 
+            "abilities": [
+                {
+                    "frame": 837, 
+                    "name": "ChronoBoostEnergyCost", 
+                    "time": "0:37"
+                }, 
+                {
+                    "frame": 2737, 
+                    "name": "ChronoBoostEnergyCost", 
+                    "time": "2:02"
+                }, 
+                {
+                    "frame": 3186, 
+                    "name": "AdeptPhaseShift", 
+                    "time": "2:22"
+                }, 
+                {
+                    "frame": 3196, 
+                    "name": "ChronoBoostEnergyCost", 
+                    "time": "2:22"
+                }, 
+                {
+                    "frame": 3451, 
+                    "name": "AdeptPhaseShift", 
+                    "time": "2:34"
+                }, 
+                {
+                    "frame": 3846, 
+                    "name": "AdeptPhaseShift", 
+                    "time": "2:51"
+                }, 
+                {
+                    "frame": 3875, 
+                    "name": "AdeptPhaseShift", 
+                    "time": "2:52"
+                }, 
+                {
+                    "frame": 4218, 
+                    "name": "ChronoBoostEnergyCost", 
+                    "time": "3:08"
+                }, 
+                {
+                    "frame": 4283, 
+                    "name": "AdeptPhaseShift", 
+                    "time": "3:11"
+                }, 
+                {
+                    "frame": 4421, 
+                    "name": "AdeptPhaseShift", 
+                    "time": "3:17"
+                }, 
+                {
+                    "frame": 4568, 
+                    "name": "AdeptPhaseShift", 
+                    "time": "3:23"
+                }, 
+                {
+                    "frame": 4719, 
+                    "name": "AdeptPhaseShift", 
+                    "time": "3:30"
+                }, 
+                {
+                    "frame": 5001, 
+                    "name": "AdeptPhaseShift", 
+                    "time": "3:43"
+                }, 
+                {
+                    "frame": 5315, 
+                    "name": "ChronoBoostEnergyCost", 
+                    "time": "3:57"
+                }, 
+                {
+                    "frame": 5348, 
+                    "name": "GravitonBeam", 
+                    "time": "3:58"
+                }, 
+                {
+                    "frame": 5559, 
+                    "name": "ChronoBoostEnergyCost", 
+                    "time": "4:08"
+                }, 
+                {
+                    "frame": 6626, 
+                    "name": "ChronoBoostEnergyCost", 
+                    "time": "4:55"
+                }, 
+                {
+                    "frame": 7555, 
+                    "name": "ChronoBoostEnergyCost", 
+                    "time": "5:37"
+                }, 
+                {
+                    "frame": 7844, 
+                    "name": "GravitonBeam", 
+                    "time": "5:50"
+                }, 
+                {
+                    "frame": 7867, 
+                    "name": "GravitonBeam", 
+                    "time": "5:51"
+                }, 
+                {
+                    "frame": 7893, 
+                    "name": "GravitonBeam", 
+                    "time": "5:52"
+                }, 
+                {
+                    "frame": 7909, 
+                    "name": "GravitonBeam", 
+                    "time": "5:53"
+                }, 
+                {
+                    "frame": 8136, 
+                    "name": "ChronoBoostEnergyCost", 
+                    "time": "6:03"
+                }, 
+                {
+                    "frame": 8493, 
+                    "name": "GravitonBeam", 
+                    "time": "6:19"
+                }, 
+                {
+                    "frame": 8548, 
+                    "name": "GravitonBeam", 
+                    "time": "6:21"
+                }, 
+                {
+                    "frame": 8610, 
+                    "name": "GravitonBeam", 
+                    "time": "6:24"
+                }, 
+                {
+                    "frame": 8725, 
+                    "name": "ChronoBoostEnergyCost", 
+                    "time": "6:29"
+                }, 
+                {
+                    "frame": 9040, 
+                    "name": "NexusMassRecall", 
+                    "time": "6:43"
+                }, 
+                {
+                    "frame": 9334, 
+                    "name": "GravitonBeam", 
+                    "time": "6:56"
+                }, 
+                {
+                    "frame": 9423, 
+                    "name": "GravitonBeam", 
+                    "time": "7:00"
+                }, 
+                {
+                    "frame": 9793, 
+                    "name": "ChronoBoostEnergyCost", 
+                    "time": "7:17"
+                }, 
+                {
+                    "frame": 9826, 
+                    "name": "GuardianShield", 
+                    "time": "7:18"
+                }, 
+                {
+                    "frame": 9833, 
+                    "name": "ForceField", 
+                    "time": "7:18"
+                }, 
+                {
+                    "frame": 10572, 
+                    "name": "ChronoBoostEnergyCost", 
+                    "time": "7:51"
+                }, 
+                {
+                    "frame": 10931, 
+                    "name": "ChronoBoostEnergyCost", 
+                    "time": "8:07"
+                }, 
+                {
+                    "frame": 11576, 
+                    "name": "GuardianShield", 
+                    "time": "8:36"
+                }, 
+                {
+                    "frame": 11605, 
+                    "name": "ForceField", 
+                    "time": "8:38"
+                }, 
+                {
+                    "frame": 11984, 
+                    "name": "ChronoBoostEnergyCost", 
+                    "time": "8:55"
+                }, 
+                {
+                    "frame": 12857, 
+                    "name": "ChronoBoostEnergyCost", 
+                    "time": "9:33"
+                }
+            ], 
+            "name": "herO", 
+            "is_human": true, 
+            "level": 4294967295, 
+            "handicap": 100, 
+            "region": "eu", 
+            "is_winner": false, 
+            "pick_race": "Protoss", 
+            "clock_position": null, 
+            "commander": "", 
+            "color": "0042FF", 
+            "unitsLost": [
+                {
+                    "frame": 2921, 
+                    "killer": 1, 
+                    "name": "Probe", 
+                    "clock_position": null, 
+                    "time": "2:10"
+                }, 
+                {
+                    "frame": 7788, 
+                    "killer": 1, 
+                    "name": "Observer", 
+                    "clock_position": null, 
+                    "time": "5:47"
+                }, 
+                {
+                    "frame": 9034, 
+                    "killer": 1, 
+                    "name": "Adept", 
+                    "clock_position": null, 
+                    "time": "6:43"
+                }, 
+                {
+                    "frame": 9222, 
+                    "killer": 1, 
+                    "name": "Phoenix", 
+                    "clock_position": null, 
+                    "time": "6:51"
+                }, 
+                {
+                    "frame": 9294, 
+                    "killer": 1, 
+                    "name": "Stalker", 
+                    "clock_position": null, 
+                    "time": "6:54"
+                }, 
+                {
+                    "frame": 9303, 
+                    "killer": 1, 
+                    "name": "Probe", 
+                    "clock_position": null, 
+                    "time": "6:55"
+                }, 
+                {
+                    "frame": 9318, 
+                    "killer": 1, 
+                    "name": "Probe", 
+                    "clock_position": null, 
+                    "time": "6:55"
+                }, 
+                {
+                    "frame": 9363, 
+                    "killer": 1, 
+                    "name": "Probe", 
+                    "clock_position": null, 
+                    "time": "6:57"
+                }, 
+                {
+                    "frame": 9394, 
+                    "killer": 1, 
+                    "name": "ShieldBattery", 
+                    "clock_position": null, 
+                    "time": "6:59"
+                }, 
+                {
+                    "frame": 9424, 
+                    "killer": 1, 
+                    "name": "Stalker", 
+                    "clock_position": null, 
+                    "time": "7:00"
+                }, 
+                {
+                    "frame": 9446, 
+                    "killer": 1, 
+                    "name": "Stalker", 
+                    "clock_position": null, 
+                    "time": "7:01"
+                }, 
+                {
+                    "frame": 9458, 
+                    "killer": 1, 
+                    "name": "Probe", 
+                    "clock_position": null, 
+                    "time": "7:02"
+                }, 
+                {
+                    "frame": 9467, 
+                    "killer": 1, 
+                    "name": "Probe", 
+                    "clock_position": null, 
+                    "time": "7:02"
+                }, 
+                {
+                    "frame": 9488, 
+                    "killer": 1, 
+                    "name": "Probe", 
+                    "clock_position": null, 
+                    "time": "7:03"
+                }, 
+                {
+                    "frame": 9491, 
+                    "killer": 1, 
+                    "name": "Probe", 
+                    "clock_position": null, 
+                    "time": "7:03"
+                }, 
+                {
+                    "frame": 9491, 
+                    "killer": 1, 
+                    "name": "Probe", 
+                    "clock_position": null, 
+                    "time": "7:03"
+                }, 
+                {
+                    "frame": 9494, 
+                    "killer": 1, 
+                    "name": "Probe", 
+                    "clock_position": null, 
+                    "time": "7:03"
+                }, 
+                {
+                    "frame": 9497, 
+                    "killer": 1, 
+                    "name": "Probe", 
+                    "clock_position": null, 
+                    "time": "7:03"
+                }, 
+                {
+                    "frame": 9505, 
+                    "killer": 1, 
+                    "name": "Probe", 
+                    "clock_position": null, 
+                    "time": "7:04"
+                }, 
+                {
+                    "frame": 9516, 
+                    "killer": 1, 
+                    "name": "Probe", 
+                    "clock_position": null, 
+                    "time": "7:04"
+                }, 
+                {
+                    "frame": 9558, 
+                    "killer": 1, 
+                    "name": "Phoenix", 
+                    "clock_position": null, 
+                    "time": "7:06"
+                }, 
+                {
+                    "frame": 9621, 
+                    "killer": 1, 
+                    "name": "Phoenix", 
+                    "clock_position": null, 
+                    "time": "7:09"
+                }, 
+                {
+                    "frame": 9647, 
+                    "killer": 1, 
+                    "name": "ShieldBattery", 
+                    "clock_position": null, 
+                    "time": "7:10"
+                }, 
+                {
+                    "frame": 9854, 
+                    "killer": 1, 
+                    "name": "Sentry", 
+                    "clock_position": null, 
+                    "time": "7:19"
+                }, 
+                {
+                    "frame": 9854, 
+                    "killer": 1, 
+                    "name": "Sentry", 
+                    "clock_position": null, 
+                    "time": "7:19"
+                }, 
+                {
+                    "frame": 9854, 
+                    "killer": 1, 
+                    "name": "Sentry", 
+                    "clock_position": null, 
+                    "time": "7:19"
+                }, 
+                {
+                    "frame": 9868, 
+                    "killer": 1, 
+                    "name": "Nexus", 
+                    "clock_position": null, 
+                    "time": "7:20"
+                }, 
+                {
+                    "frame": 9955, 
+                    "killer": 1, 
+                    "name": "Colossus", 
+                    "clock_position": null, 
+                    "time": "7:24"
+                }, 
+                {
+                    "frame": 10790, 
+                    "killer": 1, 
+                    "name": "Phoenix", 
+                    "clock_position": null, 
+                    "time": "8:01"
+                }, 
+                {
+                    "frame": 11061, 
+                    "killer": 1, 
+                    "name": "Stalker", 
+                    "clock_position": null, 
+                    "time": "8:13"
+                }, 
+                {
+                    "frame": 11592, 
+                    "killer": 1, 
+                    "name": "Adept", 
+                    "clock_position": null, 
+                    "time": "8:37"
+                }, 
+                {
+                    "frame": 11646, 
+                    "killer": 1, 
+                    "name": "Zealot", 
+                    "clock_position": null, 
+                    "time": "8:39"
+                }, 
+                {
+                    "frame": 11650, 
+                    "killer": 1, 
+                    "name": "Zealot", 
+                    "clock_position": null, 
+                    "time": "8:40"
+                }, 
+                {
+                    "frame": 11661, 
+                    "killer": 1, 
+                    "name": "Zealot", 
+                    "clock_position": null, 
+                    "time": "8:40"
+                }, 
+                {
+                    "frame": 11714, 
+                    "killer": 1, 
+                    "name": "Zealot", 
+                    "clock_position": null, 
+                    "time": "8:42"
+                }, 
+                {
+                    "frame": 11772, 
+                    "killer": 1, 
+                    "name": "Warp Prism", 
+                    "clock_position": null, 
+                    "time": "8:45"
+                }, 
+                {
+                    "frame": 11788, 
+                    "killer": 1, 
+                    "name": "Adept", 
+                    "clock_position": null, 
+                    "time": "8:46"
+                }, 
+                {
+                    "frame": 11808, 
+                    "killer": 1, 
+                    "name": "Zealot", 
+                    "clock_position": null, 
+                    "time": "8:47"
+                }, 
+                {
+                    "frame": 11815, 
+                    "killer": 1, 
+                    "name": "Zealot", 
+                    "clock_position": null, 
+                    "time": "8:47"
+                }, 
+                {
+                    "frame": 11823, 
+                    "killer": 1, 
+                    "name": "Zealot", 
+                    "clock_position": null, 
+                    "time": "8:47"
+                }, 
+                {
+                    "frame": 11845, 
+                    "killer": 1, 
+                    "name": "Sentry", 
+                    "clock_position": null, 
+                    "time": "8:48"
+                }, 
+                {
+                    "frame": 11862, 
+                    "killer": 1, 
+                    "name": "Stalker", 
+                    "clock_position": null, 
+                    "time": "8:49"
+                }, 
+                {
+                    "frame": 11878, 
+                    "killer": 1, 
+                    "name": "Stalker", 
+                    "clock_position": null, 
+                    "time": "8:50"
+                }, 
+                {
+                    "frame": 11901, 
+                    "killer": 1, 
+                    "name": "Sentry", 
+                    "clock_position": null, 
+                    "time": "8:51"
+                }, 
+                {
+                    "frame": 11906, 
+                    "killer": 1, 
+                    "name": "Stalker", 
+                    "clock_position": null, 
+                    "time": "8:51"
+                }, 
+                {
+                    "frame": 11929, 
+                    "killer": 1, 
+                    "name": "Immortal", 
+                    "clock_position": null, 
+                    "time": "8:52"
+                }, 
+                {
+                    "frame": 11951, 
+                    "killer": 1, 
+                    "name": "Colossus", 
+                    "clock_position": null, 
+                    "time": "8:53"
+                }, 
+                {
+                    "frame": 11963, 
+                    "killer": 1, 
+                    "name": "Stalker", 
+                    "clock_position": null, 
+                    "time": "8:54"
+                }, 
+                {
+                    "frame": 11973, 
+                    "killer": 1, 
+                    "name": "Stalker", 
+                    "clock_position": null, 
+                    "time": "8:54"
+                }, 
+                {
+                    "frame": 12181, 
+                    "killer": 1, 
+                    "name": "Colossus", 
+                    "clock_position": null, 
+                    "time": "9:03"
+                }, 
+                {
+                    "frame": 12795, 
+                    "killer": 1, 
+                    "name": "Stalker", 
+                    "clock_position": null, 
+                    "time": "9:31"
+                }, 
+                {
+                    "frame": 12985, 
+                    "killer": 1, 
+                    "name": "Stalker", 
+                    "clock_position": null, 
+                    "time": "9:39"
+                }, 
+                {
+                    "frame": 13005, 
+                    "killer": 1, 
+                    "name": "Stalker", 
+                    "clock_position": null, 
+                    "time": "9:40"
+                }, 
+                {
+                    "frame": 13018, 
+                    "killer": 1, 
+                    "name": "Stalker", 
+                    "clock_position": null, 
+                    "time": "9:41"
+                }, 
+                {
+                    "frame": 13097, 
+                    "killer": 1, 
+                    "name": "Zealot", 
+                    "clock_position": null, 
+                    "time": "9:44"
+                }, 
+                {
+                    "frame": 13204, 
+                    "killer": 1, 
+                    "name": "Disruptor", 
+                    "clock_position": null, 
+                    "time": "9:49"
+                }, 
+                {
+                    "frame": 13253, 
+                    "killer": 1, 
+                    "name": "Colossus", 
+                    "clock_position": null, 
+                    "time": "9:51"
+                }, 
+                {
+                    "frame": 13258, 
+                    "killer": 1, 
+                    "name": "Stalker", 
+                    "clock_position": null, 
+                    "time": "9:51"
+                }, 
+                {
+                    "frame": 13304, 
+                    "killer": 1, 
+                    "name": "Stalker", 
+                    "clock_position": null, 
+                    "time": "9:53"
+                }, 
+                {
+                    "frame": 13325, 
+                    "killer": 1, 
+                    "name": "Stalker", 
+                    "clock_position": null, 
+                    "time": "9:54"
+                }, 
+                {
+                    "frame": 13472, 
+                    "killer": 1, 
+                    "name": "Zealot", 
+                    "clock_position": null, 
+                    "time": "10:01"
+                }, 
+                {
+                    "frame": 13497, 
+                    "killer": 1, 
+                    "name": "Zealot", 
+                    "clock_position": null, 
+                    "time": "10:02"
+                }, 
+                {
+                    "frame": 13515, 
+                    "killer": 1, 
+                    "name": "Zealot", 
+                    "clock_position": null, 
+                    "time": "10:03"
+                }, 
+                {
+                    "frame": 13591, 
+                    "killer": 1, 
+                    "name": "Probe", 
+                    "clock_position": null, 
+                    "time": "10:06"
+                }, 
+                {
+                    "frame": 13627, 
+                    "killer": 1, 
+                    "name": "Stalker", 
+                    "clock_position": null, 
+                    "time": "10:08"
+                }, 
+                {
+                    "frame": 13661, 
+                    "killer": 1, 
+                    "name": "ShieldBattery", 
+                    "clock_position": null, 
+                    "time": "10:09"
+                }
+            ], 
+            "race": "Protoss", 
+            "result": "Loss", 
+            "team": 2, 
+            "uid": 10400366
+        }
+    }, 
+    "buildOrderExtracted": true, 
+    "build": 89720, 
+    "frames_per_second": 22.4, 
+    "unix_timestamp": 1676225347
+}
