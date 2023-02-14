@@ -36,6 +36,7 @@ class SpawningToolTestCase(unittest.TestCase):
     def _test_replay(self, filename, expected_results_filename):
         results = spawningtool.parser.parse_replay("replays/{}".format(filename))
         with open('tests/{}'.format(expected_results_filename), 'r') as expected_results_file:
+            # json.dump(results, expected_results_file, indent=4)
             expected_results = json.load(expected_results_file)
 
         self.assertDictsEqual(results, expected_results)
@@ -91,6 +92,20 @@ class ParseReplayTest(SpawningToolTestCase):
         """
         self._test_replay('kerrigan.SC2Replay',
                           'kerrigan.json')
+
+    def test_patch_400(self):
+        """
+        Test 4.0.0 patch
+        """
+        self._test_replay('patch_400.SC2Replay',
+                          'patch_400.json')
+
+    def test_patch_5_0_11(self):
+        """
+        Test 5.0.11 patch
+        """
+        self._test_replay('patch_5_0_11.SC2Replay',
+                          'patch_5_0_11.json')
 
 
 if __name__ == '__main__':

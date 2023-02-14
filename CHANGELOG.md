@@ -1,6 +1,7 @@
 Changes
 =======
 
+* v2.10.0, February 13, 2023 -- update ladder data for balance patch 5.0.11
 * v2.9.0, August 17, 2021 -- Fix Liberator build time, add more display names
 * v2.8.0, October 28, 2020 -- add Mengsk
 * v2.7.0, January 18, 2020 -- update ladder data for balance patch 4.11.0
