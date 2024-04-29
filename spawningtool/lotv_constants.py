@@ -202,7 +202,7 @@ BUILD_DATA = {
         "display_name": "Mothership Core"
     },
     "Mothership": {
-        "build_time": 114,
+        "build_time": 79,  # 114 -> 79 in 5.0.12
         "built_from": [ "Nexus" ],
         "display_name": "Mothership"
     },
@@ -458,7 +458,7 @@ BUILD_DATA = {
     },
     # Baneling Nest Upgrades
     "CentrificalHooks": {
-        "build_time": 79,
+        "build_time": 71,  # 79 -> 71 in 5.0.12
         "built_from": [ "BanelingNest" ],
         "display_name": "Centrifugal Hooks"
     },
@@ -485,12 +485,12 @@ BUILD_DATA = {
         "display_name": "Muscular Augments"
     },
     "EvolveGroovedSpines": {  # added 3.8
-        "build_time": 71,
+        "build_time": 50,  # 71 -> 50 in 5.0.12
         "built_from": [ "HydraliskDen" ],
         "display_name": "Grooved Spines"
     },
     "EvolveMuscularAugments": {  # added 3.8
-        "build_time": 71,
+        "build_time": 64,  # 71 -> 64 in 5.0.12
         "built_from": [ "HydraliskDen" ],
         "display_name": "Muscular Augments"
     },
@@ -511,7 +511,7 @@ BUILD_DATA = {
         "display_name": "Burrow"
     },
     # Infestation Pit Upgrades
-    "InfestorEnergyUpgrade": {
+    "InfestorEnergyUpgrade": {  # Deprecated 5.0.12
         "build_time": 57,
         "built_from": [ "InfestationPit" ],
         "display_name": "Pathogen Glands"
@@ -769,7 +769,7 @@ BUILD_DATA = {
         "built_from": [ "TechLab" ],
         "display_name": "Infernal Pre-Igniter"
     },
-    "CycloneLockOnDamageUpgrade": {  # re-introduced in 4.7.1
+    "CycloneLockOnDamageUpgrade": {  # re-introduced in 4.7.1, Deprecated in 5.0.12
         "build_time": 100,  # 79s -> 100s in 4.8.2
         "built_from": [ "TechLab" ],
         "display_name": "Mag-Field Accelerator",
@@ -787,17 +787,17 @@ BUILD_DATA = {
         "built_from": [ "TechLab" ],
         "display_name": "Rapid Fire Launchers"
     },
+    "HurricaneThrusters": {  # Added 5.0.12
+        "build_time": 100,
+        "built_from": [ "TechLab" ],
+        "display_name": "Hurricane Engines"
+    },
     "SmartServos": {
         "build_time": 79,
         "built_from": [ "TechLab" ],
         "display_name": "Smart Servos"
     },
     # starport tech lab
-    "MedivacCaduceusReactor": {  # deprecated
-        "build_time": 57,
-        "built_from": [ "TechLab" ],
-        "display_name": "Caduceus Reactor"
-    },
     "RavenDamageUpgrade": {  # deprecated 3.8
         "build_time": 79,
         "built_from": [ "TechLab" ],
@@ -833,6 +833,11 @@ BUILD_DATA = {
         "built_from": [ "TechLab" ],
         "display_name": "Enhanced Munitions"
     },
+    "InterferenceMatrix": {  # added 5.0.12
+        "build_time": 57,
+        "build_from": [ "TechLab" ],
+        "display_name": "Interference Matrix"
+    },
     # fusion core
     "BattlecruiserBehemothReactor": {
         "build_time": 57,
@@ -849,13 +854,18 @@ BUILD_DATA = {
         "built_from": [ "FusionCore" ],
         "display_name": "Advanced Ballistics"
     },
-    "MedivacIncreaseSpeedBoost": {
+    "MedivacIncreaseSpeedBoost": {  # Deprecated 5.0.12
         "build_time": 57,
         "built_from": [ "FusionCore" ],
         "display_name": "Rapid Reignition System",  # renamed in 4.7.1
         "race": "Terran",
         "type": "Upgrade",
         "is_morph": False
+    },
+    "MedivacCaduceusReactor": {  # deprecated, re-added 5.0.12
+        "build_time": 57,
+        "built_from": [ "FusionCore" ],  # previously built from TechLab
+        "display_name": "Caduceus Reactor"
     },
     # protoss upgrades
     "ProtossGroundWeaponsLevel1": {
