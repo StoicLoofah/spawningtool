@@ -237,7 +237,7 @@ BUILD_DATA = {
         "display_name": "Archon"
     },
     "Observer": {
-        "build_time": 21,
+        "build_time": 18,  # 21 -> 18 in 5.0.13
         "built_from": [ "RoboticsFacility" ],
         "display_name": "Observer"
     },
