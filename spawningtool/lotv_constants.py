@@ -835,7 +835,7 @@ BUILD_DATA = {
     },
     "InterferenceMatrix": {  # added 5.0.12
         "build_time": 57,
-        "build_from": [ "TechLab" ],
+        "built_from": [ "TechLab" ],
         "display_name": "Interference Matrix"
     },
     # fusion core
