@@ -1585,14 +1585,14 @@ BUILD_DATA = {
         "built_from": [ "TechLab" ],
         'race': 'Terran', 
         'type': 'Upgrade',
-        'is_morph': True 
+        'is_morph': False 
     },
     "CycloneAirUpgrade": {
         "build_time": 79,
         "built_from": [ "TechLab" ],
         'race': 'Terran', 
         'type': 'BuildUpgradeing',
-        'is_morph': True 
+        'is_morph': False 
     }
 }
 
