@@ -513,7 +513,7 @@ BUILD_DATA = {
         "built_from": [],
         "display_name": "Baneling",
         'race': 'Zerg', 
-        'type': 'Building',
+        'type': 'Unit',
         'is_morph': True 
     },
     "BroodLord": {
@@ -521,7 +521,7 @@ BUILD_DATA = {
         "built_from": [],
         "display_name": "Brood Lord",
         'race': 'Zerg', 
-        'type': 'Building',
+        'type': 'Unit',
         'is_morph': True 
     },
     "Overseer": {
@@ -1591,7 +1591,7 @@ BUILD_DATA = {
         "build_time": 79,
         "built_from": [ "TechLab" ],
         'race': 'Terran', 
-        'type': 'BuildUpgradeing',
+        'type': 'Upgrade',
         'is_morph': False 
     }
 }

@@ -360,7 +360,7 @@ BUILD_DATA = {
         'built_from': [],
         'display_name': 'Baneling',
         'race': 'Zerg',
-        'type': 'Building',
+        'type': 'Unit',
         'is_morph': True
     },
     'Roach': {
@@ -448,7 +448,7 @@ BUILD_DATA = {
         'built_from': [],
         'display_name': 'Brood Lord',
         'race': 'Zerg',
-        'type': 'Building',
+        'type': 'Unit',
         'is_morph': True
     },
     'Viper': {
