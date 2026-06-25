@@ -1,6 +1,6 @@
 from setuptools import find_packages, setup
 
-__version__ = "2.11.0"
+__version__ = "2.12.0"
 
 setup(
     name="spawningtool",

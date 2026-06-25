@@ -100,6 +100,13 @@ class ParseReplayTest(SpawningToolTestCase):
         self._test_replay('patch_5_0_11.SC2Replay',
                           'patch_5_0_11.json')
 
+    def test_patch_5_0_16(self):
+        """
+        Test 5.0.16 patch (Warpgate Research build time adjustment)
+        """
+        self._test_replay('patch_5_0_16.SC2Replay',
+                          'patch_5_0_16.json')
+
 
 if __name__ == '__main__':
     unittest.main()
