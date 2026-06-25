@@ -6,6 +6,7 @@ setup(
     name="spawningtool",
     description="Build order parser for StarCraft 2 replays",
     long_description=open("README.md").read()+"\n\n"+open("CHANGELOG.md").read(),
+    long_description_content_type="text/markdown",
     version=__version__,
     url="https://github.com/StoicLoofah/spawningtool",
     author="Kevin Leung",

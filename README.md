@@ -49,7 +49,7 @@ python tests/update_expected_results.py REPLAY_NAME  # e.g. patch_400
 
 Support
 ============
-Please submit any issues you encounter to the [GitHub project](https://github.com/StoicLoofah/spawningtool/issues). You're also welcome to email Kevin directly at kevin@kevinleung.com.
+Please submit any issues you encounter to the [GitHub project](https://github.com/StoicLoofah/spawningtool/issues). You're also welcome to email Kevin directly at github@kevin.kevinleung.com.
 
 Thanks To
 ============
