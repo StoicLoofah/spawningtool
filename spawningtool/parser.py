@@ -547,6 +547,7 @@ class GameParser(object):
     def add_tracker_events(self, include_map_details):
         self.builds = dict((key, GameTimeline()) for key in self.replay.player.keys())
         self.units_lost = dict((key, GameTimeline()) for key in self.replay.player.keys())
+        self.warpgate_research_frame = {}
 
         for event in self.replay.tracker_events:
             if event.frame == 0:
@@ -645,6 +646,9 @@ class GameParser(object):
             return
         unit_name = event.upgrade_type_name
 
+        if unit_name == 'WarpGateResearch':
+            self.warpgate_research_frame[player] = event.frame
+
         if unit_name in self.bo_upgrades_excluded:
             return
 
@@ -739,7 +743,17 @@ class GameParser(object):
 
         cur_build_data = build_data[unit_name]
 
-        projected_start = frame - build_data[unit_name]['build_time'] * build_time_modifier
+        build_time = cur_build_data['build_time'] * build_time_modifier
+
+        # Warpgate Research speeds up Gateway unit production by 40%
+        if player in self.warpgate_research_frame and \
+                'Gateway' in cur_build_data.get('built_from', []):
+            warpgate_frame = self.warpgate_research_frame[player]
+            reduced_start = frame - build_time * 0.6
+            if reduced_start >= warpgate_frame:
+                build_time = build_time * 0.6
+
+        projected_start = frame - build_time
         chronoboosted = False
 
         if self.chronoboosts.get(player):
