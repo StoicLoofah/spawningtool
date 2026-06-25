@@ -745,8 +745,9 @@ class GameParser(object):
 
         build_time = cur_build_data['build_time'] * build_time_modifier
 
-        # Warpgate Research speeds up Gateway unit production by 40%
+        # Warpgate Research speeds up Gateway unit production by 40% (patch 5.0.16+)
         if player in self.warpgate_research_frame and \
+                self.replay.build >= 97364 and \
                 'Gateway' in cur_build_data.get('built_from', []):
             warpgate_frame = self.warpgate_research_frame[player]
             reduced_start = frame - build_time * 0.6
