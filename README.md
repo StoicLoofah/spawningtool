@@ -34,6 +34,19 @@ spawningtool.parser.parse_replay('PATH/TO/REPLAY')
 
 For more notes, see the [GitHub wiki](https://github.com/StoicLoofah/spawningtool/wiki)
 
+Running Tests
+============
+Tests parse the replays in `replays/` and compare the output against the expected results in `tests/`. To run them from the repository root:
+```bash
+python tests
+```
+The same suite runs automatically on every push and pull request via [GitHub Actions](.github/workflows/tests.yml).
+
+To regenerate the expected results after an intentional change to the parser output:
+```bash
+python tests/update_expected_results.py REPLAY_NAME  # e.g. patch_400
+```
+
 Support
 ============
 Please submit any issues you encounter to the [GitHub project](https://github.com/StoicLoofah/spawningtool/issues). You're also welcome to email Kevin directly at kevin@kevinleung.com.
