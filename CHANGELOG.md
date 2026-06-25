@@ -1,6 +1,7 @@
 Changes
 =======
 
+* v2.12.0, June 24, 2026 -- adjust Gateway unit build times for Warpgate Research in patch 5.0.16
 * v2.11.0, April 29, 2024 -- update ladder data for balance patch 5.0.12 and 5.0.13
 * v2.10.0, February 13, 2023 -- update ladder data for balance patch 5.0.11
 * v2.9.0, August 17, 2021 -- Fix Liberator build time, add more display names
