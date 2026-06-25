@@ -24,12 +24,13 @@ jobs:
       - name: Install package and dependencies
         run: |
           python -m pip install --upgrade pip
-          # Install sc2reader from GitHub master first: parsing the latest
-          # StarCraft patches generally requires sc2reader master rather than
-          # the most recent PyPI release. Installing it here satisfies the
-          # sc2reader>=1.6.0 requirement so `pip install .` won't pull PyPI.
-          pip install git+https://github.com/StoicLoofah/sc2reader.git@master
-          pip install .
+          # Install sc2reader from the canonical ggtracker upstream branch
+          # first: parsing the latest StarCraft patches generally requires
+          # sc2reader upstream rather than the most recent PyPI release.
+          # Installing it here satisfies the sc2reader>=1.6.0 requirement so
+          # `pip install .` won't pull the PyPI version over it.
+          python -m pip install git+https://github.com/ggtracker/sc2reader.git@upstream
+          python -m pip install .
 
       - name: Run tests
         run: python tests
