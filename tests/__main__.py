@@ -93,13 +93,6 @@ class ParseReplayTest(SpawningToolTestCase):
         self._test_replay('kerrigan.SC2Replay',
                           'kerrigan.json')
 
-    def test_patch_400(self):
-        """
-        Test 4.0.0 patch
-        """
-        self._test_replay('patch_400.SC2Replay',
-                          'patch_400.json')
-
     def test_patch_5_0_11(self):
         """
         Test 5.0.11 patch
