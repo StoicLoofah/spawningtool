@@ -1,6 +1,7 @@
 Changes
 =======
 
+* v2.13.0, July 29, 2026 -- select build times by replay date so balance hotfixes that reuse a build number are handled without breaking older replays; add 5.0.16 hotfix (Reaper 32->34, Adept 30->33, High/Dark Templar ->40) and 5.0.16b (Warpgate Research Gateway reduction 40%->50%, effective 2026-07-16)
 * v2.12.0, June 24, 2026 -- adjust Gateway unit build times for Warpgate Research in patch 5.0.16
 * v2.11.0, April 29, 2024 -- update ladder data for balance patch 5.0.12 and 5.0.13
 * v2.10.0, February 13, 2023 -- update ladder data for balance patch 5.0.11

@@ -182,6 +182,8 @@ class GameParser(object):
     bo_changed_excluded = None
     bo_upgrades_excluded = None
     tracked_abilities = None
+    build_data = None
+    warpgate_modifier = None
 
     def __init__(self, replay_file):
         self.replay_file = replay_file
@@ -361,6 +363,16 @@ class GameParser(object):
         self.bo_changed_excluded = self.constants.BO_CHANGED_EXCLUDED
         self.bo_upgrades_excluded = self.constants.BO_UPGRADES_EXCLUDED
         self.tracked_abilities = self.constants.TRACKED_ABILITIES
+
+        # Some build times depend on when the replay was played because balance
+        # hotfixes reuse the same build number (see lotv_constants). Resolve the
+        # date-appropriate values once per parse.
+        timestamp = self.replay.unix_timestamp
+        if hasattr(self.constants, 'build_data_for_timestamp'):
+            self.build_data = self.constants.build_data_for_timestamp(timestamp)
+        else:
+            self.build_data = self.constants.BUILD_DATA
+        self.warpgate_modifier = lotv_constants.warpgate_build_time_modifier(timestamp)
 
     def set_commander_talents(self):
         """
@@ -725,7 +737,7 @@ class GameParser(object):
             commander = self.replay.player[player].commander
             if commander:
                 return self.constants.COMMANDER_BUILD_DATA[commander]
-        return self.constants.BUILD_DATA
+        return self.build_data
 
     def adjust_build_time(self, frame, player, unit_name, build_time_modifier=1):
         """
@@ -745,14 +757,18 @@ class GameParser(object):
 
         build_time = cur_build_data['build_time'] * build_time_modifier
 
-        # Warpgate Research speeds up Gateway unit production by 40% (patch 5.0.16+)
+        # Warp Gate Research speeds up Gateway unit production (patch 5.0.16+).
+        # The size of the speedup changed in the 5.0.16b hotfix, so the modifier
+        # is keyed off the replay's played date (see lotv_constants); balance
+        # hotfixes reuse build 97364, which is why the date rather than the build
+        # number decides.
         if player in self.warpgate_research_frame and \
                 self.replay.build >= 97364 and \
                 'Gateway' in cur_build_data.get('built_from', []):
             warpgate_frame = self.warpgate_research_frame[player]
-            reduced_start = frame - build_time * 0.6
+            reduced_start = frame - build_time * self.warpgate_modifier
             if reduced_start >= warpgate_frame:
-                build_time = build_time * 0.6
+                build_time = build_time * self.warpgate_modifier
 
         projected_start = frame - build_time
         chronoboosted = False

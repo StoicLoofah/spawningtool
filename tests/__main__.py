@@ -107,6 +107,23 @@ class ParseReplayTest(SpawningToolTestCase):
         self._test_replay('patch_5_0_16.SC2Replay',
                           'patch_5_0_16.json')
 
+    def test_patch_5_0_16_hotfix(self):
+        """
+        Test 5.0.16 hotfix (played 2026-07-05): hotfix build times apply
+        (Reaper, Adept, High/Dark Templar) with the 40% Warpgate reduction
+        still in effect (5.0.16b's 50% is not yet active)
+        """
+        self._test_replay('patch_5_0_16_hotfix.SC2Replay',
+                          'patch_5_0_16_hotfix.json')
+
+    def test_patch_5_0_16b(self):
+        """
+        Test 5.0.16b hotfix (played 2026-07-19): 50% Warpgate Research
+        Gateway unit build time reduction
+        """
+        self._test_replay('patch_5_0_16b.SC2Replay',
+                          'patch_5_0_16b.json')
+
 
 if __name__ == '__main__':
     unittest.main()

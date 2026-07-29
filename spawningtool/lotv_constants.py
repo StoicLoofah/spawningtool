@@ -98,7 +98,7 @@ BUILD_DATA = {
         'is_morph': False 
     },
     "Reaper": {
-        "build_time": 32,
+        "build_time": 34,  # 32 -> 34 in 5.0.16 hotfix
         "built_from": [ "Barracks" ],
         "display_name": "Reaper",
         'race': RACE_TERRAN, 
@@ -275,7 +275,7 @@ BUILD_DATA = {
         'is_morph': False 
     },
     "Adept": {
-        "build_time": 30,  # 27 -> 30 in 4.8.2
+        "build_time": 33,  # 27 -> 30 in 4.8.2, 30 -> 33 in 5.0.16 hotfix
         "built_from": [ "Gateway", "WarpGate" ],
         "display_name": "Adept",
         'race': RACE_PROTOSS, 
@@ -299,7 +299,7 @@ BUILD_DATA = {
         'is_morph': False 
     },
     "HighTemplar": {
-        "build_time": 39,
+        "build_time": 40,  # -> 40 in 5.0.16 hotfix
         "built_from": [ "Gateway", "WarpGate" ],
         "display_name": "High Templar",
         'race': RACE_PROTOSS, 
@@ -307,7 +307,7 @@ BUILD_DATA = {
         'is_morph': False 
     },
     "DarkTemplar": {
-        "build_time": 39,
+        "build_time": 40,  # -> 40 in 5.0.16 hotfix
         "built_from": [ "Gateway", "WarpGate" ],
         "display_name": "Dark Templar",
         'race': RACE_PROTOSS, 
@@ -1606,6 +1606,71 @@ BUILD_DATA = {
 
 for value in BUILD_DATA.values():
     value['build_time'] *= FRAMES_PER_SECOND
+
+
+# Unix timestamps (UTC) at which balance patches took effect. Balance hotfixes
+# do not bump the replay build number, so the played date is the only way to
+# tell them apart (cf. the chronoboost handling in parser.py, which also keys
+# off unix_timestamp).
+PATCH_5_0_16_HOTFIX = 1782777600  # 2026-06-30
+PATCH_5_0_16B = 1784160000  # 2026-07-16
+
+# Historical build times for units whose build time has changed over time.
+# BUILD_DATA holds the current value; this records the previous value(s) so a
+# replay played before a change is scored with the build time that was live at
+# the time, while newer replays use the current value. Each entry is
+# (timestamp_at_which_the_value_was_superseded, build_time_in_seconds), listed
+# in chronological order. Seconds are converted to frames below to match
+# BUILD_DATA.
+BUILD_DATA_HISTORY = {
+    "Reaper": [(PATCH_5_0_16_HOTFIX, 32)],  # 32 -> 34 in 5.0.16 hotfix
+    "Adept": [(PATCH_5_0_16_HOTFIX, 30)],  # 30 -> 33 in 5.0.16 hotfix
+    "HighTemplar": [(PATCH_5_0_16_HOTFIX, 39)],  # 39 -> 40 in 5.0.16 hotfix
+    "DarkTemplar": [(PATCH_5_0_16_HOTFIX, 39)],  # 39 -> 40 in 5.0.16 hotfix
+}
+
+for unit_name in BUILD_DATA_HISTORY:
+    BUILD_DATA_HISTORY[unit_name] = [
+        (timestamp, build_time * FRAMES_PER_SECOND)
+        for timestamp, build_time in BUILD_DATA_HISTORY[unit_name]
+    ]
+
+
+def build_data_for_timestamp(timestamp):
+    """
+    Return BUILD_DATA adjusted for the balance patches that were live when the
+    replay was played (timestamp is unix seconds, UTC). Units in
+    BUILD_DATA_HISTORY are rolled back to their historical build time for
+    replays played before a change took effect; everything else keeps the
+    current value. Returns the shared BUILD_DATA unchanged when nothing is
+    rolled back so the common (recent replay) case allocates nothing.
+    """
+    adjusted = None
+    for unit_name, history in BUILD_DATA_HISTORY.items():
+        for superseded, build_time in history:
+            if timestamp and timestamp < superseded:
+                if adjusted is None:
+                    adjusted = {key: dict(value) for key, value in BUILD_DATA.items()}
+                adjusted[unit_name]['build_time'] = build_time
+                break
+    return adjusted if adjusted is not None else BUILD_DATA
+
+
+# Warp Gate Research speeds up Gateway unit production once complete. The bonus
+# was 40% (0.6x the normal build time) when introduced in patch 5.0.16 and
+# increased to 50% (0.5x) in the 5.0.16b balance hotfix on 2026-07-16.
+WARPGATE_MODIFIER_5_0_16 = 0.6
+WARPGATE_MODIFIER_5_0_16B = 0.5
+
+
+def warpgate_build_time_modifier(timestamp):
+    """
+    Fraction of the normal build time a Gateway unit takes once Warp Gate
+    Research finishes, based on when the replay was played (unix seconds, UTC).
+    """
+    if timestamp and timestamp >= PATCH_5_0_16B:
+        return WARPGATE_MODIFIER_5_0_16B
+    return WARPGATE_MODIFIER_5_0_16
 
 
 TRACKED_ABILITIES = set([
