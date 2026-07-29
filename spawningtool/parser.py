@@ -184,6 +184,7 @@ class GameParser(object):
     tracked_abilities = None
     build_data = None
     warpgate_modifier = None
+    warpgate_percentage_build = None
 
     def __init__(self, replay_file):
         self.replay_file = replay_file
@@ -374,9 +375,11 @@ class GameParser(object):
         if hasattr(self.constants, 'build_data_for_timestamp'):
             self.build_data = self.constants.build_data_for_timestamp(timestamp)
             self.warpgate_modifier = self.constants.warpgate_build_time_modifier(timestamp)
+            self.warpgate_percentage_build = self.constants.WARPGATE_PERCENTAGE_BUILD
         else:
             self.build_data = self.constants.BUILD_DATA
             self.warpgate_modifier = None
+            self.warpgate_percentage_build = None
 
     def set_commander_talents(self):
         """
@@ -766,10 +769,13 @@ class GameParser(object):
         # is keyed off the replay's played date (see lotv_constants); balance
         # hotfixes don't always bump the build number, so the date rather than
         # the build number decides. warpgate_modifier is None for HotS and co-op,
-        # which this LotV ladder change doesn't apply to.
-        if self.warpgate_modifier and \
+        # which this LotV ladder change doesn't apply to, and for a replay played
+        # before the percentage modifier existed. The build check covers the one
+        # case the date can't: a replay with no timestamp, which falls back to the
+        # current modifier.
+        if self.warpgate_modifier is not None and \
                 player in self.warpgate_research_frame and \
-                self.replay.build >= 97364 and \
+                self.replay.build >= self.warpgate_percentage_build and \
                 'Gateway' in cur_build_data.get('built_from', []):
             warpgate_frame = self.warpgate_research_frame[player]
             reduced_start = frame - build_time * self.warpgate_modifier

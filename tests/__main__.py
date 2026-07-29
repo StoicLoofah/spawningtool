@@ -295,6 +295,10 @@ class LotVBuildDataHistoryTest(unittest.TestCase):
 
     def test_warpgate_modifier_by_date(self):
         modifier = lotv_constants.warpgate_build_time_modifier
+        # Before 5.0.16 there was no percentage modifier, only separate warp-in
+        # build times, so this doesn't apply rather than defaulting to 40%
+        self.assertIsNone(modifier(self.timestamp('2016-01-01')))
+        self.assertIsNone(modifier(self.timestamp('2026-06-21')))
         self.assertEqual(modifier(self.timestamp('2026-06-25')), 0.6)  # 5.0.16, 40%
         self.assertEqual(modifier(self.timestamp('2026-07-15')), 0.6)
         self.assertEqual(modifier(self.timestamp('2026-07-16')), 0.5)  # 5.0.16b, 50%

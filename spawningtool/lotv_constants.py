@@ -1839,17 +1839,19 @@ def build_data_for_timestamp(timestamp):
     replay was played (timestamp is unix seconds, UTC). Units in
     BUILD_DATA_HISTORY are rolled back to their historical build time for
     replays played before a change took effect; everything else keeps the
-    current value. A replay played before any recorded change (i.e. most of the
-    existing corpus) therefore pays for a copy of BUILD_DATA; the shared dict is
-    returned as-is when nothing needs rolling back. A missing timestamp falls
-    back to the current values.
+    current value. The shared dict is returned as-is when nothing needs rolling
+    back. Otherwise only the units being rolled back are copied, over a shallow
+    copy of BUILD_DATA -- so the returned dict is safe to hand out, but the
+    entries in it are the shared ones and must not be mutated, same as BUILD_DATA
+    itself. A missing timestamp falls back to the current values.
     """
     adjusted = None
     for unit_name, history in BUILD_DATA_HISTORY.items():
         for superseded, build_time in history:
             if timestamp and timestamp < superseded:
                 if adjusted is None:
-                    adjusted = {key: dict(value) for key, value in BUILD_DATA.items()}
+                    adjusted = dict(BUILD_DATA)
+                adjusted[unit_name] = dict(BUILD_DATA[unit_name])
                 adjusted[unit_name]['build_time'] = build_time
                 break
     return adjusted if adjusted is not None else BUILD_DATA
@@ -1858,13 +1860,18 @@ def build_data_for_timestamp(timestamp):
 # Warp Gate Research speeds up Gateway unit production once complete, as a
 # fraction of the normal build time. Introduced in 5.0.16 at 40% off (0.6x);
 # 5.0.16b increased it to 50% off (0.5x). Oldest first, same shape as
-# BUILD_TIME_CHANGES: (patch_label, effective_date, modifier). Gateway units
-# warped in before 5.0.16 used separate warp-in timings rather than a percentage,
-# which is why the parser also gates this on the 5.0.16 build number.
+# BUILD_TIME_CHANGES: (patch_label, effective_date, modifier).
 WARPGATE_MODIFIERS = [
     ('5.0.16', '2026-06-22', 0.6),
     ('5.0.16b', '2026-07-16', 0.5),
 ]
+
+# Gateway units warped in before 5.0.16 used separate warp-in build times rather
+# than a percentage off, so the mechanic itself starts at the 5.0.16 build. The
+# date in WARPGATE_MODIFIERS says the same thing for a dated replay, but a replay
+# with no timestamp falls back to the current modifier, and the build number is
+# what keeps that fallback from applying a speedup that didn't exist yet.
+WARPGATE_PERCENTAGE_BUILD = 97364
 
 _WARPGATE_MODIFIERS = [
     (_patch_timestamp(date), modifier) for _, date, modifier in WARPGATE_MODIFIERS
@@ -1875,13 +1882,14 @@ def warpgate_build_time_modifier(timestamp):
     """
     Fraction of the normal build time a Gateway unit takes once Warp Gate
     Research finishes, based on when the replay was played (unix seconds, UTC).
-    A missing timestamp falls back to the current value, matching
-    build_data_for_timestamp.
+    None for a replay played before the percentage modifier existed, which is
+    also how the parser spells "doesn't apply" for HotS and co-op. A missing
+    timestamp falls back to the current value, matching build_data_for_timestamp.
     """
     if not timestamp:
         return _WARPGATE_MODIFIERS[-1][1]
 
-    modifier = _WARPGATE_MODIFIERS[0][1]
+    modifier = None
     for effective, current in _WARPGATE_MODIFIERS:
         if timestamp < effective:
             break
