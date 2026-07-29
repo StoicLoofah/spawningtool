@@ -1609,9 +1609,9 @@ for value in BUILD_DATA.values():
 
 
 # Unix timestamps (UTC) at which balance patches took effect. Balance hotfixes
-# do not bump the replay build number, so the played date is the only way to
-# tell them apart (cf. the chronoboost handling in parser.py, which also keys
-# off unix_timestamp).
+# don't always bump the replay build number, so the played date is what tells
+# them apart (cf. the chronoboost handling in parser.py, which also keys off
+# unix_timestamp).
 PATCH_5_0_16_HOTFIX = 1782777600  # 2026-06-30
 PATCH_5_0_16B = 1784160000  # 2026-07-16
 
@@ -1642,8 +1642,10 @@ def build_data_for_timestamp(timestamp):
     replay was played (timestamp is unix seconds, UTC). Units in
     BUILD_DATA_HISTORY are rolled back to their historical build time for
     replays played before a change took effect; everything else keeps the
-    current value. Returns the shared BUILD_DATA unchanged when nothing is
-    rolled back so the common (recent replay) case allocates nothing.
+    current value. A replay played before any recorded change (i.e. most of the
+    existing corpus) therefore pays for a copy of BUILD_DATA; the shared dict is
+    returned as-is when nothing needs rolling back. A missing timestamp falls
+    back to the current values.
     """
     adjusted = None
     for unit_name, history in BUILD_DATA_HISTORY.items():
@@ -1667,10 +1669,12 @@ def warpgate_build_time_modifier(timestamp):
     """
     Fraction of the normal build time a Gateway unit takes once Warp Gate
     Research finishes, based on when the replay was played (unix seconds, UTC).
+    A missing timestamp falls back to the current value, matching
+    build_data_for_timestamp.
     """
-    if timestamp and timestamp >= PATCH_5_0_16B:
-        return WARPGATE_MODIFIER_5_0_16B
-    return WARPGATE_MODIFIER_5_0_16
+    if timestamp and timestamp < PATCH_5_0_16B:
+        return WARPGATE_MODIFIER_5_0_16
+    return WARPGATE_MODIFIER_5_0_16B
 
 
 TRACKED_ABILITIES = set([

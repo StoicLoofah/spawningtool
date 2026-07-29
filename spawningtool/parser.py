@@ -365,14 +365,18 @@ class GameParser(object):
         self.tracked_abilities = self.constants.TRACKED_ABILITIES
 
         # Some build times depend on when the replay was played because balance
-        # hotfixes reuse the same build number (see lotv_constants). Resolve the
-        # date-appropriate values once per parse.
+        # hotfixes don't always bump the build number (see lotv_constants).
+        # Resolve the date-appropriate values once per parse. Only the LotV
+        # ladder constants carry this history, so HotS and co-op keep their
+        # static build data and never get the Warp Gate speedup, which is a LotV
+        # ladder balance change.
         timestamp = self.replay.unix_timestamp
         if hasattr(self.constants, 'build_data_for_timestamp'):
             self.build_data = self.constants.build_data_for_timestamp(timestamp)
+            self.warpgate_modifier = self.constants.warpgate_build_time_modifier(timestamp)
         else:
             self.build_data = self.constants.BUILD_DATA
-        self.warpgate_modifier = lotv_constants.warpgate_build_time_modifier(timestamp)
+            self.warpgate_modifier = None
 
     def set_commander_talents(self):
         """
@@ -760,9 +764,11 @@ class GameParser(object):
         # Warp Gate Research speeds up Gateway unit production (patch 5.0.16+).
         # The size of the speedup changed in the 5.0.16b hotfix, so the modifier
         # is keyed off the replay's played date (see lotv_constants); balance
-        # hotfixes reuse build 97364, which is why the date rather than the build
-        # number decides.
-        if player in self.warpgate_research_frame and \
+        # hotfixes don't always bump the build number, so the date rather than
+        # the build number decides. warpgate_modifier is None for HotS and co-op,
+        # which this LotV ladder change doesn't apply to.
+        if self.warpgate_modifier and \
+                player in self.warpgate_research_frame and \
                 self.replay.build >= 97364 and \
                 'Gateway' in cur_build_data.get('built_from', []):
             warpgate_frame = self.warpgate_research_frame[player]
