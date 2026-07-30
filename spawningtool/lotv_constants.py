@@ -806,8 +806,7 @@ BUILD_DATA = {
         'type': TYPE_UPGRADE,
         'is_morph': False 
     },
-    # stopped requiring research at some point after 4.11.0; 5.0.15 made it an
-    # upgrade again (150/150, research time not restated, assumed unchanged)
+    # dropped its research requirement after 4.11.0; an upgrade again in 5.0.15
     "MicrobialShroud": {
         "build_time": 79,
         "built_from": [ "InfestationPit" ],
@@ -1615,58 +1614,36 @@ BUILD_DATA = {
 # Balance patch history
 # =====================
 #
-# BUILD_DATA above holds the CURRENT build times. This section records when each
-# of those values changed, so a replay is scored with the build time that was
-# actually live on the day it was played rather than with today's value. Balance
-# hotfixes don't always bump the replay build number, so the played date is what
-# tells them apart (cf. the chronoboost handling in parser.py, which also keys
-# off unix_timestamp).
+# BUILD_DATA holds the current build times; this records when they changed, so a
+# replay is scored with the value that was live the day it was played. Balance
+# hotfixes don't always bump the replay build number, so the date decides.
 #
-# Each entry is (patch_label, effective_date, {unit: (old_seconds, new_seconds)}).
-# Entries are in chronological order, and each unit's `old` value must equal the
-# `new` value of the previous entry that touched it, with the last `new` value
-# matching BUILD_DATA. That chain is verified at import (see below), which is
-# what catches a patch being recorded without its predecessor -- e.g. High/Dark
-# Templar going 39 -> 43 in 5.0.16 and only then 43 -> 40 in the hotfix.
+# Entries are (patch_label, effective_date, {unit: (old_seconds, new_seconds)}),
+# chronological. Each unit's `old` must match the `new` of the previous entry that
+# touched it, and its last `new` must match BUILD_DATA; _build_history checks that
+# chain at import, so a patch recorded without its predecessor fails fast instead
+# of silently mis-scoring one window.
 #
-# HOW FAR BACK THIS GOES
-# ----------------------
-# Coverage starts at patch 3.8.0 (2016-11-22). A replay played before that date
-# gets the oldest value recorded here for each unit, which is only correct as far
-# back as whenever that value became live -- so LotV launch (2015-11-10), the
-# LotV beta/alpha, and the first year of LotV are NOT accurately covered, and
-# neither is anything from WoL or HotS (those use hots_constants, which has no
-# date handling at all). Replays from that era are scored with early-2016 values.
+# Sourced from the patch notes off https://news.blizzard.com/en-us/feed/starcraft-2
+# (PTR notes are proposals, not shipped changes, so they are not used). Blizzard
+# quotes build times in this file's units; they are rounded to whole seconds to
+# match BUILD_DATA, with the exact figure noted inline where it differs. Dates are
+# the NA release at 00:00 UTC, so a replay played within a day of a patch may get
+# the adjacent value.
 #
-# Within the covered range, every patch that this repo has ever recorded a build
-# time change for has been checked against Blizzard's notes. Patches that this
-# repo never tracked have only been spot-checked, and at least two of them
-# (5.0.14, 5.0.15) did contain changes that were missed for years -- so a gap in
-# a patch series here is not proof that nothing changed. As of this writing the
-# following have not been swept: 4.0-4.6, 4.8.0/4.8.1/4.8.3/4.8.4, 4.9.x,
-# 4.10.x other than the 2019-08-21 balance update, 5.0.0/5.0.1, 5.0.3-5.0.8,
-# 5.0.10, and the 5.0.11 hotfixes.
+# Coverage starts at 3.8.0 (2016-11-22); earlier replays get the oldest value
+# here, which is not necessarily what was live then. (HotS and WoL use
+# hots_constants, which has no date handling at all.) Swept for build time
+# changes: 3.8.0, the 2017-12-18/2019-03-25/2019-08-21 balance updates, 4.7.1,
+# 4.8.2, 4.11.0, 5.0.2, 5.0.9, and 5.0.11 through 5.0.16. Not swept: 4.0-4.6,
+# 4.8.0/1/3/4, 4.9.x, the rest of 4.10.x, 5.0.0/1, 5.0.3-5.0.8, 5.0.10, and the
+# 5.0.11 hotfixes -- a gap there is no guarantee nothing changed, since 5.0.14 and
+# 5.0.15 both held changes that went unnoticed for years.
 #
-# Some of those unswept ranges are nonetheless pinned by test replays, which
-# lock in whatever this table says for the date they were played: 4.6.0
-# (2018-09-08), 4.9.2 (2019-06-27), 5.0.4 (2020-11-05), 5.0.10 (2022-11-19),
-# 5.0.13 (2024-09-06) and 5.0.14 (2025-04-29), plus 3.8.0 and the 5.0.16 series.
-# Those tests fail if this table is changed or bypassed, so they will catch a
-# regression here even where the notes haven't been read.
-#
-# Sources are the patch notes off https://news.blizzard.com/en-us/feed/starcraft-2.
-# Blizzard quotes build times in the same units this file uses, so their numbers
-# are copied directly, rounded to whole seconds to match BUILD_DATA's style; the
-# exact figure is noted in a comment where it differs. Dates are the NA release
-# date at 00:00 UTC -- patches roll out to EU/KR a day later, so a replay played
-# within a day of a patch may be scored with the adjacent value.
-#
-# Deliberately NOT recorded here: changes to this file that corrected wrong data
-# rather than tracking a game change. Those must not be rolled back for old
-# replays, because the older value was never live. They include the 2015-2016
-# rounding cleanups (116 -> 114, 80 -> 79, 58 -> 57, ... when FRAMES_PER_SECOND
-# was refined), the Liberator 60 -> 43 fix (2020), and the Carrier 64 -> 86 and
-# Disruptor 43 -> 36 corrections made against the LotV release build.
+# Not recorded: past fixes to wrong data in this file, whose old values were never
+# live in the game -- the 2015-16 rounding cleanups (116 -> 114, 80 -> 79, ...),
+# the Liberator 60 -> 43 fix, and the Carrier and Disruptor corrections made
+# against the LotV release build.
 BUILD_TIME_CHANGES = [
     ('3.8.0', '2016-11-22', {
         'BansheeSpeed': (93, 121),  # Hyperflight Rotors
@@ -1685,10 +1662,8 @@ BUILD_TIME_CHANGES = [
         'CycloneLockOnDamageUpgrade': (79, 100),  # Mag-Field Accelerator
         'WarpGateResearch': (114, 100),
     }),
-    # "Forge/Cybernetics Core: Level 1/2/3 upgrade times increased by
-    # 15/18/22 seconds" -- both structures, so the Cybernetics Core air upgrades
-    # went up alongside the Forge ground ones. Only the Forge upgrades came back
-    # down in 5.0.11, which is why air and ground differ today.
+    # "Forge/Cybernetics Core: Level 1/2/3 upgrade times increased by 15/18/22
+    # seconds" -- both structures, so the air upgrades moved too.
     ('Balance Update', '2019-03-25', {
         'ProtossGroundWeaponsLevel1': (114, 129),
         'ProtossGroundWeaponsLevel2': (136, 154),
@@ -1713,12 +1688,9 @@ BUILD_TIME_CHANGES = [
         'DiggingClaws': (54, 57),  # Adaptive Talons
         'LurkerDenMP': (86, 57),
     }),
-    # Blizzard published no separate live notes for 5.0.9 (a community balance
-    # patch, so the PTR notes stood as the notes), which made this pair the one
-    # entry here without a live primary source. Both halves are instead
-    # confirmed by the test replays: patch_5_0_10_pvz has six unchronoboosted
-    # Void Rays at exactly 43.0s, and patch_5_0_4_pvt has one produced in 25.1s,
-    # which is below the 28.7s floor a 43s unit has even under chronoboost.
+    # 5.0.9 got no live notes (community balance patch), so this pair is instead
+    # confirmed by the test replays: patch_5_0_10_pvz produces Void Rays in
+    # exactly 43.0s, patch_5_0_4_pvt in 25.1s, under a 43s unit's 28.7s floor.
     ('5.0.2', '2020-08-06', {
         'VoidRay': (43, 37),
     }),
@@ -1754,11 +1726,10 @@ BUILD_TIME_CHANGES = [
     ('5.0.15', '2025-09-30', {
         'BansheeSpeed': (100, 79),  # Hyperflight Rotors
     }),
-    # 5.0.16 reworked Gateway production: Warp Gate Research became a flat
-    # percentage reduction (see WARPGATE_MODIFIERS) instead of separate warp-in
-    # timings. The High/Dark Templar increase is not stated outright in the
-    # 5.0.16 notes, but the hotfix a week later reduced them "from 43", and the
-    # 5.0.16 post-Warpgate figure of 26s matches 43 * 0.6.
+    # 5.0.16 made Warp Gate Research a flat percentage off (see
+    # WARPGATE_MODIFIERS) instead of separate warp-in timings. The High/Dark
+    # Templar increase isn't stated outright, but the hotfix reduced them "from
+    # 43" and 5.0.16's post-Warpgate 26s matches 43 * 0.6.
     ('5.0.16', '2026-06-22', {
         'HighTemplar': (39, 43),
         'DarkTemplar': (39, 43),
@@ -1866,11 +1837,10 @@ WARPGATE_MODIFIERS = [
     ('5.0.16b', '2026-07-16', 0.5),
 ]
 
-# Gateway units warped in before 5.0.16 used separate warp-in build times rather
-# than a percentage off, so the mechanic itself starts at the 5.0.16 build. The
-# date in WARPGATE_MODIFIERS says the same thing for a dated replay, but a replay
-# with no timestamp falls back to the current modifier, and the build number is
-# what keeps that fallback from applying a speedup that didn't exist yet.
+# The percentage speedup itself only exists from the 5.0.16 build on.
+# WARPGATE_MODIFIERS says as much for a dated replay; this keeps an undated one,
+# which falls back to the current modifier, from getting a speedup that didn't
+# exist yet.
 WARPGATE_PERCENTAGE_BUILD = 97364
 
 _WARPGATE_MODIFIERS = [

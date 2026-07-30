@@ -365,12 +365,10 @@ class GameParser(object):
         self.bo_upgrades_excluded = self.constants.BO_UPGRADES_EXCLUDED
         self.tracked_abilities = self.constants.TRACKED_ABILITIES
 
-        # Some build times depend on when the replay was played because balance
+        # Build times depend on when the replay was played, since balance
         # hotfixes don't always bump the build number (see lotv_constants).
-        # Resolve the date-appropriate values once per parse. Only the LotV
-        # ladder constants carry this history, so HotS and co-op keep their
-        # static build data and never get the Warp Gate speedup, which is a LotV
-        # ladder balance change.
+        # Resolve them once per parse. Only the LotV ladder constants carry this
+        # history, so HotS and co-op keep their static build data.
         timestamp = self.replay.unix_timestamp
         if hasattr(self.constants, 'build_data_for_timestamp'):
             self.build_data = self.constants.build_data_for_timestamp(timestamp)
@@ -764,15 +762,12 @@ class GameParser(object):
 
         build_time = cur_build_data['build_time'] * build_time_modifier
 
-        # Warp Gate Research speeds up Gateway unit production (patch 5.0.16+).
-        # The size of the speedup changed in the 5.0.16b hotfix, so the modifier
-        # is keyed off the replay's played date (see lotv_constants); balance
-        # hotfixes don't always bump the build number, so the date rather than
-        # the build number decides. warpgate_modifier is None for HotS and co-op,
-        # which this LotV ladder change doesn't apply to, and for a replay played
-        # before the percentage modifier existed. The build check covers the one
-        # case the date can't: a replay with no timestamp, which falls back to the
-        # current modifier.
+        # Warp Gate Research speeds up Gateway unit production (5.0.16+). The
+        # 5.0.16b hotfix changed the size of the speedup without a new build
+        # number, so the modifier comes from the played date; the build check
+        # covers an undated replay, which falls back to the current modifier.
+        # warpgate_modifier is None where this doesn't apply at all: HotS, co-op,
+        # and dated replays from before the mechanic existed.
         if self.warpgate_modifier is not None and \
                 player in self.warpgate_research_frame and \
                 self.replay.build >= self.warpgate_percentage_build and \
