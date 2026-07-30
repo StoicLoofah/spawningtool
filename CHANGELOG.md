@@ -1,6 +1,13 @@
 Changes
 =======
 
+* v3.0.0, July 29, 2026 -- build times are now selected by the date a replay was played, so replays are scored with the values that were live at the time rather than today's. Build order timings for older replays change as a result, hence the major version:
+  * `BUILD_TIME_CHANGES` in `lotv_constants.py` records every LotV build time change back to 3.8.0 (2016-11-22), sourced from the Blizzard patch notes. `BUILD_DATA_HISTORY` is derived from it, and each unit's recorded changes are verified at import to chain into its current value
+  * that check surfaced five errors: High/Dark Templar were raised 39->43 in 5.0.16 before the hotfix cut them to 40; the Void Ray was reduced 43->37 in 5.0.2 and restored to 43 in 5.0.9, which had been applied here in reverse; Hyperflight Rotors was left at 121s through both the 5.0.11 cut to 100s and the 5.0.15 cut to 79s; the Stalker's 5.0.14 cut from 30s to 27s was missing; and the March 25, 2019 balance update raised the Cybernetics Core air upgrades alongside the Forge ones to 129/154/179, which 5.0.11 then reduced for the Forge only, so air and ground now differ
+  * adds ladder data for 5.0.14 and 5.0.15, which had never been tracked, including the 5.0.14 revert to the 5.0.11 Cyclone (Mag-Field Accelerator back, Hurricane Engines gone)
+  * adds the 5.0.16 hotfix (Reaper 32->34, Adept 30->33, High/Dark Templar 43->40) and 5.0.16b (Warpgate Research Gateway reduction 40%->50%, effective 2026-07-16)
+  * adds eight test replays spanning 3.8.0, 4.6.0, 4.9.2, 5.0.4, 5.0.10, 5.0.13 and 5.0.14, all of which fail if the date-based lookup is bypassed
+  * the 5.0.14 Nanomuscular Swell upgrade and Energy Recharge ability still need their internal names before they can be added (#70)
 * v2.12.0, June 24, 2026 -- adjust Gateway unit build times for Warpgate Research in patch 5.0.16
 * v2.11.0, April 29, 2024 -- update ladder data for balance patch 5.0.12 and 5.0.13
 * v2.10.0, February 13, 2023 -- update ladder data for balance patch 5.0.11

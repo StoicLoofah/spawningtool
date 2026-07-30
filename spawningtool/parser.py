@@ -182,6 +182,9 @@ class GameParser(object):
     bo_changed_excluded = None
     bo_upgrades_excluded = None
     tracked_abilities = None
+    build_data = None
+    warpgate_modifier = None
+    warpgate_percentage_build = None
 
     def __init__(self, replay_file):
         self.replay_file = replay_file
@@ -361,6 +364,20 @@ class GameParser(object):
         self.bo_changed_excluded = self.constants.BO_CHANGED_EXCLUDED
         self.bo_upgrades_excluded = self.constants.BO_UPGRADES_EXCLUDED
         self.tracked_abilities = self.constants.TRACKED_ABILITIES
+
+        # Build times depend on when the replay was played, since balance
+        # hotfixes don't always bump the build number (see lotv_constants).
+        # Resolve them once per parse. Only the LotV ladder constants carry this
+        # history, so HotS and co-op keep their static build data.
+        timestamp = self.replay.unix_timestamp
+        if hasattr(self.constants, 'build_data_for_timestamp'):
+            self.build_data = self.constants.build_data_for_timestamp(timestamp)
+            self.warpgate_modifier = self.constants.warpgate_build_time_modifier(timestamp)
+            self.warpgate_percentage_build = self.constants.WARPGATE_PERCENTAGE_BUILD
+        else:
+            self.build_data = self.constants.BUILD_DATA
+            self.warpgate_modifier = None
+            self.warpgate_percentage_build = None
 
     def set_commander_talents(self):
         """
@@ -725,7 +742,7 @@ class GameParser(object):
             commander = self.replay.player[player].commander
             if commander:
                 return self.constants.COMMANDER_BUILD_DATA[commander]
-        return self.constants.BUILD_DATA
+        return self.build_data
 
     def adjust_build_time(self, frame, player, unit_name, build_time_modifier=1):
         """
@@ -745,14 +762,20 @@ class GameParser(object):
 
         build_time = cur_build_data['build_time'] * build_time_modifier
 
-        # Warpgate Research speeds up Gateway unit production by 40% (patch 5.0.16+)
-        if player in self.warpgate_research_frame and \
-                self.replay.build >= 97364 and \
+        # Warp Gate Research speeds up Gateway unit production (5.0.16+). The
+        # 5.0.16b hotfix changed the size of the speedup without a new build
+        # number, so the modifier comes from the played date; the build check
+        # covers an undated replay, which falls back to the current modifier.
+        # warpgate_modifier is None where this doesn't apply at all: HotS, co-op,
+        # and dated replays from before the mechanic existed.
+        if self.warpgate_modifier is not None and \
+                player in self.warpgate_research_frame and \
+                self.replay.build >= self.warpgate_percentage_build and \
                 'Gateway' in cur_build_data.get('built_from', []):
             warpgate_frame = self.warpgate_research_frame[player]
-            reduced_start = frame - build_time * 0.6
+            reduced_start = frame - build_time * self.warpgate_modifier
             if reduced_start >= warpgate_frame:
-                build_time = build_time * 0.6
+                build_time = build_time * self.warpgate_modifier
 
         projected_start = frame - build_time
         chronoboosted = False

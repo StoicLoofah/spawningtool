@@ -24762,8 +24762,8 @@
                     "is_chronoboosted": false
                 },
                 {
-                    "frame": 4846.0,
-                    "time": "3:36",
+                    "frame": 4913.2,
+                    "time": "3:39",
                     "name": "Stalker",
                     "supply": 32,
                     "is_worker": false,
@@ -24960,8 +24960,8 @@
                     "is_chronoboosted": false
                 },
                 {
-                    "frame": 6956.8,
-                    "time": "5:10",
+                    "frame": 6997.12,
+                    "time": "5:12",
                     "name": "Stalker",
                     "supply": 51,
                     "is_worker": false,
@@ -24969,8 +24969,8 @@
                     "is_chronoboosted": false
                 },
                 {
-                    "frame": 6958.8,
-                    "time": "5:10",
+                    "frame": 6999.12,
+                    "time": "5:12",
                     "name": "Stalker",
                     "supply": 51,
                     "is_worker": false,
@@ -25041,24 +25041,6 @@
                     "is_chronoboosted": true
                 },
                 {
-                    "frame": 7503.8,
-                    "time": "5:34",
-                    "name": "Stalker",
-                    "supply": 57,
-                    "is_worker": false,
-                    "clock_position": null,
-                    "is_chronoboosted": false
-                },
-                {
-                    "frame": 7507.8,
-                    "time": "5:35",
-                    "name": "Stalker",
-                    "supply": 57,
-                    "is_worker": false,
-                    "clock_position": null,
-                    "is_chronoboosted": false
-                },
-                {
                     "frame": 7540.2,
                     "time": "5:36",
                     "name": "Probe",
@@ -25066,6 +25048,24 @@
                     "is_worker": true,
                     "clock_position": null,
                     "is_chronoboosted": true
+                },
+                {
+                    "frame": 7544.12,
+                    "time": "5:36",
+                    "name": "Stalker",
+                    "supply": 59,
+                    "is_worker": false,
+                    "clock_position": null,
+                    "is_chronoboosted": false
+                },
+                {
+                    "frame": 7548.12,
+                    "time": "5:36",
+                    "name": "Stalker",
+                    "supply": 59,
+                    "is_worker": false,
+                    "clock_position": null,
+                    "is_chronoboosted": false
                 },
                 {
                     "frame": 7744.2,
@@ -25104,24 +25104,6 @@
                     "is_chronoboosted": true
                 },
                 {
-                    "frame": 8048.8,
-                    "time": "5:59",
-                    "name": "Stalker",
-                    "supply": 67,
-                    "is_worker": false,
-                    "clock_position": null,
-                    "is_chronoboosted": false
-                },
-                {
-                    "frame": 8052.8,
-                    "time": "5:59",
-                    "name": "Stalker",
-                    "supply": 67,
-                    "is_worker": false,
-                    "clock_position": null,
-                    "is_chronoboosted": false
-                },
-                {
                     "frame": 8058.2,
                     "time": "5:59",
                     "name": "Probe",
@@ -25131,15 +25113,6 @@
                     "is_chronoboosted": true
                 },
                 {
-                    "frame": 8074.8,
-                    "time": "6:00",
-                    "name": "Stalker",
-                    "supply": 67,
-                    "is_worker": false,
-                    "clock_position": null,
-                    "is_chronoboosted": false
-                },
-                {
                     "frame": 8088.2,
                     "time": "6:01",
                     "name": "Probe",
@@ -25147,6 +25120,33 @@
                     "is_worker": true,
                     "clock_position": null,
                     "is_chronoboosted": true
+                },
+                {
+                    "frame": 8089.12,
+                    "time": "6:01",
+                    "name": "Stalker",
+                    "supply": 67,
+                    "is_worker": false,
+                    "clock_position": null,
+                    "is_chronoboosted": false
+                },
+                {
+                    "frame": 8093.12,
+                    "time": "6:01",
+                    "name": "Stalker",
+                    "supply": 67,
+                    "is_worker": false,
+                    "clock_position": null,
+                    "is_chronoboosted": false
+                },
+                {
+                    "frame": 8115.12,
+                    "time": "6:02",
+                    "name": "Stalker",
+                    "supply": 67,
+                    "is_worker": false,
+                    "clock_position": null,
+                    "is_chronoboosted": false
                 },
                 {
                     "frame": 8222.2,
@@ -25221,33 +25221,6 @@
                     "is_chronoboosted": false
                 },
                 {
-                    "frame": 8766.8,
-                    "time": "6:31",
-                    "name": "Stalker",
-                    "supply": 79,
-                    "is_worker": false,
-                    "clock_position": null,
-                    "is_chronoboosted": false
-                },
-                {
-                    "frame": 8769.8,
-                    "time": "6:31",
-                    "name": "Stalker",
-                    "supply": 79,
-                    "is_worker": false,
-                    "clock_position": null,
-                    "is_chronoboosted": false
-                },
-                {
-                    "frame": 8774.8,
-                    "time": "6:31",
-                    "name": "Stalker",
-                    "supply": 79,
-                    "is_worker": false,
-                    "clock_position": null,
-                    "is_chronoboosted": false
-                },
-                {
                     "frame": 8776.2,
                     "time": "6:31",
                     "name": "Probe",
@@ -25257,8 +25230,35 @@
                     "is_chronoboosted": false
                 },
                 {
-                    "frame": 8811.8,
+                    "frame": 8807.12,
                     "time": "6:33",
+                    "name": "Stalker",
+                    "supply": 80,
+                    "is_worker": false,
+                    "clock_position": null,
+                    "is_chronoboosted": false
+                },
+                {
+                    "frame": 8810.12,
+                    "time": "6:33",
+                    "name": "Stalker",
+                    "supply": 80,
+                    "is_worker": false,
+                    "clock_position": null,
+                    "is_chronoboosted": false
+                },
+                {
+                    "frame": 8815.12,
+                    "time": "6:33",
+                    "name": "Stalker",
+                    "supply": 80,
+                    "is_worker": false,
+                    "clock_position": null,
+                    "is_chronoboosted": false
+                },
+                {
+                    "frame": 8852.12,
+                    "time": "6:35",
                     "name": "Stalker",
                     "supply": 80,
                     "is_worker": false,
@@ -26499,6 +26499,15 @@
                     "is_chronoboosted": true
                 },
                 {
+                    "frame": 17872.4,
+                    "time": "13:17",
+                    "name": "Protoss Air Weapons Level 1",
+                    "supply": 145,
+                    "is_worker": false,
+                    "clock_position": null,
+                    "is_chronoboosted": false
+                },
+                {
                     "frame": 17965.8,
                     "time": "13:22",
                     "name": "Tempest",
@@ -26521,15 +26530,6 @@
                     "time": "13:24",
                     "name": "High Templar",
                     "supply": 149,
-                    "is_worker": false,
-                    "clock_position": null,
-                    "is_chronoboosted": false
-                },
-                {
-                    "frame": 18208.4,
-                    "time": "13:32",
-                    "name": "Protoss Air Weapons Level 1",
-                    "supply": 157,
                     "is_worker": false,
                     "clock_position": null,
                     "is_chronoboosted": false
@@ -26760,6 +26760,15 @@
                     "is_chronoboosted": false
                 },
                 {
+                    "frame": 20845.4,
+                    "time": "15:30",
+                    "name": "Protoss Air Weapons Level 2",
+                    "supply": 185,
+                    "is_worker": false,
+                    "clock_position": null,
+                    "is_chronoboosted": false
+                },
+                {
                     "frame": 20991,
                     "time": "15:37",
                     "name": "Gateway",
@@ -26853,15 +26862,6 @@
                     "frame": 21229,
                     "time": "15:47",
                     "name": "High Templar",
-                    "supply": 184,
-                    "is_worker": false,
-                    "clock_position": null,
-                    "is_chronoboosted": false
-                },
-                {
-                    "frame": 21248.6,
-                    "time": "15:48",
-                    "name": "Protoss Air Weapons Level 2",
                     "supply": 184,
                     "is_worker": false,
                     "clock_position": null,
@@ -27273,6 +27273,15 @@
                     "is_chronoboosted": false
                 },
                 {
+                    "frame": 25138.4,
+                    "time": "18:42",
+                    "name": "Protoss Air Weapons Level 3",
+                    "supply": 164,
+                    "is_worker": false,
+                    "clock_position": null,
+                    "is_chronoboosted": true
+                },
+                {
                     "frame": 25165,
                     "time": "18:43",
                     "name": "Pylon",
@@ -27357,15 +27366,6 @@
                     "frame": 25480.0,
                     "time": "18:57",
                     "name": "Protoss Shields Level 2",
-                    "supply": 166,
-                    "is_worker": false,
-                    "clock_position": null,
-                    "is_chronoboosted": true
-                },
-                {
-                    "frame": 25631.2,
-                    "time": "19:04",
-                    "name": "Protoss Air Weapons Level 3",
                     "supply": 166,
                     "is_worker": false,
                     "clock_position": null,
@@ -27471,19 +27471,19 @@
                     "is_chronoboosted": false
                 },
                 {
-                    "frame": 26291.2,
-                    "time": "19:33",
+                    "frame": 26156.8,
+                    "time": "19:27",
                     "name": "Void Ray",
-                    "supply": 186,
+                    "supply": 168,
                     "is_worker": false,
                     "clock_position": null,
                     "is_chronoboosted": true
                 },
                 {
-                    "frame": 26294.2,
-                    "time": "19:33",
+                    "frame": 26159.8,
+                    "time": "19:27",
                     "name": "Void Ray",
-                    "supply": 186,
+                    "supply": 168,
                     "is_worker": false,
                     "clock_position": null,
                     "is_chronoboosted": true
@@ -27597,19 +27597,19 @@
                     "is_chronoboosted": false
                 },
                 {
-                    "frame": 27142.2,
-                    "time": "20:11",
+                    "frame": 27007.8,
+                    "time": "20:05",
                     "name": "Void Ray",
-                    "supply": 187,
+                    "supply": 179,
                     "is_worker": false,
                     "clock_position": null,
                     "is_chronoboosted": false
                 },
                 {
-                    "frame": 27145.2,
-                    "time": "20:11",
+                    "frame": 27010.8,
+                    "time": "20:05",
                     "name": "Void Ray",
-                    "supply": 187,
+                    "supply": 179,
                     "is_worker": false,
                     "clock_position": null,
                     "is_chronoboosted": false
@@ -27813,6 +27813,24 @@
                     "is_chronoboosted": false
                 },
                 {
+                    "frame": 28644.8,
+                    "time": "21:18",
+                    "name": "Void Ray",
+                    "supply": 190,
+                    "is_worker": false,
+                    "clock_position": null,
+                    "is_chronoboosted": false
+                },
+                {
+                    "frame": 28650.8,
+                    "time": "21:19",
+                    "name": "Void Ray",
+                    "supply": 190,
+                    "is_worker": false,
+                    "clock_position": null,
+                    "is_chronoboosted": false
+                },
+                {
                     "frame": 28669,
                     "time": "21:19",
                     "name": "ShieldBattery",
@@ -27858,24 +27876,6 @@
                     "is_chronoboosted": false
                 },
                 {
-                    "frame": 28779.2,
-                    "time": "21:24",
-                    "name": "Void Ray",
-                    "supply": 190,
-                    "is_worker": false,
-                    "clock_position": null,
-                    "is_chronoboosted": false
-                },
-                {
-                    "frame": 28785.2,
-                    "time": "21:25",
-                    "name": "Void Ray",
-                    "supply": 190,
-                    "is_worker": false,
-                    "clock_position": null,
-                    "is_chronoboosted": false
-                },
-                {
                     "frame": 28793,
                     "time": "21:25",
                     "name": "PhotonCannon",
@@ -27906,6 +27906,15 @@
                     "frame": 28830,
                     "time": "21:27",
                     "name": "ShieldBattery",
+                    "supply": 198,
+                    "is_worker": false,
+                    "clock_position": null,
+                    "is_chronoboosted": false
+                },
+                {
+                    "frame": 28841.4,
+                    "time": "21:27",
+                    "name": "Protoss Air Armor Level 1",
                     "supply": 198,
                     "is_worker": false,
                     "clock_position": null,
@@ -27987,15 +27996,6 @@
                     "frame": 29172,
                     "time": "21:42",
                     "name": "High Templar",
-                    "supply": 161,
-                    "is_worker": false,
-                    "clock_position": null,
-                    "is_chronoboosted": false
-                },
-                {
-                    "frame": 29177.4,
-                    "time": "21:42",
-                    "name": "Protoss Air Armor Level 1",
                     "supply": 161,
                     "is_worker": false,
                     "clock_position": null,
@@ -28236,6 +28236,15 @@
                     "is_chronoboosted": false
                 },
                 {
+                    "frame": 31822.4,
+                    "time": "23:40",
+                    "name": "Protoss Air Armor Level 2",
+                    "supply": 192,
+                    "is_worker": false,
+                    "clock_position": null,
+                    "is_chronoboosted": false
+                },
+                {
                     "frame": 32103,
                     "time": "23:53",
                     "name": "Zealot",
@@ -28303,15 +28312,6 @@
                     "time": "23:53",
                     "name": "Zealot",
                     "supply": 184,
-                    "is_worker": false,
-                    "clock_position": null,
-                    "is_chronoboosted": false
-                },
-                {
-                    "frame": 32225.6,
-                    "time": "23:58",
-                    "name": "Protoss Air Armor Level 2",
-                    "supply": 200,
                     "is_worker": false,
                     "clock_position": null,
                     "is_chronoboosted": false
@@ -28821,6 +28821,24 @@
                     "is_chronoboosted": false
                 },
                 {
+                    "frame": 35595.8,
+                    "time": "26:29",
+                    "name": "Void Ray",
+                    "supply": 132,
+                    "is_worker": false,
+                    "clock_position": null,
+                    "is_chronoboosted": true
+                },
+                {
+                    "frame": 35598.8,
+                    "time": "26:29",
+                    "name": "Void Ray",
+                    "supply": 132,
+                    "is_worker": false,
+                    "clock_position": null,
+                    "is_chronoboosted": true
+                },
+                {
                     "frame": 35634.2,
                     "time": "26:30",
                     "name": "Probe",
@@ -28828,24 +28846,6 @@
                     "is_worker": true,
                     "clock_position": null,
                     "is_chronoboosted": false
-                },
-                {
-                    "frame": 35730.2,
-                    "time": "26:35",
-                    "name": "Void Ray",
-                    "supply": 129,
-                    "is_worker": false,
-                    "clock_position": null,
-                    "is_chronoboosted": true
-                },
-                {
-                    "frame": 35733.2,
-                    "time": "26:35",
-                    "name": "Void Ray",
-                    "supply": 129,
-                    "is_worker": false,
-                    "clock_position": null,
-                    "is_chronoboosted": true
                 },
                 {
                     "frame": 36175,
@@ -29046,8 +29046,8 @@
                     "is_chronoboosted": true
                 },
                 {
-                    "frame": 37152.2,
-                    "time": "27:38",
+                    "frame": 37017.8,
+                    "time": "27:32",
                     "name": "Void Ray",
                     "supply": 154,
                     "is_worker": false,

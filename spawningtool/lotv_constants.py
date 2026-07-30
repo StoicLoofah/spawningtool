@@ -3,6 +3,8 @@ spawningtool.constants
 ~~~~~~~~~~~~~~~~~~~~~~
 """
 
+from datetime import datetime, timezone
+
 FRAMES_PER_SECOND = 22.4
 
 BO_EXCLUDED = set([
@@ -98,7 +100,7 @@ BUILD_DATA = {
         'is_morph': False 
     },
     "Reaper": {
-        "build_time": 32,
+        "build_time": 34,
         "built_from": [ "Barracks" ],
         "display_name": "Reaper",
         'race': RACE_TERRAN, 
@@ -210,7 +212,7 @@ BUILD_DATA = {
         'is_morph': False 
     },
     "Raven": {
-        "build_time": 34,  # 42.9 -> 34.3 in 5.0.11
+        "build_time": 34,
         "built_from": [ "Starport" ],
         "display_name": "Raven",
         'race': RACE_TERRAN, 
@@ -259,7 +261,7 @@ BUILD_DATA = {
         'is_morph': False 
     },
     "Stalker": {
-        "build_time": 30,
+        "build_time": 27,
         "built_from": [ "Gateway", "WarpGate" ],
         "display_name": "Stalker",
         'race': RACE_PROTOSS, 
@@ -267,7 +269,7 @@ BUILD_DATA = {
         'is_morph': False 
     },
     "Sentry": {
-        "build_time": 23,  # 26.4 -> 22.9 in 5.0.11
+        "build_time": 23,
         "built_from": [ "Gateway", "WarpGate" ],
         "display_name": "Sentry",
         'race': RACE_PROTOSS, 
@@ -275,7 +277,7 @@ BUILD_DATA = {
         'is_morph': False 
     },
     "Adept": {
-        "build_time": 30,  # 27 -> 30 in 4.8.2
+        "build_time": 33,
         "built_from": [ "Gateway", "WarpGate" ],
         "display_name": "Adept",
         'race': RACE_PROTOSS, 
@@ -291,7 +293,7 @@ BUILD_DATA = {
         'is_morph': False 
     },
     "Mothership": {
-        "build_time": 79,  # 114 -> 79 in 5.0.12
+        "build_time": 79,
         "built_from": [ "Nexus" ],
         "display_name": "Mothership",
         'race': RACE_PROTOSS, 
@@ -299,7 +301,7 @@ BUILD_DATA = {
         'is_morph': False 
     },
     "HighTemplar": {
-        "build_time": 39,
+        "build_time": 40,
         "built_from": [ "Gateway", "WarpGate" ],
         "display_name": "High Templar",
         'race': RACE_PROTOSS, 
@@ -307,7 +309,7 @@ BUILD_DATA = {
         'is_morph': False 
     },
     "DarkTemplar": {
-        "build_time": 39,
+        "build_time": 40,
         "built_from": [ "Gateway", "WarpGate" ],
         "display_name": "Dark Templar",
         'race': RACE_PROTOSS, 
@@ -347,7 +349,7 @@ BUILD_DATA = {
         'is_morph': False 
     },
     "Observer": {
-        "build_time": 18,  # 21 -> 18 in 5.0.13
+        "build_time": 18,
         "built_from": [ "RoboticsFacility" ],
         "display_name": "Observer",
         'race': RACE_PROTOSS, 
@@ -371,7 +373,7 @@ BUILD_DATA = {
         'is_morph': False 
     },
     "VoidRay": {
-        "build_time": 37,  # decreased 43 -> 37 in 5.0.9 Mar 15 2022
+        "build_time": 43,
         "built_from": [ "Stargate" ],
         "display_name": "Void Ray",
         'race': RACE_PROTOSS, 
@@ -395,7 +397,7 @@ BUILD_DATA = {
         'is_morph': False 
     },
     "Carrier": {
-        "build_time": 64,  # decreased 86 -> 64 in 4.7.1
+        "build_time": 64,
         "built_from": [ "Stargate" ],
         "display_name": "Carrier",
         'race': RACE_PROTOSS, 
@@ -697,7 +699,7 @@ BUILD_DATA = {
     },
     # Baneling Nest Upgrades
     "CentrificalHooks": {
-        "build_time": 71,  # 79 -> 71 in 5.0.12
+        "build_time": 71,
         "built_from": [ "BanelingNest" ],
         "display_name": "Centrifugal Hooks",
         'race': RACE_ZERG, 
@@ -739,7 +741,7 @@ BUILD_DATA = {
         'is_morph': False 
     },
     "EvolveGroovedSpines": {  # added 3.8
-        "build_time": 50,  # 71 -> 50 in 5.0.12
+        "build_time": 50,
         "built_from": [ "HydraliskDen" ],
         "display_name": "Grooved Spines",
         'race': RACE_ZERG, 
@@ -747,7 +749,7 @@ BUILD_DATA = {
         'is_morph': False 
     },
     "EvolveMuscularAugments": {  # added 3.8
-        "build_time": 64,  # 71 -> 64 in 5.0.12
+        "build_time": 64,
         "built_from": [ "HydraliskDen" ],
         "display_name": "Muscular Augments",
         'race': RACE_ZERG, 
@@ -804,6 +806,7 @@ BUILD_DATA = {
         'type': TYPE_UPGRADE,
         'is_morph': False 
     },
+    # dropped its research requirement after 4.11.0; an upgrade again in 5.0.15
     "MicrobialShroud": {
         "build_time": 79,
         "built_from": [ "InfestationPit" ],
@@ -1043,7 +1046,7 @@ BUILD_DATA = {
 
     # barracks tech lab
     "Stimpack": {
-        "build_time": 100,  # reduced from 121s to 100s 8/21/19
+        "build_time": 100,
         "built_from": [ "TechLab" ],
         "display_name": "Stimpack",
         'race': RACE_TERRAN, 
@@ -1149,8 +1152,10 @@ BUILD_DATA = {
         'type': TYPE_UPGRADE,
         'is_morph': False 
     },
-    "CycloneLockOnDamageUpgrade": {  # re-introduced in 4.7.1, Deprecated in 5.0.12
-        "build_time": 100,  # 79s -> 100s in 4.8.2
+    # re-introduced in 4.7.1, deprecated in 5.0.12, back in 5.0.14 when the
+    # Cyclone was reverted to its 5.0.11 version
+    "CycloneLockOnDamageUpgrade": {
+        "build_time": 100,
         "built_from": [ "TechLab" ],
         "display_name": "Mag-Field Accelerator",
         "race": RACE_TERRAN,
@@ -1173,7 +1178,8 @@ BUILD_DATA = {
         'type': TYPE_UPGRADE,
         'is_morph': False 
     },
-    "HurricaneThrusters": {  # Added 5.0.12
+    # added 5.0.12, removed in 5.0.14 with the revert to the 5.0.11 Cyclone
+    "HurricaneThrusters": {
         "build_time": 100,
         "built_from": [ "TechLab" ],
         "display_name": "Hurricane Engines",
@@ -1231,7 +1237,7 @@ BUILD_DATA = {
         'is_morph': False 
     },
     "BansheeSpeed": {
-        "build_time": 121,  # 93 -> 121 in 3.8.0, 121.4 -> 100 in 5.0.11
+        "build_time": 79,
         "built_from": [ "TechLab" ],
         "display_name": "Hyperflight Rotors",
         'race': RACE_TERRAN, 
@@ -1264,7 +1270,7 @@ BUILD_DATA = {
         'is_morph': False 
     },
     "BattlecruiserEnableSpecializations": {
-        "build_time": 100,  # 43 -> 100 in 4.8.2
+        "build_time": 100,
         "built_from": [ "FusionCore" ],
         "display_name": "Weapon Refit",
         'race': RACE_TERRAN, 
@@ -1297,7 +1303,7 @@ BUILD_DATA = {
     },
     # protoss upgrades
     "ProtossGroundWeaponsLevel1": {
-        "build_time": 122,  # 128.6 -> 121.6 in 5.0.11
+        "build_time": 122,
         "built_from": [ "Forge" ],
         "display_name": "Protoss Ground Weapons Level 1",
         'race': RACE_PROTOSS, 
@@ -1305,7 +1311,7 @@ BUILD_DATA = {
         'is_morph': False 
     },
     "ProtossGroundWeaponsLevel2": {
-        "build_time": 145,  # 153.6 -> 144.6 in 5.0.11
+        "build_time": 145,
         "built_from": [ "Forge" ],
         "display_name": "Protoss Ground Weapons Level 2",
         'race': RACE_PROTOSS, 
@@ -1313,7 +1319,7 @@ BUILD_DATA = {
         'is_morph': False 
     },
     "ProtossGroundWeaponsLevel3": {
-        "build_time": 168,  # 178.6 -> 167.9 in 5.0.11
+        "build_time": 168,
         "built_from": [ "Forge" ],
         "display_name": "Protoss Ground Weapons Level 3",
         'race': RACE_PROTOSS, 
@@ -1321,7 +1327,7 @@ BUILD_DATA = {
         'is_morph': False 
     },
     "ProtossGroundArmorsLevel1": {
-        "build_time": 122,  # 128.6 -> 121.6 in 5.0.11
+        "build_time": 122,
         "built_from": [ "Forge" ],
         "display_name": "Protoss Ground Armor Level 1",
         'race': RACE_PROTOSS, 
@@ -1329,7 +1335,7 @@ BUILD_DATA = {
         'is_morph': False 
     },
     "ProtossGroundArmorsLevel2": {
-        "build_time": 145,  # 153.6 -> 144.6 in 5.0.11
+        "build_time": 145,
         "built_from": [ "Forge" ],
         "display_name": "Protoss Ground Armor Level 2",
         'race': RACE_PROTOSS, 
@@ -1337,7 +1343,7 @@ BUILD_DATA = {
         'is_morph': False 
     },
     "ProtossGroundArmorsLevel3": {
-        "build_time": 168,  # 178.6 -> 167.9 in 5.0.11
+        "build_time": 168,
         "built_from": [ "Forge" ],
         "display_name": "Protoss Ground Armor Level 3",
         'race': RACE_PROTOSS, 
@@ -1345,7 +1351,7 @@ BUILD_DATA = {
         'is_morph': False 
     },
     "ProtossShieldsLevel1": {
-        "build_time": 122,  # 128.6 -> 121.6 in 5.0.11
+        "build_time": 122,
         "built_from": [ "Forge" ],
         "display_name": "Protoss Shields Level 1",
         'race': RACE_PROTOSS, 
@@ -1353,7 +1359,7 @@ BUILD_DATA = {
         'is_morph': False 
     },
     "ProtossShieldsLevel2": {
-        "build_time": 145,  # 153.6 -> 144.6 in 5.0.11
+        "build_time": 145,
         "built_from": [ "Forge" ],
         "display_name": "Protoss Shields Level 2",
         'race': RACE_PROTOSS, 
@@ -1361,7 +1367,7 @@ BUILD_DATA = {
         'is_morph': False 
     },
     "ProtossShieldsLevel3": {
-        "build_time": 168,  # 178.6 -> 167.9 in 5.0.11
+        "build_time": 168,
         "built_from": [ "Forge" ],
         "display_name": "Protoss Shields Level 3",
         'race': RACE_PROTOSS, 
@@ -1369,7 +1375,7 @@ BUILD_DATA = {
         'is_morph': False 
     },
     "ProtossAirWeaponsLevel1": {
-        "build_time": 114,
+        "build_time": 129,
         "built_from": [ "CyberneticsCore" ],
         "display_name": "Protoss Air Weapons Level 1",
         'race': RACE_PROTOSS, 
@@ -1377,7 +1383,7 @@ BUILD_DATA = {
         'is_morph': False 
     },
     "ProtossAirWeaponsLevel2": {
-        "build_time": 136,
+        "build_time": 154,
         "built_from": [ "CyberneticsCore" ],
         "display_name": "Protoss Air Weapons Level 2",
         'race': RACE_PROTOSS, 
@@ -1385,7 +1391,7 @@ BUILD_DATA = {
         'is_morph': False 
     },
     "ProtossAirWeaponsLevel3": {
-        "build_time": 157,
+        "build_time": 179,
         "built_from": [ "CyberneticsCore" ],
         "display_name": "Protoss Air Weapons Level 3",
         'race': RACE_PROTOSS, 
@@ -1393,7 +1399,7 @@ BUILD_DATA = {
         'is_morph': False 
     },
     "ProtossAirArmorsLevel1": {
-        "build_time": 114,
+        "build_time": 129,
         "built_from": [ "CyberneticsCore" ],
         "display_name": "Protoss Air Armor Level 1",
         'race': RACE_PROTOSS, 
@@ -1401,7 +1407,7 @@ BUILD_DATA = {
         'is_morph': False 
     },
     "ProtossAirArmorsLevel2": {
-        "build_time": 136,
+        "build_time": 154,
         "built_from": [ "CyberneticsCore" ],
         "display_name": "Protoss Air Armor Level 2",
         'race': RACE_PROTOSS, 
@@ -1409,7 +1415,7 @@ BUILD_DATA = {
         'is_morph': False 
     },
     "ProtossAirArmorsLevel3": {
-        "build_time": 157,
+        "build_time": 179,
         "built_from": [ "CyberneticsCore" ],
         "display_name": "Protoss Air Armor Level 3",
         'race': RACE_PROTOSS, 
@@ -1417,7 +1423,7 @@ BUILD_DATA = {
         'is_morph': False 
     },
     "WarpGateResearch": {
-        "build_time": 100,  # 114s -> 100s in 4.8.2
+        "build_time": 100,
         "built_from": [ "CyberneticsCore" ],
         "display_name": "Warp Gate",
         'race': RACE_PROTOSS, 
@@ -1515,7 +1521,7 @@ BUILD_DATA = {
     },
     # Dark Shrine Upgrades
     "DarkTemplarBlinkUpgrade": {
-        "build_time": 100,  # decreased 121 -> 100 in 4.7.1
+        "build_time": 100,
         "built_from": [ "DarkShrine" ],
         "display_name": "Shadow Stride",
         'race': RACE_PROTOSS, 
@@ -1604,8 +1610,261 @@ BUILD_DATA = {
     }
 }
 
+
+# Balance patch history
+# =====================
+#
+# BUILD_DATA holds the current build times; this records when they changed, so a
+# replay is scored with the value that was live the day it was played. Balance
+# hotfixes don't always bump the replay build number, so the date decides.
+#
+# Entries are (patch_label, effective_date, {unit: (old_seconds, new_seconds)}),
+# chronological. Each unit's `old` must match the `new` of the previous entry that
+# touched it, and its last `new` must match BUILD_DATA; _build_history checks that
+# chain at import, so a patch recorded without its predecessor fails fast instead
+# of silently mis-scoring one window.
+#
+# Sourced from the patch notes off https://news.blizzard.com/en-us/feed/starcraft-2
+# (PTR notes are proposals, not shipped changes, so they are not used). Blizzard
+# quotes build times in this file's units; they are rounded to whole seconds to
+# match BUILD_DATA, with the exact figure noted inline where it differs. Dates are
+# the NA release at 00:00 UTC, so a replay played within a day of a patch may get
+# the adjacent value.
+#
+# Coverage starts at 3.8.0 (2016-11-22); earlier replays get the oldest value
+# here, which is not necessarily what was live then. (HotS and WoL use
+# hots_constants, which has no date handling at all.) Swept for build time
+# changes: 3.8.0, the 2017-12-18/2019-03-25/2019-08-21 balance updates, 4.7.1,
+# 4.8.2, 4.11.0, 5.0.2, 5.0.9, and 5.0.11 through 5.0.16. Not swept: 4.0-4.6,
+# 4.8.0/1/3/4, 4.9.x, the rest of 4.10.x, 5.0.0/1, 5.0.3-5.0.8, 5.0.10, and the
+# 5.0.11 hotfixes -- a gap there is no guarantee nothing changed, since 5.0.14 and
+# 5.0.15 both held changes that went unnoticed for years.
+#
+# Not recorded: past fixes to wrong data in this file, whose old values were never
+# live in the game -- the 2015-16 rounding cleanups (116 -> 114, 80 -> 79, ...),
+# the Liberator 60 -> 43 fix, and the Carrier and Disruptor corrections made
+# against the LotV release build.
+BUILD_TIME_CHANGES = [
+    ('3.8.0', '2016-11-22', {
+        'BansheeSpeed': (93, 121),  # Hyperflight Rotors
+    }),
+    ('Balance Update', '2017-12-18', {
+        'Oracle': (43, 37),
+        'WidowMine': (29, 21),  # 28.6 -> 21.4
+    }),
+    ('4.7.1', '2018-11-20', {
+        'Carrier': (86, 64),
+        'DarkTemplarBlinkUpgrade': (121, 100),  # Shadow Stride
+    }),
+    ('4.8.2', '2019-01-22', {
+        'Adept': (27, 30),
+        'BattlecruiserEnableSpecializations': (43, 100),  # Weapon Refit
+        'CycloneLockOnDamageUpgrade': (79, 100),  # Mag-Field Accelerator
+        'WarpGateResearch': (114, 100),
+    }),
+    # "Forge/Cybernetics Core: Level 1/2/3 upgrade times increased by 15/18/22
+    # seconds" -- both structures, so the air upgrades moved too.
+    ('Balance Update', '2019-03-25', {
+        'ProtossGroundWeaponsLevel1': (114, 129),
+        'ProtossGroundWeaponsLevel2': (136, 154),
+        'ProtossGroundWeaponsLevel3': (157, 179),
+        'ProtossGroundArmorsLevel1': (114, 129),
+        'ProtossGroundArmorsLevel2': (136, 154),
+        'ProtossGroundArmorsLevel3': (157, 179),
+        'ProtossShieldsLevel1': (114, 129),
+        'ProtossShieldsLevel2': (136, 154),
+        'ProtossShieldsLevel3': (157, 179),
+        'ProtossAirWeaponsLevel1': (114, 129),
+        'ProtossAirWeaponsLevel2': (136, 154),
+        'ProtossAirWeaponsLevel3': (157, 179),
+        'ProtossAirArmorsLevel1': (114, 129),
+        'ProtossAirArmorsLevel2': (136, 154),
+        'ProtossAirArmorsLevel3': (157, 179),
+    }),
+    ('Balance Update', '2019-08-21', {
+        'Stimpack': (121, 100),
+    }),
+    ('4.11.0', '2019-11-26', {
+        'DiggingClaws': (54, 57),  # Adaptive Talons
+        'LurkerDenMP': (86, 57),
+    }),
+    # 5.0.9 got no live notes (community balance patch), so this pair is instead
+    # confirmed by the test replays: patch_5_0_10_pvz produces Void Rays in
+    # exactly 43.0s, patch_5_0_4_pvt in 25.1s, under a 43s unit's 28.7s floor.
+    ('5.0.2', '2020-08-06', {
+        'VoidRay': (43, 37),
+    }),
+    ('5.0.9', '2022-03-15', {
+        'VoidRay': (37, 43),  # reverted the 5.0.2 reduction
+    }),
+    ('5.0.11', '2023-01-23', {
+        'BansheeSpeed': (121, 100),  # 121.4 -> 100, Hyperflight Rotors
+        'Raven': (43, 34),  # 42.9 -> 34.3
+        'Sentry': (26, 23),  # 26.4 -> 22.9
+        'ProtossGroundWeaponsLevel1': (129, 122),  # 128.6 -> 121.6
+        'ProtossGroundWeaponsLevel2': (154, 145),  # 153.6 -> 144.6
+        'ProtossGroundWeaponsLevel3': (179, 168),  # 178.6 -> 167.9
+        'ProtossGroundArmorsLevel1': (129, 122),
+        'ProtossGroundArmorsLevel2': (154, 145),
+        'ProtossGroundArmorsLevel3': (179, 168),
+        'ProtossShieldsLevel1': (129, 122),
+        'ProtossShieldsLevel2': (154, 145),
+        'ProtossShieldsLevel3': (179, 168),
+    }),
+    ('5.0.12', '2023-09-29', {
+        'CentrificalHooks': (79, 71),
+        'EvolveGroovedSpines': (71, 50),
+        'EvolveMuscularAugments': (71, 64),
+        'Mothership': (114, 79),
+    }),
+    ('5.0.13', '2024-03-26', {
+        'Observer': (21, 18),  # 21.4 -> 17.9
+    }),
+    ('5.0.14', '2024-11-25', {
+        'Stalker': (30, 27),  # train time from Gateway
+    }),
+    ('5.0.15', '2025-09-30', {
+        'BansheeSpeed': (100, 79),  # Hyperflight Rotors
+    }),
+    # 5.0.16 made Warp Gate Research a flat percentage off (see
+    # WARPGATE_MODIFIERS) instead of separate warp-in timings. The High/Dark
+    # Templar increase isn't stated outright, but the hotfix reduced them "from
+    # 43" and 5.0.16's post-Warpgate 26s matches 43 * 0.6.
+    ('5.0.16', '2026-06-22', {
+        'HighTemplar': (39, 43),
+        'DarkTemplar': (39, 43),
+    }),
+    ('5.0.16 hotfix', '2026-06-30', {
+        'Adept': (30, 33),
+        'DarkTemplar': (43, 40),
+        'HighTemplar': (43, 40),
+        'Reaper': (32, 34),
+    }),
+]
+
+
+def _patch_timestamp(date):
+    """
+    Unix timestamp (UTC) for a 'YYYY-MM-DD' patch date.
+    """
+    return int(datetime.strptime(date, '%Y-%m-%d').replace(tzinfo=timezone.utc).timestamp())
+
+
+def _build_history(changes):
+    """
+    Turn BUILD_TIME_CHANGES into {unit: [(superseded_timestamp, build_time)]},
+    where build_time is the value that was live until that timestamp, oldest
+    first. Raises ValueError if the recorded chain doesn't line up with
+    BUILD_DATA, which means a patch is missing or has the wrong before/after
+    value.
+    """
+    history = {}
+    latest = {}
+    previous_timestamp = None
+
+    for label, date, units in changes:
+        timestamp = _patch_timestamp(date)
+        if previous_timestamp is not None and timestamp < previous_timestamp:
+            raise ValueError('BUILD_TIME_CHANGES is not in chronological order at {}'.format(label))
+        previous_timestamp = timestamp
+
+        for unit_name, (old, new) in units.items():
+            if unit_name not in BUILD_DATA:
+                raise ValueError('{} ({}) is not in BUILD_DATA'.format(unit_name, label))
+            expected = latest.get(unit_name)
+            if expected is not None and expected != old:
+                raise ValueError(
+                    '{} enters {} at {}s but the previous change left it at {}s'.format(
+                        unit_name, label, old, expected))
+            history.setdefault(unit_name, []).append((timestamp, old))
+            latest[unit_name] = new
+
+    for unit_name, new in latest.items():
+        if BUILD_DATA[unit_name]['build_time'] != new:
+            raise ValueError(
+                '{} ends its patch history at {}s but BUILD_DATA says {}s'.format(
+                    unit_name, new, BUILD_DATA[unit_name]['build_time']))
+
+    return history
+
+
+# Previous build times per unit, oldest first, as
+# (timestamp_at_which_the_value_was_superseded, build_time). Built from
+# BUILD_TIME_CHANGES while BUILD_DATA is still in seconds, then converted to
+# frames alongside it.
+BUILD_DATA_HISTORY = _build_history(BUILD_TIME_CHANGES)
+
 for value in BUILD_DATA.values():
     value['build_time'] *= FRAMES_PER_SECOND
+
+for unit_name in BUILD_DATA_HISTORY:
+    BUILD_DATA_HISTORY[unit_name] = [
+        (timestamp, build_time * FRAMES_PER_SECOND)
+        for timestamp, build_time in BUILD_DATA_HISTORY[unit_name]
+    ]
+
+
+def build_data_for_timestamp(timestamp):
+    """
+    Return BUILD_DATA adjusted for the balance patches that were live when the
+    replay was played (timestamp is unix seconds, UTC). Units in
+    BUILD_DATA_HISTORY are rolled back to their historical build time for
+    replays played before a change took effect; everything else keeps the
+    current value. The shared dict is returned as-is when nothing needs rolling
+    back. Otherwise only the units being rolled back are copied, over a shallow
+    copy of BUILD_DATA -- so the returned dict is safe to hand out, but the
+    entries in it are the shared ones and must not be mutated, same as BUILD_DATA
+    itself. A missing timestamp falls back to the current values.
+    """
+    adjusted = None
+    for unit_name, history in BUILD_DATA_HISTORY.items():
+        for superseded, build_time in history:
+            if timestamp and timestamp < superseded:
+                if adjusted is None:
+                    adjusted = dict(BUILD_DATA)
+                adjusted[unit_name] = dict(BUILD_DATA[unit_name])
+                adjusted[unit_name]['build_time'] = build_time
+                break
+    return adjusted if adjusted is not None else BUILD_DATA
+
+
+# Warp Gate Research speeds up Gateway unit production once complete, as a
+# fraction of the normal build time. Introduced in 5.0.16 at 40% off (0.6x);
+# 5.0.16b increased it to 50% off (0.5x). Oldest first, same shape as
+# BUILD_TIME_CHANGES: (patch_label, effective_date, modifier).
+WARPGATE_MODIFIERS = [
+    ('5.0.16', '2026-06-22', 0.6),
+    ('5.0.16b', '2026-07-16', 0.5),
+]
+
+# The percentage speedup itself only exists from the 5.0.16 build on.
+# WARPGATE_MODIFIERS says as much for a dated replay; this keeps an undated one,
+# which falls back to the current modifier, from getting a speedup that didn't
+# exist yet.
+WARPGATE_PERCENTAGE_BUILD = 97364
+
+_WARPGATE_MODIFIERS = [
+    (_patch_timestamp(date), modifier) for _, date, modifier in WARPGATE_MODIFIERS
+]
+
+
+def warpgate_build_time_modifier(timestamp):
+    """
+    Fraction of the normal build time a Gateway unit takes once Warp Gate
+    Research finishes, based on when the replay was played (unix seconds, UTC).
+    None for a replay played before the percentage modifier existed, which is
+    also how the parser spells "doesn't apply" for HotS and co-op. A missing
+    timestamp falls back to the current value, matching build_data_for_timestamp.
+    """
+    if not timestamp:
+        return _WARPGATE_MODIFIERS[-1][1]
+
+    modifier = None
+    for effective, current in _WARPGATE_MODIFIERS:
+        if timestamp < effective:
+            break
+        modifier = current
+    return modifier
 
 
 TRACKED_ABILITIES = set([

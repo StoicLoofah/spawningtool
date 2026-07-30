@@ -456,9 +456,9 @@
                     "name": "Adept", 
                     "clock_position": null, 
                     "supply": 24, 
-                    "frame": 3085.0, 
+                    "frame": 3152.2, 
                     "is_chronoboosted": false, 
-                    "time": "2:17"
+                    "time": "2:20"
                 }, 
                 {
                     "is_worker": true, 
@@ -507,21 +507,21 @@
                 }, 
                 {
                     "is_worker": false, 
+                    "name": "Oracle", 
+                    "clock_position": null, 
+                    "supply": 30, 
+                    "frame": 4568.8, 
+                    "is_chronoboosted": false, 
+                    "time": "3:23"
+                }, 
+                {
+                    "is_worker": false, 
                     "name": "DarkShrine", 
                     "clock_position": null, 
                     "supply": 30, 
                     "frame": 4581, 
                     "is_chronoboosted": false, 
                     "time": "3:24"
-                }, 
-                {
-                    "is_worker": false, 
-                    "name": "Oracle", 
-                    "clock_position": null, 
-                    "supply": 30, 
-                    "frame": 4703.2, 
-                    "is_chronoboosted": false, 
-                    "time": "3:29"
                 }, 
                 {
                     "is_worker": false, 
@@ -597,6 +597,15 @@
                 }, 
                 {
                     "is_worker": false, 
+                    "name": "Shadow Stride", 
+                    "clock_position": null, 
+                    "supply": 39, 
+                    "frame": 6732.6, 
+                    "is_chronoboosted": false, 
+                    "time": "5:00"
+                }, 
+                {
+                    "is_worker": false, 
                     "name": "Dark Templar", 
                     "clock_position": null, 
                     "supply": 39, 
@@ -612,15 +621,6 @@
                     "frame": 7154.2, 
                     "is_chronoboosted": true, 
                     "time": "5:19"
-                }, 
-                {
-                    "is_worker": false, 
-                    "name": "Shadow Stride", 
-                    "clock_position": null, 
-                    "supply": 42, 
-                    "frame": 7203.0, 
-                    "is_chronoboosted": false, 
-                    "time": "5:21"
                 }, 
                 {
                     "is_worker": false, 
