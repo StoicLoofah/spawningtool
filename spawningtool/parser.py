@@ -184,7 +184,6 @@ class GameParser(object):
     tracked_abilities = None
     build_data = None
     warpgate_modifier = None
-    warpgate_percentage_build = None
 
     def __init__(self, replay_file):
         self.replay_file = replay_file
@@ -350,14 +349,20 @@ class GameParser(object):
             for event in self.replay.tracker_events:
                 if event.frame > 1:
                     break
+                if (event.name != 'PlayerStatsEvent' or
+                        event.pid not in self.parsed_data['players'] or
+                        event.frame != 1):
+                    continue
+                food_used = int(event.food_used)
                 # TODO this is a hack for early LotV replays done in HotS
                 # and also correctly sets early supply
-                if (event.name == 'PlayerStatsEvent' and
-                        event.pid in self.parsed_data['players'] and
-                        event.frame == 1 and int(event.food_used) == 12):
-                    self.parsed_data['players'][event.pid]['supply'][0][1] = 12
+                if food_used == 12:
                     self.parsed_data['expansion'] = 'LotV'
                     self.constants = lotv_constants
+                # LotV starts with 12 workers, except 5.0.16 through 5.0.17,
+                # which started with 8
+                if self.constants is lotv_constants and food_used:
+                    self.parsed_data['players'][event.pid]['supply'][0][1] = food_used
 
         self.frames_per_second = self.constants.FRAMES_PER_SECOND
         self.bo_excluded = self.constants.BO_EXCLUDED
@@ -372,12 +377,11 @@ class GameParser(object):
         timestamp = self.replay.unix_timestamp
         if hasattr(self.constants, 'build_data_for_timestamp'):
             self.build_data = self.constants.build_data_for_timestamp(timestamp)
-            self.warpgate_modifier = self.constants.warpgate_build_time_modifier(timestamp)
-            self.warpgate_percentage_build = self.constants.WARPGATE_PERCENTAGE_BUILD
+            self.warpgate_modifier = self.constants.warpgate_build_time_modifier(
+                timestamp, self.replay.build)
         else:
             self.build_data = self.constants.BUILD_DATA
             self.warpgate_modifier = None
-            self.warpgate_percentage_build = None
 
     def set_commander_talents(self):
         """
@@ -762,15 +766,12 @@ class GameParser(object):
 
         build_time = cur_build_data['build_time'] * build_time_modifier
 
-        # Warp Gate Research speeds up Gateway unit production (5.0.16+). The
-        # 5.0.16b hotfix changed the size of the speedup without a new build
-        # number, so the modifier comes from the played date; the build check
-        # covers an undated replay, which falls back to the current modifier.
-        # warpgate_modifier is None where this doesn't apply at all: HotS, co-op,
-        # and dated replays from before the mechanic existed.
+        # Warp Gate Research sped up Gateway unit production from 5.0.16 until
+        # 5.0.17 removed it, and 5.0.16b changed its size. warpgate_modifier is
+        # None where this doesn't apply at all: HotS, co-op, and replays from
+        # outside that window.
         if self.warpgate_modifier is not None and \
                 player in self.warpgate_research_frame and \
-                self.replay.build >= self.warpgate_percentage_build and \
                 'Gateway' in cur_build_data.get('built_from', []):
             warpgate_frame = self.warpgate_research_frame[player]
             reduced_start = frame - build_time * self.warpgate_modifier

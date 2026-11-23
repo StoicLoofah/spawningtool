@@ -100,7 +100,7 @@ BUILD_DATA = {
         'is_morph': False 
     },
     "Reaper": {
-        "build_time": 34,
+        "build_time": 32,
         "built_from": [ "Barracks" ],
         "display_name": "Reaper",
         'race': RACE_TERRAN, 
@@ -277,7 +277,7 @@ BUILD_DATA = {
         'is_morph': False 
     },
     "Adept": {
-        "build_time": 33,
+        "build_time": 30,
         "built_from": [ "Gateway", "WarpGate" ],
         "display_name": "Adept",
         'race': RACE_PROTOSS, 
@@ -1635,7 +1635,7 @@ BUILD_DATA = {
 # here, which is not necessarily what was live then. (HotS and WoL use
 # hots_constants, which has no date handling at all.) Swept for build time
 # changes: 3.8.0, the 2017-12-18/2019-03-25/2019-08-21 balance updates, 4.7.1,
-# 4.8.2, 4.11.0, 5.0.2, 5.0.9, and 5.0.11 through 5.0.16. Not swept: 4.0-4.6,
+# 4.8.2, 4.11.0, 5.0.2, 5.0.9, and 5.0.11 through 5.0.17. Not swept: 4.0-4.6,
 # 4.8.0/1/3/4, 4.9.x, the rest of 4.10.x, 5.0.0/1, 5.0.3-5.0.8, 5.0.10, and the
 # 5.0.11 hotfixes -- a gap there is no guarantee nothing changed, since 5.0.14 and
 # 5.0.15 both held changes that went unnoticed for years.
@@ -1740,6 +1740,12 @@ BUILD_TIME_CHANGES = [
         'HighTemplar': (43, 40),
         'Reaper': (32, 34),
     }),
+    # Rolled most of 5.0.16 back to 5.0.15. The notes don't mention High/Dark
+    # Templar train time, so they stay at the hotfix's 40s.
+    ('5.0.17', '2026-10-07', {
+        'Adept': (33, 30),
+        'Reaper': (34, 32),
+    }),
 ]
 
 
@@ -1828,40 +1834,34 @@ def build_data_for_timestamp(timestamp):
     return adjusted if adjusted is not None else BUILD_DATA
 
 
-# Warp Gate Research speeds up Gateway unit production once complete, as a
+# Warp Gate Research sped up Gateway unit production once complete, as a
 # fraction of the normal build time. Introduced in 5.0.16 at 40% off (0.6x);
-# 5.0.16b increased it to 50% off (0.5x). Oldest first, same shape as
-# BUILD_TIME_CHANGES: (patch_label, effective_date, modifier).
+# 5.0.16b increased it to 50% off (0.5x); 5.0.17 removed it (None). Oldest
+# first: (patch_label, effective_date, first_build, modifier). first_build is
+# from https://github.com/Blizzard/s2protocol and only matters for a replay
+# with no timestamp; the date decides otherwise, same as BUILD_TIME_CHANGES.
 WARPGATE_MODIFIERS = [
-    ('5.0.16', '2026-06-22', 0.6),
-    ('5.0.16b', '2026-07-16', 0.5),
+    ('5.0.16', '2026-06-22', 97364, 0.6),
+    ('5.0.16b', '2026-07-16', 97563, 0.5),
+    ('5.0.17', '2026-10-07', 98310, None),
 ]
-
-# The percentage speedup itself only exists from the 5.0.16 build on.
-# WARPGATE_MODIFIERS says as much for a dated replay; this keeps an undated one,
-# which falls back to the current modifier, from getting a speedup that didn't
-# exist yet.
-WARPGATE_PERCENTAGE_BUILD = 97364
 
 _WARPGATE_MODIFIERS = [
-    (_patch_timestamp(date), modifier) for _, date, modifier in WARPGATE_MODIFIERS
+    (_patch_timestamp(date), build, modifier) for _, date, build, modifier in WARPGATE_MODIFIERS
 ]
 
 
-def warpgate_build_time_modifier(timestamp):
+def warpgate_build_time_modifier(timestamp, build):
     """
     Fraction of the normal build time a Gateway unit takes once Warp Gate
-    Research finishes, based on when the replay was played (unix seconds, UTC).
-    None for a replay played before the percentage modifier existed, which is
-    also how the parser spells "doesn't apply" for HotS and co-op. A missing
-    timestamp falls back to the current value, matching build_data_for_timestamp.
+    Research finishes, based on when the replay was played (unix seconds, UTC),
+    or on its build number if it has no timestamp. None outside the 5.0.16 to
+    5.0.17 window when the percentage modifier existed, which is also how the
+    parser spells "doesn't apply" for HotS and co-op.
     """
-    if not timestamp:
-        return _WARPGATE_MODIFIERS[-1][1]
-
     modifier = None
-    for effective, current in _WARPGATE_MODIFIERS:
-        if timestamp < effective:
+    for effective, first_build, current in _WARPGATE_MODIFIERS:
+        if (timestamp < effective) if timestamp else (build < first_build):
             break
         modifier = current
     return modifier

@@ -289,21 +289,49 @@ class LotVBuildDataHistoryTest(unittest.TestCase):
         self.assertEqual(self.seconds(after, 'Adept'), 33)
         self.assertEqual(self.seconds(after, 'Reaper'), 34)
 
+    def test_5_0_17_rollback(self):
+        """
+        5.0.17 put the Reaper and Adept back to their 5.0.15 values; High/Dark
+        Templar keep the hotfix's 40s
+        """
+        before = self.timestamp('2026-10-06')
+        after = self.timestamp('2026-10-07')
+        self.assertEqual(self.seconds(before, 'Adept'), 33)
+        self.assertEqual(self.seconds(before, 'Reaper'), 34)
+        self.assertEqual(self.seconds(after, 'Adept'), 30)
+        self.assertEqual(self.seconds(after, 'Reaper'), 32)
+        self.assertEqual(self.seconds(after, 'HighTemplar'), 40)
+
     def test_undated_replay_uses_current_build_times(self):
         build_data = lotv_constants.build_data_for_timestamp(None)
         self.assertIs(build_data, lotv_constants.BUILD_DATA)
 
     def test_warpgate_modifier_by_date(self):
-        modifier = lotv_constants.warpgate_build_time_modifier
+        def modifier(date):
+            return lotv_constants.warpgate_build_time_modifier(self.timestamp(date), 0)
         # Before 5.0.16 there was no percentage modifier, only separate warp-in
         # build times, so this doesn't apply rather than defaulting to 40%
-        self.assertIsNone(modifier(self.timestamp('2016-01-01')))
-        self.assertIsNone(modifier(self.timestamp('2026-06-21')))
-        self.assertEqual(modifier(self.timestamp('2026-06-25')), 0.6)  # 5.0.16, 40%
-        self.assertEqual(modifier(self.timestamp('2026-07-15')), 0.6)
-        self.assertEqual(modifier(self.timestamp('2026-07-16')), 0.5)  # 5.0.16b, 50%
-        self.assertEqual(modifier(self.timestamp('2026-08-01')), 0.5)
-        self.assertEqual(modifier(None), 0.5)
+        self.assertIsNone(modifier('2016-01-01'))
+        self.assertIsNone(modifier('2026-06-21'))
+        self.assertEqual(modifier('2026-06-25'), 0.6)  # 5.0.16, 40%
+        self.assertEqual(modifier('2026-07-15'), 0.6)
+        self.assertEqual(modifier('2026-07-16'), 0.5)  # 5.0.16b, 50%
+        self.assertEqual(modifier('2026-08-01'), 0.5)
+        # 5.0.17 removed the speedup again
+        self.assertIsNone(modifier('2026-10-07'))
+
+    def test_undated_warpgate_modifier_by_build(self):
+        """
+        a replay with no timestamp falls back to its build number
+        """
+        def modifier(build):
+            return lotv_constants.warpgate_build_time_modifier(None, build)
+        self.assertIsNone(modifier(96883))  # 5.0.15
+        self.assertEqual(modifier(97364), 0.6)  # 5.0.16
+        self.assertEqual(modifier(97425), 0.6)  # 5.0.16 hotfix
+        self.assertEqual(modifier(97563), 0.5)  # 5.0.16b
+        self.assertIsNone(modifier(98310))  # 5.0.17
+        self.assertIsNone(modifier(98745))
 
 
 if __name__ == '__main__':
