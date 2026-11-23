@@ -1,6 +1,11 @@
 Changes
 =======
 
+* v3.1.0, November 23, 2026 -- update ladder data for balance patch 5.0.17 (October 7, 2026), which rolled most of 5.0.16 back to 5.0.15. Replays from the 5.0.16 era keep their 5.0.16 values:
+  * Warpgate Research no longer speeds up Gateway unit production
+  * Reaper 34->32, Adept 33->30. High/Dark Templar train time isn't mentioned in the notes, so it stays at 40
+  * a replay with no timestamp now gets its Warpgate Research modifier from its build number (5.0.16 = 97364, 5.0.16b = 97563, 5.0.17 = 98310, per Blizzard's s2protocol) instead of the current value
+  * starting supply is now read from the replay, so 5.0.16 games, which started with 8 workers, no longer report a starting supply of 6
 * v3.0.0, July 29, 2026 -- build times are now selected by the date a replay was played, so replays are scored with the values that were live at the time rather than today's. Build order timings for older replays change as a result, hence the major version:
   * `BUILD_TIME_CHANGES` in `lotv_constants.py` records every LotV build time change back to 3.8.0 (2016-11-22), sourced from the Blizzard patch notes. `BUILD_DATA_HISTORY` is derived from it, and each unit's recorded changes are verified at import to chain into its current value
   * that check surfaced five errors: High/Dark Templar were raised 39->43 in 5.0.16 before the hotfix cut them to 40; the Void Ray was reduced 43->37 in 5.0.2 and restored to 43 in 5.0.9, which had been applied here in reverse; Hyperflight Rotors was left at 121s through both the 5.0.11 cut to 100s and the 5.0.15 cut to 79s; the Stalker's 5.0.14 cut from 30s to 27s was missing; and the March 25, 2019 balance update raised the Cybernetics Core air upgrades alongside the Forge ones to 129/154/179, which 5.0.11 then reduced for the Forge only, so air and ground now differ
